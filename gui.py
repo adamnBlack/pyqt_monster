@@ -232,14 +232,39 @@ class Ui_MainWindow(object):
         self.label_5.setFont(font)
         self.label_5.setObjectName("label_5")
         self.gridLayout_2.addWidget(self.label_5, 1, 0, 1, 1)
-        self.progressBar_email = QtWidgets.QProgressBar(self.groupBox_inbox)
+        self.pushButton_reload_db = QtWidgets.QPushButton(self.groupBox_inbox)
         font = QtGui.QFont()
         font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.progressBar_email.setFont(font)
-        self.progressBar_email.setProperty("value", 0)
-        self.progressBar_email.setObjectName("progressBar_email")
-        self.gridLayout_2.addWidget(self.progressBar_email, 7, 3, 1, 2)
+        font.setPointSize(9)
+        self.pushButton_reload_db.setFont(font)
+        self.pushButton_reload_db.setStyleSheet("QPushButton {\n"
+"    border: 1px solid #555;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    color: rgb(255, 255, 255);\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
+"        );\n"
+"    }")
+        self.pushButton_reload_db.setObjectName("pushButton_reload_db")
+        self.gridLayout_2.addWidget(self.pushButton_reload_db, 7, 0, 1, 1, QtCore.Qt.AlignLeft)
         self.label_email_status = QtWidgets.QLabel(self.groupBox_inbox)
         font = QtGui.QFont()
         font.setFamily("Calibri")
@@ -248,7 +273,7 @@ class Ui_MainWindow(object):
         self.label_email_status.setText("")
         self.label_email_status.setAlignment(QtCore.Qt.AlignCenter)
         self.label_email_status.setObjectName("label_email_status")
-        self.gridLayout_2.addWidget(self.label_email_status, 7, 1, 1, 2)
+        self.gridLayout_2.addWidget(self.label_email_status, 7, 1, 1, 4)
         self.gridLayout.addWidget(self.groupBox_inbox, 1, 0, 1, 1)
         self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
         self.groupBox.setStyleSheet("background-color: #E3E3E3;")
@@ -432,6 +457,7 @@ class Ui_MainWindow(object):
         self.lineEdit_num_per_address.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.lineEdit_num_per_address.setMaxLength(4)
         self.lineEdit_num_per_address.setFrame(False)
+        self.lineEdit_num_per_address.setAlignment(QtCore.Qt.AlignCenter)
         self.lineEdit_num_per_address.setObjectName("lineEdit_num_per_address")
         self.gridLayout_8.addWidget(self.lineEdit_num_per_address, 1, 2, 1, 1, QtCore.Qt.AlignHCenter)
         self.label_6 = QtWidgets.QLabel(self.groupBox_6)
@@ -499,9 +525,9 @@ class Ui_MainWindow(object):
         font.setPointSize(11)
         self.lineEdit_delay_between_emails.setFont(font)
         self.lineEdit_delay_between_emails.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.lineEdit_delay_between_emails.setText("")
-        self.lineEdit_delay_between_emails.setMaxLength(4)
+        self.lineEdit_delay_between_emails.setMaxLength(5)
         self.lineEdit_delay_between_emails.setFrame(False)
+        self.lineEdit_delay_between_emails.setAlignment(QtCore.Qt.AlignCenter)
         self.lineEdit_delay_between_emails.setObjectName("lineEdit_delay_between_emails")
         self.gridLayout_8.addWidget(self.lineEdit_delay_between_emails, 2, 2, 1, 1, QtCore.Qt.AlignHCenter)
         self.gridLayout_4.addWidget(self.groupBox_6, 2, 1, 1, 1)
@@ -755,6 +781,39 @@ class Ui_MainWindow(object):
         self.label_send_email_status.setAlignment(QtCore.Qt.AlignCenter)
         self.label_send_email_status.setObjectName("label_send_email_status")
         self.gridLayout_9.addWidget(self.label_send_email_status, 1, 0, 1, 2)
+        self.pushButton_clear_compose = QtWidgets.QPushButton(self.groupBox_7)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(9)
+        self.pushButton_clear_compose.setFont(font)
+        self.pushButton_clear_compose.setStyleSheet("QPushButton {\n"
+"    border: 1px solid #555;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    color: rgb(255, 255, 255);\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
+"        );\n"
+"    }")
+        self.pushButton_clear_compose.setObjectName("pushButton_clear_compose")
+        self.gridLayout_9.addWidget(self.pushButton_clear_compose, 0, 3, 1, 1, QtCore.Qt.AlignRight)
         self.gridLayout_3.addWidget(self.groupBox_7, 8, 0, 1, 1)
         self.textBrowser_show_email = QtWidgets.QTextBrowser(self.groupBox)
         font = QtGui.QFont()
@@ -802,6 +861,7 @@ class Ui_MainWindow(object):
         self.tableWidget_inbox.setSortingEnabled(__sortingEnabled)
         self.radioButton_group_b.setText(_translate("MainWindow", "Group B"))
         self.label_5.setText(_translate("MainWindow", "ADDRESS GROUP"))
+        self.pushButton_reload_db.setText(_translate("MainWindow", "RELOAD DB"))
         self.label.setText(_translate("MainWindow", "ORIGINAL RECIPIENT:"))
         self.label_4.setText(_translate("MainWindow", "SUBJECT:"))
         self.label_3.setText(_translate("MainWindow", "COMPOSE"))
@@ -814,7 +874,8 @@ class Ui_MainWindow(object):
         self.label_2.setText(_translate("MainWindow", "NUM EMAILS PER ACCOUNT"))
         self.label_delay_between_emails.setText(_translate("MainWindow", "DELAY BETWEEN EMAILS"))
         self.radioButton_campaign_group_b.setText(_translate("MainWindow", "Group B"))
-        self.lineEdit_delay_between_emails.setPlaceholderText(_translate("MainWindow", "ENTER IN SEC"))
+        self.lineEdit_delay_between_emails.setText(_translate("MainWindow", "5-20"))
+        self.lineEdit_delay_between_emails.setPlaceholderText(_translate("MainWindow", "Enter a Range"))
         self.pushButton_attachments_clear.setText(_translate("MainWindow", "CLEAR"))
         self.pushButton_proxy_provider.setText(_translate("MainWindow", "Recommended \n"
 "Proxy Provider"))
@@ -824,4 +885,5 @@ class Ui_MainWindow(object):
 "Email Leads"))
         self.pushButton_send.setText(_translate("MainWindow", "SEND"))
         self.pushButton_send_cancel.setText(_translate("MainWindow", "CANCEL"))
+        self.pushButton_clear_compose.setText(_translate("MainWindow", "CLEAR"))
 import logo_rc

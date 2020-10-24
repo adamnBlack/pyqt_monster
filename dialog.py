@@ -10,6 +10,7 @@ import requests
 from subprocess import check_output
 from json import loads, dumps
 from threading import Thread
+import utils
 
 regex = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
 
@@ -35,9 +36,9 @@ class Sign_up(su.Ui_Dialog):
         self.setupUi(dialog)
         self.pushButton_sign_up.clicked.connect(self.validate)
         self.label_status.setText("Password must be equal to or more than 8 characters")
-        self.lineEdit_email.setText("sdsf@gfdss.com")
-        self.lineEdit_password.setText("123456789")
-        self.lineEdit_confirm_password.setText("123456789")
+        # self.lineEdit_email.setText("")
+        # self.lineEdit_password.setText("123456789")
+        # self.lineEdit_confirm_password.setText("123456789")
 
         self.timer = QtCore.QTimer()
         self.timer.setInterval(10)
@@ -69,19 +70,20 @@ class Sign_in(si.Ui_Dialog):
         self.setupUi(dialog)
         self.dialog = dialog
         self.pushButton_sign_in.clicked.connect(self.validate)
-        self.lineEdit_email.setText("sdsf@gfdss.com")
-        self.lineEdit_password.setText("123456789")
+        self.lineEdit_email.setText(var.login_email)
+        # self.lineEdit_password.setText("")
 
         self.timer = QtCore.QTimer()
         self.timer.setInterval(10)
         self.timer.timeout.connect(self.setText)
 
     def validate(self):
-        email = self.lineEdit_email.text()
+        email = var.login_email = self.lineEdit_email.text()
         password = self.lineEdit_password.text()
         if check(email):
-            print(password)
+            # print(password)
             # make_sign_up_requests(email, password, "login")
+            utils.update_config_json()
             self.label_status.setText("connecting main server...")
             Thread(target=make_sign_up_requests, daemon=True, args=[email, password, "login"]).start()
             self.timer.start()

@@ -3,6 +3,7 @@ import var
 import random
 import json
 
+
 def update_config_json():
     try:
         data =  {
@@ -17,7 +18,8 @@ def update_config_json():
                         "gmail_provider": var.gmail_provider,
                         "api": var.api,
                         "compose_email_subject": var.compose_email_subject,
-                        "compose_email_body": var.compose_email_body
+                        "compose_email_body": var.compose_email_body,
+                        "login_email": var.login_email
                     }
                 }
         with open('config/config.json', 'w') as json_file:

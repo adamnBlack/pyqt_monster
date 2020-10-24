@@ -65,11 +65,19 @@ class myMainClass():
         GUI.pushButton_gmail_provider.clicked.connect(self.gmail_provider)
         GUI.pushButton_proxy_provider.clicked.connect(self.proxy_provider)
         GUI.radioButton_reply.clicked.connect(self.change_subject)
+        GUI.pushButton_reload_db.clicked.connect(self.reload_db)
+        GUI.pushButton_clear_compose.clicked.connect(self.clear_compose)
+
+    def clear_compose(self):
+        GUI.textBrowser_compose.clear()
+
+    def reload_db(self):
+        Thread(target=var.load_db, daemon=True).start()
 
     def change_subject(self):
         try:
             subject = var.email_in_view['subject']
-            subject = subject if "RE: " in subject else "RE: {}".format(subject)
+            subject = subject if ("RE: " in subject or "Re: " in subject) else "RE: {}".format(subject)
             GUI.lineEdit_subject.setText(subject)
         except Exception as e:
             print("Error while setting subject : {}".format(e))
@@ -100,7 +108,6 @@ class myMainClass():
 
     def send(self):
         try:
-            update_config_json()
             var.stop_send_campaign = False
             var.thread_open_campaign = 0
             var.send_campaign_email_count = 0
@@ -127,19 +134,22 @@ class myMainClass():
 
     def send_campaign(self):
         var.num_emails_per_address = int(GUI.lineEdit_num_per_address.text())
-        var.delay_between_emails = int(GUI.lineEdit_delay_between_emails.text())
+        var.delay_between_emails = GUI.lineEdit_delay_between_emails.text()
+        delay_start = int(var.delay_between_emails.split("-")[0].strip())
+        delay_end = int(var.delay_between_emails.split("-")[1].strip())
+        update_config_json()
         var.compose_email_subject = GUI.lineEdit_subject.text()
         var.compose_email_body = GUI.textBrowser_compose.toPlainText()
-        batch = len(var.target)/var.num_emails_per_address
+        # batch = len(var.target)/var.num_emails_per_address
         var.group_a['flag'] = 0
         var.group_b['flag'] = 0
         var.target['flag'] = 0
         if GUI.radioButton_campaign_group_a.isChecked():
             print("Group a")
-            Thread(target=smtp.main, daemon=True, args=[var.group_a]).start()
+            Thread(target=smtp.main, daemon=True, args=[var.group_a, delay_start, delay_end]).start()
         else:
             print("Group b")
-            Thread(target=smtp.main, daemon=True, args=[var.group_b]).start()
+            Thread(target=smtp.main, daemon=True, args=[var.group_b, delay_start, delay_end]).start()
 
     def reply(self):
         var.email_in_view['subject'] = GUI.lineEdit_subject.text()
@@ -159,7 +169,7 @@ class myMainClass():
             var.stop_send_campaign = False
 
     def progressbar_download(self):
-        GUI.progressBar_email.setValue((var.acc_finished/var.total_acc)*100)
+        GUI.progressBar_send_email.setValue((var.acc_finished/var.total_acc)*100)
         if var.acc_finished == var.total_acc:
             GUI.pushButton_download_email.setEnabled(True)
             if var.stop_download == True:

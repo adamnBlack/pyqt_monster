@@ -1,4 +1,5 @@
 from json import load, dumps
+from pyautogui import alert, password, confirm
 import os
 import sys
 import pandas as pd
@@ -6,8 +7,8 @@ import queue
 from collections import deque
 from queue import LifoQueue
 import logging
-import dialog
-# import main
+# import dialog
+import main
 
 # admin password = hkHK#j4@jh#@
 # email='orders@gmonster.net'
@@ -15,9 +16,9 @@ import dialog
 sign_up_label = ""
 sign_in_label = ""
 signed_in = False
-
+base_dir = "database"
 #Create and configure logger
-logging.basicConfig(filename="config/send.log",
+logging.basicConfig(filename=base_dir+"/log.log",
                     format='%(asctime)s %(message)s',
                     filemode='a')
 
@@ -114,7 +115,7 @@ button_style = """QPushButton {
 #     }"""
 
 num_emails_per_address = 0
-delay_between_emails = 0
+delay_between_emails = ""
 date = "8/24/2020"
 try:
     with open('config/config.json') as json_file:
@@ -128,25 +129,36 @@ try:
     proxy_provider = config['proxy_provider']
     email_scraper = config['email_scraper']
     api = config['api']
+    login_email = config['login_email']
 except Exception as e:
     print("Exeception occured at config loading : {}".format(e))
 
-try:
-    group_a = pd.read_csv('config/group_a.csv')
-    group_a.fillna(" ", inplace=True)
-    group_a.insert(0,'flag', '')
-    group_a['flag'] = 0
-    print(group_a.head(5))
-    group_b = pd.read_csv('config/group_b.csv')
-    group_b.fillna(" ", inplace=True)
-    group_b.insert(0,'flag', '')
-    group_b['flag'] = 0
-    print(group_b.head(5))
-    target = pd.read_csv('config/target.csv')
-    target.fillna(" ", inplace=True)
-    target.insert(0,'flag', '')
-    target['flag'] = 0
-    print(target.head(5))
-except Exception as e:
-    print("Exeception occured at db loading : {}".format(e))
+# group_a = []
+# group_b = []
+# target = []
+
+def load_db():
+    global group_a, group_b, target
+    try:
+        group_a = pd.read_csv(base_dir+'/group_a.csv')
+        group_a.fillna(" ", inplace=True)
+        group_a.insert(0,'flag', '')
+        group_a['flag'] = 0
+        print(group_a.head(5))
+        group_b = pd.read_csv(base_dir+'/group_b.csv')
+        group_b.fillna(" ", inplace=True)
+        group_b.insert(0,'flag', '')
+        group_b['flag'] = 0
+        print(group_b.head(5))
+        target = pd.read_csv(base_dir+'/target.csv')
+        target.fillna(" ", inplace=True)
+        target.insert(0,'flag', '')
+        target['flag'] = 0
+        print(target.head(5))
+        alert(text='Database Loaded', title='Alert', button='OK')
+    except Exception as e:
+        print("Exeception occured at db loading : {}".format(e))
+        alert(text="Exeception occured at db loading : {}".format(e), title='Alert', button='OK')
+
+load_db()
 # pyinstaller --onedir --icon=icons/icon.ico --name=GMonster --noconsole --noconfirm var.py

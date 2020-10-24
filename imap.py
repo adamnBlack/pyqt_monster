@@ -5,6 +5,7 @@ import threading
 from datetime import datetime
 import time
 import var
+import imaplib
 
 
 logger=var.logging.getLogger()
@@ -14,16 +15,19 @@ def set_read_flag(index):
     try:
         global logger
         data = var.inbox_data
-        proxy_host = data['proxy_host'][index]
-        proxy_port = int(data['proxy_port'][index])
         proxy_user = data['proxy_user'][index]
         proxy_pass = data['proxy_pass'][index]
         imap_user = data['user'][index]
         imap_pass = data['pass'][index]
         uid = data['uid'][index]
-        print(index, data['uid'][index], proxy_host, proxy_port, proxy_user, proxy_pass, imap_user, imap_pass)
-        imap = proxy_imaplib.IMAP(proxy_host=proxy_host, proxy_port=proxy_port, proxy_type=socks.PROXY_TYPE_SOCKS5,
-                    proxy_user=proxy_user, proxy_pass=proxy_pass, host=var.imap_server, port=var.imap_port, timeout=30)
+        if data['proxy_host'][index] != "":
+            proxy_host = data['proxy_host'][index]
+            proxy_port = int(data['proxy_port'][index])
+            print(index, data['uid'][index], proxy_host, proxy_port, proxy_user, proxy_pass, imap_user, imap_pass)
+            imap = proxy_imaplib.IMAP(proxy_host=proxy_host, proxy_port=proxy_port, proxy_type=socks.PROXY_TYPE_SOCKS5,
+                        proxy_user=proxy_user, proxy_pass=proxy_pass, host=var.imap_server, port=var.imap_port, timeout=30)
+        else:
+            imap = imaplib.IMAP4_SSL(var.imap_server)
 
         imap.login(imap_user, imap_pass)
 
@@ -41,16 +45,19 @@ def delete_email(index):
     try:
         global logger
         data = var.inbox_data
-        proxy_host = data['proxy_host'][index]
-        proxy_port = int(data['proxy_port'][index])
         proxy_user = data['proxy_user'][index]
         proxy_pass = data['proxy_pass'][index]
         imap_user = data['user'][index]
         imap_pass = data['pass'][index]
         uid = data['uid'][index]
-        print(index, data['uid'][index], proxy_host, proxy_port, proxy_user, proxy_pass, imap_user, imap_pass)
-        imap = proxy_imaplib.IMAP(proxy_host=proxy_host, proxy_port=proxy_port, proxy_type=socks.PROXY_TYPE_SOCKS5,
-                    proxy_user=proxy_user, proxy_pass=proxy_pass, host=var.imap_server, port=var.imap_port, timeout=30)
+        if data['proxy_host'][index] != "":
+            proxy_host = data['proxy_host'][index]
+            proxy_port = int(data['proxy_port'][index])
+            print(index, data['uid'][index], proxy_host, proxy_port, proxy_user, proxy_pass, imap_user, imap_pass)
+            imap = proxy_imaplib.IMAP(proxy_host=proxy_host, proxy_port=proxy_port, proxy_type=socks.PROXY_TYPE_SOCKS5,
+                        proxy_user=proxy_user, proxy_pass=proxy_pass, host=var.imap_server, port=var.imap_port, timeout=30)
+        else:
+            imap = imaplib.IMAP4_SSL(var.imap_server)
 
         imap.login(imap_user, imap_pass)
 
@@ -86,9 +93,11 @@ class IMAP_(threading.Thread):
     def run(self):
         try:
             var.thread_open+=1
-            imap = proxy_imaplib.IMAP(proxy_host=self.proxy_host, proxy_port=self.proxy_port, proxy_type=self.proxy_type,
-                proxy_user=self.proxy_user, proxy_pass=self.proxy_pass, host=self.imap_host, port=self.imap_port, timeout=30)
-
+            if self.proxy_host != "":
+                imap = proxy_imaplib.IMAP(proxy_host=self.proxy_host, proxy_port=self.proxy_port, proxy_type=self.proxy_type,
+                    proxy_user=self.proxy_user, proxy_pass=self.proxy_pass, host=self.imap_host, port=self.imap_port, timeout=30)
+            else:
+                imap = imaplib.IMAP4_SSL(var.imap_server)
 
             imap.login(self.imap_user, self.imap_pass)
 
@@ -153,18 +162,25 @@ class IMAP_(threading.Thread):
             imap.logout()
         except Exception as e:
             print("error at Imap - {} - {}".format(self.name, e))
-            logger.error("Error at downloading email - {} - {}".format(self.imap_user, e))
+            self.logger.error("Error at downloading email - {} - {}".format(self.imap_user, e))
         finally:
             var.acc_finished+=1
             var.thread_open-=1
 
 
 def main(group):
+
     for index, item in group.iterrows():
         if var.stop_download == True:
             break
-        proxy_host = item["PROXY:PORT"].split(':')[0]
-        proxy_port = int(item["PROXY:PORT"].split(':')[1])
+
+        if item["PROXY:PORT"] != " ":
+            proxy_host = item["PROXY:PORT"].split(':')[0]
+            proxy_port = int(item["PROXY:PORT"].split(':')[1])
+        else:
+            proxy_host = ""
+            proxy_port = ""
+
         proxy_type = socks.PROXY_TYPE_SOCKS5
         proxy_user = item["PROXY_USER"]
         proxy_pass = item["PROXY_PASS"]
