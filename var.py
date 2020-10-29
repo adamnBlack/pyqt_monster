@@ -7,8 +7,12 @@ import queue
 from collections import deque
 from queue import LifoQueue
 import logging
-# import dialog
-import main
+import dialog
+# import main
+
+# pd.set_option('display.max_colwidth',1000)
+
+base_dir = "database"
 
 # admin password = hkHK#j4@jh#@
 # email='orders@gmonster.net'
@@ -16,7 +20,7 @@ import main
 sign_up_label = ""
 sign_in_label = ""
 signed_in = False
-base_dir = "database"
+
 #Create and configure logger
 logging.basicConfig(filename=base_dir+"/log.log",
                     format='%(asctime)s %(message)s',
@@ -136,7 +140,6 @@ except Exception as e:
 # group_a = []
 # group_b = []
 # target = []
-
 def load_db():
     global group_a, group_b, target
     try:
@@ -160,5 +163,6 @@ def load_db():
         print("Exeception occured at db loading : {}".format(e))
         alert(text="Exeception occured at db loading : {}".format(e), title='Alert', button='OK')
 
-load_db()
+# load_db()
+
 # pyinstaller --onedir --icon=icons/icon.ico --name=GMonster --noconsole --noconfirm var.py

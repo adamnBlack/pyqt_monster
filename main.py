@@ -13,6 +13,8 @@ from utils import update_config_json
 import pandas as pd
 import webbrowser
 import subprocess
+from progressbar import Delete_email
+
 print("App started....")
 # import uuid
 # print(uuid.UUID(int=uuid.getnode()))
@@ -67,6 +69,16 @@ class myMainClass():
         GUI.radioButton_reply.clicked.connect(self.change_subject)
         GUI.pushButton_reload_db.clicked.connect(self.reload_db)
         GUI.pushButton_clear_compose.clicked.connect(self.clear_compose)
+        GUI.pushButton_delete.clicked.connect(self.batch_delete)
+
+    def batch_delete(self):
+        result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
+        if result == "OK":
+            dialog = QtWidgets.QDialog()
+            dialog.ui = Delete_email(dialog)
+            dialog.exec_()
+        else:
+            print("Cancelled")
 
     def clear_compose(self):
         GUI.textBrowser_compose.clear()
@@ -98,7 +110,7 @@ class myMainClass():
 
     def openFileNamesDialog(self):
         options = QFileDialog.Options()
-        options |= QFileDialog.DontUseNativeDialog
+        # options |= QFileDialog.DontUseNativeDialog
         files, _ = QFileDialog.getOpenFileNames(None,"Attach files", "","All Files (*)", options=options)
         if files:
             var.files = []
@@ -168,18 +180,6 @@ class myMainClass():
         else:
             var.stop_send_campaign = False
 
-    def progressbar_download(self):
-        GUI.progressBar_send_email.setValue((var.acc_finished/var.total_acc)*100)
-        if var.acc_finished == var.total_acc:
-            GUI.pushButton_download_email.setEnabled(True)
-            if var.stop_download == True:
-                GUI.pushButton_cancel_email.setEnabled(False)
-                GUI.label_email_status.setText("Downloading cancelled")
-            else:
-                GUI.label_email_status.setText("Downloading finished")
-            self.table_timer.start()
-            self.progressbar.stop()
-
     def progressbar_send(self):
         if GUI.radioButton_campaign_group_a.isChecked():
             if len(var.group_a)*var.num_emails_per_address > len(var.target):
@@ -202,6 +202,17 @@ class myMainClass():
                 GUI.label_send_email_status.setText("Sending Finished")
             self.send_progressbar.stop()
 
+    def progressbar_download(self):
+        GUI.progressBar_send_email.setValue((var.acc_finished/var.total_acc)*100)
+        if var.acc_finished == var.total_acc:
+            GUI.pushButton_download_email.setEnabled(True)
+            if var.stop_download == True:
+                GUI.pushButton_cancel_email.setEnabled(False)
+                GUI.label_email_status.setText("Downloading cancelled")
+            else:
+                GUI.label_email_status.setText("Downloading finished")
+            self.table_timer.start()
+            self.progressbar.stop()
 
     def downloading_email(self):
         try:
@@ -233,8 +244,8 @@ class myMainClass():
         except:
             pass
 
-    def start_timer(self):
-        self.table_timer.start()
+    # def start_timer(self):
+    #     self.table_timer.start()
 
     # def clear_table(self):
     #     result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
@@ -263,7 +274,7 @@ class myMainClass():
             if count == 2:
                 break
             row_data = var.email_q.get()
-
+            row_data['checkbox_status'] = 0
             var.inbox_data = var.inbox_data.append(row_data, ignore_index=True)
 
             GUI.tableWidget_inbox.setRowCount(var.row_pos+1)
@@ -283,13 +294,16 @@ class myMainClass():
                 button_show_mail.setIcon(QtGui.QIcon(var.mail_read_icon))
             GUI.tableWidget_inbox.setCellWidget(var.row_pos, 0, button_show_mail)
 
-            button_delete = QtWidgets.QPushButton('')
-            button_delete.setStyleSheet(var.button_style)
-            button_delete.clicked.connect(self.email_delete)
-            button_delete.setIcon(QtGui.QIcon(var.delete_icon))
-            GUI.tableWidget_inbox.setCellWidget(var.row_pos, 3, button_delete)
+            # button_delete = QtWidgets.QPushButton('')
+            # button_delete.setStyleSheet(var.button_style)
+            # button_delete.clicked.connect(self.email_delete)
+            # button_delete.setIcon(QtGui.QIcon(var.delete_icon))
+            checkbox_inbox = QtWidgets.QCheckBox(parent=GUI.tableWidget_inbox)
+            checkbox_inbox.setStyleSheet("text-align: center; margin-left:15%; margin-right:10%;")
+            checkbox_inbox.stateChanged.connect(self.clickBox)
+            GUI.tableWidget_inbox.setCellWidget(var.row_pos, 3, checkbox_inbox)
             GUI.tableWidget_inbox.resizeColumnToContents(0)
-            GUI.tableWidget_inbox.resizeColumnToContents(1)
+            # GUI.tableWidget_inbox.resizeColumnToContents(1)
             GUI.tableWidget_inbox.resizeColumnToContents(3)
             var.row_pos+=1
             count+=1
@@ -297,6 +311,22 @@ class myMainClass():
             self.table_timer.stop()
             GUI.label_email_status.setText("Showing Finished")
             print("finished")
+
+    def clickBox(self, state):
+        checkbox = GUI.sender()
+        # print(ch.parent())
+        index = GUI.tableWidget_inbox.indexAt(checkbox.pos())
+        # print(index.row(), index.column(), chechbox.isChecked())
+        if index.isValid():
+            row = index.row()
+            if state == QtCore.Qt.Checked:
+                print('Checked')
+                var.inbox_data['checkbox_status'][row] = 1
+                print(var.inbox_data['subject'][row])
+            else:
+                print('Unchecked')
+                var.inbox_data['checkbox_status'][row] = 0
+                print(var.inbox_data['subject'][row])
 
     def email_show(self):
         print('email showed')
@@ -363,12 +393,7 @@ class myMainClass():
             return index.row(), index.column()
 
 
-
-if __name__ == '__main__':
-    print("ran from here")
-else:
-    app = QtWidgets.QApplication(sys.argv)
-    mainWindow = QtWidgets.QMainWindow()
+def set_icon(obj):
     try:
         def resource_path(relative_path):
             if hasattr(sys, '_MEIPASS'):
@@ -376,15 +401,23 @@ else:
             return os.path.join(os.path.abspath("."), relative_path)
 
         p = resource_path('icons/icon.ico')
-        mainWindow.setWindowIcon(QtGui.QIcon(p))
+        obj.setWindowIcon(QtGui.QIcon(p))
     except Exception as e:
         print(e)
+
+
+if __name__ == '__main__':
+    print("ran from here")
+else:
+    app = QtWidgets.QApplication(sys.argv)
+    mainWindow = QtWidgets.QMainWindow()
+    set_icon(mainWindow)
 
     mainWindow.setWindowFlags(mainWindow.windowFlags(
     ) | QtCore.Qt.WindowMinimizeButtonHint | QtCore.Qt.WindowSystemMenuHint)
     global GUI
     GUI = MyGui(mainWindow)
-    # mainWindow.showMaximized()
+    mainWindow.showMaximized()
     mainWindow.show()
 
     import var

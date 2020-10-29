@@ -34,6 +34,7 @@ class Sign_up(su.Ui_Dialog):
     def __init__(self, dialog):
         su.Ui_Dialog.__init__(self)
         self.setupUi(dialog)
+        set_icon(dialog)
         self.pushButton_sign_up.clicked.connect(self.validate)
         self.label_status.setText("Password must be equal to or more than 8 characters")
         # self.lineEdit_email.setText("")
@@ -69,9 +70,10 @@ class Sign_in(si.Ui_Dialog):
         si.Ui_Dialog.__init__(self)
         self.setupUi(dialog)
         self.dialog = dialog
+        set_icon(self.dialog)
         self.pushButton_sign_in.clicked.connect(self.validate)
         self.lineEdit_email.setText(var.login_email)
-        # self.lineEdit_password.setText("")
+        self.lineEdit_password.setText("123456789")
 
         self.timer = QtCore.QTimer()
         self.timer.setInterval(10)
@@ -92,7 +94,8 @@ class Sign_in(si.Ui_Dialog):
             var.signed_in = True
             self.label_status.setText(var.sign_in_label)
             self.dialog.accept()
-            app.closeAllWindows()
+            # app.closeAllWindows()
+            # GUI.close()
         else:
             var.signed_in = False
             self.label_status.setText(var.sign_in_label)
@@ -156,7 +159,8 @@ class myMainClass():
     def sign_in(self):
         dialog = QtWidgets.QDialog()
         dialog.ui = Sign_in(dialog)
-        dialog.exec_()
+        if dialog.exec_():
+            app.closeAllWindows()
 
 
     def sign_up(self):
@@ -164,12 +168,7 @@ class myMainClass():
         dialog.ui = Sign_up(dialog)
         dialog.exec_()
 
-
-if __name__ == '__main__':
-    pass
-else:
-    app = QtWidgets.QApplication(sys.argv)
-    mainWindow = QtWidgets.QMainWindow()
+def set_icon(obj):
     try:
         def resource_path(relative_path):
             if hasattr(sys, '_MEIPASS'):
@@ -177,9 +176,17 @@ else:
             return os.path.join(os.path.abspath("."), relative_path)
 
         p = resource_path('icons/icon.ico')
-        mainWindow.setWindowIcon(QtGui.QIcon(p))
+        obj.setWindowIcon(QtGui.QIcon(p))
     except Exception as e:
         print(e)
+
+
+if __name__ == '__main__':
+    pass
+else:
+    app = QtWidgets.QApplication(sys.argv)
+    mainWindow = QtWidgets.QMainWindow()
+    set_icon(mainWindow)
 
     mainWindow.setWindowFlags(mainWindow.windowFlags(
     ) | QtCore.Qt.WindowMinimizeButtonHint | QtCore.Qt.WindowSystemMenuHint)

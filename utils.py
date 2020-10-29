@@ -48,5 +48,6 @@ def format_email(text, FIRSTFROMNAME, LASTFROMNAME, one, two, three, TONAME):
 
 
 if __name__ == "__main__":
+    print(__name__)
     print(format_email(var.compose_email_body, 'a', 'b', 'c', 'd', 'e'))
     print(format_email(var.compose_email_subject, 'a', 'b', 'c', 'd', 'e'))
