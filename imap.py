@@ -41,19 +41,22 @@ def set_read_flag(index):
         print("Error at deleting email : {}".format(e))
         logger.error("Error at set_read_flag - {} - {}".format(imap_user, e))
 
-def delete_email(index):
+def delete_email(group):
     try:
+        var.thread_open += 1
         global logger
-        data = var.inbox_data
-        proxy_user = data['proxy_user'][index]
-        proxy_pass = data['proxy_pass'][index]
-        imap_user = data['user'][index]
-        imap_pass = data['pass'][index]
-        uid = data['uid'][index]
-        if data['proxy_host'][index] != "":
-            proxy_host = data['proxy_host'][index]
-            proxy_port = int(data['proxy_port'][index])
-            print(index, data['uid'][index], proxy_host, proxy_port, proxy_user, proxy_pass, imap_user, imap_pass)
+        print("group name ",group.iloc[0]['user'])
+
+        proxy_user = group.iloc[0]['proxy_user']
+        proxy_pass = group.iloc[0]['proxy_pass']
+        imap_user = group.iloc[0]['user']
+        imap_pass = group.iloc[0]['pass']
+
+
+        if group.iloc[0]['proxy_host'] != "":
+            proxy_host = group.iloc[0]['proxy_host']
+            proxy_port = int(group.iloc[0]['proxy_port'])
+            print(proxy_host, proxy_port, proxy_user, proxy_pass, imap_user, imap_pass)
             imap = proxy_imaplib.IMAP(proxy_host=proxy_host, proxy_port=proxy_port, proxy_type=socks.PROXY_TYPE_SOCKS5,
                         proxy_user=proxy_user, proxy_pass=proxy_pass, host=var.imap_server, port=var.imap_port, timeout=30)
         else:
@@ -63,12 +66,19 @@ def delete_email(index):
 
         imap.select('Inbox')
 
-        imap.uid('STORE', uid, '+X-GM-LABELS', '\\Trash')
+        for row_index, row in group.iterrows():
+            if var.stop_delete == True:
+                break
+            imap.uid('STORE', row['uid'], '+X-GM-LABELS', '\\Trash')
+            var.delete_email_count += 1
+            var.inbox_data.drop(row_index)
         imap.close()
         imap.logout()
     except Exception as e:
         print("Error at deleting email : {}".format(e))
         logger.error("Error at deleting email - {} - {}".format(imap_user, e))
+    finally:
+        var.thread_open -= 1
 
 class IMAP_(threading.Thread):
     def __init__(self, threadID, name, proxy_host, proxy_port, proxy_type, proxy_user, proxy_pass, imap_user, imap_pass, FIRSTFROMNAME, LASTFROMNAME):

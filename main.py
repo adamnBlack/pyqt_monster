@@ -9,11 +9,10 @@ from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem, QMessageBox
 from PyQt5 import QtCore, QtGui, QtWidgets
 from gui import Ui_MainWindow
 import encodings.idna
-from utils import update_config_json
 import pandas as pd
 import webbrowser
 import subprocess
-from progressbar import Delete_email
+
 
 print("App started....")
 # import uuid
@@ -67,16 +66,21 @@ class myMainClass():
         GUI.pushButton_gmail_provider.clicked.connect(self.gmail_provider)
         GUI.pushButton_proxy_provider.clicked.connect(self.proxy_provider)
         GUI.radioButton_reply.clicked.connect(self.change_subject)
-        GUI.pushButton_reload_db.clicked.connect(self.reload_db)
+        GUI.pushButton_load_db.clicked.connect(self.reload_db)
         GUI.pushButton_clear_compose.clicked.connect(self.clear_compose)
         GUI.pushButton_delete.clicked.connect(self.batch_delete)
 
     def batch_delete(self):
         result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
         if result == "OK":
+            var.thread_open = 0
             dialog = QtWidgets.QDialog()
             dialog.ui = Delete_email(dialog)
             dialog.exec_()
+            var.inbox_data = pd.DataFrame()
+            var.row_pos = 0
+            GUI.tableWidget_inbox.setRowCount(0)
+            self.table_timer.start()
         else:
             print("Cancelled")
 
@@ -221,7 +225,6 @@ class myMainClass():
             GUI.pushButton_cancel_email.setEnabled(True)
             with var.email_q.mutex:
                 var.email_q.queue.clear()
-            GUI.label_email_status.setText("Downloading...")
             var.total_email = 0
             var.thread_open = 0
             var.acc_finished = 0
@@ -230,19 +233,26 @@ class myMainClass():
             var.inbox_data = pd.DataFrame()
             var.row_pos = 0
             GUI.tableWidget_inbox.setRowCount(0)
-            if GUI.radioButton_group_a.isChecked():
+            if GUI.radioButton_group_a.isChecked() and len(var.group_a) > 0:
                 print("Group a")
+                GUI.label_email_status.setText("Downloading...")
                 var.total_acc = len(var.group_a)
                 Thread(target=imap.main, daemon=True, args=[var.group_a]).start()
-            else:
+                self.progressbar.start()
+            elif GUI.radioButton_group_b.isChecked() and len(var.group_b) > 0:
                 print("Group b")
+                GUI.label_email_status.setText("Downloading...")
                 var.total_acc = len(var.group_b)
                 Thread(target=imap.main, daemon=True, args=[var.group_b]).start()
-
-            print("Downloading ...")
-            self.progressbar.start()
-        except:
-            pass
+                self.progressbar.start()
+            else:
+                print("no db")
+                alert(text='No database loaded yet!!!', title='Error', button='OK')
+                GUI.label_email_status.setText("Load Database!!!!")
+                GUI.pushButton_download_email.setEnabled(True)
+                GUI.pushButton_cancel_email.setEnabled(False)
+        except Exception as e:
+            print("Error at downlaod_email : {}".format(e))
 
     # def start_timer(self):
     #     self.table_timer.start()
@@ -423,6 +433,8 @@ else:
     import var
     import imap
     import smtp
+    from utils import update_config_json
+    from progressbar import Delete_email
     myMC = myMainClass()
 
     app.exec_()

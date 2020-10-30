@@ -7,8 +7,8 @@ import queue
 from collections import deque
 from queue import LifoQueue
 import logging
-import dialog
-# import main
+# import dialog
+import main
 
 # pd.set_option('display.max_colwidth',1000)
 
@@ -137,9 +137,11 @@ try:
 except Exception as e:
     print("Exeception occured at config loading : {}".format(e))
 
-# group_a = []
-# group_b = []
-# target = []
+delete_email_count = 0
+stop_delete = False
+group_a = pd.DataFrame()
+group_b = pd.DataFrame()
+target = pd.DataFrame()
 def load_db():
     global group_a, group_b, target
     try:
