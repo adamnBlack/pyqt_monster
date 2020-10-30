@@ -16,10 +16,112 @@ import smtplib
 import csv
 import queue
 import random
+from main import GUI
 
 logger=var.logging.getLogger()
 logger.setLevel(var.logging.DEBUG)
 sent_q = queue.Queue()
+
+def test(send_to):
+    try:
+        if GUI.radioButton_campaign_group_a.isChecked():
+            send = var.group_a.iloc[0].to_dict()
+        else:
+            send = var.group_b.iloc[0].to_dict()
+
+        target = var.target.iloc[0].to_dict()
+        compose_email_subject = GUI.lineEdit_subject.text().strip()
+        compose_email_body = GUI.textBrowser_compose.toPlainText().strip()
+        msg = MIMEMultipart("alternative")
+        if send["PROXY:PORT"] != " ":
+            proxy_host = send["PROXY:PORT"].split(':')[0]
+            proxy_port = int(send["PROXY:PORT"].split(':')[1])
+        else:
+            proxy_host = ""
+            proxy_port = ""
+        if proxy_host != "":
+            server = SMTP(timeout=30)
+            server.connect_proxy(host=var.smtp_server, port=var.smtp_port,
+                proxy_host=proxy_host, proxy_port=proxy_port, proxy_type=socks.PROXY_TYPE_SOCKS5,
+                proxy_user=send['PROXY_USER'], proxy_pass=send["PROXY_PASS"])
+        else:
+            server = smtplib.SMTP(var.smtp_server, var.smtp_port)
+            server.set_debuglevel(0)
+
+        server.ehlo()
+        server.starttls()
+        server.ehlo()
+        server.login(send['EMAIL'], send['EMAIL_PASS'])
+        t_part = []
+        for path in var.files:
+            part = MIMEBase('application', "octet-stream")
+            with open(path, 'rb') as file:
+                part.set_payload(file.read())
+            encoders.encode_base64(part)
+            part.add_header('Content-Disposition',
+                            'attachment; filename="{}"'.format(Path(path).name))
+            t_part.append(part)
+
+        msg["Subject"] = utils.format_email(compose_email_subject, send['FIRSTFROMNAME'], send['LASTFROMNAME'], target['1'], target['2'], target['3'], target['TONAME'])
+        msg['From'] = formataddr((str(Header("{} {}".format(send['FIRSTFROMNAME'], send['LASTFROMNAME']), 'utf-8')), send['EMAIL']))
+        msg["To"] = send_to
+        msg['Date'] = formatdate(localtime=True)
+        body = utils.format_email(compose_email_body, send['FIRSTFROMNAME'], send['LASTFROMNAME'], target['1'], target['2'], target['3'], target['TONAME'])
+        msg.attach(MIMEText(body, "plain"))
+        for part in t_part:
+            msg.attach(part)
+
+        server.sendmail(send['EMAIL'], send_to, msg.as_string())
+        server.quit()
+        server.close()
+        print("done")
+        return True
+
+    except Exception as e:
+        print("Error at test send : {}".format(e))
+        logger.error("Error at test send - {} - {}".format(send['EMAIL'], e))
+        return False
+
+
+def forward(forward_to):
+    try:
+        msg = MIMEMultipart("alternative")
+        if var.email_in_view['proxy_host'] != "":
+            server = SMTP(timeout=30)
+            server.connect_proxy(host=var.smtp_server, port=var.smtp_port,
+                proxy_host=var.email_in_view['proxy_host'], proxy_port=int(var.email_in_view['proxy_port']), proxy_type=socks.PROXY_TYPE_SOCKS5,
+                proxy_user=var.email_in_view['proxy_user'], proxy_pass=var.email_in_view["proxy_pass"])
+        else:
+            server = smtplib.SMTP(var.smtp_server, var.smtp_port)
+            server.set_debuglevel(0)
+            # server.set_debuglevel(1)
+
+        server.ehlo()
+        server.starttls()
+        server.ehlo()
+        server.login(var.email_in_view['user'], var.email_in_view['pass'])
+
+        msg["Subject"] = var.email_in_view['original_subject']
+        msg['From'] = formataddr((str(Header("{}".format(var.email_in_view['from_name']) , 'utf-8')), var.email_in_view['from_mail']))
+        msg["To"] = var.email_in_view['to_mail']
+        msg['Date'] = formatdate(localtime=True)
+
+        body =  var.email_in_view['original_body']
+        part1 = MIMEText(body, "plain")
+        msg.attach(part1)
+
+
+        server.sendmail(var.email_in_view['user'], forward_to, msg.as_string())
+
+        server.quit()
+        server.close()
+        print("done")
+        return True
+
+    except Exception as e:
+        print("Error at forward : {}".format(e))
+        logger.error("Error at forward - {} - {}".format(var.email_in_view['user'], e))
+        return False
 
 def reply():
     try:
@@ -40,11 +142,15 @@ def reply():
         server.login(var.email_in_view['user'], var.email_in_view['pass'])
 
         msg_id = var.email_in_view['message-id']
-        msg["Subject"] = var.email_in_view['subject']
+        f_f_name = var.email_in_view['FIRSTFROMNAME']
+        l_f_name = var.email_in_view['LASTFROMNAME']
+        toname = var.email_in_view['from_name']
+        msg["Subject"] = utils.format_email(var.email_in_view['subject'], f_f_name, l_f_name, "", "", "", toname)
         msg['From'] = formataddr((str(Header("{} {}".format(var.email_in_view['FIRSTFROMNAME'], var.email_in_view['LASTFROMNAME']) , 'utf-8')), var.email_in_view['user']))
         msg["To"] = var.email_in_view['from_mail']
         msg['Date'] = formatdate(localtime=True)
-        body =  var.email_in_view['body']
+
+        body =  utils.format_email(var.email_in_view['body'], f_f_name, l_f_name, "", "", "", toname)
         part1 = MIMEText(body, "plain")
         msg.add_header("In-Reply-To", msg_id)
         msg.add_header("References", msg_id)
@@ -96,6 +202,7 @@ class SMTP_(threading.Thread):
             global sent_q
             last_recipient = ''
             var.thread_open_campaign += 1
+
             if self.proxy_host != "":
                 server = SMTP(timeout=30)
                 server.connect_proxy(host=var.smtp_server, port=var.smtp_port,
@@ -121,9 +228,11 @@ class SMTP_(threading.Thread):
                                 'attachment; filename="{}"'.format(Path(path).name))
                 t_part.append(part)
             print("Length - {}".format(len(self.target)))
+
             for index, item in self.target.iterrows():
                 if var.stop_send_campaign == True:
                     break
+
                 msg = MIMEMultipart("alternative")
                 msg["Subject"] = utils.format_email(var.compose_email_subject, self.FIRSTFROMNAME, self.LASTFROMNAME, item['1'], item['2'], item['3'], item['TONAME'])
                 msg['From'] = formataddr((str(Header("{} {}".format(self.FIRSTFROMNAME, self.LASTFROMNAME), 'utf-8')), self.user))

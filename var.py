@@ -12,6 +12,7 @@ import main
 
 # pd.set_option('display.max_colwidth',1000)
 
+version = '0.0.1beta'
 base_dir = "database"
 
 # admin password = hkHK#j4@jh#@
@@ -26,17 +27,17 @@ logging.basicConfig(filename=base_dir+"/log.log",
                     format='%(asctime)s %(message)s',
                     filemode='a')
 
-# compose_email_subject = "Just a friendly outreach about [3]"
-# compose_email_body = '''{Hey|Hi|Hello} [TONAME],
+compose_email_subject = "Just a friendly outreach about [3]"
+compose_email_body = '''{Hey|Hi|Hello} [TONAME],
 
-# I'm reaching out to you because i {noticed|came across|found|visited} you website {the other day|yesterday} and thought you'd be interested in a {collaboration|partnership}.
+I'm reaching out to you because i {noticed|came across|found|visited} you website {the other day|yesterday} and thought you'd be interested in a {collaboration|partnership}.
 
-# {Hope you don't mind my outreach!|Looking forward to your reply!}
+{Hope you don't mind my outreach!|Looking forward to your reply!}
 
-# Regards,
-# [FIRSTFROMNAME]'''
-compose_email_subject = ""
-compose_email_body = ""
+Regards,
+[FIRSTFROMNAME]'''
+# compose_email_subject = ""
+# compose_email_body = ""
 
 try:
     def resource_path(relative_path):

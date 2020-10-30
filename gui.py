@@ -42,7 +42,8 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.groupBox_inbox.setFont(font)
-        self.groupBox_inbox.setStyleSheet("background-color: #E3E3E3;")
+        self.groupBox_inbox.setStyleSheet("background-color: #E3E3E3;\n"
+"")
         self.groupBox_inbox.setTitle("")
         self.groupBox_inbox.setObjectName("groupBox_inbox")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.groupBox_inbox)
@@ -322,9 +323,22 @@ class Ui_MainWindow(object):
 "    }")
         self.pushButton_cancel_email.setObjectName("pushButton_cancel_email")
         self.gridLayout_2.addWidget(self.pushButton_cancel_email, 3, 2, 1, 1)
+        self.label_version = QtWidgets.QLabel(self.groupBox_inbox)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setBold(True)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(75)
+        self.label_version.setFont(font)
+        self.label_version.setText("")
+        self.label_version.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.label_version.setObjectName("label_version")
+        self.gridLayout_2.addWidget(self.label_version, 1, 1, 1, 1)
         self.gridLayout.addWidget(self.groupBox_inbox, 1, 0, 1, 1)
         self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox.setStyleSheet("background-color: #E3E3E3;")
+        self.groupBox.setStyleSheet("background-color: #E3E3E3;\n"
+"")
         self.groupBox.setTitle("")
         self.groupBox.setObjectName("groupBox")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.groupBox)
@@ -333,6 +347,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.groupBox_5.setFont(font)
+        self.groupBox_5.setStyleSheet("border:none;")
         self.groupBox_5.setTitle("")
         self.groupBox_5.setObjectName("groupBox_5")
         self.gridLayout_6 = QtWidgets.QGridLayout(self.groupBox_5)
@@ -365,7 +380,7 @@ class Ui_MainWindow(object):
         self.lineEdit_original_recipient.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.lineEdit_original_recipient.setFrame(False)
         self.lineEdit_original_recipient.setReadOnly(True)
-        self.lineEdit_original_recipient.setClearButtonEnabled(True)
+        self.lineEdit_original_recipient.setClearButtonEnabled(False)
         self.lineEdit_original_recipient.setObjectName("lineEdit_original_recipient")
         self.gridLayout_6.addWidget(self.lineEdit_original_recipient, 0, 1, 1, 1)
         self.gridLayout_3.addWidget(self.groupBox_5, 1, 0, 1, 1)
@@ -380,6 +395,7 @@ class Ui_MainWindow(object):
         self.textBrowser_compose.setObjectName("textBrowser_compose")
         self.gridLayout_3.addWidget(self.textBrowser_compose, 7, 0, 1, 1)
         self.groupBox_8 = QtWidgets.QGroupBox(self.groupBox)
+        self.groupBox_8.setStyleSheet("border:none;")
         self.groupBox_8.setTitle("")
         self.groupBox_8.setObjectName("groupBox_8")
         self.gridLayout_10 = QtWidgets.QGridLayout(self.groupBox_8)
@@ -452,6 +468,7 @@ class Ui_MainWindow(object):
         font = QtGui.QFont()
         font.setPointSize(50)
         self.groupBox_2.setFont(font)
+        self.groupBox_2.setStyleSheet("border:none;")
         self.groupBox_2.setTitle("")
         self.groupBox_2.setObjectName("groupBox_2")
         self.gridLayout_4 = QtWidgets.QGridLayout(self.groupBox_2)
@@ -620,6 +637,44 @@ class Ui_MainWindow(object):
 "    }")
         self.pushButton_attachments_clear.setObjectName("pushButton_attachments_clear")
         self.gridLayout_4.addWidget(self.pushButton_attachments_clear, 3, 2, 1, 1, QtCore.Qt.AlignRight)
+        self.pushButton_forward = QtWidgets.QPushButton(self.groupBox_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pushButton_forward.sizePolicy().hasHeightForWidth())
+        self.pushButton_forward.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(9)
+        self.pushButton_forward.setFont(font)
+        self.pushButton_forward.setStyleSheet("QPushButton {\n"
+"    border: 1px solid #555;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    color: rgb(255, 255, 255);\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
+"        );\n"
+"    }")
+        self.pushButton_forward.setObjectName("pushButton_forward")
+        self.gridLayout_4.addWidget(self.pushButton_forward, 2, 2, 1, 1, QtCore.Qt.AlignRight|QtCore.Qt.AlignTop)
         self.gridLayout_3.addWidget(self.groupBox_2, 4, 0, 1, 1)
         self.groupBox_4 = QtWidgets.QGroupBox(self.groupBox)
         font = QtGui.QFont()
@@ -628,6 +683,7 @@ class Ui_MainWindow(object):
         font.setBold(True)
         font.setWeight(75)
         self.groupBox_4.setFont(font)
+        self.groupBox_4.setStyleSheet("border:none;")
         self.groupBox_4.setTitle("")
         self.groupBox_4.setObjectName("groupBox_4")
         self.gridLayout_5 = QtWidgets.QGridLayout(self.groupBox_4)
@@ -761,10 +817,46 @@ class Ui_MainWindow(object):
         font.setFamily("Calibri")
         font.setPointSize(11)
         self.groupBox_7.setFont(font)
+        self.groupBox_7.setStyleSheet("border:none;")
         self.groupBox_7.setTitle("")
         self.groupBox_7.setObjectName("groupBox_7")
         self.gridLayout_9 = QtWidgets.QGridLayout(self.groupBox_7)
         self.gridLayout_9.setObjectName("gridLayout_9")
+        self.pushButton_send_cancel = QtWidgets.QPushButton(self.groupBox_7)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(9)
+        font.setBold(False)
+        font.setWeight(50)
+        self.pushButton_send_cancel.setFont(font)
+        self.pushButton_send_cancel.setStyleSheet("QPushButton {\n"
+"    border: 1px solid #555;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    color: rgb(255, 255, 255);\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
+"        );\n"
+"    }")
+        self.pushButton_send_cancel.setObjectName("pushButton_send_cancel")
+        self.gridLayout_9.addWidget(self.pushButton_send_cancel, 0, 1, 1, 1, QtCore.Qt.AlignLeft)
         self.pushButton_clear_compose = QtWidgets.QPushButton(self.groupBox_7)
         font = QtGui.QFont()
         font.setFamily("Calibri")
@@ -797,7 +889,7 @@ class Ui_MainWindow(object):
 "        );\n"
 "    }")
         self.pushButton_clear_compose.setObjectName("pushButton_clear_compose")
-        self.gridLayout_9.addWidget(self.pushButton_clear_compose, 0, 7, 1, 1, QtCore.Qt.AlignRight)
+        self.gridLayout_9.addWidget(self.pushButton_clear_compose, 0, 8, 1, 1, QtCore.Qt.AlignRight)
         self.label_send_email_status = QtWidgets.QLabel(self.groupBox_7)
         font = QtGui.QFont()
         font.setFamily("Calibri")
@@ -842,14 +934,12 @@ class Ui_MainWindow(object):
 "    }")
         self.pushButton_send.setObjectName("pushButton_send")
         self.gridLayout_9.addWidget(self.pushButton_send, 0, 0, 1, 1, QtCore.Qt.AlignRight)
-        self.pushButton_send_cancel = QtWidgets.QPushButton(self.groupBox_7)
+        self.pushButton_test = QtWidgets.QPushButton(self.groupBox_7)
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(9)
-        font.setBold(False)
-        font.setWeight(50)
-        self.pushButton_send_cancel.setFont(font)
-        self.pushButton_send_cancel.setStyleSheet("QPushButton {\n"
+        self.pushButton_test.setFont(font)
+        self.pushButton_test.setStyleSheet("QPushButton {\n"
 "    border: 1px solid #555;\n"
 "    border-radius: 3px;\n"
 "    border-style: Solid;\n"
@@ -875,8 +965,8 @@ class Ui_MainWindow(object):
 "        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
 "        );\n"
 "    }")
-        self.pushButton_send_cancel.setObjectName("pushButton_send_cancel")
-        self.gridLayout_9.addWidget(self.pushButton_send_cancel, 0, 1, 1, 1, QtCore.Qt.AlignLeft)
+        self.pushButton_test.setObjectName("pushButton_test")
+        self.gridLayout_9.addWidget(self.pushButton_test, 0, 2, 1, 1, QtCore.Qt.AlignHCenter)
         self.gridLayout_3.addWidget(self.groupBox_7, 8, 0, 1, 1)
         self.textBrowser_show_email = QtWidgets.QTextBrowser(self.groupBox)
         font = QtGui.QFont()
@@ -941,12 +1031,14 @@ class Ui_MainWindow(object):
         self.lineEdit_delay_between_emails.setText(_translate("MainWindow", "5-20"))
         self.lineEdit_delay_between_emails.setPlaceholderText(_translate("MainWindow", "Enter a Range"))
         self.pushButton_attachments_clear.setText(_translate("MainWindow", "CLEAR"))
+        self.pushButton_forward.setText(_translate("MainWindow", "FORWARD"))
         self.pushButton_proxy_provider.setText(_translate("MainWindow", "GMonster Proxies"))
         self.pushButton_gmail_provider.setText(_translate("MainWindow", "Custom \n"
 "Gmail Accounts"))
         self.pushButton_email_scraper.setText(_translate("MainWindow", "Targeted \n"
 "Email Leads"))
+        self.pushButton_send_cancel.setText(_translate("MainWindow", "CANCEL"))
         self.pushButton_clear_compose.setText(_translate("MainWindow", "CLEAR"))
         self.pushButton_send.setText(_translate("MainWindow", "SEND"))
-        self.pushButton_send_cancel.setText(_translate("MainWindow", "CANCEL"))
+        self.pushButton_test.setText(_translate("MainWindow", "TEST"))
 import logo_rc

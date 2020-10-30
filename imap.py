@@ -150,6 +150,7 @@ class IMAP_(threading.Thread):
                         'to_mail': email.utils.parseaddr(email_message['To'])[1],
                         'message-id': email.utils.parseaddr(email_message['Message-ID'])[1],
                         'from': email_message['From'],
+                        'from_name': email.utils.parseaddr(email_message['From'])[0],
                         'from_mail': email.utils.parseaddr(email_message['From'])[1],
                         'date': email.utils.parsedate_to_datetime(email_message['Date']),
                         'subject': email_message['Subject'],
@@ -164,7 +165,7 @@ class IMAP_(threading.Thread):
                         'LASTFROMNAME': self.LASTFROMNAME,
                         'flag': item
                         }
-
+                    # print(t_dict)
                     var.email_q.put(t_dict.copy())
                 var.total_email+=1
 

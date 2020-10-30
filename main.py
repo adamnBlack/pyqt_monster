@@ -31,6 +31,7 @@ class myMainClass():
     def __init__(self):
         GUI.lineEdit_num_per_address.setText(str(var.num_emails_per_address))
         GUI.lineEdit_delay_between_emails.setText(str(var.delay_between_emails))
+        GUI.label_version.setText("v {}".format(var.version))
 
         self.table_timer = QtCore.QTimer()
         self.table_timer.setInterval(10)
@@ -66,9 +67,21 @@ class myMainClass():
         GUI.pushButton_gmail_provider.clicked.connect(self.gmail_provider)
         GUI.pushButton_proxy_provider.clicked.connect(self.proxy_provider)
         GUI.radioButton_reply.clicked.connect(self.change_subject)
-        GUI.pushButton_load_db.clicked.connect(self.reload_db)
+        GUI.pushButton_load_db.clicked.connect(self.load_db)
         GUI.pushButton_clear_compose.clicked.connect(self.clear_compose)
         GUI.pushButton_delete.clicked.connect(self.batch_delete)
+        GUI.pushButton_forward.clicked.connect(self.forward)
+        GUI.pushButton_test.clicked.connect(self.test_send)
+
+    def test_send(self):
+        dialog = QtWidgets.QDialog()
+        dialog.ui = Send(dialog, parent='test')
+        dialog.exec_()
+
+    def forward(self):
+        dialog = QtWidgets.QDialog()
+        dialog.ui = Send(dialog, parent='forward')
+        dialog.exec_()
 
     def batch_delete(self):
         result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
@@ -87,7 +100,7 @@ class myMainClass():
     def clear_compose(self):
         GUI.textBrowser_compose.clear()
 
-    def reload_db(self):
+    def load_db(self):
         Thread(target=var.load_db, daemon=True).start()
 
     def change_subject(self):
@@ -153,7 +166,7 @@ class myMainClass():
         var.delay_between_emails = GUI.lineEdit_delay_between_emails.text()
         delay_start = int(var.delay_between_emails.split("-")[0].strip())
         delay_end = int(var.delay_between_emails.split("-")[1].strip())
-        update_config_json()
+        Thread(target=update_config_json, daemon=True).start()
         var.compose_email_subject = GUI.lineEdit_subject.text()
         var.compose_email_body = GUI.textBrowser_compose.toPlainText()
         # batch = len(var.target)/var.num_emails_per_address
@@ -220,7 +233,6 @@ class myMainClass():
 
     def downloading_email(self):
         try:
-            update_config_json()
             GUI.pushButton_download_email.setEnabled(False)
             GUI.pushButton_cancel_email.setEnabled(True)
             with var.email_q.mutex:
@@ -238,12 +250,14 @@ class myMainClass():
                 GUI.label_email_status.setText("Downloading...")
                 var.total_acc = len(var.group_a)
                 Thread(target=imap.main, daemon=True, args=[var.group_a]).start()
+                Thread(target=update_config_json, daemon=True).start()
                 self.progressbar.start()
             elif GUI.radioButton_group_b.isChecked() and len(var.group_b) > 0:
                 print("Group b")
                 GUI.label_email_status.setText("Downloading...")
                 var.total_acc = len(var.group_b)
                 Thread(target=imap.main, daemon=True, args=[var.group_b]).start()
+                Thread(target=update_config_json, daemon=True).start()
                 self.progressbar.start()
             else:
                 print("no db")
@@ -350,46 +364,52 @@ class myMainClass():
 
         GUI.lineEdit_original_recipient.setText(var.inbox_data['to'][row])
         # print(var.inbox_data['body'][row])
-        var.email_in_view = {
-                    'uid': var.inbox_data['uid'][row],
-                    'to_mail': var.inbox_data['to_mail'][row],
-                    'message-id': var.inbox_data['message-id'][row],
-                    'from_mail': var.inbox_data['from_mail'][row],
-                    'subject': var.inbox_data['subject'][row],
-                    'user': var.inbox_data['user'][row],
-                    'pass': var.inbox_data['pass'][row],
-                    'proxy_host': var.inbox_data['proxy_host'][row],
-                    'proxy_port': var.inbox_data['proxy_port'][row],
-                    'proxy_user': var.inbox_data['proxy_user'][row],
-                    'proxy_pass': var.inbox_data['proxy_pass'][row],
-                    'FIRSTFROMNAME': var.inbox_data['FIRSTFROMNAME'][row],
-                    'LASTFROMNAME': var.inbox_data['LASTFROMNAME'][row]
-                    }
+        var.email_in_view = var.inbox_data.iloc[row].to_dict()
+        # var.email_in_view = {
+        #             'uid': var.inbox_data['uid'][row],
+        #             'to_mail': var.inbox_data['to_mail'][row],
+        #             'message-id': var.inbox_data['message-id'][row],
+        #             'from_mail': var.inbox_data['from_mail'][row],
+        #             'subject': var.inbox_data['subject'][row],
+        #             'user': var.inbox_data['user'][row],
+        #             'pass': var.inbox_data['pass'][row],
+        #             'proxy_host': var.inbox_data['proxy_host'][row],
+        #             'proxy_port': var.inbox_data['proxy_port'][row],
+        #             'proxy_user': var.inbox_data['proxy_user'][row],
+        #             'proxy_pass': var.inbox_data['proxy_pass'][row],
+        #             'FIRSTFROMNAME': var.inbox_data['FIRSTFROMNAME'][row],
+        #             'LASTFROMNAME': var.inbox_data['LASTFROMNAME'][row],
+        #             'TONAME': var.inbox_data['TONAME'][row],
+        #             'original_body': var.inbox_data['body'][row],
+        #             'original_subject': var.inbox_data['subject'][row]
+        #             }
+        var.email_in_view['original_body'] = var.inbox_data['body'][row]
+        var.email_in_view['original_subject'] = var.inbox_data['subject'][row]
         if GUI.radioButton_reply.isChecked():
             self.change_subject()
         tmp = "FROM - {}     SUBJECT - {}\n\n{}".format(var.inbox_data['from'][row],
                 var.inbox_data['subject'][row], var.inbox_data['body'][row])
         GUI.textBrowser_show_email.setText(tmp)
 
-    def email_delete(self):
-        try:
-            row, column = self.get_index_of_button(GUI.tableWidget_inbox)
-            button_delete = QtWidgets.QPushButton('')
-            button_delete.setStyleSheet(var.button_style)
-            button_delete.clicked.connect(self.email_delete)
-            button_delete.setIcon(QtGui.QIcon(var.deleted_icon))
-            GUI.tableWidget_inbox.setCellWidget(row, 3, button_delete)
-            Thread(target=self.delete, daemon=True, args=[row]).start()
-        except:
-            pass
+    # def email_delete(self):
+    #     try:
+    #         row, column = self.get_index_of_button(GUI.tableWidget_inbox)
+    #         button_delete = QtWidgets.QPushButton('')
+    #         button_delete.setStyleSheet(var.button_style)
+    #         button_delete.clicked.connect(self.email_delete)
+    #         button_delete.setIcon(QtGui.QIcon(var.deleted_icon))
+    #         GUI.tableWidget_inbox.setCellWidget(row, 3, button_delete)
+    #         Thread(target=self.delete, daemon=True, args=[row]).start()
+    #     except:
+    #         pass
 
-    def delete(self, row):
-        result = confirm(text='Are you sure?', title='Delete Confirmation Window', buttons=['OK', 'Cancel'])
-        if result == 'OK':
-            imap.delete_email(row)
-            alert(text='Deleted Successfully', title='Alert', button='OK')
-        else:
-            print("denined")
+    # def delete(self, row):
+    #     result = confirm(text='Are you sure?', title='Delete Confirmation Window', buttons=['OK', 'Cancel'])
+    #     if result == 'OK':
+    #         imap.delete_email(row)
+    #         alert(text='Deleted Successfully', title='Alert', button='OK')
+    #     else:
+    #         print("denined")
 
     def date_update(self):
         var.date = GUI.dateEdit_imap_since.date().toString("M/d/yyyy")
@@ -435,6 +455,7 @@ else:
     import smtp
     from utils import update_config_json
     from progressbar import Delete_email
+    from send_dialog import Send
     myMC = myMainClass()
 
     app.exec_()

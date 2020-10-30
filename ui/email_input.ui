@@ -7,21 +7,15 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>132</height>
+    <height>149</height>
    </rect>
-  </property>
-  <property name="font">
-   <font>
-    <family>Calibri</family>
-    <pointsize>11</pointsize>
-   </font>
   </property>
   <property name="windowTitle">
    <string>GMonster</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
-    <widget class="QLabel" name="label_status">
+    <widget class="QLabel" name="label_linedit">
      <property name="font">
       <font>
        <family>Calibri</family>
@@ -29,31 +23,34 @@
       </font>
      </property>
      <property name="text">
-      <string/>
+      <string>Forward To:</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </item>
-   <item row="1" column="0">
-    <widget class="QProgressBar" name="progressBar">
+   <item row="0" column="1" colspan="2">
+    <widget class="QLineEdit" name="lineEdit_email">
      <property name="font">
       <font>
        <family>Calibri</family>
        <pointsize>11</pointsize>
       </font>
      </property>
-     <property name="value">
-      <number>0</number>
-     </property>
-     <property name="invertedAppearance">
+     <property name="frame">
       <bool>false</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="clearButtonEnabled">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
-   <item row="2" column="0" alignment="Qt::AlignHCenter">
-    <widget class="QPushButton" name="pushButton_cancel">
+   <item row="2" column="1">
+    <widget class="QPushButton" name="pushButton_send">
      <property name="font">
       <font>
        <family>Calibri</family>
@@ -89,7 +86,35 @@ QPushButton:pressed {
     }</string>
      </property>
      <property name="text">
-      <string>CANCEL</string>
+      <string>SEND</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="3">
+    <widget class="QLabel" name="label_status">
+     <property name="font">
+      <font>
+       <family>Calibri</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="3">
+    <widget class="QProgressBar" name="progressBar">
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="value">
+      <number>0</number>
      </property>
     </widget>
    </item>
