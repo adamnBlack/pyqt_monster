@@ -16,7 +16,10 @@ import smtplib
 import csv
 import queue
 import random
+from pyautogui import alert, password, confirm
 from main import GUI
+
+email_failed = 0
 
 logger=var.logging.getLogger()
 logger.setLevel(var.logging.DEBUG)
@@ -199,7 +202,7 @@ class SMTP_(threading.Thread):
 
     def run(self):
         try:
-            global sent_q
+            global sent_q, email_failed
             last_recipient = ''
             var.thread_open_campaign += 1
 
@@ -256,6 +259,7 @@ class SMTP_(threading.Thread):
             server.quit()
             server.close()
         except Exception as e:
+            email_failed += 1
             print("error at SMTP - {} - {}".format(self.name, e))
             self.logger.error("Error at Sending - {} - {}".format(self.name, e))
             t_dict = {
@@ -268,7 +272,8 @@ class SMTP_(threading.Thread):
             var.thread_open_campaign-=1
 
 def main(group, d_start, d_end):
-    global sent_q
+    global sent_q, email_failed
+    email_failed = 0
     sent_q = queue.Queue()
     target_len = len(var.target)
     group_len = len(group)
@@ -327,3 +332,6 @@ def main(group, d_start, d_end):
                 writer.writerow(var.send_report.get())
     except Exception as e:
         print('Error while saving report - {}'.format(e))
+
+    alert(text='Total Email Sent : {}\nEmail Failed : {}\ncheck app.log and report.csv'.\
+                format(var.send_campaign_email_count, email_failed), title='Alert', button='OK')

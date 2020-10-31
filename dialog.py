@@ -194,6 +194,7 @@ else:
     # mainWindow.showMaximized()
     mainWindow.show()
     import var
+    var.load_db("dialog")
     myMC = myMainClass()
 
     app.exec_()

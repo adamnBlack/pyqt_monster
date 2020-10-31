@@ -7,8 +7,8 @@ import queue
 from collections import deque
 from queue import LifoQueue
 import logging
-# import dialog
-import main
+import dialog
+# import main
 
 # pd.set_option('display.max_colwidth',1000)
 
@@ -23,7 +23,7 @@ sign_in_label = ""
 signed_in = False
 
 #Create and configure logger
-logging.basicConfig(filename=base_dir+"/log.log",
+logging.basicConfig(filename=base_dir+"/app.log",
                     format='%(asctime)s %(message)s',
                     filemode='a')
 
@@ -122,6 +122,7 @@ button_style = """QPushButton {
 num_emails_per_address = 0
 delay_between_emails = ""
 date = "8/24/2020"
+login_email = ""
 try:
     with open('config/config.json') as json_file:
         data = load(json_file)
@@ -143,7 +144,7 @@ stop_delete = False
 group_a = pd.DataFrame()
 group_b = pd.DataFrame()
 target = pd.DataFrame()
-def load_db():
+def load_db(parent=None):
     global group_a, group_b, target
     try:
         group_a = pd.read_csv(base_dir+'/group_a.csv')
@@ -161,11 +162,18 @@ def load_db():
         target.insert(0,'flag', '')
         target['flag'] = 0
         print(target.head(5))
-        alert(text='Database Loaded', title='Alert', button='OK')
+        if parent=="var":
+            from main import GUI
+            GUI.label_email_status.setText("Database Loaded")
+            # print("Database loaded")
+        elif parent=='dialog':
+            print("DB loaded")
+        else:
+            alert(text='Database Loaded', title='Alert', button='OK')
     except Exception as e:
         print("Exeception occured at db loading : {}".format(e))
         alert(text="Exeception occured at db loading : {}".format(e), title='Alert', button='OK')
 
-# load_db()
+# load_db("var")
 
 # pyinstaller --onedir --icon=icons/icon.ico --name=GMonster --noconsole --noconfirm var.py

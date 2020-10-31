@@ -23,7 +23,7 @@ def update_config_json():
                     }
                 }
         with open('config/config.json', 'w') as json_file:
-            json.dump(data, json_file)
+            json.dump(data, json_file, indent=4)
 
     except Exception as e:
         print("Exeception occured at update_config_json : {}".format(e))

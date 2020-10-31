@@ -1,3 +1,4 @@
+from pyautogui import alert, password, confirm
 import proxy_imaplib
 import socks
 import email
@@ -7,7 +8,8 @@ import time
 import var
 import imaplib
 
-
+email_failed = 0
+total_email_downloaded = 0
 logger=var.logging.getLogger()
 logger.setLevel(var.logging.DEBUG)
 
@@ -101,6 +103,7 @@ class IMAP_(threading.Thread):
         self.logger = logger
 
     def run(self):
+        global email_failed, total_email_downloaded
         try:
             var.thread_open+=1
             if self.proxy_host != "":
@@ -167,11 +170,13 @@ class IMAP_(threading.Thread):
                         }
                     # print(t_dict)
                     var.email_q.put(t_dict.copy())
+                    total_email_downloaded += 1
                 var.total_email+=1
 
             imap.close()
             imap.logout()
         except Exception as e:
+            email_failed += 1
             print("error at Imap - {} - {}".format(self.name, e))
             self.logger.error("Error at downloading email - {} - {}".format(self.imap_user, e))
         finally:
@@ -180,7 +185,9 @@ class IMAP_(threading.Thread):
 
 
 def main(group):
-
+    global email_failed, total_email_downloaded
+    email_failed = 0
+    total_email_downloaded = 0
     for index, item in group.iterrows():
         if var.stop_download == True:
             break
@@ -208,5 +215,6 @@ def main(group):
 
     while var.thread_open!=0 and var.stop_download == False:
         time.sleep(1)
-
+    alert(text='Total Email Downloaded : {}\nEmail Failed : {}\ncheck app.log'.\
+                format(total_email_downloaded, email_failed), title='Alert', button='OK')
     print("Downloading finished")

@@ -183,7 +183,7 @@ class myMainClass():
     def reply(self):
         var.email_in_view['subject'] = GUI.lineEdit_subject.text()
         var.email_in_view['body'] = GUI.textBrowser_compose.toPlainText()
-        print(var.email_in_view)
+        # print(var.email_in_view)
         result = smtp.reply()
         if result == 1:
             alert(text='Email sent', title='Alert', button='OK')
@@ -198,26 +198,29 @@ class myMainClass():
             var.stop_send_campaign = False
 
     def progressbar_send(self):
-        if GUI.radioButton_campaign_group_a.isChecked():
-            if len(var.group_a)*var.num_emails_per_address > len(var.target):
-                value = (var.send_campaign_email_count/len(var.target))*100
+        try:
+            if GUI.radioButton_campaign_group_a.isChecked():
+                if len(var.group_a)*var.num_emails_per_address > len(var.target):
+                    value = (var.send_campaign_email_count/len(var.target))*100
+                else:
+                    value = (var.send_campaign_email_count/(len(var.group_a)*var.num_emails_per_address))*100
             else:
-                value = (var.send_campaign_email_count/(len(var.group_a)*var.num_emails_per_address))*100
-        else:
-            if len(var.group_b)*var.num_emails_per_address > len(var.target):
-                value = (var.send_campaign_email_count/len(var.target))*100
-            else:
-                value = (var.send_campaign_email_count/(len(var.group_b)*var.num_emails_per_address))*100
+                if len(var.group_b)*var.num_emails_per_address > len(var.target):
+                    value = (var.send_campaign_email_count/len(var.target))*100
+                else:
+                    value = (var.send_campaign_email_count/(len(var.group_b)*var.num_emails_per_address))*100
 
-        GUI.progressBar_send_email.setValue(value)
-        if var.send_campaign_run_status == False:
-            GUI.pushButton_send.setEnabled(True)
-            print("Sending finished. Stopping timer.")
-            if var.stop_send_campaign == True:
-                GUI.label_send_email_status.setText("Sending Cancelled")
-            else:
-                GUI.label_send_email_status.setText("Sending Finished")
-            self.send_progressbar.stop()
+            GUI.progressBar_send_email.setValue(value)
+            if var.send_campaign_run_status == False:
+                GUI.pushButton_send.setEnabled(True)
+                print("Sending finished. Stopping timer.")
+                if var.stop_send_campaign == True:
+                    GUI.label_send_email_status.setText("Sending Cancelled")
+                else:
+                    GUI.label_send_email_status.setText("Sending Finished")
+                self.send_progressbar.stop()
+        except Exception as e:
+            print("Error at progressbar : {}".format(e))
 
     def progressbar_download(self):
         GUI.progressBar_send_email.setValue((var.acc_finished/var.total_acc)*100)
