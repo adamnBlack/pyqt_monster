@@ -2,6 +2,7 @@ import sign_in as si
 import sign_up as su
 from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem, QMessageBox
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import pyqtSignal, QObject
 from authentication import Ui_MainWindow
 import sys
 import os
@@ -11,6 +12,7 @@ from subprocess import check_output
 from json import loads, dumps
 from threading import Thread
 import utils
+from pyautogui import confirm
 
 regex = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
 
@@ -94,8 +96,7 @@ class Sign_in(si.Ui_Dialog):
             var.signed_in = True
             self.label_status.setText(var.sign_in_label)
             self.dialog.accept()
-            # app.closeAllWindows()
-            # GUI.close()
+
         else:
             var.signed_in = False
             self.label_status.setText(var.sign_in_label)
@@ -103,8 +104,8 @@ class Sign_in(si.Ui_Dialog):
 def make_sign_up_requests(email, password, endpoint):
     try:
         status = "Internal error"
-        machine_uuid = check_output('wmic csproduct get uuid').decode().split('\n')[1].strip()
-        processor_id = check_output('wmic cpu get ProcessorId').decode().split('\n')[1].strip()
+        machine_uuid = check_output('wmic csproduct get uuid', shell=False).decode().split('\n')[1].strip()
+        processor_id = check_output('wmic cpu get ProcessorId', shell=False).decode().split('\n')[1].strip()
         print(machine_uuid, processor_id)
 
         url = var.api + 'verify/' + endpoint
@@ -149,6 +150,9 @@ class MyGui(Ui_MainWindow, QtWidgets.QWidget):
         QtWidgets.QWidget.__init__(self)
         self.setupUi(mainWindow)
 
+class Communicate(QObject):
+
+    path_picker = pyqtSignal(str, str, int)
 
 
 class myMainClass():
@@ -156,17 +160,47 @@ class myMainClass():
         GUI.pushButton_sign_in.clicked.connect(self.sign_in)
         GUI.pushButton_sign_up.clicked.connect(self.sign_up)
 
+        self.c = Communicate()
+        self.c.path_picker.connect(self.path)
+        Thread(target=self.check_update, daemon=True).start()
+
     def sign_in(self):
         dialog = QtWidgets.QDialog()
         dialog.ui = Sign_in(dialog)
         if dialog.exec_():
             app.closeAllWindows()
 
-
     def sign_up(self):
         dialog = QtWidgets.QDialog()
         dialog.ui = Sign_up(dialog)
         dialog.exec_()
+
+    def check_update(self):
+        try:
+            url = var.api + "verify/version/{}".format(var.version)
+            response = requests.post(url, timeout=10)
+            data = response.json()
+            if data['update_needed'] == True:
+                result = confirm(text='New Version Available!!!\nDo you want to download?',
+                            title='Confirmation Window', buttons=['OK', 'Cancel'])
+                if result=="OK":
+                    self.c.path_picker.emit(data['name'], data['link'], data['size'])
+                else:
+                    print("Download rejected")
+        except Exception as e:
+            print("error at check_update: {}".format(e))
+
+    def path(self, name, link, size):
+        from progressbar import Download
+        print(name, link, size)
+        path = str(QFileDialog.getExistingDirectory(None, "Select Directory"))
+        if path:
+            print(path)
+            dialog = QtWidgets.QDialog()
+            dialog.ui = Download(dialog, name, link, size, path)
+            dialog.exec_()
+        else:
+            print("Download cancelled")
 
 def set_icon(obj):
     try:
@@ -194,7 +228,7 @@ else:
     # mainWindow.showMaximized()
     mainWindow.show()
     import var
-    var.load_db("dialog")
+    Thread(target=var.load_db, daemon=True, args=("dialog",)).start()
     myMC = myMainClass()
 
     app.exec_()

@@ -31,7 +31,7 @@ class myMainClass():
     def __init__(self):
         GUI.lineEdit_num_per_address.setText(str(var.num_emails_per_address))
         GUI.lineEdit_delay_between_emails.setText(str(var.delay_between_emails))
-        GUI.label_version.setText("v {}".format(var.version))
+        GUI.label_version.setText("{}".format(var.version))
 
         self.table_timer = QtCore.QTimer()
         self.table_timer.setInterval(10)
@@ -162,23 +162,27 @@ class myMainClass():
 
 
     def send_campaign(self):
-        var.num_emails_per_address = int(GUI.lineEdit_num_per_address.text())
-        var.delay_between_emails = GUI.lineEdit_delay_between_emails.text()
-        delay_start = int(var.delay_between_emails.split("-")[0].strip())
-        delay_end = int(var.delay_between_emails.split("-")[1].strip())
-        Thread(target=update_config_json, daemon=True).start()
-        var.compose_email_subject = GUI.lineEdit_subject.text()
-        var.compose_email_body = GUI.textBrowser_compose.toPlainText()
-        # batch = len(var.target)/var.num_emails_per_address
-        var.group_a['flag'] = 0
-        var.group_b['flag'] = 0
-        var.target['flag'] = 0
-        if GUI.radioButton_campaign_group_a.isChecked():
-            print("Group a")
-            Thread(target=smtp.main, daemon=True, args=[var.group_a, delay_start, delay_end]).start()
-        else:
-            print("Group b")
-            Thread(target=smtp.main, daemon=True, args=[var.group_b, delay_start, delay_end]).start()
+        try:
+            var.num_emails_per_address = int(GUI.lineEdit_num_per_address.text())
+            var.delay_between_emails = GUI.lineEdit_delay_between_emails.text()
+            delay_start = int(var.delay_between_emails.split("-")[0].strip())
+            delay_end = int(var.delay_between_emails.split("-")[1].strip())
+            Thread(target=update_config_json, daemon=True).start()
+            var.compose_email_subject = GUI.lineEdit_subject.text()
+            var.compose_email_body = GUI.textBrowser_compose.toPlainText()
+            # batch = len(var.target)/var.num_emails_per_address
+            var.group_a['flag'] = 0
+            var.group_b['flag'] = 0
+            var.target['flag'] = 0
+            if GUI.radioButton_campaign_group_a.isChecked():
+                print("Group a")
+                Thread(target=smtp.main, daemon=True, args=[var.group_a, delay_start, delay_end]).start()
+            else:
+                print("Group b")
+                Thread(target=smtp.main, daemon=True, args=[var.group_b, delay_start, delay_end]).start()
+        except Exception as e:
+            print("Error at send_campaign : {}".format(e))
+            alert(text="Error at send_campaign : {}".format(e), title='Error', button='OK')
 
     def reply(self):
         var.email_in_view['subject'] = GUI.lineEdit_subject.text()

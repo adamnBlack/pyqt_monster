@@ -18,3 +18,79 @@
 2020-10-31 12:16:42,261 Error at downloading email - Helen.ascendviral@gmail.com - b'[ALERT] Please log in via your web browser: https://support.google.com/mail/accounts/answer/78754 (Failure)'
 2020-10-31 12:16:42,501 Error at downloading email - Debrah.ascendviral@gmail.com - b'[ALERT] Please log in via your web browser: https://support.google.com/mail/accounts/answer/78754 (Failure)'
 2020-10-31 12:16:43,101 Error at downloading email - Karen.ascendviral@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2020-10-31 18:06:43,811 Error at downloading email - Dorothea.ascendviral@gmail.com - b'[ALERT] Please log in via your web browser: https://support.google.com/mail/accounts/answer/78754 (Failure)'
+2020-10-31 18:06:43,844 Error at downloading email - Helen.ascendviral@gmail.com - b'[ALERT] Please log in via your web browser: https://support.google.com/mail/accounts/answer/78754 (Failure)'
+2020-10-31 18:06:44,068 Error at downloading email - Karen.ascendviral@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2020-10-31 18:06:44,794 Error at downloading email - Debrah.ascendviral@gmail.com - b'[ALERT] Please log in via your web browser: https://support.google.com/mail/accounts/answer/78754 (Failure)'
+2020-10-31 19:53:41,037 Error at downloading email - Helen.ascendviral@gmail.com - b'[ALERT] Please log in via your web browser: https://support.google.com/mail/accounts/answer/78754 (Failure)'
+2020-10-31 19:53:41,072 Error at downloading email - Dorothea.ascendviral@gmail.com - b'[ALERT] Please log in via your web browser: https://support.google.com/mail/accounts/answer/78754 (Failure)'
+2020-10-31 19:53:41,139 Error at downloading email - Karen.ascendviral@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2020-10-31 19:53:41,643 Error at downloading email - Debrah.ascendviral@gmail.com - b'[ALERT] Please log in via your web browser: https://support.google.com/mail/accounts/answer/78754 (Failure)'
+2020-11-01 22:15:34,674 Starting new HTTPS connection (1): www.dropbox.com:443
+2020-11-01 22:15:35,491 https://www.dropbox.com:443 "GET /s/u3fdmdt1dd2f7ep/GMonster.zip?dl=1 HTTP/1.1" 301 0
+2020-11-01 22:15:37,222 https://www.dropbox.com:443 "GET /s/dl/u3fdmdt1dd2f7ep/GMonster.zip HTTP/1.1" 302 0
+2020-11-01 22:15:37,236 Starting new HTTPS connection (1): uc9d9f7e73e00bcf9ec6f0e624e5.dl.dropboxusercontent.com:443
+2020-11-01 22:15:38,039 https://uc9d9f7e73e00bcf9ec6f0e624e5.dl.dropboxusercontent.com:443 "GET /cd/0/get/BCbRkrgGUfULYhhHFktyOy7-FM1RW0kh0AT6N_khD43vwsaoUyfW1kOjrV1ZkzI6k682vsTPS276WaJ_b9FEtt_tVrubSYeYlt1yebdFQgg5xo1YQjMomD4vSPbDbWlhzgI/file?dl=1 HTTP/1.1" 200 173826903
+2020-11-01 22:16:30,224 Starting new HTTP connection (1): 127.0.0.1:5000
+2020-11-01 22:16:30,599 http://127.0.0.1:5000 "POST /verify/login HTTP/1.1" 200 7
+2020-11-01 22:16:45,048 Starting new HTTPS connection (1): www.dropbox.com:443
+2020-11-01 22:16:45,762 https://www.dropbox.com:443 "GET /s/u3fdmdt1dd2f7ep/GMonster.zip?dl=1 HTTP/1.1" 301 0
+2020-11-01 22:16:46,205 https://www.dropbox.com:443 "GET /s/dl/u3fdmdt1dd2f7ep/GMonster.zip HTTP/1.1" 302 0
+2020-11-01 22:16:46,209 Starting new HTTPS connection (1): uc9d9f7e73e00bcf9ec6f0e624e5.dl.dropboxusercontent.com:443
+2020-11-01 22:16:47,101 https://uc9d9f7e73e00bcf9ec6f0e624e5.dl.dropboxusercontent.com:443 "GET /cd/0/get/BCbRkrgGUfULYhhHFktyOy7-FM1RW0kh0AT6N_khD43vwsaoUyfW1kOjrV1ZkzI6k682vsTPS276WaJ_b9FEtt_tVrubSYeYlt1yebdFQgg5xo1YQjMomD4vSPbDbWlhzgI/file?dl=1 HTTP/1.1" 200 173826903
+2020-11-01 22:20:13,101 Starting new HTTPS connection (1): www.dropbox.com:443
+2020-11-01 22:20:13,679 https://www.dropbox.com:443 "GET /s/u3fdmdt1dd2f7ep/GMonster.zip?dl=1 HTTP/1.1" 301 0
+2020-11-01 22:20:14,141 https://www.dropbox.com:443 "GET /s/dl/u3fdmdt1dd2f7ep/GMonster.zip HTTP/1.1" 302 0
+2020-11-01 22:20:14,146 Starting new HTTPS connection (1): uc9d9f7e73e00bcf9ec6f0e624e5.dl.dropboxusercontent.com:443
+2020-11-01 22:20:15,816 https://uc9d9f7e73e00bcf9ec6f0e624e5.dl.dropboxusercontent.com:443 "GET /cd/0/get/BCbRkrgGUfULYhhHFktyOy7-FM1RW0kh0AT6N_khD43vwsaoUyfW1kOjrV1ZkzI6k682vsTPS276WaJ_b9FEtt_tVrubSYeYlt1yebdFQgg5xo1YQjMomD4vSPbDbWlhzgI/file?dl=1 HTTP/1.1" 200 173826903
+2020-11-01 22:25:43,026 Starting new HTTPS connection (1): www.dropbox.com:443
+2020-11-01 22:25:43,604 https://www.dropbox.com:443 "GET /s/u3fdmdt1dd2f7ep/GMonster.zip?dl=1 HTTP/1.1" 301 0
+2020-11-01 22:25:44,141 https://www.dropbox.com:443 "GET /s/dl/u3fdmdt1dd2f7ep/GMonster.zip HTTP/1.1" 302 0
+2020-11-01 22:25:44,145 Starting new HTTPS connection (1): uc9d9f7e73e00bcf9ec6f0e624e5.dl.dropboxusercontent.com:443
+2020-11-01 22:25:44,933 https://uc9d9f7e73e00bcf9ec6f0e624e5.dl.dropboxusercontent.com:443 "GET /cd/0/get/BCbRkrgGUfULYhhHFktyOy7-FM1RW0kh0AT6N_khD43vwsaoUyfW1kOjrV1ZkzI6k682vsTPS276WaJ_b9FEtt_tVrubSYeYlt1yebdFQgg5xo1YQjMomD4vSPbDbWlhzgI/file?dl=1 HTTP/1.1" 200 173826903
+2020-11-01 22:26:47,672 Starting new HTTPS connection (1): www.dropbox.com:443
+2020-11-01 22:26:48,236 https://www.dropbox.com:443 "GET /s/u3fdmdt1dd2f7ep/GMonster.zip?dl=1 HTTP/1.1" 301 0
+2020-11-01 22:26:48,736 https://www.dropbox.com:443 "GET /s/dl/u3fdmdt1dd2f7ep/GMonster.zip HTTP/1.1" 302 0
+2020-11-01 22:26:48,750 Starting new HTTPS connection (1): uc9d9f7e73e00bcf9ec6f0e624e5.dl.dropboxusercontent.com:443
+2020-11-01 22:26:49,625 https://uc9d9f7e73e00bcf9ec6f0e624e5.dl.dropboxusercontent.com:443 "GET /cd/0/get/BCbRkrgGUfULYhhHFktyOy7-FM1RW0kh0AT6N_khD43vwsaoUyfW1kOjrV1ZkzI6k682vsTPS276WaJ_b9FEtt_tVrubSYeYlt1yebdFQgg5xo1YQjMomD4vSPbDbWlhzgI/file?dl=1 HTTP/1.1" 200 173826903
+2020-11-01 22:30:37,449 Starting new HTTPS connection (1): www.dropbox.com:443
+2020-11-01 22:30:38,030 https://www.dropbox.com:443 "GET /s/u3fdmdt1dd2f7ep/GMonster.zip?dl=1 HTTP/1.1" 301 0
+2020-11-01 22:30:38,453 https://www.dropbox.com:443 "GET /s/dl/u3fdmdt1dd2f7ep/GMonster.zip HTTP/1.1" 302 0
+2020-11-01 22:30:38,460 Starting new HTTPS connection (1): uc9d9f7e73e00bcf9ec6f0e624e5.dl.dropboxusercontent.com:443
+2020-11-01 22:30:39,864 https://uc9d9f7e73e00bcf9ec6f0e624e5.dl.dropboxusercontent.com:443 "GET /cd/0/get/BCbRkrgGUfULYhhHFktyOy7-FM1RW0kh0AT6N_khD43vwsaoUyfW1kOjrV1ZkzI6k682vsTPS276WaJ_b9FEtt_tVrubSYeYlt1yebdFQgg5xo1YQjMomD4vSPbDbWlhzgI/file?dl=1 HTTP/1.1" 200 173826903
+2020-11-01 22:39:08,596 Starting new HTTP connection (1): 127.0.0.1:5000
+2020-11-01 22:39:08,679 http://127.0.0.1:5000 "POST /verify/version/download/v0.0.2beta HTTP/1.1" 200 27
+2020-11-01 22:39:08,682 Starting new HTTP connection (1): 127.0.0.1:5000
+2020-11-01 22:39:08,698 http://127.0.0.1:5000 "GET /verify/version/download/v0.0.2beta HTTP/1.1" 405 178
+2020-11-01 22:39:59,818 Starting new HTTP connection (1): 127.0.0.1:5000
+2020-11-01 22:39:59,882 http://127.0.0.1:5000 "POST /verify/version/download/v0.0.2beta HTTP/1.1" 200 27
+2020-11-01 22:39:59,884 Starting new HTTP connection (1): 127.0.0.1:5000
+2020-11-01 22:39:59,887 http://127.0.0.1:5000 "GET /verify/version/download/v0.0.2beta HTTP/1.1" 405 178
+2020-11-01 22:40:45,113 Starting new HTTP connection (1): 127.0.0.1:5000
+2020-11-01 22:40:45,116 http://127.0.0.1:5000 "GET /verify/version/download/v0.0.2beta HTTP/1.1" 405 178
+2020-11-01 22:41:17,750 Starting new HTTP connection (1): 127.0.0.1:5000
+2020-11-01 22:41:17,752 http://127.0.0.1:5000 "GET /verify/version/download/v0.0.2beta HTTP/1.1" 405 178
+2020-11-01 22:42:42,794 Starting new HTTP connection (1): 127.0.0.1:5000
+2020-11-01 22:42:42,797 http://127.0.0.1:5000 "GET /verify/version/download/v0.0.2beta HTTP/1.1" 405 178
+2020-11-01 22:44:21,710 Starting new HTTP connection (1): 127.0.0.1:5000
+2020-11-01 22:44:21,713 http://127.0.0.1:5000 "GET /verify/version/download/v0.0.2beta HTTP/1.1" 405 178
+2020-11-01 22:45:27,524 Starting new HTTP connection (1): 127.0.0.1:5000
+2020-11-01 22:45:27,526 http://127.0.0.1:5000 "GET /verify/version/download/v0.0.2beta HTTP/1.1" 405 178
+2020-11-01 22:45:53,340 Starting new HTTP connection (1): 127.0.0.1:5000
+2020-11-01 22:45:53,343 http://127.0.0.1:5000 "GET /verify/version/download/v0.0.2beta HTTP/1.1" 405 178
+2020-11-01 22:58:47,129 Starting new HTTP connection (1): 127.0.0.1:5000
+2020-11-01 22:58:47,183 http://127.0.0.1:5000 "GET /verify/version/download/v0.0.2beta HTTP/1.1" 405 178
+2020-11-01 22:59:30,454 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-01 22:59:31,464 https://enzim.pythonanywhere.com:443 "GET /verify/version/download/v0.0.2beta HTTP/1.1" 405 178
+2020-11-01 23:00:33,011 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-01 23:00:34,358 https://enzim.pythonanywhere.com:443 "POST /verify/version/download/v0.0.2beta HTTP/1.1" 200 27
+2020-11-01 23:00:34,363 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-01 23:00:35,609 https://enzim.pythonanywhere.com:443 "GET /verify/version/download/v0.0.2beta HTTP/1.1" 405 178
+2020-11-01 23:01:21,656 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-01 23:01:23,005 https://enzim.pythonanywhere.com:443 "POST /verify/version/download/v0.0.2beta HTTP/1.1" 200 27
+2020-11-01 23:01:23,012 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-01 23:01:24,251 https://enzim.pythonanywhere.com:443 "GET /verify/version/download/v0.0.2beta HTTP/1.1" 405 178
+2020-11-01 23:03:34,432 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-01 23:03:35,955 https://enzim.pythonanywhere.com:443 "POST /verify/version/download/v0.0.2beta HTTP/1.1" 200 27
+2020-11-01 23:03:35,970 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-01 23:03:37,272 https://enzim.pythonanywhere.com:443 "GET /verify/version/download/v0.0.2beta HTTP/1.1" 405 178

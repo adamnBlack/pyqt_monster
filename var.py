@@ -12,7 +12,7 @@ import dialog
 
 # pd.set_option('display.max_colwidth',1000)
 
-version = '0.0.1beta'
+version = 'v0.0.1beta'
 base_dir = "database"
 
 # admin password = hkHK#j4@jh#@
@@ -163,9 +163,9 @@ def load_db(parent=None):
         target['flag'] = 0
         print(target.head(5))
         if parent=="var":
-            from main import GUI
-            GUI.label_email_status.setText("Database Loaded")
-            # print("Database loaded")
+            # from main import GUI
+            # GUI.label_email_status.setText("Database Loaded")
+            print("Database loaded")
         elif parent=='dialog':
             print("DB loaded")
         else:
