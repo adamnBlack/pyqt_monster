@@ -94,3 +94,52 @@
 2020-11-01 23:03:35,955 https://enzim.pythonanywhere.com:443 "POST /verify/version/download/v0.0.2beta HTTP/1.1" 200 27
 2020-11-01 23:03:35,970 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
 2020-11-01 23:03:37,272 https://enzim.pythonanywhere.com:443 "GET /verify/version/download/v0.0.2beta HTTP/1.1" 405 178
+2020-11-01 23:19:40,553 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-01 23:19:41,599 https://enzim.pythonanywhere.com:443 "POST /verify/version/download/v0.0.2beta HTTP/1.1" 200 27
+2020-11-01 23:19:41,603 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-01 23:19:42,599 https://enzim.pythonanywhere.com:443 "GET /verify/version/download/v0.0.2beta HTTP/1.1" 405 178
+2020-11-01 23:21:33,280 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-01 23:21:34,345 https://enzim.pythonanywhere.com:443 "POST /verify/version/download/v0.0.2beta HTTP/1.1" 200 27
+2020-11-01 23:21:34,350 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-01 23:21:35,326 https://enzim.pythonanywhere.com:443 "GET /verify/version/download/v0.0.2beta HTTP/1.1" 405 178
+2020-11-01 23:26:18,643 Error occurred during loading data. Trying to use cache server https://fake-useragent.herokuapp.com/browsers/0.1.11
+Traceback (most recent call last):
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\site-packages\fake_useragent\utils.py", line 166, in load
+    verify_ssl=verify_ssl,
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\site-packages\fake_useragent\utils.py", line 144, in get_browser_versions
+    'No browsers version found for {browser}'.format(browser=browser))
+fake_useragent.errors.FakeUserAgentError: No browsers version found for Chrome
+2020-11-01 23:26:19,979 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-01 23:26:20,998 https://enzim.pythonanywhere.com:443 "POST /verify/version/download/v0.0.2beta HTTP/1.1" 200 27
+2020-11-01 23:26:21,011 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-01 23:26:22,010 https://enzim.pythonanywhere.com:443 "GET /verify/version/download/v0.0.2beta HTTP/1.1" 405 178
+2020-11-01 23:28:36,836 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-01 23:28:38,391 https://enzim.pythonanywhere.com:443 "POST /verify/version/download/v0.0.2beta HTTP/1.1" 200 27
+2020-11-01 23:28:38,405 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-01 23:28:39,710 https://enzim.pythonanywhere.com:443 "GET /verify/version/download/v0.0.2beta HTTP/1.1" 405 178
+2020-11-01 23:51:46,888 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-01 23:51:47,922 https://enzim.pythonanywhere.com:443 "POST /verify/version/download/v0.0.2beta HTTP/1.1" 200 27
+2020-11-01 23:51:47,934 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-01 23:51:48,933 https://enzim.pythonanywhere.com:443 "GET /verify/version/download/v0.0.2beta HTTP/1.1" 405 178
+2020-11-02 00:16:52,875 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-02 00:16:53,948 https://enzim.pythonanywhere.com:443 "POST /verify/version/download/v0.0.2beta HTTP/1.1" 200 27
+2020-11-02 00:16:53,960 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-02 00:16:54,945 https://enzim.pythonanywhere.com:443 "GET /verify/version/download/v0.0.2beta HTTP/1.1" 405 178
+2020-11-02 05:22:42,993 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-02 05:22:44,082 https://enzim.pythonanywhere.com:443 "POST /verify/version/download/v0.0.2beta HTTP/1.1" 200 27
+2020-11-02 05:22:44,095 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-02 05:22:45,100 https://enzim.pythonanywhere.com:443 "GET /verify/version/download/v0.0.2beta HTTP/1.1" 405 178
+2020-11-02 05:25:44,371 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-02 05:25:45,422 https://enzim.pythonanywhere.com:443 "POST /verify/version/download/v0.0.2beta HTTP/1.1" 200 27
+2020-11-02 05:25:45,437 Starting new HTTPS connection (1): www.dropbox.com:443
+2020-11-02 05:25:46,021 https://www.dropbox.com:443 "GET /s/fbjtk0bdm33m9jl/GMonster.zip?dl=1 HTTP/1.1" 301 0
+2020-11-02 05:25:46,586 https://www.dropbox.com:443 "GET /s/dl/fbjtk0bdm33m9jl/GMonster.zip HTTP/1.1" 302 0
+2020-11-02 05:25:46,601 Starting new HTTPS connection (1): ucaf678a83ebe5fff49411b1cc66.dl.dropboxusercontent.com:443
+2020-11-02 05:25:47,533 https://ucaf678a83ebe5fff49411b1cc66.dl.dropboxusercontent.com:443 "GET /cd/0/get/BCbBP_bQ-6LcAQU_66BA09EqkIkBkYPmfuXzsSeMQ7iAWAuZC3_GgTF0peZeoRXSOZpdPPmbOEvRuESkqjv3gsAnkd2KPOkodhhKi-czUCE6lZve7odCl39XuVOU30pZuso/file?dl=1 HTTP/1.1" 200 173829592
+2020-11-02 05:33:11,787 Starting new HTTPS connection (1): enzim.pythonanywhere.com:443
+2020-11-02 05:33:12,838 https://enzim.pythonanywhere.com:443 "POST /verify/version/download/v0.0.2beta HTTP/1.1" 200 27
+2020-11-02 05:33:12,852 Starting new HTTPS connection (1): www.dropbox.com:443
+2020-11-02 05:33:13,607 https://www.dropbox.com:443 "GET /s/fbjtk0bdm33m9jl/GMonster.zip?dl=1 HTTP/1.1" 301 0
+2020-11-02 05:33:14,199 https://www.dropbox.com:443 "GET /s/dl/fbjtk0bdm33m9jl/GMonster.zip HTTP/1.1" 302 0
+2020-11-02 05:33:14,205 Starting new HTTPS connection (1): ucaf678a83ebe5fff49411b1cc66.dl.dropboxusercontent.com:443
+2020-11-02 05:33:15,165 https://ucaf678a83ebe5fff49411b1cc66.dl.dropboxusercontent.com:443 "GET /cd/0/get/BCbBP_bQ-6LcAQU_66BA09EqkIkBkYPmfuXzsSeMQ7iAWAuZC3_GgTF0peZeoRXSOZpdPPmbOEvRuESkqjv3gsAnkd2KPOkodhhKi-czUCE6lZve7odCl39XuVOU30pZuso/file?dl=1 HTTP/1.1" 200 173829592

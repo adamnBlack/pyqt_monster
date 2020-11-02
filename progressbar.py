@@ -8,6 +8,7 @@ import os, sys
 import time
 from imap import delete_email
 from PyQt5.QtCore import pyqtSignal, QObject
+from fake_useragent import UserAgent
 
 cancel = False
 total_email_count = 0
@@ -45,14 +46,18 @@ class Download(Ui_Dialog):
     def download(self):
         global cancel
         try:
+            # ua = UserAgent()
+            # userAgent = ua.random
             headers = {'user-agent': 'Wget/1.16 (linux-gnu)'}
-            url = self.link
+            # headers = {'user-agent': '{}'.format(userAgent)}
+            # print(headers)
             filepath = "{}/GMonster{}.zip".format(self.file_path, self.name)
             print(filepath)
             url = var.api + "verify/version/download/{}".format(self.name)
             response = requests.post(url, timeout=10)
             data = response.json()
             print(data)
+            url = self.link
             r = requests.get(url, stream=True, headers=headers)
             downloaded = 0
             with open(filepath, 'wb') as f:
