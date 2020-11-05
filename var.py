@@ -12,7 +12,7 @@ import dialog
 
 # pd.set_option('display.max_colwidth',1000)
 
-version = 'v0.0.1beta'
+version = '1.1beta'
 base_dir = "database"
 
 # admin password = hkHK#j4@jh#@
@@ -123,18 +123,20 @@ num_emails_per_address = 0
 delay_between_emails = ""
 date = "8/24/2020"
 login_email = ""
+# api = "http://127.0.0.1:5000/"
+api = "https://enzim.pythonanywhere.com/"
+
+gmail_provider = "https://gmonster.net/product/targeted-email-leads/"
+proxy_provider = "https://gmonster.net/product/gmonster-proxies/"
+email_scraper = "https://gmonster.net/product/gmail-accounts/"
 try:
-    with open('config/config.json') as json_file:
+    with open('{}/config.json'.format(base_dir)) as json_file:
         data = load(json_file)
     config = data['config']
     date = config['date']
     num_emails_per_address = config['num_emails_per_address']
     delay_between_emails = config['delay_between_emails']
     limit_of_thread = config['limit_of_thread']
-    gmail_provider = config['gmail_provider']
-    proxy_provider = config['proxy_provider']
-    email_scraper = config['email_scraper']
-    api = config['api']
     login_email = config['login_email']
 except Exception as e:
     print("Exeception occured at config loading : {}".format(e))
@@ -151,11 +153,13 @@ def load_db(parent=None):
         group_a.fillna(" ", inplace=True)
         group_a.insert(0,'flag', '')
         group_a['flag'] = 0
+        group_a = group_a.loc[group_a['PROXY:PORT'] != " "]
         print(group_a.head(5))
         group_b = pd.read_csv(base_dir+'/group_b.csv')
         group_b.fillna(" ", inplace=True)
         group_b.insert(0,'flag', '')
         group_b['flag'] = 0
+        group_b = group_b.loc[group_b['PROXY:PORT'] != " "]
         print(group_b.head(5))
         target = pd.read_csv(base_dir+'/target.csv')
         target.fillna(" ", inplace=True)

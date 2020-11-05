@@ -50,7 +50,7 @@ class Sign_up(su.Ui_Dialog):
     def setText(self):
         self.label_status.setText(var.sign_up_label)
     def validate(self):
-        email = self.lineEdit_email.text()
+        email = self.lineEdit_email.text().strip()
         password = self.lineEdit_password.text()
         confirm_password = self.lineEdit_confirm_password.text()
         if check(email):
@@ -82,12 +82,12 @@ class Sign_in(si.Ui_Dialog):
         self.timer.timeout.connect(self.setText)
 
     def validate(self):
-        email = var.login_email = self.lineEdit_email.text()
+        email = var.login_email = self.lineEdit_email.text().strip()
         password = self.lineEdit_password.text()
         if check(email):
             # print(password)
             # make_sign_up_requests(email, password, "login")
-            utils.update_config_json()
+            Thread(target=utils.update_config_json, daemon=True).start()
             self.label_status.setText("connecting main server...")
             Thread(target=make_sign_up_requests, daemon=True, args=[email, password, "login"]).start()
             self.timer.start()

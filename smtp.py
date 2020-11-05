@@ -103,13 +103,17 @@ def forward(forward_to):
         server.starttls()
         server.ehlo()
         server.login(var.email_in_view['user'], var.email_in_view['pass'])
-
-        msg["Subject"] = var.email_in_view['original_subject']
-        msg['From'] = formataddr((str(Header("{}".format(var.email_in_view['from_name']) , 'utf-8')), var.email_in_view['from_mail']))
-        msg["To"] = var.email_in_view['to_mail']
+        print(var.email_in_view['from_mail'])
+        msg["Subject"] = "Fwd: " + var.email_in_view['original_subject']
+        msg['From'] = formataddr((str(Header("{} {}".format(var.email_in_view['FIRSTFROMNAME'], var.email_in_view['LASTFROMNAME']) , 'utf-8')), var.email_in_view['user']))
+        msg["To"] = forward_to
         msg['Date'] = formatdate(localtime=True)
 
-        body =  var.email_in_view['original_body']
+        body =  "---------- Forwarded message ---------\nFrom: {}\nDate: {}\nSubject: {}\nTo: <{}>\n\n{}".\
+            format(var.email_in_view['from'], formatdate(localtime=True), 
+                    var.email_in_view['original_subject'], var.email_in_view['to_mail'], 
+                    var.email_in_view['original_body'])
+
         part1 = MIMEText(body, "plain")
         msg.attach(part1)
 
@@ -272,7 +276,7 @@ class SMTP_(threading.Thread):
             var.thread_open_campaign-=1
 
 def main(group, d_start, d_end):
-    global sent_q, email_failed
+    global sent_q, email_failed, logger
     email_failed = 0
     sent_q = queue.Queue()
     target_len = len(var.target)
@@ -286,29 +290,36 @@ def main(group, d_start, d_end):
         end = 0
         print(temp)
         for index, item in group.loc[group['flag'] == 0].iterrows():
-            if var.stop_send_campaign == True or end >= target_len-1:
-                break
-            if item["PROXY:PORT"] != " ":
-                proxy_host = item["PROXY:PORT"].split(':')[0]
-                proxy_port = int(item["PROXY:PORT"].split(':')[1])
-            else:
-                proxy_host = ""
-                proxy_port = ""
-            proxy_user = item["PROXY_USER"]
-            proxy_pass = item["PROXY_PASS"]
-            user = item["EMAIL"]
-            passwd = item["EMAIL_PASS"]
-            name = item["EMAIL"]
-            FIRSTFROMNAME = item["FIRSTFROMNAME"]
-            LASTFROMNAME = item['LASTFROMNAME']
-            start = temp
-            end = start + var.num_emails_per_address - 1
-            temp = end + 1
-            while var.thread_open_campaign >= var.limit_of_thread and var.stop_send_campaign == False:
-                time.sleep(1)
-            group.loc[index, ['flag']] = 1
-            print(index, name, proxy_host, proxy_port, proxy_user, proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME, start, end, d_start, d_end)
-            SMTP_(index, name, proxy_host, proxy_port, proxy_user, proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME, var.target.loc[start:end],  d_start, d_end).start()
+            try:
+                if var.stop_send_campaign == True or end >= target_len-1:
+                    break
+
+                proxy_user = item["PROXY_USER"]
+                proxy_pass = item["PROXY_PASS"]
+                user = item["EMAIL"]
+                passwd = item["EMAIL_PASS"]
+                name = item["EMAIL"]
+                FIRSTFROMNAME = item["FIRSTFROMNAME"]
+                LASTFROMNAME = item['LASTFROMNAME']
+
+                if item["PROXY:PORT"] != " ":
+                    proxy_host = item["PROXY:PORT"].split(':')[0]
+                    proxy_port = int(item["PROXY:PORT"].split(':')[1])
+                else:
+                    proxy_host = ""
+                    proxy_port = ""
+
+                start = temp
+                end = start + var.num_emails_per_address - 1
+                temp = end + 1
+                while var.thread_open_campaign >= var.limit_of_thread and var.stop_send_campaign == False:
+                    time.sleep(1)
+                group.loc[index, ['flag']] = 1
+                print(index, name, proxy_host, proxy_port, proxy_user, proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME, start, end, d_start, d_end)
+                SMTP_(index, name, proxy_host, proxy_port, proxy_user, proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME, var.target.loc[start:end],  d_start, d_end).start()
+            except Exception as e:
+                print("Error at smtp thread opening - {} - {}".format(user, e))
+                logger.error("Error at smtp thread opening - {} - {}".format(user, e))
 
         while var.thread_open_campaign!=0 and var.stop_send_campaign == False:
             time.sleep(1)
@@ -333,5 +344,5 @@ def main(group, d_start, d_end):
     except Exception as e:
         print('Error while saving report - {}'.format(e))
 
-    alert(text='Total Email Sent : {}\nEmail Failed : {}\ncheck app.log and report.csv'.\
+    alert(text='Total Emails Sent : {}\nAccounts Failed : {}\ncheck app.log and report.csv'.\
                 format(var.send_campaign_email_count, email_failed), title='Alert', button='OK')

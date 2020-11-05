@@ -13,10 +13,6 @@ def update_config_json():
                         "num_emails_per_address": var.num_emails_per_address,
                         "delay_between_emails": var.delay_between_emails,
                         "limit_of_thread": var.limit_of_thread,
-                        "email_scraper": var.email_scraper,
-                        "proxy_provider": var.proxy_provider,
-                        "gmail_provider": var.gmail_provider,
-                        "api": var.api,
                         "compose_email_subject": var.compose_email_subject,
                         "compose_email_body": var.compose_email_body,
                         "login_email": var.login_email

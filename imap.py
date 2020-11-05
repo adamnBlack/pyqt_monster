@@ -185,36 +185,42 @@ class IMAP_(threading.Thread):
 
 
 def main(group):
-    global email_failed, total_email_downloaded
+    global email_failed, total_email_downloaded, logger
     email_failed = 0
     total_email_downloaded = 0
     for index, item in group.iterrows():
-        if var.stop_download == True:
-            break
+        try:
+            if var.stop_download == True:
+                break
 
-        if item["PROXY:PORT"] != " ":
-            proxy_host = item["PROXY:PORT"].split(':')[0]
-            proxy_port = int(item["PROXY:PORT"].split(':')[1])
-        else:
-            proxy_host = ""
-            proxy_port = ""
+            proxy_type = socks.PROXY_TYPE_SOCKS5
+            proxy_user = item["PROXY_USER"]
+            proxy_pass = item["PROXY_PASS"]
+            imap_user = item["EMAIL"]
+            imap_pass = item["EMAIL_PASS"]
+            name = item["EMAIL"]
+            FIRSTFROMNAME = item["FIRSTFROMNAME"]
+            LASTFROMNAME = item["LASTFROMNAME"]
 
-        proxy_type = socks.PROXY_TYPE_SOCKS5
-        proxy_user = item["PROXY_USER"]
-        proxy_pass = item["PROXY_PASS"]
-        imap_user = item["EMAIL"]
-        imap_pass = item["EMAIL_PASS"]
-        name = item["EMAIL"]
-        FIRSTFROMNAME = item["FIRSTFROMNAME"]
-        LASTFROMNAME = item["LASTFROMNAME"]
+            if item["PROXY:PORT"] != " ":
+                proxy_host = item["PROXY:PORT"].split(':')[0]
+                proxy_port = int(item["PROXY:PORT"].split(':')[1])
+            else:
+                proxy_host = ""
+                proxy_port = ""
 
-        while var.thread_open >= var.limit_of_thread and var.stop_download == False:
-            time.sleep(1)
-        print(index, name, proxy_host, proxy_port, proxy_type, proxy_user, proxy_pass, imap_user, imap_pass, FIRSTFROMNAME, LASTFROMNAME)
-        IMAP_(index, name, proxy_host, proxy_port, proxy_type, proxy_user, proxy_pass, imap_user, imap_pass, FIRSTFROMNAME, LASTFROMNAME).start()
+
+            while var.thread_open >= var.limit_of_thread and var.stop_download == False:
+                time.sleep(1)
+            print(index, name, proxy_host, proxy_port, proxy_type, proxy_user, proxy_pass, imap_user, imap_pass, FIRSTFROMNAME, LASTFROMNAME)
+            IMAP_(index, name, proxy_host, proxy_port, proxy_type, proxy_user, proxy_pass, imap_user, imap_pass, FIRSTFROMNAME, LASTFROMNAME).start()
+
+        except Exception as e:
+            print("Error at Imap thread open - {} - {}".format(name, e))
+            logger.error("Error at Imap thread open - {} - {}".format(name, e))
 
     while var.thread_open!=0 and var.stop_download == False:
         time.sleep(1)
-    alert(text='Total Email Downloaded : {}\nEmail Failed : {}\ncheck app.log'.\
+    alert(text='Total Emails Downloaded : {}\nAccounts Failed : {}\ncheck app.log'.\
                 format(total_email_downloaded, email_failed), title='Alert', button='OK')
     print("Downloading finished")

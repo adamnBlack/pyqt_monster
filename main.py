@@ -12,7 +12,7 @@ import encodings.idna
 import pandas as pd
 import webbrowser
 import subprocess
-
+import requests
 
 print("App started....")
 # import uuid
@@ -29,9 +29,18 @@ class MyGui(Ui_MainWindow, QtWidgets.QWidget):
 
 class myMainClass():
     def __init__(self):
+        self.sub_exp = 0
+        self.try_failed = 0
+
         GUI.lineEdit_num_per_address.setText(str(var.num_emails_per_address))
         GUI.lineEdit_delay_between_emails.setText(str(var.delay_between_emails))
-        GUI.label_version.setText("{}".format(var.version))
+        GUI.label_version.setText("VERSION: {}".format(var.version))
+
+        self.time_interval_sub_check = 1000 * 60 * 60
+        self.subscription_checker = QtCore.QTimer()
+        self.subscription_checker.setInterval(self.time_interval_sub_check)
+        self.subscription_checker.timeout.connect(self.check_for_subcription)
+        self.subscription_checker.start()
 
         self.table_timer = QtCore.QTimer()
         self.table_timer.setInterval(10)
@@ -72,6 +81,53 @@ class myMainClass():
         GUI.pushButton_delete.clicked.connect(self.batch_delete)
         GUI.pushButton_forward.clicked.connect(self.forward)
         GUI.pushButton_test.clicked.connect(self.test_send)
+
+    def check_for_subcription(self):
+        try:
+            url = var.api + "verify/check_for_subscription/{}".format(var.login_email)
+            response = requests.post(url, timeout=10)
+            data = response.json()
+            if response.status_code == 200:
+                if data['status'] == 2:
+                    self.try_failed = 0
+                    self.sub_exp+=1
+                    print(data['end_date'])
+                    date = ""
+                    alert(text="Subscription Expired at {}.\nSoftware will exit soon.".format(date), 
+                            title='Alert', button='OK')
+                    if self.sub_exp>3:
+                        app.closeAllWindows()
+                elif data['status'] == 3:
+
+                    self.sub_exp+=1
+                    print("sub deactivated")
+                    alert(text="Subscription deativated.\nSoftware will exit soon.", 
+                            title='Alert', button='OK')
+                    if self.sub_exp>3:
+                        app.closeAllWindows()
+                elif data['status'] == 1:
+
+                    self.sub_exp = 0
+                    self.try_failed = 0
+                    print(data['days_left'])
+                    GUI.label_email_status.setText("Subscription ends after {} days.".format(data['days_left']))
+                else:
+                    self.try_failed = 0
+                    self.sub_exp+=1
+                    alert(text="Account not found".format(e), title='Alert', button='OK')
+                    if self.sub_exp>3:
+                        app.closeAllWindows()
+
+            else:
+                alert(text="Error on server.\nContact Admin.".format(e), title='Alert', button='OK')
+        except Exception as e:
+            self.try_failed+=1
+            print("error at check_update: {}".format(e))
+            GUI.label_email_status.setText("Check your internet connection.")
+            if self.try_failed>3:
+                alert(text="Check your internet connection.",
+                            title='Alert', button='OK')
+                app.closeAllWindows()
 
     def test_send(self):
         dialog = QtWidgets.QDialog()
@@ -156,8 +212,8 @@ class myMainClass():
             GUI.label_send_email_status.setText("Sending...")
             GUI.pushButton_send.setEnabled(False)
             self.send_progressbar.start()
-        except:
-            pass
+        except Exception as e:
+            print("Error at send at main.py: {}".format(e))
 
 
 
@@ -372,24 +428,6 @@ class myMainClass():
         GUI.lineEdit_original_recipient.setText(var.inbox_data['to'][row])
         # print(var.inbox_data['body'][row])
         var.email_in_view = var.inbox_data.iloc[row].to_dict()
-        # var.email_in_view = {
-        #             'uid': var.inbox_data['uid'][row],
-        #             'to_mail': var.inbox_data['to_mail'][row],
-        #             'message-id': var.inbox_data['message-id'][row],
-        #             'from_mail': var.inbox_data['from_mail'][row],
-        #             'subject': var.inbox_data['subject'][row],
-        #             'user': var.inbox_data['user'][row],
-        #             'pass': var.inbox_data['pass'][row],
-        #             'proxy_host': var.inbox_data['proxy_host'][row],
-        #             'proxy_port': var.inbox_data['proxy_port'][row],
-        #             'proxy_user': var.inbox_data['proxy_user'][row],
-        #             'proxy_pass': var.inbox_data['proxy_pass'][row],
-        #             'FIRSTFROMNAME': var.inbox_data['FIRSTFROMNAME'][row],
-        #             'LASTFROMNAME': var.inbox_data['LASTFROMNAME'][row],
-        #             'TONAME': var.inbox_data['TONAME'][row],
-        #             'original_body': var.inbox_data['body'][row],
-        #             'original_subject': var.inbox_data['subject'][row]
-        #             }
         var.email_in_view['original_body'] = var.inbox_data['body'][row]
         var.email_in_view['original_subject'] = var.inbox_data['subject'][row]
         if GUI.radioButton_reply.isChecked():
@@ -446,6 +484,7 @@ def set_icon(obj):
 if __name__ == '__main__':
     print("ran from here")
 else:
+    global app
     app = QtWidgets.QApplication(sys.argv)
     mainWindow = QtWidgets.QMainWindow()
     set_icon(mainWindow)
