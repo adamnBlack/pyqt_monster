@@ -184,6 +184,7 @@ class myMainClass():
                 result = confirm(text='New Version Available!!!\nDo you want to download?',
                             title='Confirmation Window', buttons=['OK', 'Cancel'])
                 if result=="OK":
+                    # print(data['name'], data['link'], data['size'])
                     self.c.path_picker.emit(data['name'], data['link'], data['size'])
                 else:
                     print("Download rejected")

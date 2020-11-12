@@ -10,8 +10,9 @@ import imaplib
 
 email_failed = 0
 total_email_downloaded = 0
-logger=var.logging.getLogger()
-logger.setLevel(var.logging.DEBUG)
+logger=var.logging
+logger.getLogger("requests").setLevel(var.logging.WARNING)
+
 
 def set_read_flag(index):
     try:

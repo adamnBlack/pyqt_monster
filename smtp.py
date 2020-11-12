@@ -21,8 +21,9 @@ from main import GUI
 
 email_failed = 0
 
-logger=var.logging.getLogger()
-logger.setLevel(var.logging.DEBUG)
+logger=var.logging
+logger.getLogger("requests").setLevel(var.logging.WARNING)
+
 sent_q = queue.Queue()
 
 def test(send_to):
@@ -281,7 +282,6 @@ def main(group, d_start, d_end):
     sent_q = queue.Queue()
     target_len = len(var.target)
     group_len = len(group)
-    var.send_campaign_run_status = True
     var.send_report = queue.Queue()
 
     while var.send_campaign_email_count < target_len and group['flag'].sum() < group_len:
@@ -329,11 +329,9 @@ def main(group, d_start, d_end):
             var.target.loc[var.target['EMAIL'] == email]['flag'] = 1
         # print(var.group_a.head(5))
         # print(group.head(5))
+    while var.thread_open_campaign!=0 and var.stop_send_campaign == False:
+        time.sleep(1)
 
-
-    var.send_campaign_run_status = False
-
-    print("sending finished")
     try:
         field_names = ['TARGET','FROMEMAIL','STATUS']
         with open(var.base_dir+"/report.csv", 'w', newline='', encoding="utf-8") as csvfile:
@@ -343,6 +341,8 @@ def main(group, d_start, d_end):
                 writer.writerow(var.send_report.get())
     except Exception as e:
         print('Error while saving report - {}'.format(e))
+    var.send_campaign_run_status = False
 
+    print("sending finished")
     alert(text='Total Emails Sent : {}\nAccounts Failed : {}\ncheck app.log and report.csv'.\
                 format(var.send_campaign_email_count, email_failed), title='Alert', button='OK')

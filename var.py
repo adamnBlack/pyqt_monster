@@ -12,7 +12,7 @@ import dialog
 
 # pd.set_option('display.max_colwidth',1000)
 
-version = '1.1beta'
+version = '1.4beta'
 base_dir = "database"
 
 # admin password = hkHK#j4@jh#@
@@ -26,6 +26,7 @@ signed_in = False
 logging.basicConfig(filename=base_dir+"/app.log",
                     format='%(asctime)s %(message)s',
                     filemode='a')
+logging.getLogger("requests").setLevel(logging.WARNING)
 
 compose_email_subject = "Just a friendly outreach about [3]"
 compose_email_body = '''{Hey|Hi|Hello} [TONAME],
@@ -126,9 +127,9 @@ login_email = ""
 # api = "http://127.0.0.1:5000/"
 api = "https://enzim.pythonanywhere.com/"
 
-gmail_provider = "https://gmonster.net/product/targeted-email-leads/"
+gmail_provider = "https://gmonster.net/product/gmail-accounts/"
 proxy_provider = "https://gmonster.net/product/gmonster-proxies/"
-email_scraper = "https://gmonster.net/product/gmail-accounts/"
+email_scraper = "https://gmonster.net/product/targeted-email-leads/"
 try:
     with open('{}/config.json'.format(base_dir)) as json_file:
         data = load(json_file)
@@ -151,18 +152,21 @@ def load_db(parent=None):
     try:
         group_a = pd.read_csv(base_dir+'/group_a.csv')
         group_a.fillna(" ", inplace=True)
+        group_a = group_a.astype(str)
         group_a.insert(0,'flag', '')
         group_a['flag'] = 0
         group_a = group_a.loc[group_a['PROXY:PORT'] != " "]
         print(group_a.head(5))
         group_b = pd.read_csv(base_dir+'/group_b.csv')
         group_b.fillna(" ", inplace=True)
+        group_b = group_b.astype(str)
         group_b.insert(0,'flag', '')
         group_b['flag'] = 0
         group_b = group_b.loc[group_b['PROXY:PORT'] != " "]
         print(group_b.head(5))
         target = pd.read_csv(base_dir+'/target.csv')
         target.fillna(" ", inplace=True)
+        target = target.astype(str)
         target.insert(0,'flag', '')
         target['flag'] = 0
         print(target.head(5))

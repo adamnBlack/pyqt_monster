@@ -1,7 +1,7 @@
 {
     "config": {
         "date": "8/30/2020",
-        "num_emails_per_address": 2,
+        "num_emails_per_address": 1,
         "delay_between_emails": "5-20",
         "limit_of_thread": 100,
         "compose_email_subject": "Just a friendly outreach about [3]",

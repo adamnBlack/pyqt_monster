@@ -36,11 +36,8 @@ class myMainClass():
         GUI.lineEdit_delay_between_emails.setText(str(var.delay_between_emails))
         GUI.label_version.setText("VERSION: {}".format(var.version))
 
-        self.time_interval_sub_check = 1000 * 60 * 60
-        self.subscription_checker = QtCore.QTimer()
-        self.subscription_checker.setInterval(self.time_interval_sub_check)
-        self.subscription_checker.timeout.connect(self.check_for_subcription)
-        self.subscription_checker.start()
+        self.time_interval_sub_check = 3600
+        Thread(target=self.check_for_subcription, daemon=True).start()
 
         self.table_timer = QtCore.QTimer()
         self.table_timer.setInterval(10)
@@ -65,7 +62,7 @@ class myMainClass():
         GUI.pushButton_send.clicked.connect(self.send)
         GUI.pushButton_send_cancel.clicked.connect(self.send_cancel)
 
-
+        # GUI.pushButton_send_cancel.setEnabled(True)
         GUI.pushButton_cancel_email.setEnabled(False)
         GUI.lineEdit_subject.setText(var.compose_email_subject)
         GUI.textBrowser_compose.setText(var.compose_email_body)
@@ -83,51 +80,45 @@ class myMainClass():
         GUI.pushButton_test.clicked.connect(self.test_send)
 
     def check_for_subcription(self):
-        try:
-            url = var.api + "verify/check_for_subscription/{}".format(var.login_email)
-            response = requests.post(url, timeout=10)
-            data = response.json()
-            if response.status_code == 200:
-                if data['status'] == 2:
-                    self.try_failed = 0
-                    self.sub_exp+=1
-                    print(data['end_date'])
-                    date = ""
-                    alert(text="Subscription Expired at {}.\nSoftware will exit soon.".format(date), 
-                            title='Alert', button='OK')
-                    if self.sub_exp>3:
-                        app.closeAllWindows()
-                elif data['status'] == 3:
+        while True:
+            try:
+                url = var.api + "verify/check_for_subscription/{}".format(var.login_email)
+                response = requests.post(url, timeout=10)
+                data = response.json()
+                if response.status_code == 200:
+                    if data['status'] == 2:
+                        self.try_failed = 0
+                        print(data['end_date'])
+                        date = ""
+                        alert(text="Subscription Expired at {}.\nSoftware will exit soon.".format(date), 
+                                title='Alert', button='OK')
+                        sys.exit()
+                    elif data['status'] == 3:
+                        self.try_failed = 0
+                        print("sub deactivated")
+                        alert(text="Subscription deativated.\nSoftware will exit soon.", 
+                                title='Alert', button='OK')
+                        sys.exit()
+                    elif data['status'] == 1:
+                        self.try_failed = 0
+                        print(data['days_left'])
+                        GUI.label_email_status.setText("Subscription ends after {} days.".format(data['days_left']))
+                    else:
+                        self.try_failed = 0
+                        alert(text="Account not found".format(e), title='Alert', button='OK')
+                        sys.exit()
 
-                    self.sub_exp+=1
-                    print("sub deactivated")
-                    alert(text="Subscription deativated.\nSoftware will exit soon.", 
-                            title='Alert', button='OK')
-                    if self.sub_exp>3:
-                        app.closeAllWindows()
-                elif data['status'] == 1:
-
-                    self.sub_exp = 0
-                    self.try_failed = 0
-                    print(data['days_left'])
-                    GUI.label_email_status.setText("Subscription ends after {} days.".format(data['days_left']))
                 else:
-                    self.try_failed = 0
-                    self.sub_exp+=1
-                    alert(text="Account not found".format(e), title='Alert', button='OK')
-                    if self.sub_exp>3:
-                        app.closeAllWindows()
-
-            else:
-                alert(text="Error on server.\nContact Admin.".format(e), title='Alert', button='OK')
-        except Exception as e:
-            self.try_failed+=1
-            print("error at check_update: {}".format(e))
-            GUI.label_email_status.setText("Check your internet connection.")
-            if self.try_failed>3:
-                alert(text="Check your internet connection.",
-                            title='Alert', button='OK')
-                app.closeAllWindows()
+                    alert(text="Error on server.\nContact Admin.".format(e), title='Alert', button='OK')
+            except Exception as e:
+                self.try_failed+=1
+                print("error at check_update: {}".format(e))
+                GUI.label_email_status.setText("Check your internet connection.")
+                if self.try_failed>3:
+                    alert(text="Check your internet connection.",
+                                title='Alert', button='OK')
+                    sys.exit()
+            sleep(self.time_interval_sub_check)
 
     def test_send(self):
         dialog = QtWidgets.QDialog()
@@ -167,7 +158,7 @@ class myMainClass():
         except Exception as e:
             print("Error while setting subject : {}".format(e))
 
-        # GUI.radioButton_reply.setChecked(True)
+
     def gmail_provider(self):
         webbrowser.open_new(var.gmail_provider)
 
@@ -196,21 +187,26 @@ class myMainClass():
             var.stop_send_campaign = False
             var.thread_open_campaign = 0
             var.send_campaign_email_count = 0
+            GUI.pushButton_send.setEnabled(False)
+            GUI.pushButton_send_cancel.setEnabled(False)
             if GUI.radioButton_reply.isChecked():
                 result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
                 if result == 'OK':
                     Thread(target= self.reply, daemon=True).start()
+                    GUI.label_send_email_status.setText("Sending...")
                 else:
                     print('cancelled')
+                    GUI.pushButton_send.setEnabled(True)
             else:
                 result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
                 if result == 'OK':
                     print("send_campaign")
                     Thread(target= self.send_campaign, daemon=True).start()
+                    GUI.label_send_email_status.setText("Sending...")
                 else:
                     print('cancelled')
-            GUI.label_send_email_status.setText("Sending...")
-            GUI.pushButton_send.setEnabled(False)
+                    GUI.pushButton_send.setEnabled(True)
+            GUI.pushButton_send_cancel.setEnabled(True)
             self.send_progressbar.start()
         except Exception as e:
             print("Error at send at main.py: {}".format(e))
@@ -219,6 +215,7 @@ class myMainClass():
 
     def send_campaign(self):
         try:
+            var.send_campaign_run_status = True
             var.num_emails_per_address = int(GUI.lineEdit_num_per_address.text())
             var.delay_between_emails = GUI.lineEdit_delay_between_emails.text()
             delay_start = int(var.delay_between_emails.split("-")[0].strip())
@@ -239,23 +236,8 @@ class myMainClass():
         except Exception as e:
             print("Error at send_campaign : {}".format(e))
             alert(text="Error at send_campaign : {}".format(e), title='Error', button='OK')
-
-    def reply(self):
-        var.email_in_view['subject'] = GUI.lineEdit_subject.text()
-        var.email_in_view['body'] = GUI.textBrowser_compose.toPlainText()
-        # print(var.email_in_view)
-        result = smtp.reply()
-        if result == 1:
-            alert(text='Email sent', title='Alert', button='OK')
-        else:
-            alert(text='Couldn\'t send', title='Alert', button='OK')
-
-    def send_cancel(self):
-        result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
-        if result == 'OK':
-            var.stop_send_campaign = True
-        else:
-            var.stop_send_campaign = False
+            var.send_campaign_run_status = False
+            GUI.pushButton_send.setEnabled(True)
 
     def progressbar_send(self):
         try:
@@ -281,6 +263,24 @@ class myMainClass():
                 self.send_progressbar.stop()
         except Exception as e:
             print("Error at progressbar : {}".format(e))
+
+    def reply(self):
+        var.email_in_view['subject'] = GUI.lineEdit_subject.text()
+        var.email_in_view['body'] = GUI.textBrowser_compose.toPlainText()
+        # print(var.email_in_view)
+        result = smtp.reply()
+        if result == 1:
+            alert(text='Email sent', title='Alert', button='OK')
+        else:
+            alert(text='Couldn\'t send', title='Alert', button='OK')
+
+    def send_cancel(self):
+        result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
+        if result == 'OK':
+            var.stop_send_campaign = True
+        else:
+            var.stop_send_campaign = False
+
 
     def progressbar_download(self):
         GUI.progressBar_send_email.setValue((var.acc_finished/var.total_acc)*100)

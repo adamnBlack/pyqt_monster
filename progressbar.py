@@ -6,9 +6,7 @@ import var
 from p_gui import Ui_Dialog
 import os, sys
 import time
-from imap import delete_email
 from PyQt5.QtCore import pyqtSignal, QObject
-from fake_useragent import UserAgent
 
 cancel = False
 total_email_count = 0
@@ -131,6 +129,7 @@ def thread_starter():
             time.sleep(1)
 
         # print('Group name - {}'.format(group_name))
+        from imap import delete_email
         Thread(target=delete_email, daemon=True, args=(df_group,)).start()
     while var.thread_open!=0 and var.stop_delete == False:
         time.sleep(1)

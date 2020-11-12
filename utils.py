@@ -18,9 +18,9 @@ def update_config_json():
                         "login_email": var.login_email
                     }
                 }
-        with open('config/config.json', 'w') as json_file:
+        with open(var.base_dir+'/config.json', 'w') as json_file:
             json.dump(data, json_file, indent=4)
-
+        print("config updated")
     except Exception as e:
         print("Exeception occured at update_config_json : {}".format(e))
 
