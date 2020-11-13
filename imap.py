@@ -147,6 +147,8 @@ class IMAP_(threading.Thread):
                     else:
                         body = b.get_payload(decode=True)
                     body = body.decode("utf-8")
+                    subject = email.header.make_header(email.header.decode_header(email_message['Subject']))
+                    subject = str(subject)
                     t_dict = {
                         'uid': uid,
                         'to': email_message['To'],
@@ -157,7 +159,7 @@ class IMAP_(threading.Thread):
                         'from_name': email.utils.parseaddr(email_message['From'])[0],
                         'from_mail': email.utils.parseaddr(email_message['From'])[1],
                         'date': email.utils.parsedate_to_datetime(email_message['Date']),
-                        'subject': email_message['Subject'],
+                        'subject': subject,
                         'user': self.imap_user,
                         'pass': self.imap_pass,
                         'body': body,

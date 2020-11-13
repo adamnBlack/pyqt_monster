@@ -12,7 +12,7 @@ import dialog
 
 # pd.set_option('display.max_colwidth',1000)
 
-version = '1.4beta'
+version = '1.5beta'
 base_dir = "database"
 
 # admin password = hkHK#j4@jh#@

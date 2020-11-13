@@ -1,1 +1,4 @@
 2020-11-12 16:37:00,482 Error at downloading email - Liana.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2020-11-13 09:37:39,841 Error at downloading email - Sherry.ascendviral@gmail.com - 'str' object has no attribute 'decode'
+2020-11-13 09:44:01,726 Error at downloading email - Sherry.ascendviral@gmail.com - module 'email' has no attribute 'Header'
+2020-11-13 09:45:11,199 Error at downloading email - Sherry.ascendviral@gmail.com - 'str' object has no attribute 'decode'
