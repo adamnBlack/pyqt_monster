@@ -53,3 +53,11 @@
 2020-11-25 12:34:10,295 Error at Sending - Shirley.dominatethegram@gmail.com - Socket error: timed out
 2020-11-25 12:35:08,856 Error at Sending - Deborah.dominatethegram@gmail.com - Socket error: timed out
 2020-11-25 12:35:08,901 Error at Sending - Melissa.dominatethegram@gmail.com - Socket error: timed out
+2020-11-25 23:47:51,821 Error at downloading email - Jennifer.ascendviral@gmail.com - 'utf-8' codec can't decode byte 0xfc in position 13: invalid start byte
+2020-11-25 23:54:21,247 Error at downloading email - Jennifer.ascendviral@gmail.com - 'utf-8' codec can't decode byte 0xfc in position 13: invalid start byte
+2020-11-25 23:58:28,453 Error at downloading email - Jennifer.ascendviral@gmail.com - 'utf-8' codec can't decode byte 0xfc in position 13: invalid start byte
+2020-11-26 00:43:18,361 Error at downloading email - Jennifer.ascendviral@gmail.com - 'utf-8' codec can't decode byte 0xfc in position 13: invalid start byte
+2020-11-26 00:44:29,276 Error at downloading email - Jennifer.ascendviral@gmail.com - 'utf-8' codec can't decode byte 0xfc in position 13: invalid start byte
+2020-11-26 00:53:09,769 Error at downloading email - Flossie.ascendviral@gmail.com - 'str' object has no attribute 'decode'
+2020-11-26 00:55:13,176 Error at downloading email - Flossie.ascendviral@gmail.com - module 'email' has no attribute 'Header'
+2020-11-26 00:59:30,733 Error at downloading email - Flossie.ascendviral@gmail.com - expected string or bytes-like object

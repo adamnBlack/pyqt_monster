@@ -146,18 +146,35 @@ class IMAP_(threading.Thread):
                     # not multipart - i.e. plain text, no attachments, keeping fingers crossed
                     else:
                         body = b.get_payload(decode=True)
-                    body = body.decode("utf-8")
+                    try:
+                        body = body.decode("utf-8", 'ignore')
+                    except:
+                        print(body)
+                        body = body
                     subject = email.header.make_header(email.header.decode_header(email_message['Subject']))
                     subject = str(subject)
+                    
+                    from_name = str(email.header.make_header(email.header.\
+                                    decode_header(email.utils.parseaddr(email_message['From'])[0])))
+                    from_mail = str(email.header.make_header(email.header.\
+                                    decode_header(email.utils.parseaddr(email_message['From'])[1])))
+
+                    to_name = str(email.header.make_header(email.header.\
+                                    decode_header(email.utils.parseaddr(email_message['To'])[0])))
+                    to_mail = str(email.header.make_header(email.header.\
+                                    decode_header(email.utils.parseaddr(email_message['To'])[1])))
+
+                    print(from_name, from_mail, to_name, to_mail)
+
                     t_dict = {
                         'uid': uid,
-                        'to': email_message['To'],
-                        'TONAME': email.utils.parseaddr(email_message['To'])[0],
-                        'to_mail': email.utils.parseaddr(email_message['To'])[1],
+                        'to': "{} {}".format(to_name, to_mail),
+                        'TONAME': to_name,
+                        'to_mail': to_mail,
                         'message-id': email.utils.parseaddr(email_message['Message-ID'])[1],
-                        'from': email_message['From'],
-                        'from_name': email.utils.parseaddr(email_message['From'])[0],
-                        'from_mail': email.utils.parseaddr(email_message['From'])[1],
+                        'from': "{} {}".format(from_name, from_mail),
+                        'from_name': from_name,
+                        'from_mail': from_mail,
                         'date': email.utils.parsedate_to_datetime(email_message['Date']),
                         'subject': subject,
                         'user': self.imap_user,

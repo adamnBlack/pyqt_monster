@@ -3,7 +3,6 @@ import var
 import random
 import json
 
-
 def update_config_json():
     try:
         data =  {

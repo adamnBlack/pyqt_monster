@@ -450,10 +450,16 @@ class myMainClass():
         var.email_in_view['original_subject'] = var.inbox_data['subject'][row]
         if GUI.radioButton_reply.isChecked():
             self.change_subject()
-        tmp = "FROM - {}     SUBJECT - {}\n\n{}".format(var.inbox_data['from'][row],
-                var.inbox_data['subject'][row], var.inbox_data['body'][row])
-        GUI.textBrowser_show_email.setText(tmp)
+        
 
+        if "</body>" in var.inbox_data['body'][row]:
+            GUI.textBrowser_show_email.setHtml(var.inbox_data['body'][row])
+        else:
+            tmp = "FROM - {}     SUBJECT - {}\n\n{}".format(var.inbox_data['from'][row],
+                var.inbox_data['subject'][row], var.inbox_data['body'][row])
+
+            GUI.textBrowser_show_email.setText(tmp)
+        
     # def email_delete(self):
     #     try:
     #         row, column = self.get_index_of_button(GUI.tableWidget_inbox)
