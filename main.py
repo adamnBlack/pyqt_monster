@@ -194,6 +194,8 @@ class myMainClass():
                 if result == 'OK':
                     Thread(target= self.reply, daemon=True).start()
                     GUI.label_send_email_status.setText("Sending...")
+                    GUI.pushButton_send_cancel.setEnabled(True)
+                    self.send_progressbar.start()
                 else:
                     print('cancelled')
                     GUI.pushButton_send.setEnabled(True)
@@ -203,11 +205,12 @@ class myMainClass():
                     print("send_campaign")
                     Thread(target= self.send_campaign, daemon=True).start()
                     GUI.label_send_email_status.setText("Sending...")
+                    GUI.pushButton_send_cancel.setEnabled(True)
+                    self.send_progressbar.start()
                 else:
                     print('cancelled')
                     GUI.pushButton_send.setEnabled(True)
-            GUI.pushButton_send_cancel.setEnabled(True)
-            self.send_progressbar.start()
+
         except Exception as e:
             print("Error at send at main.py: {}".format(e))
 
@@ -227,12 +230,27 @@ class myMainClass():
             var.group_a['flag'] = 0
             var.group_b['flag'] = 0
             var.target['flag'] = 0
+
             if GUI.radioButton_campaign_group_a.isChecked():
                 print("Group a")
-                Thread(target=smtp.main, daemon=True, args=[var.group_a, delay_start, delay_end]).start()
+                if len(var.group_a)>0 and len(var.target)>0:
+                    Thread(target=smtp.main, daemon=True, args=[var.group_a.copy(), delay_start, delay_end]).start()
+                else:
+                    GUI.label_email_status.setText("Database empty")
+                    var.send_campaign_run_status = False
+                    GUI.pushButton_send.setEnabled(True)
+
+
             else:
                 print("Group b")
-                Thread(target=smtp.main, daemon=True, args=[var.group_b, delay_start, delay_end]).start()
+                if len(var.group_b)>0 and len(var.target)>0:
+                    Thread(target=smtp.main, daemon=True, args=[var.group_b.copy(), delay_start, delay_end]).start()
+                else:
+                    GUI.label_email_status.setText("Database empty")
+                    var.send_campaign_run_status = False
+                    GUI.pushButton_send.setEnabled(True)
+
+
         except Exception as e:
             print("Error at send_campaign : {}".format(e))
             alert(text="Error at send_campaign : {}".format(e), title='Error', button='OK')
@@ -241,18 +259,6 @@ class myMainClass():
 
     def progressbar_send(self):
         try:
-            if GUI.radioButton_campaign_group_a.isChecked():
-                if len(var.group_a)*var.num_emails_per_address > len(var.target):
-                    value = (var.send_campaign_email_count/len(var.target))*100
-                else:
-                    value = (var.send_campaign_email_count/(len(var.group_a)*var.num_emails_per_address))*100
-            else:
-                if len(var.group_b)*var.num_emails_per_address > len(var.target):
-                    value = (var.send_campaign_email_count/len(var.target))*100
-                else:
-                    value = (var.send_campaign_email_count/(len(var.group_b)*var.num_emails_per_address))*100
-
-            GUI.progressBar_send_email.setValue(value)
             if var.send_campaign_run_status == False:
                 GUI.pushButton_send.setEnabled(True)
                 print("Sending finished. Stopping timer.")
@@ -261,6 +267,18 @@ class myMainClass():
                 else:
                     GUI.label_send_email_status.setText("Sending Finished")
                 self.send_progressbar.stop()
+            else:
+                if GUI.radioButton_campaign_group_a.isChecked():
+                    if len(var.group_a)*var.num_emails_per_address > len(var.target):
+                        value = (var.send_campaign_email_count/len(var.target))*100
+                    else:
+                        value = (var.send_campaign_email_count/(len(var.group_a)*var.num_emails_per_address))*100
+                else:
+                    if len(var.group_b)*var.num_emails_per_address > len(var.target):
+                        value = (var.send_campaign_email_count/len(var.target))*100
+                    else:
+                        value = (var.send_campaign_email_count/(len(var.group_b)*var.num_emails_per_address))*100
+                GUI.progressBar_send_email.setValue(value)
         except Exception as e:
             print("Error at progressbar : {}".format(e))
 

@@ -14,7 +14,8 @@ from threading import Thread
 import utils
 from pyautogui import confirm
 
-regex = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
+# regex = '^[a-zA-Z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
+regex = '[^@]+@[^@]+\.[^@]+'
 
 def check(email):
     # pass the regular expression
@@ -84,13 +85,11 @@ class Sign_in(si.Ui_Dialog):
     def validate(self):
         email = var.login_email = self.lineEdit_email.text().strip()
         password = self.lineEdit_password.text()
-        if check(email):
-            # print(password)
-            # make_sign_up_requests(email, password, "login")
-            Thread(target=utils.update_config_json, daemon=True).start()
-            self.label_status.setText("connecting main server...")
-            Thread(target=make_sign_up_requests, daemon=True, args=[email, password, "login"]).start()
-            self.timer.start()
+
+        Thread(target=utils.update_config_json, daemon=True).start()
+        self.label_status.setText("connecting main server...")
+        Thread(target=make_sign_up_requests, daemon=True, args=[email, password, "login"]).start()
+        self.timer.start()
     def setText(self):
         if var.sign_in_label == "Success":
             var.signed_in = True

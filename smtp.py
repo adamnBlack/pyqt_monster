@@ -200,6 +200,7 @@ class SMTP_(threading.Thread):
         self.FIRSTFROMNAME = FIRSTFROMNAME
         self.LASTFROMNAME = LASTFROMNAME
         self.target = target
+        print("Length - {} {}".format(len(self.target), self.user))
         global logger
         self.logger=logger
         self.d_start = d_start
@@ -235,7 +236,7 @@ class SMTP_(threading.Thread):
                 part.add_header('Content-Disposition',
                                 'attachment; filename="{}"'.format(Path(path).name))
                 t_part.append(part)
-            print("Length - {}".format(len(self.target)))
+
 
             for index, item in self.target.iterrows():
                 if var.stop_send_campaign == True:
@@ -258,7 +259,7 @@ class SMTP_(threading.Thread):
                     "STATUS": "sent"
                 }
                 var.send_report.put(t_dict.copy())
-                sent_q.put(item['EMAIL'])
+                sent_q.put((item['EMAIL'], index))
                 var.send_campaign_email_count+=1
                 time.sleep(random.randint(self.d_start, self.d_end))
             server.quit()
@@ -280,18 +281,24 @@ def main(group, d_start, d_end):
     global sent_q, email_failed, logger
     email_failed = 0
     sent_q = queue.Queue()
-    target_len = len(var.target)
+    target = var.target.copy()
+    target_len = len(target)
     group_len = len(group)
     var.send_report = queue.Queue()
 
     while var.send_campaign_email_count < target_len and group['flag'].sum() < group_len:
-        var.target = var.target.sort_values(by=['flag'], ascending=False)
-        temp = var.target.flag.ne('0').idxmax()
+        target = target[target['flag']==0]
+
+        target = target.reset_index(drop=True)
+
+        e_target_len = len(target)
+        temp = 0
         end = 0
-        print(temp)
-        for index, item in group.loc[group['flag'] == 0].iterrows():
+
+        for index, item in group.loc[group['flag']==0].iterrows():
             try:
-                if var.stop_send_campaign == True or end >= target_len-1:
+
+                if var.stop_send_campaign == True or end >= e_target_len-1:
                     break
 
                 proxy_user = item["PROXY_USER"]
@@ -312,11 +319,15 @@ def main(group, d_start, d_end):
                 start = temp
                 end = start + var.num_emails_per_address - 1
                 temp = end + 1
+
+                group.at[index, 'flag'] = 1
+
+                print(index, name, target.loc[start:end].copy(), start, end, len(target.loc[start:end]), d_start, d_end)
+                SMTP_(index, name, proxy_host, proxy_port, proxy_user,
+                        proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME, target.loc[start:end].copy(),  d_start, d_end).start()
+                
                 while var.thread_open_campaign >= var.limit_of_thread and var.stop_send_campaign == False:
                     time.sleep(1)
-                group.loc[index, ['flag']] = 1
-                print(index, name, proxy_host, proxy_port, proxy_user, proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME, start, end, d_start, d_end)
-                SMTP_(index, name, proxy_host, proxy_port, proxy_user, proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME, var.target.loc[start:end],  d_start, d_end).start()
             except Exception as e:
                 print("Error at smtp thread opening - {} - {}".format(user, e))
                 logger.error("Error at smtp thread opening - {} - {}".format(user, e))
@@ -325,10 +336,11 @@ def main(group, d_start, d_end):
             time.sleep(1)
 
         while not sent_q.empty():
-            email = sent_q.get()
-            var.target.loc[var.target['EMAIL'] == email]['flag'] = 1
-        # print(var.group_a.head(5))
-        # print(group.head(5))
+            temp  = sent_q.get()
+            email, index = temp[0], temp[1]
+            target.at[index, 'flag'] = 1
+
+
     while var.thread_open_campaign!=0 and var.stop_send_campaign == False:
         time.sleep(1)
 
