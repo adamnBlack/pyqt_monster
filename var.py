@@ -7,12 +7,13 @@ import queue
 from collections import deque
 from queue import LifoQueue
 import logging
-import dialog
-# import main
+# import dialog
+import main
+
 
 # pd.set_option('display.max_colwidth',1000)
 
-version = '1.6beta'
+version = '1.1r'
 base_dir = "database"
 
 # admin password = hkHK#j4@jh#@

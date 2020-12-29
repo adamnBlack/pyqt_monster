@@ -206,26 +206,32 @@ class SMTP_(threading.Thread):
         self.d_start = d_start
         self.d_end = d_end
 
+    def login(self):
+        if self.proxy_host != "":
+            server = SMTP(timeout=30)
+            server.connect_proxy(host=var.smtp_server, port=var.smtp_port,
+                proxy_host=self.proxy_host, proxy_port=int(self.proxy_port), proxy_type=socks.PROXY_TYPE_SOCKS5,
+                proxy_user=self.proxy_user, proxy_pass=self.proxy_pass)
+            # server.set_debuglevel(1)
+        else:
+            server = smtplib.SMTP(var.smtp_server, var.smtp_port)
+            server.set_debuglevel(0)
+
+        server.ehlo()
+        server.starttls()
+        server.ehlo()
+        server.login(self.user, self.passwd)
+
+        return server
+    
+
     def run(self):
         try:
             global sent_q, email_failed
             last_recipient = ''
             var.thread_open_campaign += 1
 
-            if self.proxy_host != "":
-                server = SMTP(timeout=30)
-                server.connect_proxy(host=var.smtp_server, port=var.smtp_port,
-                    proxy_host=self.proxy_host, proxy_port=int(self.proxy_port), proxy_type=socks.PROXY_TYPE_SOCKS5,
-                    proxy_user=self.proxy_user, proxy_pass=self.proxy_pass)
-                # server.set_debuglevel(1)
-            else:
-                server = smtplib.SMTP(var.smtp_server, var.smtp_port)
-                server.set_debuglevel(0)
-
-            server.ehlo()
-            server.starttls()
-            server.ehlo()
-            server.login(self.user, self.passwd)
+            server = self.login()
 
             t_part = []
             for path in var.files:
@@ -252,7 +258,15 @@ class SMTP_(threading.Thread):
                 msg.attach(MIMEText(body, "plain"))
                 for part in t_part:
                     msg.attach(part)
-                server.sendmail(self.user, item['EMAIL'], msg.as_string())
+                
+                time.sleep(random.randint(self.d_start, self.d_end))
+                try:
+                    server.sendmail(self.user, item['EMAIL'], msg.as_string())
+                except:
+                    print("here {}".format(server))
+                    server = self.login()
+                    server.sendmail(self.user, item['EMAIL'], msg.as_string())
+                
                 t_dict = {
                     "TARGET": item['EMAIL'],
                     "FROMEMAIL": self.user,
@@ -261,7 +275,7 @@ class SMTP_(threading.Thread):
                 var.send_report.put(t_dict.copy())
                 sent_q.put((item['EMAIL'], index))
                 var.send_campaign_email_count+=1
-                time.sleep(random.randint(self.d_start, self.d_end))
+                
             server.quit()
             server.close()
         except Exception as e:
@@ -275,6 +289,7 @@ class SMTP_(threading.Thread):
                 }
             var.send_report.put(t_dict.copy())
         finally:
+            server = None
             var.thread_open_campaign-=1
 
 def main(group, d_start, d_end):

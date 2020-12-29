@@ -29,6 +29,13 @@ class MyGui(Ui_MainWindow, QtWidgets.QWidget):
 
 class myMainClass():
     def __init__(self):
+        self.font = QtGui.QFont()
+        self.font.setFamily("Calibri")
+        self.font.setBold(True)
+        self.font.setPointSize(11)
+        categories = ("Inbox->Primary", "Inbox->Promotions", "Inbox->Social", 
+                        "[Gmail]/Spam")
+        GUI.comboBox_email_category.addItems(categories)
         self.sub_exp = 0
         self.try_failed = 0
 
@@ -326,18 +333,22 @@ class myMainClass():
             var.inbox_data = pd.DataFrame()
             var.row_pos = 0
             GUI.tableWidget_inbox.setRowCount(0)
+            category = GUI.comboBox_email_category.currentText()
+            GUI.tableWidget_inbox.horizontalHeaderItem(0).setFont(self.font)
+            GUI.tableWidget_inbox.horizontalHeaderItem(0).setText(category)
+            
             if GUI.radioButton_group_a.isChecked() and len(var.group_a) > 0:
                 print("Group a")
                 GUI.label_email_status.setText("Downloading...")
                 var.total_acc = len(var.group_a)
-                Thread(target=imap.main, daemon=True, args=[var.group_a]).start()
+                Thread(target=imap.main, daemon=True, args=[var.group_a, category]).start()
                 Thread(target=update_config_json, daemon=True).start()
                 self.progressbar.start()
             elif GUI.radioButton_group_b.isChecked() and len(var.group_b) > 0:
                 print("Group b")
                 GUI.label_email_status.setText("Downloading...")
                 var.total_acc = len(var.group_b)
-                Thread(target=imap.main, daemon=True, args=[var.group_b]).start()
+                Thread(target=imap.main, daemon=True, args=[var.group_b, category]).start()
                 Thread(target=update_config_json, daemon=True).start()
                 self.progressbar.start()
             else:
