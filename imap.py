@@ -158,10 +158,11 @@ class IMAP_(threading.Thread):
                     # not multipart - i.e. plain text, no attachments, keeping fingers crossed
                     else:
                         body = b.get_payload(decode=True)
+                    
                     try:
                         body = body.decode("utf-8", 'ignore')
                     except:
-                        print(body)
+                        # print(body)
                         body = body
 
                     subject = email.header.make_header(email.header.decode_header(email_message['Subject']))

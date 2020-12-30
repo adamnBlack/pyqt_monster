@@ -984,8 +984,17 @@ QPushButton:pressed {
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);</string>
          </property>
+         <property name="inputMethodHints">
+          <set>Qt::ImhEmailCharactersOnly|Qt::ImhMultiLine</set>
+         </property>
          <property name="frameShape">
           <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="openExternalLinks">
+          <bool>true</bool>
+         </property>
+         <property name="openLinks">
+          <bool>false</bool>
          </property>
         </widget>
        </item>

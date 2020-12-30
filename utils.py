@@ -4,9 +4,26 @@ import random
 import json
 
 def prepare_html(body):
-    print(body)
+
+    mails = re.findall('[\w\.-]+@[\w\.-]+\.\w+', body)
+    urls = re.findall('https?://[^\s<>"]+|www\.[^\s<>"]+', 
+                        body)
+    for item in urls:
+        try:
+            a_tag = '<a href="{}">&lt;{}&gt;</a>'.format(item, item)
+            body = body.replace("<{}>".format(item), a_tag)
+        except:
+            pass
+
+    for item in mails:
+        try:
+            a_tag = ' <a href="mailto:{}">{}</a>'.format(item, item)
+            body = body.replace(" {}".format(item), a_tag)
+            
+        except:
+            pass
     body = body.replace("\n", '<br>')
-    print(body)
+
     html = """<!doctype html>
 
             <html lang="en">
@@ -25,7 +42,7 @@ def prepare_html(body):
             
             </body>
             </html>""".format(body)
-        
+
     return html
 
 def update_config_json():

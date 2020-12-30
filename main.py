@@ -85,6 +85,7 @@ class myMainClass():
         GUI.pushButton_delete.clicked.connect(self.batch_delete)
         GUI.pushButton_forward.clicked.connect(self.forward)
         GUI.pushButton_test.clicked.connect(self.test_send)
+        GUI.textBrowser_show_email.anchorClicked.connect(QtGui.QDesktopServices.openUrl)
 
     def check_for_subcription(self):
         while True:
@@ -462,15 +463,16 @@ class myMainClass():
         if GUI.radioButton_reply.isChecked():
             self.change_subject()
         
-
+        GUI.textBrowser_show_email.clear()
         if "</body>" in var.inbox_data['body'][row]:
             GUI.textBrowser_show_email.setHtml(var.inbox_data['body'][row])
         else:
-            tmp = "|--> FROM - {} <--|--> SUBJECT - {} <--|\n\n{}".format(var.inbox_data['from'][row],
+            tmp = "FROM - {} <br>SUBJECT - {}<br><br>{}".format(var.inbox_data['from'][row],
                 var.inbox_data['subject'][row], var.inbox_data['body'][row])
             
             tmp = prepare_html(tmp)
-            GUI.textBrowser_show_email.setText(tmp)
+
+            GUI.textBrowser_show_email.setHtml(tmp)
         
     # def email_delete(self):
     #     try:
