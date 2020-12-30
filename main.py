@@ -466,9 +466,10 @@ class myMainClass():
         if "</body>" in var.inbox_data['body'][row]:
             GUI.textBrowser_show_email.setHtml(var.inbox_data['body'][row])
         else:
-            tmp = "FROM - {}     SUBJECT - {}\n\n{}".format(var.inbox_data['from'][row],
+            tmp = "|--> FROM - {} <--|--> SUBJECT - {} <--|\n\n{}".format(var.inbox_data['from'][row],
                 var.inbox_data['subject'][row], var.inbox_data['body'][row])
-
+            
+            tmp = prepare_html(tmp)
             GUI.textBrowser_show_email.setText(tmp)
         
     # def email_delete(self):
@@ -534,7 +535,7 @@ else:
     import var
     import imap
     import smtp
-    from utils import update_config_json
+    from utils import update_config_json, prepare_html
     from progressbar import Delete_email
     from send_dialog import Send
     myMC = myMainClass()

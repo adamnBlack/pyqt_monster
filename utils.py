@@ -3,6 +3,31 @@ import var
 import random
 import json
 
+def prepare_html(body):
+    print(body)
+    body = body.replace("\n", '<br>')
+    print(body)
+    html = """<!doctype html>
+
+            <html lang="en">
+            <head>
+            <meta charset="utf-8">
+
+            <title>The HTML5 Herald</title>
+            <meta name="description" content="The HTML5 Herald">
+            <meta name="author" content="SitePoint">
+
+
+            </head>
+
+            <body>
+            <p>{}</p>
+            
+            </body>
+            </html>""".format(body)
+        
+    return html
+
 def update_config_json():
     try:
         data =  {
