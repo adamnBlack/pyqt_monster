@@ -11,7 +11,7 @@ def prepare_html(body):
     for item in urls:
         try:
             a_tag = '<a href="{}">&lt;{}&gt;</a>'.format(item, item)
-            body = body.replace("<{}>".format(item), a_tag)
+            body = body.replace("{}".format(item), a_tag)
         except:
             pass
 

@@ -7,8 +7,8 @@ import queue
 from collections import deque
 from queue import LifoQueue
 import logging
-# import dialog
-import main
+import dialog
+# import main
 
 
 # pd.set_option('display.max_colwidth',1000)
@@ -128,9 +128,9 @@ login_email = ""
 # api = "http://127.0.0.1:5000/"
 api = "https://enzim.pythonanywhere.com/"
 
-gmail_provider = "https://gmonster.net/product/gmail-accounts/"
-proxy_provider = "https://gmonster.net/product/gmonster-proxies/"
-email_scraper = "https://gmonster.net/product/targeted-email-leads/"
+gmail_provider = "https://gmonster.co/product/gmail-accounts/"
+proxy_provider = "https://gmonster.co/product/gmonster-proxies/"
+email_scraper = "https://gmonster.co/product/targeted-email-leads/"
 try:
     with open('{}/config.json'.format(base_dir)) as json_file:
         data = load(json_file)
@@ -183,6 +183,6 @@ def load_db(parent=None):
         print("Exeception occured at db loading : {}".format(e))
         alert(text="Exeception occured at db loading : {}".format(e), title='Alert', button='OK')
 
-load_db("var")
+# load_db("var")
 
 # pyinstaller --onedir --icon=icons/icon.ico --name=GMonster --noconsole --noconfirm var.py
