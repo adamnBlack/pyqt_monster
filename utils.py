@@ -4,14 +4,17 @@ import random
 import json
 
 def prepare_html(body):
-
+    # print(body)
     mails = re.findall('[\w\.-]+@[\w\.-]+\.\w+', body)
-    urls = re.findall('https?://[^\s<>"]+|www\.[^\s<>"]+', 
-                        body)
+    urls = re.findall('https?://[^\s<>"]+|www\.[^\s<>"]+', body)
     for item in urls:
         try:
-            a_tag = '<a href="{}">&lt;{}&gt;</a>'.format(item, item)
-            body = body.replace("{}".format(item), a_tag)
+            a_tag = '<a href="{}">{}</a>'.format(item, item)
+            if "<{}>".format(item) in body:
+                body = body.replace("<{}>".format(item), a_tag)
+            else:
+                body = body.replace(" {}".format(item), " " + a_tag)
+                body = body.replace("\n{}".format(item), "\n" + a_tag)
         except:
             pass
 
@@ -23,7 +26,7 @@ def prepare_html(body):
         except:
             pass
     body = body.replace("\n", '<br>')
-
+    # print(body)
     html = """<!doctype html>
 
             <html lang="en">

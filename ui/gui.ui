@@ -1024,7 +1024,7 @@ QPushButton:pressed {
       </property>
       <property name="font">
        <font>
-        <family>Calibri</family>
+        <family>Times New Roman</family>
         <pointsize>11</pointsize>
         <weight>75</weight>
         <bold>true</bold>
@@ -1394,8 +1394,11 @@ background-color: rgb(255, 255, 255);</string>
          <property name="font">
           <font>
            <family>Times New Roman</family>
-           <pointsize>15</pointsize>
+           <pointsize>11</pointsize>
           </font>
+         </property>
+         <property name="currentText">
+          <string/>
          </property>
          <property name="sizeAdjustPolicy">
           <enum>QComboBox::AdjustToContents</enum>

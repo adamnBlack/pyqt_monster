@@ -33,9 +33,10 @@ class myMainClass():
         self.font.setFamily("Calibri")
         self.font.setBold(True)
         self.font.setPointSize(11)
-        categories = ("Inbox->Primary", "Inbox->Promotions", "Inbox->Social", 
+        self.categories = ("Inbox->Primary", "Inbox->Promotions", "Inbox->Social", 
                         "[Gmail]/Spam")
-        GUI.comboBox_email_category.addItems(categories)
+        d_categories = ("Primary", "Promotions", "Social", "Spam")
+        GUI.comboBox_email_category.addItems(d_categories)
         self.sub_exp = 0
         self.try_failed = 0
 
@@ -334,9 +335,10 @@ class myMainClass():
             var.inbox_data = pd.DataFrame()
             var.row_pos = 0
             GUI.tableWidget_inbox.setRowCount(0)
-            category = GUI.comboBox_email_category.currentText()
+            # category = GUI.comboBox_email_category.currentText()
+            category = self.categories[GUI.comboBox_email_category.currentIndex()]
             GUI.tableWidget_inbox.horizontalHeaderItem(0).setFont(self.font)
-            GUI.tableWidget_inbox.horizontalHeaderItem(0).setText(category)
+            GUI.tableWidget_inbox.horizontalHeaderItem(0).setText(GUI.comboBox_email_category.currentText())
             
             if GUI.radioButton_group_a.isChecked() and len(var.group_a) > 0:
                 print("Group a")
