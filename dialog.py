@@ -12,7 +12,7 @@ from subprocess import check_output
 from json import loads, dumps
 from threading import Thread
 import utils
-from pyautogui import confirm
+from pyautogui import alert, password, confirm
 
 # regex = '^[a-zA-Z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
 regex = '[^@]+@[^@]+\.[^@]+'
@@ -50,6 +50,7 @@ class Sign_up(su.Ui_Dialog):
 
     def setText(self):
         self.label_status.setText(var.sign_up_label)
+    
     def validate(self):
         email = self.lineEdit_email.text().strip()
         password = self.lineEdit_password.text()
@@ -234,4 +235,8 @@ else:
     app.exec_()
     print("Exit")
     if var.signed_in == True:
-        import main
+        try:
+            import main
+        except Exception as e:
+            alert(text="Error alert : {}".format(e), 
+                                title='Alert', button='OK')

@@ -285,7 +285,7 @@ class Ui_MainWindow(object):
         font.setPointSize(11)
         self.lineEdit_delay_between_emails.setFont(font)
         self.lineEdit_delay_between_emails.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.lineEdit_delay_between_emails.setMaxLength(8)
+        self.lineEdit_delay_between_emails.setMaxLength(9)
         self.lineEdit_delay_between_emails.setFrame(False)
         self.lineEdit_delay_between_emails.setAlignment(QtCore.Qt.AlignCenter)
         self.lineEdit_delay_between_emails.setObjectName("lineEdit_delay_between_emails")
@@ -762,16 +762,36 @@ class Ui_MainWindow(object):
         self.tableWidget_inbox.horizontalHeader().setCascadingSectionResizes(False)
         self.tableWidget_inbox.horizontalHeader().setDefaultSectionSize(125)
         self.tableWidget_inbox.verticalHeader().setVisible(False)
-        self.gridLayout_2.addWidget(self.tableWidget_inbox, 8, 0, 1, 6)
-        self.label_5 = QtWidgets.QLabel(self.groupBox_inbox)
+        self.gridLayout_2.addWidget(self.tableWidget_inbox, 8, 0, 1, 7)
+        self.label_version = QtWidgets.QLabel(self.groupBox_inbox)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setBold(True)
+        font.setItalic(False)
+        font.setUnderline(False)
+        font.setWeight(75)
+        self.label_version.setFont(font)
+        self.label_version.setText("")
+        self.label_version.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.label_version.setObjectName("label_version")
+        self.gridLayout_2.addWidget(self.label_version, 3, 6, 1, 1, QtCore.Qt.AlignRight)
+        self.radioButton_group_b = QtWidgets.QRadioButton(self.groupBox_inbox)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.radioButton_group_b.sizePolicy().hasHeightForWidth())
+        self.radioButton_group_b.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_5.setFont(font)
-        self.label_5.setObjectName("label_5")
-        self.gridLayout_2.addWidget(self.label_5, 1, 0, 1, 1)
+        font.setBold(False)
+        font.setWeight(50)
+        self.radioButton_group_b.setFont(font)
+        self.radioButton_group_b.setStyleSheet("")
+        self.radioButton_group_b.setCheckable(True)
+        self.radioButton_group_b.setAutoExclusive(True)
+        self.radioButton_group_b.setObjectName("radioButton_group_b")
+        self.gridLayout_2.addWidget(self.radioButton_group_b, 3, 0, 1, 1)
         self.label_email_status = QtWidgets.QLabel(self.groupBox_inbox)
         font = QtGui.QFont()
         font.setFamily("Calibri")
@@ -780,58 +800,7 @@ class Ui_MainWindow(object):
         self.label_email_status.setText("")
         self.label_email_status.setAlignment(QtCore.Qt.AlignCenter)
         self.label_email_status.setObjectName("label_email_status")
-        self.gridLayout_2.addWidget(self.label_email_status, 9, 2, 1, 4)
-        self.pushButton_delete = QtWidgets.QPushButton(self.groupBox_inbox)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(9)
-        self.pushButton_delete.setFont(font)
-        self.pushButton_delete.setStyleSheet("QPushButton {\n"
-"    border: 1px solid #555;\n"
-"    border-radius: 3px;\n"
-"    border-style: Solid;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
-"        );\n"
-"    padding: 5px 28px;\n"
-"    color: rgb(255, 255, 255);\n"
-"    }\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
-"        );\n"
-"    }\n"
-"\n"
-"QPushButton:pressed {\n"
-"    border-style: inset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
-"        );\n"
-"    }")
-        self.pushButton_delete.setObjectName("pushButton_delete")
-        self.gridLayout_2.addWidget(self.pushButton_delete, 9, 1, 1, 1)
-        self.radioButton_group_a = QtWidgets.QRadioButton(self.groupBox_inbox)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.radioButton_group_a.sizePolicy().hasHeightForWidth())
-        self.radioButton_group_a.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        font.setBold(False)
-        font.setWeight(50)
-        self.radioButton_group_a.setFont(font)
-        self.radioButton_group_a.setStyleSheet("")
-        self.radioButton_group_a.setCheckable(True)
-        self.radioButton_group_a.setChecked(True)
-        self.radioButton_group_a.setAutoExclusive(True)
-        self.radioButton_group_a.setObjectName("radioButton_group_a")
-        self.gridLayout_2.addWidget(self.radioButton_group_a, 2, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.label_email_status, 9, 3, 1, 4)
         self.pushButton_load_db = QtWidgets.QPushButton(self.groupBox_inbox)
         font = QtGui.QFont()
         font.setFamily("Calibri")
@@ -865,65 +834,15 @@ class Ui_MainWindow(object):
 "    }")
         self.pushButton_load_db.setObjectName("pushButton_load_db")
         self.gridLayout_2.addWidget(self.pushButton_load_db, 9, 0, 1, 1)
-        self.radioButton_group_b = QtWidgets.QRadioButton(self.groupBox_inbox)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.radioButton_group_b.sizePolicy().hasHeightForWidth())
-        self.radioButton_group_b.setSizePolicy(sizePolicy)
+        self.label_5 = QtWidgets.QLabel(self.groupBox_inbox)
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(11)
-        font.setBold(False)
-        font.setWeight(50)
-        self.radioButton_group_b.setFont(font)
-        self.radioButton_group_b.setStyleSheet("")
-        self.radioButton_group_b.setCheckable(True)
-        self.radioButton_group_b.setAutoExclusive(True)
-        self.radioButton_group_b.setObjectName("radioButton_group_b")
-        self.gridLayout_2.addWidget(self.radioButton_group_b, 3, 0, 1, 1)
-        self.dateEdit_imap_since = QtWidgets.QDateEdit(self.groupBox_inbox)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.dateEdit_imap_since.setFont(font)
-        self.dateEdit_imap_since.setStyleSheet("color: rgb(0, 0, 0);\n"
-"background-color: rgb(255, 255, 255);")
-        self.dateEdit_imap_since.setWrapping(True)
-        self.dateEdit_imap_since.setFrame(True)
-        self.dateEdit_imap_since.setAlignment(QtCore.Qt.AlignCenter)
-        self.dateEdit_imap_since.setReadOnly(False)
-        self.dateEdit_imap_since.setProperty("showGroupSeparator", False)
-        self.dateEdit_imap_since.setCalendarPopup(True)
-        self.dateEdit_imap_since.setObjectName("dateEdit_imap_since")
-        self.gridLayout_2.addWidget(self.dateEdit_imap_since, 2, 1, 1, 1)
-        self.label_version = QtWidgets.QLabel(self.groupBox_inbox)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
         font.setBold(True)
-        font.setItalic(False)
-        font.setUnderline(False)
         font.setWeight(75)
-        self.label_version.setFont(font)
-        self.label_version.setText("")
-        self.label_version.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_version.setObjectName("label_version")
-        self.gridLayout_2.addWidget(self.label_version, 3, 5, 1, 1, QtCore.Qt.AlignRight)
-        self.comboBox_email_category = QtWidgets.QComboBox(self.groupBox_inbox)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.comboBox_email_category.sizePolicy().hasHeightForWidth())
-        self.comboBox_email_category.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(11)
-        self.comboBox_email_category.setFont(font)
-        self.comboBox_email_category.setCurrentText("")
-        self.comboBox_email_category.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContents)
-        self.comboBox_email_category.setFrame(False)
-        self.comboBox_email_category.setObjectName("comboBox_email_category")
-        self.gridLayout_2.addWidget(self.comboBox_email_category, 3, 1, 1, 1)
+        self.label_5.setFont(font)
+        self.label_5.setObjectName("label_5")
+        self.gridLayout_2.addWidget(self.label_5, 1, 0, 1, 1)
         self.pushButton_download_email = QtWidgets.QPushButton(self.groupBox_inbox)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -963,7 +882,76 @@ class Ui_MainWindow(object):
 "        );\n"
 "    }")
         self.pushButton_download_email.setObjectName("pushButton_download_email")
-        self.gridLayout_2.addWidget(self.pushButton_download_email, 3, 2, 1, 1)
+        self.gridLayout_2.addWidget(self.pushButton_download_email, 3, 1, 1, 1)
+        self.radioButton_group_a = QtWidgets.QRadioButton(self.groupBox_inbox)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.radioButton_group_a.sizePolicy().hasHeightForWidth())
+        self.radioButton_group_a.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        font.setBold(False)
+        font.setWeight(50)
+        self.radioButton_group_a.setFont(font)
+        self.radioButton_group_a.setStyleSheet("")
+        self.radioButton_group_a.setCheckable(True)
+        self.radioButton_group_a.setChecked(True)
+        self.radioButton_group_a.setAutoExclusive(True)
+        self.radioButton_group_a.setObjectName("radioButton_group_a")
+        self.gridLayout_2.addWidget(self.radioButton_group_a, 2, 0, 1, 1)
+        self.pushButton_delete = QtWidgets.QPushButton(self.groupBox_inbox)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(9)
+        self.pushButton_delete.setFont(font)
+        self.pushButton_delete.setStyleSheet("QPushButton {\n"
+"    border: 1px solid #555;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    color: rgb(255, 255, 255);\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
+"        );\n"
+"    }")
+        self.pushButton_delete.setObjectName("pushButton_delete")
+        self.gridLayout_2.addWidget(self.pushButton_delete, 9, 1, 1, 1)
+        self.dateEdit_imap_since = QtWidgets.QDateEdit(self.groupBox_inbox)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.dateEdit_imap_since.setFont(font)
+        self.dateEdit_imap_since.setStyleSheet("color: rgb(0, 0, 0);\n"
+"background-color: rgb(255, 255, 255);")
+        self.dateEdit_imap_since.setWrapping(True)
+        self.dateEdit_imap_since.setFrame(True)
+        self.dateEdit_imap_since.setAlignment(QtCore.Qt.AlignCenter)
+        self.dateEdit_imap_since.setReadOnly(False)
+        self.dateEdit_imap_since.setProperty("showGroupSeparator", False)
+        self.dateEdit_imap_since.setCalendarPopup(True)
+        self.dateEdit_imap_since.setObjectName("dateEdit_imap_since")
+        self.gridLayout_2.addWidget(self.dateEdit_imap_since, 2, 1, 1, 1)
+        self.checkBox_delete_all = QtWidgets.QCheckBox(self.groupBox_inbox)
+        self.checkBox_delete_all.setObjectName("checkBox_delete_all")
+        self.gridLayout_2.addWidget(self.checkBox_delete_all, 9, 2, 1, 1)
         self.pushButton_cancel_email = QtWidgets.QPushButton(self.groupBox_inbox)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -1003,7 +991,7 @@ class Ui_MainWindow(object):
 "        );\n"
 "    }")
         self.pushButton_cancel_email.setObjectName("pushButton_cancel_email")
-        self.gridLayout_2.addWidget(self.pushButton_cancel_email, 3, 3, 1, 1)
+        self.gridLayout_2.addWidget(self.pushButton_cancel_email, 3, 2, 1, 1)
         self.gridLayout.addWidget(self.groupBox_inbox, 1, 0, 1, 1)
         self.label_logo = QtWidgets.QLabel(self.centralwidget)
         self.label_logo.setStyleSheet("image: url(:/newPrefix/software logo.png);")
@@ -1053,11 +1041,12 @@ class Ui_MainWindow(object):
         __sortingEnabled = self.tableWidget_inbox.isSortingEnabled()
         self.tableWidget_inbox.setSortingEnabled(False)
         self.tableWidget_inbox.setSortingEnabled(__sortingEnabled)
-        self.label_5.setText(_translate("MainWindow", "ADDRESS GROUP"))
-        self.pushButton_delete.setText(_translate("MainWindow", "DELETE"))
-        self.radioButton_group_a.setText(_translate("MainWindow", "Group A"))
-        self.pushButton_load_db.setText(_translate("MainWindow", "LOAD DB"))
         self.radioButton_group_b.setText(_translate("MainWindow", "Group B"))
+        self.pushButton_load_db.setText(_translate("MainWindow", "LOAD DB"))
+        self.label_5.setText(_translate("MainWindow", "ADDRESS GROUP"))
         self.pushButton_download_email.setText(_translate("MainWindow", "DOWNLOAD"))
+        self.radioButton_group_a.setText(_translate("MainWindow", "Group A"))
+        self.pushButton_delete.setText(_translate("MainWindow", "DELETE"))
+        self.checkBox_delete_all.setText(_translate("MainWindow", "Delete All"))
         self.pushButton_cancel_email.setText(_translate("MainWindow", "CANCEL"))
 import logo_rc

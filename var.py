@@ -7,13 +7,13 @@ import queue
 from collections import deque
 from queue import LifoQueue
 import logging
-import dialog
-# import main
+# import dialog
+import main
 
 
 # pd.set_option('display.max_colwidth',1000)
 
-version = '1.1r'
+version = '1.3r'
 base_dir = "database"
 
 # admin password = hkHK#j4@jh#@
@@ -124,8 +124,9 @@ button_style = """QPushButton {
 num_emails_per_address = 0
 delay_between_emails = ""
 date = "8/24/2020"
+limit_of_thread = 100
 login_email = ""
-# api = "http://127.0.0.1:5000/"
+
 api = "https://enzim.pythonanywhere.com/"
 
 gmail_provider = "https://gmonster.co/product/gmail-accounts/"
@@ -170,6 +171,7 @@ def load_db(parent=None):
         target = target.astype(str)
         target.insert(0,'flag', '')
         target['flag'] = 0
+        target = target.loc[target['EMAIL'] != " "]
         print(target.head(5))
         if parent=="var":
             # from main import GUI
@@ -183,6 +185,6 @@ def load_db(parent=None):
         print("Exeception occured at db loading : {}".format(e))
         alert(text="Exeception occured at db loading : {}".format(e), title='Alert', button='OK')
 
-# load_db("var")
+load_db("var")
 
 # pyinstaller --onedir --icon=icons/icon.ico --name=GMonster --noconsole --noconfirm var.py

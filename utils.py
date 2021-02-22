@@ -2,6 +2,7 @@ import re
 import var
 import random
 import json
+from pyautogui import alert, password, confirm
 
 def prepare_html(body):
     # print(body)
@@ -67,7 +68,8 @@ def update_config_json():
         print("config updated")
     except Exception as e:
         print("Exeception occured at update_config_json : {}".format(e))
-
+        alert(text="Exeception occured at update_config_json : {}".format(e), 
+                                title='Alert', button='OK')
 
 def format_email(text, FIRSTFROMNAME, LASTFROMNAME, one, two, three, TONAME):
     text = text.replace('[FIRSTFROMNAME]', str(FIRSTFROMNAME))

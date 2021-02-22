@@ -23,7 +23,7 @@ def set_read_flag(index):
         imap_user = data['user'][index]
         imap_pass = data['pass'][index]
         uid = data['uid'][index]
-        folder = data['folder'][index]
+
         if data['proxy_host'][index] != "":
             proxy_host = data['proxy_host'][index]
             proxy_port = int(data['proxy_port'][index])
@@ -35,7 +35,7 @@ def set_read_flag(index):
 
         imap.login(imap_user, imap_pass)
 
-        imap.select(folder)
+        imap.select("Inbox")
 
         imap.uid('STORE', uid, '+FLAGS','\Seen')
         imap.close()
@@ -50,12 +50,12 @@ def delete_email(group):
         var.thread_open += 1
         global logger
         print("group name ",group.iloc[0]['user'])
+        print(len(var.inbox_data))
 
         proxy_user = group.iloc[0]['proxy_user']
         proxy_pass = group.iloc[0]['proxy_pass']
         imap_user = group.iloc[0]['user']
         imap_pass = group.iloc[0]['pass']
-        folder = group.iloc[0]['folder']
 
 
         if group.iloc[0]['proxy_host'] != "":
@@ -69,15 +69,15 @@ def delete_email(group):
 
         imap.login(imap_user, imap_pass)
 
-        imap.select(folder)
+        imap.select("Inbox")
 
         for row_index, row in group.iterrows():
             if var.stop_delete == True:
                 break
             imap.uid('STORE', row['uid'], '+X-GM-LABELS', '\\Trash')
             var.delete_email_count += 1
-            var.inbox_data.drop(row_index)
-        
+            var.inbox_data.drop(row_index, inplace=True)
+        print(len(var.inbox_data))
         imap.close()
         imap.logout()
         print("Deleted email")
@@ -89,7 +89,7 @@ def delete_email(group):
         var.thread_open -= 1
 
 class IMAP_(threading.Thread):
-    def __init__(self, threadID, name, folder, category, proxy_host, proxy_port, proxy_type, proxy_user, proxy_pass, imap_user, imap_pass, FIRSTFROMNAME, LASTFROMNAME):
+    def __init__(self, threadID, name, proxy_host, proxy_port, proxy_type, proxy_user, proxy_pass, imap_user, imap_pass, FIRSTFROMNAME, LASTFROMNAME):
         threading.Thread.__init__(self)
         self.threadID = threadID
         self.name = name
@@ -105,8 +105,6 @@ class IMAP_(threading.Thread):
         self.imap_pass = imap_pass
         self.FIRSTFROMNAME = FIRSTFROMNAME
         self.LASTFROMNAME = LASTFROMNAME
-        self.folder = folder
-        self.category = category
         global logger
         self.logger = logger
 
@@ -121,18 +119,19 @@ class IMAP_(threading.Thread):
                 imap = imaplib.IMAP4_SSL(var.imap_server)
 
             imap.login(self.imap_user, self.imap_pass)
-            print(self.folder, self.category)
-            imap.select(self.folder, readonly=True)
+            # print(self.folder, self.category)
+            imap.select("Inbox", readonly=True)
 
             objDate = datetime.strptime(var.date, '%m/%d/%Y')
 
             for item in ['SEEN', 'UNSEEN']:
-                if self.category: 
-                    tmp, data = imap.search(None, 
-                            '({} SINCE "{}" X-GM-RAW "Category:{}")'.format(
-                                item, objDate.strftime('%d-%b-%Y'), self.category))
-                else: 
-                    tmp, data = imap.search(None, '({} SINCE "{}")'.format(item, objDate.strftime('%d-%b-%Y')))
+                # if self.category: 
+                #     tmp, data = imap.search(None, 
+                #             '({} SINCE "{}" X-GM-RAW "Category:{}")'.format(
+                #                 item, objDate.strftime('%d-%b-%Y'), self.category))
+                # else: 
+                #     tmp, data = imap.search(None, '({} SINCE "{}")'.format(item, objDate.strftime('%d-%b-%Y')))
+                tmp, data = imap.search(None, '({} SINCE "{}")'.format(item, objDate.strftime('%d-%b-%Y')))
 
                 for num in data[0].split():
                     if var.stop_download == True:
@@ -178,7 +177,7 @@ class IMAP_(threading.Thread):
                     to_mail = str(email.header.make_header(email.header.\
                                     decode_header(email.utils.parseaddr(email_message['To'])[1])))
 
-                    print(from_name, from_mail, to_name, to_mail)
+                    print(from_name, from_mail, to_name, to_mail, subject)
 
                     t_dict = {
                         'uid': uid,
@@ -200,8 +199,7 @@ class IMAP_(threading.Thread):
                         'proxy_pass': self.proxy_pass,
                         'FIRSTFROMNAME': self.FIRSTFROMNAME,
                         'LASTFROMNAME': self.LASTFROMNAME,
-                        'flag': item,
-                        'folder': self.folder
+                        'flag': item
                         }
                     # print(t_dict)
                     var.email_q.put(t_dict.copy())
@@ -219,19 +217,19 @@ class IMAP_(threading.Thread):
             var.thread_open-=1
 
 
-def main(group, category):
+def main(group):
     global email_failed, total_email_downloaded, logger
     email_failed = 0
     total_email_downloaded = 0
-    folder = ""
-    sub_category = ""
+    # folder = ""
+    # sub_category = ""
     
-    if "Inbox" in category:
-        folder, sub_category = category.split("->")[0], category.split("->")[-1]
-    else:
-        folder = category
+    # if "Inbox" in category:
+    #     folder, sub_category = category.split("->")[0], category.split("->")[-1]
+    # else:
+    #     folder = category
 
-    print(folder, sub_category)
+    # print(folder, sub_category)
     
     for index, item in group.iterrows():
         try:
@@ -257,8 +255,8 @@ def main(group, category):
 
             while var.thread_open >= var.limit_of_thread and var.stop_download == False:
                 time.sleep(1)
-            print(index, name, folder, sub_category, proxy_host, proxy_port, proxy_type, proxy_user, proxy_pass, imap_user, imap_pass, FIRSTFROMNAME, LASTFROMNAME)
-            IMAP_( index, name, folder, sub_category, proxy_host, proxy_port, proxy_type, proxy_user, proxy_pass, imap_user, imap_pass, FIRSTFROMNAME, LASTFROMNAME).start()
+            print(index, name, proxy_host, proxy_port, proxy_type, proxy_user, proxy_pass, imap_user, imap_pass, FIRSTFROMNAME, LASTFROMNAME)
+            IMAP_( index, name, proxy_host, proxy_port, proxy_type, proxy_user, proxy_pass, imap_user, imap_pass, FIRSTFROMNAME, LASTFROMNAME).start()
 
         except Exception as e:
             print("Error at Imap thread open - {} - {}".format(name, e))

@@ -1,0 +1,48 @@
+2021-01-21 02:35:31,588 Error at downloading email - Tameka.dominatethegram@gmail.com - Error connecting to SOCKS5 proxy 81.28.96.131:4022: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2021-01-21 02:35:31,593 Error at downloading email - Isabelle.dominatethegram@gmail.com - Error connecting to SOCKS5 proxy 107.174.85.132:3130: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2021-01-21 14:51:13,978 Error at deleting email - Eva.dominatethegram@gmail.com - Item wrong length 219 instead of 218.
+2021-01-21 16:10:40,633 Error at downloading email - Faye.dominatethegram@gmail.com - command: EXAMINE => socket error: EOF
+2021-01-23 18:54:07,518 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-23 18:55:13,218 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-23 19:46:52,004 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-23 19:51:30,677 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-23 19:54:32,949 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-23 20:02:07,882 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-23 20:02:37,810 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-23 20:09:04,390 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-23 20:21:38,948 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-23 20:27:41,224 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-23 20:56:06,425 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-23 21:16:51,101 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-23 21:40:46,938 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-23 22:10:30,028 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-24 23:23:22,854 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-24 23:37:53,487 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-24 23:54:12,617 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-25 00:26:11,997 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-25 00:40:14,593 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-25 00:43:01,283 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-25 00:46:59,697 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-25 01:27:25,951 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-25 01:30:55,923 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-25 01:33:06,724 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-25 01:42:38,342 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-25 01:46:51,873 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-25 04:18:26,506 Error at deleting email - Isabelle.dominatethegram@gmail.com - Error connecting to SOCKS5 proxy 107.174.85.132:3130: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2021-01-25 04:32:16,956 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-25 04:32:30,308 Error at downloading email - Isabelle.dominatethegram@gmail.com - Error connecting to SOCKS5 proxy 107.174.85.132:3130: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2021-01-25 04:32:40,417 Error at downloading email - Jennie.dominatethegram@gmail.com - Error connecting to SOCKS5 proxy 107.174.85.132:3130: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2021-01-25 04:33:33,282 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-25 04:34:24,400 Error at deleting email - Isabelle.dominatethegram@gmail.com - Error connecting to SOCKS5 proxy 107.174.85.132:3130: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2021-01-25 04:34:24,419 Error at deleting email - Jennie.dominatethegram@gmail.com - Error connecting to SOCKS5 proxy 107.174.85.132:3130: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2021-01-25 04:35:04,010 Error at deleting email - Jennie.dominatethegram@gmail.com - Error connecting to SOCKS5 proxy 107.174.85.132:3130: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2021-01-25 04:35:04,018 Error at deleting email - Isabelle.dominatethegram@gmail.com - Error connecting to SOCKS5 proxy 107.174.85.132:3130: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2021-01-25 04:35:10,636 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-25 04:35:25,158 Error at downloading email - Isabelle.dominatethegram@gmail.com - Error connecting to SOCKS5 proxy 107.174.85.132:3130: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2021-01-25 04:35:33,254 Error at downloading email - Jennie.dominatethegram@gmail.com - Error connecting to SOCKS5 proxy 107.174.85.132:3130: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2021-01-25 04:39:14,038 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-25 04:39:27,581 Error at downloading email - Isabelle.dominatethegram@gmail.com - Error connecting to SOCKS5 proxy 107.174.85.132:3130: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2021-01-25 04:39:37,636 Error at downloading email - Jennie.dominatethegram@gmail.com - Error connecting to SOCKS5 proxy 107.174.85.132:3130: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2021-01-25 06:35:06,027 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-25 06:35:53,968 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-01-25 06:46:32,328 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'

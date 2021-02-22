@@ -7,6 +7,7 @@ import os
 import sys
 from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem, QMessageBox
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtCore import Qt, pyqtSignal, QObject
 from gui import Ui_MainWindow
 import encodings.idna
 import pandas as pd
@@ -17,7 +18,6 @@ import requests
 print("App started....")
 # import uuid
 # print(uuid.UUID(int=uuid.getnode()))
-
 
 class MyGui(Ui_MainWindow, QtWidgets.QWidget):
     def __init__(self, mainWindow):
@@ -33,10 +33,10 @@ class myMainClass():
         self.font.setFamily("Calibri")
         self.font.setBold(True)
         self.font.setPointSize(11)
-        self.categories = ("Inbox->Primary", "Inbox->Promotions", "Inbox->Social", 
-                        "[Gmail]/Spam")
-        d_categories = ("Primary", "Promotions", "Social", "Spam")
-        GUI.comboBox_email_category.addItems(d_categories)
+        # self.categories = ("Inbox->Primary", "Inbox->Promotions", "Inbox->Social", 
+        #                 "[Gmail]/Spam")
+        # d_categories = ("Primary", "Promotions", "Social", "Spam")
+        # GUI.comboBox_email_category.addItems(d_categories)
         self.sub_exp = 0
         self.try_failed = 0
 
@@ -87,6 +87,7 @@ class myMainClass():
         GUI.pushButton_forward.clicked.connect(self.forward)
         GUI.pushButton_test.clicked.connect(self.test_send)
         GUI.textBrowser_show_email.anchorClicked.connect(QtGui.QDesktopServices.openUrl)
+                
 
     def check_for_subcription(self):
         while True:
@@ -98,16 +99,16 @@ class myMainClass():
                     if data['status'] == 2:
                         self.try_failed = 0
                         print(data['end_date'])
-                        date = ""
+                        date = str(data['end_date'])
                         alert(text="Subscription Expired at {}.\nSoftware will exit soon.".format(date), 
                                 title='Alert', button='OK')
-                        sys.exit()
+                        mainWindow.close()
                     elif data['status'] == 3:
                         self.try_failed = 0
                         print("sub deactivated")
                         alert(text="Subscription deativated.\nSoftware will exit soon.", 
                                 title='Alert', button='OK')
-                        sys.exit()
+                        mainWindow.close()
                     elif data['status'] == 1:
                         self.try_failed = 0
                         print(data['days_left'])
@@ -115,7 +116,7 @@ class myMainClass():
                     else:
                         self.try_failed = 0
                         alert(text="Account not found".format(e), title='Alert', button='OK')
-                        sys.exit()
+                        mainWindow.close()
 
                 else:
                     alert(text="Error on server.\nContact Admin.".format(e), title='Alert', button='OK')
@@ -126,7 +127,7 @@ class myMainClass():
                 if self.try_failed>3:
                     alert(text="Check your internet connection.",
                                 title='Alert', button='OK')
-                    sys.exit()
+                    mainWindow.close()
             sleep(self.time_interval_sub_check)
 
     def test_send(self):
@@ -142,6 +143,11 @@ class myMainClass():
     def batch_delete(self):
         result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
         if result == "OK":
+            if GUI.checkBox_delete_all.isChecked():
+                result = confirm(text='You are going to delete all?', 
+                        title='Confirmation Window', buttons=['Yes', 'No'])
+                if result == "Yes":
+                    var.inbox_data["checkbox_status"] = 1
             var.thread_open = 0
             dialog = QtWidgets.QDialog()
             dialog.ui = Delete_email(dialog)
@@ -336,22 +342,22 @@ class myMainClass():
             var.row_pos = 0
             GUI.tableWidget_inbox.setRowCount(0)
             # category = GUI.comboBox_email_category.currentText()
-            category = self.categories[GUI.comboBox_email_category.currentIndex()]
-            GUI.tableWidget_inbox.horizontalHeaderItem(0).setFont(self.font)
-            GUI.tableWidget_inbox.horizontalHeaderItem(0).setText(GUI.comboBox_email_category.currentText())
+            # category = self.categories[GUI.comboBox_email_category.currentIndex()]
+            # GUI.tableWidget_inbox.horizontalHeaderItem(0).setFont(self.font)
+            # GUI.tableWidget_inbox.horizontalHeaderItem(0).setText(GUI.comboBox_email_category.currentText())
             
             if GUI.radioButton_group_a.isChecked() and len(var.group_a) > 0:
                 print("Group a")
                 GUI.label_email_status.setText("Downloading...")
                 var.total_acc = len(var.group_a)
-                Thread(target=imap.main, daemon=True, args=[var.group_a, category]).start()
+                Thread(target=imap.main, daemon=True, args=[var.group_a,]).start()
                 Thread(target=update_config_json, daemon=True).start()
                 self.progressbar.start()
             elif GUI.radioButton_group_b.isChecked() and len(var.group_b) > 0:
                 print("Group b")
                 GUI.label_email_status.setText("Downloading...")
                 var.total_acc = len(var.group_b)
-                Thread(target=imap.main, daemon=True, args=[var.group_b, category]).start()
+                Thread(target=imap.main, daemon=True, args=[var.group_b,]).start()
                 Thread(target=update_config_json, daemon=True).start()
                 self.progressbar.start()
             else:
@@ -447,6 +453,7 @@ class myMainClass():
                 var.inbox_data['checkbox_status'][row] = 0
                 print(var.inbox_data['subject'][row])
 
+
     def email_show(self):
         print('email showed')
         row, column = self.get_index_of_button(GUI.tableWidget_inbox)
@@ -525,13 +532,14 @@ if __name__ == '__main__':
     print("ran from here")
 else:
     global app
+    global GUI, mainWindow
     app = QtWidgets.QApplication(sys.argv)
     mainWindow = QtWidgets.QMainWindow()
     set_icon(mainWindow)
 
     mainWindow.setWindowFlags(mainWindow.windowFlags(
     ) | QtCore.Qt.WindowMinimizeButtonHint | QtCore.Qt.WindowSystemMenuHint)
-    global GUI
+    
     GUI = MyGui(mainWindow)
     mainWindow.showMaximized()
     mainWindow.show()

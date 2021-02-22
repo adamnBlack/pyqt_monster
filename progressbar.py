@@ -114,7 +114,9 @@ class Delete_email(Ui_Dialog):
 def thread_starter():
     global total_email_count
     temp_df = var.inbox_data.copy()
+
     temp_df = temp_df.loc[temp_df['checkbox_status'] == 1]
+
     total_email_count = len(temp_df)
     temp_df = temp_df.groupby('user')
     var.delete_email_count = 0
@@ -137,4 +139,5 @@ def thread_starter():
     for row_index, row in var.inbox_data.iterrows():
         var.email_q.put(row.to_dict().copy())
 
+    var.inbox_data["checkbox_status"] = 0
     print("deleting finished")
