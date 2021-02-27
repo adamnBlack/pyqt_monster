@@ -7,8 +7,8 @@ import queue
 from collections import deque
 from queue import LifoQueue
 import logging
-# import dialog
-import main
+import dialog
+# import main
 
 
 # pd.set_option('display.max_colwidth',1000)
@@ -185,6 +185,6 @@ def load_db(parent=None):
         print("Exeception occured at db loading : {}".format(e))
         alert(text="Exeception occured at db loading : {}".format(e), title='Alert', button='OK')
 
-load_db("var")
+# load_db("var")
 
 # pyinstaller --onedir --icon=icons/icon.ico --name=GMonster --noconsole --noconfirm var.py

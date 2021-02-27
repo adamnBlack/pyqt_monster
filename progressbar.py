@@ -12,7 +12,7 @@ cancel = False
 total_email_count = 0
 
 class Communicate(QObject):
-    s = pyqtSignal(int)
+    s = pyqtSignal(int, str)
 
 class Download(Ui_Dialog):
     def __init__(self, dialog, name, link, size, path):
@@ -31,10 +31,14 @@ class Download(Ui_Dialog):
         self.label_status.setText("Dowloaded  {} of {} kb".format(0, self.size_in_kb))
         Thread(target=self.download, daemon=True).start()
 
-    def update_gui(self, dowloaded):
-        self.label_status.setText("Dowloaded  {} of {} kb".format(dowloaded, self.size_in_kb))
-        value = (dowloaded/self.size_in_kb)*100
-        self.progressBar.setValue(value)
+    def update_gui(self, dowloaded, message):
+        if message != "":
+            self.label_status.setText(message)
+            self.pushButton_cancel.setText("Close")
+        else:
+            self.label_status.setText("Dowloaded  {} of {} kb".format(dowloaded, self.size_in_kb))
+            value = (dowloaded/self.size_in_kb)*100
+            self.progressBar.setValue(value)
 
     def cancel(self):
         global cancel
@@ -65,9 +69,10 @@ class Download(Ui_Dialog):
                             break
                         downloaded+=len(chunk)
                         print("Dowloaded {}/{}".format(downloaded, self.size), end='\r')
-                        self.signal.s.emit(int(round(downloaded/1024)))
+                        self.signal.s.emit(int(round(downloaded/1024)), "")
                         f.write(chunk)
             print("download finished")
+            self.signal.s.emit(int(round(downloaded/1024)), "Download Finished")
         except Exception as e:
             print("Error at download update: {}".format(e))
 

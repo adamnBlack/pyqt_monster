@@ -157,7 +157,7 @@ class Communicate(QObject):
 
 class myMainClass():
     def __init__(self):
-        self.change_update = False
+        self.update_needed = False
         GUI.pushButton_sign_in.clicked.connect(self.sign_in)
         GUI.pushButton_sign_up.clicked.connect(self.sign_up)
 
@@ -166,14 +166,14 @@ class myMainClass():
         Thread(target=self.check_update, daemon=True).start()
 
     def sign_in(self):
-        if self.change_update:
+        if self.update_needed:
             dialog = QtWidgets.QDialog()
             dialog.ui = Sign_in(dialog)
             if dialog.exec_():
                 app.closeAllWindows()
 
     def sign_up(self):
-        if self.change_update:
+        if self.update_needed:
             dialog = QtWidgets.QDialog()
             dialog.ui = Sign_up(dialog)
             dialog.exec_()
@@ -193,7 +193,8 @@ class myMainClass():
                     mainWindow.close()
                     print("Download rejected")
             else:
-                self.check_update = True
+                self.update_needed = True
+
             print("Check Update finished")
         except Exception as e:
             print("error at check_update: {}".format(e))
