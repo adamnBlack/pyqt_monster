@@ -157,6 +157,7 @@ class Communicate(QObject):
 
 class myMainClass():
     def __init__(self):
+        self.change_update = False
         GUI.pushButton_sign_in.clicked.connect(self.sign_in)
         GUI.pushButton_sign_up.clicked.connect(self.sign_up)
 
@@ -165,15 +166,17 @@ class myMainClass():
         Thread(target=self.check_update, daemon=True).start()
 
     def sign_in(self):
-        dialog = QtWidgets.QDialog()
-        dialog.ui = Sign_in(dialog)
-        if dialog.exec_():
-            app.closeAllWindows()
+        if self.change_update:
+            dialog = QtWidgets.QDialog()
+            dialog.ui = Sign_in(dialog)
+            if dialog.exec_():
+                app.closeAllWindows()
 
     def sign_up(self):
-        dialog = QtWidgets.QDialog()
-        dialog.ui = Sign_up(dialog)
-        dialog.exec_()
+        if self.change_update:
+            dialog = QtWidgets.QDialog()
+            dialog.ui = Sign_up(dialog)
+            dialog.exec_()
 
     def check_update(self):
         try:
@@ -187,7 +190,11 @@ class myMainClass():
                     # print(data['name'], data['link'], data['size'])
                     self.c.path_picker.emit(data['name'], data['link'], data['size'])
                 else:
+                    mainWindow.close()
                     print("Download rejected")
+            else:
+                self.check_update = True
+            print("Check Update finished")
         except Exception as e:
             print("error at check_update: {}".format(e))
 
@@ -202,6 +209,8 @@ class myMainClass():
             dialog.exec_()
         else:
             print("Download cancelled")
+        mainWindow.close()
+        
 
 def set_icon(obj):
     try:
@@ -219,6 +228,7 @@ def set_icon(obj):
 if __name__ == '__main__':
     pass
 else:
+    global mainWindow
     app = QtWidgets.QApplication(sys.argv)
     mainWindow = QtWidgets.QMainWindow()
     set_icon(mainWindow)

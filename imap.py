@@ -7,6 +7,18 @@ from datetime import datetime
 import time
 import var
 import imaplib
+import codecs
+
+def slashescape(err):
+    """ codecs error handler. err is UnicodeDecode instance. return
+    a tuple with a replacement for the unencodable part of the input
+    and a position where encoding should continue"""
+    #print err, dir(err), err.start, err.end, err.object[:err.start]
+    thebyte = err.object[err.start:err.end]
+    repl = u'\\x'+hex(ord(thebyte))[2:]
+    return (repl, err.end)
+
+codecs.register_error('slashescape', slashescape)
 
 email_failed = 0
 total_email_downloaded = 0
@@ -140,7 +152,7 @@ class IMAP_(threading.Thread):
                     raw = data[0][0]
                     raw_str = raw.decode("utf-8")
                     uid = raw_str.split()[2]
-                    email_message = email.message_from_string(data[0][1].decode())
+                    email_message = email.message_from_string(data[0][1].decode('utf-8', 'slashescape'))
                     # print(email_message.items())
                     b = email_message
                     body = ""
@@ -163,8 +175,10 @@ class IMAP_(threading.Thread):
                     except:
                         # print(body)
                         body = body
-
+                    
+                    
                     subject = email.header.make_header(email.header.decode_header(email_message['Subject']))
+
                     subject = str(subject)
                     
                     from_name = str(email.header.make_header(email.header.\

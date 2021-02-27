@@ -46,3 +46,12 @@
 2021-01-25 06:35:06,027 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
 2021-01-25 06:35:53,968 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
 2021-01-25 06:46:32,328 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-02-25 17:02:01,347 Error at downloading email - fasteners360@gmail.com - 'utf-8' codec can't decode byte 0xa9 in position 6808: invalid start byte
+2021-02-27 02:24:43,378 Error at downloading email - Valarie.dominatethegram@gmail.com - Error connecting to SOCKS5 proxy 107.175.240.102:3130: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2021-02-27 02:24:43,381 Error at downloading email - Toni.dominatethegram@gmail.com - Error connecting to SOCKS5 proxy 192.210.214.51:3130: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2021-02-27 02:24:48,131 Error at downloading email - Latonya.dominatethegram@gmail.com - b'[AUTHENTICATIONFAILED] Invalid credentials (Failure)'
+2021-02-27 02:24:51,268 Error at downloading email - Cindy.dominatethegram@gmail.com - b'[ALERT] Invalid credentials (Failure)'
+2021-02-27 02:25:12,530 Error at downloading email - Corina.dominatethegram@gmail.com - Error connecting to SOCKS5 proxy 107.175.240.102:3130: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2021-02-27 02:25:19,552 Error at downloading email - Reyna.dominatethegram@gmail.com - Error connecting to SOCKS5 proxy 192.210.214.51:3130: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+2021-02-27 11:28:46,762 Error at downloading email - fasteners360@gmail.com - 'utf-8' codec can't decode byte 0xa9 in position 6808: invalid start byte
+2021-02-27 12:41:01,847 Error at downloading email - fasteners360@gmail.com - 'utf-8' codec can't decode byte 0xa9 in position 6808: invalid start byte
