@@ -14,7 +14,7 @@ import dialog
 # pd.set_option('display.max_colwidth',1000)
 
 version = '1.3r'
-base_dir = "./database"
+base_dir = "database"
 
 # admin password = hkHK#j4@jh#@
 # email='orders@gmonster.net'
@@ -190,3 +190,4 @@ def load_db(parent=None):
 # pyinstaller --onedir --icon=icons/icon.ico --name=GMonster --noconsole --noconfirm var.py
 # pyi-makespec --onefile --icon=icons/icon.ico --name=GMonster --noconsole var.py
 # pyinstaller --onefile --icon=icons/icon.ico --name=GMonster --noconsole --add-data="icons/icon.ico;imag" --add-data="icons/mail.ico;imag" --add-data="icons/email.ico;imag" var.py
+# pyinstaller --onefile --icon=icons/icon.ico --name=GMonster --add-data="icons/icon.ico;imag" --add-data="icons/mail.ico;imag" --add-data="icons/email.ico;imag" var.py

@@ -16,8 +16,7 @@ import subprocess
 import requests
 
 print("App started....")
-logger=var.logging
-logger.getLogger("requests").setLevel(var.logging.WARNING)
+
 
 # import uuid
 # print(uuid.UUID(int=uuid.getnode()))
@@ -32,8 +31,9 @@ class MyGui(Ui_MainWindow, QtWidgets.QWidget):
 
 class myMainClass():
     def __init__(self):
-        global logger
-        self.logger = logger
+        self.logger = var.logging
+        self.logger.getLogger("requests").setLevel(var.logging.WARNING)
+        
         self.font = QtGui.QFont()
         self.font.setFamily("Calibri")
         self.font.setBold(True)
@@ -540,6 +540,7 @@ def set_icon(obj):
             return os.path.join(os.path.abspath("."), relative_path)
 
         p = resource_path('icons/icon.ico')
+        print(p)
         obj.setWindowIcon(QtGui.QIcon(p))
     except Exception as e:
         print(e)
