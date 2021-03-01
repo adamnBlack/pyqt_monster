@@ -14,7 +14,7 @@ import dialog
 # pd.set_option('display.max_colwidth',1000)
 
 version = '1.3r'
-base_dir = "database"
+base_dir = "./database"
 
 # admin password = hkHK#j4@jh#@
 # email='orders@gmonster.net'
@@ -49,10 +49,10 @@ try:
 
     # icon path
 
-    mail_unread_icon = resource_path("icons/email.svg")
-    mail_read_icon = resource_path("icons/mail.svg")
-    delete_icon = resource_path("icons/bin.svg")
-    deleted_icon = resource_path("icons/delete.svg")
+    mail_unread_icon = resource_path("icons/email.ico")
+    mail_read_icon = resource_path("icons/mail.ico")
+    # delete_icon = resource_path("icons/bin.svg")
+    # deleted_icon = resource_path("icons/delete.svg")
     # icon path
 
 except Exception as e:
@@ -188,3 +188,5 @@ def load_db(parent=None):
 # load_db("var")
 
 # pyinstaller --onedir --icon=icons/icon.ico --name=GMonster --noconsole --noconfirm var.py
+# pyi-makespec --onefile --icon=icons/icon.ico --name=GMonster --noconsole var.py
+# pyinstaller --onefile --icon=icons/icon.ico --name=GMonster --noconsole --add-data="icons/icon.ico;imag" --add-data="icons/mail.ico;imag" --add-data="icons/email.ico;imag" var.py

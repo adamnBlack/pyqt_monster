@@ -16,6 +16,9 @@ import subprocess
 import requests
 
 print("App started....")
+logger=var.logging
+logger.getLogger("requests").setLevel(var.logging.WARNING)
+
 # import uuid
 # print(uuid.UUID(int=uuid.getnode()))
 
@@ -29,6 +32,8 @@ class MyGui(Ui_MainWindow, QtWidgets.QWidget):
 
 class myMainClass():
     def __init__(self):
+        global logger
+        self.logger = logger
         self.font = QtGui.QFont()
         self.font.setFamily("Calibri")
         self.font.setBold(True)
@@ -141,23 +146,27 @@ class myMainClass():
         dialog.exec_()
 
     def batch_delete(self):
-        result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
-        if result == "OK":
-            if GUI.checkBox_delete_all.isChecked():
-                result = confirm(text='You are going to delete all?', 
-                        title='Confirmation Window', buttons=['Yes', 'No'])
-                if result == "Yes":
-                    var.inbox_data["checkbox_status"] = 1
-            var.thread_open = 0
-            dialog = QtWidgets.QDialog()
-            dialog.ui = Delete_email(dialog)
-            dialog.exec_()
-            var.inbox_data = pd.DataFrame()
-            var.row_pos = 0
-            GUI.tableWidget_inbox.setRowCount(0)
-            self.table_timer.start()
-        else:
-            print("Cancelled")
+        try:
+            result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
+            if result == "OK":
+                if GUI.checkBox_delete_all.isChecked():
+                    result = confirm(text='You are going to delete all?', 
+                            title='Confirmation Window', buttons=['Yes', 'No'])
+                    if result == "Yes":
+                        var.inbox_data["checkbox_status"] = 1
+                var.thread_open = 0
+                dialog = QtWidgets.QDialog()
+                dialog.ui = Delete_email(dialog)
+                dialog.exec_()
+                var.inbox_data = pd.DataFrame()
+                var.row_pos = 0
+                GUI.tableWidget_inbox.setRowCount(0)
+                self.table_timer.start()
+            else:
+                print("Cancelled")
+        except Exception as e:
+            print("Error at batch_delete : {}".format(e))
+            self.logger.error("Error at batch_delete - {}".format(e))
 
     def clear_compose(self):
         GUI.textBrowser_compose.clear()
@@ -227,7 +236,8 @@ class myMainClass():
                     GUI.pushButton_send.setEnabled(True)
 
         except Exception as e:
-            print("Error at send at main.py: {}".format(e))
+            print("Error at main.send : {}".format(e))
+            self.logger.error("Error at main.send - {}".format(e))
 
 
 
@@ -268,6 +278,7 @@ class myMainClass():
 
         except Exception as e:
             print("Error at send_campaign : {}".format(e))
+            self.logger.error("Error at add_to_table - {}".format(e))
             alert(text="Error at send_campaign : {}".format(e), title='Error', button='OK')
             var.send_campaign_run_status = False
             GUI.pushButton_send.setEnabled(True)
@@ -295,7 +306,8 @@ class myMainClass():
                         value = (var.send_campaign_email_count/(len(var.group_b)*var.num_emails_per_address))*100
                 GUI.progressBar_send_email.setValue(value)
         except Exception as e:
-            print("Error at progressbar : {}".format(e))
+            print("Error at progressbar_send : {}".format(e))
+            self.logger.error("Error at progressbar_send - {}".format(e))
 
     def reply(self):
         var.email_in_view['subject'] = GUI.lineEdit_subject.text()
@@ -367,7 +379,8 @@ class myMainClass():
                 GUI.pushButton_download_email.setEnabled(True)
                 GUI.pushButton_cancel_email.setEnabled(False)
         except Exception as e:
-            print("Error at downlaod_email : {}".format(e))
+            print("Error at downloading_email : {}".format(e))
+            self.logger.error("Error at downloading_email - {}".format(e))
 
     # def start_timer(self):
     #     self.table_timer.start()
@@ -393,49 +406,49 @@ class myMainClass():
             print("denined")
 
     def add_to_table(self):
-        count = 0
+        try:
+            count = 0
 
-        while not var.email_q.empty():
-            if count == 2:
-                break
-            row_data = var.email_q.get()
-            row_data['checkbox_status'] = 0
-            var.inbox_data = var.inbox_data.append(row_data, ignore_index=True)
+            while not var.email_q.empty():
+                if count == 2:
+                    break
+                row_data = var.email_q.get()
+                row_data['checkbox_status'] = 0
+                var.inbox_data = var.inbox_data.append(row_data, ignore_index=True)
 
-            GUI.tableWidget_inbox.setRowCount(var.row_pos+1)
+                GUI.tableWidget_inbox.setRowCount(var.row_pos+1)
 
-            GUI.tableWidget_inbox.setItem(var.row_pos,1,
-                                        QTableWidgetItem(row_data['from']))
-            # GUI.tableWidget_inbox.resizeColumnToContents(1)
-            GUI.tableWidget_inbox.setItem(var.row_pos,2,
-                                        QTableWidgetItem(row_data['subject']))
+                GUI.tableWidget_inbox.setItem(var.row_pos,1,
+                                            QTableWidgetItem(row_data['from']))
+                # GUI.tableWidget_inbox.resizeColumnToContents(1)
+                GUI.tableWidget_inbox.setItem(var.row_pos,2,
+                                            QTableWidgetItem(row_data['subject']))
 
-            button_show_mail = QtWidgets.QPushButton('')
-            button_show_mail.setStyleSheet(var.button_style)
-            button_show_mail.clicked.connect(self.email_show)
-            if row_data['flag'] == 'UNSEEN':
-                button_show_mail.setIcon(QtGui.QIcon(var.mail_unread_icon))
+                button_show_mail = QtWidgets.QPushButton('')
+                button_show_mail.setStyleSheet(var.button_style)
+                button_show_mail.clicked.connect(self.email_show)
+                if row_data['flag'] == 'UNSEEN':
+                    button_show_mail.setIcon(QtGui.QIcon(var.mail_unread_icon))
+                else:
+                    button_show_mail.setIcon(QtGui.QIcon(var.mail_read_icon))
+                GUI.tableWidget_inbox.setCellWidget(var.row_pos, 0, button_show_mail)
+
+                checkbox_inbox = QtWidgets.QCheckBox(parent=GUI.tableWidget_inbox)
+                checkbox_inbox.setStyleSheet("text-align: center; margin-left:15%; margin-right:10%;")
+                checkbox_inbox.stateChanged.connect(self.clickBox)
+                GUI.tableWidget_inbox.setCellWidget(var.row_pos, 3, checkbox_inbox)
+                GUI.tableWidget_inbox.resizeColumnToContents(0)
+                # GUI.tableWidget_inbox.resizeColumnToContents(1)
+                GUI.tableWidget_inbox.resizeColumnToContents(3)
+                var.row_pos+=1
+                count+=1
             else:
-                button_show_mail.setIcon(QtGui.QIcon(var.mail_read_icon))
-            GUI.tableWidget_inbox.setCellWidget(var.row_pos, 0, button_show_mail)
-
-            # button_delete = QtWidgets.QPushButton('')
-            # button_delete.setStyleSheet(var.button_style)
-            # button_delete.clicked.connect(self.email_delete)
-            # button_delete.setIcon(QtGui.QIcon(var.delete_icon))
-            checkbox_inbox = QtWidgets.QCheckBox(parent=GUI.tableWidget_inbox)
-            checkbox_inbox.setStyleSheet("text-align: center; margin-left:15%; margin-right:10%;")
-            checkbox_inbox.stateChanged.connect(self.clickBox)
-            GUI.tableWidget_inbox.setCellWidget(var.row_pos, 3, checkbox_inbox)
-            GUI.tableWidget_inbox.resizeColumnToContents(0)
-            # GUI.tableWidget_inbox.resizeColumnToContents(1)
-            GUI.tableWidget_inbox.resizeColumnToContents(3)
-            var.row_pos+=1
-            count+=1
-        else:
-            self.table_timer.stop()
-            GUI.label_email_status.setText("Showing Finished")
-            print("finished")
+                self.table_timer.stop()
+                GUI.label_email_status.setText("Showing Finished")
+                print("finished")
+        except Exception as e:
+            print("Error at add_to_table : {}".format(e))
+            self.logger.error("Error at add_to_table - {}".format(e))
 
     def clickBox(self, state):
         checkbox = GUI.sender()
@@ -455,33 +468,37 @@ class myMainClass():
 
 
     def email_show(self):
-        print('email showed')
-        row, column = self.get_index_of_button(GUI.tableWidget_inbox)
-        Thread(target=imap.set_read_flag, daemon=True, args=[row,]).start()
-        button_show_mail = QtWidgets.QPushButton('')
-        button_show_mail.setStyleSheet(var.button_style)
-        button_show_mail.clicked.connect(self.email_show)
-        button_show_mail.setIcon(QtGui.QIcon(var.mail_read_icon))
-        GUI.tableWidget_inbox.setCellWidget(row, 0, button_show_mail)
+        try:
+            print('email showed')
+            row, column = self.get_index_of_button(GUI.tableWidget_inbox)
+            Thread(target=imap.set_read_flag, daemon=True, args=[row,]).start()
+            button_show_mail = QtWidgets.QPushButton('')
+            button_show_mail.setStyleSheet(var.button_style)
+            button_show_mail.clicked.connect(self.email_show)
+            button_show_mail.setIcon(QtGui.QIcon(var.mail_read_icon))
+            GUI.tableWidget_inbox.setCellWidget(row, 0, button_show_mail)
 
-        GUI.lineEdit_original_recipient.setText(var.inbox_data['to'][row])
-        # print(var.inbox_data['body'][row])
-        var.email_in_view = var.inbox_data.iloc[row].to_dict()
-        var.email_in_view['original_body'] = var.inbox_data['body'][row]
-        var.email_in_view['original_subject'] = var.inbox_data['subject'][row]
-        if GUI.radioButton_reply.isChecked():
-            self.change_subject()
-        
-        GUI.textBrowser_show_email.clear()
-        if "</body>" in var.inbox_data['body'][row]:
-            GUI.textBrowser_show_email.setHtml(var.inbox_data['body'][row])
-        else:
-            tmp = "FROM - {} <br>SUBJECT - {}<br><br>{}".format(var.inbox_data['from'][row],
-                var.inbox_data['subject'][row], var.inbox_data['body'][row])
+            GUI.lineEdit_original_recipient.setText(var.inbox_data['to'][row])
+            # print(var.inbox_data['body'][row])
+            var.email_in_view = var.inbox_data.iloc[row].to_dict()
+            var.email_in_view['original_body'] = var.inbox_data['body'][row]
+            var.email_in_view['original_subject'] = var.inbox_data['subject'][row]
+            if GUI.radioButton_reply.isChecked():
+                self.change_subject()
             
-            tmp = prepare_html(tmp)
+            GUI.textBrowser_show_email.clear()
+            if "</body>" in var.inbox_data['body'][row]:
+                GUI.textBrowser_show_email.setHtml(var.inbox_data['body'][row])
+            else:
+                tmp = "FROM - {} <br>SUBJECT - {}<br><br>{}".format(var.inbox_data['from'][row],
+                    var.inbox_data['subject'][row], var.inbox_data['body'][row])
+                
+                tmp = prepare_html(tmp)
 
-            GUI.textBrowser_show_email.setHtml(tmp)
+                GUI.textBrowser_show_email.setHtml(tmp)
+        except Exception as e:
+            print("Error at email_show : {}".format(e))
+            self.logger.error("Error at email_show - {}".format(e))
         
     # def email_delete(self):
     #     try:

@@ -239,7 +239,9 @@ else:
     GUI = MyGui(mainWindow)
     # mainWindow.showMaximized()
     mainWindow.show()
+    
     import var
+    
     Thread(target=var.load_db, daemon=True, args=("dialog",)).start()
     myMC = myMainClass()
 
