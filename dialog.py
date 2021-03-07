@@ -5,10 +5,10 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import pyqtSignal, QObject
 from authentication import Ui_MainWindow
 import sys
-import os
+import os, os.path
 import re
 import requests
-from subprocess import check_output
+import subprocess
 from json import loads, dumps
 from threading import Thread
 import utils
@@ -16,6 +16,46 @@ from pyautogui import alert, password, confirm
 
 # regex = '^[a-zA-Z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
 regex = '[^@]+@[^@]+\.[^@]+'
+
+def subprocess_args(include_stdout=True):
+    # The following is true only on Windows.
+    if hasattr(subprocess, 'STARTUPINFO'):
+        # On Windows, subprocess calls will pop up a command window by default
+        # when run from Pyinstaller with the ``--noconsole`` option. Avoid this
+        # distraction.
+        si = subprocess.STARTUPINFO()
+        si.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        # Windows doesn't search the path by default. Pass it an environment so
+        # it will.
+        env = os.environ
+    else:
+        si = None
+        env = None
+
+    # ``subprocess.check_output`` doesn't allow specifying ``stdout``::
+    #
+    #   Traceback (most recent call last):
+    #     File "test_subprocess.py", line 58, in <module>
+    #       **subprocess_args(stdout=None))
+    #     File "C:\Python27\lib\subprocess.py", line 567, in check_output
+    #       raise ValueError('stdout argument not allowed, it will be overridden.')
+    #   ValueError: stdout argument not allowed, it will be overridden.
+    #
+    # So, add it only if it's needed.
+    if include_stdout:
+        ret = {'stdout': subprocess.PIPE}
+    else:
+        ret = {}
+
+    # On Windows, running this from the binary produced by Pyinstaller
+    # with the ``--noconsole`` option requires redirecting everything
+    # (stdin, stdout, stderr) to avoid an OSError exception
+    # "[Error 6] the handle is invalid."
+    ret.update({'stdin': subprocess.PIPE,
+                'stderr': subprocess.PIPE,
+                'startupinfo': si,
+                'env': env })
+    return ret
 
 def check(email):
     # pass the regular expression
@@ -104,8 +144,8 @@ class Sign_in(si.Ui_Dialog):
 def make_sign_up_requests(email, password, endpoint):
     try:
         status = "Internal error"
-        machine_uuid = check_output('wmic csproduct get uuid', shell=False).decode().split('\n')[1].strip()
-        processor_id = check_output('wmic cpu get ProcessorId', shell=False).decode().split('\n')[1].strip()
+        machine_uuid = subprocess.check_output('wmic csproduct get uuid', shell=False, **subprocess_args(False)).decode().split('\n')[1].strip()
+        processor_id = subprocess.check_output('wmic cpu get ProcessorId', shell=False, **subprocess_args(False)).decode().split('\n')[1].strip()
         print(machine_uuid, processor_id)
 
         url = var.api + 'verify/' + endpoint
@@ -136,7 +176,7 @@ def make_sign_up_requests(email, password, endpoint):
             var.sign_in_label = status
     except Exception as e:
         print("Error at reading system info : {}".format(e))
-        status = "Couldn't connect"
+        status = "Couldn't connect - {}".format(e)
         print(status)
         if endpoint == 'register':
             var.sign_up_label = status
@@ -160,7 +200,6 @@ class myMainClass():
         self.update_needed = False
         GUI.pushButton_sign_in.clicked.connect(self.sign_in)
         GUI.pushButton_sign_up.clicked.connect(self.sign_up)
-
         self.c = Communicate()
         self.c.path_picker.connect(self.path)
         Thread(target=self.check_update, daemon=True).start()
@@ -194,7 +233,8 @@ class myMainClass():
                     print("Download rejected")
             else:
                 self.update_needed = True
-
+            
+            GUI.label.setText("Update checking finished. Now you can login.")
             print("Check Update finished")
         except Exception as e:
             print("error at check_update: {}".format(e))

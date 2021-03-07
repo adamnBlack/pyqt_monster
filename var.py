@@ -7,8 +7,8 @@ import queue
 from collections import deque
 from queue import LifoQueue
 import logging
-import dialog
-# import main
+
+import main
 
 
 # pd.set_option('display.max_colwidth',1000)
@@ -48,7 +48,6 @@ try:
         return os.path.join(os.path.abspath("."), relative_path)
 
     # icon path
-
     mail_unread_icon = resource_path("icons/email.ico")
     mail_read_icon = resource_path("icons/mail.ico")
     # delete_icon = resource_path("icons/bin.svg")
@@ -57,6 +56,7 @@ try:
 
 except Exception as e:
     print(e)
+
 
 files = []
 
@@ -144,6 +144,8 @@ try:
 except Exception as e:
     print("Exeception occured at config loading : {}".format(e))
 
+# import dialog
+
 delete_email_count = 0
 stop_delete = False
 group_a = pd.DataFrame()
@@ -190,4 +192,6 @@ def load_db(parent=None):
 # pyinstaller --onedir --icon=icons/icon.ico --name=GMonster --noconsole --noconfirm var.py
 # pyi-makespec --onefile --icon=icons/icon.ico --name=GMonster --noconsole var.py
 # pyinstaller --onefile --icon=icons/icon.ico --name=GMonster --noconsole --add-data="icons/icon.ico;imag" --add-data="icons/mail.ico;imag" --add-data="icons/email.ico;imag" var.py
-# pyinstaller --onefile --icon=icons/icon.ico --name=GMonster --add-data="icons/icon.ico;imag" --add-data="icons/mail.ico;imag" --add-data="icons/email.ico;imag" var.py
+# pyinstaller --onefile --icon=icons/icon.ico --name=GMonster --upx-dir=E:\Upwork\2020\upx-3.96-win64 GMonster.spec
+# pyinstaller --onefile --name=GMonster GMonster.spec
+# a.datas += Tree('E:\\Upwork\\2020\\gmail_app\\gmail_app\\icons', prefix='icons\\')

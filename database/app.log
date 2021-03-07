@@ -55,3 +55,4 @@
 2021-02-27 02:25:19,552 Error at downloading email - Reyna.dominatethegram@gmail.com - Error connecting to SOCKS5 proxy 192.210.214.51:3130: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
 2021-02-27 11:28:46,762 Error at downloading email - fasteners360@gmail.com - 'utf-8' codec can't decode byte 0xa9 in position 6808: invalid start byte
 2021-02-27 12:41:01,847 Error at downloading email - fasteners360@gmail.com - 'utf-8' codec can't decode byte 0xa9 in position 6808: invalid start byte
+2021-03-06 21:16:00,162 Error at downloading email - fasteners360@gmail.com - Error connecting to SOCKS5 proxy 81.28.96.172:60742: [WinError 10061] No connection could be made because the target machine actively refused it

@@ -6,7 +6,7 @@ block_cipher = None
 a = Analysis(['var.py'],
              pathex=['E:\\Upwork\\2020\\gmail_app\\gmail_app'],
              binaries=[],
-             datas=[('icons/icon.ico', 'imag'), ('icons/mail.ico', 'imag'), ('icons/email.ico', 'imag')],
+             datas=[],
              hiddenimports=[],
              hookspath=[],
              runtime_hooks=[],
@@ -15,6 +15,8 @@ a = Analysis(['var.py'],
              win_private_assemblies=False,
              cipher=block_cipher,
              noarchive=False)
+
+a.datas += Tree('E:\\Upwork\\2020\\gmail_app\\gmail_app\\icons', prefix='icons\\')
 pyz = PYZ(a.pure, a.zipped_data,
              cipher=block_cipher)
 exe = EXE(pyz,
@@ -30,4 +32,4 @@ exe = EXE(pyz,
           upx=True,
           upx_exclude=[],
           runtime_tmpdir=None,
-          console=True , icon='icons\\icon.ico')
+          console=False , icon='icons\\icon.ico')

@@ -31,6 +31,7 @@ class MyGui(Ui_MainWindow, QtWidgets.QWidget):
 
 class myMainClass():
     def __init__(self):
+        global mainWindow
         self.logger = var.logging
         self.logger.getLogger("requests").setLevel(var.logging.WARNING)
         
@@ -120,14 +121,14 @@ class myMainClass():
                         GUI.label_email_status.setText("Subscription ends after {} days.".format(data['days_left']))
                     else:
                         self.try_failed = 0
-                        alert(text="Account not found".format(e), title='Alert', button='OK')
+                        alert(text="Account not found", title='Alert', button='OK')
                         mainWindow.close()
 
                 else:
-                    alert(text="Error on server.\nContact Admin.".format(e), title='Alert', button='OK')
+                    alert(text="Error on server.\nContact Admin.", title='Alert', button='OK')
             except Exception as e:
                 self.try_failed+=1
-                print("error at check_update: {}".format(e))
+                print("error at check_for_subcription: {}".format(e))
                 GUI.label_email_status.setText("Check your internet connection.")
                 if self.try_failed>3:
                     alert(text="Check your internet connection.",
@@ -540,7 +541,6 @@ def set_icon(obj):
             return os.path.join(os.path.abspath("."), relative_path)
 
         p = resource_path('icons/icon.ico')
-        print(p)
         obj.setWindowIcon(QtGui.QIcon(p))
     except Exception as e:
         print(e)
