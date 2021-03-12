@@ -101,6 +101,7 @@ class myMainClass():
                 url = var.api + "verify/check_for_subscription/{}".format(var.login_email)
                 response = requests.post(url, timeout=10)
                 data = response.json()
+                
                 if response.status_code == 200:
                     if data['status'] == 2:
                         self.try_failed = 0
@@ -109,16 +110,19 @@ class myMainClass():
                         alert(text="Subscription Expired at {}.\nSoftware will exit soon.".format(date), 
                                 title='Alert', button='OK')
                         mainWindow.close()
+                    
                     elif data['status'] == 3:
                         self.try_failed = 0
                         print("sub deactivated")
                         alert(text="Subscription deativated.\nSoftware will exit soon.", 
                                 title='Alert', button='OK')
                         mainWindow.close()
+                    
                     elif data['status'] == 1:
                         self.try_failed = 0
                         print(data['days_left'])
                         GUI.label_email_status.setText("Subscription ends after {} days.".format(data['days_left']))
+                    
                     else:
                         self.try_failed = 0
                         alert(text="Account not found", title='Alert', button='OK')
@@ -126,6 +130,7 @@ class myMainClass():
 
                 else:
                     alert(text="Error on server.\nContact Admin.", title='Alert', button='OK')
+            
             except Exception as e:
                 self.try_failed+=1
                 print("error at check_for_subcription: {}".format(e))
@@ -134,6 +139,7 @@ class myMainClass():
                     alert(text="Check your internet connection.",
                                 title='Alert', button='OK')
                     mainWindow.close()
+            
             sleep(self.time_interval_sub_check)
 
     def test_send(self):

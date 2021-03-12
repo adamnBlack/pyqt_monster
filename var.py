@@ -8,12 +8,12 @@ from collections import deque
 from queue import LifoQueue
 import logging
 
-import main
+# import main
 
 
 # pd.set_option('display.max_colwidth',1000)
 
-version = '1.3r'
+version = '1.4r'
 base_dir = "database"
 
 # admin password = hkHK#j4@jh#@
@@ -127,7 +127,8 @@ date = "8/24/2020"
 limit_of_thread = 100
 login_email = ""
 
-api = "https://enzim.pythonanywhere.com/"
+# api = "https://enzim.pythonanywhere.com/"
+api = "http://127.0.0.1:5000/"
 
 gmail_provider = "https://gmonster.co/product/gmail-accounts/"
 proxy_provider = "https://gmonster.co/product/gmonster-proxies/"
@@ -144,7 +145,7 @@ try:
 except Exception as e:
     print("Exeception occured at config loading : {}".format(e))
 
-# import dialog
+import dialog
 
 delete_email_count = 0
 stop_delete = False

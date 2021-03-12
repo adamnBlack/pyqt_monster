@@ -153,7 +153,9 @@ def make_sign_up_requests(email, password, endpoint):
             'machine_uuid': machine_uuid,
             'processor_id': processor_id,
             'email': email,
-            'password': password
+            'password': password,
+            'version': var.version,
+            'type': 'main'
             }
 
         headers = {
@@ -165,7 +167,7 @@ def make_sign_up_requests(email, password, endpoint):
         data = loads(data)
         x = requests.post(url, json=data, headers=headers, timeout=10)
 
-        if len(x.text)>50:
+        if len(x.text)>100:
             status = "Error at main server"
         else:
             status = x.text
