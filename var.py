@@ -127,8 +127,8 @@ date = "8/24/2020"
 limit_of_thread = 100
 login_email = ""
 
-# api = "https://enzim.pythonanywhere.com/"
-api = "http://127.0.0.1:5000/"
+api = "https://enzim.pythonanywhere.com/"
+# api = "http://127.0.0.1:5000/"
 
 gmail_provider = "https://gmonster.co/product/gmail-accounts/"
 proxy_provider = "https://gmonster.co/product/gmonster-proxies/"
