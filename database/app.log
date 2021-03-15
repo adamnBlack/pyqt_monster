@@ -56,3 +56,12 @@
 2021-02-27 11:28:46,762 Error at downloading email - fasteners360@gmail.com - 'utf-8' codec can't decode byte 0xa9 in position 6808: invalid start byte
 2021-02-27 12:41:01,847 Error at downloading email - fasteners360@gmail.com - 'utf-8' codec can't decode byte 0xa9 in position 6808: invalid start byte
 2021-03-06 21:16:00,162 Error at downloading email - fasteners360@gmail.com - Error connecting to SOCKS5 proxy 81.28.96.172:60742: [WinError 10061] No connection could be made because the target machine actively refused it
+2021-03-15 07:03:44,486 Error at downloading_email - object() takes no parameters
+2021-03-15 07:05:29,080 Error at downloading_email - object() takes no parameters
+2021-03-15 07:06:48,167 Error at downloading_email - object() takes no parameters
+2021-03-15 07:08:21,706 Error at downloading_email - object() takes no parameters
+2021-03-15 07:09:48,224 Error at downloading_email - object() takes no parameters
+2021-03-15 07:11:39,021 Error at downloading_email - object() takes no parameters
+2021-03-15 07:13:46,086 Error at downloading_email - object() takes no parameters
+2021-03-15 07:17:07,219 Error at downloading_email - object() takes no parameters
+2021-03-15 07:20:13,230 Error at downloading_email - object() takes no parameters

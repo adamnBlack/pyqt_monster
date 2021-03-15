@@ -952,46 +952,6 @@ class Ui_MainWindow(object):
         self.checkBox_delete_all = QtWidgets.QCheckBox(self.groupBox_inbox)
         self.checkBox_delete_all.setObjectName("checkBox_delete_all")
         self.gridLayout_2.addWidget(self.checkBox_delete_all, 9, 2, 1, 1)
-        self.pushButton_cancel_email = QtWidgets.QPushButton(self.groupBox_inbox)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_cancel_email.sizePolicy().hasHeightForWidth())
-        self.pushButton_cancel_email.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(9)
-        font.setBold(False)
-        font.setWeight(50)
-        self.pushButton_cancel_email.setFont(font)
-        self.pushButton_cancel_email.setStyleSheet("QPushButton {\n"
-"    border: 1px solid #555;\n"
-"    border-radius: 3px;\n"
-"    border-style: Solid;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
-"        );\n"
-"    padding: 5px 28px;\n"
-"    color: rgb(255, 255, 255);\n"
-"    }\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
-"        );\n"
-"    }\n"
-"\n"
-"QPushButton:pressed {\n"
-"    border-style: inset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
-"        );\n"
-"    }")
-        self.pushButton_cancel_email.setObjectName("pushButton_cancel_email")
-        self.gridLayout_2.addWidget(self.pushButton_cancel_email, 3, 2, 1, 1)
         self.gridLayout.addWidget(self.groupBox_inbox, 1, 0, 1, 1)
         self.label_logo = QtWidgets.QLabel(self.centralwidget)
         self.label_logo.setStyleSheet("image: url(:/newPrefix/software logo.png);")
@@ -1048,5 +1008,4 @@ class Ui_MainWindow(object):
         self.radioButton_group_a.setText(_translate("MainWindow", "Group A"))
         self.pushButton_delete.setText(_translate("MainWindow", "DELETE"))
         self.checkBox_delete_all.setText(_translate("MainWindow", "Delete All"))
-        self.pushButton_cancel_email.setText(_translate("MainWindow", "CANCEL"))
 import logo_rc

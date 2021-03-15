@@ -126,7 +126,9 @@ def thread_starter():
     temp_df = temp_df.groupby('user')
     var.delete_email_count = 0
     var.stop_delete = False
-
+    
+    from imap import delete_email
+    
     for group_name, df_group in temp_df:
 
         if var.stop_delete == True:
@@ -136,7 +138,7 @@ def thread_starter():
             time.sleep(1)
 
         # print('Group name - {}'.format(group_name))
-        from imap import delete_email
+
         Thread(target=delete_email, daemon=True, args=(df_group,)).start()
     while var.thread_open!=0 and var.stop_delete == False:
         time.sleep(1)

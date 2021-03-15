@@ -20,8 +20,6 @@ def slashescape(err):
 
 codecs.register_error('slashescape', slashescape)
 
-email_failed = 0
-total_email_downloaded = 0
 logger=var.logging
 logger.getLogger("requests").setLevel(var.logging.WARNING)
 
@@ -217,13 +215,13 @@ class IMAP_(threading.Thread):
                         }
                     # print(t_dict)
                     var.email_q.put(t_dict.copy())
-                    total_email_downloaded += 1
-                var.total_email+=1
+                    var.total_email_downloaded += 1
+                # var.total_email+=1
 
             imap.close()
             imap.logout()
         except Exception as e:
-            email_failed += 1
+            var.email_failed += 1
             print("error at Imap - {} - {}".format(self.name, e))
             self.logger.error("Error at downloading email - {} - {}".format(self.imap_user, e))
         finally:
@@ -232,9 +230,9 @@ class IMAP_(threading.Thread):
 
 
 def main(group):
-    global email_failed, total_email_downloaded, logger
-    email_failed = 0
-    total_email_downloaded = 0
+    global logger
+    var.email_failed = 0
+    var.total_email_downloaded = 0
     # folder = ""
     # sub_category = ""
     
@@ -278,6 +276,6 @@ def main(group):
 
     while var.thread_open!=0 and var.stop_download == False:
         time.sleep(1)
-    alert(text='Total Emails Downloaded : {}\nAccounts Failed : {}\ncheck app.log'.\
-                format(total_email_downloaded, email_failed), title='Alert', button='OK')
+    # alert(text='Total Emails Downloaded : {}\nAccounts Failed : {}\ncheck app.log'.\
+    #             format(var.total_email_downloaded, var.email_failed), title='Alert', button='OK')
     print("Downloading finished")

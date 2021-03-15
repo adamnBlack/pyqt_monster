@@ -7,6 +7,7 @@ import queue
 from collections import deque
 from queue import LifoQueue
 import logging
+from threading import Thread
 
 # import main
 
@@ -18,6 +19,9 @@ base_dir = "database"
 
 # admin password = hkHK#j4@jh#@
 # email='orders@gmonster.net'
+
+email_failed = 0
+total_email_downloaded = 0
 
 sign_up_label = ""
 sign_in_label = ""
@@ -188,7 +192,7 @@ def load_db(parent=None):
         print("Exeception occured at db loading : {}".format(e))
         alert(text="Exeception occured at db loading : {}".format(e), title='Alert', button='OK')
 
-# load_db("var")
+# Thread(target=load_db, daemon=True, args=("dialog",)).start()
 
 # pyinstaller --onedir --icon=icons/icon.ico --name=GMonster --noconsole --noconfirm var.py
 # pyi-makespec --onefile --icon=icons/icon.ico --name=GMonster --noconsole var.py

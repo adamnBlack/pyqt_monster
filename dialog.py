@@ -143,7 +143,6 @@ class Sign_in(si.Ui_Dialog):
 
 def make_sign_up_requests(email, password, endpoint):
     try:
-        #test branching
         status = "Internal error"
         machine_uuid = subprocess.check_output('wmic csproduct get uuid', shell=False, **subprocess_args(False)).decode().split('\n')[1].strip()
         processor_id = subprocess.check_output('wmic cpu get ProcessorId', shell=False, **subprocess_args(False)).decode().split('\n')[1].strip()

@@ -57,10 +57,6 @@ class myMainClass():
         self.table_timer.setInterval(10)
         self.table_timer.timeout.connect(self.add_to_table)
 
-        self.progressbar = QtCore.QTimer()
-        self.progressbar.setInterval(1)
-        self.progressbar.timeout.connect(self.progressbar_download)
-
         self.send_progressbar = QtCore.QTimer()
         self.send_progressbar.setInterval(1)
         self.send_progressbar.timeout.connect(self.progressbar_send)
@@ -71,13 +67,10 @@ class myMainClass():
         GUI.dateEdit_imap_since.dateChanged.connect(self.date_update)
 
         GUI.pushButton_download_email.clicked.connect(self.downloading_email)
-        GUI.pushButton_cancel_email.clicked.connect(self.email_cancel)
 
         GUI.pushButton_send.clicked.connect(self.send)
         GUI.pushButton_send_cancel.clicked.connect(self.send_cancel)
 
-        # GUI.pushButton_send_cancel.setEnabled(True)
-        GUI.pushButton_cancel_email.setEnabled(False)
         GUI.lineEdit_subject.setText(var.compose_email_subject)
         GUI.textBrowser_compose.setText(var.compose_email_body)
 
@@ -272,7 +265,6 @@ class myMainClass():
                     var.send_campaign_run_status = False
                     GUI.pushButton_send.setEnabled(True)
 
-
             else:
                 print("Group b")
                 if len(var.group_b)>0 and len(var.target)>0:
@@ -281,7 +273,6 @@ class myMainClass():
                     GUI.label_email_status.setText("Database empty")
                     var.send_campaign_run_status = False
                     GUI.pushButton_send.setEnabled(True)
-
 
         except Exception as e:
             print("Error at send_campaign : {}".format(e))
@@ -334,74 +325,55 @@ class myMainClass():
             var.stop_send_campaign = False
 
 
-    def progressbar_download(self):
-        GUI.progressBar_send_email.setValue((var.acc_finished/var.total_acc)*100)
-        if var.acc_finished == var.total_acc:
-            GUI.pushButton_download_email.setEnabled(True)
-            if var.stop_download == True:
-                GUI.pushButton_cancel_email.setEnabled(False)
-                GUI.label_email_status.setText("Downloading cancelled")
-            else:
-                GUI.label_email_status.setText("Downloading finished")
-            self.table_timer.start()
-            self.progressbar.stop()
-
     def downloading_email(self):
         try:
-            GUI.pushButton_download_email.setEnabled(False)
-            GUI.pushButton_cancel_email.setEnabled(True)
-            with var.email_q.mutex:
-                var.email_q.queue.clear()
-            var.total_email = 0
-            var.thread_open = 0
-            var.acc_finished = 0
-            var.stop_download = False
-            self.table_timer.stop()
-            var.inbox_data = pd.DataFrame()
-            var.row_pos = 0
-            GUI.tableWidget_inbox.setRowCount(0)
-            # category = GUI.comboBox_email_category.currentText()
-            # category = self.categories[GUI.comboBox_email_category.currentIndex()]
-            # GUI.tableWidget_inbox.horizontalHeaderItem(0).setFont(self.font)
-            # GUI.tableWidget_inbox.horizontalHeaderItem(0).setText(GUI.comboBox_email_category.currentText())
-            
-            if GUI.radioButton_group_a.isChecked() and len(var.group_a) > 0:
-                print("Group a")
-                GUI.label_email_status.setText("Downloading...")
-                var.total_acc = len(var.group_a)
-                Thread(target=imap.main, daemon=True, args=[var.group_a,]).start()
-                Thread(target=update_config_json, daemon=True).start()
-                self.progressbar.start()
-            elif GUI.radioButton_group_b.isChecked() and len(var.group_b) > 0:
-                print("Group b")
-                GUI.label_email_status.setText("Downloading...")
-                var.total_acc = len(var.group_b)
-                Thread(target=imap.main, daemon=True, args=[var.group_b,]).start()
-                Thread(target=update_config_json, daemon=True).start()
-                self.progressbar.start()
+            result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
+            if result == "OK":
+                with var.email_q.mutex:
+                    var.email_q.queue.clear()
+                
+                var.total_email = 0
+                var.thread_open = 0
+                var.acc_finished = 0
+                var.stop_download = False
+                self.table_timer.stop()
+                
+                var.inbox_data = pd.DataFrame()
+                var.row_pos = 0
+                GUI.tableWidget_inbox.setRowCount(0)
+
+                dialog = QtWidgets.QDialog()
+
+                if GUI.radioButton_group_a.isChecked() and len(var.group_a) > 0:
+                    print("Group a")
+                    var.total_acc = len(var.group_a)
+                    Thread(target=update_config_json, daemon=True).start()
+                    
+                    dialog.ui = Download(dialog, var.group_a)
+                
+                elif GUI.radioButton_group_b.isChecked() and len(var.group_b) > 0:
+                    print("Group b")
+                    GUI.label_email_status.setText("Downloading...")
+                    var.total_acc = len(var.group_b)
+                    Thread(target=update_config_json, daemon=True).start()
+                    
+                    dialog.ui = Download(dialog, var.group_b)
+                
+                else:
+                    print("no db")
+                    alert(text='No database loaded yet!!!', title='Error', button='OK')
+
+                dialog.exec_()
+
+                self.table_timer.start()
+                
+                
             else:
-                print("no db")
-                alert(text='No database loaded yet!!!', title='Error', button='OK')
-                GUI.label_email_status.setText("Load Database!!!!")
-                GUI.pushButton_download_email.setEnabled(True)
-                GUI.pushButton_cancel_email.setEnabled(False)
+                print("Cancelled")
         except Exception as e:
             print("Error at downloading_email : {}".format(e))
             self.logger.error("Error at downloading_email - {}".format(e))
 
-    # def start_timer(self):
-    #     self.table_timer.start()
-
-    # def clear_table(self):
-    #     result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
-    #     if result == 'OK':
-    #         print("cleared table")
-    #         self.table_timer.stop()
-    #         var.inbox_data = pd.DataFrame()
-    #         var.row_pos = 0
-    #         GUI.tableWidget_inbox.setRowCount(0)
-    #     else:
-    #         print("cancelled")
 
     def email_cancel(self):
         result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
@@ -507,26 +479,6 @@ class myMainClass():
             print("Error at email_show : {}".format(e))
             self.logger.error("Error at email_show - {}".format(e))
         
-    # def email_delete(self):
-    #     try:
-    #         row, column = self.get_index_of_button(GUI.tableWidget_inbox)
-    #         button_delete = QtWidgets.QPushButton('')
-    #         button_delete.setStyleSheet(var.button_style)
-    #         button_delete.clicked.connect(self.email_delete)
-    #         button_delete.setIcon(QtGui.QIcon(var.deleted_icon))
-    #         GUI.tableWidget_inbox.setCellWidget(row, 3, button_delete)
-    #         Thread(target=self.delete, daemon=True, args=[row]).start()
-    #     except:
-    #         pass
-
-    # def delete(self, row):
-    #     result = confirm(text='Are you sure?', title='Delete Confirmation Window', buttons=['OK', 'Cancel'])
-    #     if result == 'OK':
-    #         imap.delete_email(row)
-    #         alert(text='Deleted Successfully', title='Alert', button='OK')
-    #     else:
-    #         print("denined")
-
     def date_update(self):
         var.date = GUI.dateEdit_imap_since.date().toString("M/d/yyyy")
 
@@ -573,6 +525,7 @@ else:
     import smtp
     from utils import update_config_json, prepare_html
     from progressbar import Delete_email
+    from download_email import Download
     from send_dialog import Send
     myMC = myMainClass()
 
