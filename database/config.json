@@ -6,6 +6,6 @@
         "limit_of_thread": 10,
         "compose_email_subject": "Just a friendly outreach about [3]",
         "compose_email_body": "{Hey|Hi|Hello} [TONAME],\n\nI'm reaching out to you because i {noticed|came across|found|visited} you website {the other day|yesterday} and thought you'd be interested in a {collaboration|partnership}.\n\n{Hope you don't mind my outreach!|Looking forward to your reply!}\n\nRegards,\n[FIRSTFROMNAME]",
-        "login_email": "sdsf@gfdss.com"
+        "login_email": "ss@gmail.com"
     }
 }

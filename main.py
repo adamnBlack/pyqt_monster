@@ -32,6 +32,8 @@ class MyGui(Ui_MainWindow, QtWidgets.QWidget):
 class myMainClass():
     def __init__(self):
         global mainWindow
+
+        # all types of initialization
         self.logger = var.logging
         self.logger.getLogger("requests").setLevel(var.logging.WARNING)
         
@@ -155,15 +157,19 @@ class myMainClass():
                     if result == "Yes":
                         var.inbox_data["checkbox_status"] = 1
                 var.thread_open = 0
+                
                 dialog = QtWidgets.QDialog()
                 dialog.ui = Delete_email(dialog)
                 dialog.exec_()
+                
                 var.inbox_data = pd.DataFrame()
                 var.row_pos = 0
                 GUI.tableWidget_inbox.setRowCount(0)
                 self.table_timer.start()
+            
             else:
                 print("Cancelled")
+        
         except Exception as e:
             print("Error at batch_delete : {}".format(e))
             self.logger.error("Error at batch_delete - {}".format(e))
