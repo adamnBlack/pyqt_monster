@@ -368,8 +368,11 @@ def main(group, d_start, d_end):
                 writer.writerow(var.send_report.get())
     except Exception as e:
         print('Error while saving report - {}'.format(e))
+    
+    var.email_failed = email_failed
     var.send_campaign_run_status = False
 
     print("sending finished")
-    alert(text='Total Emails Sent : {}\nAccounts Failed : {}\ncheck app.log and report.csv'.\
-                format(var.send_campaign_email_count, email_failed), title='Alert', button='OK')
+    # alert(text='Total Emails Sent : {}\nAccounts Failed : {}\ncheck app.log and report.csv'.\
+    #             format(var.send_campaign_email_count, email_failed), title='Alert', button='OK')
+    

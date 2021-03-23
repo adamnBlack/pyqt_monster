@@ -39,13 +39,15 @@ class Download(Ui_Dialog):
 
     def update_gui(self):
         try:
-            value = (var.acc_finished/var.total_acc)*100
-            self.progressBar.setValue(value)
-            if var.acc_finished == var.total_acc:
+            if var.download_email_status == True:
+                self.label_status.setText(f"Total Email Downloaded : {var.total_email_downloaded}")
+
+            else:
                 self.label_status.setText(f"Total Email Downloaded : {var.total_email_downloaded} Accounts failed : {var.email_failed}")
                 self.pushButton_cancel.setText("Close")
-            else:
-                self.label_status.setText(f"Total Email Downloaded : {var.total_email_downloaded}")
+            
+            value = (var.acc_finished/var.total_acc)*100
+            self.progressBar.setValue(value)
         except Exception as e:
             print("Error at download_email.Download.update_gui : {}".format(e))
 

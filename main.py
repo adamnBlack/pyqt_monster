@@ -59,10 +59,6 @@ class myMainClass():
         self.table_timer.setInterval(10)
         self.table_timer.timeout.connect(self.add_to_table)
 
-        self.send_progressbar = QtCore.QTimer()
-        self.send_progressbar.setInterval(1)
-        self.send_progressbar.timeout.connect(self.progressbar_send)
-
         date = QtCore.QDate.fromString(var.date, "M/d/yyyy")
         GUI.dateEdit_imap_since.setDate(date)
         GUI.dateEdit_imap_since.setMaximumDate(QtCore.QDate.currentDate().addDays(-1))
@@ -71,7 +67,6 @@ class myMainClass():
         GUI.pushButton_download_email.clicked.connect(self.downloading_email)
 
         GUI.pushButton_send.clicked.connect(self.send)
-        GUI.pushButton_send_cancel.clicked.connect(self.send_cancel)
 
         GUI.lineEdit_subject.setText(var.compose_email_subject)
         GUI.textBrowser_compose.setText(var.compose_email_body)
@@ -156,6 +151,7 @@ class myMainClass():
                             title='Confirmation Window', buttons=['Yes', 'No'])
                     if result == "Yes":
                         var.inbox_data["checkbox_status"] = 1
+                
                 var.thread_open = 0
                 
                 dialog = QtWidgets.QDialog()
@@ -217,29 +213,20 @@ class myMainClass():
             var.stop_send_campaign = False
             var.thread_open_campaign = 0
             var.send_campaign_email_count = 0
-            GUI.pushButton_send.setEnabled(False)
-            GUI.pushButton_send_cancel.setEnabled(False)
             if GUI.radioButton_reply.isChecked():
                 result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
                 if result == 'OK':
-                    Thread(target= self.reply, daemon=True).start()
-                    GUI.label_send_email_status.setText("Sending...")
-                    GUI.pushButton_send_cancel.setEnabled(True)
-                    self.send_progressbar.start()
+                    self.reply()
                 else:
                     print('cancelled')
-                    GUI.pushButton_send.setEnabled(True)
+
             else:
                 result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
                 if result == 'OK':
                     print("send_campaign")
-                    Thread(target= self.send_campaign, daemon=True).start()
-                    GUI.label_send_email_status.setText("Sending...")
-                    GUI.pushButton_send_cancel.setEnabled(True)
-                    self.send_progressbar.start()
+                    self.send_campaign()
                 else:
                     print('cancelled')
-                    GUI.pushButton_send.setEnabled(True)
 
         except Exception as e:
             print("Error at main.send : {}".format(e))
@@ -249,6 +236,7 @@ class myMainClass():
 
     def send_campaign(self):
         try:
+            global Campaign
             var.send_campaign_run_status = True
             var.num_emails_per_address = int(GUI.lineEdit_num_per_address.text())
             var.delay_between_emails = GUI.lineEdit_delay_between_emails.text()
@@ -265,71 +253,46 @@ class myMainClass():
             if GUI.radioButton_campaign_group_a.isChecked():
                 print("Group a")
                 if len(var.group_a)>0 and len(var.target)>0:
-                    Thread(target=smtp.main, daemon=True, args=[var.group_a.copy(), delay_start, delay_end]).start()
+                    if len(var.group_a)*var.num_emails_per_address > len(var.target):
+                        total_email_to_be_sent = len(var.target)
+                    else:
+                        total_email_to_be_sent = len(var.group_a)*var.num_emails_per_address
+                    
+                    dialog = QtWidgets.QDialog()
+                    dialog.ui = Campaign(dialog, var.group_a.copy(), delay_start, delay_end, total_email_to_be_sent)
+                    dialog.exec_()
                 else:
                     GUI.label_email_status.setText("Database empty")
                     var.send_campaign_run_status = False
-                    GUI.pushButton_send.setEnabled(True)
 
             else:
                 print("Group b")
                 if len(var.group_b)>0 and len(var.target)>0:
-                    Thread(target=smtp.main, daemon=True, args=[var.group_b.copy(), delay_start, delay_end]).start()
+                    if len(var.group_b)*var.num_emails_per_address > len(var.target):
+                        total_email_to_be_sent = len(var.target)
+                    else:
+                        total_email_to_be_sent = len(var.group_b)*var.num_emails_per_address
+                    
+                    dialog = QtWidgets.QDialog()
+                    dialog.ui = Campaign(dialog, var.group_b.copy(), delay_start, delay_end, total_email_to_be_sent)
+                    dialog.exec_()
                 else:
                     GUI.label_email_status.setText("Database empty")
                     var.send_campaign_run_status = False
-                    GUI.pushButton_send.setEnabled(True)
 
         except Exception as e:
             print("Error at send_campaign : {}".format(e))
-            self.logger.error("Error at add_to_table - {}".format(e))
+            self.logger.error("Error at send_campaign - {}".format(e))
             alert(text="Error at send_campaign : {}".format(e), title='Error', button='OK')
             var.send_campaign_run_status = False
-            GUI.pushButton_send.setEnabled(True)
-
-    def progressbar_send(self):
-        try:
-            if var.send_campaign_run_status == False:
-                GUI.pushButton_send.setEnabled(True)
-                print("Sending finished. Stopping timer.")
-                if var.stop_send_campaign == True:
-                    GUI.label_send_email_status.setText("Sending Cancelled")
-                else:
-                    GUI.label_send_email_status.setText("Sending Finished")
-                self.send_progressbar.stop()
-            else:
-                if GUI.radioButton_campaign_group_a.isChecked():
-                    if len(var.group_a)*var.num_emails_per_address > len(var.target):
-                        value = (var.send_campaign_email_count/len(var.target))*100
-                    else:
-                        value = (var.send_campaign_email_count/(len(var.group_a)*var.num_emails_per_address))*100
-                else:
-                    if len(var.group_b)*var.num_emails_per_address > len(var.target):
-                        value = (var.send_campaign_email_count/len(var.target))*100
-                    else:
-                        value = (var.send_campaign_email_count/(len(var.group_b)*var.num_emails_per_address))*100
-                GUI.progressBar_send_email.setValue(value)
-        except Exception as e:
-            print("Error at progressbar_send : {}".format(e))
-            self.logger.error("Error at progressbar_send - {}".format(e))
 
     def reply(self):
         var.email_in_view['subject'] = GUI.lineEdit_subject.text()
         var.email_in_view['body'] = GUI.textBrowser_compose.toPlainText()
-        # print(var.email_in_view)
-        result = smtp.reply()
-        if result == 1:
-            alert(text='Email sent', title='Alert', button='OK')
-        else:
-            alert(text='Couldn\'t send', title='Alert', button='OK')
 
-    def send_cancel(self):
-        result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
-        if result == 'OK':
-            var.stop_send_campaign = True
-        else:
-            var.stop_send_campaign = False
-
+        dialog = QtWidgets.QDialog()
+        dialog.ui = Reply(dialog)
+        dialog.exec_()
 
     def downloading_email(self):
         try:
@@ -353,14 +316,15 @@ class myMainClass():
                 if GUI.radioButton_group_a.isChecked() and len(var.group_a) > 0:
                     print("Group a")
                     var.total_acc = len(var.group_a)
+                    var.download_email_status = True
                     Thread(target=update_config_json, daemon=True).start()
                     
                     dialog.ui = Download(dialog, var.group_a)
                 
                 elif GUI.radioButton_group_b.isChecked() and len(var.group_b) > 0:
                     print("Group b")
-                    GUI.label_email_status.setText("Downloading...")
                     var.total_acc = len(var.group_b)
+                    var.download_email_status = True
                     Thread(target=update_config_json, daemon=True).start()
                     
                     dialog.ui = Download(dialog, var.group_b)
@@ -370,13 +334,13 @@ class myMainClass():
                     alert(text='No database loaded yet!!!', title='Error', button='OK')
 
                 dialog.exec_()
-
+                var.download_email_status = False
                 self.table_timer.start()
-                
                 
             else:
                 print("Cancelled")
         except Exception as e:
+            var.download_email_status = False
             print("Error at downloading_email : {}".format(e))
             self.logger.error("Error at downloading_email - {}".format(e))
 
@@ -532,6 +496,7 @@ else:
     from utils import update_config_json, prepare_html
     from progressbar import Delete_email
     from download_email import Download
+    from campaign_reply import Reply, Campaign
     from send_dialog import Send
     myMC = myMainClass()
 
