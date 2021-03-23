@@ -1,8 +1,8 @@
 {
     "config": {
-        "date": "3/10/2021",
-        "num_emails_per_address": 10,
-        "delay_between_emails": "0-5",
+        "date": "3/20/2021",
+        "num_emails_per_address": 6,
+        "delay_between_emails": "0-2",
         "limit_of_thread": 10,
         "compose_email_subject": "Just a friendly outreach about [3]",
         "compose_email_body": "{Hey|Hi|Hello} [TONAME],\n\nI'm reaching out to you because i {noticed|came across|found|visited} you website {the other day|yesterday} and thought you'd be interested in a {collaboration|partnership}.\n\n{Hope you don't mind my outreach!|Looking forward to your reply!}\n\nRegards,\n[FIRSTFROMNAME]",

@@ -276,6 +276,8 @@ def main(group):
 
     while var.thread_open!=0 and var.stop_download == False:
         time.sleep(1)
+    
+    var.download_email_status = False
     # alert(text='Total Emails Downloaded : {}\nAccounts Failed : {}\ncheck app.log'.\
     #             format(var.total_email_downloaded, var.email_failed), title='Alert', button='OK')
     print("Downloading finished")
