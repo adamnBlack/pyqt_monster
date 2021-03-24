@@ -148,7 +148,7 @@ api = "https://enzim.pythonanywhere.com/"
 
 gmail_provider = "https://gmonster.co/product/gmail-accounts/"
 proxy_provider = "https://gmonster.co/product/gmonster-proxies/"
-email_scraper = "https://gmonster.co/product/targeted-email-leads/"
+
 try:
     with open('{}/config.json'.format(base_dir)) as json_file:
         data = load(json_file)

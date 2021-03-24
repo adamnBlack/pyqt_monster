@@ -37,10 +37,10 @@ class myMainClass():
         self.logger = var.logging
         self.logger.getLogger("requests").setLevel(var.logging.WARNING)
         
-        self.font = QtGui.QFont()
-        self.font.setFamily("Calibri")
-        self.font.setBold(True)
-        self.font.setPointSize(11)
+        # self.font = QtGui.QFont()
+        # self.font.setFamily("Calibri")
+        # self.font.setBold(True)
+        # self.font.setPointSize(11)
         # self.categories = ("Inbox->Primary", "Inbox->Promotions", "Inbox->Social", 
         #                 "[Gmail]/Spam")
         # d_categories = ("Primary", "Promotions", "Social", "Spam")
@@ -77,7 +77,6 @@ class myMainClass():
 
         GUI.pushButton_attachments.clicked.connect(self.openFileNamesDialog)
         GUI.pushButton_attachments_clear.clicked.connect(self.clear_files)
-        GUI.pushButton_email_scraper.clicked.connect(self.email_scraper)
         GUI.pushButton_gmail_provider.clicked.connect(self.gmail_provider)
         GUI.pushButton_proxy_provider.clicked.connect(self.proxy_provider)
         GUI.radioButton_reply.clicked.connect(self.change_subject)
@@ -87,6 +86,16 @@ class myMainClass():
         GUI.pushButton_test.clicked.connect(self.test_send)
         GUI.textBrowser_show_email.anchorClicked.connect(QtGui.QDesktopServices.openUrl)
         GUI.textBrowser_compose.textChanged.connect(self.compose_update)
+        
+        GUI.lineEdit_number_of_threads.setText(str(var.limit_of_thread))
+        GUI.lineEdit_number_of_threads.textChanged.connect(self.update_limit_of_thread)
+
+    def update_limit_of_thread(self):
+        try:
+            var.limit_of_thread = int(GUI.lineEdit_number_of_threads.text())
+        except Exception as e:
+            GUI.lineEdit_number_of_threads.setText(str(var.limit_of_thread))
+            alert(text="Must be number", title='Alert', button='OK')
 
     def check_for_subcription(self):
         while True:
@@ -191,9 +200,6 @@ class myMainClass():
 
     def proxy_provider(self):
         webbrowser.open_new(var.proxy_provider)
-
-    def email_scraper(self):
-        webbrowser.open_new(var.email_scraper)
 
     def clear_files(self):
         var.files = []
