@@ -1,0 +1,5 @@
+2021-03-23 16:09:22,524 Error at Sending - Gina.Shelton1988@gmail.com - (550, b'5.4.5 Daily user sending quota exceeded. s83sm2165731wms.16 - gsmtp')
+2021-03-24 10:32:12,682 Error at replying - Gina.Shelton1988@gmail.com - (550, b'5.4.5 Daily user sending quota exceeded. i10sm1286422wrs.11 - gsmtp')
+2021-03-24 10:38:40,850 Error at test send - Elva.Lynn1987@gmail.com - name 'compose_email_body_html' is not defined
+2021-03-24 10:47:42,800 Error at send_campaign - name 'body_type' is not defined
+2021-03-24 10:51:02,913 Error at send_campaign - name 'body_type' is not defined

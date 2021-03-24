@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1405</width>
-    <height>1053</height>
+    <width>1325</width>
+    <height>878</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -39,1337 +39,6 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="1" column="1">
-     <widget class="QGroupBox" name="groupBox">
-      <property name="styleSheet">
-       <string notr="true">background-color: #E3E3E3;
-</string>
-      </property>
-      <property name="title">
-       <string/>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_3">
-       <item row="0" column="0" colspan="2">
-        <widget class="QGroupBox" name="groupBox_4">
-         <property name="font">
-          <font>
-           <family>Calibri</family>
-           <pointsize>10</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border:none;</string>
-         </property>
-         <property name="title">
-          <string/>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_5">
-          <item row="0" column="2">
-           <widget class="QPushButton" name="pushButton_proxy_provider">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="font">
-             <font>
-              <family>Calibri</family>
-              <pointsize>9</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-    border: 1px solid #555;
-    border-radius: 3px;
-    border-style: Solid;
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
-        );
-    padding: 5px 28px;
-	color: rgb(255, 255, 255);
-    }
-
-QPushButton:hover {
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
-        );
-    }
-
-QPushButton:pressed {
-    border-style: inset;
-    background: qradialgradient(
-        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
-        );
-    }</string>
-            </property>
-            <property name="text">
-             <string>GMonster Proxies</string>
-            </property>
-            <property name="flat">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QPushButton" name="pushButton_gmail_provider">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="font">
-             <font>
-              <family>Calibri</family>
-              <pointsize>9</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-    border: 1px solid #555;
-    border-radius: 3px;
-    border-style: Solid;
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
-        );
-    padding: 5px 28px;
-	color: rgb(255, 255, 255);
-    }
-
-QPushButton:hover {
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
-        );
-    }
-
-QPushButton:pressed {
-    border-style: inset;
-    background: qradialgradient(
-        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
-        );
-    }</string>
-            </property>
-            <property name="text">
-             <string>Custom 
-Gmail Accounts</string>
-            </property>
-            <property name="flat">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="0">
-           <widget class="QPushButton" name="pushButton_email_scraper">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="font">
-             <font>
-              <family>Calibri</family>
-              <pointsize>9</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-    border: 1px solid #555;
-    border-radius: 3px;
-    border-style: Solid;
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
-        );
-    padding: 5px 28px;
-	color: rgb(255, 255, 255);
-    }
-
-QPushButton:hover {
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
-        );
-    }
-
-QPushButton:pressed {
-    border-style: inset;
-    background: qradialgradient(
-        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
-        );
-    }</string>
-            </property>
-            <property name="text">
-             <string>Targeted 
-Email Leads</string>
-            </property>
-            <property name="flat">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="7" column="0">
-        <widget class="QTextBrowser" name="textBrowser_compose">
-         <property name="font">
-          <font>
-           <family>Calibri</family>
-           <pointsize>13</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="readOnly">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QTextBrowser" name="textBrowser_show_email">
-         <property name="font">
-          <font>
-           <family>Calibri</family>
-           <pointsize>13</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);</string>
-         </property>
-         <property name="inputMethodHints">
-          <set>Qt::ImhEmailCharactersOnly|Qt::ImhMultiLine</set>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="openExternalLinks">
-          <bool>true</bool>
-         </property>
-         <property name="openLinks">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="0">
-        <widget class="QGroupBox" name="groupBox_2">
-         <property name="font">
-          <font>
-           <pointsize>50</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border:none;</string>
-         </property>
-         <property name="title">
-          <string/>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_4">
-          <item row="2" column="0">
-           <widget class="QGroupBox" name="groupBox_3">
-            <property name="font">
-             <font>
-              <pointsize>20</pointsize>
-             </font>
-            </property>
-            <property name="title">
-             <string/>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_7">
-             <item row="0" column="0">
-              <widget class="QRadioButton" name="radioButton_reply">
-               <property name="font">
-                <font>
-                 <family>Calibri</family>
-                 <pointsize>9</pointsize>
-                 <weight>75</weight>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="text">
-                <string>Reply</string>
-               </property>
-               <property name="checked">
-                <bool>false</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QRadioButton" name="radioButton_send_campaign">
-               <property name="font">
-                <font>
-                 <family>Calibri</family>
-                 <pointsize>9</pointsize>
-                 <weight>75</weight>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="text">
-                <string>Send Campaign</string>
-               </property>
-               <property name="checked">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QGroupBox" name="groupBox_6">
-            <property name="title">
-             <string/>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_8">
-             <item row="1" column="2" alignment="Qt::AlignHCenter">
-              <widget class="QLineEdit" name="lineEdit_num_per_address">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>140</width>
-                 <height>24</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>140</width>
-                 <height>24</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <family>Calibri</family>
-                 <pointsize>11</pointsize>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">background-color: rgb(255, 255, 255);</string>
-               </property>
-               <property name="maxLength">
-                <number>4</number>
-               </property>
-               <property name="frame">
-                <bool>false</bool>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="placeholderText">
-                <string>ENTER NUMBER</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="1">
-              <widget class="QLabel" name="label_6">
-               <property name="font">
-                <font>
-                 <family>Calibri</family>
-                 <pointsize>11</pointsize>
-                 <weight>75</weight>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="text">
-                <string>CAMPAIGN SETTINGS</string>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="1" alignment="Qt::AlignLeft">
-              <widget class="QRadioButton" name="radioButton_campaign_group_a">
-               <property name="font">
-                <font>
-                 <family>Calibri</family>
-                 <pointsize>9</pointsize>
-                 <weight>75</weight>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="text">
-                <string>Group A</string>
-               </property>
-               <property name="checked">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="1" alignment="Qt::AlignLeft">
-              <widget class="QLabel" name="label_2">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="font">
-                <font>
-                 <weight>75</weight>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="text">
-                <string>NUM EMAILS PER ACCOUNT</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="1" alignment="Qt::AlignLeft">
-              <widget class="QLabel" name="label_delay_between_emails">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="font">
-                <font>
-                 <weight>75</weight>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="text">
-                <string>DELAY BETWEEN EMAILS</string>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="2" alignment="Qt::AlignLeft">
-              <widget class="QRadioButton" name="radioButton_campaign_group_b">
-               <property name="font">
-                <font>
-                 <family>Calibri</family>
-                 <pointsize>9</pointsize>
-                 <weight>75</weight>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="text">
-                <string>Group B</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="2" alignment="Qt::AlignHCenter">
-              <widget class="QLineEdit" name="lineEdit_delay_between_emails">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>140</width>
-                 <height>24</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>140</width>
-                 <height>24</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <family>Calibri</family>
-                 <pointsize>11</pointsize>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">background-color: rgb(255, 255, 255);</string>
-               </property>
-               <property name="text">
-                <string>5-20</string>
-               </property>
-               <property name="maxLength">
-                <number>9</number>
-               </property>
-               <property name="frame">
-                <bool>false</bool>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="placeholderText">
-                <string>Enter a Range</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item row="3" column="0" colspan="2">
-           <widget class="QComboBox" name="comboBox_attachments">
-            <property name="font">
-             <font>
-              <family>Calibri</family>
-              <pointsize>15</pointsize>
-             </font>
-            </property>
-            <property name="frame">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="2" alignment="Qt::AlignRight">
-           <widget class="QPushButton" name="pushButton_attachments_clear">
-            <property name="font">
-             <font>
-              <family>Calibri</family>
-              <pointsize>9</pointsize>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-    border: 1px solid #555;
-    border-radius: 3px;
-    border-style: Solid;
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
-        );
-    padding: 5px 28px;
-	color: rgb(255, 255, 255);
-    }
-
-QPushButton:hover {
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
-        );
-    }
-
-QPushButton:pressed {
-    border-style: inset;
-    background: qradialgradient(
-        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
-        );
-    }</string>
-            </property>
-            <property name="text">
-             <string>CLEAR</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="2" alignment="Qt::AlignRight|Qt::AlignTop">
-           <widget class="QPushButton" name="pushButton_forward">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="font">
-             <font>
-              <family>Calibri</family>
-              <pointsize>9</pointsize>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-    border: 1px solid #555;
-    border-radius: 3px;
-    border-style: Solid;
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
-        );
-    padding: 5px 28px;
-	color: rgb(255, 255, 255);
-    }
-
-QPushButton:hover {
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
-        );
-    }
-
-QPushButton:pressed {
-    border-style: inset;
-    background: qradialgradient(
-        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
-        );
-    }</string>
-            </property>
-            <property name="text">
-             <string>FORWARD</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QGroupBox" name="groupBox_5">
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border:none;</string>
-         </property>
-         <property name="title">
-          <string/>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_6">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="font">
-             <font>
-              <family>Calibri</family>
-              <pointsize>9</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>ORIGINAL RECIPIENT:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QLineEdit" name="lineEdit_original_recipient">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="font">
-             <font>
-              <family>Calibri</family>
-              <pointsize>13</pointsize>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);</string>
-            </property>
-            <property name="frame">
-             <bool>false</bool>
-            </property>
-            <property name="readOnly">
-             <bool>true</bool>
-            </property>
-            <property name="clearButtonEnabled">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="6" column="0">
-        <widget class="QGroupBox" name="groupBox_8">
-         <property name="styleSheet">
-          <string notr="true">border:none;</string>
-         </property>
-         <property name="title">
-          <string/>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_10">
-          <item row="9" column="0" alignment="Qt::AlignLeft">
-           <widget class="QLabel" name="label_4">
-            <property name="font">
-             <font>
-              <family>Calibri</family>
-              <pointsize>9</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>SUBJECT:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_3">
-            <property name="font">
-             <font>
-              <family>Calibri</family>
-              <pointsize>11</pointsize>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
-            <property name="text">
-             <string>COMPOSE</string>
-            </property>
-           </widget>
-          </item>
-          <item row="9" column="1" colspan="4">
-           <widget class="QLineEdit" name="lineEdit_subject">
-            <property name="font">
-             <font>
-              <family>Calibri</family>
-              <pointsize>13</pointsize>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">background-color: rgb(255, 255, 255);</string>
-            </property>
-            <property name="frame">
-             <bool>false</bool>
-            </property>
-            <property name="clearButtonEnabled">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="4">
-           <widget class="QPushButton" name="pushButton_attachments">
-            <property name="font">
-             <font>
-              <family>Calibri</family>
-              <pointsize>9</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-    border: 1px solid #555;
-    border-radius: 3px;
-    border-style: Solid;
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
-        );
-    padding: 5px 28px;
-	color: rgb(255, 255, 255);
-    }
-
-QPushButton:hover {
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
-        );
-    }
-
-QPushButton:pressed {
-    border-style: inset;
-    background: qradialgradient(
-        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
-        );
-    }</string>
-            </property>
-            <property name="text">
-             <string>ATTACHMENTS</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="8" column="0">
-        <widget class="QGroupBox" name="groupBox_7">
-         <property name="font">
-          <font>
-           <family>Calibri</family>
-           <pointsize>11</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border:none;</string>
-         </property>
-         <property name="title">
-          <string/>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_9">
-          <item row="0" column="11">
-           <widget class="QPushButton" name="pushButton_clear_compose">
-            <property name="font">
-             <font>
-              <family>Calibri</family>
-              <pointsize>9</pointsize>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-    border: 1px solid #555;
-    border-radius: 3px;
-    border-style: Solid;
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
-        );
-    padding: 5px 28px;
-	color: rgb(255, 255, 255);
-    }
-
-QPushButton:hover {
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
-        );
-    }
-
-QPushButton:pressed {
-    border-style: inset;
-    background: qradialgradient(
-        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
-        );
-    }</string>
-            </property>
-            <property name="text">
-             <string>CLEAR</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2">
-           <widget class="QPushButton" name="pushButton_test">
-            <property name="font">
-             <font>
-              <family>Calibri</family>
-              <pointsize>9</pointsize>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-    border: 1px solid #555;
-    border-radius: 3px;
-    border-style: Solid;
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
-        );
-    padding: 5px 28px;
-	color: rgb(255, 255, 255);
-    }
-
-QPushButton:hover {
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
-        );
-    }
-
-QPushButton:pressed {
-    border-style: inset;
-    background: qradialgradient(
-        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
-        );
-    }</string>
-            </property>
-            <property name="text">
-             <string>TEST</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="0">
-           <widget class="QPushButton" name="pushButton_send">
-            <property name="font">
-             <font>
-              <family>Calibri</family>
-              <pointsize>9</pointsize>
-              <weight>50</weight>
-              <bold>false</bold>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">QPushButton {
-    border: 1px solid #555;
-    border-radius: 3px;
-    border-style: Solid;
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
-        );
-    padding: 5px 28px;
-	color: rgb(255, 255, 255);
-    }
-
-QPushButton:hover {
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
-        );
-    }
-
-QPushButton:pressed {
-    border-style: inset;
-    background: qradialgradient(
-        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
-        );
-    }</string>
-            </property>
-            <property name="text">
-             <string>SEND</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <widget class="QGroupBox" name="groupBox_inbox">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="font">
-       <font>
-        <family>Times New Roman</family>
-        <pointsize>11</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: #E3E3E3;
-</string>
-      </property>
-      <property name="title">
-       <string/>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_2">
-       <item row="8" column="0" colspan="7">
-        <widget class="QTableWidget" name="tableWidget_inbox">
-         <property name="font">
-          <font>
-           <family>Calibri</family>
-           <pointsize>11</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);
-selection-color: #79d70f;</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="sizeAdjustPolicy">
-          <enum>QAbstractScrollArea::AdjustToContents</enum>
-         </property>
-         <property name="showGrid">
-          <bool>false</bool>
-         </property>
-         <attribute name="horizontalHeaderCascadingSectionResizes">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="horizontalHeaderDefaultSectionSize">
-          <number>125</number>
-         </attribute>
-         <attribute name="verticalHeaderVisible">
-          <bool>false</bool>
-         </attribute>
-         <row>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="font">
-           <font>
-            <family>Calibri</family>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-         </row>
-         <column>
-          <property name="text">
-           <string/>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>FROM</string>
-          </property>
-          <property name="font">
-           <font>
-            <family>Calibri</family>
-            <pointsize>11</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="textAlignment">
-           <set>AlignCenter</set>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>SUBJECT</string>
-          </property>
-          <property name="font">
-           <font>
-            <family>Calibri</family>
-            <pointsize>11</pointsize>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="textAlignment">
-           <set>AlignCenter</set>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string/>
-          </property>
-         </column>
-         <item row="0" column="0">
-          <property name="text">
-           <string/>
-          </property>
-         </item>
-         <item row="0" column="1">
-          <property name="text">
-           <string/>
-          </property>
-          <property name="font">
-           <font>
-            <family>Calibri</family>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="textAlignment">
-           <set>AlignCenter</set>
-          </property>
-         </item>
-         <item row="0" column="2">
-          <property name="text">
-           <string/>
-          </property>
-          <property name="font">
-           <font>
-            <family>Calibri</family>
-            <pointsize>14</pointsize>
-           </font>
-          </property>
-          <property name="textAlignment">
-           <set>AlignCenter</set>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item row="3" column="6" alignment="Qt::AlignRight">
-        <widget class="QLabel" name="label_version">
-         <property name="font">
-          <font>
-           <family>Calibri</family>
-           <weight>75</weight>
-           <italic>false</italic>
-           <bold>true</bold>
-           <underline>false</underline>
-          </font>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QRadioButton" name="radioButton_group_b">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="font">
-          <font>
-           <family>Calibri</family>
-           <pointsize>11</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string>Group B</string>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-         <property name="autoExclusive">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="9" column="3" colspan="4">
-        <widget class="QLabel" name="label_email_status">
-         <property name="font">
-          <font>
-           <family>Calibri</family>
-           <pointsize>11</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="9" column="0">
-        <widget class="QPushButton" name="pushButton_load_db">
-         <property name="font">
-          <font>
-           <family>Calibri</family>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton {
-    border: 1px solid #555;
-    border-radius: 3px;
-    border-style: Solid;
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
-        );
-    padding: 5px 28px;
-	color: rgb(255, 255, 255);
-    }
-
-QPushButton:hover {
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
-        );
-    }
-
-QPushButton:pressed {
-    border-style: inset;
-    background: qradialgradient(
-        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
-        );
-    }</string>
-         </property>
-         <property name="text">
-          <string>LOAD DB</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_5">
-         <property name="font">
-          <font>
-           <family>Calibri</family>
-           <pointsize>11</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>ADDRESS GROUP</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="QPushButton" name="pushButton_download_email">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="font">
-          <font>
-           <family>Calibri</family>
-           <pointsize>9</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton {
-    border: 1px solid #555;
-    border-radius: 3px;
-    border-style: Solid;
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
-        );
-    padding: 5px 28px;
-	color: rgb(255, 255, 255);
-    }
-
-QPushButton:hover {
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
-        );
-    }
-
-QPushButton:pressed {
-    border-style: inset;
-    background: qradialgradient(
-        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
-        );
-    }</string>
-         </property>
-         <property name="text">
-          <string>DOWNLOAD</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QRadioButton" name="radioButton_group_a">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="font">
-          <font>
-           <family>Calibri</family>
-           <pointsize>11</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string>Group A</string>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-         <property name="autoExclusive">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="9" column="1">
-        <widget class="QPushButton" name="pushButton_delete">
-         <property name="font">
-          <font>
-           <family>Calibri</family>
-           <pointsize>9</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">QPushButton {
-    border: 1px solid #555;
-    border-radius: 3px;
-    border-style: Solid;
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
-        );
-    padding: 5px 28px;
-	color: rgb(255, 255, 255);
-    }
-
-QPushButton:hover {
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
-        );
-    }
-
-QPushButton:pressed {
-    border-style: inset;
-    background: qradialgradient(
-        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
-        );
-    }</string>
-         </property>
-         <property name="text">
-          <string>DELETE</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QDateEdit" name="dateEdit_imap_since">
-         <property name="font">
-          <font>
-           <family>Calibri</family>
-           <pointsize>11</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);</string>
-         </property>
-         <property name="wrapping">
-          <bool>true</bool>
-         </property>
-         <property name="frame">
-          <bool>true</bool>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="readOnly">
-          <bool>false</bool>
-         </property>
-         <property name="showGroupSeparator" stdset="0">
-          <bool>false</bool>
-         </property>
-         <property name="calendarPopup">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="9" column="2">
-        <widget class="QCheckBox" name="checkBox_delete_all">
-         <property name="text">
-          <string>Delete All</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
     <item row="0" column="0" colspan="2">
      <widget class="QLabel" name="label_logo">
       <property name="styleSheet">
@@ -1380,6 +49,1450 @@ background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
     </item>
+    <item row="1" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <property name="tabsClosable">
+       <bool>false</bool>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+      <property name="tabBarAutoHide">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="tab_inbox">
+       <attribute name="title">
+        <string>Inbox</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_12">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout_11">
+          <item row="0" column="0">
+           <widget class="QGroupBox" name="groupBox_inbox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: #E3E3E3;
+</string>
+            </property>
+            <property name="title">
+             <string/>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_2">
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_5">
+               <property name="font">
+                <font>
+                 <family>Calibri</family>
+                 <pointsize>11</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>ADDRESS GROUP</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="0">
+              <widget class="QPushButton" name="pushButton_load_db">
+               <property name="font">
+                <font>
+                 <family>Calibri</family>
+                 <pointsize>9</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 1px solid #555;
+    border-radius: 3px;
+    border-style: Solid;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
+        );
+    padding: 5px 28px;
+	color: rgb(255, 255, 255);
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
+        );
+    }</string>
+               </property>
+               <property name="text">
+                <string>LOAD DB</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QPushButton" name="pushButton_download_email">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Calibri</family>
+                 <pointsize>9</pointsize>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 1px solid #555;
+    border-radius: 3px;
+    border-style: Solid;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
+        );
+    padding: 5px 28px;
+	color: rgb(255, 255, 255);
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
+        );
+    }</string>
+               </property>
+               <property name="text">
+                <string>DOWNLOAD</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="6" alignment="Qt::AlignRight">
+              <widget class="QLabel" name="label_version">
+               <property name="font">
+                <font>
+                 <family>Calibri</family>
+                 <weight>75</weight>
+                 <italic>false</italic>
+                 <bold>true</bold>
+                 <underline>false</underline>
+                </font>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QRadioButton" name="radioButton_group_a">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Calibri</family>
+                 <pointsize>11</pointsize>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Group A</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QDateEdit" name="dateEdit_imap_since">
+               <property name="font">
+                <font>
+                 <family>Calibri</family>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="wrapping">
+                <bool>true</bool>
+               </property>
+               <property name="frame">
+                <bool>true</bool>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="readOnly">
+                <bool>false</bool>
+               </property>
+               <property name="showGroupSeparator" stdset="0">
+                <bool>false</bool>
+               </property>
+               <property name="calendarPopup">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="1">
+              <widget class="QPushButton" name="pushButton_delete">
+               <property name="font">
+                <font>
+                 <family>Calibri</family>
+                 <pointsize>9</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 1px solid #555;
+    border-radius: 3px;
+    border-style: Solid;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
+        );
+    padding: 5px 28px;
+	color: rgb(255, 255, 255);
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
+        );
+    }</string>
+               </property>
+               <property name="text">
+                <string>DELETE</string>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="2">
+              <widget class="QCheckBox" name="checkBox_delete_all">
+               <property name="font">
+                <font>
+                 <family>Times New Roman</family>
+                 <pointsize>13</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Delete All</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QRadioButton" name="radioButton_group_b">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Calibri</family>
+                 <pointsize>11</pointsize>
+                 <weight>50</weight>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Group B</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="0" colspan="7">
+              <widget class="QTableWidget" name="tableWidget_inbox">
+               <property name="font">
+                <font>
+                 <family>Calibri</family>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 255, 255);
+selection-color: #79d70f;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="sizeAdjustPolicy">
+                <enum>QAbstractScrollArea::AdjustToContents</enum>
+               </property>
+               <property name="showGrid">
+                <bool>false</bool>
+               </property>
+               <attribute name="horizontalHeaderCascadingSectionResizes">
+                <bool>false</bool>
+               </attribute>
+               <attribute name="horizontalHeaderDefaultSectionSize">
+                <number>125</number>
+               </attribute>
+               <attribute name="verticalHeaderVisible">
+                <bool>false</bool>
+               </attribute>
+               <row>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Calibri</family>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+               </row>
+               <column>
+                <property name="text">
+                 <string/>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>FROM</string>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Calibri</family>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>SUBJECT</string>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Calibri</family>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string/>
+                </property>
+               </column>
+               <item row="0" column="0">
+                <property name="text">
+                 <string/>
+                </property>
+               </item>
+               <item row="0" column="1">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Calibri</family>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
+                </property>
+               </item>
+               <item row="0" column="2">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Calibri</family>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="9" column="3" colspan="4">
+              <widget class="QLabel" name="label_email_status">
+               <property name="font">
+                <font>
+                 <family>Calibri</family>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QGroupBox" name="groupBox">
+            <property name="styleSheet">
+             <string notr="true">background-color: #E3E3E3;
+</string>
+            </property>
+            <property name="title">
+             <string/>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_3">
+             <item row="2" column="0">
+              <widget class="QTextBrowser" name="textBrowser_show_email">
+               <property name="font">
+                <font>
+                 <family>Times New Roman</family>
+                 <pointsize>13</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
+               </property>
+               <property name="inputMethodHints">
+                <set>Qt::ImhEmailCharactersOnly|Qt::ImhMultiLine</set>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="openExternalLinks">
+                <bool>true</bool>
+               </property>
+               <property name="openLinks">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QGroupBox" name="groupBox_5">
+               <property name="font">
+                <font>
+                 <pointsize>10</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border:none;</string>
+               </property>
+               <property name="title">
+                <string/>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_6">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>ORIGINAL RECIPIENT:</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="lineEdit_original_recipient">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>13</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="frame">
+                   <bool>false</bool>
+                  </property>
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                  <property name="clearButtonEnabled">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="0" column="0" colspan="2">
+              <widget class="QGroupBox" name="groupBox_4">
+               <property name="font">
+                <font>
+                 <family>Calibri</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">border:none;</string>
+               </property>
+               <property name="title">
+                <string/>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_5">
+                <item row="0" column="2">
+                 <widget class="QPushButton" name="pushButton_proxy_provider">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+    border: 1px solid #555;
+    border-radius: 3px;
+    border-style: Solid;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
+        );
+    padding: 5px 28px;
+	color: rgb(255, 255, 255);
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
+        );
+    }</string>
+                  </property>
+                  <property name="text">
+                   <string>GMonster Proxies</string>
+                  </property>
+                  <property name="flat">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QPushButton" name="pushButton_gmail_provider">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+    border: 1px solid #555;
+    border-radius: 3px;
+    border-style: Solid;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
+        );
+    padding: 5px 28px;
+	color: rgb(255, 255, 255);
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
+        );
+    }</string>
+                  </property>
+                  <property name="text">
+                   <string>Custom 
+Gmail Accounts</string>
+                  </property>
+                  <property name="flat">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QPushButton" name="pushButton_email_scraper">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+    border: 1px solid #555;
+    border-radius: 3px;
+    border-style: Solid;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
+        );
+    padding: 5px 28px;
+	color: rgb(255, 255, 255);
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
+        );
+    }</string>
+                  </property>
+                  <property name="text">
+                   <string>Targeted 
+Email Leads</string>
+                  </property>
+                  <property name="flat">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <widget class="QGroupBox" name="groupBox_8">
+               <property name="styleSheet">
+                <string notr="true">border:none;</string>
+               </property>
+               <property name="title">
+                <string/>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_10">
+                <item row="1" column="1" alignment="Qt::AlignRight">
+                 <widget class="QPushButton" name="pushButton_forward">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Calibri</family>
+                    <pointsize>9</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+    border: 1px solid #555;
+    border-radius: 3px;
+    border-style: Solid;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
+        );
+    padding: 5px 28px;
+	color: rgb(255, 255, 255);
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
+        );
+    }</string>
+                  </property>
+                  <property name="text">
+                   <string>FORWARD</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_send_campaign">
+       <attribute name="title">
+        <string>Send Campaign</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="11" column="6">
+         <widget class="QLabel" name="label_delay_between_emails">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>DELAY BETWEEN EMAILS</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="27" column="6">
+         <widget class="QPushButton" name="pushButton_attachments">
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    border: 1px solid #555;
+    border-radius: 3px;
+    border-style: Solid;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
+        );
+    padding: 5px 28px;
+	color: rgb(255, 255, 255);
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
+        );
+    }</string>
+          </property>
+          <property name="text">
+           <string>ATTACHMENTS</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1" alignment="Qt::AlignLeft">
+         <widget class="QLabel" name="label_4">
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>SUBJECT:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="7">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="19" column="6">
+         <widget class="QPushButton" name="pushButton_test">
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    border: 1px solid #555;
+    border-radius: 3px;
+    border-style: Solid;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
+        );
+    padding: 5px 28px;
+	color: rgb(255, 255, 255);
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
+        );
+    }</string>
+          </property>
+          <property name="text">
+           <string>TEST</string>
+          </property>
+         </widget>
+        </item>
+        <item row="28" column="6">
+         <widget class="QPushButton" name="pushButton_attachments_clear">
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    border: 1px solid #555;
+    border-radius: 3px;
+    border-style: Solid;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
+        );
+    padding: 5px 28px;
+	color: rgb(255, 255, 255);
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
+        );
+    }</string>
+          </property>
+          <property name="text">
+           <string>CLEAR LIST</string>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="5">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="10" column="6">
+         <widget class="QLineEdit" name="lineEdit_num_per_address">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>140</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>140</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="maxLength">
+           <number>4</number>
+          </property>
+          <property name="frame">
+           <bool>false</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="placeholderText">
+           <string>ENTER NUMBER</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="6">
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_8">
+           <item row="0" column="0">
+            <widget class="QRadioButton" name="radioButton_reply">
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Reply</string>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+             <property name="autoExclusive">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QRadioButton" name="radioButton_send_campaign">
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Send Campaign</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="7" column="1" rowspan="21" colspan="4">
+         <widget class="QTextBrowser" name="textBrowser_compose">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Times New Roman</family>
+            <pointsize>13</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="readOnly">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="28" column="1" colspan="3">
+         <widget class="QComboBox" name="comboBox_attachments">
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>15</pointsize>
+           </font>
+          </property>
+          <property name="frame">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="6">
+         <widget class="QLineEdit" name="lineEdit_delay_between_emails">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>140</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>140</width>
+            <height>24</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>5-20</string>
+          </property>
+          <property name="maxLength">
+           <number>9</number>
+          </property>
+          <property name="frame">
+           <bool>false</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="placeholderText">
+           <string>Enter a Range</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="6">
+         <widget class="QLabel" name="label_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>NUM EMAILS PER ACCOUNT</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="14" column="6">
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_9">
+           <item row="0" column="0">
+            <widget class="QRadioButton" name="radioButton_plain_text">
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Plain Text</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QRadioButton" name="radioButton_html">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Html</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QCheckBox" name="checkBox_compose_preview">
+             <property name="text">
+              <string>Preview</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="5" column="6">
+         <widget class="QLabel" name="label_6">
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>CAMPAIGN SETTINGS</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="18" column="6">
+         <widget class="QPushButton" name="pushButton_send">
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>10</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    border: 1px solid #555;
+    border-radius: 3px;
+    border-style: Solid;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
+        );
+    padding: 5px 28px;
+	color: rgb(255, 255, 255);
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
+        );
+    }</string>
+          </property>
+          <property name="text">
+           <string>SEND</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="6">
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="font">
+           <font>
+            <family>Times New Roman</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_7">
+           <item row="1" column="0">
+            <widget class="QRadioButton" name="radioButton_campaign_group_b">
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Group B</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QRadioButton" name="radioButton_campaign_group_a">
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Group A</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="5" column="2">
+         <widget class="QLineEdit" name="lineEdit_subject">
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>13</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="frame">
+           <bool>false</bool>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="15" column="6">
+         <widget class="QPushButton" name="pushButton_clear_compose">
+          <property name="font">
+           <font>
+            <family>Calibri</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+	background-image: url(:/newPrefix/software logo.png);
+    border: 1px solid #555;
+    border-radius: 3px;
+    border-style: Solid;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
+        );
+    padding: 5px 28px;
+	color: rgb(255, 255, 255);
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
+        );
+    }</string>
+          </property>
+          <property name="text">
+           <string>CLEAR TEXT</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
@@ -1387,5 +1500,38 @@ background-color: rgb(255, 255, 255);</string>
  <resources>
   <include location="logo.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pushButton_clear_compose</sender>
+   <signal>clicked()</signal>
+   <receiver>textBrowser_compose</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1139</x>
+     <y>511</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1027</x>
+     <y>656</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_attachments_clear</sender>
+   <signal>clicked()</signal>
+   <receiver>comboBox_attachments</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1126</x>
+     <y>817</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>67</x>
+     <y>831</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

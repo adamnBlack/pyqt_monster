@@ -70,8 +70,14 @@ def test(send_to):
         msg['From'] = formataddr((str(Header("{} {}".format(send['FIRSTFROMNAME'], send['LASTFROMNAME']), 'utf-8')), send['EMAIL']))
         msg["To"] = send_to
         msg['Date'] = formatdate(localtime=True)
-        body = utils.format_email(compose_email_body, send['FIRSTFROMNAME'], send['LASTFROMNAME'], target['1'], target['2'], target['3'], target['TONAME'])
-        msg.attach(MIMEText(body, "plain"))
+
+        if var.body_type == "Html":
+            body = utils.format_email(var.compose_email_body_html, send['FIRSTFROMNAME'], send['LASTFROMNAME'], target['1'], target['2'], target['3'], target['TONAME'])
+            msg.attach(MIMEText(body, "html"))
+        else:
+            body = utils.format_email(var.compose_email_body, send['FIRSTFROMNAME'], send['LASTFROMNAME'], target['1'], target['2'], target['3'], target['TONAME'])
+            msg.attach(MIMEText(body, "plain"))
+        
         for part in t_part:
             msg.attach(part)
 
@@ -159,7 +165,11 @@ def reply():
         msg['Date'] = formatdate(localtime=True)
 
         body =  utils.format_email(var.email_in_view['body'], f_f_name, l_f_name, "", "", "", toname)
-        part1 = MIMEText(body, "plain")
+        if var.body_type == "Html":
+            part1 = MIMEText(body, "html")
+        else:
+            part1 = MIMEText(body, "plain")
+        
         msg.add_header("In-Reply-To", msg_id)
         msg.add_header("References", msg_id)
         msg.attach(part1)
@@ -254,8 +264,14 @@ class SMTP_(threading.Thread):
                 msg["To"] = item['EMAIL']
                 last_recipient = item['EMAIL']
                 msg['Date'] = formatdate(localtime=True)
-                body =  utils.format_email(var.compose_email_body, self.FIRSTFROMNAME, self.LASTFROMNAME, item['1'], item['2'], item['3'], item['TONAME'])
-                msg.attach(MIMEText(body, "plain"))
+
+                if var.body_type == "Html":
+                    body =  utils.format_email(var.compose_email_body_html, self.FIRSTFROMNAME, self.LASTFROMNAME, item['1'], item['2'], item['3'], item['TONAME'])
+                    msg.attach(MIMEText(body, "html"))
+                else:
+                    body =  utils.format_email(var.compose_email_body, self.FIRSTFROMNAME, self.LASTFROMNAME, item['1'], item['2'], item['3'], item['TONAME'])
+                    msg.attach(MIMEText(body, "plain"))
+                
                 for part in t_part:
                     msg.attach(part)
                 

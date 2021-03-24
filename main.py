@@ -69,7 +69,11 @@ class myMainClass():
         GUI.pushButton_send.clicked.connect(self.send)
 
         GUI.lineEdit_subject.setText(var.compose_email_subject)
-        GUI.textBrowser_compose.setText(var.compose_email_body)
+        GUI.textBrowser_compose.setPlainText(var.compose_email_body)
+
+        GUI.radioButton_html.clicked.connect(self.compose_change)
+        GUI.radioButton_plain_text.clicked.connect(self.compose_change)
+        GUI.checkBox_compose_preview.clicked.connect(self.compose_preview)
 
         GUI.pushButton_attachments.clicked.connect(self.openFileNamesDialog)
         GUI.pushButton_attachments_clear.clicked.connect(self.clear_files)
@@ -78,12 +82,11 @@ class myMainClass():
         GUI.pushButton_proxy_provider.clicked.connect(self.proxy_provider)
         GUI.radioButton_reply.clicked.connect(self.change_subject)
         GUI.pushButton_load_db.clicked.connect(self.load_db)
-        GUI.pushButton_clear_compose.clicked.connect(self.clear_compose)
         GUI.pushButton_delete.clicked.connect(self.batch_delete)
         GUI.pushButton_forward.clicked.connect(self.forward)
         GUI.pushButton_test.clicked.connect(self.test_send)
         GUI.textBrowser_show_email.anchorClicked.connect(QtGui.QDesktopServices.openUrl)
-                
+        GUI.textBrowser_compose.textChanged.connect(self.compose_update)
 
     def check_for_subcription(self):
         while True:
@@ -170,8 +173,6 @@ class myMainClass():
             print("Error at batch_delete : {}".format(e))
             self.logger.error("Error at batch_delete - {}".format(e))
 
-    def clear_compose(self):
-        GUI.textBrowser_compose.clear()
 
     def load_db(self):
         Thread(target=var.load_db, daemon=True).start()
@@ -196,7 +197,6 @@ class myMainClass():
 
     def clear_files(self):
         var.files = []
-        GUI.comboBox_attachments.clear()
 
     def openFileNamesDialog(self):
         options = QFileDialog.Options()
@@ -232,7 +232,40 @@ class myMainClass():
             print("Error at main.send : {}".format(e))
             self.logger.error("Error at main.send - {}".format(e))
 
-
+    def compose_update(self):     
+        if not GUI.checkBox_compose_preview.isChecked():
+            if GUI.radioButton_html.isChecked():
+                var.compose_email_body_html = GUI.textBrowser_compose.toPlainText()
+            else:
+                var.compose_email_body = GUI.textBrowser_compose.toPlainText()
+                
+    def compose_preview(self):
+        if GUI.checkBox_compose_preview.isChecked():
+            if GUI.radioButton_html.isChecked():
+                GUI.textBrowser_compose.setText(var.compose_email_body_html)
+                GUI.textBrowser_compose.setReadOnly(True)
+            else:
+                GUI.textBrowser_compose.setReadOnly(False)
+                GUI.checkBox_compose_preview.setCheckState(False)
+        else:
+            if GUI.radioButton_html.isChecked():
+                GUI.textBrowser_compose.setPlainText(var.compose_email_body_html)
+                GUI.textBrowser_compose.setReadOnly(False)
+            else:
+                GUI.textBrowser_compose.setPlainText(var.compose_email_body)
+                GUI.textBrowser_compose.setReadOnly(False)
+    
+    def compose_change(self):
+        if GUI.radioButton_html.isChecked():
+            GUI.textBrowser_compose.setReadOnly(False)
+            GUI.checkBox_compose_preview.setCheckState(False)
+            GUI.textBrowser_compose.setPlainText(var.compose_email_body_html)
+            var.body_type = "Html"
+        else:
+            GUI.textBrowser_compose.setReadOnly(False)
+            GUI.checkBox_compose_preview.setCheckState(False)
+            GUI.textBrowser_compose.setPlainText(var.compose_email_body)
+            var.body_type = "Normal"
 
     def send_campaign(self):
         try:
@@ -244,7 +277,6 @@ class myMainClass():
             delay_end = int(var.delay_between_emails.split("-")[1].strip())
             Thread(target=update_config_json, daemon=True).start()
             var.compose_email_subject = GUI.lineEdit_subject.text()
-            var.compose_email_body = GUI.textBrowser_compose.toPlainText()
             # batch = len(var.target)/var.num_emails_per_address
             var.group_a['flag'] = 0
             var.group_b['flag'] = 0
@@ -288,7 +320,10 @@ class myMainClass():
 
     def reply(self):
         var.email_in_view['subject'] = GUI.lineEdit_subject.text()
-        var.email_in_view['body'] = GUI.textBrowser_compose.toPlainText()
+        if var.body_type == "Html":
+            var.email_in_view['body'] = var.compose_email_body_html
+        else:
+            var.email_in_view['body'] = var.compose_email_body
 
         dialog = QtWidgets.QDialog()
         dialog.ui = Reply(dialog)

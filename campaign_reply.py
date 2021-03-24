@@ -70,7 +70,7 @@ class Campaign(Ui_Dialog):
 
         from smtp import main
 
-        Thread(target=main, daemon=True, args=[self.group, self.delay_start, self.delay_end]).start()
+        Thread(target=main, daemon=True, args=[self.group, self.delay_start, self.delay_end,]).start()
         self.timer.start()
     
     def update_gui(self):

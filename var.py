@@ -9,7 +9,7 @@ from queue import LifoQueue
 import logging
 from threading import Thread
 
-# import main
+import main
 
 
 # pd.set_option('display.max_colwidth',1000)
@@ -42,8 +42,19 @@ I'm reaching out to you because i {noticed|came across|found|visited} you websit
 
 Regards,
 [FIRSTFROMNAME]'''
-# compose_email_subject = ""
-# compose_email_body = ""
+compose_email_body_html = """\
+<html>
+    <body>
+        <p>{Hey|Hi|Hello} [TONAME],<br>
+        I'm reaching out to you because i {noticed|came across|found|visited} you website {the other day|yesterday} and thought you'd be interested in a {collaboration|partnership}.<br>
+        {Hope you don't mind my outreach!|Looking forward to your reply!}<br>
+        <a href="http://www.realpython.com">Real Python</a> 
+        has many great tutorials.
+        </p>
+    </body>
+</html>
+"""
+body_type = "Normal"
 
 try:
     def resource_path(relative_path):
@@ -150,7 +161,7 @@ try:
 except Exception as e:
     print("Exeception occured at config loading : {}".format(e))
 
-import dialog
+# import dialog
 
 delete_email_count = 0
 stop_delete = False
@@ -193,7 +204,7 @@ def load_db(parent=None):
         print("Exeception occured at db loading : {}".format(e))
         alert(text="Exeception occured at db loading : {}".format(e), title='Alert', button='OK')
 
-# Thread(target=load_db, daemon=True, args=("dialog",)).start()
+Thread(target=load_db, daemon=True, args=("dialog",)).start()
 
 # pyinstaller --onedir --icon=icons/icon.ico --name=GMonster --noconsole --noconfirm var.py
 # pyi-makespec --onefile --icon=icons/icon.ico --name=GMonster --noconsole var.py
