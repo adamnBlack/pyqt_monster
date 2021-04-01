@@ -1,3 +1,4 @@
+from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, text
 from json import load, dumps
 from pyautogui import alert, password, confirm
 import os
@@ -8,7 +9,8 @@ from collections import deque
 from queue import LifoQueue
 import logging
 from threading import Thread
-
+from database import engine, Group_A, Group_B, Targets, Base
+from sqlalchemy.orm import sessionmaker
 import main
 
 
@@ -168,43 +170,366 @@ stop_delete = False
 group_a = pd.DataFrame()
 group_b = pd.DataFrame()
 target = pd.DataFrame()
-def load_db(parent=None):
-    global group_a, group_b, target
+db_path = "database/group.db"
+
+def get_session():
+    Session = sessionmaker(bind = engine)
+    session = Session()
+
+    return session
+
+def db_update_row(row):
+    global Group_A, Group_B, Targets
     try:
-        group_a = pd.read_csv(base_dir+'/group_a.csv')
+        session = get_session()
+
+        if main.GUI.radioButton_db_groupa.isChecked():
+            objects = session.query(Group_A).get(row['ID'])
+            objects.FIRSTFROMNAME = row["FIRSTFROMNAME"]
+            objects.LASTFROMNAME = row["LASTFROMNAME"]
+            objects.EMAIL = row["EMAIL"]
+            objects.EMAIL_PASS = row["EMAIL_PASS"]
+            objects.PROXY_PORT = row["PROXY:PORT"]
+            objects.PROXY_USER = row["PROXY_USER"]
+            objects.PROXY_PASS = row["PROXY_PASS"]
+        
+        elif main.GUI.radioButton_db_groupb.isChecked():
+            print(type(row["FIRSTFROMNAME"]))
+            objects = session.query(Group_B).get(int(row['ID']))
+            objects.FIRSTFROMNAME = row["FIRSTFROMNAME"]
+            objects.LASTFROMNAME = row["LASTFROMNAME"]
+            objects.EMAIL = row["EMAIL"]
+            objects.EMAIL_PASS = row["EMAIL_PASS"]
+            objects.PROXY_PORT = row["PROXY:PORT"]
+            objects.PROXY_USER = row["PROXY_USER"]
+            objects.PROXY_PASS = row["PROXY_PASS"]
+        
+        else:
+            objects = session.query(Targets).get(row['ID'])
+            objects.one = row["one"]
+            objects.two = row["two"]
+            objects.three = row["three"]
+            objects.TONAME = row["TONAME"]
+            objects.EMAIL = row["EMAIL"]
+        
+        session.commit()
+        print("db updated")
+        return True
+    
+    except Exception as e:
+        session.rollback()
+        print(f"Error at var.db_update_row : {e}")
+        return False
+
+def db_remove_row(id):
+    global Group_A, Group_B, Targets
+    try:
+        session = get_session()
+
+        if main.GUI.radioButton_db_groupa.isChecked():
+            objects = session.query(Group_A).get(id)
+        elif main.GUI.radioButton_db_groupb.isChecked():
+            objects = session.query(Group_B).get(id)
+        else:
+            objects = session.query(Targets).get(id)
+        
+        if objects:
+            session.delete(objects)
+            session.commit()
+            print("db updated")
+            return True
+        else:
+            return False
+    
+    except Exception as e:
+        session.rollback()
+        print(f"Error at var.db_remove_row : {e}")
+        return False
+
+def db_insert_row():
+    global Group_A, Group_B, Targets
+    try:
+        session = get_session()
+
+        if main.GUI.radioButton_db_groupa.isChecked():
+            objects = Group_A( 
+                            FIRSTFROMNAME = "",
+                            LASTFROMNAME = "",
+                            EMAIL = "",
+                            EMAIL_PASS = "",
+                            PROXY_PORT = "",
+                            PROXY_USER = "",
+                            PROXY_PASS = ""
+                    )
+        elif main.GUI.radioButton_db_groupb.isChecked():
+            objects = Group_B( 
+                            FIRSTFROMNAME = "",
+                            LASTFROMNAME = "",
+                            EMAIL = "",
+                            EMAIL_PASS = "",
+                            PROXY_PORT = "",
+                            PROXY_USER = "",
+                            PROXY_PASS = ""
+                    )
+        else:
+            objects = Targets( 
+                            one = "",
+                            two = "",
+                            three = "",
+                            TONAME = "",
+                            EMAIL = ""
+                    )
+        
+        session.add(objects)
+        session.commit()
+        print("db updated")
+        return True, objects.id
+    
+    except Exception as e:
+        session.rollback()
+        print(f"Error at var.db_insert_rows : {e}")
+        return False, None
+
+
+def file_to_db():
+    global Group_A, Group_B, Targets
+    session = get_session()
+    
+    group_header = ['FIRSTFROMNAME', 'LASTFROMNAME', 'EMAIL', 'EMAIL_PASS', 'PROXY:PORT', 'PROXY_USER', 'PROXY_PASS']
+    target_header = ['1', '2', '3', 'TONAME', 'EMAIL']
+    group_a = pd.read_csv(base_dir+'/group_a.csv')
+    group_b = pd.read_csv(base_dir+'/group_b.csv')
+    target = pd.read_csv(base_dir+'/target.csv')
+    
+    if list(group_a.keys()) == group_header and list(group_b.keys()) == group_header and list(target.keys()) == target_header:
         group_a.fillna(" ", inplace=True)
         group_a = group_a.astype(str)
-        group_a.insert(0,'flag', '')
-        group_a['flag'] = 0
         group_a = group_a.loc[group_a['PROXY:PORT'] != " "]
-        print(group_a.head(5))
-        group_b = pd.read_csv(base_dir+'/group_b.csv')
+
+        if len(group_a) > 0:
+            objects = [ Group_A( 
+                        FIRSTFROMNAME = row['FIRSTFROMNAME'],
+                        LASTFROMNAME = row['LASTFROMNAME'],
+                        EMAIL = row['EMAIL'],
+                        EMAIL_PASS = row['EMAIL_PASS'],
+                        PROXY_PORT = row['PROXY:PORT'],
+                        PROXY_USER = row['PROXY_USER'],
+                        PROXY_PASS = row['PROXY_PASS']
+                        
+                        ) for index, row in group_a.iterrows() ]
+
+            session.add_all(objects)
+        else:
+            objects = Group_A(
+                        id=1, 
+                        FIRSTFROMNAME = "",
+                        LASTFROMNAME = "",
+                        EMAIL = "",
+                        EMAIL_PASS = "",
+                        PROXY_PORT = "",
+                        PROXY_USER = "",
+                        PROXY_PASS = ""
+                        )
+            session.add(objects)
+
         group_b.fillna(" ", inplace=True)
         group_b = group_b.astype(str)
-        group_b.insert(0,'flag', '')
-        group_b['flag'] = 0
         group_b = group_b.loc[group_b['PROXY:PORT'] != " "]
-        print(group_b.head(5))
-        target = pd.read_csv(base_dir+'/target.csv')
+        
+        if len(group_b) > 0:
+            objects = [ Group_B( 
+                        FIRSTFROMNAME = row['FIRSTFROMNAME'],
+                        LASTFROMNAME = row['LASTFROMNAME'],
+                        EMAIL = row['EMAIL'],
+                        EMAIL_PASS = row['EMAIL_PASS'],
+                        PROXY_PORT = row['PROXY:PORT'],
+                        PROXY_USER = row['PROXY_USER'],
+                        PROXY_PASS = row['PROXY_PASS']
+                        
+                        ) for index, row in group_b.iterrows() ]
+
+            session.add_all(objects)
+        else:
+            objects = Group_B( 
+                        id=1,
+                        FIRSTFROMNAME = "",
+                        LASTFROMNAME = "",
+                        EMAIL = "",
+                        EMAIL_PASS = "",
+                        PROXY_PORT = "",
+                        PROXY_USER = "",
+                        PROXY_PASS = ""
+                        )
+            session.add(objects) 
+
         target.fillna(" ", inplace=True)
         target = target.astype(str)
-        target.insert(0,'flag', '')
-        target['flag'] = 0
         target = target.loc[target['EMAIL'] != " "]
-        print(target.head(5))
-        if parent=="var":
-            # from main import GUI
-            # GUI.label_email_status.setText("Database Loaded")
-            print("Database loaded")
-        elif parent=='dialog':
-            print("DB loaded")
+
+        if len(target) > 0:
+            objects = [ Targets( 
+                        one = row['1'],
+                        two = row['2'],
+                        three = row['3'],
+                        TONAME = row['TONAME'],
+                        EMAIL = row['EMAIL']
+                
+                        ) for index, row in target.iterrows() ]
+
+            session.add_all(objects)
+
         else:
-            alert(text='Database Loaded', title='Alert', button='OK')
+            objects = Targets( 
+                        id=1,
+                        one = "",
+                        two = "",
+                        three = "",
+                        TONAME = "",
+                        EMAIL = ""
+                        )
+            session.add(objects) 
+        
+        session.commit()
+
+    else:
+        alert(text="Headers not matching!!!", title='Alert', button='OK')
+
+def pandas_to_db():
+    try:
+        global group_a, group_b, target
+        objects = [ Group_A( 
+                        FIRSTFROMNAME = row['FIRSTFROMNAME'],
+                        LASTFROMNAME = row['LASTFROMNAME'],
+                        EMAIL = row['EMAIL'],
+                        EMAIL_PASS = row['EMAIL_PASS'],
+                        PROXY_PORT = row['PROXY:PORT'],
+                        PROXY_USER = row['PROXY_USER'],
+                        PROXY_PASS = row['PROXY_PASS']
+                        
+                        ) for index, row in group_a.iterrows() ]
+
+        session.add_all(objects)
+
+        objects = [ Group_B( 
+                        FIRSTFROMNAME = row['FIRSTFROMNAME'],
+                        LASTFROMNAME = row['LASTFROMNAME'],
+                        EMAIL = row['EMAIL'],
+                        EMAIL_PASS = row['EMAIL_PASS'],
+                        PROXY_PORT = row['PROXY:PORT'],
+                        PROXY_USER = row['PROXY_USER'],
+                        PROXY_PASS = row['PROXY_PASS']
+                        
+                        ) for index, row in group_b.iterrows() ]
+
+        session.add_all(objects)
+
+        objects = [ Targets( 
+                        one = row['1'],
+                        two = row['2'],
+                        three = row['3'],
+                        TONAME = row['TONAME'],
+                        EMAIL = row['EMAIL']
+                
+                        ) for index, row in target.iterrows() ]
+
+        session.add_all(objects)
+        print("Pandas to DB done!")
     except Exception as e:
+        print(f"Error at var.pandas_to_db : {e}")
+
+
+def db_to_pandas():
+    global group_a, group_b, target, Group_A, Group_B, Targets
+    session = get_session()
+    
+    results = session.query(Group_A).all()
+
+    group_a_list = [ {
+                'ID': item.id,
+                'FIRSTFROMNAME': item.FIRSTFROMNAME,
+                'LASTFROMNAME': item.LASTFROMNAME,
+                'EMAIL': item.EMAIL,
+                'EMAIL_PASS': item.EMAIL_PASS,
+                'PROXY:PORT': item.PROXY_PORT,
+                'PROXY_USER': item.PROXY_USER,
+                'PROXY_PASS': item.PROXY_PASS
+                }.copy() for item in results ]
+
+    group_a = pd.DataFrame(group_a_list)
+
+    results = session.query(Group_B).all()
+
+    group_b_list = [ {
+                'ID': item.id,
+                'FIRSTFROMNAME': item.FIRSTFROMNAME,
+                'LASTFROMNAME': item.LASTFROMNAME,
+                'EMAIL': item.EMAIL,
+                'EMAIL_PASS': item.EMAIL_PASS,
+                'PROXY:PORT': item.PROXY_PORT,
+                'PROXY_USER': item.PROXY_USER,
+                'PROXY_PASS': item.PROXY_PASS
+                }.copy() for item in results ]
+
+    group_b = pd.DataFrame(group_b_list)
+
+
+    results = session.query(Targets).all()
+
+    targets_list = [ {
+                'ID': item.id,
+                '1': item.one,
+                '2': item.two,
+                '3': item.three,
+                'TONAME': item.TONAME,
+                'EMAIL': item.EMAIL
+                }.copy() for item in results ]
+
+    target = pd.DataFrame(targets_list)
+    print(group_a.head(5))
+    print(group_b.head(5))
+    print(target.head(5))
+
+def clear_table():
+    global session, Group_A, Group_B, Targets
+    try:
+        session = get_session()
+        
+        session.query(Group_A).delete()
+        session.query(Group_B).delete()
+        session.query(Targets).delete()
+        session.commit()
+    except Exception as e:
+        print("Exeception occured at clear db table : {}".format(e))
+        alert(text="Exeception occured at clear db table : {}".format(e), title='Alert', button='OK')
+
+def load_db():
+    global group_a, group_b, target
+    try:
+        clear_table()
+        file_to_db()
+        db_to_pandas()
+        alert(text="Database Loaded Successfully", title='Alert', button='OK')
+    except Exception as e:
+        session.rollback()
         print("Exeception occured at db loading : {}".format(e))
         alert(text="Exeception occured at db loading : {}".format(e), title='Alert', button='OK')
 
-Thread(target=load_db, daemon=True, args=("dialog",)).start()
+def startup_load_db(parent=None):
+    global group_a, group_b, target
+    try:
+        session = get_session()
+        if session.query(Group_A).first() == None and session.query(Group_B).first() == None:
+            file_to_db()
+
+        db_to_pandas()
+
+    except Exception as e:
+        session.rollback()
+        print("Exeception occured at startup_db loading : {}".format(e))
+        alert(text="Exeception occured at startup_db loading : {}".format(e), title='Alert', button='OK')
+
+# Thread(target=startup_load_db, daemon=True, args=("dialog",)).start()
+# startup_load_db()
 
 # pyinstaller --onedir --icon=icons/icon.ico --name=GMonster --noconsole --noconfirm var.py
 # pyi-makespec --onefile --icon=icons/icon.ico --name=GMonster --noconsole var.py

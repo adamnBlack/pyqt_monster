@@ -18,20 +18,22 @@ import requests
 print("App started....")
 
 
-# import uuid
-# print(uuid.UUID(int=uuid.getnode()))
-
 class MyGui(Ui_MainWindow, QtWidgets.QWidget):
     def __init__(self, mainWindow):
         Ui_MainWindow.__init__(self)
         QtWidgets.QWidget.__init__(self)
+        
         self.setupUi(mainWindow)
-
-
+        
 
 class myMainClass():
     def __init__(self):
         global mainWindow
+        
+        GUI.model = TableModel(var.group_a)
+        GUI.tableView_database.setModel(GUI.model)
+        GUI.tableView_database.show()
+        GUI.tableView_database.resizeColumnsToContents()
 
         # all types of initialization
         self.logger = var.logging
@@ -89,6 +91,33 @@ class myMainClass():
         
         GUI.lineEdit_number_of_threads.setText(str(var.limit_of_thread))
         GUI.lineEdit_number_of_threads.textChanged.connect(self.update_limit_of_thread)
+
+        GUI.radioButton_db_groupa.clicked.connect(self.update_db_table)
+        GUI.radioButton_db_groupb.clicked.connect(self.update_db_table)
+        GUI.radioButton_db_target.clicked.connect(self.update_db_table)
+
+        GUI.pushButton_add_row.clicked.connect(self.insert_row)
+        GUI.pushButton_remove_row.clicked.connect(self.remove_row)
+
+    def insert_row(self):
+        if len(GUI.model._data) > 0:
+            GUI.model.insertRows()
+
+    def remove_row(self):
+        rows = GUI.tableView_database.selectedIndexes()
+        if rows:
+            GUI.model.removeRows(rows[0])
+
+    def update_db_table(self):
+        GUI.model.layoutAboutToBeChanged.emit() 
+        if GUI.radioButton_db_groupa.isChecked():
+            GUI.model._data = var.group_a
+        elif GUI.radioButton_db_groupb.isChecked():
+            GUI.model._data = var.group_b
+        else:
+            GUI.model._data = var.target
+        GUI.model.layoutChanged.emit()
+
 
     def update_limit_of_thread(self):
         try:
@@ -184,7 +213,12 @@ class myMainClass():
 
 
     def load_db(self):
-        Thread(target=var.load_db, daemon=True).start()
+        result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
+        if result == 'OK':
+            Thread(target=var.load_db, daemon=True).start()
+        else:
+            print('cancelled')
+        
 
     def change_subject(self):
         try:
@@ -283,10 +317,6 @@ class myMainClass():
             delay_end = int(var.delay_between_emails.split("-")[1].strip())
             Thread(target=update_config_json, daemon=True).start()
             var.compose_email_subject = GUI.lineEdit_subject.text()
-            # batch = len(var.target)/var.num_emails_per_address
-            var.group_a['flag'] = 0
-            var.group_b['flag'] = 0
-            var.target['flag'] = 0
 
             if GUI.radioButton_campaign_group_a.isChecked():
                 print("Group a")
@@ -456,17 +486,18 @@ class myMainClass():
                 var.inbox_data['checkbox_status'][row] = 0
                 print(var.inbox_data['subject'][row])
 
-
     def email_show(self):
         try:
             print('email showed')
             row, column = self.get_index_of_button(GUI.tableWidget_inbox)
-            Thread(target=imap.set_read_flag, daemon=True, args=[row,]).start()
-            button_show_mail = QtWidgets.QPushButton('')
-            button_show_mail.setStyleSheet(var.button_style)
-            button_show_mail.clicked.connect(self.email_show)
-            button_show_mail.setIcon(QtGui.QIcon(var.mail_read_icon))
-            GUI.tableWidget_inbox.setCellWidget(row, 0, button_show_mail)
+            if var.inbox_data['flag'][row] == "UNSEEN":
+                Thread(target=imap.set_read_flag, daemon=True, args=[row,]).start()
+                var.inbox_data['flag'][row] = "SEEN"
+                button_show_mail = QtWidgets.QPushButton('')
+                button_show_mail.setStyleSheet(var.button_style)
+                button_show_mail.clicked.connect(self.email_show)
+                button_show_mail.setIcon(QtGui.QIcon(var.mail_read_icon))
+                GUI.tableWidget_inbox.setCellWidget(row, 0, button_show_mail)
 
             GUI.lineEdit_original_recipient.setText(var.inbox_data['to'][row])
             # print(var.inbox_data['body'][row])
@@ -539,6 +570,10 @@ else:
     from download_email import Download
     from campaign_reply import Reply, Campaign
     from send_dialog import Send
+    from table_view import TableModel
+
+    Thread(target=var.startup_load_db, daemon=True, args=("dialog",)).start()
+
     myMC = myMainClass()
 
     app.exec_()

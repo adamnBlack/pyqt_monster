@@ -313,6 +313,13 @@ def main(group, d_start, d_end):
     email_failed = 0
     sent_q = queue.Queue()
     target = var.target.copy()
+    
+    target.insert(6,'flag', '')
+    target['flag'] = 0
+    
+    group.insert(8,'flag', '')
+    group['flag'] = 0
+    
     target_len = len(target)
     group_len = len(group)
     var.send_report = queue.Queue()
