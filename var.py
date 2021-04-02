@@ -11,7 +11,7 @@ import logging
 from threading import Thread
 from database import engine, Group_A, Group_B, Targets, Base
 from sqlalchemy.orm import sessionmaker
-import main
+# import main
 
 
 # pd.set_option('display.max_colwidth',1000)
@@ -163,7 +163,7 @@ try:
 except Exception as e:
     print("Exeception occured at config loading : {}".format(e))
 
-# import dialog
+import dialog
 
 delete_email_count = 0
 stop_delete = False
@@ -509,6 +509,7 @@ def load_db():
         file_to_db()
         db_to_pandas()
         alert(text="Database Loaded Successfully", title='Alert', button='OK')
+        main.GUI.radioButton_db_groupa.click()
     except Exception as e:
         session.rollback()
         print("Exeception occured at db loading : {}".format(e))
@@ -522,6 +523,7 @@ def startup_load_db(parent=None):
             file_to_db()
 
         db_to_pandas()
+        main.GUI.radioButton_db_groupa.click()
 
     except Exception as e:
         session.rollback()
