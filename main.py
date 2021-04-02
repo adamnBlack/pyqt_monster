@@ -34,6 +34,8 @@ class myMainClass():
         GUI.tableView_database.setModel(GUI.model)
         GUI.tableView_database.show()
         GUI.tableView_database.resizeColumnsToContents()
+        delegate = InLineEditDelegate()
+        GUI.tableView_database.setItemDelegate(delegate)
 
         # all types of initialization
         self.logger = var.logging
@@ -107,7 +109,8 @@ class myMainClass():
     def remove_row(self):
         rows = GUI.tableView_database.selectedIndexes()
         if rows:
-            GUI.model.removeRows(rows[0])
+            rows = set([ item.row() for item in rows ])
+            GUI.model.removeRows(rows)
 
     def update_db_table(self):
         GUI.model.layoutAboutToBeChanged.emit() 
@@ -570,7 +573,7 @@ else:
     from download_email import Download
     from campaign_reply import Reply, Campaign
     from send_dialog import Send
-    from table_view import TableModel
+    from table_view import TableModel, InLineEditDelegate
     import database
 
     

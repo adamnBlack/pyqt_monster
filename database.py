@@ -7,6 +7,7 @@ import main
 import pandas as pd
 from pyautogui import alert, password, confirm
 import os
+import sqlalchemy.sql.default_comparator
 
 db_path = var.base_dir+"/group.db"
 Base = declarative_base()
@@ -57,7 +58,7 @@ def db_update_row(row):
         session = get_session()
 
         if main.GUI.radioButton_db_groupa.isChecked():
-            objects = session.query(Group_A).get(row['ID'])
+            objects = session.query(Group_A).get(int(row['ID']))
             objects.FIRSTFROMNAME = row["FIRSTFROMNAME"]
             objects.LASTFROMNAME = row["LASTFROMNAME"]
             objects.EMAIL = row["EMAIL"]
@@ -77,10 +78,10 @@ def db_update_row(row):
             objects.PROXY_PASS = row["PROXY_PASS"]
         
         else:
-            objects = session.query(Targets).get(row['ID'])
-            objects.one = row["one"]
-            objects.two = row["two"]
-            objects.three = row["three"]
+            objects = session.query(Targets).get(int(row['ID']))
+            objects.one = row["1"]
+            objects.two = row["2"]
+            objects.three = row["3"]
             objects.TONAME = row["TONAME"]
             objects.EMAIL = row["EMAIL"]
         
@@ -408,6 +409,7 @@ def clear_table():
         session.query(Targets).delete()
         session.commit()
     except Exception as e:
+        session.rollback()
         print("Exeception occured at clear db table : {}".format(e))
         alert(text="Exeception occured at clear db table : {}".format(e), title='Alert', button='OK')
 

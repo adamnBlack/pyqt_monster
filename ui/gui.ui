@@ -294,7 +294,7 @@ background-color: rgb(255, 255, 255);</string>
                </property>
                <property name="styleSheet">
                 <string notr="true">background-color: rgb(255, 255, 255);
-selection-color: #79d70f;</string>
+</string>
                </property>
                <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
@@ -1685,7 +1685,7 @@ QPushButton:pressed {
           </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(255, 255, 255);
-selection-color: #79d70f;</string>
+</string>
           </property>
           <property name="frameShape">
            <enum>QFrame::NoFrame</enum>

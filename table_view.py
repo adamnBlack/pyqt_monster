@@ -42,11 +42,11 @@ class TableModel(QtCore.QAbstractTableModel):
         if index.isValid():
             row = self._data.iloc[index.row()].to_dict()
             row[str(self._data.columns[index.column()])] = value
-            
-            if database.db_update_row(row):
-                self._data.iloc[index.row(), index.column()] = value
-                self.dataChanged.emit(index, index, (QtCore.Qt.DisplayRole, ))
-                return True
+            if self._data.iloc[index.row(), index.column()] != value:
+                if database.db_update_row(row):
+                    self._data.iloc[index.row(), index.column()] = value
+                    self.dataChanged.emit(index, index, (QtCore.Qt.DisplayRole, ))
+                    return True
         
         return False
 
@@ -81,18 +81,19 @@ class TableModel(QtCore.QAbstractTableModel):
 
     def removeRows(self, position):
         try:
-            if self._data.shape[0] > 1:
-                row_id = position.row()
-                result = database.db_remove_row(int(self._data.iloc[row_id, 0]))
-                if result:
-                    row_count = self._data.shape[0]
-                    row_count -= 1
-                    self.beginRemoveRows(QtCore.QModelIndex(), row_count, row_count)
-                    self._data.drop(row_id, axis=0, inplace=True)
-                    self._data.reset_index(drop=True, inplace=True)
-                    self.endRemoveRows()
-                    return True
-            return False
+            for item in position:
+                if self._data.shape[0] > 1:
+                    row_id = item.row()
+                    result = database.db_remove_row(int(self._data.iloc[row_id, 0]))
+                    if result:
+                        row_count = self._data.shape[0]
+                        row_count -= 1
+                        self.beginRemoveRows(QtCore.QModelIndex(), row_count, row_count)
+                        self._data.drop(row_id, axis=0, inplace=True)
+                        self._data.reset_index(drop=True, inplace=True)
+                        self.endRemoveRows()
+                        # return True
+            # return False
         except Exception as e:
             print(f"Error at remove_rows: {e}")
             return False

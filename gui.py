@@ -188,7 +188,7 @@ class Ui_MainWindow(object):
         font.setPointSize(11)
         self.tableWidget_inbox.setFont(font)
         self.tableWidget_inbox.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"selection-color: #79d70f;")
+"")
         self.tableWidget_inbox.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.tableWidget_inbox.setSizeAdjustPolicy(QtWidgets.QAbstractScrollArea.AdjustToContents)
         self.tableWidget_inbox.setAlternatingRowColors(True)
@@ -1067,7 +1067,7 @@ class Ui_MainWindow(object):
         font.setPointSize(13)
         self.tableView_database.setFont(font)
         self.tableView_database.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"selection-color: #79d70f;")
+"")
         self.tableView_database.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.tableView_database.setAlternatingRowColors(True)
         self.tableView_database.setObjectName("tableView_database")
