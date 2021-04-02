@@ -2,6 +2,7 @@ from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem, QMessageBox
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt, pyqtSignal, QObject
 import var
+import database
 
 
 class TableModel(QtCore.QAbstractTableModel):
@@ -42,7 +43,7 @@ class TableModel(QtCore.QAbstractTableModel):
             row = self._data.iloc[index.row()].to_dict()
             row[str(self._data.columns[index.column()])] = value
             
-            if var.db_update_row(row):
+            if database.db_update_row(row):
                 self._data.iloc[index.row(), index.column()] = value
                 self.dataChanged.emit(index, index, (QtCore.Qt.DisplayRole, ))
                 return True
@@ -65,7 +66,7 @@ class TableModel(QtCore.QAbstractTableModel):
         try:
             row_count = self._data.shape[0]
             self.beginInsertRows(QtCore.QModelIndex(), row_count, row_count)
-            result, id = var.db_insert_row()
+            result, id = database.db_insert_row()
             if result:
                 self._data.loc[row_count] = [id]+[""] * (self._data.shape[1] - 1)
                 # self._data.loc[row_count] = [self._data.iloc[row_count-1, 0]+1]+[""] * (self._data.shape[1] - 1)
@@ -82,7 +83,7 @@ class TableModel(QtCore.QAbstractTableModel):
         try:
             if self._data.shape[0] > 1:
                 row_id = position.row()
-                result = var.db_remove_row(int(self._data.iloc[row_id, 0]))
+                result = database.db_remove_row(int(self._data.iloc[row_id, 0]))
                 if result:
                     row_count = self._data.shape[0]
                     row_count -= 1

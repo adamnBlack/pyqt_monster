@@ -98,6 +98,7 @@ class myMainClass():
 
         GUI.pushButton_add_row.clicked.connect(self.insert_row)
         GUI.pushButton_remove_row.clicked.connect(self.remove_row)
+        Thread(target=database.startup_load_db, daemon=True, args=("dialog",)).start()
 
     def insert_row(self):
         if len(GUI.model._data) > 0:
@@ -215,11 +216,10 @@ class myMainClass():
     def load_db(self):
         result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
         if result == 'OK':
-            Thread(target=var.load_db, daemon=True).start()
+            Thread(target=database.load_db, daemon=True).start()
         else:
             print('cancelled')
         
-
     def change_subject(self):
         try:
             subject = var.email_in_view['subject']
@@ -571,8 +571,9 @@ else:
     from campaign_reply import Reply, Campaign
     from send_dialog import Send
     from table_view import TableModel
+    import database
 
-    Thread(target=var.startup_load_db, daemon=True, args=("dialog",)).start()
+    
 
     myMC = myMainClass()
 

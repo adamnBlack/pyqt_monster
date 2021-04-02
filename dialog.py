@@ -284,11 +284,11 @@ else:
     
     import var
     
-    Thread(target=var.load_db, daemon=True, args=("dialog",)).start()
     myMC = myMainClass()
 
     app.exec_()
     print("Exit")
+
     if var.signed_in == True:
         try:
             import main
