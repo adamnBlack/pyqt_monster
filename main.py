@@ -62,6 +62,11 @@ class myMainClass():
         self.table_timer = QtCore.QTimer()
         self.table_timer.setInterval(10)
         self.table_timer.timeout.connect(self.add_to_table)
+        
+        self.command_timer = QtCore.QTimer()
+        self.command_timer.setInterval(10)
+        self.command_timer.timeout.connect(self.run_command)
+        self.command_timer.start()
 
         date = QtCore.QDate.fromString(var.date, "M/d/yyyy")
         GUI.dateEdit_imap_since.setDate(date)
@@ -102,15 +107,31 @@ class myMainClass():
         GUI.pushButton_remove_row.clicked.connect(self.remove_row)
         Thread(target=database.startup_load_db, daemon=True, args=("dialog",)).start()
 
+    def run_command(self):
+        try:
+            if not var.command_q.empty():
+                command = var.command_q.get()
+                eval(command)
+        except Exception as e:
+            print("Error at run_command : {}".format(e))
+            self.logger.error("Error at run_command - {}".format(e))
+
     def insert_row(self):
-        if len(GUI.model._data) > 0:
-            GUI.model.insertRows()
+        GUI.model.insertRows()
 
     def remove_row(self):
         rows = GUI.tableView_database.selectedIndexes()
-        if rows:
-            rows = set([ item.row() for item in rows ])
-            GUI.model.removeRows(rows)
+        rows = list(set([ item.row() for item in rows ]))
+        if len(rows) == 1:            
+            GUI.model.removeRows(rows[0])
+        elif len(rows) > 1:
+            ids = GUI.model._data[GUI.model._data.index.isin(rows)].iloc[:, 0].to_list()
+            Thread(target=database.db_remove_rows, daemon=True, args=(ids,)).start()
+            var.command_q.put(f"GUI.model._data.drop({rows}, inplace=True)")
+            var.command_q.put("GUI.model._data.reset_index(drop=True, inplace=True)")
+            var.command_q.put("self.update_db_table()")
+        else:
+            print("Select something")
 
     def update_db_table(self):
         GUI.model.layoutAboutToBeChanged.emit() 

@@ -92,6 +92,7 @@ send_campaign_email_count = 0
 send_campaign_run_status = False
 download_email_status = False
 send_report = queue.Queue()
+command_q = queue.Queue()
 
 
 limit_of_thread = 100

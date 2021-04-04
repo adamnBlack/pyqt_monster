@@ -13,6 +13,10 @@ db_path = var.base_dir+"/group.db"
 Base = declarative_base()
 engine = create_engine(f'sqlite:///{db_path}')
 
+global logger
+logger=var.logging
+logger.getLogger("requests").setLevel(var.logging.WARNING)
+
 class Group_A(Base):
     __tablename__ = 'group_a'
     id = Column(Integer, primary_key = True)
@@ -92,6 +96,8 @@ def db_update_row(row):
     except Exception as e:
         session.rollback()
         print(f"Error at var.db_update_row : {e}")
+        global logger
+        logger.error(f"Error at db_update_row - {e}")
         return False
 
 def db_remove_row(id):
@@ -116,7 +122,34 @@ def db_remove_row(id):
     except Exception as e:
         session.rollback()
         print(f"Error at var.db_remove_row : {e}")
+        global logger
+        logger.error(f"Error at var.db_remove_row - {e}")
         return False
+
+def db_remove_rows(ids):
+    try:
+        session = get_session()
+        for id in ids:
+            if main.GUI.radioButton_db_groupa.isChecked():
+                objects = session.query(Group_A).get(id)
+            elif main.GUI.radioButton_db_groupb.isChecked():
+                objects = session.query(Group_B).get(id)
+            else:
+                objects = session.query(Targets).get(id)
+            
+            if objects:
+                session.delete(objects)
+        
+        session.commit()
+            
+        print("db updated")
+
+    except Exception as e:
+        session.rollback()
+        print(f"Error at var.db_remove_rows : {e}")
+        global logger
+        logger.error(f"Error at var.db_remove_rows - {e}")
+
 
 def db_insert_row():
     try:
@@ -158,7 +191,9 @@ def db_insert_row():
     
     except Exception as e:
         session.rollback()
-        print(f"Error at var.db_insert_rows : {e}")
+        print(f"Error at var.db_insert_row : {e}")
+        global logger
+        logger.error(f"Error at var.db_insert_row - {e}")
         return False, None
 
 
@@ -269,41 +304,44 @@ def file_to_db():
     else:
         dummy_data_db()
 
-def dummy_data_db():
+def dummy_data_db(group_a=True, group_b=True, target=True):
     session = get_session()
-    objects = Group_A(
-                    id=1, 
-                    FIRSTFROMNAME = "",
-                    LASTFROMNAME = "",
-                    EMAIL = "",
-                    EMAIL_PASS = "",
-                    PROXY_PORT = "",
-                    PROXY_USER = "",
-                    PROXY_PASS = ""
-                    )
-    session.add(objects)
+    if group_a:
+        objects = Group_A(
+                        id=1, 
+                        FIRSTFROMNAME = "",
+                        LASTFROMNAME = "",
+                        EMAIL = "",
+                        EMAIL_PASS = "",
+                        PROXY_PORT = "",
+                        PROXY_USER = "",
+                        PROXY_PASS = ""
+                        )
+        session.add(objects)
 
-    objects = Group_B( 
-                    id=1,
-                    FIRSTFROMNAME = "",
-                    LASTFROMNAME = "",
-                    EMAIL = "",
-                    EMAIL_PASS = "",
-                    PROXY_PORT = "",
-                    PROXY_USER = "",
-                    PROXY_PASS = ""
-                    )
-    session.add(objects)
+    if group_b:
+        objects = Group_B( 
+                        id=1,
+                        FIRSTFROMNAME = "",
+                        LASTFROMNAME = "",
+                        EMAIL = "",
+                        EMAIL_PASS = "",
+                        PROXY_PORT = "",
+                        PROXY_USER = "",
+                        PROXY_PASS = ""
+                        )
+        session.add(objects)
 
-    objects = Targets( 
-                    id=1,
-                    one = "",
-                    two = "",
-                    three = "",
-                    TONAME = "",
-                    EMAIL = ""
-                    )
-    session.add(objects) 
+    if target:
+        objects = Targets( 
+                        id=1,
+                        one = "",
+                        two = "",
+                        three = "",
+                        TONAME = "",
+                        EMAIL = ""
+                        )
+        session.add(objects) 
     
     session.commit()
 
@@ -348,6 +386,8 @@ def pandas_to_db():
         print("Pandas to DB done!")
     except Exception as e:
         print(f"Error at var.pandas_to_db : {e}")
+        global logger
+        logger.error(f"Error at var.pandas_to_db - {e}")
 
 
 def db_to_pandas():
@@ -411,7 +451,8 @@ def clear_table():
     except Exception as e:
         session.rollback()
         print("Exeception occured at clear db table : {}".format(e))
-        alert(text="Exeception occured at clear db table : {}".format(e), title='Alert', button='OK')
+        global logger
+        logger.error(f"Error at clear db table - {e}")
 
 def load_db():
     try:
@@ -427,8 +468,11 @@ def load_db():
 def startup_load_db(parent=None):
     try:
         session = get_session()
-        if session.query(Group_A).first() == None and session.query(Group_B).first() == None:
-            file_to_db()
+        group_a = True if session.query(Group_A).first() == None else False
+        group_b = True if session.query(Group_B).first() == None else False
+        target = True if session.query(Targets).first() == None else False
+
+        dummy_data_db(group_a=group_a, group_b=group_b, target=target)
 
         db_to_pandas()
         main.GUI.radioButton_db_groupa.click()

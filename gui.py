@@ -1070,6 +1070,7 @@ class Ui_MainWindow(object):
 "")
         self.tableView_database.setFrameShape(QtWidgets.QFrame.NoFrame)
         self.tableView_database.setAlternatingRowColors(True)
+        self.tableView_database.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.tableView_database.setObjectName("tableView_database")
         self.tableView_database.horizontalHeader().setCascadingSectionResizes(True)
         self.tableView_database.horizontalHeader().setDefaultSectionSize(150)

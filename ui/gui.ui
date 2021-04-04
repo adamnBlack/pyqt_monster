@@ -1693,6 +1693,9 @@ QPushButton:pressed {
           <property name="alternatingRowColors">
            <bool>true</bool>
           </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
           <attribute name="horizontalHeaderCascadingSectionResizes">
            <bool>true</bool>
           </attribute>
