@@ -14,6 +14,7 @@ import pandas as pd
 import webbrowser
 import subprocess
 import requests
+import pandas as pd
 
 print("App started....")
 
@@ -70,7 +71,7 @@ class myMainClass():
 
         date = QtCore.QDate.fromString(var.date, "M/d/yyyy")
         GUI.dateEdit_imap_since.setDate(date)
-        GUI.dateEdit_imap_since.setMaximumDate(QtCore.QDate.currentDate().addDays(-1))
+        # GUI.dateEdit_imap_since.setMaximumDate(QtCore.QDate.currentDate().addDays(-1))
         GUI.dateEdit_imap_since.dateChanged.connect(self.date_update)
 
         GUI.pushButton_download_email.clicked.connect(self.downloading_email)
@@ -106,6 +107,8 @@ class myMainClass():
         GUI.pushButton_add_row.clicked.connect(self.insert_row)
         GUI.pushButton_remove_row.clicked.connect(self.remove_row)
         Thread(target=database.startup_load_db, daemon=True, args=("dialog",)).start()
+
+        GUI.comboBox_date_sort.currentTextChanged.connect(self.date_sort)
 
     def run_command(self):
         try:
@@ -468,6 +471,10 @@ class myMainClass():
                 GUI.tableWidget_inbox.setItem(var.row_pos,2,
                                             QTableWidgetItem(row_data['subject']))
 
+                GUI.tableWidget_inbox.setItem(var.row_pos,3,
+                                            QTableWidgetItem(str(row_data['date'].strftime("%b %d %Y %H:%M:%S"))))
+                GUI.tableWidget_inbox.resizeColumnToContents(3)
+                
                 button_show_mail = QtWidgets.QPushButton('')
                 button_show_mail.setStyleSheet(var.button_style)
                 button_show_mail.clicked.connect(self.email_show)
@@ -480,10 +487,10 @@ class myMainClass():
                 checkbox_inbox = QtWidgets.QCheckBox(parent=GUI.tableWidget_inbox)
                 checkbox_inbox.setStyleSheet("text-align: center; margin-left:15%; margin-right:10%;")
                 checkbox_inbox.stateChanged.connect(self.clickBox)
-                GUI.tableWidget_inbox.setCellWidget(var.row_pos, 3, checkbox_inbox)
+                GUI.tableWidget_inbox.setCellWidget(var.row_pos, 4, checkbox_inbox)
+                
                 GUI.tableWidget_inbox.resizeColumnToContents(0)
-                # GUI.tableWidget_inbox.resizeColumnToContents(1)
-                GUI.tableWidget_inbox.resizeColumnToContents(3)
+                GUI.tableWidget_inbox.resizeColumnToContents(4)
                 var.row_pos+=1
                 count+=1
             else:
@@ -548,6 +555,34 @@ class myMainClass():
     def date_update(self):
         var.date = GUI.dateEdit_imap_since.date().toString("M/d/yyyy")
 
+    def date_sort(self, option):
+        print(option)
+        Thread(target=self.sort_inbox_data, daemon=True, args=(option,)).start()
+
+    def sort_inbox_data(self, option):
+        self.table_timer.stop()
+        
+        var.row_pos = 0
+        GUI.tableWidget_inbox.setRowCount(0)
+        
+        inbox_data = pd.DataFrame(var.inbox_data)
+
+        var.inbox_data = pd.DataFrame()
+        
+        if option == "New first":
+            inbox_data.sort_values(by="date", inplace=True, ascending=False)
+        else:
+            inbox_data.sort_values(by="date", inplace=True, ascending=True)
+        
+        inbox_data.reset_index(drop=True, inplace=True)
+        inbox_data_dict = inbox_data.to_dict("records")
+
+        for index, item in enumerate(inbox_data_dict):
+            var.email_q.put(item.copy())
+
+        var.command_q.put("self.table_timer.start()")
+
+    
     def get_index_of_button(self, table):
         button = QtWidgets.qApp.focusWidget()
         # or button = self.sender()

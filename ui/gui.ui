@@ -302,6 +302,9 @@ background-color: rgb(255, 255, 255);</string>
                <property name="sizeAdjustPolicy">
                 <enum>QAbstractScrollArea::AdjustToContents</enum>
                </property>
+               <property name="editTriggers">
+                <set>QAbstractItemView::NoEditTriggers</set>
+               </property>
                <property name="alternatingRowColors">
                 <bool>true</bool>
                </property>
@@ -352,6 +355,22 @@ background-color: rgb(255, 255, 255);</string>
                <column>
                 <property name="text">
                  <string>SUBJECT</string>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Calibri</family>
+                  <pointsize>11</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="textAlignment">
+                 <set>AlignCenter</set>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>DATE</string>
                 </property>
                 <property name="font">
                  <font>
@@ -473,6 +492,37 @@ QPushButton:pressed {
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
+              </widget>
+             </item>
+             <item row="3" column="2">
+              <widget class="QComboBox" name="comboBox_date_sort">
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>20</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Times New Roman</family>
+                 <pointsize>10</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>New first</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Old first</string>
+                </property>
+               </item>
               </widget>
              </item>
             </layout>
@@ -911,6 +961,9 @@ QPushButton:pressed {
             <family>Calibri</family>
             <pointsize>15</pointsize>
            </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);</string>
           </property>
           <property name="frame">
            <bool>false</bool>
