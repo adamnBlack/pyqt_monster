@@ -4,6 +4,13 @@ import random
 import json
 from pyautogui import alert, password, confirm
 
+def difference_between_time(first_time, last_time):
+    difference = last_time - first_time
+    seconds_in_day = 24 * 60 * 60
+    minutes, seconds = divmod(difference.days * seconds_in_day + difference.seconds, 60)
+    elapsed_time = round(minutes + (seconds/60), 2)
+    return elapsed_time
+
 def prepare_html(body):
     # print(body)
     mails = re.findall('[\w\.-]+@[\w\.-]+\.\w+', body)

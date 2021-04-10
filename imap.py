@@ -3,11 +3,12 @@ import proxy_imaplib
 import socks
 import email
 import threading
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 import time
 import var
 import imaplib
 import codecs
+from utils import difference_between_time
 
 def slashescape(err):
     """ codecs error handler. err is UnicodeDecode instance. return
@@ -98,6 +99,90 @@ def delete_email(group):
     finally:
         var.thread_open -= 1
 
+class Imap_base():
+    def __init__(self, **kwargs):
+        self.proxy_host = kwargs["proxy_host"]
+        self.proxy_port = kwargs["proxy_port"]
+        self.proxy_type = kwargs["proxy_type"]
+        self.proxy_user = kwargs["proxy_user"]
+        self.proxy_pass = kwargs["proxy_pass"]
+        self.imap_host = var.imap_server
+        self.imap_port = var.imap_port
+        self.imap_user = kwargs["imap_user"]
+        self.imap_pass = kwargs["imap_pass"]
+
+        global logger
+        self.logger = logger
+
+    def login(self):
+        if self.proxy_host != "":
+            imap = proxy_imaplib.IMAP(proxy_host=self.proxy_host, proxy_port=self.proxy_port, proxy_type=self.proxy_type,
+                proxy_user=self.proxy_user, proxy_pass=self.proxy_pass, host=self.imap_host, port=self.imap_port, timeout=30)
+        else:
+            imap = imaplib.IMAP4_SSL(var.imap_server)
+
+        imap.login(self.imap_user, self.imap_pass)
+
+        return imap
+
+class Imap_check_for_blocks(Imap_base):
+    def __init__(self, **kwargs):
+        self.time_limit = kwargs["time_limit"]
+        super().__init__(**kwargs)
+
+    def check_for_block_messages(self):
+        try:
+            # FROM - Mail Delivery Subsystem mailer-daemon@googlemail.com 
+            # SUBJECT - Delivery Status Notification (Failure)
+            # Message bloqué   or  Message blocked 
+
+            imap = self.login()
+            imap.select("Inbox", readonly=True)
+            
+            date = datetime.today() - timedelta(days=1)
+
+            tmp, data = imap.search(None, f'(SINCE "{date.strftime("%d-%b-%Y")}" SUBJECT "Delivery Status Notification (Failure)" FROM "mailer-daemon@googlemail.com")')
+            for num in data[0].split():
+                tmp, data = imap.fetch(num, '(UID RFC822)')
+                raw = data[0][0]
+                raw_str = raw.decode("utf-8")
+                uid = raw_str.split()[2]
+                email_message = email.message_from_string(data[0][1].decode('utf-8', 'slashescape'))
+
+                date = email.utils.parsedate_to_datetime(email_message['Date'])
+                difference_in_minute = difference_between_time(date, datetime.now(timezone.utc))
+                
+                if difference_in_minute < self.time_limit:
+                    b = email_message
+                    body = ""
+
+                    if b.is_multipart():
+                        for part in b.walk():
+                            ctype = part.get_content_type()
+                            cdispo = str(part.get('Content-Disposition'))
+
+                            # skip any text/plain (txt) attachments
+                            if ctype == 'text/plain' and 'attachment' not in cdispo:
+                                body = part.get_payload(decode=True)  # decode
+                                break
+                    # not multipart - i.e. plain text, no attachments, keeping fingers crossed
+                    else:
+                        body = b.get_payload(decode=True)
+                    
+                    try:
+                        body = body.decode("utf-8", 'slashescape')
+                    except:
+                        body = body
+
+                    if "Message bloqué".lower() in body.lower() or "Message blocked".lower() in body.lower():
+                        return True
+            return False
+        
+        except Exception as e:
+            print("error at Imap_base.check_for_block_messages - {} - {}".format(self.imap_user, e))
+            self.logger.error("Error at Imap_base.check_for_block_messages - {} - {}".format(self.imap_user, e))
+            return False
+
 class IMAP_(threading.Thread):
     def __init__(self, threadID, name, proxy_host, proxy_port, proxy_type, proxy_user, proxy_pass, imap_user, imap_pass, FIRSTFROMNAME, LASTFROMNAME):
         threading.Thread.__init__(self)
@@ -141,6 +226,7 @@ class IMAP_(threading.Thread):
                 #                 item, objDate.strftime('%d-%b-%Y'), self.category))
                 # else: 
                 #     tmp, data = imap.search(None, '({} SINCE "{}")'.format(item, objDate.strftime('%d-%b-%Y')))
+                
                 tmp, data = imap.search(None, '({} SINCE "{}")'.format(item, objDate.strftime('%d-%b-%Y')))
 
                 for num in data[0].split():
@@ -267,8 +353,14 @@ def main(group):
 
             while var.thread_open >= var.limit_of_thread and var.stop_download == False:
                 time.sleep(1)
-            print(index, name, proxy_host, proxy_port, proxy_type, proxy_user, proxy_pass, imap_user, imap_pass, FIRSTFROMNAME, LASTFROMNAME)
-            IMAP_( index, name, proxy_host, proxy_port, proxy_type, proxy_user, proxy_pass, imap_user, imap_pass, FIRSTFROMNAME, LASTFROMNAME).start()
+            
+            print(index, name, proxy_host, proxy_port, 
+                    proxy_type, proxy_user, proxy_pass, imap_user, 
+                    imap_pass, FIRSTFROMNAME, LASTFROMNAME)
+            
+            IMAP_( index, name, proxy_host, proxy_port, 
+                    proxy_type, proxy_user, proxy_pass, imap_user, 
+                    imap_pass, FIRSTFROMNAME, LASTFROMNAME).start()
 
         except Exception as e:
             print("Error at Imap thread open - {} - {}".format(name, e))

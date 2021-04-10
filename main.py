@@ -560,7 +560,8 @@ class myMainClass():
         Thread(target=self.sort_inbox_data, daemon=True, args=(option,)).start()
 
     def sort_inbox_data(self, option):
-        self.table_timer.stop()
+        
+        var.command_q.put("self.table_timer.stop()")
         
         var.row_pos = 0
         GUI.tableWidget_inbox.setRowCount(0)
@@ -570,9 +571,9 @@ class myMainClass():
         var.inbox_data = pd.DataFrame()
         
         if option == "New first":
-            inbox_data.sort_values(by="date", inplace=True, ascending=False)
-        else:
             inbox_data.sort_values(by="date", inplace=True, ascending=True)
+        else:
+            inbox_data.sort_values(by="date", inplace=True, ascending=False)
         
         inbox_data.reset_index(drop=True, inplace=True)
         inbox_data_dict = inbox_data.to_dict("records")

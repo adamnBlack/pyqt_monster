@@ -17,6 +17,8 @@ import csv
 import queue
 import random
 from pyautogui import alert, password, confirm
+from datetime import datetime
+from imap import Imap_check_for_blocks
 from main import GUI
 
 email_failed = 0
@@ -242,7 +244,6 @@ class SMTP_(threading.Thread):
             var.thread_open_campaign += 1
 
             server = self.login()
-
             t_part = []
             for path in var.files:
                 part = MIMEBase('application', "octet-stream")
@@ -253,10 +254,13 @@ class SMTP_(threading.Thread):
                                 'attachment; filename="{}"'.format(Path(path).name))
                 t_part.append(part)
 
+            count = 0
 
             for index, item in self.target.iterrows():
                 if var.stop_send_campaign == True:
                     break
+                
+                count+=1
 
                 msg = MIMEMultipart("alternative")
                 msg["Subject"] = utils.format_email(var.compose_email_subject, self.FIRSTFROMNAME, self.LASTFROMNAME, item['1'], item['2'], item['3'], item['TONAME'])
@@ -276,13 +280,34 @@ class SMTP_(threading.Thread):
                     msg.attach(part)
                 
                 time.sleep(random.randint(self.d_start, self.d_end))
+                
+                if count == 1:
+                    first_time = datetime.now()
+                
                 try:
                     server.sendmail(self.user, item['EMAIL'], msg.as_string())
                 except:
-                    print("here {}".format(server))
+                    print("Reconnecting smtp - {}".format(self.name))
                     server = self.login()
                     server.sendmail(self.user, item['EMAIL'], msg.as_string())
                 
+                if count%5==0:
+                    last_time = datetime.now()
+                    elapsed_time = utils.difference_between_time(first_time, last_time)
+                    
+                    imap_object = Imap_check_for_blocks(time_limit=elapsed_time, proxy_host=self.proxy_host, 
+                                        proxy_port=self.proxy_port, proxy_type=socks.PROXY_TYPE_SOCKS5, 
+                                        proxy_user=self.proxy_user, proxy_pass=self.proxy_pass,
+                                        imap_user=self.user, imap_pass=self.passwd)
+
+                    if imap_object.check_for_block_messages():
+                        print(f"Found block messages : {self.name}")
+                        self.logger.error(f"Found block messages : {self.name} {str(datetime.now())}")
+                        break
+                    else:
+                        print(f"Found no block messages : {self.name}")
+                        self.logger.error(f"Found no block messages : {self.name} {str(datetime.now())}")
+
                 t_dict = {
                     "TARGET": item['EMAIL'],
                     "FROMEMAIL": self.user,
