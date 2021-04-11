@@ -10,6 +10,7 @@ from PyQt5.QtCore import pyqtSignal, QObject
 
 cancel = False
 total_email_count = 0
+delete_status = False
 
 class Communicate(QObject):
     s = pyqtSignal(int, str)
@@ -91,6 +92,8 @@ def set_icon(obj):
 
 class Delete_email(Ui_Dialog):
     def __init__(self, dialog):
+        global delete_status
+        delete_status = True
         Ui_Dialog.__init__(self)
         self.setupUi(dialog)
         self.dialog = dialog
@@ -105,19 +108,29 @@ class Delete_email(Ui_Dialog):
     def cancel_delete(self):
         var.stop_delete = True
         self.timer.stop()
+        self.dialog.accept()
 
     def progressbar(self):
-        global total_email_count
-        if total_email_count != 0:
+        global total_email_count, delete_status
+        if total_email_count != 0 and delete_status == True:
             value = (var.delete_email_count/total_email_count)*100
             self.label_status.setText("Deleted : {}/{}".format(var.delete_email_count, total_email_count))
             self.progressBar.setValue(value)
+        
+        elif delete_status == False:
+            value = (var.delete_email_count/total_email_count)*100
+            self.label_status.setText("Deleting Finished : {}/{}".format(var.delete_email_count, total_email_count))
+            self.progressBar.setValue(value)
+            self.pushButton_cancel.setText("Close")
+
         else:
             self.label_status.setText("Preparing for deleting ...")
 
 
+
 def thread_starter():
-    global total_email_count
+    global total_email_count, delete_status
+
     temp_df = var.inbox_data.copy()
 
     temp_df = temp_df.loc[temp_df['checkbox_status'] == 1]
@@ -147,4 +160,5 @@ def thread_starter():
         var.email_q.put(row.to_dict().copy())
 
     var.inbox_data["checkbox_status"] = 0
+    delete_status = False
     print("deleting finished")

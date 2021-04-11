@@ -109,6 +109,10 @@ class myMainClass():
         Thread(target=database.startup_load_db, daemon=True, args=("dialog",)).start()
 
         GUI.comboBox_date_sort.currentTextChanged.connect(self.date_sort)
+        GUI.checkBox_check_for_blocks.stateChanged.connect(self.change_check_for_blocks_state)
+
+    def change_check_for_blocks_state(self):
+        var.check_for_blocks = GUI.checkBox_check_for_blocks.isChecked()
 
     def run_command(self):
         try:
@@ -213,27 +217,36 @@ class myMainClass():
 
     def batch_delete(self):
         try:
-            result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
-            if result == "OK":
-                if GUI.checkBox_delete_all.isChecked():
-                    result = confirm(text='You are going to delete all?', 
-                            title='Confirmation Window', buttons=['Yes', 'No'])
-                    if result == "Yes":
-                        var.inbox_data["checkbox_status"] = 1
-                
-                var.thread_open = 0
-                
-                dialog = QtWidgets.QDialog()
-                dialog.ui = Delete_email(dialog)
-                dialog.exec_()
-                
-                var.inbox_data = pd.DataFrame()
-                var.row_pos = 0
-                GUI.tableWidget_inbox.setRowCount(0)
-                self.table_timer.start()
+            temp_df = var.inbox_data.copy()
+            temp_df = temp_df.loc[temp_df['checkbox_status'] == 1]
             
+            if temp_df.shape[0] > 0:
+                result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
+                if result == "OK":
+                    if GUI.checkBox_delete_all.isChecked():
+                        result = confirm(text='You are going to delete all?', 
+                                title='Confirmation Window', buttons=['Yes', 'No'])
+                        if result == "Yes":
+                            var.inbox_data["checkbox_status"] = 1
+                    
+                    var.thread_open = 0
+                    
+                    dialog = QtWidgets.QDialog()
+                    dialog.ui = Delete_email(dialog)
+                    dialog.exec_()
+
+                    option = str(GUI.comboBox_date_sort.currentText())
+                    Thread(target=self.date_sort, daemon=True, args=(option,)).start()
+                    
+                    # var.inbox_data = pd.DataFrame()
+                    # var.row_pos = 0
+                    # GUI.tableWidget_inbox.setRowCount(0)
+                    # self.table_timer.start()
+                
+                else:
+                    print("Cancelled")
             else:
-                print("Cancelled")
+                alert(text="You have to make selection first!!!", title="Alert", button="OK")
         
         except Exception as e:
             print("Error at batch_delete : {}".format(e))
@@ -566,11 +579,11 @@ class myMainClass():
         var.row_pos = 0
         GUI.tableWidget_inbox.setRowCount(0)
         
-        inbox_data = pd.DataFrame(var.inbox_data)
+        inbox_data = var.inbox_data.copy()
 
         var.inbox_data = pd.DataFrame()
         
-        if option == "New first":
+        if option == "Latest":
             inbox_data.sort_values(by="date", inplace=True, ascending=True)
         else:
             inbox_data.sort_values(by="date", inplace=True, ascending=False)

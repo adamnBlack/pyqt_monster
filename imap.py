@@ -10,6 +10,9 @@ import imaplib
 import codecs
 from utils import difference_between_time
 
+def utc_to_local(utc_dt):
+    return utc_dt.replace(tzinfo=timezone.utc).astimezone(tz=None)
+
 def slashescape(err):
     """ codecs error handler. err is UnicodeDecode instance. return
     a tuple with a replacement for the unencodable part of the input
@@ -286,7 +289,7 @@ class IMAP_(threading.Thread):
                         'from': "{} {}".format(from_name, from_mail),
                         'from_name': from_name,
                         'from_mail': from_mail,
-                        'date': email.utils.parsedate_to_datetime(email_message['Date']),
+                        'date': utc_to_local(email.utils.parsedate_to_datetime(email_message['Date'])),
                         'subject': subject,
                         'user': self.imap_user,
                         'pass': self.imap_pass,

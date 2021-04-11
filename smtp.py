@@ -291,7 +291,7 @@ class SMTP_(threading.Thread):
                     server = self.login()
                     server.sendmail(self.user, item['EMAIL'], msg.as_string())
                 
-                if count%5==0:
+                if count%5 == 0 and var.check_for_blocks == True:
                     last_time = datetime.now()
                     elapsed_time = utils.difference_between_time(first_time, last_time)
                     

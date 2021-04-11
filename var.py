@@ -28,6 +28,8 @@ sign_up_label = ""
 sign_in_label = ""
 signed_in = False
 
+check_for_blocks = False
+
 #Create and configure logger
 logging.basicConfig(filename=base_dir+"/app.log",
                     format='%(asctime)s %(message)s',
