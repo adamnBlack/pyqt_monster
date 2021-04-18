@@ -3,6 +3,7 @@ import var
 import random
 import json
 from pyautogui import alert, password, confirm
+import uuid
 
 def difference_between_time(first_time, last_time):
     difference = last_time - first_time
@@ -67,7 +68,8 @@ def update_config_json():
                         "limit_of_thread": var.limit_of_thread,
                         "compose_email_subject": var.compose_email_subject,
                         "compose_email_body": var.compose_email_body,
-                        "login_email": var.login_email
+                        "login_email": var.login_email,
+                        "tracking": var.tracking
                     }
                 }
         with open(var.base_dir+'/config.json', 'w') as json_file:
@@ -78,13 +80,22 @@ def update_config_json():
         alert(text="Exeception occured at update_config_json : {}".format(e), 
                                 title='Alert', button='OK')
 
-def format_email(text, FIRSTFROMNAME, LASTFROMNAME, one, two, three, TONAME):
+def format_email(text, FIRSTFROMNAME, LASTFROMNAME, one, two, three, TONAME, source=None):
     text = text.replace('[FIRSTFROMNAME]', str(FIRSTFROMNAME))
     text = text.replace('[LASTFROMNAME]', str(LASTFROMNAME))
     text = text.replace('[1]', str(one))
     text = text.replace('[2]', str(two))
     text = text.replace('[3]', str(three))
     text = text.replace('[TONAME]', str(TONAME))
+
+    if var.body_type == "Html" and var.email_tracking_state == True and source!=None:
+        text = text.split("</body>")
+        text[0] = text[0] + f"<img src='{var.email_tracking_link()}'></body>" 
+        text = "".join(text)
+        rid = uuid.uuid4()
+        # print(rid)
+        text = text.replace('[**RID**]', str(rid))
+        # print(text)
 
     result = re.findall(r'\{.*?\}',text)
 

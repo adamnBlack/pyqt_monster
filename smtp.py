@@ -74,7 +74,7 @@ def test(send_to):
         msg['Date'] = formatdate(localtime=True)
 
         if var.body_type == "Html":
-            body = utils.format_email(var.compose_email_body_html, send['FIRSTFROMNAME'], send['LASTFROMNAME'], target['1'], target['2'], target['3'], target['TONAME'])
+            body = utils.format_email(var.compose_email_body_html, send['FIRSTFROMNAME'], send['LASTFROMNAME'], target['1'], target['2'], target['3'], target['TONAME'], source="body")
             msg.attach(MIMEText(body, "html"))
         else:
             body = utils.format_email(var.compose_email_body, send['FIRSTFROMNAME'], send['LASTFROMNAME'], target['1'], target['2'], target['3'], target['TONAME'])
@@ -166,7 +166,7 @@ def reply():
         msg["To"] = var.email_in_view['from_mail']
         msg['Date'] = formatdate(localtime=True)
 
-        body =  utils.format_email(var.email_in_view['body'], f_f_name, l_f_name, "", "", "", toname)
+        body =  utils.format_email(var.email_in_view['body'], f_f_name, l_f_name, "", "", "", toname, source="body")
         if var.body_type == "Html":
             part1 = MIMEText(body, "html")
         else:
@@ -270,10 +270,10 @@ class SMTP_(threading.Thread):
                 msg['Date'] = formatdate(localtime=True)
 
                 if var.body_type == "Html":
-                    body =  utils.format_email(var.compose_email_body_html, self.FIRSTFROMNAME, self.LASTFROMNAME, item['1'], item['2'], item['3'], item['TONAME'])
+                    body =  utils.format_email(var.compose_email_body_html, self.FIRSTFROMNAME, self.LASTFROMNAME, item['1'], item['2'], item['3'], item['TONAME'], source="body")
                     msg.attach(MIMEText(body, "html"))
                 else:
-                    body =  utils.format_email(var.compose_email_body, self.FIRSTFROMNAME, self.LASTFROMNAME, item['1'], item['2'], item['3'], item['TONAME'])
+                    body =  utils.format_email(var.compose_email_body, self.FIRSTFROMNAME, self.LASTFROMNAME, item['1'], item['2'], item['3'], item['TONAME'], source="body")
                     msg.attach(MIMEText(body, "plain"))
                 
                 for part in t_part:
@@ -335,9 +335,13 @@ class SMTP_(threading.Thread):
 
 def main(group, d_start, d_end):
     global sent_q, email_failed, logger
+
+    var.rid_list = []
+
     email_failed = 0
     sent_q = queue.Queue()
     target = var.target.copy()
+    target = target[target['EMAIL']!=""]
     
     target.insert(6,'flag', '')
     target['flag'] = 0

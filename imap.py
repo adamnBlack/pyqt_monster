@@ -250,13 +250,13 @@ class IMAP_(threading.Thread):
                             cdispo = str(part.get('Content-Disposition'))
 
                             # skip any text/plain (txt) attachments
-                            if ctype == 'text/plain' and 'attachment' not in cdispo:
+                            if (ctype == 'text/plain' or ctype == 'text/html') and 'attachment' not in cdispo:
                                 body = part.get_payload(decode=True)  # decode
                                 break
                     # not multipart - i.e. plain text, no attachments, keeping fingers crossed
                     else:
                         body = b.get_payload(decode=True)
-                    
+                
                     try:
                         body = body.decode("utf-8", 'ignore')
                     except:
@@ -278,7 +278,7 @@ class IMAP_(threading.Thread):
                     to_mail = str(email.header.make_header(email.header.\
                                     decode_header(email.utils.parseaddr(email_message['To'])[1])))
 
-                    print(from_name, from_mail, to_name, to_mail, subject)
+                    # print(from_name, from_mail, to_name, to_mail, subject, body)
 
                     t_dict = {
                         'uid': uid,
@@ -322,6 +322,7 @@ def main(group):
     global logger
     var.email_failed = 0
     var.total_email_downloaded = 0
+
     # folder = ""
     # sub_category = ""
     

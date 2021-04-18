@@ -548,3 +548,1942 @@ Traceback (most recent call last):
   File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
     dbapi_connection.close()
 sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8664 and this is thread id 1496.
+2021-04-12 01:20:05,073 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 9228 and this is thread id 11436.
+2021-04-12 01:20:05,078 Exception closing connection <sqlite3.Connection object at 0x000001B7C235BD50>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 9228 and this is thread id 11436.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 9228 and this is thread id 11436.
+2021-04-12 01:20:05,080 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 9228 and this is thread id 11436.
+2021-04-12 01:20:05,081 Exception closing connection <sqlite3.Connection object at 0x000001B7C23BE110>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 9228 and this is thread id 11436.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 9228 and this is thread id 11436.
+2021-04-13 03:01:28,992 Error at downloading email - fasteners360@gmail.com - Error connecting to SOCKS5 proxy 81.28.96.172:60742: [WinError 10061] No connection could be made because the target machine actively refused it
+2021-04-13 03:01:43,946 Error at downloading email - fasteners360@gmail.com - Error connecting to SOCKS5 proxy 81.28.96.172:60742: [WinError 10061] No connection could be made because the target machine actively refused it
+2021-04-13 03:04:26,198 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16316 and this is thread id 5268.
+2021-04-13 03:04:26,249 Exception closing connection <sqlite3.Connection object at 0x00000270E9A2CD50>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16316 and this is thread id 5268.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16316 and this is thread id 5268.
+2021-04-13 03:04:26,269 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16316 and this is thread id 5268.
+2021-04-13 03:04:26,269 Exception closing connection <sqlite3.Connection object at 0x00000270E9AAF110>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16316 and this is thread id 5268.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16316 and this is thread id 5268.
+2021-04-13 12:07:31,249 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7024 and this is thread id 6648.
+2021-04-13 12:07:31,251 Exception closing connection <sqlite3.Connection object at 0x000001C2E30B5D50>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7024 and this is thread id 6648.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7024 and this is thread id 6648.
+2021-04-13 12:07:31,595 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7024 and this is thread id 6648.
+2021-04-13 12:07:31,596 Exception closing connection <sqlite3.Connection object at 0x000001C2E3130110>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7024 and this is thread id 6648.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7024 and this is thread id 6648.
+2021-04-14 13:56:39,734 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 15120 and this is thread id 7936.
+2021-04-14 13:56:39,856 Exception closing connection <sqlite3.Connection object at 0x0000020778829D50>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 15120 and this is thread id 7936.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 15120 and this is thread id 7936.
+2021-04-14 13:56:39,877 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 15120 and this is thread id 7936.
+2021-04-14 13:56:39,877 Exception closing connection <sqlite3.Connection object at 0x00000207788A1110>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 15120 and this is thread id 7936.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 15120 and this is thread id 7936.
+2021-04-14 14:11:54,332 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 14440 and this is thread id 12408.
+2021-04-14 14:11:54,335 Exception closing connection <sqlite3.Connection object at 0x00000294256E6D50>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 14440 and this is thread id 12408.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 14440 and this is thread id 12408.
+2021-04-14 14:11:54,358 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 14440 and this is thread id 12408.
+2021-04-14 14:11:54,359 Exception closing connection <sqlite3.Connection object at 0x0000029425762110>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 14440 and this is thread id 12408.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 14440 and this is thread id 12408.
+2021-04-14 15:01:51,871 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4356 and this is thread id 1092.
+2021-04-14 15:01:51,930 Exception closing connection <sqlite3.Connection object at 0x0000023A15C90110>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4356 and this is thread id 1092.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4356 and this is thread id 1092.
+2021-04-14 15:11:00,948 Error at Sending - Anastasia.Jimenez1990@gmail.com - replace() argument 2 must be str, not UUID
+2021-04-14 15:11:03,238 Error at Sending - Martina.gramdominator@gmail.com - replace() argument 2 must be str, not UUID
+2021-04-14 15:11:36,447 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4356 and this is thread id 3736.
+2021-04-14 15:11:36,448 Exception closing connection <sqlite3.Connection object at 0x0000023A15C15D50>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4356 and this is thread id 3736.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4356 and this is thread id 3736.
+2021-04-14 15:11:36,449 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 1092 and this is thread id 3736.
+2021-04-14 15:11:36,449 Exception closing connection <sqlite3.Connection object at 0x0000023A17511E30>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 1092 and this is thread id 3736.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 1092 and this is thread id 3736.
+2021-04-14 15:15:33,928 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8956 and this is thread id 8764.
+2021-04-14 15:15:33,930 Exception closing connection <sqlite3.Connection object at 0x000002A7A6060110>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8956 and this is thread id 8764.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8956 and this is thread id 8764.
+2021-04-14 15:15:38,327 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8764 and this is thread id 14904.
+2021-04-14 15:15:38,328 Exception closing connection <sqlite3.Connection object at 0x000002A7A365E9D0>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8764 and this is thread id 14904.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8764 and this is thread id 14904.
+2021-04-14 15:17:40,769 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8956 and this is thread id 14904.
+2021-04-14 15:17:40,770 Exception closing connection <sqlite3.Connection object at 0x000002A7A5FE3D50>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8956 and this is thread id 14904.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8956 and this is thread id 14904.
+2021-04-14 15:19:23,619 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4416 and this is thread id 5648.
+2021-04-14 15:19:23,623 Exception closing connection <sqlite3.Connection object at 0x0000026C2DF04D50>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4416 and this is thread id 5648.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4416 and this is thread id 5648.
+2021-04-14 15:19:23,625 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4416 and this is thread id 5648.
+2021-04-14 15:19:23,626 Exception closing connection <sqlite3.Connection object at 0x0000026C2DF80110>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4416 and this is thread id 5648.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4416 and this is thread id 5648.
+2021-04-14 15:20:22,112 Error at downloading email - fasteners360@gmail.com - Error connecting to SOCKS5 proxy 81.28.96.172:60742: [WinError 10061] No connection could be made because the target machine actively refused it
+2021-04-14 15:25:53,714 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 3736 and this is thread id 8240.
+2021-04-14 15:25:53,717 Exception closing connection <sqlite3.Connection object at 0x0000021E7FF63D50>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 3736 and this is thread id 8240.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 3736 and this is thread id 8240.
+2021-04-14 15:25:53,718 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 3736 and this is thread id 8240.
+2021-04-14 15:25:53,719 Exception closing connection <sqlite3.Connection object at 0x0000021E1A7E0110>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 3736 and this is thread id 8240.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 3736 and this is thread id 8240.
+2021-04-14 15:26:11,087 Error at downloading email - fasteners360@gmail.com - Error connecting to SOCKS5 proxy 81.28.96.172:60742: [WinError 10061] No connection could be made because the target machine actively refused it
+2021-04-14 15:27:40,510 Error at downloading email - fasteners360@gmail.com - Error connecting to SOCKS5 proxy 81.28.96.172:60742: [WinError 10061] No connection could be made because the target machine actively refused it
+2021-04-14 15:29:45,222 Error at downloading email - fasteners360@gmail.com - Error connecting to SOCKS5 proxy 81.28.96.172:60742: [WinError 10061] No connection could be made because the target machine actively refused it
+2021-04-14 15:31:31,305 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 11288 and this is thread id 11916.
+2021-04-14 15:31:31,309 Exception closing connection <sqlite3.Connection object at 0x00000247CBE94B90>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 11288 and this is thread id 11916.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 11288 and this is thread id 11916.
+2021-04-14 15:31:31,311 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 11288 and this is thread id 11916.
+2021-04-14 15:31:31,311 Exception closing connection <sqlite3.Connection object at 0x00000247CBF10110>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 11288 and this is thread id 11916.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 11288 and this is thread id 11916.
+2021-04-14 15:31:43,357 Error at downloading email - fasteners360@gmail.com - Error connecting to SOCKS5 proxy 81.28.96.172:60742: [WinError 10061] No connection could be made because the target machine actively refused it
+2021-04-14 15:34:52,851 Error at downloading email - fasteners360@gmail.com - Error connecting to SOCKS5 proxy 81.28.96.172:60742: [WinError 10061] No connection could be made because the target machine actively refused it
+2021-04-14 15:35:44,570 Error at add_to_table - arguments did not match any overloaded call:
+  QTableWidgetItem(type: int = QTableWidgetItem.ItemType.Type): argument 1 has unexpected type 'float'
+  QTableWidgetItem(str, type: int = QTableWidgetItem.ItemType.Type): argument 1 has unexpected type 'float'
+  QTableWidgetItem(QIcon, str, type: int = QTableWidgetItem.ItemType.Type): argument 1 has unexpected type 'float'
+  QTableWidgetItem(QTableWidgetItem): argument 1 has unexpected type 'float'
+2021-04-14 15:35:44,682 Error at add_to_table - argument 1 overflowed: value must be in the range -2147483648 to 2147483647
+2021-04-14 15:39:07,313 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 3736 and this is thread id 6476.
+2021-04-14 15:39:07,347 Exception closing connection <sqlite3.Connection object at 0x00000254E6853D50>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 3736 and this is thread id 6476.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 3736 and this is thread id 6476.
+2021-04-14 15:39:07,349 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 3736 and this is thread id 6476.
+2021-04-14 15:39:07,349 Exception closing connection <sqlite3.Connection object at 0x00000254E68D0110>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 3736 and this is thread id 6476.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 3736 and this is thread id 6476.
+2021-04-14 15:40:07,650 Error at downloading email - fasteners360@gmail.com - Error connecting to SOCKS5 proxy 81.28.96.172:60742: [WinError 10061] No connection could be made because the target machine actively refused it
+2021-04-14 15:44:17,570 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7448 and this is thread id 1816.
+2021-04-14 15:44:17,573 Exception closing connection <sqlite3.Connection object at 0x000001DD85B94C70>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7448 and this is thread id 1816.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7448 and this is thread id 1816.
+2021-04-14 15:44:17,576 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7448 and this is thread id 1816.
+2021-04-14 15:44:17,576 Exception closing connection <sqlite3.Connection object at 0x000001DD85C101F0>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7448 and this is thread id 1816.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7448 and this is thread id 1816.
+2021-04-14 15:46:24,451 Error at downloading email - fasteners360@gmail.com - Error connecting to SOCKS5 proxy 81.28.96.172:60742: [WinError 10061] No connection could be made because the target machine actively refused it
+2021-04-14 15:49:51,893 Error at deleting email - Daphne.Boone2002@gmail.com - The read operation timed out
+2021-04-14 15:51:43,314 Error at deleting email - Daphne.Boone2002@gmail.com - The read operation timed out
+2021-04-14 15:56:12,144 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 932 and this is thread id 14272.
+2021-04-14 15:56:12,146 Exception closing connection <sqlite3.Connection object at 0x000002AC645C01F0>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 932 and this is thread id 14272.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 932 and this is thread id 14272.
+2021-04-14 15:58:21,662 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 932 and this is thread id 14272.
+2021-04-14 15:58:21,663 Exception closing connection <sqlite3.Connection object at 0x000002AC64544E30>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 932 and this is thread id 14272.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 932 and this is thread id 14272.
+2021-04-14 16:00:32,338 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 13908 and this is thread id 14100.
+2021-04-14 16:00:32,340 Exception closing connection <sqlite3.Connection object at 0x0000024185A711F0>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 13908 and this is thread id 14100.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 13908 and this is thread id 14100.
+2021-04-14 16:00:35,201 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 14100 and this is thread id 3572.
+2021-04-14 16:00:35,201 Exception closing connection <sqlite3.Connection object at 0x00000241831C0AB0>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 14100 and this is thread id 3572.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 14100 and this is thread id 3572.
+2021-04-14 19:28:37,681 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 13908 and this is thread id 3572.
+2021-04-14 19:28:37,682 Exception closing connection <sqlite3.Connection object at 0x00000241859F4E30>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 13908 and this is thread id 3572.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 13908 and this is thread id 3572.
+2021-04-14 19:47:12,999 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 1624 and this is thread id 12336.
+2021-04-14 19:47:13,056 Exception closing connection <sqlite3.Connection object at 0x000001FE21625C70>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 1624 and this is thread id 12336.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 1624 and this is thread id 12336.
+2021-04-14 19:47:13,059 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 1624 and this is thread id 12336.
+2021-04-14 19:47:13,059 Exception closing connection <sqlite3.Connection object at 0x000001FE2169F1F0>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 1624 and this is thread id 12336.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 1624 and this is thread id 12336.
+2021-04-14 19:52:43,372 Error at deleting email - Rene.Huber1999@gmail.com - Socket error: timed out
+2021-04-14 20:00:40,108 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7100 and this is thread id 8156.
+2021-04-14 20:00:40,112 Exception closing connection <sqlite3.Connection object at 0x000001E072EB3E30>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7100 and this is thread id 8156.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7100 and this is thread id 8156.
+2021-04-14 20:00:40,113 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7100 and this is thread id 8156.
+2021-04-14 20:00:40,114 Exception closing connection <sqlite3.Connection object at 0x000001E072F311F0>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7100 and this is thread id 8156.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7100 and this is thread id 8156.
+2021-04-14 20:05:12,300 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 15552 and this is thread id 5604.
+2021-04-14 20:05:12,303 Exception closing connection <sqlite3.Connection object at 0x00000193F3653D50>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 15552 and this is thread id 5604.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 15552 and this is thread id 5604.
+2021-04-14 20:05:12,304 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 15552 and this is thread id 5604.
+2021-04-14 20:05:12,304 Exception closing connection <sqlite3.Connection object at 0x00000193F36D0110>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 15552 and this is thread id 5604.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 15552 and this is thread id 5604.
+2021-04-14 20:10:40,382 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7312 and this is thread id 14268.
+2021-04-14 20:10:40,385 Exception closing connection <sqlite3.Connection object at 0x000001AB80A64D50>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7312 and this is thread id 14268.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7312 and this is thread id 14268.
+2021-04-14 20:10:40,386 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7312 and this is thread id 14268.
+2021-04-14 20:10:40,386 Exception closing connection <sqlite3.Connection object at 0x000001AB80AE2110>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7312 and this is thread id 14268.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7312 and this is thread id 14268.
+2021-04-14 20:20:21,906 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 12260 and this is thread id 14144.
+2021-04-14 20:20:21,909 Exception closing connection <sqlite3.Connection object at 0x00000232FF0C3D50>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 12260 and this is thread id 14144.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 12260 and this is thread id 14144.
+2021-04-14 20:20:21,912 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 12260 and this is thread id 14144.
+2021-04-14 20:20:21,912 Exception closing connection <sqlite3.Connection object at 0x00000232FF142110>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 12260 and this is thread id 14144.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 12260 and this is thread id 14144.
+2021-04-14 20:22:26,282 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4572 and this is thread id 16240.
+2021-04-14 20:22:26,285 Exception closing connection <sqlite3.Connection object at 0x00000267099A3D50>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4572 and this is thread id 16240.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4572 and this is thread id 16240.
+2021-04-14 20:22:26,286 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4572 and this is thread id 16240.
+2021-04-14 20:22:26,287 Exception closing connection <sqlite3.Connection object at 0x0000026709A20110>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4572 and this is thread id 16240.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4572 and this is thread id 16240.
+2021-04-14 20:22:38,937 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 15304 and this is thread id 13768.
+2021-04-14 20:22:38,939 Exception closing connection <sqlite3.Connection object at 0x000002C201D23D50>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 15304 and this is thread id 13768.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 15304 and this is thread id 13768.
+2021-04-14 20:22:38,940 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 15304 and this is thread id 13768.
+2021-04-14 20:22:38,940 Exception closing connection <sqlite3.Connection object at 0x000002C201DA1110>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 15304 and this is thread id 13768.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 15304 and this is thread id 13768.
+2021-04-14 20:24:56,930 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 3136 and this is thread id 15728.
+2021-04-14 20:24:56,933 Exception closing connection <sqlite3.Connection object at 0x0000015FB8D23D50>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 3136 and this is thread id 15728.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 3136 and this is thread id 15728.
+2021-04-14 20:24:56,934 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 3136 and this is thread id 15728.
+2021-04-14 20:24:56,934 Exception closing connection <sqlite3.Connection object at 0x0000015FB8DA1110>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 3136 and this is thread id 15728.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 3136 and this is thread id 15728.
+2021-04-14 20:35:13,646 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 13432 and this is thread id 12568.
+2021-04-14 20:35:13,720 Exception closing connection <sqlite3.Connection object at 0x000001E8FF981110>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 13432 and this is thread id 12568.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 13432 and this is thread id 12568.
+2021-04-14 20:35:17,038 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 12568 and this is thread id 15816.
+2021-04-14 20:35:17,038 Exception closing connection <sqlite3.Connection object at 0x000001E8A5751C70>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 12568 and this is thread id 15816.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 12568 and this is thread id 15816.
+2021-04-14 20:48:35,099 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 13432 and this is thread id 15816.
+2021-04-14 20:48:35,100 Exception closing connection <sqlite3.Connection object at 0x000001E8FF905D50>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 13432 and this is thread id 15816.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 13432 and this is thread id 15816.
+2021-04-14 20:50:15,688 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 6228 and this is thread id 6324.
+2021-04-14 20:50:15,690 Exception closing connection <sqlite3.Connection object at 0x0000016D43734C70>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 6228 and this is thread id 6324.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 6228 and this is thread id 6324.
+2021-04-14 20:50:15,692 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 6228 and this is thread id 6324.
+2021-04-14 20:50:15,693 Exception closing connection <sqlite3.Connection object at 0x0000016D437B01F0>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 6228 and this is thread id 6324.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 6228 and this is thread id 6324.
+2021-04-14 20:56:41,826 Error at downloading email - Anne.Carlson1999@gmail.com - command: EXAMINE => socket error: EOF
+2021-04-16 19:56:26,331 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4164 and this is thread id 17136.
+2021-04-16 19:56:26,336 Exception closing connection <sqlite3.Connection object at 0x000001C2FFDB3E30>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4164 and this is thread id 17136.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4164 and this is thread id 17136.
+2021-04-16 19:56:26,363 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4164 and this is thread id 17136.
+2021-04-16 19:56:26,364 Exception closing connection <sqlite3.Connection object at 0x000001C2FFE311F0>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4164 and this is thread id 17136.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 4164 and this is thread id 17136.
+2021-04-16 20:07:44,289 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 1140 and this is thread id 16612.
+2021-04-16 20:07:44,295 Exception closing connection <sqlite3.Connection object at 0x000001E0CF485E30>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 1140 and this is thread id 16612.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 1140 and this is thread id 16612.
+2021-04-16 20:07:44,298 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 1140 and this is thread id 16612.
+2021-04-16 20:07:44,299 Exception closing connection <sqlite3.Connection object at 0x000001E0CF5011F0>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 1140 and this is thread id 16612.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 1140 and this is thread id 16612.
+2021-04-16 20:52:54,011 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16244 and this is thread id 15504.
+2021-04-16 20:52:54,061 Exception closing connection <sqlite3.Connection object at 0x0000025B760A3E30>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16244 and this is thread id 15504.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16244 and this is thread id 15504.
+2021-04-16 20:52:54,063 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16244 and this is thread id 15504.
+2021-04-16 20:52:54,063 Exception closing connection <sqlite3.Connection object at 0x0000025B761211F0>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16244 and this is thread id 15504.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16244 and this is thread id 15504.
+2021-04-17 11:17:47,192 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 17756 and this is thread id 17996.
+2021-04-17 11:17:47,234 Exception closing connection <sqlite3.Connection object at 0x000001FDCED85E30>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 17756 and this is thread id 17996.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 17756 and this is thread id 17996.
+2021-04-17 11:17:47,236 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 17756 and this is thread id 17996.
+2021-04-17 11:17:47,236 Exception closing connection <sqlite3.Connection object at 0x000001FDCEE021F0>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 17756 and this is thread id 17996.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 17756 and this is thread id 17996.
+2021-04-17 16:37:51,314 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16180 and this is thread id 17084.
+2021-04-17 16:37:51,367 Exception closing connection <sqlite3.Connection object at 0x000001565F1121F0>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16180 and this is thread id 17084.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16180 and this is thread id 17084.
+2021-04-17 16:37:56,151 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 17084 and this is thread id 17400.
+2021-04-17 16:37:56,151 Exception closing connection <sqlite3.Connection object at 0x000001565C6B43B0>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 17084 and this is thread id 17400.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 17084 and this is thread id 17400.
+2021-04-18 00:59:27,247 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16180 and this is thread id 17400.
+2021-04-18 00:59:27,266 Exception closing connection <sqlite3.Connection object at 0x000001565F095E30>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16180 and this is thread id 17400.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16180 and this is thread id 17400.
+2021-04-18 02:53:54,998 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16652 and this is thread id 15548.
+2021-04-18 02:53:55,078 Exception closing connection <sqlite3.Connection object at 0x000001AE9D605E30>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16652 and this is thread id 15548.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16652 and this is thread id 15548.
+2021-04-18 02:53:55,081 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16652 and this is thread id 15548.
+2021-04-18 02:53:55,081 Exception closing connection <sqlite3.Connection object at 0x000001AE9D6821F0>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16652 and this is thread id 15548.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 16652 and this is thread id 15548.
+2021-04-18 02:56:05,566 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 9020 and this is thread id 12080.
+2021-04-18 02:56:05,569 Exception closing connection <sqlite3.Connection object at 0x000001F9A1D25E30>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 9020 and this is thread id 12080.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 9020 and this is thread id 12080.
+2021-04-18 02:56:05,572 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 9020 and this is thread id 12080.
+2021-04-18 02:56:05,572 Exception closing connection <sqlite3.Connection object at 0x000001F9A1DA21F0>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 9020 and this is thread id 12080.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 9020 and this is thread id 12080.
+2021-04-18 16:09:37,718 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7936 and this is thread id 420.
+2021-04-18 16:09:37,722 Exception closing connection <sqlite3.Connection object at 0x0000027D90CA1E30>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7936 and this is thread id 420.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7936 and this is thread id 420.
+2021-04-18 16:09:37,723 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7936 and this is thread id 420.
+2021-04-18 16:09:37,723 Exception closing connection <sqlite3.Connection object at 0x0000027D91CD31F0>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7936 and this is thread id 420.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 7936 and this is thread id 420.
+2021-04-18 16:13:49,098 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8968 and this is thread id 17836.
+2021-04-18 16:13:49,102 Exception closing connection <sqlite3.Connection object at 0x00000205E83E5E30>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8968 and this is thread id 17836.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8968 and this is thread id 17836.
+2021-04-18 16:13:49,104 Exception during reset or similar
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8968 and this is thread id 17836.
+2021-04-18 16:13:49,104 Exception closing connection <sqlite3.Connection object at 0x00000205E84631F0>
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 670, in _finalize_fairy
+    fairy._reset(pool)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 875, in _reset
+    pool._dialect.do_rollback(self)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 631, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8968 and this is thread id 17836.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\pool\base.py", line 238, in _close_connection
+    self._dialect.do_close(connection)
+  File "E:\Upwork\2020\gmail_app\gmail_app\env\lib\site-packages\sqlalchemy\engine\default.py", line 637, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 8968 and this is thread id 17836.

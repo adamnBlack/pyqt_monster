@@ -156,8 +156,8 @@ def thread_starter():
     while var.thread_open!=0 and var.stop_delete == False:
         time.sleep(1)
 
-    for row_index, row in var.inbox_data.iterrows():
-        var.email_q.put(row.to_dict().copy())
+    # for row_index, row in var.inbox_data.iterrows():
+    #     var.email_q.put(row.to_dict().copy())
 
     var.inbox_data["checkbox_status"] = 0
     delete_status = False

@@ -14,7 +14,7 @@ import pandas as pd
 import webbrowser
 import subprocess
 import requests
-import pandas as pd
+import re
 
 print("App started....")
 
@@ -30,6 +30,9 @@ class MyGui(Ui_MainWindow, QtWidgets.QWidget):
 class myMainClass():
     def __init__(self):
         global mainWindow
+        
+        GUI.tableView_database.setContextMenuPolicy(Qt.CustomContextMenu)
+        GUI.tableView_database.customContextMenuRequested.connect(self.showContextMenu)
         
         GUI.model = TableModel(var.group_a)
         GUI.tableView_database.setModel(GUI.model)
@@ -52,6 +55,9 @@ class myMainClass():
         # GUI.comboBox_email_category.addItems(d_categories)
         self.sub_exp = 0
         self.try_failed = 0
+
+        GUI.lineEdit_email_tracking_analytics_account.setText(str(var.tracking['analytics_account']))
+        GUI.lineEdit_email_tracking_campaign_name.setText(str(var.tracking['campaign_name']))
 
         GUI.lineEdit_num_per_address.setText(str(var.num_emails_per_address))
         GUI.lineEdit_delay_between_emails.setText(str(var.delay_between_emails))
@@ -110,6 +116,32 @@ class myMainClass():
 
         GUI.comboBox_date_sort.currentTextChanged.connect(self.date_sort)
         GUI.checkBox_check_for_blocks.stateChanged.connect(self.change_check_for_blocks_state)
+        GUI.lineEdit_email_tracking_analytics_account.textChanged.connect(self.update_email_tracking_link)
+        GUI.lineEdit_email_tracking_campaign_name.textChanged.connect(self.update_email_tracking_link)
+
+        GUI.pushButton_configuration_save.clicked.connect(self.configuration_save)
+        GUI.checkBox_email_tracking.stateChanged.connect(self.email_tracking_state_update)
+
+    def showContextMenu(self, pos):
+        print("pos " + str(pos))
+        index = GUI.tableView_database.indexAt(pos)
+        menu = QtWidgets.QMenu()
+        menu.addAction("Copy")
+        menu.exec_(GUI.tableView_database.viewport().mapToGlobal(pos))
+
+    def configuration_save(self):
+        Thread(target=update_config_json, daemon=True).start()
+
+    def update_email_tracking_link(self):
+        var.tracking['analytics_account'] = str(GUI.lineEdit_email_tracking_analytics_account.text()).strip()
+        pattern = re.compile("[^a-zA-Z0-9_ ]+")
+        if bool(pattern.search(str(GUI.lineEdit_email_tracking_campaign_name.text()).strip())) == False:
+            var.tracking['campaign_name'] = str(GUI.lineEdit_email_tracking_campaign_name.text()).strip()
+        else:
+            GUI.lineEdit_email_tracking_campaign_name.setText(str(var.tracking['campaign_name']))
+
+    def email_tracking_state_update(self):
+        var.email_tracking_state = GUI.checkBox_email_tracking.isChecked()
 
     def change_check_for_blocks_state(self):
         var.check_for_blocks = GUI.checkBox_check_for_blocks.isChecked()
@@ -220,7 +252,7 @@ class myMainClass():
             temp_df = var.inbox_data.copy()
             temp_df = temp_df.loc[temp_df['checkbox_status'] == 1]
             
-            if temp_df.shape[0] > 0:
+            if temp_df.shape[0] > 0 or GUI.checkBox_delete_all.isChecked() == True:
                 result = confirm(text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
                 if result == "OK":
                     if GUI.checkBox_delete_all.isChecked():
@@ -396,6 +428,7 @@ class myMainClass():
 
     def reply(self):
         var.email_in_view['subject'] = GUI.lineEdit_subject.text()
+        
         if var.body_type == "Html":
             var.email_in_view['body'] = var.compose_email_body_html
         else:
@@ -570,10 +603,10 @@ class myMainClass():
 
     def date_sort(self, option):
         print(option)
+        
         Thread(target=self.sort_inbox_data, daemon=True, args=(option,)).start()
 
     def sort_inbox_data(self, option):
-        
         var.command_q.put("self.table_timer.stop()")
         
         var.row_pos = 0
@@ -583,7 +616,7 @@ class myMainClass():
 
         var.inbox_data = pd.DataFrame()
         
-        if option == "Latest":
+        if option == "Latest first":
             inbox_data.sort_values(by="date", inplace=True, ascending=True)
         else:
             inbox_data.sort_values(by="date", inplace=True, ascending=False)
@@ -594,7 +627,8 @@ class myMainClass():
         for index, item in enumerate(inbox_data_dict):
             var.email_q.put(item.copy())
 
-        var.command_q.put("self.table_timer.start()")
+        if inbox_data.shape[0]>0:
+            var.command_q.put("self.table_timer.start()")
 
     
     def get_index_of_button(self, table):

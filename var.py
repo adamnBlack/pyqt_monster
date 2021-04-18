@@ -10,7 +10,7 @@ from queue import LifoQueue
 import logging
 from threading import Thread
 
-import main
+# import main
 
 
 # pd.set_option('display.max_colwidth',1000)
@@ -29,6 +29,11 @@ sign_in_label = ""
 signed_in = False
 
 check_for_blocks = False
+email_tracking_state = False
+
+rid_list = []
+
+
 
 #Create and configure logger
 logging.basicConfig(filename=base_dir+"/app.log",
@@ -144,6 +149,7 @@ delay_between_emails = ""
 date = "8/24/2020"
 limit_of_thread = 100
 login_email = ""
+tracking = {}
 
 api = "https://enzim.pythonanywhere.com/"
 # api = "http://127.0.0.1:5000/"
@@ -160,10 +166,15 @@ try:
     delay_between_emails = config['delay_between_emails']
     limit_of_thread = config['limit_of_thread']
     login_email = config['login_email']
+    tracking = config['tracking']
 except Exception as e:
     print("Exeception occured at config loading : {}".format(e))
 
-# import dialog
+def email_tracking_link():
+    return f"https://www.google-analytics.com/collect?v=1&tid={tracking['analytics_account']}&cid=[**RID**]&aip=1&t=event&ec=email&ea=open&dp=%2Femail%2F{tracking['campaign_name']}&dt=Email"
+
+
+import dialog
 
 delete_email_count = 0
 stop_delete = False
@@ -178,5 +189,5 @@ db_path = "database/group.db"
 # pyi-makespec --onefile --icon=icons/icon.ico --name=GMonster --noconsole var.py
 # pyinstaller --onefile --icon=icons/icon.ico --name=GMonster --noconsole --add-data="icons/icon.ico;imag" --add-data="icons/mail.ico;imag" --add-data="icons/email.ico;imag" var.py
 # pyinstaller --onefile --icon=icons/icon.ico --name=GMonster --upx-dir=E:\Upwork\2020\upx-3.96-win64 GMonster.spec
-# pyinstaller --onefile --name=GMonster GMonster.spec
+# pyinstaller GMonster.spec
 # a.datas += Tree('E:\\Upwork\\2020\\gmail_app\\gmail_app\\icons', prefix='icons\\')
