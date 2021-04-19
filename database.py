@@ -11,7 +11,7 @@ import sqlalchemy.sql.default_comparator
 
 db_path = var.base_dir+"/group.db"
 Base = declarative_base()
-engine = create_engine(f'sqlite:///{db_path}')
+engine = create_engine(f'sqlite:///{db_path}', connect_args={'check_same_thread': False})
 
 global logger
 logger=var.logging
@@ -90,11 +90,13 @@ def db_update_row(row):
             objects.EMAIL = row["EMAIL"]
         
         session.commit()
+        session.close()
         print("db updated")
         return True
     
     except Exception as e:
         session.rollback()
+        session.close()
         print(f"Error at var.db_update_row : {e}")
         global logger
         logger.error(f"Error at db_update_row - {e}")

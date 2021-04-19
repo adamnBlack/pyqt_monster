@@ -30,9 +30,10 @@ class MyGui(Ui_MainWindow, QtWidgets.QWidget):
 class myMainClass():
     def __init__(self):
         global mainWindow
-        
-        GUI.tableView_database.setContextMenuPolicy(Qt.CustomContextMenu)
-        GUI.tableView_database.customContextMenuRequested.connect(self.showContextMenu)
+        self.compose_font_size = 13
+
+        # GUI.tableView_database.setContextMenuPolicy(Qt.CustomContextMenu)
+        # GUI.tableView_database.customContextMenuRequested.connect(self.showContextMenu)
         
         GUI.model = TableModel(var.group_a)
         GUI.tableView_database.setModel(GUI.model)
@@ -121,6 +122,9 @@ class myMainClass():
 
         GUI.pushButton_configuration_save.clicked.connect(self.configuration_save)
         GUI.checkBox_email_tracking.stateChanged.connect(self.email_tracking_state_update)
+
+        GUI.pushButton_compose_zoomIn.clicked.connect(lambda: self.compose_zoomInOut("zoomIn"))
+        GUI.pushButton_compose_zoomOut.clicked.connect(lambda: self.compose_zoomInOut("zoomOut"))
 
     def showContextMenu(self, pos):
         print("pos " + str(pos))
@@ -344,6 +348,17 @@ class myMainClass():
             print("Error at main.send : {}".format(e))
             self.logger.error("Error at main.send - {}".format(e))
 
+    def compose_zoomInOut(self, source):
+        if source == "zoomIn":
+            GUI.textBrowser_compose.selectAll()
+            self.compose_font_size+=1
+            GUI.textBrowser_compose.setFontPointSize(self.compose_font_size)
+        else:
+            if self.compose_font_size>2:
+                GUI.textBrowser_compose.selectAll()
+                self.compose_font_size-=1
+                GUI.textBrowser_compose.setFontPointSize(self.compose_font_size)
+
     def compose_update(self):     
         if not GUI.checkBox_compose_preview.isChecked():
             if GUI.radioButton_html.isChecked():
@@ -354,7 +369,7 @@ class myMainClass():
     def compose_preview(self):
         if GUI.checkBox_compose_preview.isChecked():
             if GUI.radioButton_html.isChecked():
-                GUI.textBrowser_compose.setText(var.compose_email_body_html)
+                GUI.textBrowser_compose.setHtml(var.compose_email_body_html)
                 GUI.textBrowser_compose.setReadOnly(True)
             else:
                 GUI.textBrowser_compose.setReadOnly(False)

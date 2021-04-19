@@ -735,9 +735,9 @@ class Ui_MainWindow(object):
         self.radioButton_send_campaign.setObjectName("radioButton_send_campaign")
         self.gridLayout_8.addWidget(self.radioButton_send_campaign, 1, 0, 1, 1)
         self.gridLayout_4.addWidget(self.groupBox_3, 1, 3, 1, 1)
-        self.pushButton_2 = QtWidgets.QPushButton(self.tab_send_campaign)
-        self.pushButton_2.setMaximumSize(QtCore.QSize(30, 25))
-        self.pushButton_2.setStyleSheet("QPushButton {\n"
+        self.pushButton_compose_zoomOut = QtWidgets.QPushButton(self.tab_send_campaign)
+        self.pushButton_compose_zoomOut.setMaximumSize(QtCore.QSize(30, 25))
+        self.pushButton_compose_zoomOut.setStyleSheet("QPushButton {\n"
 "    border: 1px solid #555;\n"
 "    border-radius: 3px;\n"
 "    border-style: Solid;\n"
@@ -763,8 +763,8 @@ class Ui_MainWindow(object):
 "        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
 "        );\n"
 "    }")
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.gridLayout_4.addWidget(self.pushButton_2, 11, 2, 1, 1)
+        self.pushButton_compose_zoomOut.setObjectName("pushButton_compose_zoomOut")
+        self.gridLayout_4.addWidget(self.pushButton_compose_zoomOut, 11, 2, 1, 1)
         spacerItem1 = QtWidgets.QSpacerItem(30, 20, QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Minimum)
         self.gridLayout_4.addItem(spacerItem1, 8, 2, 1, 1)
         self.pushButton_attachments = QtWidgets.QPushButton(self.tab_send_campaign)
@@ -802,9 +802,9 @@ class Ui_MainWindow(object):
 "    }")
         self.pushButton_attachments.setObjectName("pushButton_attachments")
         self.gridLayout_4.addWidget(self.pushButton_attachments, 17, 3, 1, 1)
-        self.pushButton = QtWidgets.QPushButton(self.tab_send_campaign)
-        self.pushButton.setMaximumSize(QtCore.QSize(30, 25))
-        self.pushButton.setStyleSheet("QPushButton {\n"
+        self.pushButton_compose_zoomIn = QtWidgets.QPushButton(self.tab_send_campaign)
+        self.pushButton_compose_zoomIn.setMaximumSize(QtCore.QSize(30, 25))
+        self.pushButton_compose_zoomIn.setStyleSheet("QPushButton {\n"
 "    border: 1px solid #555;\n"
 "    border-radius: 3px;\n"
 "    border-style: Solid;\n"
@@ -830,8 +830,8 @@ class Ui_MainWindow(object):
 "        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
 "        );\n"
 "    }")
-        self.pushButton.setObjectName("pushButton")
-        self.gridLayout_4.addWidget(self.pushButton, 10, 2, 1, 1)
+        self.pushButton_compose_zoomIn.setObjectName("pushButton_compose_zoomIn")
+        self.gridLayout_4.addWidget(self.pushButton_compose_zoomIn, 10, 2, 1, 1)
         spacerItem2 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.gridLayout_4.addItem(spacerItem2, 13, 3, 1, 1)
         spacerItem3 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
@@ -1374,8 +1374,6 @@ class Ui_MainWindow(object):
         self.tabWidget.setCurrentIndex(1)
         self.pushButton_clear_compose.clicked.connect(self.textBrowser_compose.clear)
         self.pushButton_attachments_clear.clicked.connect(self.comboBox_attachments.clear)
-        self.pushButton.clicked.connect(self.textBrowser_compose.zoomIn)
-        self.pushButton_2.clicked.connect(self.textBrowser_compose.zoomOut)
         self.pushButton_3.clicked.connect(self.textBrowser_show_email.zoomIn)
         self.pushButton_4.clicked.connect(self.textBrowser_show_email.zoomOut)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -1416,9 +1414,9 @@ class Ui_MainWindow(object):
         self.lineEdit_number_of_threads.setPlaceholderText(_translate("MainWindow", "ENTER NUMBER"))
         self.radioButton_reply.setText(_translate("MainWindow", "Reply"))
         self.radioButton_send_campaign.setText(_translate("MainWindow", "Send Campaign"))
-        self.pushButton_2.setText(_translate("MainWindow", "-"))
+        self.pushButton_compose_zoomOut.setText(_translate("MainWindow", "-"))
         self.pushButton_attachments.setText(_translate("MainWindow", "ATTACHMENTS"))
-        self.pushButton.setText(_translate("MainWindow", "+"))
+        self.pushButton_compose_zoomIn.setText(_translate("MainWindow", "+"))
         self.lineEdit_delay_between_emails.setText(_translate("MainWindow", "5-20"))
         self.lineEdit_delay_between_emails.setPlaceholderText(_translate("MainWindow", "Enter a Range"))
         self.pushButton_send.setText(_translate("MainWindow", "SEND"))
