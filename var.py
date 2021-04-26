@@ -1,3 +1,4 @@
+import dialog
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, text
 from json import load, dumps
 from pyautogui import alert, password, confirm
@@ -15,7 +16,7 @@ from threading import Thread
 
 # pd.set_option('display.max_colwidth',1000)
 
-version = '1.4r'
+version = '2.1r'
 base_dir = "database"
 
 # admin password = hkHK#j4@jh#@
@@ -34,8 +35,7 @@ email_tracking_state = False
 rid_list = []
 
 
-
-#Create and configure logger
+# Create and configure logger
 logging.basicConfig(filename=base_dir+"/app.log",
                     format='%(asctime)s %(message)s',
                     filemode='a')
@@ -170,11 +170,10 @@ try:
 except Exception as e:
     print("Exeception occured at config loading : {}".format(e))
 
+
 def email_tracking_link():
     return f"https://www.google-analytics.com/collect?v=1&tid={tracking['analytics_account']}&cid=[**RID**]&aip=1&t=event&ec=email&ea=open&dp=%2Femail%2F{tracking['campaign_name']}&dt=Email"
 
-
-import dialog
 
 delete_email_count = 0
 stop_delete = False
@@ -182,7 +181,6 @@ group_a = pd.DataFrame()
 group_b = pd.DataFrame()
 target = pd.DataFrame()
 db_path = "database/group.db"
-
 
 
 # pyinstaller --onedir --icon=icons/icon.ico --name=GMonster --noconsole --noconfirm var.py
