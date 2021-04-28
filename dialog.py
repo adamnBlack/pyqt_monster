@@ -5,7 +5,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import pyqtSignal, QObject
 from authentication import Ui_MainWindow
 import sys
-import os, os.path
+import os
+import os.path
 import re
 import requests
 import subprocess
@@ -16,6 +17,7 @@ from pyautogui import alert, password, confirm
 
 # regex = '^[a-zA-Z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
 regex = '[^@]+@[^@]+\.[^@]+'
+
 
 def subprocess_args(include_stdout=True):
     # The following is true only on Windows.
@@ -54,16 +56,18 @@ def subprocess_args(include_stdout=True):
     ret.update({'stdin': subprocess.PIPE,
                 'stderr': subprocess.PIPE,
                 'startupinfo': si,
-                'env': env })
+                'env': env})
     return ret
+
 
 def check(email):
     # pass the regular expression
     # and the string in search() method
-    if(re.search(regex,email)):
+    if(re.search(regex, email)):
         return True
     else:
         return False
+
 
 def threaded(fn):
     def wrapper(*args, **kwargs):
@@ -79,7 +83,8 @@ class Sign_up(su.Ui_Dialog):
         self.setupUi(dialog)
         set_icon(dialog)
         self.pushButton_sign_up.clicked.connect(self.validate)
-        self.label_status.setText("Password must be equal to or more than 8 characters")
+        self.label_status.setText(
+            "Password must be equal to or more than 8 characters")
         # self.lineEdit_email.setText("")
         # self.lineEdit_password.setText("123456789")
         # self.lineEdit_confirm_password.setText("123456789")
@@ -90,7 +95,7 @@ class Sign_up(su.Ui_Dialog):
 
     def setText(self):
         self.label_status.setText(var.sign_up_label)
-    
+
     def validate(self):
         email = self.lineEdit_email.text().strip()
         password = self.lineEdit_password.text()
@@ -98,16 +103,19 @@ class Sign_up(su.Ui_Dialog):
         if check(email):
             print(password, confirm_password)
             if (password != "" and password == confirm_password and len(password) >= 8):
-                Thread(target=make_sign_up_requests, daemon=True, args=[email, password, "register"]).start()
+                Thread(target=make_sign_up_requests, daemon=True,
+                       args=[email, password, "register"]).start()
                 self.timer.start()
                 # make_sign_up_requests(email, password, "register")
             else:
                 if password != confirm_password:
                     self.label_status.setText("Password don't match")
                 else:
-                    self.label_status.setText("Password must be equal to or more than 8 characters")
+                    self.label_status.setText(
+                        "Password must be equal to or more than 8 characters")
         else:
             self.label_status.setText("Enter a valid email address")
+
 
 class Sign_in(si.Ui_Dialog):
     def __init__(self, dialog):
@@ -129,8 +137,10 @@ class Sign_in(si.Ui_Dialog):
 
         Thread(target=utils.update_config_json, daemon=True).start()
         self.label_status.setText("connecting main server...")
-        Thread(target=make_sign_up_requests, daemon=True, args=[email, password, "login"]).start()
+        Thread(target=make_sign_up_requests, daemon=True,
+               args=[email, password, "login"]).start()
         self.timer.start()
+
     def setText(self):
         if var.sign_in_label == "Success":
             var.signed_in = True
@@ -141,11 +151,14 @@ class Sign_in(si.Ui_Dialog):
             var.signed_in = False
             self.label_status.setText(var.sign_in_label)
 
+
 def make_sign_up_requests(email, password, endpoint):
     try:
         status = "Internal error"
-        machine_uuid = subprocess.check_output('wmic csproduct get uuid', shell=False, **subprocess_args(False)).decode().split('\n')[1].strip()
-        processor_id = subprocess.check_output('wmic cpu get ProcessorId', shell=False, **subprocess_args(False)).decode().split('\n')[1].strip()
+        machine_uuid = subprocess.check_output(
+            'wmic csproduct get uuid', shell=False, **subprocess_args(False)).decode().split('\n')[1].strip()
+        processor_id = subprocess.check_output(
+            'wmic cpu get ProcessorId', shell=False, **subprocess_args(False)).decode().split('\n')[1].strip()
         print(machine_uuid, processor_id)
 
         url = var.api + 'verify/' + endpoint
@@ -156,26 +169,29 @@ def make_sign_up_requests(email, password, endpoint):
             'password': password,
             'version': var.version,
             'type': 'main'
-            }
+        }
 
         headers = {
             "Content-Type": "application/json",
             "Accept": "application/json",
-            }
+        }
 
         data = dumps(myobj).encode("utf-8")
         data = loads(data)
         x = requests.post(url, json=data, headers=headers, timeout=10)
 
-        if len(x.text)>100:
+        if len(x.text) > 100:
             status = "Error at main server"
         else:
             status = x.text
+
         print(status)
+
         if endpoint == 'register':
             var.sign_up_label = status
         else:
             var.sign_in_label = status
+
     except Exception as e:
         print("Error at reading system info : {}".format(e))
         status = "Couldn't connect - {}".format(e)
@@ -191,6 +207,7 @@ class MyGui(Ui_MainWindow, QtWidgets.QWidget):
         Ui_MainWindow.__init__(self)
         QtWidgets.QWidget.__init__(self)
         self.setupUi(mainWindow)
+
 
 class Communicate(QObject):
 
@@ -226,16 +243,17 @@ class myMainClass():
             data = response.json()
             if data['update_needed'] == True:
                 result = confirm(text='New Version Available!!!\nDo you want to download?',
-                            title='Confirmation Window', buttons=['OK', 'Cancel'])
-                if result=="OK":
+                                 title='Confirmation Window', buttons=['OK', 'Cancel'])
+                if result == "OK":
                     # print(data['name'], data['link'], data['size'])
-                    self.c.path_picker.emit(data['name'], data['link'], data['size'])
+                    self.c.path_picker.emit(
+                        data['name'], data['link'], data['size'])
                 else:
                     mainWindow.close()
                     print("Download rejected")
             else:
                 self.update_needed = True
-            
+
             GUI.label.setText("Update checking finished. Now you can login.")
             print("Check Update finished")
         except Exception as e:
@@ -253,7 +271,7 @@ class myMainClass():
         else:
             print("Download cancelled")
         mainWindow.close()
-        
+
 
 def set_icon(obj):
     try:
@@ -281,9 +299,9 @@ else:
     GUI = MyGui(mainWindow)
     # mainWindow.showMaximized()
     mainWindow.show()
-    
+
     import var
-    
+
     myMC = myMainClass()
 
     app.exec_()
@@ -293,5 +311,5 @@ else:
         try:
             import main
         except Exception as e:
-            alert(text="Error alert : {}".format(e), 
-                                title='Alert', button='OK')
+            alert(text="Error alert : {}".format(e),
+                  title='Alert', button='OK')

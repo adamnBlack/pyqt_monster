@@ -5,12 +5,15 @@ import json
 from pyautogui import alert, password, confirm
 import uuid
 
+
 def difference_between_time(first_time, last_time):
     difference = last_time - first_time
     seconds_in_day = 24 * 60 * 60
-    minutes, seconds = divmod(difference.days * seconds_in_day + difference.seconds, 60)
+    minutes, seconds = divmod(
+        difference.days * seconds_in_day + difference.seconds, 60)
     elapsed_time = round(minutes + (seconds/60), 2)
     return elapsed_time
+
 
 def prepare_html(body):
     # print(body)
@@ -31,7 +34,7 @@ def prepare_html(body):
         try:
             a_tag = ' <a href="mailto:{}">{}</a>'.format(item, item)
             body = body.replace(" {}".format(item), a_tag)
-            
+
         except:
             pass
     body = body.replace("\n", '<br>')
@@ -57,28 +60,31 @@ def prepare_html(body):
 
     return html
 
+
 def update_config_json():
     try:
-        data =  {
-                    "config":
-                    {
-                        "date": var.date,
-                        "num_emails_per_address": var.num_emails_per_address,
-                        "delay_between_emails": var.delay_between_emails,
-                        "limit_of_thread": var.limit_of_thread,
-                        "compose_email_subject": var.compose_email_subject,
-                        "compose_email_body": var.compose_email_body,
-                        "login_email": var.login_email,
-                        "tracking": var.tracking
-                    }
-                }
+        data = {
+            "config":
+            {
+                "date": var.date,
+                "num_emails_per_address": var.num_emails_per_address,
+                "delay_between_emails": var.delay_between_emails,
+                "limit_of_thread": var.limit_of_thread,
+                "compose_email_subject": var.compose_email_subject,
+                "compose_email_body": var.compose_email_body,
+                "login_email": var.login_email,
+                "tracking": var.tracking,
+                "webhook_link": var.webhook_link
+            }
+        }
         with open(var.base_dir+'/config.json', 'w') as json_file:
             json.dump(data, json_file, indent=4)
         print("config updated")
     except Exception as e:
         print("Exeception occured at update_config_json : {}".format(e))
-        alert(text="Exeception occured at update_config_json : {}".format(e), 
-                                title='Alert', button='OK')
+        alert(text="Exeception occured at update_config_json : {}".format(e),
+              title='Alert', button='OK')
+
 
 def format_email(text, FIRSTFROMNAME, LASTFROMNAME, one, two, three, TONAME, source=None):
     text = text.replace('[FIRSTFROMNAME]', str(FIRSTFROMNAME))
@@ -88,16 +94,16 @@ def format_email(text, FIRSTFROMNAME, LASTFROMNAME, one, two, three, TONAME, sou
     text = text.replace('[3]', str(three))
     text = text.replace('[TONAME]', str(TONAME))
 
-    if var.body_type == "Html" and var.email_tracking_state == True and source!=None:
+    if var.body_type == "Html" and var.email_tracking_state == True and source != None:
         text = text.split("</body>")
-        text[0] = text[0] + f"<img src='{var.email_tracking_link()}'></body>" 
+        text[0] = text[0] + f"<img src='{var.email_tracking_link()}'></body>"
         text = "".join(text)
         rid = uuid.uuid4()
         # print(rid)
         text = text.replace('[**RID**]', str(rid))
         # print(text)
 
-    result = re.findall(r'\{.*?\}',text)
+    result = re.findall(r'\{.*?\}', text)
 
     for item in result:
         temp = item[1:-1]

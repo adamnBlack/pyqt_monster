@@ -1,4 +1,4 @@
-import dialog
+# import dialog
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, text
 from json import load, dumps
 from pyautogui import alert, password, confirm
@@ -11,7 +11,7 @@ from queue import LifoQueue
 import logging
 from threading import Thread
 
-# import main
+import main
 
 
 # pd.set_option('display.max_colwidth',1000)
@@ -100,6 +100,8 @@ send_campaign_run_status = False
 download_email_status = False
 send_report = queue.Queue()
 command_q = queue.Queue()
+webhook_q = queue.Queue()
+enable_webhook_status = False
 
 
 limit_of_thread = 100
@@ -151,6 +153,7 @@ limit_of_thread = 100
 login_email = ""
 tracking = {}
 
+webhook_link = ""
 api = "https://enzim.pythonanywhere.com/"
 # api = "http://127.0.0.1:5000/"
 
@@ -167,6 +170,7 @@ try:
     limit_of_thread = config['limit_of_thread']
     login_email = config['login_email']
     tracking = config['tracking']
+    webhook_link = config['webhook_link']
 except Exception as e:
     print("Exeception occured at config loading : {}".format(e))
 

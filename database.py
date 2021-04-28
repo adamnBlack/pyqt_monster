@@ -214,15 +214,22 @@ def file_to_db():
 
         group_header = ['FIRSTFROMNAME', 'LASTFROMNAME', 'EMAIL',
                         'EMAIL_PASS', 'PROXY:PORT', 'PROXY_USER', 'PROXY_PASS']
+
         target_header = ['1', '2', '3', 'TONAME', 'EMAIL']
+
         group_a = pd.read_excel(
             var.base_dir+'/group_a.xlsx', engine='openpyxl', sheet_name="group_a")
+
         group_b = pd.read_excel(
             var.base_dir+'/group_b.xlsx', engine='openpyxl', sheet_name="group_b")
+
         target = pd.read_excel(var.base_dir+'/target.xlsx',
                                engine='openpyxl', sheet_name="target")
+
         target.columns = target.columns.astype(str)
-        print(list(group_a.keys()))
+
+        print(list(group_a.keys()), list(group_b.keys()), list(target.keys()))
+
         if list(group_a.keys()) == group_header and list(group_b.keys()) == group_header and list(target.keys()) == target_header:
             group_a.fillna(" ", inplace=True)
             group_a = group_a.astype(str)

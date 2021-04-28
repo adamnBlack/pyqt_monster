@@ -56,6 +56,7 @@ class myMainClass():
         #                 "[Gmail]/Spam")
         # d_categories = ("Primary", "Promotions", "Social", "Spam")
         # GUI.comboBox_email_category.addItems(d_categories)
+
         self.sub_exp = 0
         self.try_failed = 0
 
@@ -63,6 +64,7 @@ class myMainClass():
             str(var.tracking['analytics_account']))
         GUI.lineEdit_email_tracking_campaign_name.setText(
             str(var.tracking['campaign_name']))
+        GUI.lineEdit_webhook_link.setText(str(var.webhook_link))
 
         GUI.lineEdit_num_per_address.setText(str(var.num_emails_per_address))
         GUI.lineEdit_delay_between_emails.setText(
@@ -84,6 +86,7 @@ class myMainClass():
         date = QtCore.QDate.fromString(var.date, "M/d/yyyy")
         GUI.dateEdit_imap_since.setDate(date)
         # GUI.dateEdit_imap_since.setMaximumDate(QtCore.QDate.currentDate().addDays(-1))
+
         GUI.dateEdit_imap_since.dateChanged.connect(self.date_update)
 
         GUI.pushButton_download_email.clicked.connect(self.downloading_email)
@@ -135,6 +138,8 @@ class myMainClass():
             self.configuration_save)
         GUI.checkBox_email_tracking.stateChanged.connect(
             self.email_tracking_state_update)
+        GUI.checkBox_enable_webhook.stateChanged.connect(self.enable_webhook)
+        GUI.lineEdit_webhook_link.textChanged.connect(self.update_webhook_link)
 
         GUI.pushButton_compose_zoomIn.clicked.connect(
             lambda: self.compose_zoomInOut("zoomIn"))
@@ -147,6 +152,12 @@ class myMainClass():
         menu = QtWidgets.QMenu()
         menu.addAction("Copy")
         menu.exec_(GUI.tableView_database.viewport().mapToGlobal(pos))
+
+    def update_webhook_link(self, text):
+        var.webhook_link = str(text)
+
+    def enable_webhook(self):
+        var.enable_webhook_status = GUI.checkBox_enable_webhook.isChecked()
 
     def configuration_save(self):
         Thread(target=update_config_json, daemon=True).start()
@@ -466,8 +477,8 @@ class myMainClass():
                             var.group_b)*var.num_emails_per_address
 
                     dialog = QtWidgets.QDialog()
-                    dialog.ui = Campaign(dialog, var.group_b.copy(
-                    ), delay_start, delay_end, total_email_to_be_sent)
+                    dialog.ui = Campaign(dialog, var.group_b.copy(),
+                                         delay_start, delay_end, total_email_to_be_sent)
                     dialog.exec_()
                 else:
                     GUI.label_email_status.setText("Database empty")

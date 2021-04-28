@@ -1,7 +1,7 @@
 {
     "config": {
         "date": "4/14/2021",
-        "num_emails_per_address": 3,
+        "num_emails_per_address": 1,
         "delay_between_emails": "0-2",
         "limit_of_thread": 100,
         "compose_email_subject": "Just a friendly outreach about [3]",
@@ -10,6 +10,7 @@
         "tracking": {
             "analytics_account": "UA-33237782-1",
             "campaign_name": "Teas fdsg 3442_"
-        }
+        },
+        "webhook_link": "https://webhook.site/158c2037-610e-4dcb-86d4-c74cb247f375"
     }
 }
