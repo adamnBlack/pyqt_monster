@@ -1,3 +1,4 @@
 2021-04-29 02:51:53,235 Error at SendWebhook part 2 : Object of type 'datetime' is not JSON serializable
 2021-04-29 02:51:54,237 Error at SendWebhook part 2 : Object of type 'datetime' is not JSON serializable
 2021-04-29 02:51:55,240 Error at SendWebhook part 2 : Object of type 'datetime' is not JSON serializable
+2021-04-29 17:37:19,559 Error at Sending - Loretta.Douglas1999@gmail.com - Connection unexpectedly closed: The read operation timed out

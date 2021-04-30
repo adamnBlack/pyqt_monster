@@ -302,12 +302,12 @@ class SMTP_(threading.Thread):
                 if count == 1:
                     first_time = datetime.now()
 
-                # try:
-                #     server.sendmail(self.user, item['EMAIL'], msg.as_string())
-                # except:
-                #     print("Reconnecting smtp - {}".format(self.name))
-                #     server = self.login()
-                #     server.sendmail(self.user, item['EMAIL'], msg.as_string())
+                try:
+                    server.sendmail(self.user, item['EMAIL'], msg.as_string())
+                except:
+                    print("Reconnecting smtp - {}".format(self.name))
+                    server = self.login()
+                    server.sendmail(self.user, item['EMAIL'], msg.as_string())
 
                 if count % 5 == 0 and var.check_for_blocks == True:
                     last_time = datetime.now()
@@ -385,8 +385,14 @@ def main(group, d_start, d_end):
 
     target_len = len(target)
     group_len = len(group)
-    var.send_report = queue.Queue()
-    var.webhook_q = queue.Queue()
+    # var.send_report = queue.Queue()
+    # var.webhook_q = queue.Queue()
+
+    with var.send_report.mutex:
+        var.send_report.queue.clear()
+
+    with var.webhook_q.mutex:
+        var.webhook_q.queue.clear()
 
     if var.enable_webhook_status:
         webhook = SendWebhook()

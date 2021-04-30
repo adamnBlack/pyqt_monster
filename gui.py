@@ -1378,7 +1378,7 @@ class Ui_MainWindow(object):
         self.lineEdit_webhook_link.setFont(font)
         self.lineEdit_webhook_link.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.lineEdit_webhook_link.setFrame(False)
-        self.lineEdit_webhook_link.setAlignment(QtCore.Qt.AlignCenter)
+        self.lineEdit_webhook_link.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.lineEdit_webhook_link.setObjectName("lineEdit_webhook_link")
         self.gridLayout_16.addWidget(self.lineEdit_webhook_link, 0, 1, 1, 1)
         self.label_10 = QtWidgets.QLabel(self.groupBox_10)
@@ -1398,7 +1398,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(3)
         self.pushButton_clear_compose.clicked.connect(self.textBrowser_compose.clear)
         self.pushButton_attachments_clear.clicked.connect(self.comboBox_attachments.clear)
         self.pushButton_3.clicked.connect(self.textBrowser_show_email.zoomIn)
