@@ -139,6 +139,9 @@ class myMainClass():
         GUI.checkBox_email_tracking.stateChanged.connect(
             self.email_tracking_state_update)
         GUI.checkBox_enable_webhook.stateChanged.connect(self.enable_webhook)
+        GUI.checkBox_remove_email_from_target.stateChanged.connect(
+            self.remove_email_from_target)
+
         GUI.lineEdit_webhook_link.textChanged.connect(self.update_webhook_link)
 
         GUI.pushButton_compose_zoomIn.clicked.connect(
@@ -152,6 +155,9 @@ class myMainClass():
         menu = QtWidgets.QMenu()
         menu.addAction("Copy")
         menu.exec_(GUI.tableView_database.viewport().mapToGlobal(pos))
+
+    def remove_email_from_target(self, temp):
+        var.remove_email_from_target = GUI.checkBox_remove_email_from_target.isChecked()
 
     def update_webhook_link(self, text):
         var.webhook_link = str(text)

@@ -1,4 +1,4 @@
-import dialog
+# import dialog
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, text
 from json import load, dumps
 from pyautogui import alert, password, confirm
@@ -11,7 +11,7 @@ from queue import LifoQueue
 import logging
 from threading import Thread
 
-# import main
+import main
 
 
 # pd.set_option('display.max_colwidth',1000)
@@ -102,6 +102,7 @@ send_report = queue.Queue()
 command_q = queue.Queue()
 webhook_q = queue.Queue()
 enable_webhook_status = False
+remove_email_from_target = False
 
 
 limit_of_thread = 100

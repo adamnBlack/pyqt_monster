@@ -20,6 +20,8 @@ from pyautogui import alert, password, confirm
 from datetime import datetime
 from imap import ImapCheckForBlocks
 from webhook import SendWebhook
+from database import Database as db
+from database import db_to_pandas
 from main import GUI
 
 email_failed = 0
@@ -302,12 +304,12 @@ class SMTP_(threading.Thread):
                 if count == 1:
                     first_time = datetime.now()
 
-                try:
-                    server.sendmail(self.user, item['EMAIL'], msg.as_string())
-                except:
-                    print("Reconnecting smtp - {}".format(self.name))
-                    server = self.login()
-                    server.sendmail(self.user, item['EMAIL'], msg.as_string())
+                # try:
+                #     server.sendmail(self.user, item['EMAIL'], msg.as_string())
+                # except:
+                #     print("Reconnecting smtp - {}".format(self.name))
+                #     server = self.login()
+                #     server.sendmail(self.user, item['EMAIL'], msg.as_string())
 
                 if count % 5 == 0 and var.check_for_blocks == True:
                     last_time = datetime.now()
@@ -349,8 +351,13 @@ class SMTP_(threading.Thread):
                 sent_q.put((item['EMAIL'], index))
                 var.send_campaign_email_count += 1
 
+                if var.remove_email_from_target:
+                    target = db()
+                    result = target.remove(table="targets", id=item['ID'])
+
             server.quit()
             server.close()
+
         except Exception as e:
             email_failed += 1
             print("error at SMTP - {} - {}".format(self.name, e))
@@ -385,6 +392,7 @@ def main(group, d_start, d_end):
 
     target_len = len(target)
     group_len = len(group)
+
     # var.send_report = queue.Queue()
     # var.webhook_q = queue.Queue()
 
@@ -404,13 +412,13 @@ def main(group, d_start, d_end):
         target = target.reset_index(drop=True)
 
         e_target_len = len(target)
+
         temp = 0
         end = 0
 
         for index, item in group.loc[group['flag'] == 0].iterrows():
             try:
-
-                if var.stop_send_campaign == True or end >= e_target_len-1:
+                if var.stop_send_campaign == True or end > e_target_len-1:
                     break
 
                 proxy_user = item["PROXY_USER"]
@@ -473,9 +481,15 @@ def main(group, d_start, d_end):
             writer = csv.DictWriter(csvfile, fieldnames=field_names)
             writer.writeheader()
             while not var.send_report.empty():
-                writer.writerow(var.send_report.get())
+                temp_dict = var.send_report.get()
+                writer.writerow(temp_dict)
     except Exception as e:
         print('Error while saving report - {}'.format(e))
+        logger.error('Error while saving report - {}'.format(e))
+
+    if var.remove_email_from_target:
+        db_to_pandas()
+        var.command_q.put("self.update_db_table()")
 
     var.email_failed = email_failed
     var.send_campaign_run_status = False

@@ -2,3 +2,5 @@
 2021-04-29 02:51:54,237 Error at SendWebhook part 2 : Object of type 'datetime' is not JSON serializable
 2021-04-29 02:51:55,240 Error at SendWebhook part 2 : Object of type 'datetime' is not JSON serializable
 2021-04-29 17:37:19,559 Error at Sending - Loretta.Douglas1999@gmail.com - Connection unexpectedly closed: The read operation timed out
+2021-05-03 12:24:33,421 Error at insert_rows - cannot set a frame with no defined columns
+2021-05-03 12:26:42,658 Error at Sending - Loretta.Douglas1999@gmail.com - Socket error: timed out

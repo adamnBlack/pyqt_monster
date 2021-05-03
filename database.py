@@ -63,6 +63,43 @@ def get_session():
     return session
 
 
+class Database:
+    def __init__(self):
+        """initialize the class """
+
+        global logger
+        self.logger = logger
+        Session = sessionmaker(bind=engine)
+        self.session = Session()
+        self.table = {
+            "group_a": Group_A,
+            "group_b": Group_B,
+            "targets": Targets
+        }
+
+    def remove(self, table=None, id=None):
+        """remove row from table by id and this method expects
+        two arguments table and id of that row"""
+
+        try:
+            if table != None and id != None:
+                objects = self.session.query(self.table[table]).get(int(id))
+
+                if objects:
+                    self.session.delete(objects)
+                    self.session.commit()
+                    self.logger.info(f"Deleted id - {id}")
+                    return True
+            else:
+                print("please provide table and id")
+                return False
+
+        except Exception as e:
+            self.session.rollback()
+            self.logger.error(f"Error at Database.remove() - {e}")
+            return False
+
+
 def db_update_row(row):
     try:
         session = get_session()
@@ -96,13 +133,11 @@ def db_update_row(row):
             objects.EMAIL = row["EMAIL"]
 
         session.commit()
-        session.close()
         print("db updated")
         return True
 
     except Exception as e:
         session.rollback()
-        session.close()
         print(f"Error at var.db_update_row : {e}")
         global logger
         logger.error(f"Error at db_update_row - {e}")
@@ -448,14 +483,27 @@ def db_to_pandas():
 
     results = session.query(Targets).all()
 
-    targets_list = [{
-        'ID': item.id,
-        '1': item.one,
-        '2': item.two,
-        '3': item.three,
-        'TONAME': item.TONAME,
-        'EMAIL': item.EMAIL
-    }.copy() for item in results]
+    if len(results) > 0:
+        targets_list = [{
+            'ID': item.id,
+            '1': item.one,
+            '2': item.two,
+            '3': item.three,
+            'TONAME': item.TONAME,
+            'EMAIL': item.EMAIL
+        }.copy() for item in results]
+
+    else:
+        dummy_data_db(group_a=False, group_b=False, target=True)
+        results = session.query(Targets).all()
+        targets_list = [{
+            'ID': item.id,
+            '1': item.one,
+            '2': item.two,
+            '3': item.three,
+            'TONAME': item.TONAME,
+            'EMAIL': item.EMAIL
+        }.copy() for item in results]
 
     var.target = pd.DataFrame(targets_list)
     print(var.group_a.head(5))
