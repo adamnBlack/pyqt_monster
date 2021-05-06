@@ -351,6 +351,8 @@ class SMTP_(threading.Thread):
                 sent_q.put((item['EMAIL'], index))
                 var.send_campaign_email_count += 1
 
+                var.command_q.put("self.update_compose_progressbar()")
+
                 if var.remove_email_from_target:
                     target = db()
                     result = target.remove(table="targets", id=item['ID'])
@@ -376,6 +378,9 @@ class SMTP_(threading.Thread):
 
 def main(group, d_start, d_end):
     global sent_q, email_failed, logger
+
+    var.command_q.put("GUI.pushButton_send.setEnabled(False)")
+    var.command_q.put("self.update_compose_progressbar()")
 
     var.rid_list = []
 
@@ -416,9 +421,13 @@ def main(group, d_start, d_end):
         temp = 0
         end = 0
 
+        if var.stop_send_campaign == True:
+            break
+
         for index, item in group.loc[group['flag'] == 0].iterrows():
             try:
-                if var.stop_send_campaign == True or end > e_target_len-1:
+                print(f"Try {index} - {temp} {e_target_len-1}")
+                if var.stop_send_campaign == True or temp > e_target_len-1:
                     break
 
                 proxy_user = item["PROXY_USER"]
@@ -439,10 +448,11 @@ def main(group, d_start, d_end):
                 start = temp
                 end = start + var.num_emails_per_address - 1
                 temp = end + 1
+                print(f"{start} and {end}")
 
                 group.at[index, 'flag'] = 1
 
-                print(index, name, target.loc[start:end].copy(), start, end, len(
+                print(index, name, target.loc[start:end], start, end, len(
                     target.loc[start:end]), d_start, d_end)
 
                 SMTP_(index, name, proxy_host, proxy_port, proxy_user,
@@ -488,12 +498,15 @@ def main(group, d_start, d_end):
         logger.error('Error while saving report - {}'.format(e))
 
     if var.remove_email_from_target:
+        print("removing email from target...")
         db_to_pandas()
         var.command_q.put("self.update_db_table()")
 
     var.email_failed = email_failed
     var.send_campaign_run_status = False
 
+    var.command_q.put("GUI.pushButton_send.setEnabled(True)")
     print("sending finished")
-    # alert(text='Total Emails Sent : {}\nAccounts Failed : {}\ncheck app.log and report.csv'.\
-    #             format(var.send_campaign_email_count, email_failed), title='Alert', button='OK')
+    var.command_q.put("self.update_compose_progressbar()")
+    alert(text='Total Emails Sent : {}\nAccounts Failed : {}\nTarget Left : {}\ncheck app.log and report.csv'.
+          format(var.send_campaign_email_count, email_failed, len(var.target)), title='Alert', button='OK')

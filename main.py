@@ -149,6 +149,9 @@ class myMainClass():
         GUI.pushButton_compose_zoomOut.clicked.connect(
             lambda: self.compose_zoomInOut("zoomOut"))
 
+        GUI.pushButton_compose_send_cancel.clicked.connect(
+            self.compose_send_cancel)
+
     def showContextMenu(self, pos):
         print("pos " + str(pos))
         index = GUI.tableView_database.indexAt(pos)
@@ -444,31 +447,57 @@ class myMainClass():
             GUI.textBrowser_compose.setPlainText(var.compose_email_body)
             var.body_type = "Normal"
 
+    def compose_send_cancel(self):
+        var.stop_send_campaign = True
+
+    def update_compose_progressbar(self):
+        try:
+            if var.send_campaign_run_status == False:
+                if var.stop_send_campaign == True:
+                    GUI.label_compose_status.setText(
+                        f"Sending Cancelled : {var.send_campaign_email_count}/{self.total_email_to_be_sent} Accounts Failed : {var.email_failed} Target Left : {len(var.target)}")
+                else:
+                    GUI.label_compose_status.setText(
+                        f"Sending Finished : {var.send_campaign_email_count}/{self.total_email_to_be_sent} Accounts Failed : {var.email_failed} Target Left : {len(var.target)}")
+
+            else:
+                value = (var.send_campaign_email_count /
+                         self.total_email_to_be_sent)*100
+                GUI.label_compose_status.setText(
+                    f"Total Email Sent : {var.send_campaign_email_count}/{self.total_email_to_be_sent}")
+                GUI.progressBar_compose.setValue(value)
+
+        except Exception as e:
+            print("Error at main.py->update_compose_progressbar : {}".format(e))
+
     def send_campaign(self):
         try:
             global Campaign
+
             var.send_campaign_run_status = True
             var.num_emails_per_address = int(
                 GUI.lineEdit_num_per_address.text())
             var.delay_between_emails = GUI.lineEdit_delay_between_emails.text()
             delay_start = int(var.delay_between_emails.split("-")[0].strip())
             delay_end = int(var.delay_between_emails.split("-")[1].strip())
+
             Thread(target=update_config_json, daemon=True).start()
+
             var.compose_email_subject = GUI.lineEdit_subject.text()
 
             if GUI.radioButton_campaign_group_a.isChecked():
                 print("Group a")
                 if len(var.group_a) > 0 and len(var.target) > 0:
+
                     if len(var.group_a)*var.num_emails_per_address > len(var.target):
-                        total_email_to_be_sent = len(var.target)
+                        self.total_email_to_be_sent = len(var.target)
                     else:
-                        total_email_to_be_sent = len(
+                        self.total_email_to_be_sent = len(
                             var.group_a)*var.num_emails_per_address
 
-                    dialog = QtWidgets.QDialog()
-                    dialog.ui = Campaign(dialog, var.group_a.copy(
-                    ), delay_start, delay_end, total_email_to_be_sent)
-                    dialog.exec_()
+                    Thread(target=smtp.main, daemon=True, args=[
+                        var.group_a.copy(), delay_start, delay_end, ]).start()
+
                 else:
                     GUI.label_email_status.setText("Database empty")
                     var.send_campaign_run_status = False
@@ -476,16 +505,16 @@ class myMainClass():
             else:
                 print("Group b")
                 if len(var.group_b) > 0 and len(var.target) > 0:
+
                     if len(var.group_b)*var.num_emails_per_address > len(var.target):
-                        total_email_to_be_sent = len(var.target)
+                        self.total_email_to_be_sent = len(var.target)
                     else:
-                        total_email_to_be_sent = len(
+                        self.total_email_to_be_sent = len(
                             var.group_b)*var.num_emails_per_address
 
-                    dialog = QtWidgets.QDialog()
-                    dialog.ui = Campaign(dialog, var.group_b.copy(),
-                                         delay_start, delay_end, total_email_to_be_sent)
-                    dialog.exec_()
+                    Thread(target=smtp.main, daemon=True, args=[
+                        var.group_b.copy(), delay_start, delay_end, ]).start()
+
                 else:
                     GUI.label_email_status.setText("Database empty")
                     var.send_campaign_run_status = False

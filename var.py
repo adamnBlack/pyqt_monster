@@ -1,4 +1,4 @@
-# import dialog
+
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, text
 from json import load, dumps
 from pyautogui import alert, password, confirm
@@ -11,7 +11,8 @@ from queue import LifoQueue
 import logging
 from threading import Thread
 
-import main
+# import main
+import dialog
 
 
 # pd.set_option('display.max_colwidth',1000)

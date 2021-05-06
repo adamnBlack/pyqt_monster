@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ui/gui.ui'
+# Form implementation generated from reading ui file 'e:\Upwork\2020\gmail_app\gmail_app\ui\gui.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.3
 #
