@@ -294,33 +294,36 @@ class IMAP_(threading.Thread):
                                                            decode_header(email.utils.parseaddr(email_message['To'])[1])))
 
                     # print(from_name, from_mail, to_name, to_mail, subject, body)
+                    print("utc - ", utc_to_local(email.utils.parsedate_to_datetime(email_message['Date'])),
+                          "| Non utc - ", email.utils.parsedate_to_datetime(email_message['Date']))
 
-                    t_dict = {
-                        'uid': uid,
-                        'to': "{} {}".format(to_name, to_mail),
-                        'TONAME': to_name,
-                        'to_mail': to_mail,
-                        'message-id': email.utils.parseaddr(email_message['Message-ID'])[1],
-                        'from': "{} {}".format(from_name, from_mail),
-                        'from_name': from_name,
-                        'from_mail': from_mail,
-                        'date': utc_to_local(email.utils.parsedate_to_datetime(email_message['Date'])),
-                        'subject': subject,
-                        'user': self.imap_user,
-                        'pass': self.imap_pass,
-                        'body': body,
-                        'proxy_host': self.proxy_host,
-                        'proxy_port': self.proxy_port,
-                        'proxy_user': self.proxy_user,
-                        'proxy_pass': self.proxy_pass,
-                        'FIRSTFROMNAME': self.FIRSTFROMNAME,
-                        'LASTFROMNAME': self.LASTFROMNAME,
-                        'flag': item
-                    }
-                    # print(t_dict)
-                    var.email_q.put(t_dict.copy())
-                    var.total_email_downloaded += 1
-                # var.total_email+=1
+                    if utc_to_local(objDate) <= email.utils.parsedate_to_datetime(email_message['Date']):
+                        print("got it")
+                        t_dict = {
+                            'uid': uid,
+                            'to': "{} {}".format(to_name, to_mail),
+                            'TONAME': to_name,
+                            'to_mail': to_mail,
+                            'message-id': email.utils.parseaddr(email_message['Message-ID'])[1],
+                            'from': "{} {}".format(from_name, from_mail),
+                            'from_name': from_name,
+                            'from_mail': from_mail,
+                            'date': utc_to_local(email.utils.parsedate_to_datetime(email_message['Date'])),
+                            'subject': subject,
+                            'user': self.imap_user,
+                            'pass': self.imap_pass,
+                            'body': body,
+                            'proxy_host': self.proxy_host,
+                            'proxy_port': self.proxy_port,
+                            'proxy_user': self.proxy_user,
+                            'proxy_pass': self.proxy_pass,
+                            'FIRSTFROMNAME': self.FIRSTFROMNAME,
+                            'LASTFROMNAME': self.LASTFROMNAME,
+                            'flag': item
+                        }
+                        # print(t_dict)
+                        var.email_q.put(t_dict.copy())
+                        var.total_email_downloaded += 1
 
             imap.close()
             imap.logout()

@@ -1,8 +1,8 @@
 {
     "config": {
-        "date": "4/14/2021",
-        "num_emails_per_address": 5,
-        "delay_between_emails": "0-2",
+        "date": "5/5/2021",
+        "num_emails_per_address": 8,
+        "delay_between_emails": "26-50",
         "limit_of_thread": 100,
         "compose_email_subject": "Just a friendly outreach about [3]",
         "compose_email_body": "{Hey|Hi|Hello} [TONAME],\n\nI'm reaching out to you because i {noticed|came across|found|visited} you website {the other day|yesterday} and thought you'd be interested in a {collaboration|partnership}.\n\n{Hope you don't mind my outreach!|Looking forward to your reply!}\n\nRegards,\n[FIRSTFROMNAME]",
@@ -11,6 +11,6 @@
             "analytics_account": "UA-33237782-1",
             "campaign_name": "Teas fdsg 3442_"
         },
-        "webhook_link": "https://gmonster-webhook-gmail-service.netlify.app/.netlify/functions/gmonster-service"
+        "webhook_link": "https://webhook.site/0f767f9b-1ffe-4112-a760-e7e4f1ccf5e5"
     }
 }

@@ -455,10 +455,10 @@ class myMainClass():
             if var.send_campaign_run_status == False:
                 if var.stop_send_campaign == True:
                     GUI.label_compose_status.setText(
-                        f"Sending Cancelled : {var.send_campaign_email_count}/{self.total_email_to_be_sent} Accounts Failed : {var.email_failed} Target Left : {len(var.target)}")
+                        f"Sending Cancelled : {var.send_campaign_email_count}/{self.total_email_to_be_sent} Accounts Failed : {var.email_failed} Targets Remaining : {len(var.target)}")
                 else:
                     GUI.label_compose_status.setText(
-                        f"Sending Finished : {var.send_campaign_email_count}/{self.total_email_to_be_sent} Accounts Failed : {var.email_failed} Target Left : {len(var.target)}")
+                        f"Sending Finished : {var.send_campaign_email_count}/{self.total_email_to_be_sent} Accounts Failed : {var.email_failed} Targets Remaining : {len(var.target)}")
 
             else:
                 value = (var.send_campaign_email_count /

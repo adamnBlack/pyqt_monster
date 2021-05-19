@@ -16,13 +16,14 @@ import smtplib
 import csv
 import queue
 import random
+import json
 from pyautogui import alert, password, confirm
 from datetime import datetime
 from imap import ImapCheckForBlocks
 from webhook import SendWebhook
+from main import GUI
 from database import Database as db
 from database import db_to_pandas
-from main import GUI
 
 email_failed = 0
 
@@ -304,12 +305,41 @@ class SMTP_(threading.Thread):
                 if count == 1:
                     first_time = datetime.now()
 
-                # try:
-                #     server.sendmail(self.user, item['EMAIL'], msg.as_string())
-                # except:
-                #     print("Reconnecting smtp - {}".format(self.name))
-                #     server = self.login()
-                #     server.sendmail(self.user, item['EMAIL'], msg.as_string())
+                try:
+                    server.sendmail(self.user, item['EMAIL'], msg.as_string())
+                except:
+                    print("Reconnecting smtp - {}".format(self.name))
+                    server = self.login()
+                    server.sendmail(self.user, item['EMAIL'], msg.as_string())
+
+                self.logger.error(f"Sent - {self.user} {item['EMAIL']}")
+
+                sent_q.put((item['EMAIL'], index))
+                var.send_campaign_email_count += 1
+
+                t_dict = {
+                    "TARGET": item['EMAIL'],
+                    "FROMEMAIL": self.user,
+                    "STATUS": "sent"
+                }
+                var.send_report.put(t_dict.copy())
+
+                if var.enable_webhook_status:
+                    t_dict = {
+                        "target": item['EMAIL'],
+                        "sender": self.user,
+                        "sender_name": f"{self.FIRSTFROMNAME} {self.LASTFROMNAME}",
+                        "time": datetime.utcnow().strftime("%m/%d/%Y %H:%M:%S"),
+                        "subject": msg["Subject"],
+                        "body": body
+                    }
+                    var.webhook_q.put(t_dict.copy())
+
+                var.command_q.put("self.update_compose_progressbar()")
+
+                if var.remove_email_from_target:
+                    target = db()
+                    result = target.remove(table="targets", id=item['ID'])
 
                 if count % 5 == 0 and var.check_for_blocks == True:
                     last_time = datetime.now()
@@ -328,49 +358,26 @@ class SMTP_(threading.Thread):
                         break
                     else:
                         print(f"Found no block messages : {self.name}")
-                        self.logger.error(
-                            f"Found no block messages : {self.name} {str(datetime.now())}")
-
-                t_dict = {
-                    "TARGET": item['EMAIL'],
-                    "FROMEMAIL": self.user,
-                    "STATUS": "sent"
-                }
-                var.send_report.put(t_dict.copy())
-
-                if var.enable_webhook_status:
-                    t_dict = {
-                        "target": item['EMAIL'],
-                        "sender": self.user,
-                        "time": datetime.utcnow().strftime("%m/%d/%Y %H:%M:%S"),
-                        "subject": msg["Subject"],
-                        "body": body
-                    }
-                    var.webhook_q.put(t_dict.copy())
-
-                sent_q.put((item['EMAIL'], index))
-                var.send_campaign_email_count += 1
-
-                var.command_q.put("self.update_compose_progressbar()")
-
-                if var.remove_email_from_target:
-                    target = db()
-                    result = target.remove(table="targets", id=item['ID'])
+                        # self.logger.error(
+                        #     f"Found no block messages : {self.name} {str(datetime.now())}")
 
             server.quit()
             server.close()
 
         except Exception as e:
             email_failed += 1
+
             print("error at SMTP - {} - {}".format(self.name, e))
             self.logger.error(
                 "Error at Sending - {} - {}".format(self.name, e))
+
             t_dict = {
                 "TARGET": last_recipient,
                 "FROMEMAIL": self.user,
                 "STATUS": str(e)
             }
             var.send_report.put(t_dict.copy())
+
         finally:
             server = None
             var.thread_open_campaign -= 1
@@ -381,8 +388,6 @@ def main(group, d_start, d_end):
 
     var.command_q.put("GUI.pushButton_send.setEnabled(False)")
     var.command_q.put("self.update_compose_progressbar()")
-
-    var.rid_list = []
 
     email_failed = 0
     sent_q = queue.Queue()
@@ -398,8 +403,13 @@ def main(group, d_start, d_end):
     target_len = len(target)
     group_len = len(group)
 
-    # var.send_report = queue.Queue()
-    # var.webhook_q = queue.Queue()
+    logger.error(f"\n Starting Send Campaign : Target Removal - {var.remove_email_from_target}"
+                 + f"\n Webhook Enabled: {var.enable_webhook_status}"
+                 + f"\n Email Block Check: {var.check_for_blocks}"
+                 + f"\n Emails Per Account: {var.num_emails_per_address}"
+                 + f"\n Len of Group: {group_len}"
+                 + f"\n Len of Targets: {target_len}"
+                 + f"\n Delay: {d_start} - {d_end}")
 
     with var.send_report.mutex:
         var.send_report.queue.clear()
@@ -426,7 +436,7 @@ def main(group, d_start, d_end):
 
         for index, item in group.loc[group['flag'] == 0].iterrows():
             try:
-                print(f"Try {index} - {temp} {e_target_len-1}")
+
                 if var.stop_send_campaign == True or temp > e_target_len-1:
                     break
 
@@ -448,12 +458,14 @@ def main(group, d_start, d_end):
                 start = temp
                 end = start + var.num_emails_per_address - 1
                 temp = end + 1
-                print(f"{start} and {end}")
 
                 group.at[index, 'flag'] = 1
 
                 print(index, name, target.loc[start:end], start, end, len(
                     target.loc[start:end]), d_start, d_end)
+
+                logger.error(f"\nStarting Thread : Name - {name}"
+                             + f"\nTargets - {json.dumps(target.loc[start:end].to_dict())}")
 
                 SMTP_(index, name, proxy_host, proxy_port, proxy_user,
                       proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME, target.loc[start:end].copy(),  d_start, d_end).start()
@@ -507,6 +519,10 @@ def main(group, d_start, d_end):
 
     var.command_q.put("GUI.pushButton_send.setEnabled(True)")
     print("sending finished")
+
     var.command_q.put("self.update_compose_progressbar()")
-    alert(text='Total Emails Sent : {}\nAccounts Failed : {}\nTarget Left : {}\ncheck app.log and report.csv'.
+
+    alert(text='Total Emails Sent : {}\nAccounts Failed : {}\nTargets Remaining : {}\ncheck app.log and report.csv'.
           format(var.send_campaign_email_count, email_failed, len(var.target)), title='Alert', button='OK')
+
+    var.command_q.put("GUI.progressBar_compose.setValue(0)")

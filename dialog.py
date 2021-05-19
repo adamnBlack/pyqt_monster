@@ -311,5 +311,5 @@ else:
         try:
             import main
         except Exception as e:
-            alert(text="Error alert : {}".format(e),
+            alert(text="Error alert at dialog.py : {}".format(e),
                   title='Alert', button='OK')

@@ -9,7 +9,7 @@ from pyautogui import alert, password, confirm
 import os
 import sqlalchemy.sql.default_comparator
 
-db_path = var.base_dir+"/group.db"
+db_path = var.base_dir + "/group.db"
 Base = declarative_base()
 engine = create_engine(
     f'sqlite:///{db_path}', connect_args={'check_same_thread': False})
@@ -244,6 +244,7 @@ def db_insert_row():
 
 def file_to_db():
     session = get_session()
+
     if os.path.exists(var.base_dir+'/group_a.xlsx') == True and os.path.exists(var.base_dir+'/group_b.xlsx') == True \
             and os.path.exists(var.base_dir+'/target.xlsx') == True:
 

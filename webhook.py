@@ -58,7 +58,7 @@ class SendWebhook(threading.Thread):
         print("Webhook Finished.")
 
     def __repr__(self):
-        print(f"Thread: {self.name}")
+        return f"Thread: {self.name}"
 
     def __str__(self):
         pass
