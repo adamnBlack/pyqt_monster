@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1211</width>
-    <height>884</height>
+    <height>972</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -927,6 +927,12 @@ QPushButton:pressed {
           <layout class="QGridLayout" name="gridLayout_8">
            <item row="0" column="0">
             <widget class="QRadioButton" name="radioButton_reply">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="font">
               <font>
                <family>Calibri</family>
@@ -948,6 +954,12 @@ QPushButton:pressed {
            </item>
            <item row="1" column="0">
             <widget class="QRadioButton" name="radioButton_send_campaign">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="font">
               <font>
                <family>Calibri</family>
@@ -1121,6 +1133,12 @@ QPushButton:pressed {
         </item>
         <item row="13" column="3">
          <widget class="QCheckBox" name="checkBox_enable_webhook">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="text">
            <string>Enable Webhook</string>
           </property>
@@ -1128,6 +1146,12 @@ QPushButton:pressed {
         </item>
         <item row="14" column="3">
          <widget class="QCheckBox" name="checkBox_remove_email_from_target">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="text">
            <string>Remove Email From Target</string>
           </property>
@@ -1184,6 +1208,12 @@ QPushButton:pressed {
         </item>
         <item row="12" column="3">
          <widget class="QCheckBox" name="checkBox_email_tracking">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="text">
            <string>Enable Email Tracking</string>
           </property>
@@ -1212,6 +1242,12 @@ QPushButton:pressed {
           <layout class="QGridLayout" name="gridLayout_7">
            <item row="1" column="0">
             <widget class="QRadioButton" name="radioButton_campaign_group_b">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="font">
               <font>
                <family>Calibri</family>
@@ -1227,6 +1263,12 @@ QPushButton:pressed {
            </item>
            <item row="0" column="0">
             <widget class="QRadioButton" name="radioButton_campaign_group_a">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="font">
               <font>
                <family>Calibri</family>
@@ -1373,6 +1415,12 @@ QPushButton:pressed {
         </item>
         <item row="16" column="3">
          <widget class="QCheckBox" name="checkBox_check_for_blocks">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="text">
            <string>Check for blocks</string>
           </property>
@@ -1742,6 +1790,12 @@ QPushButton:pressed {
              <property name="enabled">
               <bool>true</bool>
              </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="font">
               <font>
                <family>Calibri</family>
@@ -1757,6 +1811,12 @@ QPushButton:pressed {
            </item>
            <item row="2" column="0">
             <widget class="QCheckBox" name="checkBox_compose_preview">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="text">
               <string>Preview</string>
              </property>
@@ -1764,6 +1824,12 @@ QPushButton:pressed {
            </item>
            <item row="0" column="0">
             <widget class="QRadioButton" name="radioButton_plain_text">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="font">
               <font>
                <family>Calibri</family>

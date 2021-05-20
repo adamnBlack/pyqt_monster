@@ -373,32 +373,6 @@ class myMainClass():
             GUI.comboBox_attachments.clear()
             GUI.comboBox_attachments.addItems(var.files)
 
-    def send(self):
-        try:
-            var.stop_send_campaign = False
-            var.thread_open_campaign = 0
-            var.send_campaign_email_count = 0
-            if GUI.radioButton_reply.isChecked():
-                result = confirm(
-                    text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
-                if result == 'OK':
-                    self.reply()
-                else:
-                    print('cancelled')
-
-            else:
-                result = confirm(
-                    text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
-                if result == 'OK':
-                    print("send_campaign")
-                    self.send_campaign()
-                else:
-                    print('cancelled')
-
-        except Exception as e:
-            print("Error at main.send : {}".format(e))
-            self.logger.error("Error at main.send - {}".format(e))
-
     def compose_zoomInOut(self, source):
         if source == "zoomIn":
             GUI.textBrowser_compose.selectAll()
@@ -446,6 +420,75 @@ class myMainClass():
             GUI.checkBox_compose_preview.setCheckState(False)
             GUI.textBrowser_compose.setPlainText(var.compose_email_body)
             var.body_type = "Normal"
+
+    def send_button_visibility(self, on=None):
+        if on:
+            GUI.pushButton_send.setEnabled(True)
+            GUI.pushButton_compose_send_cancel.setEnabled(False)
+        else:
+            GUI.pushButton_send.setEnabled(False)
+            GUI.pushButton_compose_send_cancel.setEnabled(True)
+
+    def compose_config_visibility(self, on=None):
+        if on:
+            GUI.lineEdit_number_of_threads.setEnabled(True)
+            GUI.lineEdit_num_per_address.setEnabled(True)
+            GUI.radioButton_plain_text.setEnabled(True)
+            GUI.radioButton_html.setEnabled(True)
+            GUI.checkBox_email_tracking.setEnabled(True)
+            GUI.checkBox_enable_webhook.setEnabled(True)
+            GUI.checkBox_remove_email_from_target.setEnabled(True)
+            GUI.checkBox_check_for_blocks.setEnabled(True)
+            GUI.pushButton_attachments.setEnabled(True)
+            GUI.pushButton_attachments_clear.setEnabled(True)
+            GUI.lineEdit_webhook_link.setEnabled(True)
+            GUI.lineEdit_email_tracking_campaign_name.setEnabled(True)
+            GUI.lineEdit_email_tracking_analytics_account.setEnabled(True)
+        else:
+            GUI.lineEdit_number_of_threads.setEnabled(False)
+            GUI.lineEdit_num_per_address.setEnabled(False)
+            GUI.radioButton_plain_text.setEnabled(False)
+            GUI.radioButton_html.setEnabled(False)
+            GUI.checkBox_email_tracking.setEnabled(False)
+            GUI.checkBox_enable_webhook.setEnabled(False)
+            GUI.checkBox_remove_email_from_target.setEnabled(False)
+            GUI.checkBox_check_for_blocks.setEnabled(False)
+            GUI.pushButton_attachments.setEnabled(False)
+            GUI.pushButton_attachments_clear.setEnabled(False)
+            GUI.lineEdit_webhook_link.setEnabled(False)
+            GUI.lineEdit_email_tracking_campaign_name.setEnabled(False)
+            GUI.lineEdit_email_tracking_analytics_account.setEnabled(False)
+
+    def send(self):
+        try:
+            var.stop_send_campaign = False
+            var.thread_open_campaign = 0
+            var.send_campaign_email_count = 0
+
+            self.send_button_visibility(on=False)
+
+            if GUI.radioButton_reply.isChecked():
+                result = confirm(
+                    text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
+                if result == 'OK':
+                    self.reply()
+                else:
+                    self.send_button_visibility(on=True)
+                    print('cancelled')
+
+            else:
+                result = confirm(
+                    text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
+                if result == 'OK':
+                    print("send_campaign")
+                    self.send_campaign()
+                else:
+                    self.send_button_visibility(on=True)
+                    print('cancelled')
+
+        except Exception as e:
+            print("Error at main.send : {}".format(e))
+            self.logger.error("Error at main.send - {}".format(e))
 
     def compose_send_cancel(self):
         var.stop_send_campaign = True
@@ -499,6 +542,7 @@ class myMainClass():
                         var.group_a.copy(), delay_start, delay_end, ]).start()
 
                 else:
+                    self.send_button_visibility(on=True)
                     GUI.label_email_status.setText("Database empty")
                     var.send_campaign_run_status = False
 
@@ -516,6 +560,7 @@ class myMainClass():
                         var.group_b.copy(), delay_start, delay_end, ]).start()
 
                 else:
+                    self.send_button_visibility(on=True)
                     GUI.label_email_status.setText("Database empty")
                     var.send_campaign_run_status = False
 
@@ -537,6 +582,7 @@ class myMainClass():
         dialog = QtWidgets.QDialog()
         dialog.ui = Reply(dialog)
         dialog.exec_()
+        self.send_button_visibility(on=True)
 
     def downloading_email(self):
         try:

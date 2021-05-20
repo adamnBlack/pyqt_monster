@@ -277,8 +277,6 @@ class SMTP_(threading.Thread):
                 if var.stop_send_campaign == True:
                     break
 
-                count += 1
-
                 msg = MIMEMultipart("alternative")
                 msg["Subject"] = utils.format_email(
                     var.compose_email_subject, self.FIRSTFROMNAME, self.LASTFROMNAME, item['1'], item['2'], item['3'], item['TONAME'])
@@ -305,17 +303,18 @@ class SMTP_(threading.Thread):
                 if count == 1:
                     first_time = datetime.now()
 
-                try:
-                    server.sendmail(self.user, item['EMAIL'], msg.as_string())
-                except:
-                    print("Reconnecting smtp - {}".format(self.name))
-                    server = self.login()
-                    server.sendmail(self.user, item['EMAIL'], msg.as_string())
+                # try:
+                #     server.sendmail(self.user, item['EMAIL'], msg.as_string())
+                # except:
+                #     print("Reconnecting smtp - {}".format(self.name))
+                #     server = self.login()
+                #     server.sendmail(self.user, item['EMAIL'], msg.as_string())
 
                 self.logger.error(f"Sent - {self.user} {item['EMAIL']}")
 
                 sent_q.put((item['EMAIL'], index))
                 var.send_campaign_email_count += 1
+                count += 1
 
                 t_dict = {
                     "TARGET": item['EMAIL'],
@@ -386,7 +385,7 @@ class SMTP_(threading.Thread):
 def main(group, d_start, d_end):
     global sent_q, email_failed, logger
 
-    var.command_q.put("GUI.pushButton_send.setEnabled(False)")
+    var.command_q.put("self.compose_config_visibility(on=False)")
     var.command_q.put("self.update_compose_progressbar()")
 
     email_failed = 0
@@ -402,6 +401,15 @@ def main(group, d_start, d_end):
 
     target_len = len(target)
     group_len = len(group)
+
+    # config = {
+    #     "number_of_threads": var.number_of_threads,
+    #     "number_of_emails_per_address": var.num_emails_per_address,
+    #     "body_type": var.body_type,
+    #     "enable_email_tracking": var.enable_email_tracking,
+    #     "enable_webhook": var.enable_webhook_status,
+
+    # }
 
     logger.error(f"\n Starting Send Campaign : Target Removal - {var.remove_email_from_target}"
                  + f"\n Webhook Enabled: {var.enable_webhook_status}"
@@ -485,7 +493,11 @@ def main(group, d_start, d_end):
             email, index = temp[0], temp[1]
             target.at[index, 'flag'] = 1
 
-    while var.thread_open_campaign != 0 and var.stop_send_campaign == False:
+    # while var.thread_open_campaign != 0 and var.stop_send_campaign == False:
+    #     time.sleep(1)
+
+    # wait for all thread to be closed
+    while var.thread_open_campaign != 0:
         time.sleep(1)
 
     # wait for webhook queue to be emptied
@@ -520,9 +532,10 @@ def main(group, d_start, d_end):
     var.command_q.put("GUI.pushButton_send.setEnabled(True)")
     print("sending finished")
 
-    var.command_q.put("self.update_compose_progressbar()")
-
     alert(text='Total Emails Sent : {}\nAccounts Failed : {}\nTargets Remaining : {}\ncheck app.log and report.csv'.
           format(var.send_campaign_email_count, email_failed, len(var.target)), title='Alert', button='OK')
 
+    var.command_q.put("self.update_compose_progressbar()")
     var.command_q.put("GUI.progressBar_compose.setValue(0)")
+    var.command_q.put("self.send_button_visibility(on=True)")
+    var.command_q.put("self.compose_config_visibility(on=True)")
