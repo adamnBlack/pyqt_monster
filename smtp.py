@@ -17,6 +17,7 @@ import csv
 import queue
 import random
 import json
+import uuid
 from pyautogui import alert, password, confirm
 from datetime import datetime
 from imap import ImapCheckForBlocks
@@ -24,6 +25,11 @@ from webhook import SendWebhook
 from main import GUI
 from database import Database as db
 from database import db_to_pandas
+from collections import defaultdict
+
+# defaultdict accept a function. Whatever that
+# functions return is default value for non-existent keys
+success_sent = defaultdict(lambda: False)
 
 email_failed = 0
 
@@ -216,7 +222,8 @@ def reply():
 
 
 class SMTP_(threading.Thread):
-    def __init__(self, threadID, name, proxy_host, proxy_port, proxy_user, proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME, target, d_start, d_end):
+    def __init__(self, threadID, name, proxy_host, proxy_port, proxy_user,
+                 proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME, target, d_start, d_end, campaign_id):
         threading.Thread.__init__(self)
         self.threadID = threadID
         self.name = name
@@ -235,6 +242,7 @@ class SMTP_(threading.Thread):
         self.logger = logger
         self.d_start = d_start
         self.d_end = d_end
+        self.campaign_id = campaign_id
 
     def login(self):
         if self.proxy_host != "":
@@ -254,9 +262,20 @@ class SMTP_(threading.Thread):
 
         return server
 
+    def sleep(self):
+        duration = random.randint(self.d_start, self.d_end)
+        count = 0
+
+        while var.stop_send_campaign == False:
+            time.sleep(1)
+            count += 1
+            if count >= duration:
+                break
+
     def run(self):
         try:
-            global sent_q, email_failed
+            global sent_q, email_failed, success_sent
+
             last_recipient = ''
             var.thread_open_campaign += 1
 
@@ -277,88 +296,94 @@ class SMTP_(threading.Thread):
                 if var.stop_send_campaign == True:
                     break
 
-                msg = MIMEMultipart("alternative")
-                msg["Subject"] = utils.format_email(
-                    var.compose_email_subject, self.FIRSTFROMNAME, self.LASTFROMNAME, item['1'], item['2'], item['3'], item['TONAME'])
-                msg['From'] = formataddr((str(Header("{} {}".format(
-                    self.FIRSTFROMNAME, self.LASTFROMNAME), 'utf-8')), self.user))
-                msg["To"] = item['EMAIL']
-                last_recipient = item['EMAIL']
-                msg['Date'] = formatdate(localtime=True)
+                if success_sent[item['EMAIL']] != True:
+                    msg = MIMEMultipart("alternative")
+                    msg["Subject"] = utils.format_email(
+                        var.compose_email_subject, self.FIRSTFROMNAME, self.LASTFROMNAME, item['1'], item['2'], item['3'], item['TONAME'])
+                    msg['From'] = formataddr((str(Header("{} {}".format(
+                        self.FIRSTFROMNAME, self.LASTFROMNAME), 'utf-8')), self.user))
+                    msg["To"] = item['EMAIL']
+                    last_recipient = item['EMAIL']
+                    msg['Date'] = formatdate(localtime=True)
 
-                if var.body_type == "Html":
-                    body = utils.format_email(var.compose_email_body_html, self.FIRSTFROMNAME,
-                                              self.LASTFROMNAME, item['1'], item['2'], item['3'], item['TONAME'], source="body")
-                    msg.attach(MIMEText(body, "html"))
-                else:
-                    body = utils.format_email(var.compose_email_body, self.FIRSTFROMNAME, self.LASTFROMNAME,
-                                              item['1'], item['2'], item['3'], item['TONAME'], source="body")
-                    msg.attach(MIMEText(body, "plain"))
-
-                for part in t_part:
-                    msg.attach(part)
-
-                time.sleep(random.randint(self.d_start, self.d_end))
-
-                if count == 1:
-                    first_time = datetime.now()
-
-                # try:
-                #     server.sendmail(self.user, item['EMAIL'], msg.as_string())
-                # except:
-                #     print("Reconnecting smtp - {}".format(self.name))
-                #     server = self.login()
-                #     server.sendmail(self.user, item['EMAIL'], msg.as_string())
-
-                self.logger.error(f"Sent - {self.user} {item['EMAIL']}")
-
-                sent_q.put((item['EMAIL'], index))
-                var.send_campaign_email_count += 1
-                count += 1
-
-                t_dict = {
-                    "TARGET": item['EMAIL'],
-                    "FROMEMAIL": self.user,
-                    "STATUS": "sent"
-                }
-                var.send_report.put(t_dict.copy())
-
-                if var.enable_webhook_status:
-                    t_dict = {
-                        "target": item['EMAIL'],
-                        "sender": self.user,
-                        "sender_name": f"{self.FIRSTFROMNAME} {self.LASTFROMNAME}",
-                        "time": datetime.utcnow().strftime("%m/%d/%Y %H:%M:%S"),
-                        "subject": msg["Subject"],
-                        "body": body
-                    }
-                    var.webhook_q.put(t_dict.copy())
-
-                var.command_q.put("self.update_compose_progressbar()")
-
-                if var.remove_email_from_target:
-                    target = db()
-                    result = target.remove(table="targets", id=item['ID'])
-
-                if count % 5 == 0 and var.check_for_blocks == True:
-                    last_time = datetime.now()
-                    elapsed_time = utils.difference_between_time(
-                        first_time, last_time)
-
-                    imap_object = ImapCheckForBlocks(time_limit=elapsed_time, proxy_host=self.proxy_host,
-                                                     proxy_port=self.proxy_port, proxy_type=socks.PROXY_TYPE_SOCKS5,
-                                                     proxy_user=self.proxy_user, proxy_pass=self.proxy_pass,
-                                                     imap_user=self.user, imap_pass=self.passwd)
-
-                    if imap_object.check_for_block_messages():
-                        print(f"Found block messages : {self.name}")
-                        self.logger.error(
-                            f"Found block messages : {self.name} {str(datetime.now())}")
-                        break
+                    if var.body_type == "Html":
+                        body = utils.format_email(var.compose_email_body_html, self.FIRSTFROMNAME,
+                                                  self.LASTFROMNAME, item['1'], item['2'], item['3'], item['TONAME'], source="body")
+                        msg.attach(MIMEText(body, "html"))
                     else:
-                        print(f"Found no block messages : {self.name}")
-                        # self.logger.error(
-                        #     f"Found no block messages : {self.name} {str(datetime.now())}")
+                        body = utils.format_email(var.compose_email_body, self.FIRSTFROMNAME, self.LASTFROMNAME,
+                                                  item['1'], item['2'], item['3'], item['TONAME'], source="body")
+                        msg.attach(MIMEText(body, "plain"))
+
+                    for part in t_part:
+                        msg.attach(part)
+
+                    self.sleep()
+
+                    if count == 1:
+                        first_time = datetime.now()
+
+                    try:
+                        server.sendmail(
+                            self.user, item['EMAIL'], msg.as_string())
+                    except:
+                        print("Reconnecting smtp - {}".format(self.name))
+                        server = self.login()
+                        server.sendmail(
+                            self.user, item['EMAIL'], msg.as_string())
+
+                    success_sent[item['EMAIL']] = True
+
+                    self.logger.error(f"Sent - {self.user} {item['EMAIL']}")
+
+                    sent_q.put((item['EMAIL'], index))
+                    var.send_campaign_email_count += 1
+                    count += 1
+
+                    t_dict = {
+                        "TARGET": item['EMAIL'],
+                        "FROMEMAIL": self.user,
+                        "STATUS": "sent",
+                        "CAMPAIGN": self.campaign_id
+                    }
+                    var.send_report.put(t_dict.copy())
+
+                    if var.enable_webhook_status:
+                        t_dict = {
+                            "target": item['EMAIL'],
+                            "sender": self.user,
+                            "sender_name": f"{self.FIRSTFROMNAME} {self.LASTFROMNAME}",
+                            "time": datetime.utcnow().strftime("%m/%d/%Y %H:%M:%S"),
+                            "subject": msg["Subject"],
+                            "body": body
+                        }
+                        var.webhook_q.put(t_dict.copy())
+
+                    var.command_q.put("self.update_compose_progressbar()")
+
+                    if var.remove_email_from_target:
+                        target = db()
+                        result = target.remove(table="targets", id=item['ID'])
+
+                    if count % 5 == 0 and var.check_for_blocks == True:
+                        last_time = datetime.now()
+                        elapsed_time = utils.difference_between_time(
+                            first_time, last_time)
+
+                        imap_object = ImapCheckForBlocks(time_limit=elapsed_time, proxy_host=self.proxy_host,
+                                                         proxy_port=self.proxy_port, proxy_type=socks.PROXY_TYPE_SOCKS5,
+                                                         proxy_user=self.proxy_user, proxy_pass=self.proxy_pass,
+                                                         imap_user=self.user, imap_pass=self.passwd)
+
+                        if imap_object.check_for_block_messages():
+                            print(f"Found block messages : {self.name}")
+                            self.logger.error(
+                                f"Found block messages : {self.name} {str(datetime.now())}")
+                            break
+                        else:
+                            print(f"Found no block messages : {self.name}")
+                            # self.logger.error(
+                            #     f"Found no block messages : {self.name} {str(datetime.now())}")
 
             server.quit()
             server.close()
@@ -373,7 +398,8 @@ class SMTP_(threading.Thread):
             t_dict = {
                 "TARGET": last_recipient,
                 "FROMEMAIL": self.user,
-                "STATUS": str(e)
+                "STATUS": str(e),
+                "CAMPAIGN": self.campaign_id
             }
             var.send_report.put(t_dict.copy())
 
@@ -383,7 +409,9 @@ class SMTP_(threading.Thread):
 
 
 def main(group, d_start, d_end):
-    global sent_q, email_failed, logger
+    global sent_q, email_failed, logger, success_sent
+
+    success_sent.clear()
 
     var.command_q.put("self.compose_config_visibility(on=False)")
     var.command_q.put("self.update_compose_progressbar()")
@@ -402,14 +430,7 @@ def main(group, d_start, d_end):
     target_len = len(target)
     group_len = len(group)
 
-    # config = {
-    #     "number_of_threads": var.number_of_threads,
-    #     "number_of_emails_per_address": var.num_emails_per_address,
-    #     "body_type": var.body_type,
-    #     "enable_email_tracking": var.enable_email_tracking,
-    #     "enable_webhook": var.enable_webhook_status,
-
-    # }
+    campaign_id = uuid.uuid4()
 
     logger.error(f"\n Starting Send Campaign : Target Removal - {var.remove_email_from_target}"
                  + f"\n Webhook Enabled: {var.enable_webhook_status}"
@@ -417,7 +438,8 @@ def main(group, d_start, d_end):
                  + f"\n Emails Per Account: {var.num_emails_per_address}"
                  + f"\n Len of Group: {group_len}"
                  + f"\n Len of Targets: {target_len}"
-                 + f"\n Delay: {d_start} - {d_end}")
+                 + f"\n Delay: {d_start} - {d_end}"
+                 + f"\n Campaign ID: {campaign_id}")
 
     with var.send_report.mutex:
         var.send_report.queue.clear()
@@ -476,7 +498,8 @@ def main(group, d_start, d_end):
                              + f"\nTargets - {json.dumps(target.loc[start:end].to_dict())}")
 
                 SMTP_(index, name, proxy_host, proxy_port, proxy_user,
-                      proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME, target.loc[start:end].copy(),  d_start, d_end).start()
+                      proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME,
+                      target.loc[start:end].copy(),  d_start, d_end, campaign_id).start()
 
                 while var.thread_open_campaign >= var.limit_of_thread and var.stop_send_campaign == False:
                     time.sleep(1)
@@ -510,7 +533,7 @@ def main(group, d_start, d_end):
         webhook.quit()
 
     try:
-        field_names = ['TARGET', 'FROMEMAIL', 'STATUS']
+        field_names = ['TARGET', 'FROMEMAIL', 'STATUS', 'CAMPAIGN']
         with open(var.base_dir+"/report.csv", 'w', newline='', encoding="utf-8") as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=field_names)
             writer.writeheader()
@@ -531,6 +554,7 @@ def main(group, d_start, d_end):
 
     var.command_q.put("GUI.pushButton_send.setEnabled(True)")
     print("sending finished")
+    logger.error("Sending Finished")
 
     alert(text='Total Emails Sent : {}\nAccounts Failed : {}\nTargets Remaining : {}\ncheck app.log and report.csv'.
           format(var.send_campaign_email_count, email_failed, len(var.target)), title='Alert', button='OK')
@@ -539,3 +563,5 @@ def main(group, d_start, d_end):
     var.command_q.put("GUI.progressBar_compose.setValue(0)")
     var.command_q.put("self.send_button_visibility(on=True)")
     var.command_q.put("self.compose_config_visibility(on=True)")
+
+    print(success_sent)

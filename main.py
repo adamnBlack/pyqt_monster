@@ -5,7 +5,7 @@ from threading import Thread
 from time import sleep
 import os
 import sys
-from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem, QMessageBox
+from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem, QMessageBox, QAction
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt, pyqtSignal, QObject
 from gui import Ui_MainWindow
@@ -30,6 +30,7 @@ class MyGui(Ui_MainWindow, QtWidgets.QWidget):
 class myMainClass():
     def __init__(self):
         global mainWindow
+
         self.compose_font_size = 13
 
         GUI.tabWidget.setCurrentIndex(0)
@@ -72,7 +73,8 @@ class myMainClass():
         GUI.label_version.setText("VERSION: {}".format(var.version))
 
         self.time_interval_sub_check = 3600
-        Thread(target=self.check_for_subcription, daemon=True).start()
+        subscription_thread = Thread(
+            target=self.check_for_subcription, daemon=True).start()
 
         self.table_timer = QtCore.QTimer()
         self.table_timer.setInterval(10)
@@ -807,20 +809,36 @@ def set_icon(obj):
         print(e)
 
 
+class MainWindow(QtWidgets.QMainWindow):
+    def __init__(self):
+        QtWidgets.QMainWindow.__init__(self)
+
+    def closeEvent(self, event):
+        close = QtWidgets.QMessageBox.question(self,
+                                               "QUIT",
+                                               "Are you sure?",
+                                               QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No)
+        if close == QtWidgets.QMessageBox.Yes:
+            myMC.command_timer.stop()
+            event.accept()
+        else:
+            event.ignore()
+
+
 if __name__ == '__main__':
     print("ran from here")
 else:
     global app
-    global GUI, mainWindow
+    global GUI, mainWindow, myMC
     app = QtWidgets.QApplication(sys.argv)
-    mainWindow = QtWidgets.QMainWindow()
+    mainWindow = MainWindow()
     set_icon(mainWindow)
 
     mainWindow.setWindowFlags(mainWindow.windowFlags(
     ) | QtCore.Qt.WindowMinimizeButtonHint | QtCore.Qt.WindowSystemMenuHint)
 
     GUI = MyGui(mainWindow)
-    mainWindow.showMaximized()
+    # mainWindow.showMaximized()
     mainWindow.show()
 
     import var
