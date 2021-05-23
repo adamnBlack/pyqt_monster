@@ -16,6 +16,7 @@ import subprocess
 import requests
 import re
 
+
 print("App started....")
 
 
@@ -446,6 +447,8 @@ class myMainClass():
             GUI.lineEdit_webhook_link.setEnabled(True)
             GUI.lineEdit_email_tracking_campaign_name.setEnabled(True)
             GUI.lineEdit_email_tracking_analytics_account.setEnabled(True)
+            GUI.lineEdit_delay_between_emails.setEnabled(True)
+            GUI.tab_database.setEnabled(True)
         else:
             GUI.lineEdit_number_of_threads.setEnabled(False)
             GUI.lineEdit_num_per_address.setEnabled(False)
@@ -460,6 +463,8 @@ class myMainClass():
             GUI.lineEdit_webhook_link.setEnabled(False)
             GUI.lineEdit_email_tracking_campaign_name.setEnabled(False)
             GUI.lineEdit_email_tracking_analytics_account.setEnabled(False)
+            GUI.lineEdit_delay_between_emails.setEnabled(False)
+            GUI.tab_database.setEnabled(False)
 
     def send(self):
         try:
@@ -831,6 +836,7 @@ else:
     global app
     global GUI, mainWindow, myMC
     app = QtWidgets.QApplication(sys.argv)
+
     mainWindow = MainWindow()
     set_icon(mainWindow)
 

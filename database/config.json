@@ -1,6 +1,6 @@
 {
     "config": {
-        "date": "5/5/2021",
+        "date": "6/5/2021",
         "num_emails_per_address": 8,
         "delay_between_emails": "10-20",
         "limit_of_thread": 100,

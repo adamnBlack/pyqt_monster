@@ -293,6 +293,8 @@ class SMTP_(threading.Thread):
             count = 0
 
             for index, item in self.target.iterrows():
+                self.sleep()
+
                 if var.stop_send_campaign == True:
                     break
 
@@ -318,10 +320,11 @@ class SMTP_(threading.Thread):
                     for part in t_part:
                         msg.attach(part)
 
-                    self.sleep()
-
                     if count == 1:
                         first_time = datetime.now()
+
+                    if var.stop_send_campaign == True:
+                        break
 
                     try:
                         server.sendmail(
@@ -504,9 +507,10 @@ def main(group, d_start, d_end):
                 while var.thread_open_campaign >= var.limit_of_thread and var.stop_send_campaign == False:
                     time.sleep(1)
             except Exception as e:
-                print("Error at smtp thread opening - {} - {}".format(user, e))
-                logger.error(
-                    "Error at smtp thread opening - {} - {}".format(user, e))
+                print("Error at smtp thread opening {} - {} - {}".format(
+                    campaign_id, user, e))
+                logger.error("Error at smtp thread opening {} - {} - {}".format(
+                    campaign_id, user, e))
 
         while var.thread_open_campaign != 0 and var.stop_send_campaign == False:
             time.sleep(1)
@@ -550,11 +554,8 @@ def main(group, d_start, d_end):
         var.command_q.put("self.update_db_table()")
 
     var.email_failed = email_failed
-    var.send_campaign_run_status = False
 
     var.command_q.put("GUI.pushButton_send.setEnabled(True)")
-    print("sending finished")
-    logger.error("Sending Finished")
 
     alert(text='Total Emails Sent : {}\nAccounts Failed : {}\nTargets Remaining : {}\ncheck app.log and report.csv'.
           format(var.send_campaign_email_count, email_failed, len(var.target)), title='Alert', button='OK')
@@ -563,5 +564,7 @@ def main(group, d_start, d_end):
     var.command_q.put("GUI.progressBar_compose.setValue(0)")
     var.command_q.put("self.send_button_visibility(on=True)")
     var.command_q.put("self.compose_config_visibility(on=True)")
+    var.send_campaign_run_status = False
 
-    print(success_sent)
+    print("sending finished")
+    logger.error(f"Sending Finished {campaign_id}")
