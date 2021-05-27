@@ -4,3 +4,4 @@ build
 dist
 gmail_app
 test
+.qt_for_python
