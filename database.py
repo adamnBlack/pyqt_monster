@@ -49,6 +49,9 @@ class Targets(Base):
     one = Column(String)
     two = Column(String)
     three = Column(String)
+    four = Column(String)
+    five = Column(String)
+    six = Column(String)
     TONAME = Column(String)
     EMAIL = Column(String)
 
@@ -129,6 +132,9 @@ def db_update_row(row):
             objects.one = row["1"]
             objects.two = row["2"]
             objects.three = row["3"]
+            objects.four = row["4"]
+            objects.five = row["5"]
+            objects.six = row["6"]
             objects.TONAME = row["TONAME"]
             objects.EMAIL = row["EMAIL"]
 
@@ -225,6 +231,9 @@ def db_insert_row():
                 one="",
                 two="",
                 three="",
+                four="",
+                five="",
+                six="",
                 TONAME="",
                 EMAIL=""
             )
@@ -251,7 +260,7 @@ def file_to_db():
         group_header = ['FIRSTFROMNAME', 'LASTFROMNAME', 'EMAIL',
                         'EMAIL_PASS', 'PROXY:PORT', 'PROXY_USER', 'PROXY_PASS']
 
-        target_header = ['1', '2', '3', 'TONAME', 'EMAIL']
+        target_header = ['1', '2', '3', '4', '5', '6', 'TONAME', 'EMAIL']
 
         group_a = pd.read_excel(
             var.base_dir+'/group_a.xlsx', engine='openpyxl', sheet_name="group_a")
@@ -336,6 +345,9 @@ def file_to_db():
                     one=row['1'],
                     two=row['2'],
                     three=row['3'],
+                    four=row['4'],
+                    five=row['5'],
+                    six=row['6'],
                     TONAME=row['TONAME'],
                     EMAIL=row['EMAIL']
 
@@ -349,6 +361,9 @@ def file_to_db():
                     one="",
                     two="",
                     three="",
+                    four="",
+                    five="",
+                    six="",
                     TONAME="",
                     EMAIL=""
                 )
@@ -396,6 +411,9 @@ def dummy_data_db(group_a=True, group_b=True, target=True):
             one="",
             two="",
             three="",
+            four="",
+            five="",
+            six="",
             TONAME="",
             EMAIL=""
         )
@@ -436,6 +454,9 @@ def pandas_to_db():
             one=row['1'],
             two=row['2'],
             three=row['3'],
+            four=row['4'],
+            five=row['5'],
+            six=row['6'],
             TONAME=row['TONAME'],
             EMAIL=row['EMAIL']
 
@@ -490,6 +511,9 @@ def db_to_pandas():
             '1': item.one,
             '2': item.two,
             '3': item.three,
+            '4': item.four,
+            '5': item.five,
+            '6': item.six,
             'TONAME': item.TONAME,
             'EMAIL': item.EMAIL
         }.copy() for item in results]
@@ -502,6 +526,9 @@ def db_to_pandas():
             '1': item.one,
             '2': item.two,
             '3': item.three,
+            '4': item.four,
+            '5': item.five,
+            '6': item.six,
             'TONAME': item.TONAME,
             'EMAIL': item.EMAIL
         }.copy() for item in results]

@@ -86,12 +86,15 @@ def update_config_json():
               title='Alert', button='OK')
 
 
-def format_email(text, FIRSTFROMNAME, LASTFROMNAME, one, two, three, TONAME, source=None):
+def format_email(text, FIRSTFROMNAME, LASTFROMNAME, one, two, three, four, five, six, TONAME, source=None):
     text = text.replace('[FIRSTFROMNAME]', str(FIRSTFROMNAME))
     text = text.replace('[LASTFROMNAME]', str(LASTFROMNAME))
     text = text.replace('[1]', str(one))
     text = text.replace('[2]', str(two))
     text = text.replace('[3]', str(three))
+    text = text.replace('[4]', str(four))
+    text = text.replace('[5]', str(five))
+    text = text.replace('[6]', str(six))
     text = text.replace('[TONAME]', str(TONAME))
 
     if var.body_type == "Html" and var.email_tracking_state == True and source != None:
