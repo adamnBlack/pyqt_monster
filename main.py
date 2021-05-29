@@ -18,6 +18,7 @@ import re
 
 
 print("App started....")
+quit_application = False
 
 
 class MyGui(Ui_MainWindow, QtWidgets.QWidget):
@@ -30,7 +31,7 @@ class MyGui(Ui_MainWindow, QtWidgets.QWidget):
 
 class myMainClass():
     def __init__(self):
-        global mainWindow
+        global mainWindow, quit_application
 
         self.compose_font_size = 13
 
@@ -238,6 +239,7 @@ class myMainClass():
             alert(text="Must be number", title='Alert', button='OK')
 
     def check_for_subcription(self):
+        global quit_application
         while True:
             try:
                 url = var.api + \
@@ -250,16 +252,22 @@ class myMainClass():
                         self.try_failed = 0
                         print(data['end_date'])
                         date = str(data['end_date'])
+
+                        quit_application = True
+                        var.command_q.put("mainWindow.close()")
+
                         alert(text="Subscription Expired at {}.\nSoftware will exit soon.".format(date),
                               title='Alert', button='OK')
-                        mainWindow.close()
 
                     elif data['status'] == 3:
                         self.try_failed = 0
                         print("sub deactivated")
+
+                        quit_application = True
+                        var.command_q.put("mainWindow.close()")
+
                         alert(text="Subscription deativated.\nSoftware will exit soon.",
                               title='Alert', button='OK')
-                        mainWindow.close()
 
                     elif data['status'] == 1:
                         self.try_failed = 0
@@ -269,23 +277,33 @@ class myMainClass():
 
                     else:
                         self.try_failed = 0
+
+                        quit_application = True
+                        var.command_q.put("mainWindow.close()")
+
                         alert(text="Account not found",
                               title='Alert', button='OK')
-                        mainWindow.close()
 
                 else:
+                    quit_application = True
+                    var.command_q.put("mainWindow.close()")
+
                     alert(text="Error on server.\nContact Admin.",
                           title='Alert', button='OK')
 
             except Exception as e:
                 self.try_failed += 1
                 print("error at check_for_subcription: {}".format(e))
+
                 GUI.label_email_status.setText(
                     "Check your internet connection.")
+
                 if self.try_failed > 3:
+                    quit_application = True
+                    var.command_q.put("mainWindow.close()")
+
                     alert(text="Check your internet connection.",
                           title='Alert', button='OK')
-                    mainWindow.close()
 
             sleep(self.time_interval_sub_check)
 
@@ -823,7 +841,8 @@ class MainWindow(QtWidgets.QMainWindow):
                                                "QUIT",
                                                "Are you sure?",
                                                QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No)
-        if close == QtWidgets.QMessageBox.Yes:
+
+        if close == QtWidgets.QMessageBox.Yes or quit_application == True:
             myMC.command_timer.stop()
             event.accept()
         else:

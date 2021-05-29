@@ -740,3 +740,61 @@ Targets - {"ID": {"16": 17, "17": 18, "18": 19, "19": 20, "20": 21, "21": 22, "2
 Starting Thread : Name - Rene.Huber1999@gmail.com
 Targets - {"ID": {"24": 25, "25": 26, "26": 27}, "1": {"24": " ", "25": " ", "26": " "}, "2": {"24": " ", "25": " ", "26": " "}, "3": {"24": " ", "25": " ", "26": " "}, "TONAME": {"24": " ", "25": " ", "26": " "}, "EMAIL": {"24": "Justine.Lester.1981@gmail.com", "25": "Ola.Hampton.1982@gmail.com", "26": "Earlene.Simon.1983@gmail.com"}, "flag": {"24": 0, "25": 0, "26": 0}}
 2021-05-23 17:48:16,772 Sending Finished 85764a72-7acc-48e1-95a8-e32242c446a4
+2021-05-30 02:54:22,817 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: b954ba35-dfda-4257-ae8e-675e2d4848f9
+2021-05-30 02:54:23,423 
+Starting Thread : Name - Elva.Lynn1987@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "flag": {"0": 0}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "Samantha.Browning.1980@gmail.com"}}
+2021-05-30 02:54:27,952 Error at Sending - Elva.Lynn1987@gmail.com - format_email() missing 3 required positional arguments: 'five', 'six', and 'TONAME'
+2021-05-30 02:54:38,799 Sending Finished b954ba35-dfda-4257-ae8e-675e2d4848f9
+2021-05-30 03:13:16,811 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: 9c618534-dba9-4d30-9d5f-c07fe345f628
+2021-05-30 03:13:16,915 
+Starting Thread : Name - Elva.Lynn1987@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "flag": {"0": 0}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "Samantha.Browning.1980@gmail.com"}}
+2021-05-30 03:13:16,931 Error at Sending - Elva.Lynn1987@gmail.com - 
+2021-05-30 03:13:17,826 Error at SendWebhook part 2 : HTTPSConnectionPool(host='webhook.site', port=443): Max retries exceeded with url: /0c0607d4-c11c-4a29-8ed6-63d3968cdde6 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001D97A6A9550>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2021-05-30 03:13:44,177 Sending Finished 9c618534-dba9-4d30-9d5f-c07fe345f628
+2021-05-30 03:20:46,357 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: 739fbf8a-dcf4-4324-bfe6-7523dee9c066
+2021-05-30 03:20:46,391 
+Starting Thread : Name - Elva.Lynn1987@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "flag": {"0": 0}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "Samantha.Browning.1980@gmail.com"}}
+2021-05-30 03:20:46,408 Error at Sending - Elva.Lynn1987@gmail.com - Error connecting to SOCKS5 proxy 81.28.96.172:43739: [WinError 10065] A socket operation was attempted to an unreachable host
+2021-05-30 03:20:47,365 Error at SendWebhook part 2 : HTTPSConnectionPool(host='webhook.site', port=443): Max retries exceeded with url: /0c0607d4-c11c-4a29-8ed6-63d3968cdde6 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001D20BBD6048>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2021-05-30 03:20:49,396 Sending Finished 739fbf8a-dcf4-4324-bfe6-7523dee9c066
+2021-05-30 03:22:55,827 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: a42ef042-61ff-42c3-a0d0-5e27f5e6b118
+2021-05-30 03:22:55,860 
+Starting Thread : Name - Elva.Lynn1987@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "flag": {"0": 0}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "Samantha.Browning.1980@gmail.com"}}
+2021-05-30 03:22:56,688 Error at Sending - Elva.Lynn1987@gmail.com - Socket error: 0x02: Connection not allowed by ruleset
+2021-05-30 03:22:58,866 Sending Finished a42ef042-61ff-42c3-a0d0-5e27f5e6b118

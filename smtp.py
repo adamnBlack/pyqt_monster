@@ -247,22 +247,38 @@ class SMTP_(threading.Thread):
         self.campaign_id = campaign_id
 
     def login(self):
-        if self.proxy_host != "":
-            server = SMTP(timeout=30)
-            server.connect_proxy(host=var.smtp_server, port=var.smtp_port,
-                                 proxy_host=self.proxy_host, proxy_port=int(self.proxy_port), proxy_type=socks.PROXY_TYPE_SOCKS5,
-                                 proxy_user=self.proxy_user, proxy_pass=self.proxy_pass)
-            # server.set_debuglevel(1)
-        else:
-            server = smtplib.SMTP(var.smtp_server, var.smtp_port)
-            server.set_debuglevel(0)
+        try:
+            if self.proxy_host != "":
+                server = SMTP(timeout=30)
+                server.connect_proxy(host=var.smtp_server, port=var.smtp_port,
+                                     proxy_host=self.proxy_host, proxy_port=int(self.proxy_port), proxy_type=socks.PROXY_TYPE_SOCKS5,
+                                     proxy_user=self.proxy_user, proxy_pass=self.proxy_pass)
+                # server.set_debuglevel(1)
+            else:
+                server = smtplib.SMTP(var.smtp_server, var.smtp_port)
+                server.set_debuglevel(0)
 
-        server.ehlo()
-        server.starttls()
-        server.ehlo()
-        server.login(self.user, self.passwd)
+            server.ehlo()
+            server.starttls()
+            server.ehlo()
+            server.login(self.user, self.passwd)
 
-        return server
+            return server
+
+        except Exception as e:
+            print(
+                f"Error at SMTP_.login {self.name} : {e.__class__.__name__} : {str(e)}")
+
+            if var.enable_webhook_status:
+                t_dict = {
+                    "sender": self.user,
+                    "sender_name": f"{self.FIRSTFROMNAME} {self.LASTFROMNAME}",
+                    "time": datetime.utcnow().strftime("%m/%d/%Y %H:%M:%S"),
+                    "error_details": f"{e.__class__.__name__} : {str(e)}"
+                }
+                var.webhook_q.put(t_dict.copy())
+
+            raise
 
     def sleep(self):
         duration = random.randint(self.d_start, self.d_end)
@@ -563,9 +579,6 @@ def main(group, d_start, d_end):
 
     var.command_q.put("GUI.pushButton_send.setEnabled(True)")
 
-    alert(text='Total Emails Sent : {}\nAccounts Failed : {}\nTargets Remaining : {}\ncheck app.log and report.csv'.
-          format(var.send_campaign_email_count, email_failed, len(var.target)), title='Alert', button='OK')
-
     var.command_q.put("self.update_compose_progressbar()")
     var.command_q.put("GUI.progressBar_compose.setValue(0)")
     var.command_q.put("self.send_button_visibility(on=True)")
@@ -574,3 +587,6 @@ def main(group, d_start, d_end):
 
     print("sending finished")
     logger.error(f"Sending Finished {campaign_id}")
+
+    alert(text='Total Emails Sent : {}\nAccounts Failed : {}\nTargets Remaining : {}\ncheck app.log and report.csv'.
+          format(var.send_campaign_email_count, email_failed, len(var.target)), title='Alert', button='OK')
