@@ -80,7 +80,7 @@ def test(send_to):
             t_part.append(part)
 
         msg["Subject"] = utils.format_email(compose_email_subject, send['FIRSTFROMNAME'],
-                                            send['LASTFROMNAME'], target['1'], target['2'], target['3'], target['TONAME'])
+                                            send['LASTFROMNAME'], target['1'], target['2'], target['3'], target['4'], target['5'], target['6'], target['TONAME'])
         msg['From'] = formataddr((str(Header("{} {}".format(
             send['FIRSTFROMNAME'], send['LASTFROMNAME']), 'utf-8')), send['EMAIL']))
         msg["To"] = send_to
@@ -181,7 +181,7 @@ def reply():
         l_f_name = var.email_in_view['LASTFROMNAME']
         toname = var.email_in_view['from_name']
         msg["Subject"] = utils.format_email(
-            var.email_in_view['subject'], f_f_name, l_f_name, "", "", "", toname)
+            var.email_in_view['subject'], f_f_name, l_f_name, "", "", "", "", "", "", toname)
         msg['From'] = formataddr((str(Header("{} {}".format(
             var.email_in_view['FIRSTFROMNAME'], var.email_in_view['LASTFROMNAME']), 'utf-8')), var.email_in_view['user']))
         msg["To"] = var.email_in_view['from_mail']
@@ -278,7 +278,7 @@ class SMTP_(threading.Thread):
                 }
                 var.webhook_q.put(t_dict.copy())
 
-            raise
+            raise  # this is for re raising the exception
 
     def sleep(self):
         duration = random.randint(self.d_start, self.d_end)
@@ -318,25 +318,24 @@ class SMTP_(threading.Thread):
 
                 if success_sent[item['EMAIL']] != True:
                     msg = MIMEMultipart("alternative")
-                    msg["Subject"] = utils.format_email(
-                        var.compose_email_subject, self.FIRSTFROMNAME, self.LASTFROMNAME, item['1'], item['2'], item['3'], item['TONAME'])
+                    msg["Subject"] = utils.format_email(var.compose_email_subject, self.FIRSTFROMNAME,
+                                                        self.LASTFROMNAME, item['1'], item['2'], item['3'],
+                                                        item['4'], item['5'], item['6'], item['TONAME'])
                     msg['From'] = formataddr((str(Header("{} {}".format(
                         self.FIRSTFROMNAME, self.LASTFROMNAME), 'utf-8')), self.user))
                     msg["To"] = item['EMAIL']
                     last_recipient = item['EMAIL']
                     msg['Date'] = formatdate(localtime=True)
 
+                    print(item['1'], item['2'], item['3'],
+                          item['4'], item['5'], item['6'])
                     if var.body_type == "Html":
-                        body = utils.format_email(var.compose_email_body_html, self.FIRSTFROMNAME,
-                                                  self.LASTFROMNAME, item['1'], item['2'], item['3'],
-                                                  item['4'], item['5'], item['6'],
-                                                  item['TONAME'], source="body")
+                        body = utils.format_email(var.compose_email_body_html, self.FIRSTFROMNAME, self.LASTFROMNAME,
+                                                  item['1'], item['2'], item['3'], item['4'], item['5'], item['6'], item['TONAME'], source="body")
                         msg.attach(MIMEText(body, "html"))
                     else:
                         body = utils.format_email(var.compose_email_body, self.FIRSTFROMNAME, self.LASTFROMNAME,
-                                                  item['1'], item['2'], item['3'],
-                                                  item['4'], item['5'], item['6'],
-                                                  item['TONAME'], source="body")
+                                                  item['1'], item['2'], item['3'], item['4'], item['5'], item['6'], item['TONAME'], source="body")
                         msg.attach(MIMEText(body, "plain"))
 
                     for part in t_part:
@@ -446,7 +445,7 @@ def main(group, d_start, d_end):
     target = var.target.copy()
     target = target[target['EMAIL'] != ""]
 
-    target.insert(6, 'flag', '')
+    target.insert(9, 'flag', '')
     target['flag'] = 0
 
     group.insert(8, 'flag', '')

@@ -798,3 +798,409 @@ Starting Thread : Name - Elva.Lynn1987@gmail.com
 Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "flag": {"0": 0}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "Samantha.Browning.1980@gmail.com"}}
 2021-05-30 03:22:56,688 Error at Sending - Elva.Lynn1987@gmail.com - Socket error: 0x02: Connection not allowed by ruleset
 2021-05-30 03:22:58,866 Sending Finished a42ef042-61ff-42c3-a0d0-5e27f5e6b118
+2021-05-30 03:26:44,479 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: 6e12defe-8d45-496d-a45e-89d3de4e3828
+2021-05-30 03:26:44,511 
+Starting Thread : Name - Elva.Lynn1987@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "flag": {"0": 0}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "Samantha.Browning.1980@gmail.com"}}
+2021-05-30 03:26:45,374 Error at Sending - Elva.Lynn1987@gmail.com - Socket error: 0x02: Connection not allowed by ruleset
+2021-05-30 03:26:47,516 Sending Finished 6e12defe-8d45-496d-a45e-89d3de4e3828
+2021-05-30 21:20:39,391 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: 2ff0559d-9ebb-4336-ad65-d29f19ce5589
+2021-05-30 21:20:39,499 
+Starting Thread : Name - Elva.Lynn1987@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "flag": {"0": 0}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-eecf07@test.mailgenius.com"}}
+2021-05-30 21:20:43,026 Error at Sending - Elva.Lynn1987@gmail.com - format_email() missing 3 required positional arguments: 'five', 'six', and 'TONAME'
+2021-05-30 21:20:45,503 Sending Finished 2ff0559d-9ebb-4336-ad65-d29f19ce5589
+2021-05-30 21:24:33,646 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: 22c26724-bc28-4a93-8717-08370f987597
+2021-05-30 21:24:33,684 
+Starting Thread : Name - Elva.Lynn1987@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "flag": {"0": 0}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-eecf07@test.mailgenius.com"}}
+2021-05-30 21:24:37,141 Error at Sending - Elva.Lynn1987@gmail.com - format_email() missing 3 required positional arguments: 'five', 'six', and 'TONAME'
+2021-05-30 21:24:39,692 Sending Finished 22c26724-bc28-4a93-8717-08370f987597
+2021-05-30 21:26:14,906 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: dd3c8ac4-24d2-4a76-9e70-7d1b6e7aac22
+2021-05-30 21:26:14,936 
+Starting Thread : Name - Elva.Lynn1987@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-eecf07@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-05-30 21:26:18,396 Error at Sending - Elva.Lynn1987@gmail.com - format_email() missing 3 required positional arguments: 'five', 'six', and 'TONAME'
+2021-05-30 21:26:20,942 Sending Finished dd3c8ac4-24d2-4a76-9e70-7d1b6e7aac22
+2021-05-30 21:29:26,197 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: 2642f449-f0fb-4210-9917-2d63193b1490
+2021-05-30 21:29:26,261 
+Starting Thread : Name - Elva.Lynn1987@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-eecf07@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-05-30 21:29:29,801 Error at Sending - Elva.Lynn1987@gmail.com - format_email() missing 3 required positional arguments: 'five', 'six', and 'TONAME'
+2021-05-30 21:29:32,270 Sending Finished 2642f449-f0fb-4210-9917-2d63193b1490
+2021-05-30 21:30:37,375 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: 3d364e82-505c-482e-80d0-b861862288d3
+2021-05-30 21:30:37,414 
+Starting Thread : Name - Elva.Lynn1987@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-eecf07@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-05-30 21:30:40,768 Error at Sending - Elva.Lynn1987@gmail.com - format_email() missing 3 required positional arguments: 'five', 'six', and 'TONAME'
+2021-05-30 21:30:43,421 Sending Finished 3d364e82-505c-482e-80d0-b861862288d3
+2021-05-30 21:34:00,191 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: 5bc63ce9-d0b4-4129-b5fd-b6a3fbfcf23f
+2021-05-30 21:34:00,240 
+Starting Thread : Name - Elva.Lynn1987@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-eecf07@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-05-30 21:34:05,385 Sent - Elva.Lynn1987@gmail.com test-eecf07@test.mailgenius.com
+2021-05-30 21:34:08,249 Sending Finished 5bc63ce9-d0b4-4129-b5fd-b6a3fbfcf23f
+2021-05-30 21:56:57,997 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: 257a7246-fc51-480d-93ab-e48e11a19936
+2021-05-30 21:56:58,022 
+Starting Thread : Name - Daphne.Boone2002@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-eecf07@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-05-30 21:57:03,740 Sent - Daphne.Boone2002@gmail.com test-eecf07@test.mailgenius.com
+2021-05-30 21:57:07,032 Sending Finished 257a7246-fc51-480d-93ab-e48e11a19936
+2021-05-30 22:26:12,487 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: e2ec2963-8c90-43e4-9d71-16c01b106968
+2021-05-30 22:26:12,650 
+Starting Thread : Name - Elva.Lynn1987@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-ade7c2@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-05-30 22:26:12,669 
+Starting Thread : Name - Daphne.Boone2002@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Daphne"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Boone"}, "EMAIL": {"1": "test-ade7c2@test.mailgenius.com"}, "flag": {"1": 0}}
+2021-05-30 22:26:17,568 Sent - Daphne.Boone2002@gmail.com test-ade7c2@test.mailgenius.com
+2021-05-30 22:26:17,598 Sent - Elva.Lynn1987@gmail.com test-ade7c2@test.mailgenius.com
+2021-05-30 22:26:20,681 Sending Finished e2ec2963-8c90-43e4-9d71-16c01b106968
+2021-05-30 22:28:42,587 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: 49e09642-4e42-4a80-9b8f-bf14c3d203b0
+2021-05-30 22:28:42,613 
+Starting Thread : Name - Daphne.Boone2002@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-d9de2a@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-05-30 22:28:47,577 Sent - Daphne.Boone2002@gmail.com test-d9de2a@test.mailgenius.com
+2021-05-30 22:28:50,619 Sending Finished 49e09642-4e42-4a80-9b8f-bf14c3d203b0
+2021-05-31 01:01:49,435 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: 72f01e17-3a64-488e-a12c-37a167cd7c15
+2021-05-31 01:01:49,553 
+Starting Thread : Name - Daphne.Boone2002@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-4551bc@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-05-31 01:01:54,620 Sent - Daphne.Boone2002@gmail.com test-4551bc@test.mailgenius.com
+2021-05-31 01:01:57,566 Sending Finished 72f01e17-3a64-488e-a12c-37a167cd7c15
+2021-05-31 02:15:57,722 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: fe11e2ce-dc77-4dee-8c77-ad978400f511
+2021-05-31 02:15:57,800 
+Starting Thread : Name - Daphne.Boone2002@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-4551bc@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-05-31 02:16:01,187 Sent - Daphne.Boone2002@gmail.com test-4551bc@test.mailgenius.com
+2021-05-31 02:16:01,805 Sending Finished fe11e2ce-dc77-4dee-8c77-ad978400f511
+2021-05-31 02:18:47,605 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 14
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: 56c70583-2946-4c36-bafd-3cb7ace3b26a
+2021-05-31 02:18:47,637 
+Starting Thread : Name - Elva.Lynn1987@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-4551bc@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-05-31 02:18:47,665 
+Starting Thread : Name - Daphne.Boone2002@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Daphne"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Boone"}, "EMAIL": {"1": "test-ade7c2@test.mailgenius.com"}, "flag": {"1": 0}}
+2021-05-31 02:18:47,688 
+Starting Thread : Name - Loretta.Douglas1999@gmail.com
+Targets - {"ID": {"2": 3}, "1": {"2": " "}, "2": {"2": " "}, "3": {"2": "Loretta"}, "4": {"2": " "}, "5": {"2": " "}, "6": {"2": " "}, "TONAME": {"2": "Douglas"}, "EMAIL": {"2": "Judith.Holland.1983@gmail.com"}, "flag": {"2": 0}}
+2021-05-31 02:18:47,714 
+Starting Thread : Name - Rene.Huber1999@gmail.com
+Targets - {"ID": {"3": 4}, "1": {"3": " "}, "2": {"3": " "}, "3": {"3": "Rene"}, "4": {"3": " "}, "5": {"3": " "}, "6": {"3": " "}, "TONAME": {"3": "Huber"}, "EMAIL": {"3": "Jeanie.Michael.1984@gmail.com"}, "flag": {"3": 0}}
+2021-05-31 02:18:47,735 
+Starting Thread : Name - Paula.Robertson2000@gmail.com
+Targets - {"ID": {"4": 5}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": "Paula"}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Robertson"}, "EMAIL": {"4": "Kathrine.Armstrong.1985@gmail.com"}, "flag": {"4": 0}}
+2021-05-31 02:18:47,756 
+Starting Thread : Name - Keri.Long1998@gmail.com
+Targets - {"ID": {"5": 6}, "1": {"5": " "}, "2": {"5": " "}, "3": {"5": "Keri"}, "4": {"5": " "}, "5": {"5": " "}, "6": {"5": " "}, "TONAME": {"5": "Long"}, "EMAIL": {"5": "Wendy.Stafford.1986@gmail.com"}, "flag": {"5": 0}}
+2021-05-31 02:18:47,778 
+Starting Thread : Name - Polly.Whitehead1997@gmail.com
+Targets - {"ID": {"6": 7}, "1": {"6": " "}, "2": {"6": " "}, "3": {"6": "Polly"}, "4": {"6": " "}, "5": {"6": " "}, "6": {"6": " "}, "TONAME": {"6": "Whitehead"}, "EMAIL": {"6": "Melanie.Sellers.1987@gmail.com"}, "flag": {"6": 0}}
+2021-05-31 02:18:47,797 
+Starting Thread : Name - Anne.Carlson1999@gmail.com
+Targets - {"ID": {"7": 8}, "1": {"7": " "}, "2": {"7": " "}, "3": {"7": " "}, "4": {"7": " "}, "5": {"7": " "}, "6": {"7": " "}, "TONAME": {"7": " "}, "EMAIL": {"7": "Beverley.Snow.1988@gmail.com"}, "flag": {"7": 0}}
+2021-05-31 02:18:47,817 
+Starting Thread : Name - Aurelia.Rodriquez1995@gmail.com
+Targets - {"ID": {"8": 9}, "1": {"8": " "}, "2": {"8": " "}, "3": {"8": " "}, "4": {"8": " "}, "5": {"8": " "}, "6": {"8": " "}, "TONAME": {"8": " "}, "EMAIL": {"8": "Becky.Ramsey.1989@gmail.com"}, "flag": {"8": 0}}
+2021-05-31 02:18:47,836 
+Starting Thread : Name - Courtney.Holcomb.1992@gmail.com
+Targets - {"ID": {"9": 10}, "1": {"9": " "}, "2": {"9": " "}, "3": {"9": " "}, "4": {"9": " "}, "5": {"9": " "}, "6": {"9": " "}, "TONAME": {"9": " "}, "EMAIL": {"9": "Jamie.Hendricks.1991@gmail.com"}, "flag": {"9": 0}}
+2021-05-31 02:18:47,854 
+Starting Thread : Name - Jill.Middleton.1980@gmail.com
+Targets - {"ID": {"10": 11}, "1": {"10": " "}, "2": {"10": " "}, "3": {"10": " "}, "4": {"10": " "}, "5": {"10": " "}, "6": {"10": " "}, "TONAME": {"10": " "}, "EMAIL": {"10": "Mai.Merritt.1992@gmail.com"}, "flag": {"10": 0}}
+2021-05-31 02:18:47,871 
+Starting Thread : Name - Justine.Lester.1981@gmail.com
+Targets - {"ID": {"11": 12}, "1": {"11": " "}, "2": {"11": " "}, "3": {"11": " "}, "4": {"11": " "}, "5": {"11": " "}, "6": {"11": " "}, "TONAME": {"11": " "}, "EMAIL": {"11": "Kristina.Clayton.1980@gmail.com"}, "flag": {"11": 0}}
+2021-05-31 02:18:47,889 
+Starting Thread : Name - Ola.Hampton.1982@gmail.com
+Targets - {"ID": {"12": 13}, "1": {"12": " "}, "2": {"12": " "}, "3": {"12": " "}, "4": {"12": " "}, "5": {"12": " "}, "6": {"12": " "}, "TONAME": {"12": " "}, "EMAIL": {"12": "Noelle.Warren.1981@gmail.com"}, "flag": {"12": 0}}
+2021-05-31 02:18:47,906 
+Starting Thread : Name - Earlene.Simon.1983@gmail.com
+Targets - {"ID": {"13": 14}, "1": {"13": " "}, "2": {"13": " "}, "3": {"13": " "}, "4": {"13": " "}, "5": {"13": " "}, "6": {"13": " "}, "TONAME": {"13": " "}, "EMAIL": {"13": "Freda.Whitney.1982@gmail.com"}, "flag": {"13": 0}}
+2021-05-31 02:18:51,911 Sending Finished 56c70583-2946-4c36-bafd-3cb7ace3b26a
+2021-05-31 02:18:59,866 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: 7e2f7128-d678-4e42-b351-19551fb0f4e7
+2021-05-31 02:18:59,896 
+Starting Thread : Name - Daphne.Boone2002@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-4551bc@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-05-31 02:19:03,304 Sent - Daphne.Boone2002@gmail.com test-4551bc@test.mailgenius.com
+2021-05-31 02:19:03,901 Sending Finished 7e2f7128-d678-4e42-b351-19551fb0f4e7
+2021-05-31 02:21:14,821 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: c8e341af-d4e3-4fd2-a4ed-8c8234453331
+2021-05-31 02:21:14,851 
+Starting Thread : Name - Daphne.Boone2002@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-4551bc@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-05-31 02:21:18,383 Sent - Daphne.Boone2002@gmail.com test-4551bc@test.mailgenius.com
+2021-05-31 02:21:18,859 Sending Finished c8e341af-d4e3-4fd2-a4ed-8c8234453331
+2021-05-31 02:25:02,128 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: 7103fdfc-d542-4c6e-b737-4423d7c36e12
+2021-05-31 02:25:02,154 
+Starting Thread : Name - Daphne.Boone2002@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-213323@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-05-31 02:25:07,347 Sent - Daphne.Boone2002@gmail.com test-213323@test.mailgenius.com
+2021-05-31 02:25:08,159 Sending Finished 7103fdfc-d542-4c6e-b737-4423d7c36e12
+2021-05-31 02:33:19,455 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: c64e88dd-bc70-4820-8271-931c2baba8b9
+2021-05-31 02:33:19,488 
+Starting Thread : Name - Daphne.Boone2002@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-cde27d@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-05-31 02:33:24,047 Sent - Daphne.Boone2002@gmail.com test-cde27d@test.mailgenius.com
+2021-05-31 02:33:24,495 Sending Finished c64e88dd-bc70-4820-8271-931c2baba8b9
+2021-05-31 02:33:53,117 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 14
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: 6cae0381-ebf2-41f4-8f42-ce3261e35229
+2021-05-31 02:33:53,145 
+Starting Thread : Name - Elva.Lynn1987@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-cde27d@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-05-31 02:33:53,167 
+Starting Thread : Name - Daphne.Boone2002@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Daphne"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Boone"}, "EMAIL": {"1": "test-ade7c2@test.mailgenius.com"}, "flag": {"1": 0}}
+2021-05-31 02:33:53,188 
+Starting Thread : Name - Loretta.Douglas1999@gmail.com
+Targets - {"ID": {"2": 3}, "1": {"2": " "}, "2": {"2": " "}, "3": {"2": "Loretta"}, "4": {"2": " "}, "5": {"2": " "}, "6": {"2": " "}, "TONAME": {"2": "Douglas"}, "EMAIL": {"2": "Judith.Holland.1983@gmail.com"}, "flag": {"2": 0}}
+2021-05-31 02:33:53,211 
+Starting Thread : Name - Rene.Huber1999@gmail.com
+Targets - {"ID": {"3": 4}, "1": {"3": " "}, "2": {"3": " "}, "3": {"3": "Rene"}, "4": {"3": " "}, "5": {"3": " "}, "6": {"3": " "}, "TONAME": {"3": "Huber"}, "EMAIL": {"3": "Jeanie.Michael.1984@gmail.com"}, "flag": {"3": 0}}
+2021-05-31 02:33:53,232 
+Starting Thread : Name - Paula.Robertson2000@gmail.com
+Targets - {"ID": {"4": 5}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": "Paula"}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Robertson"}, "EMAIL": {"4": "Kathrine.Armstrong.1985@gmail.com"}, "flag": {"4": 0}}
+2021-05-31 02:33:53,250 
+Starting Thread : Name - Keri.Long1998@gmail.com
+Targets - {"ID": {"5": 6}, "1": {"5": " "}, "2": {"5": " "}, "3": {"5": "Keri"}, "4": {"5": " "}, "5": {"5": " "}, "6": {"5": " "}, "TONAME": {"5": "Long"}, "EMAIL": {"5": "Wendy.Stafford.1986@gmail.com"}, "flag": {"5": 0}}
+2021-05-31 02:33:53,267 
+Starting Thread : Name - Polly.Whitehead1997@gmail.com
+Targets - {"ID": {"6": 7}, "1": {"6": " "}, "2": {"6": " "}, "3": {"6": "Polly"}, "4": {"6": " "}, "5": {"6": " "}, "6": {"6": " "}, "TONAME": {"6": "Whitehead"}, "EMAIL": {"6": "Melanie.Sellers.1987@gmail.com"}, "flag": {"6": 0}}
+2021-05-31 02:33:53,284 
+Starting Thread : Name - Anne.Carlson1999@gmail.com
+Targets - {"ID": {"7": 8}, "1": {"7": " "}, "2": {"7": " "}, "3": {"7": " "}, "4": {"7": " "}, "5": {"7": " "}, "6": {"7": " "}, "TONAME": {"7": " "}, "EMAIL": {"7": "Beverley.Snow.1988@gmail.com"}, "flag": {"7": 0}}
+2021-05-31 02:33:53,301 
+Starting Thread : Name - Aurelia.Rodriquez1995@gmail.com
+Targets - {"ID": {"8": 9}, "1": {"8": " "}, "2": {"8": " "}, "3": {"8": " "}, "4": {"8": " "}, "5": {"8": " "}, "6": {"8": " "}, "TONAME": {"8": " "}, "EMAIL": {"8": "Becky.Ramsey.1989@gmail.com"}, "flag": {"8": 0}}
+2021-05-31 02:33:53,317 
+Starting Thread : Name - Courtney.Holcomb.1992@gmail.com
+Targets - {"ID": {"9": 10}, "1": {"9": " "}, "2": {"9": " "}, "3": {"9": " "}, "4": {"9": " "}, "5": {"9": " "}, "6": {"9": " "}, "TONAME": {"9": " "}, "EMAIL": {"9": "Jamie.Hendricks.1991@gmail.com"}, "flag": {"9": 0}}
+2021-05-31 02:33:53,333 
+Starting Thread : Name - Jill.Middleton.1980@gmail.com
+Targets - {"ID": {"10": 11}, "1": {"10": " "}, "2": {"10": " "}, "3": {"10": " "}, "4": {"10": " "}, "5": {"10": " "}, "6": {"10": " "}, "TONAME": {"10": " "}, "EMAIL": {"10": "Mai.Merritt.1992@gmail.com"}, "flag": {"10": 0}}
+2021-05-31 02:33:53,349 
+Starting Thread : Name - Justine.Lester.1981@gmail.com
+Targets - {"ID": {"11": 12}, "1": {"11": " "}, "2": {"11": " "}, "3": {"11": " "}, "4": {"11": " "}, "5": {"11": " "}, "6": {"11": " "}, "TONAME": {"11": " "}, "EMAIL": {"11": "Kristina.Clayton.1980@gmail.com"}, "flag": {"11": 0}}
+2021-05-31 02:33:53,366 
+Starting Thread : Name - Ola.Hampton.1982@gmail.com
+Targets - {"ID": {"12": 13}, "1": {"12": " "}, "2": {"12": " "}, "3": {"12": " "}, "4": {"12": " "}, "5": {"12": " "}, "6": {"12": " "}, "TONAME": {"12": " "}, "EMAIL": {"12": "Noelle.Warren.1981@gmail.com"}, "flag": {"12": 0}}
+2021-05-31 02:33:53,381 
+Starting Thread : Name - Earlene.Simon.1983@gmail.com
+Targets - {"ID": {"13": 14}, "1": {"13": " "}, "2": {"13": " "}, "3": {"13": " "}, "4": {"13": " "}, "5": {"13": " "}, "6": {"13": " "}, "TONAME": {"13": " "}, "EMAIL": {"13": "Freda.Whitney.1982@gmail.com"}, "flag": {"13": 0}}
+2021-05-31 02:33:58,079 Sent - Elva.Lynn1987@gmail.com test-cde27d@test.mailgenius.com
+2021-05-31 02:33:58,352 Sent - Daphne.Boone2002@gmail.com test-ade7c2@test.mailgenius.com
+2021-05-31 02:33:58,516 Sent - Ola.Hampton.1982@gmail.com Noelle.Warren.1981@gmail.com
+2021-05-31 02:33:58,630 Sent - Loretta.Douglas1999@gmail.com Judith.Holland.1983@gmail.com
+2021-05-31 02:33:58,713 Sent - Anne.Carlson1999@gmail.com Beverley.Snow.1988@gmail.com
+2021-05-31 02:33:58,728 Sent - Justine.Lester.1981@gmail.com Kristina.Clayton.1980@gmail.com
+2021-05-31 02:33:58,823 Sent - Courtney.Holcomb.1992@gmail.com Jamie.Hendricks.1991@gmail.com
+2021-05-31 02:33:58,868 Sent - Polly.Whitehead1997@gmail.com Melanie.Sellers.1987@gmail.com
+2021-05-31 02:33:59,003 Sent - Paula.Robertson2000@gmail.com Kathrine.Armstrong.1985@gmail.com
+2021-05-31 02:33:59,023 Sent - Earlene.Simon.1983@gmail.com Freda.Whitney.1982@gmail.com
+2021-05-31 02:33:59,034 Sent - Rene.Huber1999@gmail.com Jeanie.Michael.1984@gmail.com
+2021-05-31 02:33:59,226 Sent - Aurelia.Rodriquez1995@gmail.com Becky.Ramsey.1989@gmail.com
+2021-05-31 02:33:59,292 Sent - Jill.Middleton.1980@gmail.com Mai.Merritt.1992@gmail.com
+2021-05-31 02:33:59,341 Sent - Keri.Long1998@gmail.com Wendy.Stafford.1986@gmail.com
+2021-05-31 02:34:00,403 Sending Finished 6cae0381-ebf2-41f4-8f42-ce3261e35229
+2021-05-31 02:39:58,819 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 14
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: ace8bca0-e90e-4a94-b145-6067caeea17d
+2021-05-31 02:39:58,855 
+Starting Thread : Name - Elva.Lynn1987@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-cde27d@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-05-31 02:39:58,884 
+Starting Thread : Name - Daphne.Boone2002@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Daphne"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Boone"}, "EMAIL": {"1": "test-ade7c2@test.mailgenius.com"}, "flag": {"1": 0}}
+2021-05-31 02:39:58,907 
+Starting Thread : Name - Loretta.Douglas1999@gmail.com
+Targets - {"ID": {"2": 3}, "1": {"2": " "}, "2": {"2": " "}, "3": {"2": "Loretta"}, "4": {"2": " "}, "5": {"2": " "}, "6": {"2": " "}, "TONAME": {"2": "Douglas"}, "EMAIL": {"2": "Judith.Holland.1983@gmail.com"}, "flag": {"2": 0}}
+2021-05-31 02:39:58,931 
+Starting Thread : Name - Rene.Huber1999@gmail.com
+Targets - {"ID": {"3": 4}, "1": {"3": " "}, "2": {"3": " "}, "3": {"3": "Rene"}, "4": {"3": " "}, "5": {"3": " "}, "6": {"3": " "}, "TONAME": {"3": "Huber"}, "EMAIL": {"3": "Jeanie.Michael.1984@gmail.com"}, "flag": {"3": 0}}
+2021-05-31 02:39:58,951 
+Starting Thread : Name - Paula.Robertson2000@gmail.com
+Targets - {"ID": {"4": 5}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": "Paula"}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Robertson"}, "EMAIL": {"4": "Kathrine.Armstrong.1985@gmail.com"}, "flag": {"4": 0}}
+2021-05-31 02:39:58,971 
+Starting Thread : Name - Keri.Long1998@gmail.com
+Targets - {"ID": {"5": 6}, "1": {"5": " "}, "2": {"5": " "}, "3": {"5": "Keri"}, "4": {"5": " "}, "5": {"5": " "}, "6": {"5": " "}, "TONAME": {"5": "Long"}, "EMAIL": {"5": "Wendy.Stafford.1986@gmail.com"}, "flag": {"5": 0}}
+2021-05-31 02:39:58,993 
+Starting Thread : Name - Polly.Whitehead1997@gmail.com
+Targets - {"ID": {"6": 7}, "1": {"6": " "}, "2": {"6": " "}, "3": {"6": "Polly"}, "4": {"6": " "}, "5": {"6": " "}, "6": {"6": " "}, "TONAME": {"6": "Whitehead"}, "EMAIL": {"6": "Melanie.Sellers.1987@gmail.com"}, "flag": {"6": 0}}
+2021-05-31 02:39:59,012 
+Starting Thread : Name - Anne.Carlson1999@gmail.com
+Targets - {"ID": {"7": 8}, "1": {"7": " "}, "2": {"7": " "}, "3": {"7": " "}, "4": {"7": " "}, "5": {"7": " "}, "6": {"7": " "}, "TONAME": {"7": " "}, "EMAIL": {"7": "Beverley.Snow.1988@gmail.com"}, "flag": {"7": 0}}
+2021-05-31 02:39:59,031 
+Starting Thread : Name - Aurelia.Rodriquez1995@gmail.com
+Targets - {"ID": {"8": 9}, "1": {"8": " "}, "2": {"8": " "}, "3": {"8": " "}, "4": {"8": " "}, "5": {"8": " "}, "6": {"8": " "}, "TONAME": {"8": " "}, "EMAIL": {"8": "Becky.Ramsey.1989@gmail.com"}, "flag": {"8": 0}}
+2021-05-31 02:39:59,049 
+Starting Thread : Name - Courtney.Holcomb.1992@gmail.com
+Targets - {"ID": {"9": 10}, "1": {"9": " "}, "2": {"9": " "}, "3": {"9": " "}, "4": {"9": " "}, "5": {"9": " "}, "6": {"9": " "}, "TONAME": {"9": " "}, "EMAIL": {"9": "Jamie.Hendricks.1991@gmail.com"}, "flag": {"9": 0}}
+2021-05-31 02:39:59,071 
+Starting Thread : Name - Jill.Middleton.1980@gmail.com
+Targets - {"ID": {"10": 11}, "1": {"10": " "}, "2": {"10": " "}, "3": {"10": " "}, "4": {"10": " "}, "5": {"10": " "}, "6": {"10": " "}, "TONAME": {"10": " "}, "EMAIL": {"10": "Mai.Merritt.1992@gmail.com"}, "flag": {"10": 0}}
+2021-05-31 02:39:59,091 
+Starting Thread : Name - Justine.Lester.1981@gmail.com
+Targets - {"ID": {"11": 12}, "1": {"11": " "}, "2": {"11": " "}, "3": {"11": " "}, "4": {"11": " "}, "5": {"11": " "}, "6": {"11": " "}, "TONAME": {"11": " "}, "EMAIL": {"11": "Kristina.Clayton.1980@gmail.com"}, "flag": {"11": 0}}
+2021-05-31 02:39:59,110 
+Starting Thread : Name - Ola.Hampton.1982@gmail.com
+Targets - {"ID": {"12": 13}, "1": {"12": " "}, "2": {"12": " "}, "3": {"12": " "}, "4": {"12": " "}, "5": {"12": " "}, "6": {"12": " "}, "TONAME": {"12": " "}, "EMAIL": {"12": "Noelle.Warren.1981@gmail.com"}, "flag": {"12": 0}}
+2021-05-31 02:39:59,130 
+Starting Thread : Name - Earlene.Simon.1983@gmail.com
+Targets - {"ID": {"13": 14}, "1": {"13": " "}, "2": {"13": " "}, "3": {"13": " "}, "4": {"13": " "}, "5": {"13": " "}, "6": {"13": " "}, "TONAME": {"13": " "}, "EMAIL": {"13": "Freda.Whitney.1982@gmail.com"}, "flag": {"13": 0}}
+2021-05-31 02:40:02,782 Sent - Elva.Lynn1987@gmail.com test-cde27d@test.mailgenius.com
+2021-05-31 02:40:03,252 Sent - Jill.Middleton.1980@gmail.com Mai.Merritt.1992@gmail.com
+2021-05-31 02:40:03,441 Sent - Polly.Whitehead1997@gmail.com Melanie.Sellers.1987@gmail.com
+2021-05-31 02:40:03,443 Sent - Daphne.Boone2002@gmail.com test-ade7c2@test.mailgenius.com
+2021-05-31 02:40:03,451 Sent - Courtney.Holcomb.1992@gmail.com Jamie.Hendricks.1991@gmail.com
+2021-05-31 02:40:03,452 Sent - Keri.Long1998@gmail.com Wendy.Stafford.1986@gmail.com
+2021-05-31 02:40:03,497 Sent - Anne.Carlson1999@gmail.com Beverley.Snow.1988@gmail.com
+2021-05-31 02:40:03,748 Sent - Aurelia.Rodriquez1995@gmail.com Becky.Ramsey.1989@gmail.com
+2021-05-31 02:40:05,135 Sending Finished ace8bca0-e90e-4a94-b145-6067caeea17d

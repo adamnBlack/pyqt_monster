@@ -56,7 +56,8 @@ class SMTP(smtplib.SMTP):
         self.source_address = source_address
         if host:
             if proxy_host:
-                (code, msg) = self.connect_proxy(proxy_host, proxy_port, proxy_type, host, port)
+                (code, msg) = self.connect_proxy(
+                    proxy_host, proxy_port, proxy_type, host, port)
             else:
                 (code, msg) = self.connect(host, port)
             if code != 220:
@@ -117,7 +118,7 @@ class SMTP(smtplib.SMTP):
                                         self.source_address)
 
     def connect_proxy(self, proxy_host='localhost', proxy_port=0, proxy_type=socks.HTTP,
-                        proxy_user='', proxy_pass='', host='', port=0):
+                      proxy_user='', proxy_pass='', host='', port=0):
         """Connect to a host on a given port via proxy server
         If the hostname ends with a colon (`:') followed by a number, and
         there is no port specified, that suffix will be stripped off and the
@@ -139,7 +140,8 @@ class SMTP(smtplib.SMTP):
         """
         if proxy_type not in socks.DEFAULT_PORTS.keys():
             raise NotSupportedProxyType
-        (proxy_host, proxy_port) = self._parse_host(host=proxy_host, port=proxy_port)
+        (proxy_host, proxy_port) = self._parse_host(
+            host=proxy_host, port=proxy_port)
         if not proxy_port:
             proxy_port = socks.DEFAULT_PORTS[proxy_type]
         (host, port) = self._parse_host(host=host, port=port)
@@ -147,7 +149,8 @@ class SMTP(smtplib.SMTP):
             self._print_debug('connect: via proxy', proxy_host, proxy_port)
         s = socks.socksocket()
         # s.set_proxy(proxy_type=proxy_type, addr=proxy_host, port=proxy_port)
-        s.set_proxy(proxy_type=proxy_type, addr=proxy_host, port=proxy_port, username=proxy_user, password=proxy_pass)
+        s.set_proxy(proxy_type=proxy_type, addr=proxy_host,
+                    port=proxy_port, username=proxy_user, password=proxy_pass)
         s.settimeout(self.timeout)
         # if self.source_address is not None:
         #     s.bind(self.source_address)
