@@ -156,6 +156,23 @@ class myMainClass():
         GUI.pushButton_compose_send_cancel.clicked.connect(
             self.compose_send_cancel)
 
+        GUI.checkBox_database_group_a.stateChanged.connect(
+            self.update_db_file_upload_config)
+        GUI.checkBox_database_group_b.stateChanged.connect(
+            self.update_db_file_upload_config)
+        GUI.checkBox_database_target.stateChanged.connect(
+            self.update_db_file_upload_config)
+
+    def update_db_file_upload_config(self):
+        var.db_file_loading_config['group_a'] = \
+            GUI.checkBox_database_group_a.isChecked()
+
+        var.db_file_loading_config['group_b'] = \
+            GUI.checkBox_database_group_b.isChecked()
+
+        var.db_file_loading_config['target'] = \
+            GUI.checkBox_database_target.isChecked()
+
     def showContextMenu(self, pos):
         print("pos " + str(pos))
         index = GUI.tableView_database.indexAt(pos)
@@ -863,7 +880,7 @@ else:
     ) | QtCore.Qt.WindowMinimizeButtonHint | QtCore.Qt.WindowSystemMenuHint)
 
     GUI = MyGui(mainWindow)
-    # mainWindow.showMaximized()
+    mainWindow.showMaximized()
     mainWindow.show()
 
     import var

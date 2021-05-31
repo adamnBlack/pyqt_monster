@@ -10,8 +10,8 @@ from queue import LifoQueue
 import logging
 from threading import Thread
 
-import main
-# import dialog
+# import main
+import dialog
 
 
 # pd.set_option('display.max_colwidth',1000)
@@ -21,6 +21,12 @@ base_dir = "database"
 
 # admin password = hkHK#j4@jh#@
 # email='orders@gmonster.net'
+
+db_file_loading_config = {
+    "group_a": True,
+    "group_b": True,
+    "target": True
+}
 
 email_failed = 0
 total_email_downloaded = 0

@@ -327,8 +327,6 @@ class SMTP_(threading.Thread):
                     last_recipient = item['EMAIL']
                     msg['Date'] = formatdate(localtime=True)
 
-                    print(item['1'], item['2'], item['3'],
-                          item['4'], item['5'], item['6'])
                     if var.body_type == "Html":
                         body = utils.format_email(var.compose_email_body_html, self.FIRSTFROMNAME, self.LASTFROMNAME,
                                                   item['1'], item['2'], item['3'], item['4'], item['5'], item['6'], item['TONAME'], source="body")

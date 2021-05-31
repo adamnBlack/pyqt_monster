@@ -253,128 +253,177 @@ def db_insert_row():
 
 def file_to_db():
     session = get_session()
+    logger.error(f"File loading Config: {var.db_file_loading_config}")
 
-    if os.path.exists(var.base_dir+'/group_a.xlsx') == True and os.path.exists(var.base_dir+'/group_b.xlsx') == True \
-            and os.path.exists(var.base_dir+'/target.xlsx') == True:
+    group_header = ['FIRSTFROMNAME', 'LASTFROMNAME', 'EMAIL',
+                    'EMAIL_PASS', 'PROXY:PORT', 'PROXY_USER', 'PROXY_PASS']
 
-        group_header = ['FIRSTFROMNAME', 'LASTFROMNAME', 'EMAIL',
-                        'EMAIL_PASS', 'PROXY:PORT', 'PROXY_USER', 'PROXY_PASS']
+    target_header = ['1', '2', '3', '4', '5', '6', 'TONAME', 'EMAIL']
 
-        target_header = ['1', '2', '3', '4', '5', '6', 'TONAME', 'EMAIL']
+    try:
+        if var.db_file_loading_config['group_a']:
+            clear_table(group_a=True)
 
-        group_a = pd.read_excel(
-            var.base_dir+'/group_a.xlsx', engine='openpyxl', sheet_name="group_a")
+            if os.path.exists(var.base_dir+'/group_a.xlsx'):
+                group_a = pd.read_excel(var.base_dir+'/group_a.xlsx',
+                                        engine='openpyxl', sheet_name="group_a")
+                group_a = group_a[group_header]
 
-        group_b = pd.read_excel(
-            var.base_dir+'/group_b.xlsx', engine='openpyxl', sheet_name="group_b")
+                if list(group_a.keys()) == group_header:
 
-        target = pd.read_excel(var.base_dir+'/target.xlsx',
-                               engine='openpyxl', sheet_name="target")
+                    group_a.fillna(" ", inplace=True)
+                    group_a = group_a.astype(str)
+                    group_a = group_a.loc[group_a['PROXY:PORT'] != " "]
 
-        target.columns = target.columns.astype(str)
+                    if len(group_a) > 0:
+                        objects = [Group_A(
+                            FIRSTFROMNAME=row['FIRSTFROMNAME'],
+                            LASTFROMNAME=row['LASTFROMNAME'],
+                            EMAIL=row['EMAIL'],
+                            EMAIL_PASS=row['EMAIL_PASS'],
+                            PROXY_PORT=row['PROXY:PORT'],
+                            PROXY_USER=row['PROXY_USER'],
+                            PROXY_PASS=row['PROXY_PASS']
 
-        print(list(group_a.keys()), list(group_b.keys()), list(target.keys()))
+                        ) for index, row in group_a.iterrows()]
 
-        if list(group_a.keys()) == group_header and list(group_b.keys()) == group_header and list(target.keys()) == target_header:
-            group_a.fillna(" ", inplace=True)
-            group_a = group_a.astype(str)
-            group_a = group_a.loc[group_a['PROXY:PORT'] != " "]
+                        session.add_all(objects)
+                    else:
+                        objects = Group_A(
+                            id=1,
+                            FIRSTFROMNAME="",
+                            LASTFROMNAME="",
+                            EMAIL="",
+                            EMAIL_PASS="",
+                            PROXY_PORT="",
+                            PROXY_USER="",
+                            PROXY_PASS=""
+                        )
+                        session.add(objects)
 
-            if len(group_a) > 0:
-                objects = [Group_A(
-                    FIRSTFROMNAME=row['FIRSTFROMNAME'],
-                    LASTFROMNAME=row['LASTFROMNAME'],
-                    EMAIL=row['EMAIL'],
-                    EMAIL_PASS=row['EMAIL_PASS'],
-                    PROXY_PORT=row['PROXY:PORT'],
-                    PROXY_USER=row['PROXY_USER'],
-                    PROXY_PASS=row['PROXY_PASS']
-
-                ) for index, row in group_a.iterrows()]
-
-                session.add_all(objects)
+                    session.commit()
+                else:
+                    raise Exception("Header's not matching on Group A.")
             else:
-                objects = Group_A(
-                    id=1,
-                    FIRSTFROMNAME="",
-                    LASTFROMNAME="",
-                    EMAIL="",
-                    EMAIL_PASS="",
-                    PROXY_PORT="",
-                    PROXY_USER="",
-                    PROXY_PASS=""
-                )
-                session.add(objects)
-
-            group_b.fillna(" ", inplace=True)
-            group_b = group_b.astype(str)
-            group_b = group_b.loc[group_b['PROXY:PORT'] != " "]
-
-            if len(group_b) > 0:
-                objects = [Group_B(
-                    FIRSTFROMNAME=row['FIRSTFROMNAME'],
-                    LASTFROMNAME=row['LASTFROMNAME'],
-                    EMAIL=row['EMAIL'],
-                    EMAIL_PASS=row['EMAIL_PASS'],
-                    PROXY_PORT=row['PROXY:PORT'],
-                    PROXY_USER=row['PROXY_USER'],
-                    PROXY_PASS=row['PROXY_PASS']
-
-                ) for index, row in group_b.iterrows()]
-
-                session.add_all(objects)
-            else:
-                objects = Group_B(
-                    id=1,
-                    FIRSTFROMNAME="",
-                    LASTFROMNAME="",
-                    EMAIL="",
-                    EMAIL_PASS="",
-                    PROXY_PORT="",
-                    PROXY_USER="",
-                    PROXY_PASS=""
-                )
-                session.add(objects)
-
-            target.fillna(" ", inplace=True)
-            target = target.astype(str)
-            target = target.loc[target['EMAIL'] != " "]
-
-            if len(target) > 0:
-                objects = [Targets(
-                    one=row['1'],
-                    two=row['2'],
-                    three=row['3'],
-                    four=row['4'],
-                    five=row['5'],
-                    six=row['6'],
-                    TONAME=row['TONAME'],
-                    EMAIL=row['EMAIL']
-
-                ) for index, row in target.iterrows()]
-
-                session.add_all(objects)
-
-            else:
-                objects = Targets(
-                    id=1,
-                    one="",
-                    two="",
-                    three="",
-                    four="",
-                    five="",
-                    six="",
-                    TONAME="",
-                    EMAIL=""
-                )
-                session.add(objects)
-
-            session.commit()
+                raise Exception("Group A file not found.")
         else:
-            alert(text="Headers not matching!!!", title='Alert', button='OK')
-            dummy_data_db()
-    else:
-        dummy_data_db()
+            print("skipping Group A")
+    except Exception as e:
+        logger.error(f"Error while loading Group A: {e}")
+        dummy_data_db(group_a=True, group_b=False, target=False)
+        return False, e
+
+    try:
+        if var.db_file_loading_config['group_b']:
+            clear_table(group_b=True)
+
+            if os.path.exists(var.base_dir+'/group_b.xlsx'):
+                group_b = pd.read_excel(var.base_dir+'/group_b.xlsx',
+                                        engine='openpyxl', sheet_name="group_b")
+                group_b = group_b[group_header]
+
+                if list(group_b.keys()) == group_header:
+
+                    group_b.fillna(" ", inplace=True)
+                    group_b = group_b.astype(str)
+                    group_b = group_b.loc[group_b['PROXY:PORT'] != " "]
+
+                    if len(group_b) > 0:
+                        objects = [Group_B(
+                            FIRSTFROMNAME=row['FIRSTFROMNAME'],
+                            LASTFROMNAME=row['LASTFROMNAME'],
+                            EMAIL=row['EMAIL'],
+                            EMAIL_PASS=row['EMAIL_PASS'],
+                            PROXY_PORT=row['PROXY:PORT'],
+                            PROXY_USER=row['PROXY_USER'],
+                            PROXY_PASS=row['PROXY_PASS']
+
+                        ) for index, row in group_b.iterrows()]
+
+                        session.add_all(objects)
+                    else:
+                        objects = Group_B(
+                            id=1,
+                            FIRSTFROMNAME="",
+                            LASTFROMNAME="",
+                            EMAIL="",
+                            EMAIL_PASS="",
+                            PROXY_PORT="",
+                            PROXY_USER="",
+                            PROXY_PASS=""
+                        )
+                        session.add(objects)
+
+                    session.commit()
+                else:
+                    raise Exception("Header's not matching on Group B.")
+            else:
+                raise Exception("Group B file not found.")
+        else:
+            print("skipping Group B")
+    except Exception as e:
+        logger.error(f"Error while loading Group B: {e}")
+        dummy_data_db(group_a=False, group_b=True, target=False)
+        return False, e
+
+    try:
+        if var.db_file_loading_config['target']:
+            clear_table(target=True)
+
+            if os.path.exists(var.base_dir+'/target.xlsx'):
+                target = pd.read_excel(var.base_dir+'/target.xlsx',
+                                       engine='openpyxl', sheet_name="target")
+
+                target.columns = target.columns.astype(str)
+                target = target[target_header]
+
+                if list(target.keys()) == target_header:
+                    target.fillna(" ", inplace=True)
+                    target = target.astype(str)
+                    target = target.loc[target['EMAIL'] != " "]
+
+                    if len(target) > 0:
+                        objects = [Targets(
+                            one=row['1'],
+                            two=row['2'],
+                            three=row['3'],
+                            four=row['4'],
+                            five=row['5'],
+                            six=row['6'],
+                            TONAME=row['TONAME'],
+                            EMAIL=row['EMAIL']
+
+                        ) for index, row in target.iterrows()]
+
+                        session.add_all(objects)
+
+                    else:
+                        objects = Targets(
+                            id=1,
+                            one="",
+                            two="",
+                            three="",
+                            four="",
+                            five="",
+                            six="",
+                            TONAME="",
+                            EMAIL=""
+                        )
+                        session.add(objects)
+
+                    session.commit()
+                else:
+                    raise Exception("Header's not matching on Target.")
+            else:
+                raise Exception("Target file not found.")
+        else:
+            print("skipping Target")
+    except Exception as e:
+        logger.error(f"Error while loading Target: {e}")
+        dummy_data_db(group_a=False, group_b=False, target=True)
+        return False, e
+
+    return True, None
 
 
 def dummy_data_db(group_a=True, group_b=True, target=True):
@@ -539,14 +588,21 @@ def db_to_pandas():
     print(var.target.head(5))
 
 
-def clear_table():
+def clear_table(group_a=None, group_b=None, target=None):
     try:
         session = get_session()
 
-        session.query(Group_A).delete()
-        session.query(Group_B).delete()
-        session.query(Targets).delete()
+        if group_a:
+            session.query(Group_A).delete()
+
+        if group_b:
+            session.query(Group_B).delete()
+
+        if target:
+            session.query(Targets).delete()
+
         session.commit()
+
     except Exception as e:
         session.rollback()
         print("Exeception occured at clear db table : {}".format(e))
@@ -556,11 +612,15 @@ def clear_table():
 
 def load_db():
     try:
-        clear_table()
-        file_to_db()
+        result, error = file_to_db()
         db_to_pandas()
-        alert(text="Database Loaded Successfully", title='Alert', button='OK')
-        main.GUI.radioButton_db_groupa.click()
+        var.command_q.put("self.update_db_table()")
+        if result:
+            alert(text="Database Loaded Successfully",
+                  title='Alert', button='OK')
+        else:
+            raise error
+
     except Exception as e:
         print("Exeception occured at db loading : {}".format(e))
         alert(text="Exeception occured at db loading : {}".format(
