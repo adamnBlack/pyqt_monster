@@ -1,81 +1,132 @@
-2021-05-31 22:14:43,121 Error while loading Group A: Group A file not found
-2021-05-31 22:52:16,122 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
-2021-05-31 22:52:16,122 Error while loading Group A: Group A file not found.
-2021-05-31 22:53:35,304 File loading Config: {'group_a': True, 'group_b': False, 'target': False}
-2021-05-31 22:54:25,243 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
-2021-05-31 22:54:25,243 Error while loading Group A: Group A file not found.
-2021-05-31 22:54:25,293 Error while loading Group B: Group B file not found.
-2021-05-31 22:54:25,346 Error while loading Target: Target file not found.
-2021-05-31 23:21:19,326 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
-2021-05-31 23:21:19,327 Error while loading Group A: Group A file not found.
-2021-05-31 23:28:12,705 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
-2021-05-31 23:28:12,705 Error while loading Group A: Group A file not found.
-2021-05-31 23:30:05,856 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
-2021-05-31 23:30:05,856 Error while loading Group A: Group A file not found.
-2021-05-31 23:31:40,582 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
-2021-05-31 23:31:40,582 Error while loading Group A: Group A file not found.
-2021-05-31 23:32:20,507 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
-2021-05-31 23:32:20,507 Error while loading Group A: Group A file not found.
-2021-05-31 23:34:09,720 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
-2021-05-31 23:34:09,721 Error while loading Group A: Group A file not found.
-2021-05-31 23:37:09,893 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
-2021-05-31 23:37:10,048 Error while loading Group A: Group A file not found.
-2021-05-31 23:37:15,928 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
-2021-05-31 23:37:16,084 Error while loading Group A: Group A file not found.
-2021-05-31 23:37:21,217 File loading Config: {'group_a': False, 'group_b': True, 'target': True}
-2021-05-31 23:37:21,361 Error while loading Group B: Group B file not found.
-2021-05-31 23:37:26,266 File loading Config: {'group_a': False, 'group_b': False, 'target': True}
-2021-05-31 23:37:26,417 Error while loading Target: Target file not found.
-2021-05-31 23:37:54,721 File loading Config: {'group_a': False, 'group_b': False, 'target': True}
-2021-05-31 23:38:26,284 File loading Config: {'group_a': False, 'group_b': True, 'target': False}
-2021-05-31 23:38:51,473 File loading Config: {'group_a': True, 'group_b': False, 'target': False}
-2021-05-31 23:38:59,233 File loading Config: {'group_a': False, 'group_b': False, 'target': False}
-2021-05-31 23:40:33,133 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
-2021-05-31 23:40:33,197 Error while loading Group A: Group A file not found.
-2021-05-31 23:41:30,432 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
-2021-05-31 23:41:30,824 Error while loading Group A: Group A file not found.
-2021-05-31 23:42:14,100 File loading Config: {'group_a': False, 'group_b': True, 'target': True}
-2021-05-31 23:42:14,491 Error while loading Group B: Group B file not found.
-2021-05-31 23:42:29,260 File loading Config: {'group_a': False, 'group_b': False, 'target': True}
-2021-05-31 23:42:29,328 Error while loading Target: Target file not found.
-2021-05-31 23:43:23,718 File loading Config: {'group_a': True, 'group_b': False, 'target': False}
-2021-05-31 23:44:24,641 File loading Config: {'group_a': True, 'group_b': False, 'target': False}
-2021-05-31 23:44:37,366 File loading Config: {'group_a': True, 'group_b': False, 'target': False}
-2021-05-31 23:44:37,426 Error while loading Group A: Group A file not found.
-2021-05-31 23:44:51,314 File loading Config: {'group_a': False, 'group_b': True, 'target': False}
-2021-05-31 23:45:08,252 File loading Config: {'group_a': False, 'group_b': True, 'target': False}
-2021-05-31 23:45:16,615 File loading Config: {'group_a': False, 'group_b': True, 'target': False}
-2021-05-31 23:45:24,880 File loading Config: {'group_a': False, 'group_b': True, 'target': False}
-2021-05-31 23:45:25,031 Error while loading Group B: Group B file not found.
-2021-05-31 23:46:37,542 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
-2021-05-31 23:46:37,734 Error while loading Group A: Group A file not found.
-2021-05-31 23:46:45,629 File loading Config: {'group_a': False, 'group_b': False, 'target': True}
-2021-05-31 23:46:55,210 File loading Config: {'group_a': False, 'group_b': False, 'target': True}
-2021-05-31 23:47:04,356 File loading Config: {'group_a': False, 'group_b': False, 'target': True}
-2021-05-31 23:47:04,417 Error while loading Target: Target file not found.
-2021-05-31 23:47:17,735 File loading Config: {'group_a': False, 'group_b': True, 'target': True}
-2021-05-31 23:47:18,416 Error while loading Group B: Group B file not found.
-2021-05-31 23:52:20,647 File loading Config: {'group_a': False, 'group_b': False, 'target': True}
-2021-05-31 23:52:20,787 Error while loading Target: Target file not found.
-2021-05-31 23:59:02,217 File loading Config: {'group_a': False, 'group_b': False, 'target': True}
-2021-05-31 23:59:02,367 Error while loading Target: Target file not found.
-2021-05-31 23:59:15,186 File loading Config: {'group_a': False, 'group_b': False, 'target': True}
-2021-05-31 23:59:15,349 Error while loading Target: Target file not found.
-2021-05-31 23:59:28,521 File loading Config: {'group_a': False, 'group_b': False, 'target': True}
-2021-05-31 23:59:28,661 Error while loading Target: Target file not found.
-2021-05-31 23:59:50,419 File loading Config: {'group_a': False, 'group_b': False, 'target': True}
-2021-06-01 00:00:00,808 File loading Config: {'group_a': False, 'group_b': True, 'target': False}
-2021-06-01 00:00:11,410 File loading Config: {'group_a': True, 'group_b': False, 'target': False}
-2021-06-01 01:03:10,140 File loading Config: {'group_a': False, 'group_b': True, 'target': False}
-2021-06-01 01:03:11,638 Error while loading Group B: Header's not matching on Group B.
-2021-06-01 01:06:11,299 File loading Config: {'group_a': False, 'group_b': True, 'target': False}
-2021-06-01 01:06:12,006 Error while loading Group B: Header's not matching on Group B.
-2021-06-01 01:08:33,382 File loading Config: {'group_a': False, 'group_b': True, 'target': False}
-2021-06-01 01:08:34,067 Error while loading Group B: Header's not matching on Group B.
-2021-06-01 01:13:23,620 File loading Config: {'group_a': False, 'group_b': True, 'target': False}
-2021-06-01 01:13:24,211 Error while loading Group B: Header's not matching on Group B.
-2021-06-01 01:23:23,472 File loading Config: {'group_a': False, 'group_b': True, 'target': False}
-2021-06-01 01:23:25,172 Error while loading Group B: Header's not matching on Group B.
-2021-06-01 01:26:45,082 File loading Config: {'group_a': False, 'group_b': True, 'target': True}
-2021-06-01 01:26:47,103 Error while loading Target: "['4', '5', '6'] not in index"
-2021-06-01 01:27:48,957 File loading Config: {'group_a': False, 'group_b': True, 'target': True}
+2021-06-01 23:35:48,408 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-06-01 23:41:36,408 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-06-01 23:41:42,696 Error at downloading email - conroykuagq03@gmail.com - Error connecting to SOCKS5 proxy  81.28.96.86:3097: [Errno 11001] getaddrinfo failed
+2021-06-01 23:45:17,010 Error at downloading email - conroykuagq03@gmail.com - Error connecting to SOCKS5 proxy  81.28.96.86:3097: [Errno 11001] getaddrinfo failed
+2021-06-02 00:43:11,808 Error at add_to_table - 'str' object has no attribute 'strftime'
+2021-06-02 00:43:11,819 Error at add_to_table - 'str' object has no attribute 'strftime'
+2021-06-02 00:43:11,873 Error at add_to_table - 'str' object has no attribute 'strftime'
+2021-06-02 00:43:11,961 Error at add_to_table - 'str' object has no attribute 'strftime'
+2021-06-02 00:43:11,999 Error at add_to_table - 'str' object has no attribute 'strftime'
+2021-06-02 00:43:12,012 Error at add_to_table - 'str' object has no attribute 'strftime'
+2021-06-02 00:43:12,051 Error at add_to_table - 'str' object has no attribute 'strftime'
+2021-06-02 00:43:12,063 Error at add_to_table - 'str' object has no attribute 'strftime'
+2021-06-02 00:43:12,098 Error at add_to_table - 'str' object has no attribute 'strftime'
+2021-06-02 01:16:56,598 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: 2e115c65-f2c5-4ea8-b16d-57444511bcf8
+2021-06-02 01:16:56,756 
+Starting Thread : Name - conroykuagq03@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-6374b4@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-06-02 01:16:56,757 Error at Sending - conroykuagq03@gmail.com - 'SMTP_' object has no attribute 'self'
+2021-06-02 01:16:57,759 Sending Finished 2e115c65-f2c5-4ea8-b16d-57444511bcf8
+2021-06-02 01:19:04,750 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: 5c355247-3ad8-48f3-99e9-30ced53a1c2d
+2021-06-02 01:19:04,776 
+Starting Thread : Name - conroykuagq03@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-6374b4@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-06-02 01:19:04,783 Error at Sending - conroykuagq03@gmail.com - connect_proxy() got an unexpected keyword argument 'local_hostname'
+2021-06-02 01:19:05,781 Sending Finished 5c355247-3ad8-48f3-99e9-30ced53a1c2d
+2021-06-02 01:20:01,837 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: 265879e7-ac52-4c37-accf-1136becdaa4e
+ Add Custom Hostname: True
+2021-06-02 01:20:01,869 
+Starting Thread : Name - conroykuagq03@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-6374b4@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-06-02 01:20:07,436 Sent - conroykuagq03@gmail.com test-6374b4@test.mailgenius.com
+2021-06-02 01:20:07,878 Sending Finished 265879e7-ac52-4c37-accf-1136becdaa4e
+2021-06-02 01:21:17,678 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: 2c2f4b16-8cfb-40e1-8e41-4df6f33c4395
+ Add Custom Hostname: False
+2021-06-02 01:21:17,700 
+Starting Thread : Name - conroykuagq03@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-6374b4@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-06-02 01:21:23,196 Sent - conroykuagq03@gmail.com test-6374b4@test.mailgenius.com
+2021-06-02 01:21:23,709 Sending Finished 2c2f4b16-8cfb-40e1-8e41-4df6f33c4395
+2021-06-02 01:28:53,534 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: 16bea3f5-83fa-4907-b7a7-3ee6f845a8f5
+ Add Custom Hostname: False
+2021-06-02 01:28:53,563 
+Starting Thread : Name - conroykuagq03@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-6374b4@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-06-02 01:28:59,105 Sent - conroykuagq03@gmail.com test-6374b4@test.mailgenius.com
+2021-06-02 01:28:59,575 Sending Finished 16bea3f5-83fa-4907-b7a7-3ee6f845a8f5
+2021-06-02 01:31:52,230 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: e951f292-6e1b-4a1a-ae67-dcf426ad9e31
+ Add Custom Hostname: False
+2021-06-02 01:31:52,252 
+Starting Thread : Name - conroykuagq03@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-6374b4@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-06-02 01:31:57,933 Sent - conroykuagq03@gmail.com test-6374b4@test.mailgenius.com
+2021-06-02 01:31:58,259 Sending Finished e951f292-6e1b-4a1a-ae67-dcf426ad9e31
+2021-06-02 01:34:36,834 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: 0c3c3996-f365-4bb6-873d-609cd758c3ac
+ Add Custom Hostname: False
+2021-06-02 01:34:36,863 
+Starting Thread : Name - conroykuagq03@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-6374b4@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-06-02 01:34:42,211 Sent - conroykuagq03@gmail.com test-6374b4@test.mailgenius.com
+2021-06-02 01:34:42,872 Sending Finished 0c3c3996-f365-4bb6-873d-609cd758c3ac
+2021-06-02 01:36:58,339 
+ Starting Send Campaign : Target Removal - False
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 27
+ Delay: 0 - 1
+ Campaign ID: a6a84816-5ae8-45c8-b4c6-4c68190d6018
+ Add Custom Hostname: True
+2021-06-02 01:36:58,366 
+Starting Thread : Name - conroykuagq03@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-6374b4@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-06-02 01:37:03,356 Sent - conroykuagq03@gmail.com test-6374b4@test.mailgenius.com
+2021-06-02 01:37:04,376 Sending Finished a6a84816-5ae8-45c8-b4c6-4c68190d6018
+2021-06-03 03:06:33,561 File loading Config: {'group_a': True, 'group_b': True, 'target': True}

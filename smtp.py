@@ -245,11 +245,15 @@ class SMTP_(threading.Thread):
         self.d_start = d_start
         self.d_end = d_end
         self.campaign_id = campaign_id
+        self.local_hostname = None
 
     def login(self):
         try:
+            if var.add_custom_hostname:
+                self.local_hostname = f"{self.FIRSTFROMNAME}-pc"
+
             if self.proxy_host != "":
-                server = SMTP(timeout=30)
+                server = SMTP(timeout=30, local_hostname=self.local_hostname)
                 server.connect_proxy(host=var.smtp_server, port=var.smtp_port,
                                      proxy_host=self.proxy_host, proxy_port=int(self.proxy_port), proxy_type=socks.PROXY_TYPE_SOCKS5,
                                      proxy_user=self.proxy_user, proxy_pass=self.proxy_pass)
@@ -461,7 +465,8 @@ def main(group, d_start, d_end):
                  + f"\n Len of Group: {group_len}"
                  + f"\n Len of Targets: {target_len}"
                  + f"\n Delay: {d_start} - {d_end}"
-                 + f"\n Campaign ID: {campaign_id}")
+                 + f"\n Campaign ID: {campaign_id}"
+                 + f"\n Add Custom Hostname: {var.add_custom_hostname}")
 
     with var.send_report.mutex:
         var.send_report.queue.clear()

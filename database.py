@@ -637,7 +637,7 @@ def startup_load_db(parent=None):
         dummy_data_db(group_a=group_a, group_b=group_b, target=target)
 
         db_to_pandas()
-        main.GUI.radioButton_db_groupa.click()
+        var.command_q.put("self.update_db_table()")
 
     except Exception as e:
         print("Exeception occured at startup_db loading : {}".format(e))

@@ -28,6 +28,8 @@ db_file_loading_config = {
     "target": True
 }
 
+add_custom_hostname = False
+
 email_failed = 0
 total_email_downloaded = 0
 

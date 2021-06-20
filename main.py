@@ -106,7 +106,7 @@ class myMainClass():
 
         GUI.pushButton_attachments.clicked.connect(self.openFileNamesDialog)
         GUI.pushButton_attachments_clear.clicked.connect(self.clear_files)
-        GUI.pushButton_gmail_provider.clicked.connect(self.gmail_provider)
+
         GUI.pushButton_proxy_provider.clicked.connect(self.proxy_provider)
         GUI.radioButton_reply.clicked.connect(self.change_subject)
         GUI.pushButton_load_db.clicked.connect(self.load_db)
@@ -162,6 +162,12 @@ class myMainClass():
             self.update_db_file_upload_config)
         GUI.checkBox_database_target.stateChanged.connect(
             self.update_db_file_upload_config)
+
+        GUI.checkBox_add_custom_hostname.stateChanged.connect(
+            self.update_checkbox_status)
+
+    def update_checkbox_status(self):
+        var.add_custom_hostname = GUI.checkBox_add_custom_hostname.isChecked()
 
     def update_db_file_upload_config(self):
         var.db_file_loading_config['group_a'] = \
@@ -391,9 +397,6 @@ class myMainClass():
         except Exception as e:
             print("Error while setting subject : {}".format(e))
 
-    def gmail_provider(self):
-        webbrowser.open_new(var.gmail_provider)
-
     def proxy_provider(self):
         webbrowser.open_new(var.proxy_provider)
 
@@ -484,6 +487,7 @@ class myMainClass():
             GUI.lineEdit_email_tracking_analytics_account.setEnabled(True)
             GUI.lineEdit_delay_between_emails.setEnabled(True)
             GUI.tab_database.setEnabled(True)
+            GUI.checkBox_add_custom_hostname.setEnabled(True)
         else:
             GUI.lineEdit_number_of_threads.setEnabled(False)
             GUI.lineEdit_num_per_address.setEnabled(False)
@@ -500,6 +504,7 @@ class myMainClass():
             GUI.lineEdit_email_tracking_analytics_account.setEnabled(False)
             GUI.lineEdit_delay_between_emails.setEnabled(False)
             GUI.tab_database.setEnabled(False)
+            GUI.checkBox_add_custom_hostname.setEnabled(False)
 
     def send(self):
         try:

@@ -97,11 +97,6 @@ def format_email(text, FIRSTFROMNAME, LASTFROMNAME, one, two, three, four, five,
     text = text.replace('[6]', str(six))
     text = text.replace('[TONAME]', str(TONAME))
 
-    if var.body_type == "Html":
-        text = text.replace('[LINEBREAK]', "<br>")  # replace linebreaks with
-    else:
-        text = text.replace('[LINEBREAK]', "\n")
-
     if var.body_type == "Html" and var.email_tracking_state == True and source != None:
         text = text.split("</body>")
         text[0] = text[0] + f"<img src='{var.email_tracking_link()}'></body>"
@@ -117,6 +112,11 @@ def format_email(text, FIRSTFROMNAME, LASTFROMNAME, one, two, three, four, five,
         temp = item[1:-1]
         temp = random.choice(temp.split("|"))
         text = text.replace(item, temp)
+
+    if var.body_type == "Html":
+        text = text.replace('[LINEBREAK]', "<br>")  # replace linebreaks with
+    else:
+        text = text.replace('[LINEBREAK]', "\n")
 
     return text
 
