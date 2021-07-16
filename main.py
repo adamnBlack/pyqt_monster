@@ -820,6 +820,10 @@ class myMainClass():
 
         if option == "Latest first":
             inbox_data.sort_values(by="date", inplace=True, ascending=True)
+        elif option == "a - z":
+            inbox_data.sort_values(by="subject", inplace=True, ascending=False)
+        elif option == "z - a":
+            inbox_data.sort_values(by="subject", inplace=True, ascending=True)
         else:
             inbox_data.sort_values(by="date", inplace=True, ascending=False)
 

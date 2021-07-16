@@ -64,7 +64,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <property name="tabsClosable">
        <bool>false</bool>
@@ -521,6 +521,16 @@ QPushButton:pressed {
                <item>
                 <property name="text">
                  <string>Earliest first</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>a - z</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>z - a</string>
                 </property>
                </item>
               </widget>
