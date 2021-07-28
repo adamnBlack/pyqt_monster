@@ -370,7 +370,8 @@ class SMTP_(threading.Thread):
                         "TARGET": item['EMAIL'],
                         "FROMEMAIL": self.user,
                         "STATUS": "sent",
-                        "CAMPAIGN": self.campaign_id
+                        "CAMPAIGN": self.campaign_id,
+                        "DATE": str(datetime.today().date())
                     }
                     var.send_report.put(t_dict.copy())
 
@@ -425,7 +426,8 @@ class SMTP_(threading.Thread):
                 "TARGET": last_recipient,
                 "FROMEMAIL": self.user,
                 "STATUS": str(e),
-                "CAMPAIGN": self.campaign_id
+                "CAMPAIGN": self.campaign_id,
+                "DATE": str(datetime.today().date())
             }
             var.send_report.put(t_dict.copy())
 
@@ -434,7 +436,7 @@ class SMTP_(threading.Thread):
             var.thread_open_campaign -= 1
 
 
-def main(group, d_start, d_end):
+def main(group, d_start, d_end, group_selected):
     global sent_q, email_failed, logger, success_sent
 
     success_sent.clear()
@@ -459,6 +461,7 @@ def main(group, d_start, d_end):
     campaign_id = uuid.uuid4()
 
     logger.error(f"\n Starting Send Campaign : Target Removal - {var.remove_email_from_target}"
+                 + f"\n Group Selected: {group_selected}"
                  + f"\n Webhook Enabled: {var.enable_webhook_status}"
                  + f"\n Email Block Check: {var.check_for_blocks}"
                  + f"\n Emails Per Account: {var.num_emails_per_address}"
@@ -561,8 +564,8 @@ def main(group, d_start, d_end):
         webhook.quit()
 
     try:
-        field_names = ['TARGET', 'FROMEMAIL', 'STATUS', 'CAMPAIGN']
-        with open(var.base_dir+"/report.csv", 'w', newline='', encoding="utf-8") as csvfile:
+        field_names = ['TARGET', 'FROMEMAIL', 'STATUS', 'CAMPAIGN', "DATE"]
+        with open(var.base_dir+"/report.csv", 'a', newline='', encoding="utf-8") as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=field_names)
             writer.writeheader()
             while not var.send_report.empty():

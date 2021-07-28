@@ -11,7 +11,7 @@ class TableModel(QtCore.QAbstractTableModel):
     def __init__(self, data):
         super().__init__()
         self._data = data
-        self.logger=var.logging
+        self.logger = var.logging
         self.logger.getLogger("requests").setLevel(var.logging.WARNING)
 
     def data(self, index, role):
@@ -48,9 +48,10 @@ class TableModel(QtCore.QAbstractTableModel):
             if self._data.iloc[index.row(), index.column()] != value:
                 if database.db_update_row(row):
                     self._data.iloc[index.row(), index.column()] = value
-                    self.dataChanged.emit(index, index, (QtCore.Qt.DisplayRole, ))
+                    self.dataChanged.emit(
+                        index, index, (QtCore.Qt.DisplayRole, ))
                     return True
-        
+
         return False
 
     def flags(self, index):
@@ -71,7 +72,8 @@ class TableModel(QtCore.QAbstractTableModel):
             self.beginInsertRows(QtCore.QModelIndex(), row_count, row_count)
             result, id = database.db_insert_row()
             if result:
-                self._data.loc[row_count] = [id]+[""] * (self._data.shape[1] - 1)
+                self._data.loc[row_count] = [id] + \
+                    [""] * (self._data.shape[1] - 1)
                 row_count += 1
                 self.endInsertRows()
                 return True
@@ -89,7 +91,8 @@ class TableModel(QtCore.QAbstractTableModel):
             if result:
                 row_count = self._data.shape[0]
                 row_count -= 1
-                self.beginRemoveRows(QtCore.QModelIndex(), row_count, row_count)
+                self.beginRemoveRows(QtCore.QModelIndex(),
+                                     row_count, row_count)
                 self._data.drop(row_id, axis=0, inplace=True)
                 self._data.reset_index(drop=True, inplace=True)
                 self.endRemoveRows()
@@ -100,6 +103,7 @@ class TableModel(QtCore.QAbstractTableModel):
             self.logger.error(f"Error at remove_rows - {e}")
             return False
 
+
 class InLineEditDelegate(QtWidgets.QItemDelegate):
     """
     Delegate is important for inline editing of cells
@@ -109,5 +113,6 @@ class InLineEditDelegate(QtWidgets.QItemDelegate):
         return super(InLineEditDelegate, self).createEditor(parent, option, index)
 
     def setEditorData(self, editor, index):
-        text = index.data(QtCore.Qt.EditRole) or index.data(QtCore.Qt.DisplayRole)
+        text = index.data(QtCore.Qt.EditRole) or index.data(
+            QtCore.Qt.DisplayRole)
         editor.setText(str(text))

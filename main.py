@@ -586,7 +586,7 @@ class myMainClass():
                             var.group_a)*var.num_emails_per_address
 
                     Thread(target=smtp.main, daemon=True, args=[
-                        var.group_a.copy(), delay_start, delay_end, ]).start()
+                        var.group_a.copy(), delay_start, delay_end, "Group A", ]).start()
 
                 else:
                     self.send_button_visibility(on=True)
@@ -604,7 +604,7 @@ class myMainClass():
                             var.group_b)*var.num_emails_per_address
 
                     Thread(target=smtp.main, daemon=True, args=[
-                        var.group_b.copy(), delay_start, delay_end, ]).start()
+                        var.group_b.copy(), delay_start, delay_end, "Group B", ]).start()
 
                 else:
                     self.send_button_visibility(on=True)
@@ -810,6 +810,8 @@ class myMainClass():
 
     def sort_inbox_data(self, option):
         var.command_q.put("self.table_timer.stop()")
+
+        var.email_in_view = {}
 
         var.row_pos = 0
         GUI.tableWidget_inbox.setRowCount(0)
