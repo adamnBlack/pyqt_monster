@@ -180,6 +180,7 @@ try:
     login_email = config['login_email']
     tracking = config['tracking']
     webhook_link = config['webhook_link']
+    check_for_blocks = config['check_for_blocks']
 except Exception as e:
     print("Exeception occured at config loading : {}".format(e))
 

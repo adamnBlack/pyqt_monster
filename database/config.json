@@ -11,6 +11,7 @@
             "analytics_account": "UA-33237782-1",
             "campaign_name": "Teas fdsg 3442_"
         },
-        "webhook_link": "https://webhook.site/0c0607d4-c11c-4a29-8ed6-63d3968cdde6"
+        "webhook_link": "https://webhook.site/0c0607d4-c11c-4a29-8ed6-63d3968cdde6",
+        "check_for_blocks": false
     }
 }

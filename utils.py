@@ -74,7 +74,8 @@ def update_config_json():
                 "compose_email_body": var.compose_email_body,
                 "login_email": var.login_email,
                 "tracking": var.tracking,
-                "webhook_link": var.webhook_link
+                "webhook_link": var.webhook_link,
+                "check_for_blocks": var.check_for_blocks
             }
         }
         with open(var.base_dir+'/config.json', 'w') as json_file:

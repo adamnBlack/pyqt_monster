@@ -460,7 +460,8 @@ def main(group, d_start, d_end, group_selected):
 
     campaign_id = uuid.uuid4()
 
-    logger.error(f"\n Starting Send Campaign : Target Removal - {var.remove_email_from_target}"
+    logger.error(f"\n Starting Send Campaign : "
+                 + f"\n Target Removal - {var.remove_email_from_target}"
                  + f"\n Group Selected: {group_selected}"
                  + f"\n Webhook Enabled: {var.enable_webhook_status}"
                  + f"\n Email Block Check: {var.check_for_blocks}"

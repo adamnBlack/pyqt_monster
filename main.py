@@ -100,6 +100,9 @@ class myMainClass():
         GUI.lineEdit_subject.setText(var.compose_email_subject)
         GUI.textBrowser_compose.setPlainText(var.compose_email_body)
 
+        # set the state of checkboxes
+        GUI.checkBox_check_for_blocks.setChecked(var.check_for_blocks)
+
         GUI.radioButton_html.clicked.connect(self.compose_change)
         GUI.radioButton_plain_text.clicked.connect(self.compose_change)
         GUI.checkBox_compose_preview.clicked.connect(self.compose_preview)
