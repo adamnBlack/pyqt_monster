@@ -26,6 +26,7 @@ from main import GUI
 from database import Database as db
 from database import db_to_pandas
 from collections import defaultdict
+from bs4 import BeautifulSoup
 
 # defaultdict accept a function. Whatever that
 # functions return is default value for non-existent keys
@@ -37,6 +38,28 @@ logger = var.logging
 logger.getLogger("requests").setLevel(var.logging.WARNING)
 
 sent_q = queue.Queue()
+
+
+def contains_non_ascii_characters(str):
+    return not all(ord(c) < 128 for c in str)
+
+
+def html_to_text(body):
+    soup = BeautifulSoup(body, features="html.parser")
+
+    for script in soup(["script", "style"]):
+        script.extract()
+
+    text = soup.get_text()
+
+    # break into lines and remove leading and trailing space on each
+    lines = (line.strip() for line in text.splitlines())
+    # break multi-headlines into a line each
+    chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
+    # drop blank lines
+    text = '\n'.join(chunk for chunk in chunks if chunk)
+
+    return str(text)
 
 
 def test(send_to):
@@ -91,11 +114,18 @@ def test(send_to):
                 var.compose_email_body_html, send['FIRSTFROMNAME'], send['LASTFROMNAME'],
                 target['1'], target['2'], target['3'], target['4'], target['5'], target['6'], target['TONAME'], source="body")
             msg.attach(MIMEText(body, "html"))
+            msg.attach(MIMEText(html_to_text(body), "plain"))
+
         else:
             body = utils.format_email(
                 var.compose_email_body, send['FIRSTFROMNAME'], send['LASTFROMNAME'],
                 target['1'], target['2'], target['3'], target['4'], target['5'], target['6'], target['TONAME'])
             msg.attach(MIMEText(body, "plain"))
+
+            html_body = "<html><body><p>" + \
+                body.replace("\n", "<br>") + "</p></body></html>"
+
+            msg.attach(MIMEText(html_body, "html"))
 
         for part in t_part:
             msg.attach(part)
@@ -143,6 +173,11 @@ def forward(forward_to):
 
         part1 = MIMEText(body, "plain")
         msg.attach(part1)
+
+        html_body = "<html><body><p>" + \
+            body.replace("\n", "<br>") + "</p></body></html>"
+
+        msg.attach(MIMEText(html_body, "html"))
 
         server.sendmail(var.email_in_view['user'], forward_to, msg.as_string())
 
@@ -192,8 +227,13 @@ def reply():
 
         if var.body_type == "Html":
             part1 = MIMEText(body, "html")
+            msg.attach(MIMEText(html_to_text(body), "plain"))
         else:
             part1 = MIMEText(body, "plain")
+            html_body = "<html><body><p>" + \
+                body.replace("\n", "<br>") + "</p></body></html>"
+
+            msg.attach(MIMEText(html_body, "html"))
 
         msg.add_header("In-Reply-To", msg_id)
         msg.add_header("References", msg_id)
@@ -303,6 +343,7 @@ class SMTP_(threading.Thread):
 
             server = self.login()
             t_part = []
+
             for path in var.files:
                 part = MIMEBase('application', "octet-stream")
                 with open(path, 'rb') as file:
@@ -322,6 +363,7 @@ class SMTP_(threading.Thread):
 
                 if success_sent[item['EMAIL']] != True:
                     msg = MIMEMultipart("alternative")
+
                     msg["Subject"] = utils.format_email(var.compose_email_subject, self.FIRSTFROMNAME,
                                                         self.LASTFROMNAME, item['1'], item['2'], item['3'],
                                                         item['4'], item['5'], item['6'], item['TONAME'])
@@ -334,11 +376,34 @@ class SMTP_(threading.Thread):
                     if var.body_type == "Html":
                         body = utils.format_email(var.compose_email_body_html, self.FIRSTFROMNAME, self.LASTFROMNAME,
                                                   item['1'], item['2'], item['3'], item['4'], item['5'], item['6'], item['TONAME'], source="body")
+
+                        # if contains_non_ascii_characters(body):
+                        # msg.attach(
+                        #     MIMEText(body.encode('utf-8'), "html", 'utf-8'))
+                        # msg.attach(MIMEText(html_to_text(
+                        #     body).encode('utf-8'), "plain", 'utf-8'))
+
+                        # else:
+
                         msg.attach(MIMEText(body, "html"))
+                        msg.attach(MIMEText(html_to_text(body), "plain"))
+
                     else:
                         body = utils.format_email(var.compose_email_body, self.FIRSTFROMNAME, self.LASTFROMNAME,
                                                   item['1'], item['2'], item['3'], item['4'], item['5'], item['6'], item['TONAME'], source="body")
+
+                        html_body = "<html><body><p>" + \
+                            body.replace("\n", "<br>") + "</p></body></html>"
+
+                        # if contains_non_ascii_characters(body):
+                        # msg.attach(
+                        #     MIMEText(body.encode('utf-8'), "plain", "utf-8"))
+                        # msg.attach(
+
+                        # else:
+
                         msg.attach(MIMEText(body, "plain"))
+                        msg.attach(MIMEText(html_body, "html"))
 
                     for part in t_part:
                         msg.attach(part)
