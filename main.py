@@ -169,6 +169,9 @@ class myMainClass():
         GUI.checkBox_add_custom_hostname.stateChanged.connect(
             self.update_checkbox_status)
 
+        GUI.pushButton_fire_inbox_webhook.clicked.connect(
+            self.start_inbox_stream_thread)
+
     def update_checkbox_status(self):
         var.add_custom_hostname = GUI.checkBox_add_custom_hostname.isChecked()
 
@@ -194,6 +197,10 @@ class myMainClass():
 
     def update_webhook_link(self, text):
         var.webhook_link = str(text)
+
+    def start_inbox_stream_thread(self):
+        GUI.tabWidget.setCurrentIndex(0)
+        Thread(target=start_inbox_stream, daemon=True).start()
 
     def enable_webhook(self):
         var.enable_webhook_status = GUI.checkBox_enable_webhook.isChecked()
@@ -907,6 +914,7 @@ else:
     from send_dialog import Send
     from table_view import TableModel, InLineEditDelegate
     import database
+    from webhook import start_inbox_stream
 
     myMC = myMainClass()
 

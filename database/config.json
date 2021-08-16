@@ -1,6 +1,6 @@
 {
     "config": {
-        "date": "5/11/2021",
+        "date": "7/12/2021",
         "num_emails_per_address": 1,
         "delay_between_emails": "0-1",
         "limit_of_thread": 100,
@@ -11,7 +11,7 @@
             "analytics_account": "UA-33237782-1",
             "campaign_name": "Teas fdsg 3442_"
         },
-        "webhook_link": "https://webhook.site/0c0607d4-c11c-4a29-8ed6-63d3968cdde6",
+        "webhook_link": "https://webhook.site/6a6c4280-ed73-4a79-9017-d7d7cb425697",
         "check_for_blocks": false
     }
 }

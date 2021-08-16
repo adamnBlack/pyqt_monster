@@ -638,3 +638,26 @@ Starting Thread : Name - fredericksongatsalamon@gmail.com
 Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-77b5b6@test.mailgenius.com"}, "flag": {"0": 0}}
 2021-08-11 17:39:45,823 Sent - fredericksongatsalamon@gmail.com test-77b5b6@test.mailgenius.com
 2021-08-11 17:39:46,904 Sending Finished 0535321f-6002-47d3-b6dd-6d790c2353e6
+2021-08-16 15:26:54,129 Error at SendWebhook Inbox part 2 : Object of type 'Timestamp' is not JSON serializable
+2021-08-16 15:43:21,239 Error at SendWebhook Inbox part 2 : Object of type 'Timestamp' is not JSON serializable
+2021-08-16 15:44:23,714 Error at SendWebhook Inbox part 2 : Object of type 'Timestamp' is not JSON serializable
+2021-08-16 16:25:28,176 Error at run_command - invalid syntax (<string>, line 1)
+2021-08-16 16:29:20,721 Error at run_command - invalid syntax (<string>, line 1)
+2021-08-16 16:31:19,033 Error at SendWebhook Inbox part 2 : name 'GUI' is not defined
+2021-08-16 16:52:23,964 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 4
+ Len of Targets: 1
+ Delay: 0 - 1
+ Campaign ID: bbe4d0de-9b4b-4b00-ac0c-b7b7f8242bcc
+ Add Custom Hostname: False
+2021-08-16 16:52:24,002 
+Starting Thread : Name - fredericksongatsalamon@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-77b5b6@test.mailgenius.com"}, "flag": {"0": 0}}
+2021-08-16 16:52:29,398 Sent - fredericksongatsalamon@gmail.com test-77b5b6@test.mailgenius.com
+2021-08-16 16:52:30,010 Sending Finished bbe4d0de-9b4b-4b00-ac0c-b7b7f8242bcc

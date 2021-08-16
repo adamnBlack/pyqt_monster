@@ -75,3 +75,5 @@ TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
 test-77b5b6@test.mailgenius.com,fredericksongatsalamon@gmail.com,sent,2fc8e18e-b84b-472d-8b21-6d86815ca8b4,2021-08-11
 TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
 test-77b5b6@test.mailgenius.com,fredericksongatsalamon@gmail.com,sent,0535321f-6002-47d3-b6dd-6d790c2353e6,2021-08-11
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+test-77b5b6@test.mailgenius.com,fredericksongatsalamon@gmail.com,sent,bbe4d0de-9b4b-4b00-ac0c-b7b7f8242bcc,2021-08-16

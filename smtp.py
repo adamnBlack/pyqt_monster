@@ -378,15 +378,15 @@ class SMTP_(threading.Thread):
                                                   item['1'], item['2'], item['3'], item['4'], item['5'], item['6'], item['TONAME'], source="body")
 
                         # if contains_non_ascii_characters(body):
-                        # msg.attach(
-                        #     MIMEText(body.encode('utf-8'), "html", 'utf-8'))
-                        # msg.attach(MIMEText(html_to_text(
-                        #     body).encode('utf-8'), "plain", 'utf-8'))
+                        msg.attach(
+                            MIMEText(body.encode('utf-8'), "html", 'utf-8'))
+                        msg.attach(MIMEText(html_to_text(
+                            body).encode('utf-8'), "plain", 'utf-8'))
 
                         # else:
 
-                        msg.attach(MIMEText(body, "html"))
-                        msg.attach(MIMEText(html_to_text(body), "plain"))
+                        # msg.attach(MIMEText(body, "html"))
+                        # msg.attach(MIMEText(html_to_text(body), "plain"))
 
                     else:
                         body = utils.format_email(var.compose_email_body, self.FIRSTFROMNAME, self.LASTFROMNAME,
@@ -396,14 +396,15 @@ class SMTP_(threading.Thread):
                             body.replace("\n", "<br>") + "</p></body></html>"
 
                         # if contains_non_ascii_characters(body):
-                        # msg.attach(
-                        #     MIMEText(body.encode('utf-8'), "plain", "utf-8"))
-                        # msg.attach(
+                        msg.attach(
+                            MIMEText(body.encode('utf-8'), "plain", "utf-8"))
+                        msg.attach(
+                            MIMEText(html_body.encode('utf-8'), "html", "utf-8"))
 
                         # else:
 
-                        msg.attach(MIMEText(body, "plain"))
-                        msg.attach(MIMEText(html_body, "html"))
+                        # msg.attach(MIMEText(body, "plain"))
+                        # msg.attach(MIMEText(html_body, "html"))
 
                     for part in t_part:
                         msg.attach(part)
