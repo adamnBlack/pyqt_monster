@@ -289,11 +289,13 @@ class SMTP_(threading.Thread):
 
     def login(self):
         try:
+
             if var.add_custom_hostname:
                 self.local_hostname = f"{self.FIRSTFROMNAME}-pc"
 
             if self.proxy_host != "":
-                server = SMTP(timeout=30, local_hostname=self.local_hostname)
+                server = SMTP(
+                    timeout=30, local_hostname=self.local_hostname)
                 server.connect_proxy(host=var.smtp_server, port=var.smtp_port,
                                      proxy_host=self.proxy_host, proxy_port=int(self.proxy_port), proxy_type=socks.PROXY_TYPE_SOCKS5,
                                      proxy_user=self.proxy_user, proxy_pass=self.proxy_pass)
@@ -415,14 +417,20 @@ class SMTP_(threading.Thread):
                     if var.stop_send_campaign == True:
                         break
 
-                    try:
-                        server.sendmail(
-                            self.user, item['EMAIL'], msg.as_string())
-                    except:
-                        print("Reconnecting smtp - {}".format(self.name))
-                        server = self.login()
-                        server.sendmail(
-                            self.user, item['EMAIL'], msg.as_string())
+                    for counter in range(0, 3):
+                        try:
+                            server.sendmail(
+                                self.user, item['EMAIL'], msg.as_string())
+                            break
+                        except:
+                            time.sleep(random.randint(10, 50))
+                            print("Reconnecting smtp - {}".format(self.name))
+                            try:
+                                server = self.login()
+                            except:
+                                pass
+                            # server.sendmail(
+                            #     self.user, item['EMAIL'], msg.as_string())
 
                     success_sent[item['EMAIL']] = True
 

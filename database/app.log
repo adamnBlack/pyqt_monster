@@ -661,3 +661,233 @@ Starting Thread : Name - fredericksongatsalamon@gmail.com
 Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "test-77b5b6@test.mailgenius.com"}, "flag": {"0": 0}}
 2021-08-16 16:52:29,398 Sent - fredericksongatsalamon@gmail.com test-77b5b6@test.mailgenius.com
 2021-08-16 16:52:30,010 Sending Finished bbe4d0de-9b4b-4b00-ac0c-b7b7f8242bcc
+2021-08-18 00:49:14,934 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 4
+ Len of Targets: 3
+ Delay: 0 - 1
+ Campaign ID: 32247d31-855f-4dd4-8eb7-0b0ccc3fd3f8
+ Add Custom Hostname: False
+2021-08-18 00:49:14,981 
+Starting Thread : Name - fredericksongatsalamon@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-08-18 00:49:15,010 
+Starting Thread : Name - frankinsonleemorison443@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": ""}, "2": {"1": ""}, "3": {"1": "Shah"}, "4": {"1": ""}, "5": {"1": ""}, "6": {"1": ""}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "mdshahimranshovon@gmail.com"}, "flag": {"1": 0}}
+2021-08-18 00:49:15,035 
+Starting Thread : Name - fredriksonkarlosvartinson@gmail.com
+Targets - {"ID": {"2": 3}, "1": {"2": ""}, "2": {"2": ""}, "3": {"2": "Mohammed"}, "4": {"2": ""}, "5": {"2": ""}, "6": {"2": ""}, "TONAME": {"2": "Yehia"}, "EMAIL": {"2": "thedesertm@gmail.com"}, "flag": {"2": 0}}
+2021-08-18 00:49:15,036 Error at Sending - fredericksongatsalamon@gmail.com - connect_proxy() got an unexpected keyword argument 'context'
+2021-08-18 00:49:15,041 Error at Sending - frankinsonleemorison443@gmail.com - connect_proxy() got an unexpected keyword argument 'context'
+2021-08-18 00:49:15,045 Error at Sending - fredriksonkarlosvartinson@gmail.com - connect_proxy() got an unexpected keyword argument 'context'
+2021-08-18 00:49:16,058 
+Starting Thread : Name - frankinsonleejhonson5@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-08-18 00:49:16,070 Error at Sending - frankinsonleejhonson5@gmail.com - connect_proxy() got an unexpected keyword argument 'context'
+2021-08-18 00:49:17,060 Sending Finished 32247d31-855f-4dd4-8eb7-0b0ccc3fd3f8
+2021-08-18 00:50:07,397 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 4
+ Len of Targets: 3
+ Delay: 0 - 1
+ Campaign ID: 69fcd60f-f6f0-4972-b4a2-3f59d27db8c5
+ Add Custom Hostname: False
+2021-08-18 00:50:07,433 
+Starting Thread : Name - fredericksongatsalamon@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-08-18 00:50:07,465 
+Starting Thread : Name - frankinsonleemorison443@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": ""}, "2": {"1": ""}, "3": {"1": "Shah"}, "4": {"1": ""}, "5": {"1": ""}, "6": {"1": ""}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "mdshahimranshovon@gmail.com"}, "flag": {"1": 0}}
+2021-08-18 00:50:07,508 
+Starting Thread : Name - fredriksonkarlosvartinson@gmail.com
+Targets - {"ID": {"2": 3}, "1": {"2": ""}, "2": {"2": ""}, "3": {"2": "Mohammed"}, "4": {"2": ""}, "5": {"2": ""}, "6": {"2": ""}, "TONAME": {"2": "Yehia"}, "EMAIL": {"2": "thedesertm@gmail.com"}, "flag": {"2": 0}}
+2021-08-18 00:50:18,931 Error at Sending - frankinsonleemorison443@gmail.com - Connection unexpectedly closed
+2021-08-18 00:50:19,962 Error at Sending - fredriksonkarlosvartinson@gmail.com - Connection unexpectedly closed
+2021-08-18 00:50:20,739 Error at Sending - fredericksongatsalamon@gmail.com - Connection unexpectedly closed
+2021-08-18 00:50:21,531 
+Starting Thread : Name - frankinsonleejhonson5@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-08-18 00:50:33,859 Error at Sending - frankinsonleejhonson5@gmail.com - Connection unexpectedly closed
+2021-08-18 00:50:34,545 Sending Finished 69fcd60f-f6f0-4972-b4a2-3f59d27db8c5
+2021-08-18 00:55:24,956 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 4
+ Len of Targets: 3
+ Delay: 0 - 1
+ Campaign ID: de9cade3-c437-488c-ac55-6b686d9d4930
+ Add Custom Hostname: False
+2021-08-18 00:55:25,000 
+Starting Thread : Name - fredericksongatsalamon@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-08-18 00:55:25,029 
+Starting Thread : Name - frankinsonleemorison443@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": ""}, "2": {"1": ""}, "3": {"1": "Shah"}, "4": {"1": ""}, "5": {"1": ""}, "6": {"1": ""}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "mdshahimranshovon@gmail.com"}, "flag": {"1": 0}}
+2021-08-18 00:55:25,055 
+Starting Thread : Name - fredriksonkarlosvartinson@gmail.com
+Targets - {"ID": {"2": 3}, "1": {"2": ""}, "2": {"2": ""}, "3": {"2": "Mohammed"}, "4": {"2": ""}, "5": {"2": ""}, "6": {"2": ""}, "TONAME": {"2": "Yehia"}, "EMAIL": {"2": "thedesertm@gmail.com"}, "flag": {"2": 0}}
+2021-08-18 00:55:35,227 Error at Sending - frankinsonleemorison443@gmail.com - Connection unexpectedly closed
+2021-08-18 00:55:35,286 Error at Sending - fredericksongatsalamon@gmail.com - Connection unexpectedly closed
+2021-08-18 00:55:35,290 Error at Sending - fredriksonkarlosvartinson@gmail.com - Connection unexpectedly closed
+2021-08-18 00:55:36,081 
+Starting Thread : Name - frankinsonleejhonson5@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-08-18 00:55:46,255 Error at Sending - frankinsonleejhonson5@gmail.com - Connection unexpectedly closed
+2021-08-18 00:55:47,094 Sending Finished de9cade3-c437-488c-ac55-6b686d9d4930
+2021-08-19 19:41:42,487 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-08-19 19:43:16,142 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 2
+ Delay: 0 - 1
+ Campaign ID: 05b102d2-7f99-4153-a0d3-a9fbc460b805
+ Add Custom Hostname: False
+2021-08-19 19:43:16,227 
+Starting Thread : Name - mrshahimranshovon@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-08-19 19:43:18,404 Error at Sending - mrshahimranshovon@gmail.com - Socket error: 0x02: Connection not allowed by ruleset
+2021-08-19 19:43:19,234 Sending Finished 05b102d2-7f99-4153-a0d3-a9fbc460b805
+2021-08-19 19:44:02,681 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-08-19 19:45:57,339 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-08-19 19:46:08,477 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 6
+ Len of Targets: 2
+ Delay: 0 - 1
+ Campaign ID: 4e439ef9-8c36-4ce3-845a-5b49195eb22e
+ Add Custom Hostname: False
+2021-08-19 19:46:08,531 
+Starting Thread : Name - mrshahimranshovon@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-08-19 19:46:08,579 
+Starting Thread : Name - frankinsonloslogansi@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Daphne"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Boone"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2021-08-19 19:46:09,984 Error at Sending - mrshahimranshovon@gmail.com - Socket error: 0x02: Connection not allowed by ruleset
+2021-08-19 19:46:20,545 Error at Sending - frankinsonloslogansi@gmail.com - Connection unexpectedly closed
+2021-08-19 19:46:20,628 
+Starting Thread : Name - fredericksongatsalamon@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-08-19 19:46:20,673 
+Starting Thread : Name - frankinsonleemorison443@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Daphne"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Boone"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2021-08-19 19:46:33,027 Error at Sending - frankinsonleemorison443@gmail.com - Connection unexpectedly closed
+2021-08-19 19:46:33,028 Error at Sending - fredericksongatsalamon@gmail.com - Connection unexpectedly closed
+2021-08-19 19:46:33,703 
+Starting Thread : Name - fredriksonkarlosvartinson@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-08-19 19:46:33,721 
+Starting Thread : Name - frankinsonleejhonson5@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Daphne"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Boone"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2021-08-19 19:46:45,867 Error at Sending - frankinsonleejhonson5@gmail.com - Connection unexpectedly closed
+2021-08-19 19:46:47,122 Error at Sending - fredriksonkarlosvartinson@gmail.com - Connection unexpectedly closed
+2021-08-19 19:46:47,739 Sending Finished 4e439ef9-8c36-4ce3-845a-5b49195eb22e
+2021-08-19 19:53:07,123 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 2
+ Delay: 0 - 1
+ Campaign ID: e8b7a47b-59da-4dbe-969e-145597242931
+ Add Custom Hostname: False
+2021-08-19 19:53:07,147 
+Starting Thread : Name - mrshahimranshovon@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-08-19 19:53:07,168 
+Starting Thread : Name - frankinsonloslogansi@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Daphne"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Boone"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2021-08-19 19:53:07,977 Error at Sending - mrshahimranshovon@gmail.com - Socket error: 0x02: Connection not allowed by ruleset
+2021-08-19 19:53:18,009 Error at Sending - frankinsonloslogansi@gmail.com - Connection unexpectedly closed
+2021-08-19 19:53:18,203 Sending Finished e8b7a47b-59da-4dbe-969e-145597242931
+2021-08-19 19:55:40,488 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 2
+ Delay: 0 - 1
+ Campaign ID: 2c78285e-e13d-4fb0-9fb6-30b4de55bc06
+ Add Custom Hostname: False
+2021-08-19 19:55:40,522 
+Starting Thread : Name - mrshahimranshovon@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-08-19 19:55:40,542 
+Starting Thread : Name - frankinsonloslogansi@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Daphne"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Boone"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2021-08-19 19:55:41,356 Error at Sending - mrshahimranshovon@gmail.com - Socket error: 0x02: Connection not allowed by ruleset
+2021-08-19 19:55:46,128 Sent - frankinsonloslogansi@gmail.com shahimrans64@gmail.com
+2021-08-19 19:55:46,549 Sending Finished 2c78285e-e13d-4fb0-9fb6-30b4de55bc06
+2021-08-19 20:03:15,828 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 2
+ Delay: 0 - 1
+ Campaign ID: 805cb169-01b1-4020-b797-b0d4cfb848cd
+ Add Custom Hostname: False
+2021-08-19 20:03:15,854 
+Starting Thread : Name - mrshahimranshovon@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-08-19 20:03:15,875 
+Starting Thread : Name - frankinsonloslogansi@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Daphne"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Boone"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2021-08-19 20:03:16,681 Error at Sending - mrshahimranshovon@gmail.com - Socket error: 0x02: Connection not allowed by ruleset
+2021-08-19 20:03:21,675 Sent - frankinsonloslogansi@gmail.com shahimrans64@gmail.com
+2021-08-19 20:03:22,884 Sending Finished 805cb169-01b1-4020-b797-b0d4cfb848cd
+2021-08-19 20:04:29,542 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-08-19 20:04:51,669 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 2
+ Delay: 0 - 1
+ Campaign ID: b5fd9f2f-0dd8-4b24-9390-65f54e48ec23
+ Add Custom Hostname: False
+2021-08-19 20:04:51,689 
+Starting Thread : Name - mrshahimranshovon@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Elva"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Lynn"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-08-19 20:04:51,707 
+Starting Thread : Name - frankinsonloslogansi@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Daphne"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Boone"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2021-08-19 20:04:52,544 Error at Sending - mrshahimranshovon@gmail.com - Socket error: 0x02: Connection not allowed by ruleset
+2021-08-19 20:04:56,585 Sent - frankinsonloslogansi@gmail.com shahimrans64@gmail.com
+2021-08-19 20:04:57,713 Sending Finished b5fd9f2f-0dd8-4b24-9390-65f54e48ec23
+2021-08-23 21:26:03,695 Error at downloading email - mrshahimranshovon@gmail.com - Socket error: 0x02: Connection not allowed by ruleset

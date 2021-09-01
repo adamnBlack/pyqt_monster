@@ -49,6 +49,7 @@ class SMTP(smtplib.SMTP):
             connecting
         :type source_address: tuple
         """
+        # super(SMTP, self).__init__("smtp.gmail.com", 465, context=context)
         self._host = host
         self.timeout = timeout
         self.esmtp_features = {}

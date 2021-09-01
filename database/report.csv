@@ -77,3 +77,39 @@ TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
 test-77b5b6@test.mailgenius.com,fredericksongatsalamon@gmail.com,sent,0535321f-6002-47d3-b6dd-6d790c2353e6,2021-08-11
 TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
 test-77b5b6@test.mailgenius.com,fredericksongatsalamon@gmail.com,sent,bbe4d0de-9b4b-4b00-ac0c-b7b7f8242bcc,2021-08-16
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,fredericksongatsalamon@gmail.com,connect_proxy() got an unexpected keyword argument 'context',32247d31-855f-4dd4-8eb7-0b0ccc3fd3f8,2021-08-18
+,frankinsonleemorison443@gmail.com,connect_proxy() got an unexpected keyword argument 'context',32247d31-855f-4dd4-8eb7-0b0ccc3fd3f8,2021-08-18
+,fredriksonkarlosvartinson@gmail.com,connect_proxy() got an unexpected keyword argument 'context',32247d31-855f-4dd4-8eb7-0b0ccc3fd3f8,2021-08-18
+,frankinsonleejhonson5@gmail.com,connect_proxy() got an unexpected keyword argument 'context',32247d31-855f-4dd4-8eb7-0b0ccc3fd3f8,2021-08-18
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,frankinsonleemorison443@gmail.com,Connection unexpectedly closed,69fcd60f-f6f0-4972-b4a2-3f59d27db8c5,2021-08-18
+,fredriksonkarlosvartinson@gmail.com,Connection unexpectedly closed,69fcd60f-f6f0-4972-b4a2-3f59d27db8c5,2021-08-18
+,fredericksongatsalamon@gmail.com,Connection unexpectedly closed,69fcd60f-f6f0-4972-b4a2-3f59d27db8c5,2021-08-18
+,frankinsonleejhonson5@gmail.com,Connection unexpectedly closed,69fcd60f-f6f0-4972-b4a2-3f59d27db8c5,2021-08-18
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,frankinsonleemorison443@gmail.com,Connection unexpectedly closed,de9cade3-c437-488c-ac55-6b686d9d4930,2021-08-18
+,fredericksongatsalamon@gmail.com,Connection unexpectedly closed,de9cade3-c437-488c-ac55-6b686d9d4930,2021-08-18
+,fredriksonkarlosvartinson@gmail.com,Connection unexpectedly closed,de9cade3-c437-488c-ac55-6b686d9d4930,2021-08-18
+,frankinsonleejhonson5@gmail.com,Connection unexpectedly closed,de9cade3-c437-488c-ac55-6b686d9d4930,2021-08-18
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,mrshahimranshovon@gmail.com,Socket error: 0x02: Connection not allowed by ruleset,05b102d2-7f99-4153-a0d3-a9fbc460b805,2021-08-19
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,mrshahimranshovon@gmail.com,Socket error: 0x02: Connection not allowed by ruleset,4e439ef9-8c36-4ce3-845a-5b49195eb22e,2021-08-19
+,frankinsonloslogansi@gmail.com,Connection unexpectedly closed,4e439ef9-8c36-4ce3-845a-5b49195eb22e,2021-08-19
+,frankinsonleemorison443@gmail.com,Connection unexpectedly closed,4e439ef9-8c36-4ce3-845a-5b49195eb22e,2021-08-19
+,fredericksongatsalamon@gmail.com,Connection unexpectedly closed,4e439ef9-8c36-4ce3-845a-5b49195eb22e,2021-08-19
+,frankinsonleejhonson5@gmail.com,Connection unexpectedly closed,4e439ef9-8c36-4ce3-845a-5b49195eb22e,2021-08-19
+,fredriksonkarlosvartinson@gmail.com,Connection unexpectedly closed,4e439ef9-8c36-4ce3-845a-5b49195eb22e,2021-08-19
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,mrshahimranshovon@gmail.com,Socket error: 0x02: Connection not allowed by ruleset,e8b7a47b-59da-4dbe-969e-145597242931,2021-08-19
+,frankinsonloslogansi@gmail.com,Connection unexpectedly closed,e8b7a47b-59da-4dbe-969e-145597242931,2021-08-19
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,mrshahimranshovon@gmail.com,Socket error: 0x02: Connection not allowed by ruleset,2c78285e-e13d-4fb0-9fb6-30b4de55bc06,2021-08-19
+shahimrans64@gmail.com,frankinsonloslogansi@gmail.com,sent,2c78285e-e13d-4fb0-9fb6-30b4de55bc06,2021-08-19
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,mrshahimranshovon@gmail.com,Socket error: 0x02: Connection not allowed by ruleset,805cb169-01b1-4020-b797-b0d4cfb848cd,2021-08-19
+shahimrans64@gmail.com,frankinsonloslogansi@gmail.com,sent,805cb169-01b1-4020-b797-b0d4cfb848cd,2021-08-19
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,mrshahimranshovon@gmail.com,Socket error: 0x02: Connection not allowed by ruleset,b5fd9f2f-0dd8-4b24-9390-65f54e48ec23,2021-08-19
+shahimrans64@gmail.com,frankinsonloslogansi@gmail.com,sent,b5fd9f2f-0dd8-4b24-9390-65f54e48ec23,2021-08-19
