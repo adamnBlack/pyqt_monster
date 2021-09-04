@@ -423,6 +423,8 @@ class SMTP_(threading.Thread):
                                 self.user, item['EMAIL'], msg.as_string())
                             break
                         except:
+                            if counter == 2:
+                                raise
                             time.sleep(random.randint(10, 50))
                             print("Reconnecting smtp - {}".format(self.name))
                             try:
