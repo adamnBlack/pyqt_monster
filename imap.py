@@ -21,7 +21,7 @@ def slashescape(err):
     and a position where encoding should continue"""
     # print err, dir(err), err.start, err.end, err.object[:err.start]
     thebyte = err.object[err.start:err.end]
-    repl = u'\\x'+hex(ord(thebyte))[2:]
+    repl = u'\\x' + hex(ord(thebyte))[2:]
     return (repl, err.end)
 
 
@@ -47,7 +47,8 @@ def set_read_flag(index):
             print(index, data['uid'][index], proxy_host, proxy_port,
                   proxy_user, proxy_pass, imap_user, imap_pass)
             imap = proxy_imaplib.IMAP(proxy_host=proxy_host, proxy_port=proxy_port, proxy_type=socks.PROXY_TYPE_SOCKS5,
-                                      proxy_user=proxy_user, proxy_pass=proxy_pass, host=var.imap_server, port=var.imap_port, timeout=30)
+                                      proxy_user=proxy_user, proxy_pass=proxy_pass, host=var.imap_server,
+                                      port=var.imap_port, timeout=30)
         else:
             imap = imaplib.IMAP4_SSL(var.imap_server)
 
@@ -82,7 +83,8 @@ def delete_email(group):
             print(proxy_host, proxy_port, proxy_user,
                   proxy_pass, imap_user, imap_pass)
             imap = proxy_imaplib.IMAP(proxy_host=proxy_host, proxy_port=proxy_port, proxy_type=socks.PROXY_TYPE_SOCKS5,
-                                      proxy_user=proxy_user, proxy_pass=proxy_pass, host=var.imap_server, port=var.imap_port, timeout=30)
+                                      proxy_user=proxy_user, proxy_pass=proxy_pass, host=var.imap_server,
+                                      port=var.imap_port, timeout=30)
         else:
             imap = imaplib.IMAP4_SSL(var.imap_server)
 
@@ -125,8 +127,10 @@ class ImapBase():
 
     def login(self):
         if self.proxy_host != "":
-            imap = proxy_imaplib.IMAP(proxy_host=self.proxy_host, proxy_port=self.proxy_port, proxy_type=self.proxy_type,
-                                      proxy_user=self.proxy_user, proxy_pass=self.proxy_pass, host=self.imap_host, port=self.imap_port, timeout=30)
+            imap = proxy_imaplib.IMAP(proxy_host=self.proxy_host, proxy_port=self.proxy_port,
+                                      proxy_type=self.proxy_type,
+                                      proxy_user=self.proxy_user, proxy_pass=self.proxy_pass, host=self.imap_host,
+                                      port=self.imap_port, timeout=30)
         else:
             imap = imaplib.IMAP4_SSL(var.imap_server)
 
@@ -152,7 +156,8 @@ class ImapCheckForBlocks(ImapBase):
             date = datetime.today() - timedelta(days=1)
 
             tmp, data = imap.search(
-                None, f'(SINCE "{date.strftime("%d-%b-%Y")}" SUBJECT "Delivery Status Notification (Failure)" FROM "mailer-daemon@googlemail.com")')
+                None,
+                f'(SINCE "{date.strftime("%d-%b-%Y")}" SUBJECT "Delivery Status Notification (Failure)" FROM "mailer-daemon@googlemail.com")')
             for num in data[0].split():
                 tmp, data = imap.fetch(num, '(UID RFC822)')
                 raw = data[0][0]
@@ -187,8 +192,13 @@ class ImapCheckForBlocks(ImapBase):
                     except:
                         body = body
 
-                    if "Message bloqué".lower() in body.lower() or "Message blocked".lower() in body.lower():
-                        return True
+                    blocked_message_keyword = [
+                        "Message bloqué", "Message blocked", "Message rejected"]
+
+                    for item in blocked_message_keyword:
+                        if item.lower() in body.lower():
+                            return True
+
             return False
 
         except Exception as e:
@@ -200,7 +210,8 @@ class ImapCheckForBlocks(ImapBase):
 
 
 class IMAP_(threading.Thread):
-    def __init__(self, threadID, name, proxy_host, proxy_port, proxy_type, proxy_user, proxy_pass, imap_user, imap_pass, FIRSTFROMNAME, LASTFROMNAME):
+    def __init__(self, threadID, name, proxy_host, proxy_port, proxy_type, proxy_user, proxy_pass, imap_user, imap_pass,
+                 FIRSTFROMNAME, LASTFROMNAME):
         threading.Thread.__init__(self)
         self.threadID = threadID
         self.name = name
@@ -224,8 +235,10 @@ class IMAP_(threading.Thread):
         try:
             var.thread_open += 1
             if self.proxy_host != "":
-                imap = proxy_imaplib.IMAP(proxy_host=self.proxy_host, proxy_port=self.proxy_port, proxy_type=self.proxy_type,
-                                          proxy_user=self.proxy_user, proxy_pass=self.proxy_pass, host=self.imap_host, port=self.imap_port, timeout=30)
+                imap = proxy_imaplib.IMAP(proxy_host=self.proxy_host, proxy_port=self.proxy_port,
+                                          proxy_type=self.proxy_type,
+                                          proxy_user=self.proxy_user, proxy_pass=self.proxy_pass, host=self.imap_host,
+                                          port=self.imap_port, timeout=30)
             else:
                 imap = imaplib.IMAP4_SSL(var.imap_server)
 
@@ -286,14 +299,18 @@ class IMAP_(threading.Thread):
                     subject = str(subject)
 
                     from_name = str(email.header.make_header(email.header.
-                                    decode_header(email.utils.parseaddr(email_message['From'])[0])))
+                        decode_header(
+                        email.utils.parseaddr(email_message['From'])[0])))
                     from_mail = str(email.header.make_header(email.header.
-                                    decode_header(email.utils.parseaddr(email_message['From'])[1])))
+                        decode_header(
+                        email.utils.parseaddr(email_message['From'])[1])))
 
                     to_name = str(email.header.make_header(email.header.
-                                                           decode_header(email.utils.parseaddr(email_message['To'])[0])))
+                        decode_header(
+                        email.utils.parseaddr(email_message['To'])[0])))
                     to_mail = str(email.header.make_header(email.header.
-                                                           decode_header(email.utils.parseaddr(email_message['To'])[1])))
+                        decode_header(
+                        email.utils.parseaddr(email_message['To'])[1])))
                     mail_date = email.utils.parsedate_to_datetime(
                         email_message['Date'])
 
@@ -317,7 +334,9 @@ class IMAP_(threading.Thread):
                         'proxy_pass': self.proxy_pass,
                         'FIRSTFROMNAME': self.FIRSTFROMNAME,
                         'LASTFROMNAME': self.LASTFROMNAME,
-                        'flag': item
+                        'flag': item,
+                        'Webhook_flag': False  # means not fired yet
+
                     }
 
                     # print(from_name, from_mail, to_name, to_mail, subject, body)

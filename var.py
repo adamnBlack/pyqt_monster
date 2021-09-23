@@ -10,10 +10,6 @@ from queue import LifoQueue
 import logging
 from threading import Thread
 
-# import main
-import dialog
-
-
 # pd.set_option('display.max_colwidth',1000)
 
 version = '2.2r'
@@ -42,9 +38,8 @@ email_tracking_state = False
 
 rid_list = []
 
-
 # Create and configure logger
-logging.basicConfig(filename=base_dir+"/app.log",
+logging.basicConfig(filename=base_dir + "/app.log",
                     format='%(asctime)s %(message)s',
                     filemode='a')
 logging.getLogger("requests").setLevel(logging.WARNING)
@@ -76,16 +71,20 @@ try:
             return os.path.join(sys._MEIPASS, relative_path)
         return os.path.join(os.path.abspath("."), relative_path)
 
+
     # icon path
     mail_unread_icon = resource_path("icons/email.ico")
     mail_read_icon = resource_path("icons/mail.ico")
+
+    # webhook_fired = resource_path("icons/webhook_fired.png")
+    # webhook_not_fired = resource_path("icons/webhook_not_fired.png")
+
     # delete_icon = resource_path("icons/bin.svg")
     # deleted_icon = resource_path("icons/delete.svg")
     # icon path
 
 except Exception as e:
     print(e)
-
 
 files = []
 
@@ -111,7 +110,6 @@ command_q = queue.Queue()
 webhook_q = queue.Queue()
 enable_webhook_status = False
 remove_email_from_target = False
-
 
 limit_of_thread = 100
 
@@ -175,6 +173,12 @@ try:
         data = load(json_file)
     config = data['config']
     date = config['date']
+    if config['compose_email_subject']:
+        compose_email_subject = config['compose_email_subject']
+    if config['compose_email_body']:
+        compose_email_body = config['compose_email_body']
+    if config['compose_email_body_html']:
+        compose_email_body_html = config['compose_email_body_html']
     num_emails_per_address = config['num_emails_per_address']
     delay_between_emails = config['delay_between_emails']
     limit_of_thread = config['limit_of_thread']
@@ -182,6 +186,7 @@ try:
     tracking = config['tracking']
     webhook_link = config['webhook_link']
     check_for_blocks = config['check_for_blocks']
+    target_blacklist = config['target_blacklist']
 except Exception as e:
     print("Exeception occured at config loading : {}".format(e))
 
@@ -197,6 +202,9 @@ group_b = pd.DataFrame()
 target = pd.DataFrame()
 db_path = "database/group.db"
 
+if __name__ == "__main__":
+    # import main
+    import dialog
 
 # pyinstaller --onedir --icon=icons/icon.ico --name=GMonster --noconsole --noconfirm var.py
 # pyi-makespec --onefile --icon=icons/icon.ico --name=GMonster --noconsole var.py

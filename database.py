@@ -264,8 +264,8 @@ def file_to_db():
         if var.db_file_loading_config['group_a']:
             clear_table(group_a=True)
 
-            if os.path.exists(var.base_dir+'/group_a.xlsx'):
-                group_a = pd.read_excel(var.base_dir+'/group_a.xlsx',
+            if os.path.exists(var.base_dir + '/group_a.xlsx'):
+                group_a = pd.read_excel(var.base_dir + '/group_a.xlsx',
                                         engine='openpyxl', sheet_name="group_a")
                 group_a = group_a[group_header]
 
@@ -317,8 +317,8 @@ def file_to_db():
         if var.db_file_loading_config['group_b']:
             clear_table(group_b=True)
 
-            if os.path.exists(var.base_dir+'/group_b.xlsx'):
-                group_b = pd.read_excel(var.base_dir+'/group_b.xlsx',
+            if os.path.exists(var.base_dir + '/group_b.xlsx'):
+                group_b = pd.read_excel(var.base_dir + '/group_b.xlsx',
                                         engine='openpyxl', sheet_name="group_b")
                 group_b = group_b[group_header]
 
@@ -370,8 +370,8 @@ def file_to_db():
         if var.db_file_loading_config['target']:
             clear_table(target=True)
 
-            if os.path.exists(var.base_dir+'/target.xlsx'):
-                target = pd.read_excel(var.base_dir+'/target.xlsx',
+            if os.path.exists(var.base_dir + '/target.xlsx'):
+                target = pd.read_excel(var.base_dir + '/target.xlsx',
                                        engine='openpyxl', sheet_name="target")
 
                 target.columns = target.columns.astype(str)
@@ -381,6 +381,10 @@ def file_to_db():
                     target.fillna(" ", inplace=True)
                     target = target.astype(str)
                     target = target.loc[target['EMAIL'] != " "]
+                    target = target[~target['EMAIL'].str.lower(
+                    ).str.contains("|".join(var.target_blacklist))]
+                    print("hereeeeee")
+                    print(target)
 
                     if len(target) > 0:
                         objects = [Targets(
@@ -473,6 +477,7 @@ def dummy_data_db(group_a=True, group_b=True, target=True):
 
 def pandas_to_db():
     try:
+        session = get_session()
         objects = [Group_A(
             FIRSTFROMNAME=row['FIRSTFROMNAME'],
             LASTFROMNAME=row['LASTFROMNAME'],
@@ -525,30 +530,30 @@ def db_to_pandas():
     results = session.query(Group_A).all()
 
     group_a_list = [{
-        'ID': item.id,
-        'FIRSTFROMNAME': item.FIRSTFROMNAME,
-        'LASTFROMNAME': item.LASTFROMNAME,
-        'EMAIL': item.EMAIL,
-        'EMAIL_PASS': item.EMAIL_PASS,
-        'PROXY:PORT': item.PROXY_PORT,
-        'PROXY_USER': item.PROXY_USER,
-        'PROXY_PASS': item.PROXY_PASS
-    }.copy() for item in results]
+                        'ID': item.id,
+                        'FIRSTFROMNAME': item.FIRSTFROMNAME,
+                        'LASTFROMNAME': item.LASTFROMNAME,
+                        'EMAIL': item.EMAIL,
+                        'EMAIL_PASS': item.EMAIL_PASS,
+                        'PROXY:PORT': item.PROXY_PORT,
+                        'PROXY_USER': item.PROXY_USER,
+                        'PROXY_PASS': item.PROXY_PASS
+                    }.copy() for item in results]
 
     var.group_a = pd.DataFrame(group_a_list)
 
     results = session.query(Group_B).all()
 
     group_b_list = [{
-        'ID': item.id,
-        'FIRSTFROMNAME': item.FIRSTFROMNAME,
-        'LASTFROMNAME': item.LASTFROMNAME,
-        'EMAIL': item.EMAIL,
-        'EMAIL_PASS': item.EMAIL_PASS,
-        'PROXY:PORT': item.PROXY_PORT,
-        'PROXY_USER': item.PROXY_USER,
-        'PROXY_PASS': item.PROXY_PASS
-    }.copy() for item in results]
+                        'ID': item.id,
+                        'FIRSTFROMNAME': item.FIRSTFROMNAME,
+                        'LASTFROMNAME': item.LASTFROMNAME,
+                        'EMAIL': item.EMAIL,
+                        'EMAIL_PASS': item.EMAIL_PASS,
+                        'PROXY:PORT': item.PROXY_PORT,
+                        'PROXY_USER': item.PROXY_USER,
+                        'PROXY_PASS': item.PROXY_PASS
+                    }.copy() for item in results]
 
     var.group_b = pd.DataFrame(group_b_list)
 
@@ -556,31 +561,31 @@ def db_to_pandas():
 
     if len(results) > 0:
         targets_list = [{
-            'ID': item.id,
-            '1': item.one,
-            '2': item.two,
-            '3': item.three,
-            '4': item.four,
-            '5': item.five,
-            '6': item.six,
-            'TONAME': item.TONAME,
-            'EMAIL': item.EMAIL
-        }.copy() for item in results]
+                            'ID': item.id,
+                            '1': item.one,
+                            '2': item.two,
+                            '3': item.three,
+                            '4': item.four,
+                            '5': item.five,
+                            '6': item.six,
+                            'TONAME': item.TONAME,
+                            'EMAIL': item.EMAIL
+                        }.copy() for item in results]
 
     else:
         dummy_data_db(group_a=False, group_b=False, target=True)
         results = session.query(Targets).all()
         targets_list = [{
-            'ID': item.id,
-            '1': item.one,
-            '2': item.two,
-            '3': item.three,
-            '4': item.four,
-            '5': item.five,
-            '6': item.six,
-            'TONAME': item.TONAME,
-            'EMAIL': item.EMAIL
-        }.copy() for item in results]
+                            'ID': item.id,
+                            '1': item.one,
+                            '2': item.two,
+                            '3': item.three,
+                            '4': item.four,
+                            '5': item.five,
+                            '6': item.six,
+                            'TONAME': item.TONAME,
+                            'EMAIL': item.EMAIL
+                        }.copy() for item in results]
 
     var.target = pd.DataFrame(targets_list)
     print(var.group_a.head(5))

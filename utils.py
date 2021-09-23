@@ -72,10 +72,12 @@ def update_config_json():
                 "limit_of_thread": var.limit_of_thread,
                 "compose_email_subject": var.compose_email_subject,
                 "compose_email_body": var.compose_email_body,
+                "compose_email_body_html": var.compose_email_body_html,
                 "login_email": var.login_email,
                 "tracking": var.tracking,
                 "webhook_link": var.webhook_link,
-                "check_for_blocks": var.check_for_blocks
+                "check_for_blocks": var.check_for_blocks,
+                "target_blacklist": var.target_blacklist
             }
         }
         with open(var.base_dir+'/config.json', 'w') as json_file:

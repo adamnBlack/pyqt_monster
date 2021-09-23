@@ -103,7 +103,8 @@ def test(send_to):
             t_part.append(part)
 
         msg["Subject"] = utils.format_email(compose_email_subject, send['FIRSTFROMNAME'],
-                                            send['LASTFROMNAME'], target['1'], target['2'], target['3'], target['4'], target['5'], target['6'], target['TONAME'])
+                                            send['LASTFROMNAME'], target['1'], target['2'], target['3'], target['4'],
+                                            target['5'], target['6'], target['TONAME'])
         msg['From'] = formataddr((str(Header("{} {}".format(
             send['FIRSTFROMNAME'], send['LASTFROMNAME']), 'utf-8')), send['EMAIL']))
         msg["To"] = send_to
@@ -112,7 +113,8 @@ def test(send_to):
         if var.body_type == "Html":
             body = utils.format_email(
                 var.compose_email_body_html, send['FIRSTFROMNAME'], send['LASTFROMNAME'],
-                target['1'], target['2'], target['3'], target['4'], target['5'], target['6'], target['TONAME'], source="body")
+                target['1'], target['2'], target['3'], target['4'], target['5'], target['6'], target['TONAME'],
+                source="body")
             msg.attach(MIMEText(body, "html"))
             msg.attach(MIMEText(html_to_text(body), "plain"))
 
@@ -123,7 +125,7 @@ def test(send_to):
             msg.attach(MIMEText(body, "plain"))
 
             html_body = "<html><body><p>" + \
-                body.replace("\n", "<br>") + "</p></body></html>"
+                        body.replace("\n", "<br>") + "</p></body></html>"
 
             msg.attach(MIMEText(html_body, "html"))
 
@@ -148,7 +150,8 @@ def forward(forward_to):
         if var.email_in_view['proxy_host'] != "":
             server = SMTP(timeout=30)
             server.connect_proxy(host=var.smtp_server, port=var.smtp_port,
-                                 proxy_host=var.email_in_view['proxy_host'], proxy_port=int(var.email_in_view['proxy_port']), proxy_type=socks.PROXY_TYPE_SOCKS5,
+                                 proxy_host=var.email_in_view['proxy_host'],
+                                 proxy_port=int(var.email_in_view['proxy_port']), proxy_type=socks.PROXY_TYPE_SOCKS5,
                                  proxy_user=var.email_in_view['proxy_user'], proxy_pass=var.email_in_view["proxy_pass"])
         else:
             server = smtplib.SMTP(var.smtp_server, var.smtp_port)
@@ -162,11 +165,12 @@ def forward(forward_to):
         print(var.email_in_view['from_mail'])
         msg["Subject"] = "Fwd: " + var.email_in_view['original_subject']
         msg['From'] = formataddr((str(Header("{} {}".format(
-            var.email_in_view['FIRSTFROMNAME'], var.email_in_view['LASTFROMNAME']), 'utf-8')), var.email_in_view['user']))
+            var.email_in_view['FIRSTFROMNAME'], var.email_in_view['LASTFROMNAME']), 'utf-8')),
+                                  var.email_in_view['user']))
         msg["To"] = forward_to
         msg['Date'] = formatdate(localtime=True)
 
-        body = "---------- Forwarded message ---------\nFrom: {}\nDate: {}\nSubject: {}\nTo: <{}>\n\n{}".\
+        body = "---------- Forwarded message ---------\nFrom: {}\nDate: {}\nSubject: {}\nTo: <{}>\n\n{}". \
             format(var.email_in_view['from'], formatdate(localtime=True),
                    var.email_in_view['original_subject'], var.email_in_view['to_mail'],
                    var.email_in_view['original_body'])
@@ -175,7 +179,7 @@ def forward(forward_to):
         msg.attach(part1)
 
         html_body = "<html><body><p>" + \
-            body.replace("\n", "<br>") + "</p></body></html>"
+                    body.replace("\n", "<br>") + "</p></body></html>"
 
         msg.attach(MIMEText(html_body, "html"))
 
@@ -199,7 +203,8 @@ def reply():
         if var.email_in_view['proxy_host'] != "":
             server = SMTP(timeout=30)
             server.connect_proxy(host=var.smtp_server, port=var.smtp_port,
-                                 proxy_host=var.email_in_view['proxy_host'], proxy_port=int(var.email_in_view['proxy_port']), proxy_type=socks.PROXY_TYPE_SOCKS5,
+                                 proxy_host=var.email_in_view['proxy_host'],
+                                 proxy_port=int(var.email_in_view['proxy_port']), proxy_type=socks.PROXY_TYPE_SOCKS5,
                                  proxy_user=var.email_in_view['proxy_user'], proxy_pass=var.email_in_view["proxy_pass"])
         else:
             server = smtplib.SMTP(var.smtp_server, var.smtp_port)
@@ -218,7 +223,8 @@ def reply():
         msg["Subject"] = utils.format_email(
             var.email_in_view['subject'], f_f_name, l_f_name, "", "", "", "", "", "", toname)
         msg['From'] = formataddr((str(Header("{} {}".format(
-            var.email_in_view['FIRSTFROMNAME'], var.email_in_view['LASTFROMNAME']), 'utf-8')), var.email_in_view['user']))
+            var.email_in_view['FIRSTFROMNAME'], var.email_in_view['LASTFROMNAME']), 'utf-8')),
+                                  var.email_in_view['user']))
         msg["To"] = var.email_in_view['from_mail']
         msg['Date'] = formatdate(localtime=True)
 
@@ -231,7 +237,7 @@ def reply():
         else:
             part1 = MIMEText(body, "plain")
             html_body = "<html><body><p>" + \
-                body.replace("\n", "<br>") + "</p></body></html>"
+                        body.replace("\n", "<br>") + "</p></body></html>"
 
             msg.attach(MIMEText(html_body, "html"))
 
@@ -297,7 +303,8 @@ class SMTP_(threading.Thread):
                 server = SMTP(
                     timeout=30, local_hostname=self.local_hostname)
                 server.connect_proxy(host=var.smtp_server, port=var.smtp_port,
-                                     proxy_host=self.proxy_host, proxy_port=int(self.proxy_port), proxy_type=socks.PROXY_TYPE_SOCKS5,
+                                     proxy_host=self.proxy_host, proxy_port=int(self.proxy_port),
+                                     proxy_type=socks.PROXY_TYPE_SOCKS5,
                                      proxy_user=self.proxy_user, proxy_pass=self.proxy_pass)
                 # server.set_debuglevel(1)
             else:
@@ -330,7 +337,7 @@ class SMTP_(threading.Thread):
         duration = random.randint(self.d_start, self.d_end)
         count = 0
 
-        while var.stop_send_campaign == False:
+        while not var.stop_send_campaign:
             time.sleep(1)
             count += 1
             if count >= duration:
@@ -377,7 +384,8 @@ class SMTP_(threading.Thread):
 
                     if var.body_type == "Html":
                         body = utils.format_email(var.compose_email_body_html, self.FIRSTFROMNAME, self.LASTFROMNAME,
-                                                  item['1'], item['2'], item['3'], item['4'], item['5'], item['6'], item['TONAME'], source="body")
+                                                  item['1'], item['2'], item['3'], item['4'], item['5'], item['6'],
+                                                  item['TONAME'], source="body")
 
                         # if contains_non_ascii_characters(body):
                         msg.attach(
@@ -392,10 +400,11 @@ class SMTP_(threading.Thread):
 
                     else:
                         body = utils.format_email(var.compose_email_body, self.FIRSTFROMNAME, self.LASTFROMNAME,
-                                                  item['1'], item['2'], item['3'], item['4'], item['5'], item['6'], item['TONAME'], source="body")
+                                                  item['1'], item['2'], item['3'], item['4'], item['5'], item['6'],
+                                                  item['TONAME'], source="body")
 
                         html_body = "<html><body><p>" + \
-                            body.replace("\n", "<br>") + "</p></body></html>"
+                                    body.replace("\n", "<br>") + "</p></body></html>"
 
                         # if contains_non_ascii_characters(body):
                         msg.attach(
@@ -414,7 +423,7 @@ class SMTP_(threading.Thread):
                     if count == 1:
                         first_time = datetime.now()
 
-                    if var.stop_send_campaign == True:
+                    if var.stop_send_campaign:
                         break
 
                     for counter in range(0, 3):
@@ -568,13 +577,13 @@ def main(group, d_start, d_end, group_selected):
         temp = 0
         end = 0
 
-        if var.stop_send_campaign == True:
+        if var.stop_send_campaign:
             break
 
         for index, item in group.loc[group['flag'] == 0].iterrows():
             try:
 
-                if var.stop_send_campaign == True or temp > e_target_len-1:
+                if var.stop_send_campaign == True or temp > e_target_len - 1:
                     break
 
                 proxy_user = item["PROXY_USER"]
@@ -606,7 +615,7 @@ def main(group, d_start, d_end, group_selected):
 
                 SMTP_(index, name, proxy_host, proxy_port, proxy_user,
                       proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME,
-                      target.loc[start:end].copy(),  d_start, d_end, campaign_id).start()
+                      target.loc[start:end].copy(), d_start, d_end, campaign_id).start()
 
                 while var.thread_open_campaign >= var.limit_of_thread and var.stop_send_campaign == False:
                     time.sleep(1)
@@ -642,7 +651,7 @@ def main(group, d_start, d_end, group_selected):
 
     try:
         field_names = ['TARGET', 'FROMEMAIL', 'STATUS', 'CAMPAIGN', "DATE"]
-        with open(var.base_dir+"/report.csv", 'a', newline='', encoding="utf-8") as csvfile:
+        with open(var.base_dir + "/report.csv", 'a', newline='', encoding="utf-8") as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=field_names)
             writer.writeheader()
             while not var.send_report.empty():

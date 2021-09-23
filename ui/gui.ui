@@ -64,7 +64,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <property name="tabsClosable">
        <bool>false</bool>
@@ -360,6 +360,34 @@ background-color: rgb(255, 255, 255);</string>
                </item>
               </widget>
              </item>
+             <item row="9" column="1">
+              <widget class="QCheckBox" name="checkBox_delete_all">
+               <property name="font">
+                <font>
+                 <family>Times New Roman</family>
+                 <pointsize>13</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Delete All</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_5">
+               <property name="font">
+                <font>
+                 <family>Calibri</family>
+                 <pointsize>11</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>ADDRESS GROUP</string>
+               </property>
+              </widget>
+             </item>
              <item row="3" column="1">
               <widget class="QPushButton" name="pushButton_download_email">
                <property name="sizePolicy">
@@ -406,34 +434,6 @@ QPushButton:pressed {
                </property>
                <property name="text">
                 <string>DOWNLOAD</string>
-               </property>
-              </widget>
-             </item>
-             <item row="9" column="1">
-              <widget class="QCheckBox" name="checkBox_delete_all">
-               <property name="font">
-                <font>
-                 <family>Times New Roman</family>
-                 <pointsize>13</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Delete All</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QLabel" name="label_5">
-               <property name="font">
-                <font>
-                 <family>Calibri</family>
-                 <pointsize>11</pointsize>
-                 <weight>75</weight>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="text">
-                <string>ADDRESS GROUP</string>
                </property>
               </widget>
              </item>
@@ -494,7 +494,7 @@ QPushButton:pressed {
                </property>
               </widget>
              </item>
-             <item row="3" column="2">
+             <item row="2" column="2">
               <widget class="QComboBox" name="comboBox_date_sort">
                <property name="maximumSize">
                 <size>
@@ -533,6 +533,47 @@ QPushButton:pressed {
                  <string>z - a</string>
                 </property>
                </item>
+              </widget>
+             </item>
+             <item row="3" column="2">
+              <widget class="QPushButton" name="pushButton_fire_inbox_webhook">
+               <property name="font">
+                <font>
+                 <family>Calibri</family>
+                 <pointsize>9</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    border: 1px solid #555;
+    border-radius: 3px;
+    border-style: Solid;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
+        );
+    padding: 5px 28px;
+	color: rgb(255, 255, 255);
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
+        );
+    }</string>
+               </property>
+               <property name="text">
+                <string>FIRE WEBHOOK</string>
+               </property>
               </widget>
              </item>
             </layout>
@@ -1971,114 +2012,24 @@ QPushButton:pressed {
              </property>
             </widget>
            </item>
-           <item row="4" column="1">
-            <widget class="QPushButton" name="pushButton_add_row">
-             <property name="maximumSize">
-              <size>
-               <width>110</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>10</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
-    border: 1px solid #555;
-    border-radius: 3px;
-    border-style: Solid;
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
-        );
-    padding: 5px 28px;
-	color: rgb(255, 255, 255);
-    }
-
-QPushButton:hover {
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
-        );
-    }
-
-QPushButton:pressed {
-    border-style: inset;
-    background: qradialgradient(
-        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
-        );
-    }</string>
-             </property>
-             <property name="text">
-              <string>Add</string>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="1">
-            <widget class="QPushButton" name="pushButton_remove_row">
-             <property name="maximumSize">
-              <size>
-               <width>110</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <pointsize>10</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
-    border: 1px solid #555;
-    border-radius: 3px;
-    border-style: Solid;
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
-        );
-    padding: 5px 28px;
-	color: rgb(255, 255, 255);
-    }
-
-QPushButton:hover {
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
-        );
-    }
-
-QPushButton:pressed {
-    border-style: inset;
-    background: qradialgradient(
-        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
-        );
-    }</string>
-             </property>
-             <property name="text">
-              <string>Remove</string>
-             </property>
-            </widget>
-           </item>
-           <item row="8" column="1">
+           <item row="9" column="1">
             <widget class="QPushButton" name="pushButton_load_db">
+             <property name="minimumSize">
+              <size>
+               <width>150</width>
+               <height>0</height>
+              </size>
+             </property>
              <property name="maximumSize">
               <size>
-               <width>120</width>
+               <width>150</width>
                <height>16777215</height>
               </size>
              </property>
              <property name="font">
               <font>
                <family>Calibri</family>
-               <pointsize>10</pointsize>
+               <pointsize>9</pointsize>
                <weight>75</weight>
                <bold>true</bold>
               </font>
@@ -2116,7 +2067,7 @@ QPushButton:pressed {
              </property>
             </widget>
            </item>
-           <item row="9" column="1">
+           <item row="10" column="1">
             <widget class="QCheckBox" name="checkBox_database_group_a">
              <property name="text">
               <string>Group A</string>
@@ -2126,7 +2077,7 @@ QPushButton:pressed {
              </property>
             </widget>
            </item>
-           <item row="10" column="1">
+           <item row="11" column="1">
             <widget class="QCheckBox" name="checkBox_database_group_b">
              <property name="text">
               <string>Group B</string>
@@ -2136,13 +2087,123 @@ QPushButton:pressed {
              </property>
             </widget>
            </item>
-           <item row="11" column="1">
+           <item row="12" column="1">
             <widget class="QCheckBox" name="checkBox_database_target">
              <property name="text">
               <string>Target</string>
              </property>
              <property name="checked">
               <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <widget class="QPushButton" name="pushButton_remove_row">
+             <property name="minimumSize">
+              <size>
+               <width>150</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>150</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    border: 1px solid #555;
+    border-radius: 3px;
+    border-style: Solid;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
+        );
+    padding: 5px 28px;
+	color: rgb(255, 255, 255);
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
+        );
+    }</string>
+             </property>
+             <property name="text">
+              <string>REMOVE</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QPushButton" name="pushButton_add_row">
+             <property name="minimumSize">
+              <size>
+               <width>150</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>150</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    border: 1px solid #555;
+    border-radius: 3px;
+    border-style: Solid;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
+        );
+    padding: 5px 28px;
+	color: rgb(255, 255, 255);
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
+        );
+    }</string>
+             </property>
+             <property name="text">
+              <string>ADD</string>
              </property>
             </widget>
            </item>
@@ -2194,6 +2255,35 @@ QPushButton:pressed {
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="lineEdit_target_blacklist">
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_11">
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Target Blacklist</string>
              </property>
             </widget>
            </item>
@@ -2326,7 +2416,46 @@ QPushButton:pressed {
           </layout>
          </widget>
         </item>
-        <item row="5" column="2">
+        <item row="4" column="3">
+         <spacer name="horizontalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="4" column="1">
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="6" column="2">
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="4" column="2">
          <widget class="QPushButton" name="pushButton_configuration_save">
           <property name="enabled">
            <bool>true</bool>
@@ -2376,32 +2505,6 @@ QPushButton:pressed {
           </property>
          </widget>
         </item>
-        <item row="5" column="1">
-         <spacer name="horizontalSpacer_3">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="7" column="2">
-         <spacer name="verticalSpacer_3">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
         <item row="2" column="0">
          <spacer name="horizontalSpacer_4">
           <property name="orientation">
@@ -2414,60 +2517,6 @@ QPushButton:pressed {
            </size>
           </property>
          </spacer>
-        </item>
-        <item row="5" column="3">
-         <spacer name="horizontalSpacer_5">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="4" column="1" colspan="2" alignment="Qt::AlignHCenter">
-         <widget class="QPushButton" name="pushButton_fire_inbox_webhook">
-          <property name="font">
-           <font>
-            <family>Times New Roman</family>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QPushButton {
-    border: 1px solid #555;
-    border-radius: 3px;
-    border-style: Solid;
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
-        );
-    padding: 5px 28px;
-	color: rgb(255, 255, 255);
-    }
-
-QPushButton:hover {
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
-        );
-    }
-
-QPushButton:pressed {
-    border-style: inset;
-    background: qradialgradient(
-        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
-        );
-    }</string>
-          </property>
-          <property name="text">
-           <string>Fire Inbox Webhook</string>
-          </property>
-         </widget>
         </item>
        </layout>
       </widget>

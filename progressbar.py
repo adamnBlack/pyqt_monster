@@ -4,7 +4,8 @@ from threading import Thread
 import requests
 import var
 from p_gui import Ui_Dialog
-import os, sys
+import os
+import sys
 import time
 from PyQt5.QtCore import pyqtSignal, QObject
 
@@ -12,8 +13,10 @@ cancel = False
 total_email_count = 0
 delete_status = False
 
+
 class Communicate(QObject):
     s = pyqtSignal(int, str)
+
 
 class Download(Ui_Dialog):
     def __init__(self, dialog, name, link, size, path):
@@ -29,7 +32,8 @@ class Download(Ui_Dialog):
         self.size_in_kb = int(round(size/1024))
         self.file_path = path
         self.pushButton_cancel.clicked.connect(self.cancel)
-        self.label_status.setText("Dowloaded  {} of {} kb".format(0, self.size_in_kb))
+        self.label_status.setText(
+            "Dowloaded  {} of {} kb".format(0, self.size_in_kb))
         Thread(target=self.download, daemon=True).start()
 
     def update_gui(self, dowloaded, message):
@@ -37,7 +41,8 @@ class Download(Ui_Dialog):
             self.label_status.setText(message)
             self.pushButton_cancel.setText("Close")
         else:
-            self.label_status.setText("Dowloaded  {} of {} kb".format(dowloaded, self.size_in_kb))
+            self.label_status.setText(
+                "Dowloaded  {} of {} kb".format(dowloaded, self.size_in_kb))
             value = (dowloaded/self.size_in_kb)*100
             self.progressBar.setValue(value)
 
@@ -66,14 +71,16 @@ class Download(Ui_Dialog):
             with open(filepath, 'wb') as f:
                 for chunk in r.iter_content(chunk_size=1024):
                     if chunk:
-                        if cancel==True:
+                        if cancel == True:
                             break
-                        downloaded+=len(chunk)
-                        print("Dowloaded {}/{}".format(downloaded, self.size), end='\r')
+                        downloaded += len(chunk)
+                        print("Dowloaded {}/{}".format(downloaded,
+                              self.size), end='\r')
                         self.signal.s.emit(int(round(downloaded/1024)), "")
                         f.write(chunk)
             print("download finished")
-            self.signal.s.emit(int(round(downloaded/1024)), "Download Finished")
+            self.signal.s.emit(int(round(downloaded/1024)),
+                               "Download Finished")
         except Exception as e:
             print("Error at download update: {}".format(e))
 
@@ -89,6 +96,7 @@ def set_icon(obj):
         obj.setWindowIcon(QtGui.QIcon(p))
     except Exception as e:
         print(e)
+
 
 class Delete_email(Ui_Dialog):
     def __init__(self, dialog):
@@ -114,18 +122,19 @@ class Delete_email(Ui_Dialog):
         global total_email_count, delete_status
         if total_email_count != 0 and delete_status == True:
             value = (var.delete_email_count/total_email_count)*100
-            self.label_status.setText("Deleted : {}/{}".format(var.delete_email_count, total_email_count))
+            self.label_status.setText(
+                "Deleted : {}/{}".format(var.delete_email_count, total_email_count))
             self.progressBar.setValue(value)
-        
+
         elif delete_status == False:
             value = (var.delete_email_count/total_email_count)*100
-            self.label_status.setText("Deleting Finished : {}/{}".format(var.delete_email_count, total_email_count))
+            self.label_status.setText(
+                "Deleting Finished : {}/{}".format(var.delete_email_count, total_email_count))
             self.progressBar.setValue(value)
             self.pushButton_cancel.setText("Close")
 
         else:
             self.label_status.setText("Preparing for deleting ...")
-
 
 
 def thread_starter():
@@ -139,9 +148,9 @@ def thread_starter():
     temp_df = temp_df.groupby('user')
     var.delete_email_count = 0
     var.stop_delete = False
-    
+
     from imap import delete_email
-    
+
     for group_name, df_group in temp_df:
 
         if var.stop_delete == True:
@@ -153,7 +162,7 @@ def thread_starter():
         # print('Group name - {}'.format(group_name))
 
         Thread(target=delete_email, daemon=True, args=(df_group,)).start()
-    while var.thread_open!=0 and var.stop_delete == False:
+    while var.thread_open != 0 and var.stop_delete == False:
         time.sleep(1)
 
     # for row_index, row in var.inbox_data.iterrows():

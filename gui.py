@@ -205,6 +205,22 @@ class Ui_MainWindow(object):
         self.tableWidget_inbox.horizontalHeader().setDefaultSectionSize(125)
         self.tableWidget_inbox.verticalHeader().setVisible(False)
         self.gridLayout_2.addWidget(self.tableWidget_inbox, 8, 0, 1, 7)
+        self.checkBox_delete_all = QtWidgets.QCheckBox(self.groupBox_inbox)
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(13)
+        self.checkBox_delete_all.setFont(font)
+        self.checkBox_delete_all.setObjectName("checkBox_delete_all")
+        self.gridLayout_2.addWidget(self.checkBox_delete_all, 9, 1, 1, 1)
+        self.label_5 = QtWidgets.QLabel(self.groupBox_inbox)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_5.setFont(font)
+        self.label_5.setObjectName("label_5")
+        self.gridLayout_2.addWidget(self.label_5, 1, 0, 1, 1)
         self.pushButton_download_email = QtWidgets.QPushButton(self.groupBox_inbox)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -245,22 +261,6 @@ class Ui_MainWindow(object):
 "    }")
         self.pushButton_download_email.setObjectName("pushButton_download_email")
         self.gridLayout_2.addWidget(self.pushButton_download_email, 3, 1, 1, 1)
-        self.checkBox_delete_all = QtWidgets.QCheckBox(self.groupBox_inbox)
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(13)
-        self.checkBox_delete_all.setFont(font)
-        self.checkBox_delete_all.setObjectName("checkBox_delete_all")
-        self.gridLayout_2.addWidget(self.checkBox_delete_all, 9, 1, 1, 1)
-        self.label_5 = QtWidgets.QLabel(self.groupBox_inbox)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_5.setFont(font)
-        self.label_5.setObjectName("label_5")
-        self.gridLayout_2.addWidget(self.label_5, 1, 0, 1, 1)
         self.pushButton_delete = QtWidgets.QPushButton(self.groupBox_inbox)
         font = QtGui.QFont()
         font.setFamily("Calibri")
@@ -317,7 +317,40 @@ class Ui_MainWindow(object):
         self.comboBox_date_sort.addItem("")
         self.comboBox_date_sort.addItem("")
         self.comboBox_date_sort.addItem("")
-        self.gridLayout_2.addWidget(self.comboBox_date_sort, 3, 2, 1, 1)
+        self.gridLayout_2.addWidget(self.comboBox_date_sort, 2, 2, 1, 1)
+        self.pushButton_fire_inbox_webhook = QtWidgets.QPushButton(self.groupBox_inbox)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(9)
+        self.pushButton_fire_inbox_webhook.setFont(font)
+        self.pushButton_fire_inbox_webhook.setStyleSheet("QPushButton {\n"
+"    border: 1px solid #555;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    color: rgb(255, 255, 255);\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
+"        );\n"
+"    }")
+        self.pushButton_fire_inbox_webhook.setObjectName("pushButton_fire_inbox_webhook")
+        self.gridLayout_2.addWidget(self.pushButton_fire_inbox_webhook, 3, 2, 1, 1)
         self.gridLayout_11.addWidget(self.groupBox_inbox, 0, 0, 1, 1)
         self.groupBox = QtWidgets.QGroupBox(self.tab_inbox)
         self.groupBox.setStyleSheet("background-color: #E3E3E3;\n"
@@ -1220,81 +1253,12 @@ class Ui_MainWindow(object):
         self.radioButton_db_target.setFont(font)
         self.radioButton_db_target.setObjectName("radioButton_db_target")
         self.formLayout.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.radioButton_db_target)
-        self.pushButton_add_row = QtWidgets.QPushButton(self.groupBox_7)
-        self.pushButton_add_row.setMaximumSize(QtCore.QSize(110, 16777215))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pushButton_add_row.setFont(font)
-        self.pushButton_add_row.setStyleSheet("QPushButton {\n"
-"    border: 1px solid #555;\n"
-"    border-radius: 3px;\n"
-"    border-style: Solid;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
-"        );\n"
-"    padding: 5px 28px;\n"
-"    color: rgb(255, 255, 255);\n"
-"    }\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
-"        );\n"
-"    }\n"
-"\n"
-"QPushButton:pressed {\n"
-"    border-style: inset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
-"        );\n"
-"    }")
-        self.pushButton_add_row.setObjectName("pushButton_add_row")
-        self.formLayout.setWidget(4, QtWidgets.QFormLayout.FieldRole, self.pushButton_add_row)
-        self.pushButton_remove_row = QtWidgets.QPushButton(self.groupBox_7)
-        self.pushButton_remove_row.setMaximumSize(QtCore.QSize(110, 16777215))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pushButton_remove_row.setFont(font)
-        self.pushButton_remove_row.setStyleSheet("QPushButton {\n"
-"    border: 1px solid #555;\n"
-"    border-radius: 3px;\n"
-"    border-style: Solid;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
-"        );\n"
-"    padding: 5px 28px;\n"
-"    color: rgb(255, 255, 255);\n"
-"    }\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
-"        );\n"
-"    }\n"
-"\n"
-"QPushButton:pressed {\n"
-"    border-style: inset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
-"        );\n"
-"    }")
-        self.pushButton_remove_row.setObjectName("pushButton_remove_row")
-        self.formLayout.setWidget(5, QtWidgets.QFormLayout.FieldRole, self.pushButton_remove_row)
         self.pushButton_load_db = QtWidgets.QPushButton(self.groupBox_7)
-        self.pushButton_load_db.setMaximumSize(QtCore.QSize(120, 16777215))
+        self.pushButton_load_db.setMinimumSize(QtCore.QSize(150, 0))
+        self.pushButton_load_db.setMaximumSize(QtCore.QSize(150, 16777215))
         font = QtGui.QFont()
         font.setFamily("Calibri")
-        font.setPointSize(10)
+        font.setPointSize(9)
         font.setBold(True)
         font.setWeight(75)
         self.pushButton_load_db.setFont(font)
@@ -1325,19 +1289,93 @@ class Ui_MainWindow(object):
 "        );\n"
 "    }")
         self.pushButton_load_db.setObjectName("pushButton_load_db")
-        self.formLayout.setWidget(8, QtWidgets.QFormLayout.FieldRole, self.pushButton_load_db)
+        self.formLayout.setWidget(9, QtWidgets.QFormLayout.FieldRole, self.pushButton_load_db)
         self.checkBox_database_group_a = QtWidgets.QCheckBox(self.groupBox_7)
         self.checkBox_database_group_a.setChecked(True)
         self.checkBox_database_group_a.setObjectName("checkBox_database_group_a")
-        self.formLayout.setWidget(9, QtWidgets.QFormLayout.FieldRole, self.checkBox_database_group_a)
+        self.formLayout.setWidget(10, QtWidgets.QFormLayout.FieldRole, self.checkBox_database_group_a)
         self.checkBox_database_group_b = QtWidgets.QCheckBox(self.groupBox_7)
         self.checkBox_database_group_b.setChecked(True)
         self.checkBox_database_group_b.setObjectName("checkBox_database_group_b")
-        self.formLayout.setWidget(10, QtWidgets.QFormLayout.FieldRole, self.checkBox_database_group_b)
+        self.formLayout.setWidget(11, QtWidgets.QFormLayout.FieldRole, self.checkBox_database_group_b)
         self.checkBox_database_target = QtWidgets.QCheckBox(self.groupBox_7)
         self.checkBox_database_target.setChecked(True)
         self.checkBox_database_target.setObjectName("checkBox_database_target")
-        self.formLayout.setWidget(11, QtWidgets.QFormLayout.FieldRole, self.checkBox_database_target)
+        self.formLayout.setWidget(12, QtWidgets.QFormLayout.FieldRole, self.checkBox_database_target)
+        self.pushButton_remove_row = QtWidgets.QPushButton(self.groupBox_7)
+        self.pushButton_remove_row.setMinimumSize(QtCore.QSize(150, 0))
+        self.pushButton_remove_row.setMaximumSize(QtCore.QSize(150, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(9)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_remove_row.setFont(font)
+        self.pushButton_remove_row.setStyleSheet("QPushButton {\n"
+"    border: 1px solid #555;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    color: rgb(255, 255, 255);\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
+"        );\n"
+"    }")
+        self.pushButton_remove_row.setObjectName("pushButton_remove_row")
+        self.formLayout.setWidget(8, QtWidgets.QFormLayout.FieldRole, self.pushButton_remove_row)
+        self.pushButton_add_row = QtWidgets.QPushButton(self.groupBox_7)
+        self.pushButton_add_row.setMinimumSize(QtCore.QSize(150, 0))
+        self.pushButton_add_row.setMaximumSize(QtCore.QSize(150, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(9)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_add_row.setFont(font)
+        self.pushButton_add_row.setStyleSheet("QPushButton {\n"
+"    border: 1px solid #555;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    color: rgb(255, 255, 255);\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
+"        );\n"
+"    }")
+        self.pushButton_add_row.setObjectName("pushButton_add_row")
+        self.formLayout.setWidget(7, QtWidgets.QFormLayout.FieldRole, self.pushButton_add_row)
         self.gridLayout_13.addWidget(self.groupBox_7, 5, 1, 1, 3)
         self.tabWidget.addTab(self.tab_database, "")
         self.tab_configuration = QtWidgets.QWidget()
@@ -1367,6 +1405,22 @@ class Ui_MainWindow(object):
         self.label_10.setAlignment(QtCore.Qt.AlignCenter)
         self.label_10.setObjectName("label_10")
         self.gridLayout_16.addWidget(self.label_10, 0, 0, 1, 1)
+        self.lineEdit_target_blacklist = QtWidgets.QLineEdit(self.groupBox_10)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.lineEdit_target_blacklist.setFont(font)
+        self.lineEdit_target_blacklist.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEdit_target_blacklist.setFrame(False)
+        self.lineEdit_target_blacklist.setObjectName("lineEdit_target_blacklist")
+        self.gridLayout_16.addWidget(self.lineEdit_target_blacklist, 1, 1, 1, 1)
+        self.label_11 = QtWidgets.QLabel(self.groupBox_10)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.label_11.setFont(font)
+        self.label_11.setObjectName("label_11")
+        self.gridLayout_16.addWidget(self.label_11, 1, 0, 1, 1)
         self.gridLayout_15.addWidget(self.groupBox_10, 3, 1, 1, 2)
         self.groupBox_9 = QtWidgets.QGroupBox(self.tab_configuration)
         self.groupBox_9.setMaximumSize(QtCore.QSize(16777215, 16777212))
@@ -1432,6 +1486,12 @@ class Ui_MainWindow(object):
         self.lineEdit_email_tracking_analytics_account.setObjectName("lineEdit_email_tracking_analytics_account")
         self.gridLayout_14.addWidget(self.lineEdit_email_tracking_analytics_account, 1, 1, 1, 1)
         self.gridLayout_15.addWidget(self.groupBox_9, 2, 1, 1, 2)
+        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_15.addItem(spacerItem3, 4, 3, 1, 1)
+        spacerItem4 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_15.addItem(spacerItem4, 4, 1, 1, 1)
+        spacerItem5 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_15.addItem(spacerItem5, 6, 2, 1, 1)
         self.pushButton_configuration_save = QtWidgets.QPushButton(self.tab_configuration)
         self.pushButton_configuration_save.setEnabled(True)
         self.pushButton_configuration_save.setMaximumSize(QtCore.QSize(100, 100))
@@ -1466,48 +1526,9 @@ class Ui_MainWindow(object):
 "        );\n"
 "    }")
         self.pushButton_configuration_save.setObjectName("pushButton_configuration_save")
-        self.gridLayout_15.addWidget(self.pushButton_configuration_save, 5, 2, 1, 1)
-        spacerItem3 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_15.addItem(spacerItem3, 5, 1, 1, 1)
-        spacerItem4 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_15.addItem(spacerItem4, 7, 2, 1, 1)
-        spacerItem5 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_15.addItem(spacerItem5, 2, 0, 1, 1)
+        self.gridLayout_15.addWidget(self.pushButton_configuration_save, 4, 2, 1, 1)
         spacerItem6 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_15.addItem(spacerItem6, 5, 3, 1, 1)
-        self.pushButton_fire_inbox_webhook = QtWidgets.QPushButton(self.tab_configuration)
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(12)
-        self.pushButton_fire_inbox_webhook.setFont(font)
-        self.pushButton_fire_inbox_webhook.setStyleSheet("QPushButton {\n"
-"    border: 1px solid #555;\n"
-"    border-radius: 3px;\n"
-"    border-style: Solid;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
-"        );\n"
-"    padding: 5px 28px;\n"
-"    color: rgb(255, 255, 255);\n"
-"    }\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
-"        );\n"
-"    }\n"
-"\n"
-"QPushButton:pressed {\n"
-"    border-style: inset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
-"        );\n"
-"    }")
-        self.pushButton_fire_inbox_webhook.setObjectName("pushButton_fire_inbox_webhook")
-        self.gridLayout_15.addWidget(self.pushButton_fire_inbox_webhook, 4, 1, 1, 2, QtCore.Qt.AlignHCenter)
+        self.gridLayout_15.addItem(spacerItem6, 2, 0, 1, 1)
         self.tabWidget.addTab(self.tab_configuration, "")
         self.gridLayout.addWidget(self.tabWidget, 1, 0, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -1516,7 +1537,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(3)
+        self.tabWidget.setCurrentIndex(2)
         self.pushButton_clear_compose.clicked.connect(self.textBrowser_compose.clear)
         self.pushButton_attachments_clear.clicked.connect(self.comboBox_attachments.clear)
         self.pushButton_3.clicked.connect(self.textBrowser_show_email.zoomIn)
@@ -1537,14 +1558,15 @@ class Ui_MainWindow(object):
         __sortingEnabled = self.tableWidget_inbox.isSortingEnabled()
         self.tableWidget_inbox.setSortingEnabled(False)
         self.tableWidget_inbox.setSortingEnabled(__sortingEnabled)
-        self.pushButton_download_email.setText(_translate("MainWindow", "DOWNLOAD"))
         self.checkBox_delete_all.setText(_translate("MainWindow", "Delete All"))
         self.label_5.setText(_translate("MainWindow", "ADDRESS GROUP"))
+        self.pushButton_download_email.setText(_translate("MainWindow", "DOWNLOAD"))
         self.pushButton_delete.setText(_translate("MainWindow", "DELETE"))
         self.comboBox_date_sort.setItemText(0, _translate("MainWindow", "Latest first"))
         self.comboBox_date_sort.setItemText(1, _translate("MainWindow", "Earliest first"))
         self.comboBox_date_sort.setItemText(2, _translate("MainWindow", "a - z"))
         self.comboBox_date_sort.setItemText(3, _translate("MainWindow", "z - a"))
+        self.pushButton_fire_inbox_webhook.setText(_translate("MainWindow", "FIRE WEBHOOK"))
         self.pushButton_proxy_provider.setText(_translate("MainWindow", "More GMonster Proxies"))
         self.label.setText(_translate("MainWindow", "ORIGINAL RECIPIENT:"))
         self.pushButton_3.setText(_translate("MainWindow", "+"))
@@ -1584,19 +1606,19 @@ class Ui_MainWindow(object):
         self.radioButton_db_groupa.setText(_translate("MainWindow", "Group A"))
         self.radioButton_db_groupb.setText(_translate("MainWindow", "Group B"))
         self.radioButton_db_target.setText(_translate("MainWindow", "Target"))
-        self.pushButton_add_row.setText(_translate("MainWindow", "Add"))
-        self.pushButton_remove_row.setText(_translate("MainWindow", "Remove"))
         self.pushButton_load_db.setText(_translate("MainWindow", "LOAD FILE"))
         self.checkBox_database_group_a.setText(_translate("MainWindow", "Group A"))
         self.checkBox_database_group_b.setText(_translate("MainWindow", "Group B"))
         self.checkBox_database_target.setText(_translate("MainWindow", "Target"))
+        self.pushButton_remove_row.setText(_translate("MainWindow", "REMOVE"))
+        self.pushButton_add_row.setText(_translate("MainWindow", "ADD"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_database), _translate("MainWindow", "Database"))
         self.label_10.setText(_translate("MainWindow", "Webhook Link"))
+        self.label_11.setText(_translate("MainWindow", "Target Blacklist"))
         self.label_7.setText(_translate("MainWindow", "Analytics Account"))
         self.label_valid_input.setText(_translate("MainWindow", "Campaign Name field: letters, numbers and \"_\" only. (no spaces)"))
         self.label_8.setText(_translate("MainWindow", "Campaign Name"))
         self.label_9.setText(_translate("MainWindow", "Email Tracking Configuration"))
         self.pushButton_configuration_save.setText(_translate("MainWindow", "Save"))
-        self.pushButton_fire_inbox_webhook.setText(_translate("MainWindow", "Fire Inbox Webhook"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_configuration), _translate("MainWindow", "Configuration"))
 import logo_rc

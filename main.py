@@ -1,21 +1,17 @@
-import datetime
-from pyautogui import alert, password, confirm
-import json
+import os
+import re
+import sys
+import webbrowser
 from threading import Thread
 from time import sleep
-import os
-import sys
-from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem, QMessageBox, QAction
-from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import Qt, pyqtSignal, QObject
-from gui import Ui_MainWindow
-import encodings.idna
-import pandas as pd
-import webbrowser
-import subprocess
-import requests
-import re
 
+import pandas as pd
+import requests
+from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem
+from pyautogui import alert, confirm
+
+from gui import Ui_MainWindow
 
 print("App started....")
 quit_application = False
@@ -31,7 +27,7 @@ class MyGui(Ui_MainWindow, QtWidgets.QWidget):
 
 class myMainClass():
     def __init__(self):
-        global mainWindow, quit_application
+        global mainWindow, quit_application, GUI
 
         self.compose_font_size = 13
 
@@ -68,6 +64,7 @@ class myMainClass():
         GUI.lineEdit_email_tracking_campaign_name.setText(
             str(var.tracking['campaign_name']))
         GUI.lineEdit_webhook_link.setText(str(var.webhook_link))
+        GUI.lineEdit_target_blacklist.setText(",".join(var.target_blacklist))
 
         GUI.lineEdit_num_per_address.setText(str(var.num_emails_per_address))
         GUI.lineEdit_delay_between_emails.setText(
@@ -172,6 +169,14 @@ class myMainClass():
         GUI.pushButton_fire_inbox_webhook.clicked.connect(
             self.start_inbox_stream_thread)
 
+        GUI.lineEdit_target_blacklist.textChanged.connect(
+            self.change_target_blacklist)
+
+    def change_target_blacklist(self):
+        target_blacklist = GUI.lineEdit_target_blacklist.text().strip().replace(" ", "")
+        var.target_blacklist = target_blacklist.split(",")
+        print(var.target_blacklist)
+
     def update_checkbox_status(self):
         var.add_custom_hostname = GUI.checkBox_add_custom_hostname.isChecked()
 
@@ -212,7 +217,7 @@ class myMainClass():
         var.tracking['analytics_account'] = str(
             GUI.lineEdit_email_tracking_analytics_account.text()).strip()
         pattern = re.compile("[^a-zA-Z0-9_ ]+")
-        if bool(pattern.search(str(GUI.lineEdit_email_tracking_campaign_name.text()).strip())) == False:
+        if not bool(pattern.search(str(GUI.lineEdit_email_tracking_campaign_name.text()).strip())):
             var.tracking['campaign_name'] = str(
                 GUI.lineEdit_email_tracking_campaign_name.text()).strip()
         else:
@@ -276,7 +281,7 @@ class myMainClass():
         while True:
             try:
                 url = var.api + \
-                    "verify/check_for_subscription/{}".format(var.login_email)
+                      "verify/check_for_subscription/{}".format(var.login_email)
                 response = requests.post(url, timeout=10)
                 data = response.json()
 
@@ -402,7 +407,7 @@ class myMainClass():
         try:
             subject = var.email_in_view['subject']
             subject = subject if (
-                "RE: " in subject or "Re: " in subject) else "RE: {}".format(subject)
+                    "RE: " in subject or "Re: " in subject) else "RE: {}".format(subject)
             GUI.lineEdit_subject.setText(subject)
         except Exception as e:
             print("Error while setting subject : {}".format(e))
@@ -552,8 +557,8 @@ class myMainClass():
 
     def update_compose_progressbar(self):
         try:
-            if var.send_campaign_run_status == False:
-                if var.stop_send_campaign == True:
+            if not var.send_campaign_run_status:
+                if var.stop_send_campaign:
                     GUI.label_compose_status.setText(
                         f"Sending Cancelled : {var.send_campaign_email_count}/{self.total_email_to_be_sent} Accounts Failed : {var.email_failed} Targets Remaining : {len(var.target)}")
                 else:
@@ -562,7 +567,7 @@ class myMainClass():
 
             else:
                 value = (var.send_campaign_email_count /
-                         self.total_email_to_be_sent)*100
+                         self.total_email_to_be_sent) * 100
                 GUI.label_compose_status.setText(
                     f"Total Email Sent : {var.send_campaign_email_count}/{self.total_email_to_be_sent}")
                 GUI.progressBar_compose.setValue(value)
@@ -589,11 +594,11 @@ class myMainClass():
                 print("Group a")
                 if len(var.group_a) > 0 and len(var.target) > 0:
 
-                    if len(var.group_a)*var.num_emails_per_address > len(var.target):
+                    if len(var.group_a) * var.num_emails_per_address > len(var.target):
                         self.total_email_to_be_sent = len(var.target)
                     else:
                         self.total_email_to_be_sent = len(
-                            var.group_a)*var.num_emails_per_address
+                            var.group_a) * var.num_emails_per_address
 
                     Thread(target=smtp.main, daemon=True, args=[
                         var.group_a.copy(), delay_start, delay_end, "Group A", ]).start()
@@ -607,11 +612,11 @@ class myMainClass():
                 print("Group b")
                 if len(var.group_b) > 0 and len(var.target) > 0:
 
-                    if len(var.group_b)*var.num_emails_per_address > len(var.target):
+                    if len(var.group_b) * var.num_emails_per_address > len(var.target):
                         self.total_email_to_be_sent = len(var.target)
                     else:
                         self.total_email_to_be_sent = len(
-                            var.group_b)*var.num_emails_per_address
+                            var.group_b) * var.num_emails_per_address
 
                     Thread(target=smtp.main, daemon=True, args=[
                         var.group_b.copy(), delay_start, delay_end, "Group B", ]).start()
@@ -715,7 +720,7 @@ class myMainClass():
                 var.inbox_data = var.inbox_data.append(
                     row_data, ignore_index=True)
 
-                GUI.tableWidget_inbox.setRowCount(var.row_pos+1)
+                GUI.tableWidget_inbox.setRowCount(var.row_pos + 1)
 
                 GUI.tableWidget_inbox.setItem(var.row_pos, 1,
                                               QTableWidgetItem(row_data['from']))
@@ -800,7 +805,8 @@ class myMainClass():
                 GUI.textBrowser_show_email.setHtml(var.inbox_data['body'][row])
             else:
                 tmp = "FROM - {} <br>SUBJECT - {}<br><br>{}".format(var.inbox_data['from'][row],
-                                                                    var.inbox_data['subject'][row], var.inbox_data['body'][row])
+                                                                    var.inbox_data['subject'][row],
+                                                                    var.inbox_data['body'][row])
 
                 tmp = prepare_html(tmp)
 
@@ -902,7 +908,7 @@ else:
 
     GUI = MyGui(mainWindow)
     mainWindow.showMaximized()
-    mainWindow.show()
+    # mainWindow.show()
 
     import var
     import imap
@@ -910,7 +916,7 @@ else:
     from utils import update_config_json, prepare_html
     from progressbar import Delete_email
     from download_email import Download
-    from campaign_reply import Reply, Campaign
+    from campaign_reply import Reply
     from send_dialog import Send
     from table_view import TableModel, InLineEditDelegate
     import database
