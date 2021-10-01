@@ -2,3 +2,112 @@
 2021-09-22 18:13:00,691 Error at downloading email - CarolHoward3262@gmail.com - b'[ALERT] Invalid credentials (Failure)'
 2021-09-22 18:13:00,770 Error at downloading email - isanjerin37579@gmail.com - b'[ALERT] Please log in via your web browser: https://support.google.com/mail/accounts/answer/78754 (Failure)'
 2021-09-22 18:13:00,930 Error at downloading email - kemopaul8931@gmail.com - b'[ALERT] Please log in via your web browser: https://support.google.com/mail/accounts/answer/78754 (Failure)'
+2021-09-26 18:11:19,977 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-09-26 18:11:43,464 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-09-26 18:11:55,183 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-09-26 18:12:06,374 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-09-26 18:12:12,170 File loading Config: {'group_a': False, 'group_b': False, 'target': True}
+2021-09-26 18:14:54,064 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-09-26 18:15:59,545 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-09-26 18:16:57,475 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-09-26 18:18:16,350 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-09-26 18:19:59,645 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-09-26 18:28:58,760 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-09-26 18:31:44,128 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 10
+ Len of Targets: 6
+ Delay: 0 - 1
+ Campaign ID: 435a93c9-3365-4553-96b0-9870f2bad076
+ Add Custom Hostname: False
+2021-09-26 18:31:44,276 
+Starting Thread : Name - gwenbramlet91@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-09-26 18:31:44,297 
+Starting Thread : Name - rayner.torix95@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Shah"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2021-09-26 18:31:44,314 
+Starting Thread : Name - Tanya.Ivy12@gmail.com
+Targets - {"ID": {"2": 3}, "1": {"2": " "}, "2": {"2": " "}, "3": {"2": "Shah"}, "4": {"2": " "}, "5": {"2": " "}, "6": {"2": " "}, "TONAME": {"2": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com"}, "flag": {"2": 0}}
+2021-09-26 18:31:44,329 
+Starting Thread : Name - caitlinbennetservices@gmail.com
+Targets - {"ID": {"3": 4}, "1": {"3": " "}, "2": {"3": " "}, "3": {"3": "Shah"}, "4": {"3": " "}, "5": {"3": " "}, "6": {"3": " "}, "TONAME": {"3": "Imran"}, "EMAIL": {"3": "shah_imran_sust@outlook.com"}, "flag": {"3": 0}}
+2021-09-26 18:31:44,343 
+Starting Thread : Name - evehudsocialcircuit@gmail.com
+Targets - {"ID": {"4": 5}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": "Shah"}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shah_imran_sust@outlook.com"}, "flag": {"4": 0}}
+2021-09-26 18:31:44,357 
+Starting Thread : Name - tia.jones209@gmail.com
+Targets - {"ID": {"5": 6}, "1": {"5": " "}, "2": {"5": " "}, "3": {"5": "Shah"}, "4": {"5": " "}, "5": {"5": " "}, "6": {"5": " "}, "TONAME": {"5": "Imran"}, "EMAIL": {"5": "shah_imran_sust@outlook.com"}, "flag": {"5": 0}}
+2021-09-26 18:31:49,468 Sent - gwenbramlet91@gmail.com shahimrans64@gmail.com
+2021-09-26 18:31:49,685 Sent - rayner.torix95@gmail.com shahimrans64@gmail.com
+2021-09-26 18:31:49,873 Sent - tia.jones209@gmail.com shah_imran_sust@outlook.com
+2021-09-26 18:31:50,075 Sent - caitlinbennetservices@gmail.com shah_imran_sust@outlook.com
+2021-09-26 18:31:50,115 Sent - Tanya.Ivy12@gmail.com shahimrans64@gmail.com
+2021-09-26 18:31:51,188 Sent - evehudsocialcircuit@gmail.com shah_imran_sust@outlook.com
+2021-09-26 18:31:52,472 Sending Finished 435a93c9-3365-4553-96b0-9870f2bad076
+2021-09-26 19:46:32,816 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 10
+ Len of Targets: 1
+ Delay: 0 - 1
+ Campaign ID: 9a8da170-86e0-49da-9cfd-8063acf386c5
+ Add Custom Hostname: True
+2021-09-26 19:46:32,835 
+Starting Thread : Name - gwenbramlet91@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-09-26 19:46:37,783 Sent - gwenbramlet91@gmail.com shahimrans64@gmail.com
+2021-09-26 19:46:38,842 Sending Finished 9a8da170-86e0-49da-9cfd-8063acf386c5
+2021-09-26 19:47:15,933 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 10
+ Len of Targets: 1
+ Delay: 0 - 1
+ Campaign ID: 509a5f74-3d91-4a92-8e87-3011234602d1
+ Add Custom Hostname: True
+2021-09-26 19:47:15,952 
+Starting Thread : Name - gwenbramlet91@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-09-26 19:47:47,973 Error at Sending - gwenbramlet91@gmail.com - _ssl.c:835: The handshake operation timed out
+2021-09-26 19:47:48,990 
+Starting Thread : Name - rayner.torix95@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-09-26 19:48:20,610 Error at Sending - rayner.torix95@gmail.com - Connection unexpectedly closed: timed out
+2021-09-26 19:48:21,025 
+Starting Thread : Name - Tanya.Ivy12@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-09-26 19:48:27,158 Sent - Tanya.Ivy12@gmail.com shahimrans64@gmail.com
+2021-09-26 19:48:28,033 Sending Finished 509a5f74-3d91-4a92-8e87-3011234602d1
+2021-09-26 19:51:22,669 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 10
+ Len of Targets: 1
+ Delay: 0 - 1
+ Campaign ID: dc7f637e-a75e-49a6-8bc2-cbe6391c630a
+ Add Custom Hostname: True
+2021-09-26 19:51:22,687 
+Starting Thread : Name - gwenbramlet91@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-09-26 19:51:31,738 Sent - gwenbramlet91@gmail.com shahimrans64@gmail.com
+2021-09-26 19:51:32,695 Sending Finished dc7f637e-a75e-49a6-8bc2-cbe6391c630a
+2021-09-27 08:56:28,855 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-09-30 21:14:30,489 File loading Config: {'group_a': True, 'group_b': True, 'target': True}

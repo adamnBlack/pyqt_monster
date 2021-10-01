@@ -367,10 +367,10 @@ class SMTP_(threading.Thread):
             for index, item in self.target.iterrows():
                 self.sleep()
 
-                if var.stop_send_campaign == True:
+                if var.stop_send_campaign:
                     break
 
-                if success_sent[item['EMAIL']] != True:
+                if not success_sent[item['EMAIL']]:
                     msg = MIMEMultipart("alternative")
 
                     msg["Subject"] = utils.format_email(var.compose_email_subject, self.FIRSTFROMNAME,

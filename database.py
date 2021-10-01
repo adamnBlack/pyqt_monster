@@ -378,13 +378,14 @@ def file_to_db():
                 target = target[target_header]
 
                 if list(target.keys()) == target_header:
+
                     target.fillna(" ", inplace=True)
                     target = target.astype(str)
                     target = target.loc[target['EMAIL'] != " "]
-                    target = target[~target['EMAIL'].str.lower(
-                    ).str.contains("|".join(var.target_blacklist))]
-                    print("hereeeeee")
-                    print(target)
+
+                    if len(var.target_blacklist) > 0:
+                        target = target[~target['EMAIL'].str.lower(
+                        ).str.contains("|".join(var.target_blacklist))]
 
                     if len(target) > 0:
                         objects = [Targets(

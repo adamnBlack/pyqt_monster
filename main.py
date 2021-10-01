@@ -174,7 +174,10 @@ class myMainClass():
 
     def change_target_blacklist(self):
         target_blacklist = GUI.lineEdit_target_blacklist.text().strip().replace(" ", "")
-        var.target_blacklist = target_blacklist.split(",")
+        if target_blacklist:
+            var.target_blacklist = target_blacklist.split(",")
+        else:
+            var.target_blacklist = list()
         print(var.target_blacklist)
 
     def update_checkbox_status(self):
