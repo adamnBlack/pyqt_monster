@@ -1,3 +1,6 @@
+from queue import Queue
+from typing import Any
+
 from proxy_smtplib import SMTP
 from email.mime.multipart import MIMEMultipart
 from email.header import Header
@@ -27,6 +30,8 @@ from database import Database as db
 from database import db_to_pandas
 from collections import defaultdict
 from bs4 import BeautifulSoup
+import traceback
+import queue
 
 # defaultdict accept a function. Whatever that
 # functions return is default value for non-existent keys
@@ -345,12 +350,11 @@ class SMTP_(threading.Thread):
 
     def run(self):
         try:
-            global sent_q, email_failed, success_sent
+            global sent_q, email_failed, success_sent, remove_target_q
 
             last_recipient = ''
             var.thread_open_campaign += 1
 
-            server = self.login()
             t_part = []
 
             for path in var.files:
@@ -371,6 +375,8 @@ class SMTP_(threading.Thread):
                     break
 
                 if not success_sent[item['EMAIL']]:
+                    server = self.login()
+
                     msg = MIMEMultipart("alternative")
 
                     msg["Subject"] = utils.format_email(var.compose_email_subject, self.FIRSTFROMNAME,
@@ -434,7 +440,7 @@ class SMTP_(threading.Thread):
                         except:
                             if counter == 2:
                                 raise
-                            time.sleep(random.randint(10, 50))
+                            time.sleep(random.randint(10, 100))
                             print("Reconnecting smtp - {}".format(self.name))
                             try:
                                 server = self.login()
@@ -474,8 +480,9 @@ class SMTP_(threading.Thread):
                     var.command_q.put("self.update_compose_progressbar()")
 
                     if var.remove_email_from_target:
-                        target = db()
-                        result = target.remove(table="targets", id=item['ID'])
+                        # target = db()
+                        # result = target.remove(table="targets", id=item['ID'])
+                        remove_target_q.put(item['ID'])
 
                     if count % 5 == 0 and var.check_for_blocks == True:
                         last_time = datetime.now()
@@ -497,15 +504,14 @@ class SMTP_(threading.Thread):
                             # self.logger.error(
                             #     f"Found no block messages : {self.name} {str(datetime.now())}")
 
-            server.quit()
-            server.close()
+                    server.quit()
 
         except Exception as e:
             email_failed += 1
 
             print("error at SMTP - {} - {}".format(self.name, e))
             self.logger.error(
-                "Error at Sending - {} - {}".format(self.name, e))
+                "Error at Sending - {} - {}".format(self.name, traceback.format_exc()))
 
             t_dict = {
                 "TARGET": last_recipient,
@@ -521,8 +527,42 @@ class SMTP_(threading.Thread):
             var.thread_open_campaign -= 1
 
 
+remove_target_q = queue.Queue()
+
+
+class RemoveTarget(threading.Thread):
+    def __init__(self):
+        super().__init__()
+
+        self.threadID = "RemoveTarget01"
+        self.name = "RemoveTarget"
+        self.setDaemon(True)
+
+        self.close = False
+        self.target = db()
+
+    def run(self):
+        global remove_target_q
+
+        while not self.close:
+            try:
+                if not remove_target_q.empty():
+                    id = remove_target_q.get()
+                    result = self.target.remove(table="targets", id=id)
+
+            except Exception as e:
+                logger.error(f"Error at remove_target_from_database : {traceback.format_exc()}")
+
+            time.sleep(1)
+
+        print("Remove target thread class terminating")
+
+    def stop(self):
+        self.close = True
+
+
 def main(group, d_start, d_end, group_selected):
-    global sent_q, email_failed, logger, success_sent
+    global sent_q, email_failed, logger, success_sent, remove_target_q
 
     success_sent.clear()
 
@@ -566,6 +606,12 @@ def main(group, d_start, d_end, group_selected):
     if var.enable_webhook_status:
         webhook = SendWebhook()
         webhook.start()
+
+    remove_target_q = queue.Queue()
+
+    if var.remove_email_from_target:
+        remove_target = RemoveTarget()
+        remove_target.start()
 
     while var.send_campaign_email_count < target_len and group['flag'].sum() < group_len:
         target = target[target['flag'] == 0]
@@ -663,6 +709,11 @@ def main(group, d_start, d_end, group_selected):
 
     if var.remove_email_from_target:
         print("removing email from target...")
+
+        while not remove_target_q.empty():
+            time.sleep(1)
+
+        remove_target.stop()
         db_to_pandas()
         var.command_q.put("self.update_db_table()")
 

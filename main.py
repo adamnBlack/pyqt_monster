@@ -73,7 +73,7 @@ class myMainClass():
 
         self.time_interval_sub_check = 3600
         subscription_thread = Thread(
-            target=self.check_for_subcription, daemon=True).start()
+            target=self.check_for_subscription, daemon=True).start()
 
         self.table_timer = QtCore.QTimer()
         self.table_timer.setInterval(10)
@@ -279,7 +279,7 @@ class myMainClass():
             GUI.lineEdit_number_of_threads.setText(str(var.limit_of_thread))
             alert(text="Must be number", title='Alert', button='OK')
 
-    def check_for_subcription(self):
+    def check_for_subscription(self):
         global quit_application
         while True:
             try:

@@ -111,3 +111,71 @@ Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"},
 2021-09-26 19:51:32,695 Sending Finished dc7f637e-a75e-49a6-8bc2-cbe6391c630a
 2021-09-27 08:56:28,855 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
 2021-09-30 21:14:30,489 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-10-03 18:52:00,814 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 1
+ Delay: 0 - 1
+ Campaign ID: 9319a3ec-8b3a-4861-9b1c-492ff06efc9f
+ Add Custom Hostname: False
+2021-10-03 18:52:00,891 
+Starting Thread : Name - eva@wealthyunions.co
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-10-03 18:52:05,986 Sent - eva@wealthyunions.co shahimrans64@gmail.com
+2021-10-03 18:52:06,896 Sending Finished 9319a3ec-8b3a-4861-9b1c-492ff06efc9f
+2021-10-04 03:06:33,036 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-10-04 03:07:13,775 
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 3
+ Len of Targets: 6
+ Delay: 0 - 1
+ Campaign ID: 00396979-2586-4ffb-a70e-e4ae225d7a18
+ Add Custom Hostname: False
+2021-10-04 03:07:13,809 
+Starting Thread : Name - gwenbramlet91@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-10-04 03:07:13,827 
+Starting Thread : Name - rayner.torix95@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Shah"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2021-10-04 03:07:13,846 
+Starting Thread : Name - Tanya.Ivy12@gmail.com
+Targets - {"ID": {"2": 3}, "1": {"2": " "}, "2": {"2": " "}, "3": {"2": "Shah"}, "4": {"2": " "}, "5": {"2": " "}, "6": {"2": " "}, "TONAME": {"2": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com"}, "flag": {"2": 0}}
+2021-10-04 03:07:18,795 Sent - gwenbramlet91@gmail.com shahimrans64@gmail.com
+2021-10-04 03:07:19,005 Sent - Tanya.Ivy12@gmail.com shahimrans64@gmail.com
+2021-10-04 03:07:19,493 Sent - rayner.torix95@gmail.com shahimrans64@gmail.com
+2021-10-04 03:10:01,696 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-10-04 03:10:26,646 
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 3
+ Len of Targets: 6
+ Delay: 0 - 1
+ Campaign ID: 9602253d-0300-4699-823e-4e5854359b25
+ Add Custom Hostname: False
+2021-10-04 03:10:26,678 
+Starting Thread : Name - winston.jules93@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-10-04 03:10:26,698 
+Starting Thread : Name - caitlinparker135@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Shah"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2021-10-04 03:10:26,718 
+Starting Thread : Name - ellaxturner96@gmail.com
+Targets - {"ID": {"2": 3}, "1": {"2": " "}, "2": {"2": " "}, "3": {"2": "Shah"}, "4": {"2": " "}, "5": {"2": " "}, "6": {"2": " "}, "TONAME": {"2": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com"}, "flag": {"2": 0}}
+2021-10-04 03:10:32,117 Sent - caitlinparker135@gmail.com shahimrans64@gmail.com
+2021-10-04 03:10:32,221 Sent - winston.jules93@gmail.com shahimrans64@gmail.com
+2021-10-04 03:10:32,380 Sent - ellaxturner96@gmail.com shahimrans64@gmail.com
+2021-10-04 03:10:35,780 Sending Finished 9602253d-0300-4699-823e-4e5854359b25

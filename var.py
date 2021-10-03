@@ -188,7 +188,7 @@ try:
     check_for_blocks = config['check_for_blocks']
     target_blacklist = config['target_blacklist']
 except Exception as e:
-    print("Exeception occured at config loading : {}".format(e))
+    print("Exception occurred at config loading : {}".format(e))
 
 
 def email_tracking_link():

@@ -103,6 +103,7 @@ class Database:
             return False
 
 
+
 def db_update_row(row):
     try:
         session = get_session()
