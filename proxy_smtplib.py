@@ -25,7 +25,7 @@ class SMTP(smtplib.SMTP):
     For additional information see smtplib.py
     """
 
-    def __init__(self, host='', port=0, proxy_host='', proxy_port=0, proxy_type=socks.HTTP,
+    def __init__(self, host='', port=0, proxy_host='', proxy_port=0, proxy_type=socks.SOCKS5,
                  local_hostname=None, timeout=socket._GLOBAL_DEFAULT_TIMEOUT, source_address=None):
         """Initialize a new instance.
         If a host is specified the connect method is called, and if it returns anything other than a
@@ -148,6 +148,8 @@ class SMTP(smtplib.SMTP):
         (host, port) = self._parse_host(host=host, port=port)
         if self.debuglevel > 0:
             self._print_debug('connect: via proxy', proxy_host, proxy_port)
+
+        self._host = host
         s = socks.socksocket()
         # s.set_proxy(proxy_type=proxy_type, addr=proxy_host, port=proxy_port)
         s.set_proxy(proxy_type=proxy_type, addr=proxy_host,

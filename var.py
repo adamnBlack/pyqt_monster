@@ -71,7 +71,6 @@ try:
             return os.path.join(sys._MEIPASS, relative_path)
         return os.path.join(os.path.abspath("."), relative_path)
 
-
     # icon path
     mail_unread_icon = resource_path("icons/email.ico")
     mail_read_icon = resource_path("icons/mail.ico")
@@ -154,9 +153,9 @@ button_style = """QPushButton {
 #         );
 #     }"""
 
+date = "8/24/2020"
 num_emails_per_address = 0
 delay_between_emails = ""
-date = "8/24/2020"
 limit_of_thread = 100
 login_email = ""
 tracking = {}
@@ -203,8 +202,8 @@ target = pd.DataFrame()
 db_path = "database/group.db"
 
 if __name__ == "__main__":
-    # import main
-    import dialog
+    import main
+    # import dialog
 
 # pyinstaller --onedir --icon=icons/icon.ico --name=GMonster --noconsole --noconfirm var.py
 # pyi-makespec --onefile --icon=icons/icon.ico --name=GMonster --noconsole var.py

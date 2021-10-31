@@ -179,3 +179,233 @@ Targets - {"ID": {"2": 3}, "1": {"2": " "}, "2": {"2": " "}, "3": {"2": "Shah"},
 2021-10-04 03:10:32,221 Sent - winston.jules93@gmail.com shahimrans64@gmail.com
 2021-10-04 03:10:32,380 Sent - ellaxturner96@gmail.com shahimrans64@gmail.com
 2021-10-04 03:10:35,780 Sending Finished 9602253d-0300-4699-823e-4e5854359b25
+2021-10-30 16:15:15,972 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-10-30 16:16:05,811 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 9
+ Len of Targets: 2
+ Delay: 0 - 1
+ Campaign ID: 4b04fa22-458a-4ad3-8f51-db99db2333b3
+ Add Custom Hostname: False
+2021-10-30 16:16:05,983 
+Starting Thread : Name - keanustroman@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-10-30 16:16:05,996 
+Starting Thread : Name - troyd0130@gmail.com
+Targets - {"ID": {"1": 6}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Shah"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shah_imran_sust@outlook.com"}, "flag": {"1": 0}}
+2021-10-30 16:16:09,582 Error at Sending - troyd0130@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 378, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 320, in login
+    server.starttls()
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 785, in starttls
+    self.sock = context.wrap_socket(self.sock,
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1031, in _create
+    self._sslobj = self._context._wrap_socket(
+ValueError: server_hostname cannot be an empty string or start with a leading dot.
+
+2021-10-30 16:16:09,956 Error at Sending - keanustroman@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 378, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 320, in login
+    server.starttls()
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 785, in starttls
+    self.sock = context.wrap_socket(self.sock,
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1031, in _create
+    self._sslobj = self._context._wrap_socket(
+ValueError: server_hostname cannot be an empty string or start with a leading dot.
+
+2021-10-30 16:16:10,021 
+Starting Thread : Name - clarkelliotn4@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-10-30 16:16:10,033 
+Starting Thread : Name - arnoldcolemann@gmail.com
+Targets - {"ID": {"1": 6}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Shah"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shah_imran_sust@outlook.com"}, "flag": {"1": 0}}
+2021-10-30 16:16:13,445 Error at Sending - arnoldcolemann@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 378, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 320, in login
+    server.starttls()
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 785, in starttls
+    self.sock = context.wrap_socket(self.sock,
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1031, in _create
+    self._sslobj = self._context._wrap_socket(
+ValueError: server_hostname cannot be an empty string or start with a leading dot.
+
+2021-10-30 16:16:13,611 Error at Sending - clarkelliotn4@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 378, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 320, in login
+    server.starttls()
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 785, in starttls
+    self.sock = context.wrap_socket(self.sock,
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1031, in _create
+    self._sslobj = self._context._wrap_socket(
+ValueError: server_hostname cannot be an empty string or start with a leading dot.
+
+2021-10-30 16:16:14,053 
+Starting Thread : Name - daviddouglas375849@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-10-30 16:16:14,065 
+Starting Thread : Name - instageniuslaura93@gmail.com
+Targets - {"ID": {"1": 6}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Shah"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shah_imran_sust@outlook.com"}, "flag": {"1": 0}}
+2021-10-30 16:16:17,460 Error at Sending - instageniuslaura93@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 378, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 320, in login
+    server.starttls()
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 785, in starttls
+    self.sock = context.wrap_socket(self.sock,
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1031, in _create
+    self._sslobj = self._context._wrap_socket(
+ValueError: server_hostname cannot be an empty string or start with a leading dot.
+
+2021-10-30 16:16:17,919 Error at Sending - daviddouglas375849@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 378, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 320, in login
+    server.starttls()
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 785, in starttls
+    self.sock = context.wrap_socket(self.sock,
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1031, in _create
+    self._sslobj = self._context._wrap_socket(
+ValueError: server_hostname cannot be an empty string or start with a leading dot.
+
+2021-10-30 16:16:18,081 
+Starting Thread : Name - winston.jules93@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-10-30 16:16:18,094 
+Starting Thread : Name - caitlinparker135@gmail.com
+Targets - {"ID": {"1": 6}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Shah"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shah_imran_sust@outlook.com"}, "flag": {"1": 0}}
+2021-10-30 16:16:21,435 Error at Sending - winston.jules93@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 378, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 320, in login
+    server.starttls()
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 785, in starttls
+    self.sock = context.wrap_socket(self.sock,
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1031, in _create
+    self._sslobj = self._context._wrap_socket(
+ValueError: server_hostname cannot be an empty string or start with a leading dot.
+
+2021-10-30 16:16:21,481 Error at Sending - caitlinparker135@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 378, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 320, in login
+    server.starttls()
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 785, in starttls
+    self.sock = context.wrap_socket(self.sock,
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1031, in _create
+    self._sslobj = self._context._wrap_socket(
+ValueError: server_hostname cannot be an empty string or start with a leading dot.
+
+2021-10-30 16:16:22,114 
+Starting Thread : Name - ellaxturner96@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-10-30 16:16:25,498 Error at Sending - ellaxturner96@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 378, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 320, in login
+    server.starttls()
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 785, in starttls
+    self.sock = context.wrap_socket(self.sock,
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1031, in _create
+    self._sslobj = self._context._wrap_socket(
+ValueError: server_hostname cannot be an empty string or start with a leading dot.
+
+2021-10-30 16:16:26,237 Sending Finished 4b04fa22-458a-4ad3-8f51-db99db2333b3
+2021-11-01 00:46:03,589 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 9
+ Len of Targets: 2
+ Delay: 0 - 1
+ Campaign ID: cf39bba6-9d95-42be-ab78-18721f10eda0
+ Add Custom Hostname: False
+2021-11-01 00:46:03,630 
+Starting Thread : Name - keanustroman@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-11-01 00:46:03,651 
+Starting Thread : Name - troyd0130@gmail.com
+Targets - {"ID": {"1": 6}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Shah"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shah_imran_sust@outlook.com"}, "flag": {"1": 0}}
+2021-11-01 00:46:07,648 Error at Sending - keanustroman@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 378, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 320, in login
+    server.starttls()
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 785, in starttls
+    self.sock = context.wrap_socket(self.sock,
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1031, in _create
+    self._sslobj = self._context._wrap_socket(
+ValueError: server_hostname cannot be an empty string or start with a leading dot.
+
+2021-11-01 00:46:15,317 Error at Sending - troyd0130@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 378, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 320, in login
+    server.starttls()
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 785, in starttls
+    self.sock = context.wrap_socket(self.sock,
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1031, in _create
+    self._sslobj = self._context._wrap_socket(
+ValueError: server_hostname cannot be an empty string or start with a leading dot.
+
+2021-11-01 00:46:15,678 
+Starting Thread : Name - clarkelliotn4@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-11-01 00:46:15,690 
+Starting Thread : Name - arnoldcolemann@gmail.com
+Targets - {"ID": {"1": 6}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Shah"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shah_imran_sust@outlook.com"}, "flag": {"1": 0}}
+2021-11-01 00:46:17,696 Sending Finished cf39bba6-9d95-42be-ab78-18721f10eda0
+2021-11-01 01:00:35,687 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 9
+ Len of Targets: 2
+ Delay: 0 - 1
+ Campaign ID: d561b7be-88ec-44fc-9f90-2c8ab3393569
+ Add Custom Hostname: False
+2021-11-01 01:00:35,718 
+Starting Thread : Name - keanustroman@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-11-01 01:00:35,738 
+Starting Thread : Name - troyd0130@gmail.com
+Targets - {"ID": {"1": 6}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Shah"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shah_imran_sust@outlook.com"}, "flag": {"1": 0}}
+2021-11-01 01:00:42,309 Sent - troyd0130@gmail.com shah_imran_sust@outlook.com
+2021-11-01 01:00:43,161 Sent - keanustroman@gmail.com shahimrans64@gmail.com
+2021-11-01 01:00:43,752 Sending Finished d561b7be-88ec-44fc-9f90-2c8ab3393569
