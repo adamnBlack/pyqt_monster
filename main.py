@@ -4,9 +4,8 @@ import sys
 import webbrowser
 from threading import Thread
 from time import sleep
-
-import pandas as pd
 import requests
+import pandas as pd
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem
 from pyautogui import alert, confirm
@@ -17,6 +16,30 @@ print("App started....")
 quit_application = False
 
 
+def override_where():
+    """ overrides certifi.core.where to return actual location of cacert.pem"""
+    # change this to match the location of cacert.pem
+    return os.path.abspath("cacert.pem")
+
+
+# is the program compiled?
+if hasattr(sys, "frozen"):
+    import certifi.core
+
+    os.environ["REQUESTS_CA_BUNDLE"] = override_where()
+    certifi.core.where = override_where
+
+    # delay importing until after where() has been replaced
+    import requests
+    import requests.utils
+    import requests.adapters
+
+    # replace these variables in case these modules were
+    # imported before we replaced certifi.core.where
+    requests.utils.DEFAULT_CA_BUNDLE_PATH = override_where()
+    requests.adapters.DEFAULT_CA_BUNDLE_PATH = override_where()
+
+
 class MyGui(Ui_MainWindow, QtWidgets.QWidget):
     def __init__(self, mainWindow):
         Ui_MainWindow.__init__(self)
@@ -25,7 +48,7 @@ class MyGui(Ui_MainWindow, QtWidgets.QWidget):
         self.setupUi(mainWindow)
 
 
-class myMainClass():
+class myMainClass:
     def __init__(self):
         global mainWindow, quit_application, GUI
 

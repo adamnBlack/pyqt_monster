@@ -1,13 +1,11 @@
-from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, text
 from sqlalchemy.orm import sessionmaker
 import var
 import main
 import pandas as pd
-from pyautogui import alert, password, confirm
+from pyautogui import alert
 import os
-import sqlalchemy.sql.default_comparator
 
 db_path = var.base_dir + "/group.db"
 Base = declarative_base()

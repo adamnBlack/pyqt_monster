@@ -1,4 +1,3 @@
-from pyautogui import alert, password, confirm
 import proxy_imaplib
 import socks
 import email

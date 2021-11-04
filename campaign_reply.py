@@ -1,14 +1,10 @@
-from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem, QMessageBox
 from PyQt5 import QtCore, QtGui, QtWidgets
 from threading import Thread
-import requests
+
 import var
 from p_gui import Ui_Dialog
 import os
 import sys
-import time
-from PyQt5.QtCore import pyqtSignal, QObject
-from pyautogui import alert, password, confirm
 
 
 def set_icon(obj):
@@ -73,7 +69,7 @@ class Campaign(Ui_Dialog):
         from smtp import main
 
         Thread(target=main, daemon=True, args=[
-               self.group, self.delay_start, self.delay_end, ]).start()
+            self.group, self.delay_start, self.delay_end, ]).start()
         self.timer.start()
 
     def update_gui(self):
@@ -88,7 +84,7 @@ class Campaign(Ui_Dialog):
                 self.pushButton_cancel.setText("Close")
             else:
                 value = (var.send_campaign_email_count /
-                         self.total_email_to_be_sent)*100
+                         self.total_email_to_be_sent) * 100
                 self.label_status.setText(
                     f"Total Email Sent : {var.send_campaign_email_count}/{self.total_email_to_be_sent}")
                 self.progressBar.setValue(value)

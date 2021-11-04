@@ -2,7 +2,7 @@ import re
 import var
 import random
 import json
-from pyautogui import alert, password, confirm
+from pyautogui import alert
 import uuid
 
 

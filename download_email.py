@@ -1,12 +1,8 @@
-from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem, QMessageBox
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore, QtGui
 from threading import Thread
-import requests
 import var
 from p_gui import Ui_Dialog
 import os, sys
-import time
-from PyQt5.QtCore import pyqtSignal, QObject
 
 
 def set_icon(obj):
@@ -21,6 +17,7 @@ def set_icon(obj):
     except Exception as e:
         print(e)
 
+
 class Download(Ui_Dialog):
     def __init__(self, dialog, group=None):
         Ui_Dialog.__init__(self)
@@ -34,7 +31,7 @@ class Download(Ui_Dialog):
 
         from imap import main
 
-        Thread(target=main, daemon=True, args=[group,]).start()
+        Thread(target=main, daemon=True, args=[group, ]).start()
         self.timer.start()
 
     def update_gui(self):
@@ -43,10 +40,11 @@ class Download(Ui_Dialog):
                 self.label_status.setText(f"Total Email Downloaded : {var.total_email_downloaded}")
 
             else:
-                self.label_status.setText(f"Total Email Downloaded : {var.total_email_downloaded} Accounts failed : {var.email_failed}")
+                self.label_status.setText(
+                    f"Total Email Downloaded : {var.total_email_downloaded} Accounts failed : {var.email_failed}")
                 self.pushButton_cancel.setText("Close")
-            
-            value = (var.acc_finished/var.total_acc)*100
+
+            value = (var.acc_finished / var.total_acc) * 100
             self.progressBar.setValue(value)
         except Exception as e:
             print("Error at download_email.Download.update_gui : {}".format(e))

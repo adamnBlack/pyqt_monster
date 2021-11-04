@@ -1,6 +1,3 @@
-from queue import Queue
-from typing import Any
-
 from proxy_smtplib import SMTP
 from email.mime.multipart import MIMEMultipart
 from email.header import Header

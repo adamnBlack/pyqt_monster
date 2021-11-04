@@ -163,3 +163,9 @@ TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
 TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
 shah_imran_sust@outlook.com,troyd0130@gmail.com,sent,d561b7be-88ec-44fc-9f90-2c8ab3393569,2021-11-01
 shahimrans64@gmail.com,keanustroman@gmail.com,sent,d561b7be-88ec-44fc-9f90-2c8ab3393569,2021-11-01
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,kauf.raufman@gmail.com,"(535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials f10sm5434974otc.26 - gsmtp')",4d66d1af-a35e-468f-9489-30ddf9afb754,2021-11-02
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,kauf.raufman@gmail.com,"(535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials q33sm627906ooh.16 - gsmtp')",89e444b3-29c9-491f-87da-437d971add39,2021-11-03
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+shahimrans64@gmail.com,kauf.raufman@gmail.com,sent,5dcd0776-6565-416a-88a6-b0166d48a0b2,2021-11-03

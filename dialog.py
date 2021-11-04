@@ -1,6 +1,6 @@
 import sign_in as si
 import sign_up as su
-from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem, QMessageBox
+from PyQt5.QtWidgets import QFileDialog
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import pyqtSignal, QObject
 from authentication import Ui_MainWindow
@@ -8,15 +8,38 @@ import sys
 import os
 import os.path
 import re
-import requests
 import subprocess
 from json import loads, dumps
 from threading import Thread
 import utils
 from pyautogui import alert, password, confirm
+import requests
 
 # regex = '^[a-zA-Z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
 regex = '[^@]+@[^@]+\.[^@]+'
+
+
+def override_where():
+    """ overrides certifi.core.where to return actual location of cacert.pem"""
+    # change this to match the location of cacert.pem
+    return os.path.abspath("cacert.pem")
+
+
+# is the program compiled?
+if hasattr(sys, "frozen"):
+    import certifi.core
+
+    os.environ["REQUESTS_CA_BUNDLE"] = override_where()
+    certifi.core.where = override_where
+
+    # delay importing until after where() has been replaced
+    import requests.utils
+    import requests.adapters
+
+    # replace these variables in case these modules were
+    # imported before we replaced certifi.core.where
+    requests.utils.DEFAULT_CA_BUNDLE_PATH = override_where()
+    requests.adapters.DEFAULT_CA_BUNDLE_PATH = override_where()
 
 
 def subprocess_args(include_stdout=True):
@@ -63,7 +86,7 @@ def subprocess_args(include_stdout=True):
 def check(email):
     # pass the regular expression
     # and the string in search() method
-    if(re.search(regex, email)):
+    if (re.search(regex, email)):
         return True
     else:
         return False
@@ -74,6 +97,7 @@ def threaded(fn):
         thread = Thread(target=fn, args=args, kwargs=kwargs)
         thread.start()
         return thread
+
     return wrapper
 
 
@@ -210,7 +234,6 @@ class MyGui(Ui_MainWindow, QtWidgets.QWidget):
 
 
 class Communicate(QObject):
-
     path_picker = pyqtSignal(str, str, int)
 
 
@@ -241,7 +264,7 @@ class myMainClass():
             url = var.api + "verify/version/{}".format(var.version)
             response = requests.post(url, timeout=10)
             data = response.json()
-            if data['update_needed'] == True:
+            if data['update_needed']:
                 result = confirm(text='New Version Available!!!\nDo you want to download?',
                                  title='Confirmation Window', buttons=['OK', 'Cancel'])
                 if result == "OK":
@@ -307,7 +330,7 @@ else:
     app.exec_()
     print("Exit")
 
-    if var.signed_in == True:
+    if var.signed_in:
         try:
             import main
         except Exception as e:

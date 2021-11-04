@@ -1,16 +1,11 @@
-from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, text
 from json import load, dumps
-from pyautogui import alert, password, confirm
-import os
-import sys
 import pandas as pd
 import queue
-from collections import deque
 from queue import LifoQueue
 import logging
-from threading import Thread
 
 # pd.set_option('display.max_colwidth',1000)
+import sys, os
 
 version = '2.2r'
 base_dir = "database"
@@ -202,8 +197,8 @@ target = pd.DataFrame()
 db_path = "database/group.db"
 
 if __name__ == "__main__":
-    import main
-    # import dialog
+    # import main
+    import dialog
 
 # pyinstaller --onedir --icon=icons/icon.ico --name=GMonster --noconsole --noconfirm var.py
 # pyi-makespec --onefile --icon=icons/icon.ico --name=GMonster --noconsole var.py

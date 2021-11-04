@@ -1,9 +1,7 @@
-from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem, QMessageBox
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt, pyqtSignal, QObject
 import var
 import database
-import time
 
 
 class TableModel(QtCore.QAbstractTableModel):

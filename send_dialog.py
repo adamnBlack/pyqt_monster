@@ -1,23 +1,22 @@
-from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem, QMessageBox
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import pyqtSignal, QObject
 from threading import Thread
-import var
 from email_input_gui import Ui_Dialog
 import os, sys
-import time
 from smtp import forward, test
 import re
 
 regex = '[^@]+@[^@]+\.[^@]+'
 
+
 def check(email):
     # pass the regular expression
     # and the string in search() method
-    if(re.search(regex,email)):
+    if (re.search(regex, email)):
         return True
     else:
         return False
+
 
 def set_icon(obj):
     try:
@@ -31,8 +30,10 @@ def set_icon(obj):
     except Exception as e:
         print(e)
 
+
 class Communicate(QObject):
     s = pyqtSignal(str, int, int)
+
 
 class Send(Ui_Dialog):
     def __init__(self, dialog, parent='forward'):
@@ -45,13 +46,13 @@ class Send(Ui_Dialog):
         self.signal = Communicate()
         self.signal.s.connect(self.update_gui)
 
-        if self.type=='forward':
+        if self.type == 'forward':
             self.label_linedit.setText("Forward To:")
         else:
             self.label_linedit.setText("Send Test To:")
 
     def thread_starter(self):
-        if self.type=='forward':
+        if self.type == 'forward':
             Thread(target=self.forward, daemon=True).start()
         else:
             Thread(target=self.test, daemon=True).start()
@@ -72,8 +73,6 @@ class Send(Ui_Dialog):
         else:
             self.signal.s.emit("Enter a proper email address...", 0, False)
 
-
-
     def test(self):
         send_to = self.lineEdit_email.text().strip()
         if check(send_to):
@@ -84,4 +83,3 @@ class Send(Ui_Dialog):
                 self.signal.s.emit("Error happened while sending!!!", 0, False)
         else:
             self.signal.s.emit("Enter a proper email address...", 0, False)
-
