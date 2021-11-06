@@ -54,6 +54,12 @@ class Targets(Base):
     EMAIL = Column(String)
 
 
+class CachedTargets(Base):
+    __tablename__ = 'cached_targets'
+    id = Column(Integer, primary_key=True)
+    email = Column(String, unique=True)
+
+
 Base.metadata.create_all(engine)
 
 
@@ -75,7 +81,8 @@ class Database:
         self.table = {
             "group_a": Group_A,
             "group_b": Group_B,
-            "targets": Targets
+            "targets": Targets,
+            "cached_targets": CachedTargets
         }
 
     def remove(self, table=None, id=None):
@@ -83,7 +90,7 @@ class Database:
         two arguments table and id of that row"""
 
         try:
-            if table != None and id != None:
+            if table is not None and id is not None:
                 objects = self.session.query(self.table[table]).get(int(id))
 
                 if objects:
@@ -100,6 +107,37 @@ class Database:
             self.logger.error(f"Error at Database.remove() - {e}")
             return False
 
+    def get_cached_targets(self):
+        results = [item for item in self.session.query(CachedTargets).all()]
+        return results
+
+    def add_to_cached_targets(self, email):
+        try:
+            cached_targets = CachedTargets(email=email)
+            self.session.add(cached_targets)
+            self.session.commit()
+
+        except Exception as e:
+            self.session.rollback()
+            self.logger.error(f"Error at Database.add_to_cached_targets() - {e}")
+
+    def remove_cached_target(self, email):
+        try:
+            self.session.query(CachedTargets).filter(CachedTargets.email == email).delete()
+            self.session.commit()
+
+        except Exception as e:
+            self.session.rollback()
+            self.logger.error(f"Error at Database.remove_cached_target() - {e}")
+
+    def clear_cached_targets(self):
+        try:
+            self.session.query(CachedTargets).delete()
+            self.session.commit()
+
+        except Exception as e:
+            self.session.rollback()
+            self.logger.error(f"Error at Database.clear_cached_targets() - {e}")
 
 
 def db_update_row(row):

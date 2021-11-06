@@ -347,7 +347,7 @@ class SMTP_(threading.Thread):
 
     def run(self):
         try:
-            global sent_q, email_failed, success_sent, remove_target_q
+            global sent_q, email_failed, success_sent, remove_target_q, AddCachedTargets
 
             last_recipient = ''
             var.thread_open_campaign += 1
@@ -448,6 +448,8 @@ class SMTP_(threading.Thread):
 
                     success_sent[item['EMAIL']] = True
 
+                    AddCachedTargets.targets_q.put(item['EMAIL'])
+
                     self.logger.error(f"Sent - {self.user} {item['EMAIL']}")
 
                     sent_q.put((item['EMAIL'], index))
@@ -544,8 +546,8 @@ class RemoveTarget(threading.Thread):
         while not self.close:
             try:
                 if not remove_target_q.empty():
-                    id = remove_target_q.get()
-                    result = self.target.remove(table="targets", id=id)
+                    _id = remove_target_q.get()
+                    result = self.target.remove(table="targets", id=_id)
 
             except Exception as e:
                 logger.error(f"Error at remove_target_from_database : {traceback.format_exc()}")
@@ -556,6 +558,42 @@ class RemoveTarget(threading.Thread):
 
     def stop(self):
         self.close = True
+
+
+class AddCachedTargets(threading.Thread):
+    targets_q = queue.Queue()
+
+    def __init__(self):
+        super().__init__()
+
+        self.threadID = "AddCachedTargets"
+        self.name = "AddCachedTargets"
+        self.setDaemon(True)
+
+        self._close = False
+        self.db = db()
+
+    def run(self) -> None:
+        while not self._close:
+            try:
+                if not self.targets_q.empty():
+                    email = self.targets_q.get()
+                    self.db.add_to_cached_targets(email)
+
+            except Exception as e:
+                logger.error(f"Error at AddCachedTargets : {traceback.format_exc()}")
+
+            time.sleep(1)
+
+        print("AddCachedTargets thread class terminating")
+
+    @property
+    def close(self):
+        return self._close
+
+    @close.setter
+    def close(self, value):
+        self._close = value
 
 
 def main(group, d_start, d_end, group_selected):
@@ -609,6 +647,12 @@ def main(group, d_start, d_end, group_selected):
     if var.remove_email_from_target:
         remove_target = RemoveTarget()
         remove_target.start()
+
+    add_cached_targets = AddCachedTargets()
+    add_cached_targets.start()
+
+    with AddCachedTargets.targets_q.mutex:
+        AddCachedTargets.targets_q.mutex.clear()
 
     while var.send_campaign_email_count < target_len and group['flag'].sum() < group_len:
         target = target[target['flag'] == 0]
@@ -713,6 +757,11 @@ def main(group, d_start, d_end, group_selected):
         remove_target.stop()
         db_to_pandas()
         var.command_q.put("self.update_db_table()")
+
+    while not AddCachedTargets.targets_q.empty():
+        time.sleep(1)
+        
+    add_cached_targets.close = True
 
     var.email_failed = email_failed
 
