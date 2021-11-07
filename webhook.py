@@ -152,51 +152,6 @@ class SendWebhook_Inbox(threading.Thread):
             time.sleep(1)
         print("Webhook Inbox Thread Finished.")
 
-    # def run(self):
-    #     global inbox_q
-    #     print("Inbox Webhook Thread Started...")
-    #     count = 0
-    #     while not self.close:
-    #         dict_list = []
-    #
-    #         while not inbox_q.empty():
-    #             try:
-    #                 dict_list.append(inbox_q.get().copy())
-    #             except Exception as e:
-    #                 print(f"Error at SendWebhook Inbox part 1 : {e}")
-    #                 self.logger.error(
-    #                     f"Error at SendWebhook Inbox part 1 : {e}")
-    #
-    #         if len(dict_list) > 0:
-    #             dict_obj = {
-    #                 "data": dict_list,
-    #                 "data_len": len(dict_list),
-    #                 "type": "Inbox_Data"
-    #             }
-    #
-    #             try:
-    #                 data = dumps(dict_obj).encode("utf-8")
-    #                 data = loads(data)
-    #
-    #                 result = requests.post(
-    #                     self.api_link, json=data, headers=self.headers, timeout=10)
-    #
-    #                 self.logger.info(
-    #                     f"POSTed {dict_obj['data_len']} data to webhook Inbox.")
-    #
-    #                 count = dict_obj['data_len'] + count
-    #
-    #                 var.command_q.put(
-    #                     f'GUI.label_email_status.setText("Total email sent - {count}/{self.total_length}")')
-    #
-    #             except Exception as e:
-    #                 print(f"Error at SendWebhook Inbox part 2 : {e}")
-    #                 self.logger.error(
-    #                     f"Error at SendWebhook Inbox part 2 : {e}")
-    #
-    #         time.sleep(1)
-    #     print("Webhook Inbox Thread Finished.")
-
     def __repr__(self):
         return f"Thread: {self.name}"
 

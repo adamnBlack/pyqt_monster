@@ -108,7 +108,7 @@ class Database:
             return False
 
     def get_cached_targets(self):
-        results = [item for item in self.session.query(CachedTargets).all()]
+        results = [item.email for item in self.session.query(CachedTargets).all()]
         return results
 
     def add_to_cached_targets(self, email):

@@ -484,3 +484,97 @@ Starting Thread : Name - kauf.raufman@gmail.com
 Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
 2021-11-03 01:34:48,630 Sent - kauf.raufman@gmail.com shahimrans64@gmail.com
 2021-11-03 01:34:49,605 Sending Finished 5dcd0776-6565-416a-88a6-b0166d48a0b2
+2021-11-07 04:24:36,747 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 2
+ Delay: 0 - 1
+ Campaign ID: 4eb3b35d-b5d0-4653-9dfa-2511fef1c5a3
+ Add Custom Hostname: False
+2021-11-07 04:31:00,081 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 2
+ Delay: 0 - 1
+ Campaign ID: 5cd2bc04-f1e4-42b2-afb8-60948941ce4c
+ Add Custom Hostname: False
+2021-11-07 04:31:00,141 
+Starting Thread : Name - kauf.raufman@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-11-07 04:31:08,418 Sent - kauf.raufman@gmail.com shahimrans64@gmail.com
+2021-11-07 04:31:09,212 Sending Finished 5cd2bc04-f1e4-42b2-afb8-60948941ce4c
+2021-11-07 04:31:43,847 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-11-07 04:31:54,081 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 9
+ Len of Targets: 6
+ Delay: 0 - 1
+ Campaign ID: 9e40559d-080c-4ed5-a2fd-1723dc7edc1c
+ Add Custom Hostname: False
+2021-11-07 04:31:54,105 
+Starting Thread : Name - keanustroman@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2021-11-07 04:31:54,124 
+Starting Thread : Name - troyd0130@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Shah"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2021-11-07 04:31:54,234 
+Starting Thread : Name - clarkelliotn4@gmail.com
+Targets - {"ID": {"2": 3}, "1": {"2": " "}, "2": {"2": " "}, "3": {"2": "Shah"}, "4": {"2": " "}, "5": {"2": " "}, "6": {"2": " "}, "TONAME": {"2": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com"}, "flag": {"2": 0}}
+2021-11-07 04:31:54,248 
+Starting Thread : Name - arnoldcolemann@gmail.com
+Targets - {"ID": {"3": 4}, "1": {"3": " "}, "2": {"3": " "}, "3": {"3": "Shah"}, "4": {"3": " "}, "5": {"3": " "}, "6": {"3": " "}, "TONAME": {"3": "Imran"}, "EMAIL": {"3": "shah_imran_sust@outlook.com"}, "flag": {"3": 0}}
+2021-11-07 04:31:54,261 
+Starting Thread : Name - daviddouglas375849@gmail.com
+Targets - {"ID": {"4": 5}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": "Shah"}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shah_imran_sust@outlook.com"}, "flag": {"4": 0}}
+2021-11-07 04:31:54,275 
+Starting Thread : Name - instageniuslaura93@gmail.com
+Targets - {"ID": {"5": 6}, "1": {"5": " "}, "2": {"5": " "}, "3": {"5": "Shah"}, "4": {"5": " "}, "5": {"5": " "}, "6": {"5": " "}, "TONAME": {"5": "Imran"}, "EMAIL": {"5": "shah_imran_sust@outlook.com"}, "flag": {"5": 0}}
+2021-11-07 04:32:01,731 Sent - daviddouglas375849@gmail.com shah_imran_sust@outlook.com
+2021-11-07 04:32:01,826 Sent - clarkelliotn4@gmail.com shahimrans64@gmail.com
+2021-11-07 04:32:02,563 Sent - troyd0130@gmail.com shahimrans64@gmail.com
+2021-11-07 04:32:02,635 Sent - keanustroman@gmail.com shahimrans64@gmail.com
+2021-11-07 04:32:03,244 Error at Database.add_to_cached_targets() - (sqlite3.IntegrityError) UNIQUE constraint failed: cached_targets.email
+[SQL: INSERT INTO cached_targets (email) VALUES (?)]
+[parameters: ('shahimrans64@gmail.com',)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2021-11-07 04:32:03,450 Sent - arnoldcolemann@gmail.com shah_imran_sust@outlook.com
+2021-11-07 04:32:03,745 Sent - instageniuslaura93@gmail.com shah_imran_sust@outlook.com
+2021-11-07 04:32:04,247 Error at Database.add_to_cached_targets() - (sqlite3.IntegrityError) UNIQUE constraint failed: cached_targets.email
+[SQL: INSERT INTO cached_targets (email) VALUES (?)]
+[parameters: ('shahimrans64@gmail.com',)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2021-11-07 04:32:05,252 Error at Database.add_to_cached_targets() - (sqlite3.IntegrityError) UNIQUE constraint failed: cached_targets.email
+[SQL: INSERT INTO cached_targets (email) VALUES (?)]
+[parameters: ('shahimrans64@gmail.com',)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2021-11-07 04:32:06,254 Error at Database.add_to_cached_targets() - (sqlite3.IntegrityError) UNIQUE constraint failed: cached_targets.email
+[SQL: INSERT INTO cached_targets (email) VALUES (?)]
+[parameters: ('shah_imran_sust@outlook.com',)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2021-11-07 04:32:07,256 Error at Database.add_to_cached_targets() - (sqlite3.IntegrityError) UNIQUE constraint failed: cached_targets.email
+[SQL: INSERT INTO cached_targets (email) VALUES (?)]
+[parameters: ('shah_imran_sust@outlook.com',)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2021-11-07 04:32:07,287 Sending Finished 9e40559d-080c-4ed5-a2fd-1723dc7edc1c
+2021-11-08 00:33:53,105 Error at SendWebhook Inbox part 2 : Object of type datetime is not JSON serializable
+2021-11-08 00:33:58,114 Error at SendWebhook Inbox part 2 : Object of type datetime is not JSON serializable
+2021-11-08 00:33:59,117 Error at SendWebhook Inbox part 2 : Object of type datetime is not JSON serializable
+2021-11-08 00:41:28,285 Error at downloading email - caitlinparker135@gmail.com - Socket error: 0x01: General SOCKS server failure
+2021-11-08 00:41:30,080 Error at downloading email - winston.jules93@gmail.com - Socket error: SOCKS5 proxy server sent invalid data
+2021-11-08 00:41:42,830 Error at downloading email - instageniuslaura93@gmail.com - _ssl.c:1112: The handshake operation timed out
+2021-11-08 00:41:44,185 Error at downloading email - troyd0130@gmail.com - socket error: EOF

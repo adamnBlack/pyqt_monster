@@ -273,7 +273,7 @@ def reply():
 
 class SMTP_(threading.Thread):
     def __init__(self, threadID, name, proxy_host, proxy_port, proxy_user,
-                 proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME, target, d_start, d_end, campaign_id):
+                 proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME, target, d_start, d_end, campaign_id, cached_targets):
         threading.Thread.__init__(self)
         self.threadID = threadID
         self.name = name
@@ -294,6 +294,7 @@ class SMTP_(threading.Thread):
         self.d_end = d_end
         self.campaign_id = campaign_id
         self.local_hostname = None
+        self.cached_targets = cached_targets
 
     def login(self):
         try:
@@ -347,7 +348,7 @@ class SMTP_(threading.Thread):
 
     def run(self):
         try:
-            global sent_q, email_failed, success_sent, remove_target_q, AddCachedTargets
+            global sent_q, email_failed, success_sent, remove_target_
 
             last_recipient = ''
             var.thread_open_campaign += 1
@@ -448,7 +449,7 @@ class SMTP_(threading.Thread):
 
                     success_sent[item['EMAIL']] = True
 
-                    AddCachedTargets.targets_q.put(item['EMAIL'])
+                    self.cached_targets.targets_q.put(item['EMAIL'])
 
                     self.logger.error(f"Sent - {self.user} {item['EMAIL']}")
 
@@ -561,8 +562,6 @@ class RemoveTarget(threading.Thread):
 
 
 class AddCachedTargets(threading.Thread):
-    targets_q = queue.Queue()
-
     def __init__(self):
         super().__init__()
 
@@ -572,6 +571,7 @@ class AddCachedTargets(threading.Thread):
 
         self._close = False
         self.db = db()
+        self.targets_q = queue.Queue()
 
     def run(self) -> None:
         while not self._close:
@@ -651,9 +651,6 @@ def main(group, d_start, d_end, group_selected):
     add_cached_targets = AddCachedTargets()
     add_cached_targets.start()
 
-    with AddCachedTargets.targets_q.mutex:
-        AddCachedTargets.targets_q.mutex.clear()
-
     while var.send_campaign_email_count < target_len and group['flag'].sum() < group_len:
         target = target[target['flag'] == 0]
 
@@ -702,7 +699,7 @@ def main(group, d_start, d_end, group_selected):
 
                 SMTP_(index, name, proxy_host, proxy_port, proxy_user,
                       proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME,
-                      target.loc[start:end].copy(), d_start, d_end, campaign_id).start()
+                      target.loc[start:end].copy(), d_start, d_end, campaign_id, add_cached_targets).start()
 
                 while var.thread_open_campaign >= var.limit_of_thread and var.stop_send_campaign == False:
                     time.sleep(1)
@@ -758,9 +755,9 @@ def main(group, d_start, d_end, group_selected):
         db_to_pandas()
         var.command_q.put("self.update_db_table()")
 
-    while not AddCachedTargets.targets_q.empty():
+    while not add_cached_targets.targets_q.empty():
         time.sleep(1)
-        
+
     add_cached_targets.close = True
 
     var.email_failed = email_failed

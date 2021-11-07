@@ -77,7 +77,8 @@ def update_config_json():
                 "tracking": var.tracking,
                 "webhook_link": var.webhook_link,
                 "check_for_blocks": var.check_for_blocks,
-                "target_blacklist": var.target_blacklist
+                "target_blacklist": var.target_blacklist,
+                "responses_webhook_enabled": var.responses_webhook_enabled
             }
         }
         with open(var.base_dir+'/config.json', 'w') as json_file:

@@ -162,6 +162,8 @@ api = "https://enzim.pythonanywhere.com/"
 gmail_provider = "https://gmonster.co/product/gmail-accounts/"
 proxy_provider = "https://gmonster.co/product/gmonster-proxies/"
 
+responses_webhook_enabled = False
+
 try:
     with open('{}/config.json'.format(base_dir)) as json_file:
         data = load(json_file)
@@ -181,6 +183,7 @@ try:
     webhook_link = config['webhook_link']
     check_for_blocks = config['check_for_blocks']
     target_blacklist = config['target_blacklist']
+    responses_webhook_enabled = config['responses_webhook_enabled']
 except Exception as e:
     print("Exception occurred at config loading : {}".format(e))
 

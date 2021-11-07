@@ -1,6 +1,7 @@
 import os
 import re
 import sys
+import threading
 import webbrowser
 from threading import Thread
 from time import sleep
@@ -122,7 +123,8 @@ class myMainClass:
 
         # set the state of checkboxes
         GUI.checkBox_check_for_blocks.setChecked(var.check_for_blocks)
-
+        GUI.checkBox_responses_webhook.setChecked(var.responses_webhook_enabled)
+        GUI.checkBox_responses_webhook.stateChanged.connect(self.update_responses_webhook_enabled)
         GUI.radioButton_html.clicked.connect(self.compose_change)
         GUI.radioButton_plain_text.clicked.connect(self.compose_change)
         GUI.checkBox_compose_preview.clicked.connect(self.compose_preview)
@@ -195,6 +197,15 @@ class myMainClass:
         GUI.lineEdit_target_blacklist.textChanged.connect(
             self.change_target_blacklist)
 
+        GUI.pushButton_clear_cached_targets.clicked.connect(
+            lambda: threading.Thread(target=self.clear_cached_targets, daemon=True, args=[]).start()
+        )
+
+    def clear_cached_targets(self):
+        db = database.Database()
+        db.clear_cached_targets()
+        alert(text="Cached cleared.", title='Alert', button='OK')
+
     def change_target_blacklist(self):
         target_blacklist = GUI.lineEdit_target_blacklist.text().strip().replace(" ", "")
         if target_blacklist:
@@ -202,6 +213,9 @@ class myMainClass:
         else:
             var.target_blacklist = list()
         print(var.target_blacklist)
+
+    def update_responses_webhook_enabled(self):
+        var.responses_webhook_enabled = GUI.checkBox_responses_webhook.isChecked()
 
     def update_checkbox_status(self):
         var.add_custom_hostname = GUI.checkBox_add_custom_hostname.isChecked()

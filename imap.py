@@ -1,3 +1,5 @@
+import queue
+
 import proxy_imaplib
 import socks
 import email
@@ -8,6 +10,8 @@ import var
 import imaplib
 import codecs
 from utils import difference_between_time
+import webhook
+from database import Database as DB
 
 
 def utc_to_local(utc_dt):
@@ -92,7 +96,7 @@ def delete_email(group):
         imap.select("Inbox")
 
         for row_index, row in group.iterrows():
-            if var.stop_delete == True:
+            if var.stop_delete:
                 break
             imap.uid('STORE', row['uid'], '+X-GM-LABELS', '\\Trash')
             var.delete_email_count += 1
@@ -109,7 +113,7 @@ def delete_email(group):
         var.thread_open -= 1
 
 
-class ImapBase():
+class ImapBase:
     def __init__(self, **kwargs):
         self.proxy_host = kwargs["proxy_host"]
         self.proxy_port = kwargs["proxy_port"]
@@ -210,7 +214,7 @@ class ImapCheckForBlocks(ImapBase):
 
 class IMAP_(threading.Thread):
     def __init__(self, threadID, name, proxy_host, proxy_port, proxy_type, proxy_user, proxy_pass, imap_user, imap_pass,
-                 FIRSTFROMNAME, LASTFROMNAME):
+                 FIRSTFROMNAME, LASTFROMNAME, targets, responses_webhook_enabled):
         threading.Thread.__init__(self)
         self.threadID = threadID
         self.name = name
@@ -228,6 +232,8 @@ class IMAP_(threading.Thread):
         self.LASTFROMNAME = LASTFROMNAME
         global logger
         self.logger = logger
+        self.targets = targets
+        self.responses_webhook_enabled = responses_webhook_enabled
 
     def run(self):
         global email_failed, total_email_downloaded
@@ -261,7 +267,7 @@ class IMAP_(threading.Thread):
                     item, objDate.strftime('%d-%b-%Y')))
 
                 for num in data[0].split():
-                    if var.stop_download == True:
+                    if var.stop_download:
                         break
                     tmp, data = imap.fetch(num, '(UID RFC822)')
                     raw = data[0][0]
@@ -342,6 +348,7 @@ class IMAP_(threading.Thread):
                     print("utc - ", utc_to_local(mail_date),
                           "| Non utc - ", mail_date)
 
+
                     try:
                         if mail_date.tzinfo:
                             print("Date is offset aware.")
@@ -366,6 +373,10 @@ class IMAP_(threading.Thread):
                         self.logger.error(
                             f"Error on Imap download {self.imap_user} : {e}")
 
+                    if self.responses_webhook_enabled and t_dict['from_mail'] in self.targets:
+                        t_dict["date"] = str(t_dict["date"])
+                        webhook.inbox_q.put(t_dict.copy())
+
             imap.close()
             imap.logout()
         except Exception as e:
@@ -382,6 +393,7 @@ def main(group):
     global logger
     var.email_failed = 0
     var.total_email_downloaded = 0
+    responses_webhook_enabled = var.responses_webhook_enabled
 
     # folder = ""
     # sub_category = ""
@@ -392,10 +404,19 @@ def main(group):
     #     folder = category
 
     # print(folder, sub_category)
+    targets = set()
+
+    if responses_webhook_enabled:
+        webhook.inbox_q = queue.Queue()
+        db = DB()
+        targets = set(db.get_cached_targets() + var.target['EMAIL'].tolist())
+
+        responses_webhook = webhook.SendWebhook_Inbox(0)
+        responses_webhook.start()
 
     for index, item in group.iterrows():
         try:
-            if var.stop_download == True:
+            if var.stop_download:
                 break
 
             proxy_type = socks.PROXY_TYPE_SOCKS5
@@ -423,14 +444,21 @@ def main(group):
 
             IMAP_(index, name, proxy_host, proxy_port,
                   proxy_type, proxy_user, proxy_pass, imap_user,
-                  imap_pass, FIRSTFROMNAME, LASTFROMNAME).start()
+                  imap_pass, FIRSTFROMNAME, LASTFROMNAME, targets, responses_webhook_enabled).start()
 
         except Exception as e:
             print("Error at Imap thread open - {} - {}".format(name, e))
             logger.error("Error at Imap thread open - {} - {}".format(name, e))
 
-    while var.thread_open != 0 and var.stop_download == False:
+    while var.thread_open != 0 and not var.stop_download:
         time.sleep(1)
+
+    if responses_webhook_enabled:
+        while not webhook.inbox_q.empty():
+            time.sleep(1)
+
+        time.sleep(5)
+        responses_webhook.quit()
 
     var.download_email_status = False
     # alert(text='Total Emails Downloaded : {}\nAccounts Failed : {}\ncheck app.log'.\
