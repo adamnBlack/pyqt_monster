@@ -3,13 +3,14 @@ import re
 import sys
 import threading
 import webbrowser
+import requests
 from threading import Thread
 from time import sleep
-import requests
 import pandas as pd
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem
 from pyautogui import alert, confirm
+import traceback
 
 from gui import Ui_MainWindow
 
@@ -17,36 +18,12 @@ print("App started....")
 quit_application = False
 
 
-def override_where():
-    """ overrides certifi.core.where to return actual location of cacert.pem"""
-    # change this to match the location of cacert.pem
-    return os.path.abspath(f"database/cacert.pem")
-
-
-# is the program compiled?
-if hasattr(sys, "frozen"):
-    import certifi.core
-
-    os.environ["REQUESTS_CA_BUNDLE"] = override_where()
-    certifi.core.where = override_where
-
-    # delay importing until after where() has been replaced
-    import requests
-    import requests.utils
-    import requests.adapters
-
-    # replace these variables in case these modules were
-    # imported before we replaced certifi.core.where
-    requests.utils.DEFAULT_CA_BUNDLE_PATH = override_where()
-    requests.adapters.DEFAULT_CA_BUNDLE_PATH = override_where()
-
-
 class MyGui(Ui_MainWindow, QtWidgets.QWidget):
-    def __init__(self, mainWindow):
+    def __init__(self, main_window):
         Ui_MainWindow.__init__(self)
         QtWidgets.QWidget.__init__(self)
 
-        self.setupUi(mainWindow)
+        self.setupUi(main_window)
 
 
 class myMainClass:
@@ -334,6 +311,7 @@ class myMainClass:
                 url = var.api + \
                       "verify/check_for_subscription/{}".format(var.login_email)
                 response = requests.post(url, timeout=10)
+                print(response.text)
                 data = response.json()
 
                 if response.status_code == 200:
@@ -382,7 +360,7 @@ class myMainClass:
 
             except Exception as e:
                 self.try_failed += 1
-                print("error at check_for_subcription: {}".format(e))
+                print("error at check_for_subcription: {}".format(traceback.format_exc()))
 
                 GUI.label_email_status.setText(
                     "Check your internet connection.")

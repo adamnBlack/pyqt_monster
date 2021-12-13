@@ -12,6 +12,36 @@ import logging
 import sys, os
 
 
+version = '2.2r'
+base_dir = "database"
+
+
+def override_where():
+    """ overrides certifi.core.where to return actual location of cacert.pem"""
+    # change this to match the location of cacert.pem
+    return os.path.abspath(os.path.join(os.getcwd(), "database", "cacert.pem"))
+
+
+# is the program compiled?
+if hasattr(sys, "frozen"):
+    import certifi.core
+
+    os.environ["REQUESTS_CA_BUNDLE"] = override_where()
+    certifi.core.where = override_where
+
+    # delay importing until after where() has been replaced
+    import requests
+    import requests.utils
+    import requests.adapters
+
+    # replace these variables in case these modules were
+    # imported before we replaced certifi.core.where
+    requests.utils.DEFAULT_CA_BUNDLE_PATH = override_where()
+    requests.adapters.DEFAULT_CA_BUNDLE_PATH = override_where()
+else:
+    import requests
+
+
 class SingleInstance:
     """ Limits application to single instance """
 
@@ -21,15 +51,13 @@ class SingleInstance:
         self.lasterror = GetLastError()
 
     def already_running(self):
-        return (self.lasterror == ERROR_ALREADY_EXISTS)
+        return self.lasterror == ERROR_ALREADY_EXISTS
 
     def __del__(self):
         if self.mutex:
             CloseHandle(self.mutex)
 
 
-version = '2.2r'
-base_dir = "database"
 
 # admin password = hkHK#j4@jh#@
 # email='orders@gmonster.net'
@@ -233,11 +261,19 @@ if __name__ == "__main__":
         print("Another instance of this program is already running")
         sys.exit(1)
 
-    if os.getenv('fa414ce5-05d1-45e2-ba53-df760ad35fa0'):
+    is_testing_environment = 0
+    try:
+        if os.getenv('fa414ce5-05d1-45e2-ba53-df760ad35fa0'):
+            is_testing_environment = int(os.getenv('fa414ce5-05d1-45e2-ba53-df760ad35fa0'))
+    except:
+        pass
+
+    if is_testing_environment:
         import main
-        set_testing_parameters()
     else:
         import dialog
+
+
 
 # pyinstaller --onedir --icon=icons/icon.ico --name=GMonster --noconsole --noconfirm var.py
 # pyi-makespec --onefile --icon=icons/icon.ico --name=GMonster --noconsole var.py

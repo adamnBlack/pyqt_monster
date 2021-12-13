@@ -1,9 +1,9 @@
 from PyQt5 import QtCore, QtGui
 from threading import Thread
-import requests
 import var
 from p_gui import Ui_Dialog
 import os
+import requests
 import sys
 import time
 from PyQt5.QtCore import pyqtSignal, QObject

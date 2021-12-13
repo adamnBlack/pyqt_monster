@@ -1,36 +1,14 @@
 import threading
-import requests
 from json import loads, dumps
 import time
 import var
+import requests
 import queue
+import traceback
 import os, sys
 
 logger = var.logging
 logger.getLogger("requests").setLevel(var.logging.WARNING)
-
-
-def override_where():
-    """ overrides certifi.core.where to return actual location of cacert.pem"""
-    # change this to match the location of cacert.pem
-    return os.path.abspath(f"database/cacert.pem")
-
-
-# is the program compiled?
-if hasattr(sys, "frozen"):
-    import certifi.core
-
-    os.environ["REQUESTS_CA_BUNDLE"] = override_where()
-    certifi.core.where = override_where
-
-    # delay importing until after where() has been replaced
-    import requests.utils
-    import requests.adapters
-
-    # replace these variables in case these modules were
-    # imported before we replaced certifi.core.where
-    requests.utils.DEFAULT_CA_BUNDLE_PATH = override_where()
-    requests.adapters.DEFAULT_CA_BUNDLE_PATH = override_where()
 
 
 class SendWebhook(threading.Thread):
@@ -196,6 +174,6 @@ def start_inbox_stream():
 
     except Exception as e:
         logger.error(
-            f"Error at SendWebhook Inbox func : {e}")
+            f"Error at SendWebhook Inbox func : {traceback.format_exc()}")
 
-        print(f"Error at SendWebhook Inbox func : {e}")
+        print(f"Error at SendWebhook Inbox func : {traceback.format_exc()}")

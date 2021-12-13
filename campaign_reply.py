@@ -1,6 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from threading import Thread
-
 import var
 from p_gui import Ui_Dialog
 import os
