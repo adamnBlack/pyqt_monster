@@ -34,6 +34,14 @@ logger = var.logging
 logger.getLogger("requests").setLevel(var.logging.WARNING)
 
 
+def check_if_blacklisted(input_string: str):
+    for keyword in var.inbox_blacklist:
+        if keyword in input_string:
+            return True
+
+    return False
+
+
 def set_read_flag(index):
     try:
         global logger
@@ -303,79 +311,80 @@ class IMAP_(threading.Thread):
 
                     subject = str(subject)
 
-                    from_name = str(email.header.make_header(email.header.
-                        decode_header(
-                        email.utils.parseaddr(email_message['From'])[0])))
-                    from_mail = str(email.header.make_header(email.header.
-                        decode_header(
-                        email.utils.parseaddr(email_message['From'])[1])))
+                    from_name = str(email.header.make_header(email.header.decode_header(
+                        email.utils.parseaddr(email_message['From'])[0]))
+                    )
+                    from_mail = str(email.header.make_header(email.header.decode_header(
+                        email.utils.parseaddr(email_message['From'])[1]))
+                    )
 
-                    to_name = str(email.header.make_header(email.header.
-                        decode_header(
-                        email.utils.parseaddr(email_message['To'])[0])))
-                    to_mail = str(email.header.make_header(email.header.
-                        decode_header(
-                        email.utils.parseaddr(email_message['To'])[1])))
-                    mail_date = email.utils.parsedate_to_datetime(
-                        email_message['Date'])
+                    if not check_if_blacklisted(from_mail):
+                        to_name = str(email.header.make_header(email.header.decode_header(
+                            email.utils.parseaddr(email_message['To'])[0]))
+                        )
+                        to_mail = str(email.header.make_header(email.header.decode_header(
+                            email.utils.parseaddr(email_message['To'])[1]))
+                        )
+                        mail_date = email.utils.parsedate_to_datetime(
+                            email_message['Date'])
 
-                    t_dict = {
-                        'uid': uid,
-                        'to': "{} {}".format(to_name, to_mail),
-                        'TONAME': to_name,
-                        'to_mail': to_mail,
-                        'message-id': email.utils.parseaddr(email_message['Message-ID'])[1],
-                        'from': "{} {}".format(from_name, from_mail),
-                        'from_name': from_name,
-                        'from_mail': from_mail,
-                        'date': utc_to_local(mail_date),
-                        'subject': subject,
-                        'user': self.imap_user,
-                        'pass': self.imap_pass,
-                        'body': body,
-                        'proxy_host': self.proxy_host,
-                        'proxy_port': self.proxy_port,
-                        'proxy_user': self.proxy_user,
-                        'proxy_pass': self.proxy_pass,
-                        'FIRSTFROMNAME': self.FIRSTFROMNAME,
-                        'LASTFROMNAME': self.LASTFROMNAME,
-                        'flag': item,
-                        'Webhook_flag': False  # means not fired yet
+                        t_dict = {
+                            'uid': uid,
+                            'to': "{} {}".format(to_name, to_mail),
+                            'TONAME': to_name,
+                            'to_mail': to_mail,
+                            'message-id': email.utils.parseaddr(email_message['Message-ID'])[1],
+                            'from': "{} {}".format(from_name, from_mail),
+                            'from_name': from_name,
+                            'from_mail': from_mail,
+                            'date': utc_to_local(mail_date),
+                            'subject': subject,
+                            'user': self.imap_user,
+                            'pass': self.imap_pass,
+                            'body': body,
+                            'proxy_host': self.proxy_host,
+                            'proxy_port': self.proxy_port,
+                            'proxy_user': self.proxy_user,
+                            'proxy_pass': self.proxy_pass,
+                            'FIRSTFROMNAME': self.FIRSTFROMNAME,
+                            'LASTFROMNAME': self.LASTFROMNAME,
+                            'flag': item,
+                            'Webhook_flag': False  # means not fired yet
 
-                    }
+                        }
 
-                    # print(from_name, from_mail, to_name, to_mail, subject, body)
-                    print("utc - ", utc_to_local(mail_date),
-                          "| Non utc - ", mail_date)
+                        # print(from_name, from_mail, to_name, to_mail, subject, body)
+                        print("utc - ", utc_to_local(mail_date),
+                              "| Non utc - ", mail_date)
 
 
-                    try:
-                        if mail_date.tzinfo:
-                            print("Date is offset aware.")
+                        try:
+                            if mail_date.tzinfo:
+                                print("Date is offset aware.")
 
-                            if offset_aware_date <= mail_date:
-                                t_dict['date'] = utc_to_local(mail_date)
-                                var.email_q.put(t_dict.copy())
-                                var.total_email_downloaded += 1
+                                if offset_aware_date <= mail_date:
+                                    t_dict['date'] = utc_to_local(mail_date)
+                                    var.email_q.put(t_dict.copy())
+                                    var.total_email_downloaded += 1
+                                else:
+                                    print("From previous date.")
                             else:
-                                print("From previous date.")
-                        else:
-                            print("Date is offset naive.")
+                                print("Date is offset naive.")
 
-                            if offset_naive_date <= mail_date:
-                                t_dict['date'] = utc_to_local(mail_date)
-                                var.email_q.put(t_dict.copy())
-                                var.total_email_downloaded += 1
-                            else:
-                                print("From previous date offset naive.")
+                                if offset_naive_date <= mail_date:
+                                    t_dict['date'] = utc_to_local(mail_date)
+                                    var.email_q.put(t_dict.copy())
+                                    var.total_email_downloaded += 1
+                                else:
+                                    print("From previous date offset naive.")
 
-                    except Exception as e:
-                        self.logger.error(
-                            f"Error on Imap download {self.imap_user} : {e}")
+                        except Exception as e:
+                            self.logger.error(
+                                f"Error on Imap download {self.imap_user} : {e}")
 
-                    if self.responses_webhook_enabled and t_dict['from_mail'] in self.targets:
-                        t_dict["date"] = str(t_dict["date"])
-                        webhook.inbox_q.put(t_dict.copy())
+                        if self.responses_webhook_enabled and t_dict['from_mail'] in self.targets:
+                            t_dict["date"] = str(t_dict["date"])
+                            webhook.inbox_q.put(t_dict.copy())
 
             imap.close()
             imap.logout()

@@ -20,7 +20,7 @@ quit_application = False
 def override_where():
     """ overrides certifi.core.where to return actual location of cacert.pem"""
     # change this to match the location of cacert.pem
-    return os.path.abspath("cacert.pem")
+    return os.path.abspath(f"database/cacert.pem")
 
 
 # is the program compiled?
@@ -96,8 +96,7 @@ class myMainClass:
         GUI.label_version.setText("VERSION: {}".format(var.version))
 
         self.time_interval_sub_check = 3600
-        subscription_thread = Thread(
-            target=self.check_for_subscription, daemon=True).start()
+        subscription_thread = Thread(target=self.check_for_subscription, daemon=True).start()
 
         self.table_timer = QtCore.QTimer()
         self.table_timer.setInterval(10)
@@ -197,6 +196,10 @@ class myMainClass:
         GUI.lineEdit_target_blacklist.textChanged.connect(
             self.change_target_blacklist)
 
+        GUI.lineEdit_inbox_blacklist.textChanged.connect(
+            self.change_inbox_blacklist
+        )
+
         GUI.pushButton_clear_cached_targets.clicked.connect(
             lambda: threading.Thread(target=self.clear_cached_targets, daemon=True, args=[]).start()
         )
@@ -213,6 +216,14 @@ class myMainClass:
         else:
             var.target_blacklist = list()
         print(var.target_blacklist)
+
+    def change_inbox_blacklist(self):
+        inbox_blacklist = GUI.lineEdit_inbox_blacklist.text().strip().replace(" ", "")
+        if inbox_blacklist:
+            var.inbox_blacklist = inbox_blacklist.split(",")
+        else:
+            var.inbox_blacklist = list()
+        print(var.inbox_blacklist)
 
     def update_responses_webhook_enabled(self):
         var.responses_webhook_enabled = GUI.checkBox_responses_webhook.isChecked()

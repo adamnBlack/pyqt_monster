@@ -78,6 +78,7 @@ def update_config_json():
                 "webhook_link": var.webhook_link,
                 "check_for_blocks": var.check_for_blocks,
                 "target_blacklist": var.target_blacklist,
+                "inbox_blacklist": var.inbox_blacklist,
                 "responses_webhook_enabled": var.responses_webhook_enabled
             }
         }
@@ -85,8 +86,8 @@ def update_config_json():
             json.dump(data, json_file, indent=4)
         print("config updated")
     except Exception as e:
-        print("Exeception occured at update_config_json : {}".format(e))
-        alert(text="Exeception occured at update_config_json : {}".format(e),
+        print("Exception occurred at update_config_json : {}".format(e))
+        alert(text="Exception occurred at update_config_json : {}".format(e),
               title='Alert', button='OK')
 
 

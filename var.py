@@ -2,10 +2,31 @@ from json import load, dumps
 import pandas as pd
 import queue
 from queue import LifoQueue
+from win32event import CreateMutex
+from win32api import CloseHandle, GetLastError
+from winerror import ERROR_ALREADY_EXISTS
+from pyautogui import alert
 import logging
 
 # pd.set_option('display.max_colwidth',1000)
 import sys, os
+
+
+class SingleInstance:
+    """ Limits application to single instance """
+
+    def __init__(self):
+        self.mutexname = "testmutex_{D0E858DF-985E-4907-B7FB-8D732C3FC3B9}"
+        self.mutex = CreateMutex(None, False, self.mutexname)
+        self.lasterror = GetLastError()
+
+    def already_running(self):
+        return (self.lasterror == ERROR_ALREADY_EXISTS)
+
+    def __del__(self):
+        if self.mutex:
+            CloseHandle(self.mutex)
+
 
 version = '2.2r'
 base_dir = "database"
@@ -65,6 +86,7 @@ try:
         if hasattr(sys, '_MEIPASS'):
             return os.path.join(sys._MEIPASS, relative_path)
         return os.path.join(os.path.abspath("."), relative_path)
+
 
     # icon path
     mail_unread_icon = resource_path("icons/email.ico")
@@ -163,6 +185,7 @@ gmail_provider = "https://gmonster.co/product/gmail-accounts/"
 proxy_provider = "https://gmonster.co/product/gmonster-proxies/"
 
 responses_webhook_enabled = False
+inbox_blacklist = []
 
 try:
     with open('{}/config.json'.format(base_dir)) as json_file:
@@ -183,6 +206,7 @@ try:
     webhook_link = config['webhook_link']
     check_for_blocks = config['check_for_blocks']
     target_blacklist = config['target_blacklist']
+    inbox_blacklist = config['inbox_blacklist']
     responses_webhook_enabled = config['responses_webhook_enabled']
 except Exception as e:
     print("Exception occurred at config loading : {}".format(e))
@@ -200,8 +224,20 @@ target = pd.DataFrame()
 db_path = "database/group.db"
 
 if __name__ == "__main__":
-    # import main
-    import dialog
+    # do this at beginning of your application
+    myapp = SingleInstance()
+
+    # check is another instance of same program running
+    if myapp.already_running():
+        alert(text="Another instance of this program is already running")
+        print("Another instance of this program is already running")
+        sys.exit(1)
+
+    if os.getenv('fa414ce5-05d1-45e2-ba53-df760ad35fa0'):
+        import main
+        set_testing_parameters()
+    else:
+        import dialog
 
 # pyinstaller --onedir --icon=icons/icon.ico --name=GMonster --noconsole --noconfirm var.py
 # pyi-makespec --onefile --icon=icons/icon.ico --name=GMonster --noconsole var.py

@@ -578,3 +578,4 @@ Targets - {"ID": {"5": 6}, "1": {"5": " "}, "2": {"5": " "}, "3": {"5": "Shah"},
 2021-11-08 00:41:30,080 Error at downloading email - winston.jules93@gmail.com - Socket error: SOCKS5 proxy server sent invalid data
 2021-11-08 00:41:42,830 Error at downloading email - instageniuslaura93@gmail.com - _ssl.c:1112: The handshake operation timed out
 2021-11-08 00:41:44,185 Error at downloading email - troyd0130@gmail.com - socket error: EOF
+2021-12-13 21:03:09,878 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
