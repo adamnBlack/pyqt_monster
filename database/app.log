@@ -579,3 +579,58 @@ Targets - {"ID": {"5": 6}, "1": {"5": " "}, "2": {"5": " "}, "3": {"5": "Shah"},
 2021-11-08 00:41:42,830 Error at downloading email - instageniuslaura93@gmail.com - _ssl.c:1112: The handshake operation timed out
 2021-11-08 00:41:44,185 Error at downloading email - troyd0130@gmail.com - socket error: EOF
 2021-12-13 21:03:09,878 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-12-25 17:50:56,043 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-12-25 17:55:00,198 Error at downloading email - jamescalloway402@gmail.com - Socket error: 0x05: Connection refused
+2021-12-25 18:27:10,509 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-12-25 18:30:04,741 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 3
+ Len of Targets: 3
+ Delay: 0 - 1
+ Campaign ID: 5c2da212-aa3d-4ea2-b100-76fcb2d3bd88
+ Add Custom Hostname: True
+2021-12-25 18:30:05,112 
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shah_imran_sust@outlook.com"}, "flag": {"0": 0}}
+2021-12-25 18:30:05,126 
+Starting Thread : Name - elnoraschmitt426@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Shah"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shah_imran_sust@outlook.com"}, "flag": {"1": 0}}
+2021-12-25 18:30:05,138 
+Starting Thread : Name - monahantoshiko226@gmail.com
+Targets - {"ID": {"2": 3}, "1": {"2": " "}, "2": {"2": " "}, "3": {"2": "Shah"}, "4": {"2": " "}, "5": {"2": " "}, "6": {"2": " "}, "TONAME": {"2": "Imran"}, "EMAIL": {"2": "shah_imran_sust@outlook.com"}, "flag": {"2": 0}}
+2021-12-25 18:30:08,101 Error at Sending - jamescalloway402@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\env\lib\site-packages\socks.py", line 809, in connect
+    negotiate(self, dest_addr, dest_port)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\env\lib\site-packages\socks.py", line 443, in _negotiate_SOCKS5
+    self.proxy_peername, self.proxy_sockname = self._SOCKS5_request(
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\env\lib\site-packages\socks.py", line 533, in _SOCKS5_request
+    raise SOCKS5Error("{:#04x}: {}".format(status, error))
+socks.SOCKS5Error: 0x05: Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 376, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 308, in login
+    server.connect_proxy(host=var.smtp_server, port=var.smtp_port,
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\proxy_smtplib.py", line 162, in connect_proxy
+    s.connect((host, port))
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\env\lib\site-packages\socks.py", line 47, in wrapper
+    return function(*args, **kwargs)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\env\lib\site-packages\socks.py", line 814, in connect
+    raise GeneralProxyError("Socket error", error)
+socks.GeneralProxyError: Socket error: 0x05: Connection refused
+
+2021-12-25 18:30:10,813 Sent - elnoraschmitt426@gmail.com shah_imran_sust@outlook.com
+2021-12-25 18:30:10,973 Sent - monahantoshiko226@gmail.com shah_imran_sust@outlook.com
+2021-12-25 18:30:12,812 Error at Database.add_to_cached_targets() - (sqlite3.IntegrityError) UNIQUE constraint failed: cached_targets.email
+[SQL: INSERT INTO cached_targets (email) VALUES (?)]
+[parameters: ('shah_imran_sust@outlook.com',)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2021-12-25 18:30:13,179 Sending Finished 5c2da212-aa3d-4ea2-b100-76fcb2d3bd88

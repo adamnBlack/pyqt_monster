@@ -14,13 +14,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1139, 745)
+        MainWindow.resize(1300, 800)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Maximum, QtWidgets.QSizePolicy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
-        MainWindow.setMinimumSize(QtCore.QSize(0, 0))
+        MainWindow.setMinimumSize(QtCore.QSize(1300, 800))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(11)
@@ -37,7 +37,7 @@ class Ui_MainWindow(object):
         self.label_logo.setObjectName("label_logo")
         self.gridLayout.addWidget(self.label_logo, 0, 0, 1, 2)
         self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
-        self.tabWidget.setMinimumSize(QtCore.QSize(0, 25))
+        self.tabWidget.setMinimumSize(QtCore.QSize(700, 600))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(9)
@@ -594,314 +594,20 @@ class Ui_MainWindow(object):
         self.tab_compose.setObjectName("tab_compose")
         self.gridLayout_4 = QtWidgets.QGridLayout(self.tab_compose)
         self.gridLayout_4.setObjectName("gridLayout_4")
-        self.label_6 = QtWidgets.QLabel(self.tab_compose)
-        self.label_6.setMinimumSize(QtCore.QSize(150, 30))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_6.setFont(font)
-        self.label_6.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_6.setObjectName("label_6")
-        self.gridLayout_4.addWidget(self.label_6, 0, 3, 1, 1)
-        self.label_4 = QtWidgets.QLabel(self.tab_compose)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_4.setFont(font)
-        self.label_4.setObjectName("label_4")
-        self.gridLayout_4.addWidget(self.label_4, 0, 0, 1, 1)
-        self.lineEdit_subject = QtWidgets.QLineEdit(self.tab_compose)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(13)
-        self.lineEdit_subject.setFont(font)
-        self.lineEdit_subject.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.lineEdit_subject.setFrame(False)
-        self.lineEdit_subject.setClearButtonEnabled(True)
-        self.lineEdit_subject.setObjectName("lineEdit_subject")
-        self.gridLayout_4.addWidget(self.lineEdit_subject, 0, 1, 1, 1)
-        self.textBrowser_compose = QtWidgets.QTextBrowser(self.tab_compose)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.textBrowser_compose.sizePolicy().hasHeightForWidth())
-        self.textBrowser_compose.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(13)
-        self.textBrowser_compose.setFont(font)
-        self.textBrowser_compose.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.textBrowser_compose.setFrameShape(QtWidgets.QFrame.NoFrame)
-        self.textBrowser_compose.setReadOnly(False)
-        self.textBrowser_compose.setObjectName("textBrowser_compose")
-        self.gridLayout_4.addWidget(self.textBrowser_compose, 3, 0, 23, 3)
-        self.groupBox_12 = QtWidgets.QGroupBox(self.tab_compose)
-        self.groupBox_12.setMaximumSize(QtCore.QSize(180, 250))
-        self.groupBox_12.setTitle("")
-        self.groupBox_12.setObjectName("groupBox_12")
-        self.gridLayout_18 = QtWidgets.QGridLayout(self.groupBox_12)
-        self.gridLayout_18.setObjectName("gridLayout_18")
-        self.checkBox_email_tracking = QtWidgets.QCheckBox(self.groupBox_12)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.checkBox_email_tracking.sizePolicy().hasHeightForWidth())
-        self.checkBox_email_tracking.setSizePolicy(sizePolicy)
-        self.checkBox_email_tracking.setMinimumSize(QtCore.QSize(150, 20))
-        self.checkBox_email_tracking.setObjectName("checkBox_email_tracking")
-        self.gridLayout_18.addWidget(self.checkBox_email_tracking, 1, 0, 1, 1)
-        self.checkBox_remove_email_from_target = QtWidgets.QCheckBox(self.groupBox_12)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.checkBox_remove_email_from_target.sizePolicy().hasHeightForWidth())
-        self.checkBox_remove_email_from_target.setSizePolicy(sizePolicy)
-        self.checkBox_remove_email_from_target.setMinimumSize(QtCore.QSize(150, 20))
-        self.checkBox_remove_email_from_target.setObjectName("checkBox_remove_email_from_target")
-        self.gridLayout_18.addWidget(self.checkBox_remove_email_from_target, 3, 0, 1, 1)
-        self.checkBox_enable_webhook = QtWidgets.QCheckBox(self.groupBox_12)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.checkBox_enable_webhook.sizePolicy().hasHeightForWidth())
-        self.checkBox_enable_webhook.setSizePolicy(sizePolicy)
-        self.checkBox_enable_webhook.setMinimumSize(QtCore.QSize(150, 20))
-        self.checkBox_enable_webhook.setObjectName("checkBox_enable_webhook")
-        self.gridLayout_18.addWidget(self.checkBox_enable_webhook, 2, 0, 1, 1)
-        self.checkBox_add_custom_hostname = QtWidgets.QCheckBox(self.groupBox_12)
-        self.checkBox_add_custom_hostname.setMinimumSize(QtCore.QSize(150, 20))
-        self.checkBox_add_custom_hostname.setObjectName("checkBox_add_custom_hostname")
-        self.gridLayout_18.addWidget(self.checkBox_add_custom_hostname, 0, 0, 1, 1)
-        self.checkBox_check_for_blocks = QtWidgets.QCheckBox(self.groupBox_12)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.checkBox_check_for_blocks.sizePolicy().hasHeightForWidth())
-        self.checkBox_check_for_blocks.setSizePolicy(sizePolicy)
-        self.checkBox_check_for_blocks.setMinimumSize(QtCore.QSize(150, 20))
-        self.checkBox_check_for_blocks.setObjectName("checkBox_check_for_blocks")
-        self.gridLayout_18.addWidget(self.checkBox_check_for_blocks, 4, 0, 1, 1)
-        self.gridLayout_4.addWidget(self.groupBox_12, 6, 5, 1, 1)
-        self.groupBox_6 = QtWidgets.QGroupBox(self.tab_compose)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.groupBox_6.sizePolicy().hasHeightForWidth())
-        self.groupBox_6.setSizePolicy(sizePolicy)
-        self.groupBox_6.setMinimumSize(QtCore.QSize(0, 90))
-        self.groupBox_6.setMaximumSize(QtCore.QSize(16777215, 100))
-        self.groupBox_6.setTitle("")
-        self.groupBox_6.setObjectName("groupBox_6")
-        self.gridLayout_9 = QtWidgets.QGridLayout(self.groupBox_6)
-        self.gridLayout_9.setObjectName("gridLayout_9")
-        self.radioButton_html = QtWidgets.QRadioButton(self.groupBox_6)
-        self.radioButton_html.setEnabled(True)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.radioButton_html.sizePolicy().hasHeightForWidth())
-        self.radioButton_html.setSizePolicy(sizePolicy)
-        self.radioButton_html.setMinimumSize(QtCore.QSize(125, 30))
-        self.radioButton_html.setMaximumSize(QtCore.QSize(125, 16777215))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setWeight(75)
-        self.radioButton_html.setFont(font)
-        self.radioButton_html.setObjectName("radioButton_html")
-        self.gridLayout_9.addWidget(self.radioButton_html, 1, 0, 1, 1)
-        self.radioButton_plain_text = QtWidgets.QRadioButton(self.groupBox_6)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.radioButton_plain_text.sizePolicy().hasHeightForWidth())
-        self.radioButton_plain_text.setSizePolicy(sizePolicy)
-        self.radioButton_plain_text.setMinimumSize(QtCore.QSize(125, 30))
-        self.radioButton_plain_text.setMaximumSize(QtCore.QSize(125, 16777215))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setWeight(75)
-        self.radioButton_plain_text.setFont(font)
-        self.radioButton_plain_text.setChecked(True)
-        self.radioButton_plain_text.setObjectName("radioButton_plain_text")
-        self.gridLayout_9.addWidget(self.radioButton_plain_text, 0, 0, 1, 1)
-        self.checkBox_compose_preview = QtWidgets.QCheckBox(self.groupBox_6)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.checkBox_compose_preview.sizePolicy().hasHeightForWidth())
-        self.checkBox_compose_preview.setSizePolicy(sizePolicy)
-        self.checkBox_compose_preview.setMinimumSize(QtCore.QSize(80, 25))
-        self.checkBox_compose_preview.setMaximumSize(QtCore.QSize(80, 16777215))
-        font = QtGui.QFont()
-        font.setPointSize(9)
-        self.checkBox_compose_preview.setFont(font)
-        self.checkBox_compose_preview.setObjectName("checkBox_compose_preview")
-        self.gridLayout_9.addWidget(self.checkBox_compose_preview, 2, 0, 1, 1)
-        self.gridLayout_4.addWidget(self.groupBox_6, 4, 3, 1, 1)
-        self.groupBox_13 = QtWidgets.QGroupBox(self.tab_compose)
+        self.frame = QtWidgets.QFrame(self.tab_compose)
+        self.frame.setMaximumSize(QtCore.QSize(400, 700))
+        self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame.setObjectName("frame")
+        self.gridLayout_22 = QtWidgets.QGridLayout(self.frame)
+        self.gridLayout_22.setObjectName("gridLayout_22")
+        self.groupBox_13 = QtWidgets.QGroupBox(self.frame)
+        self.groupBox_13.setMinimumSize(QtCore.QSize(0, 250))
         self.groupBox_13.setMaximumSize(QtCore.QSize(16777215, 250))
         self.groupBox_13.setTitle("")
         self.groupBox_13.setObjectName("groupBox_13")
         self.gridLayout_19 = QtWidgets.QGridLayout(self.groupBox_13)
         self.gridLayout_19.setObjectName("gridLayout_19")
-        self.pushButton_clear_compose = QtWidgets.QPushButton(self.groupBox_13)
-        self.pushButton_clear_compose.setMinimumSize(QtCore.QSize(160, 30))
-        self.pushButton_clear_compose.setMaximumSize(QtCore.QSize(180, 30))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(9)
-        self.pushButton_clear_compose.setFont(font)
-        self.pushButton_clear_compose.setStyleSheet("QPushButton {\n"
-"    background-image: url(:/newPrefix/software logo.png);\n"
-"    border: 1px solid #555;\n"
-"    border-radius: 3px;\n"
-"    border-style: Solid;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
-"        );\n"
-"    padding: 5px 28px;\n"
-"    color: rgb(255, 255, 255);\n"
-"    }\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
-"        );\n"
-"    }\n"
-"\n"
-"QPushButton:pressed {\n"
-"    border-style: inset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
-"        );\n"
-"    }")
-        self.pushButton_clear_compose.setObjectName("pushButton_clear_compose")
-        self.gridLayout_19.addWidget(self.pushButton_clear_compose, 0, 0, 1, 1)
-        self.pushButton_compose_send_cancel = QtWidgets.QPushButton(self.groupBox_13)
-        self.pushButton_compose_send_cancel.setMinimumSize(QtCore.QSize(160, 30))
-        self.pushButton_compose_send_cancel.setMaximumSize(QtCore.QSize(180, 30))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pushButton_compose_send_cancel.setFont(font)
-        self.pushButton_compose_send_cancel.setStyleSheet("QPushButton {\n"
-"    border: 1px solid #555;\n"
-"    border-radius: 3px;\n"
-"    border-style: Solid;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #03506f\n"
-"        );\n"
-"    padding: 5px 28px;\n"
-"    color: rgb(255, 255, 255);\n"
-"    }\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #c5d7bd, stop: 1 #709fb0\n"
-"        );\n"
-"    }\n"
-"\n"
-"QPushButton:pressed {\n"
-"    border-style: inset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
-"        );\n"
-"    }")
-        self.pushButton_compose_send_cancel.setObjectName("pushButton_compose_send_cancel")
-        self.gridLayout_19.addWidget(self.pushButton_compose_send_cancel, 3, 0, 1, 1)
-        self.pushButton_send = QtWidgets.QPushButton(self.groupBox_13)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_send.sizePolicy().hasHeightForWidth())
-        self.pushButton_send.setSizePolicy(sizePolicy)
-        self.pushButton_send.setMinimumSize(QtCore.QSize(160, 30))
-        self.pushButton_send.setMaximumSize(QtCore.QSize(180, 30))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        font.setBold(True)
-        font.setWeight(75)
-        self.pushButton_send.setFont(font)
-        self.pushButton_send.setStyleSheet("QPushButton {\n"
-"    border: 1px solid #555;\n"
-"    border-radius: 3px;\n"
-"    border-style: Solid;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #03506f\n"
-"        );\n"
-"    padding: 5px 28px;\n"
-"    color: rgb(255, 255, 255);\n"
-"    }\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #c5d7bd, stop: 1 #709fb0\n"
-"        );\n"
-"    }\n"
-"\n"
-"QPushButton:pressed {\n"
-"    border-style: inset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
-"        );\n"
-"    }")
-        self.pushButton_send.setObjectName("pushButton_send")
-        self.gridLayout_19.addWidget(self.pushButton_send, 2, 0, 1, 1)
-        self.pushButton_test = QtWidgets.QPushButton(self.groupBox_13)
-        self.pushButton_test.setMinimumSize(QtCore.QSize(160, 30))
-        self.pushButton_test.setMaximumSize(QtCore.QSize(180, 30))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(9)
-        self.pushButton_test.setFont(font)
-        self.pushButton_test.setStyleSheet("QPushButton {\n"
-"    border: 1px solid #555;\n"
-"    border-radius: 3px;\n"
-"    border-style: Solid;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
-"        );\n"
-"    padding: 5px 28px;\n"
-"    color: rgb(255, 255, 255);\n"
-"    }\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
-"        );\n"
-"    }\n"
-"\n"
-"QPushButton:pressed {\n"
-"    border-style: inset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
-"        );\n"
-"    }")
-        self.pushButton_test.setObjectName("pushButton_test")
-        self.gridLayout_19.addWidget(self.pushButton_test, 1, 0, 1, 1)
         self.groupBox_14 = QtWidgets.QGroupBox(self.groupBox_13)
         self.groupBox_14.setMaximumSize(QtCore.QSize(16777215, 50))
         self.groupBox_14.setTitle("")
@@ -980,123 +686,272 @@ class Ui_MainWindow(object):
         self.pushButton_compose_zoomOut.setObjectName("pushButton_compose_zoomOut")
         self.gridLayout_20.addWidget(self.pushButton_compose_zoomOut, 0, 1, 1, 1)
         self.gridLayout_19.addWidget(self.groupBox_14, 4, 0, 1, 1)
-        self.gridLayout_4.addWidget(self.groupBox_13, 6, 3, 1, 1)
-        self.groupBox_11 = QtWidgets.QGroupBox(self.tab_compose)
-        self.groupBox_11.setMinimumSize(QtCore.QSize(180, 160))
-        self.groupBox_11.setMaximumSize(QtCore.QSize(180, 180))
-        self.groupBox_11.setTitle("")
-        self.groupBox_11.setObjectName("groupBox_11")
-        self.gridLayout_17 = QtWidgets.QGridLayout(self.groupBox_11)
-        self.gridLayout_17.setObjectName("gridLayout_17")
-        self.label_3 = QtWidgets.QLabel(self.groupBox_11)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_3.sizePolicy().hasHeightForWidth())
-        self.label_3.setSizePolicy(sizePolicy)
-        self.label_3.setMinimumSize(QtCore.QSize(180, 20))
-        self.label_3.setMaximumSize(QtCore.QSize(150, 16777215))
+        self.pushButton_clear_compose = QtWidgets.QPushButton(self.groupBox_13)
+        self.pushButton_clear_compose.setMinimumSize(QtCore.QSize(160, 30))
+        self.pushButton_clear_compose.setMaximumSize(QtCore.QSize(180, 30))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(9)
+        self.pushButton_clear_compose.setFont(font)
+        self.pushButton_clear_compose.setStyleSheet("QPushButton {\n"
+"    background-image: url(:/newPrefix/software logo.png);\n"
+"    border: 1px solid #555;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    color: rgb(255, 255, 255);\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
+"        );\n"
+"    }")
+        self.pushButton_clear_compose.setObjectName("pushButton_clear_compose")
+        self.gridLayout_19.addWidget(self.pushButton_clear_compose, 0, 0, 1, 1)
+        self.pushButton_compose_send_cancel = QtWidgets.QPushButton(self.groupBox_13)
+        self.pushButton_compose_send_cancel.setMinimumSize(QtCore.QSize(160, 30))
+        self.pushButton_compose_send_cancel.setMaximumSize(QtCore.QSize(180, 30))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(9)
         font.setBold(True)
         font.setWeight(75)
-        self.label_3.setFont(font)
-        self.label_3.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_3.setObjectName("label_3")
-        self.gridLayout_17.addWidget(self.label_3, 0, 0, 1, 1)
-        self.lineEdit_num_per_address = QtWidgets.QLineEdit(self.groupBox_11)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.lineEdit_num_per_address.sizePolicy().hasHeightForWidth())
-        self.lineEdit_num_per_address.setSizePolicy(sizePolicy)
-        self.lineEdit_num_per_address.setMinimumSize(QtCore.QSize(140, 24))
-        self.lineEdit_num_per_address.setMaximumSize(QtCore.QSize(140, 24))
+        self.pushButton_compose_send_cancel.setFont(font)
+        self.pushButton_compose_send_cancel.setStyleSheet("QPushButton {\n"
+"    border: 1px solid #555;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #03506f\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    color: rgb(255, 255, 255);\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #c5d7bd, stop: 1 #709fb0\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
+"        );\n"
+"    }")
+        self.pushButton_compose_send_cancel.setObjectName("pushButton_compose_send_cancel")
+        self.gridLayout_19.addWidget(self.pushButton_compose_send_cancel, 3, 0, 1, 1)
+        self.pushButton_test = QtWidgets.QPushButton(self.groupBox_13)
+        self.pushButton_test.setMinimumSize(QtCore.QSize(160, 30))
+        self.pushButton_test.setMaximumSize(QtCore.QSize(180, 30))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(9)
-        self.lineEdit_num_per_address.setFont(font)
-        self.lineEdit_num_per_address.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.lineEdit_num_per_address.setInputMethodHints(QtCore.Qt.ImhDigitsOnly)
-        self.lineEdit_num_per_address.setMaxLength(4)
-        self.lineEdit_num_per_address.setFrame(False)
-        self.lineEdit_num_per_address.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_num_per_address.setObjectName("lineEdit_num_per_address")
-        self.gridLayout_17.addWidget(self.lineEdit_num_per_address, 3, 0, 1, 1)
-        self.lineEdit_delay_between_emails = QtWidgets.QLineEdit(self.groupBox_11)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        self.pushButton_test.setFont(font)
+        self.pushButton_test.setStyleSheet("QPushButton {\n"
+"    border: 1px solid #555;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    color: rgb(255, 255, 255);\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
+"        );\n"
+"    }")
+        self.pushButton_test.setObjectName("pushButton_test")
+        self.gridLayout_19.addWidget(self.pushButton_test, 1, 0, 1, 1)
+        self.pushButton_send = QtWidgets.QPushButton(self.groupBox_13)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.lineEdit_delay_between_emails.sizePolicy().hasHeightForWidth())
-        self.lineEdit_delay_between_emails.setSizePolicy(sizePolicy)
-        self.lineEdit_delay_between_emails.setMinimumSize(QtCore.QSize(140, 24))
-        self.lineEdit_delay_between_emails.setMaximumSize(QtCore.QSize(140, 24))
+        sizePolicy.setHeightForWidth(self.pushButton_send.sizePolicy().hasHeightForWidth())
+        self.pushButton_send.setSizePolicy(sizePolicy)
+        self.pushButton_send.setMinimumSize(QtCore.QSize(160, 30))
+        self.pushButton_send.setMaximumSize(QtCore.QSize(180, 30))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_send.setFont(font)
+        self.pushButton_send.setStyleSheet("QPushButton {\n"
+"    border: 1px solid #555;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #03506f\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    color: rgb(255, 255, 255);\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #c5d7bd, stop: 1 #709fb0\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
+"        );\n"
+"    }")
+        self.pushButton_send.setObjectName("pushButton_send")
+        self.gridLayout_19.addWidget(self.pushButton_send, 2, 0, 1, 1)
+        self.gridLayout_22.addWidget(self.groupBox_13, 6, 0, 1, 1)
+        self.comboBox_attachments = QtWidgets.QComboBox(self.frame)
+        self.comboBox_attachments.setMinimumSize(QtCore.QSize(180, 20))
+        self.comboBox_attachments.setMaximumSize(QtCore.QSize(160, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(15)
+        self.comboBox_attachments.setFont(font)
+        self.comboBox_attachments.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.comboBox_attachments.setFrame(False)
+        self.comboBox_attachments.setObjectName("comboBox_attachments")
+        self.gridLayout_22.addWidget(self.comboBox_attachments, 5, 2, 1, 1)
+        self.pushButton_attachments_clear = QtWidgets.QPushButton(self.frame)
+        self.pushButton_attachments_clear.setMinimumSize(QtCore.QSize(160, 0))
+        self.pushButton_attachments_clear.setMaximumSize(QtCore.QSize(180, 30))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(9)
-        self.lineEdit_delay_between_emails.setFont(font)
-        self.lineEdit_delay_between_emails.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.lineEdit_delay_between_emails.setMaxLength(9)
-        self.lineEdit_delay_between_emails.setFrame(False)
-        self.lineEdit_delay_between_emails.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_delay_between_emails.setObjectName("lineEdit_delay_between_emails")
-        self.gridLayout_17.addWidget(self.lineEdit_delay_between_emails, 5, 0, 1, 1)
-        self.lineEdit_number_of_threads = QtWidgets.QLineEdit(self.groupBox_11)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        self.pushButton_attachments_clear.setFont(font)
+        self.pushButton_attachments_clear.setStyleSheet("QPushButton {\n"
+"    border: 1px solid #555;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    color: rgb(255, 255, 255);\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
+"        );\n"
+"    }")
+        self.pushButton_attachments_clear.setObjectName("pushButton_attachments_clear")
+        self.gridLayout_22.addWidget(self.pushButton_attachments_clear, 4, 2, 1, 1)
+        self.frame_2 = QtWidgets.QFrame(self.frame)
+        self.frame_2.setMinimumSize(QtCore.QSize(0, 400))
+        self.frame_2.setMaximumSize(QtCore.QSize(16777215, 350))
+        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_2.setObjectName("frame_2")
+        self.gridLayout_23 = QtWidgets.QGridLayout(self.frame_2)
+        self.gridLayout_23.setObjectName("gridLayout_23")
+        self.groupBox_6 = QtWidgets.QGroupBox(self.frame_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.lineEdit_number_of_threads.sizePolicy().hasHeightForWidth())
-        self.lineEdit_number_of_threads.setSizePolicy(sizePolicy)
-        self.lineEdit_number_of_threads.setMinimumSize(QtCore.QSize(140, 24))
-        self.lineEdit_number_of_threads.setMaximumSize(QtCore.QSize(140, 24))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(9)
-        self.lineEdit_number_of_threads.setFont(font)
-        self.lineEdit_number_of_threads.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.lineEdit_number_of_threads.setInputMethodHints(QtCore.Qt.ImhDigitsOnly)
-        self.lineEdit_number_of_threads.setMaxLength(4)
-        self.lineEdit_number_of_threads.setFrame(False)
-        self.lineEdit_number_of_threads.setAlignment(QtCore.Qt.AlignCenter)
-        self.lineEdit_number_of_threads.setObjectName("lineEdit_number_of_threads")
-        self.gridLayout_17.addWidget(self.lineEdit_number_of_threads, 1, 0, 1, 1)
-        self.label_2 = QtWidgets.QLabel(self.groupBox_11)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHeightForWidth(self.groupBox_6.sizePolicy().hasHeightForWidth())
+        self.groupBox_6.setSizePolicy(sizePolicy)
+        self.groupBox_6.setMinimumSize(QtCore.QSize(0, 90))
+        self.groupBox_6.setMaximumSize(QtCore.QSize(16777215, 100))
+        self.groupBox_6.setTitle("")
+        self.groupBox_6.setObjectName("groupBox_6")
+        self.gridLayout_9 = QtWidgets.QGridLayout(self.groupBox_6)
+        self.gridLayout_9.setObjectName("gridLayout_9")
+        self.radioButton_html = QtWidgets.QRadioButton(self.groupBox_6)
+        self.radioButton_html.setEnabled(True)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
-        self.label_2.setSizePolicy(sizePolicy)
-        self.label_2.setMinimumSize(QtCore.QSize(180, 20))
-        self.label_2.setMaximumSize(QtCore.QSize(150, 16777215))
+        sizePolicy.setHeightForWidth(self.radioButton_html.sizePolicy().hasHeightForWidth())
+        self.radioButton_html.setSizePolicy(sizePolicy)
+        self.radioButton_html.setMinimumSize(QtCore.QSize(125, 30))
+        self.radioButton_html.setMaximumSize(QtCore.QSize(125, 16777215))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(9)
         font.setBold(True)
         font.setWeight(75)
-        self.label_2.setFont(font)
-        self.label_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_2.setObjectName("label_2")
-        self.gridLayout_17.addWidget(self.label_2, 2, 0, 1, 1)
-        self.label_delay_between_emails = QtWidgets.QLabel(self.groupBox_11)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        self.radioButton_html.setFont(font)
+        self.radioButton_html.setObjectName("radioButton_html")
+        self.gridLayout_9.addWidget(self.radioButton_html, 1, 0, 1, 1)
+        self.radioButton_plain_text = QtWidgets.QRadioButton(self.groupBox_6)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.label_delay_between_emails.sizePolicy().hasHeightForWidth())
-        self.label_delay_between_emails.setSizePolicy(sizePolicy)
-        self.label_delay_between_emails.setMinimumSize(QtCore.QSize(180, 20))
-        self.label_delay_between_emails.setMaximumSize(QtCore.QSize(150, 16777215))
+        sizePolicy.setHeightForWidth(self.radioButton_plain_text.sizePolicy().hasHeightForWidth())
+        self.radioButton_plain_text.setSizePolicy(sizePolicy)
+        self.radioButton_plain_text.setMinimumSize(QtCore.QSize(125, 30))
+        self.radioButton_plain_text.setMaximumSize(QtCore.QSize(125, 16777215))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(9)
         font.setBold(True)
         font.setWeight(75)
-        self.label_delay_between_emails.setFont(font)
-        self.label_delay_between_emails.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.label_delay_between_emails.setObjectName("label_delay_between_emails")
-        self.gridLayout_17.addWidget(self.label_delay_between_emails, 4, 0, 1, 1)
-        self.gridLayout_4.addWidget(self.groupBox_11, 4, 5, 1, 1)
-        self.groupBox_2 = QtWidgets.QGroupBox(self.tab_compose)
+        self.radioButton_plain_text.setFont(font)
+        self.radioButton_plain_text.setChecked(True)
+        self.radioButton_plain_text.setObjectName("radioButton_plain_text")
+        self.gridLayout_9.addWidget(self.radioButton_plain_text, 0, 0, 1, 1)
+        self.checkBox_compose_preview = QtWidgets.QCheckBox(self.groupBox_6)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.checkBox_compose_preview.sizePolicy().hasHeightForWidth())
+        self.checkBox_compose_preview.setSizePolicy(sizePolicy)
+        self.checkBox_compose_preview.setMinimumSize(QtCore.QSize(80, 25))
+        self.checkBox_compose_preview.setMaximumSize(QtCore.QSize(80, 16777215))
+        font = QtGui.QFont()
+        font.setPointSize(9)
+        self.checkBox_compose_preview.setFont(font)
+        self.checkBox_compose_preview.setObjectName("checkBox_compose_preview")
+        self.gridLayout_9.addWidget(self.checkBox_compose_preview, 2, 0, 1, 1)
+        self.gridLayout_23.addWidget(self.groupBox_6, 3, 0, 1, 1)
+        self.groupBox_2 = QtWidgets.QGroupBox(self.frame_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -1113,22 +968,6 @@ class Ui_MainWindow(object):
         self.groupBox_2.setObjectName("groupBox_2")
         self.gridLayout_7 = QtWidgets.QGridLayout(self.groupBox_2)
         self.gridLayout_7.setObjectName("gridLayout_7")
-        self.radioButton_campaign_group_b = QtWidgets.QRadioButton(self.groupBox_2)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.radioButton_campaign_group_b.sizePolicy().hasHeightForWidth())
-        self.radioButton_campaign_group_b.setSizePolicy(sizePolicy)
-        self.radioButton_campaign_group_b.setMinimumSize(QtCore.QSize(125, 30))
-        self.radioButton_campaign_group_b.setMaximumSize(QtCore.QSize(125, 16777215))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setWeight(75)
-        self.radioButton_campaign_group_b.setFont(font)
-        self.radioButton_campaign_group_b.setObjectName("radioButton_campaign_group_b")
-        self.gridLayout_7.addWidget(self.radioButton_campaign_group_b, 1, 0, 1, 1)
         self.radioButton_campaign_group_a = QtWidgets.QRadioButton(self.groupBox_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
         sizePolicy.setHorizontalStretch(0)
@@ -1146,8 +985,24 @@ class Ui_MainWindow(object):
         self.radioButton_campaign_group_a.setChecked(True)
         self.radioButton_campaign_group_a.setObjectName("radioButton_campaign_group_a")
         self.gridLayout_7.addWidget(self.radioButton_campaign_group_a, 0, 0, 1, 1)
-        self.gridLayout_4.addWidget(self.groupBox_2, 3, 5, 1, 1)
-        self.groupBox_3 = QtWidgets.QGroupBox(self.tab_compose)
+        self.radioButton_campaign_group_b = QtWidgets.QRadioButton(self.groupBox_2)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.radioButton_campaign_group_b.sizePolicy().hasHeightForWidth())
+        self.radioButton_campaign_group_b.setSizePolicy(sizePolicy)
+        self.radioButton_campaign_group_b.setMinimumSize(QtCore.QSize(125, 30))
+        self.radioButton_campaign_group_b.setMaximumSize(QtCore.QSize(125, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(9)
+        font.setBold(True)
+        font.setWeight(75)
+        self.radioButton_campaign_group_b.setFont(font)
+        self.radioButton_campaign_group_b.setObjectName("radioButton_campaign_group_b")
+        self.gridLayout_7.addWidget(self.radioButton_campaign_group_b, 1, 0, 1, 1)
+        self.gridLayout_23.addWidget(self.groupBox_2, 2, 0, 1, 1)
+        self.groupBox_3 = QtWidgets.QGroupBox(self.frame_2)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -1159,23 +1014,6 @@ class Ui_MainWindow(object):
         self.groupBox_3.setObjectName("groupBox_3")
         self.gridLayout_8 = QtWidgets.QGridLayout(self.groupBox_3)
         self.gridLayout_8.setObjectName("gridLayout_8")
-        self.radioButton_send_campaign = QtWidgets.QRadioButton(self.groupBox_3)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.radioButton_send_campaign.sizePolicy().hasHeightForWidth())
-        self.radioButton_send_campaign.setSizePolicy(sizePolicy)
-        self.radioButton_send_campaign.setMinimumSize(QtCore.QSize(125, 30))
-        self.radioButton_send_campaign.setMaximumSize(QtCore.QSize(125, 16777215))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setWeight(75)
-        self.radioButton_send_campaign.setFont(font)
-        self.radioButton_send_campaign.setChecked(True)
-        self.radioButton_send_campaign.setObjectName("radioButton_send_campaign")
-        self.gridLayout_8.addWidget(self.radioButton_send_campaign, 1, 0, 1, 1)
         self.radioButton_reply = QtWidgets.QRadioButton(self.groupBox_3)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
         sizePolicy.setHorizontalStretch(0)
@@ -1194,12 +1032,204 @@ class Ui_MainWindow(object):
         self.radioButton_reply.setAutoExclusive(True)
         self.radioButton_reply.setObjectName("radioButton_reply")
         self.gridLayout_8.addWidget(self.radioButton_reply, 0, 0, 1, 1)
-        self.gridLayout_4.addWidget(self.groupBox_3, 3, 3, 1, 1)
-        self.progressBar_compose = QtWidgets.QProgressBar(self.tab_compose)
-        self.progressBar_compose.setProperty("value", 0)
-        self.progressBar_compose.setObjectName("progressBar_compose")
-        self.gridLayout_4.addWidget(self.progressBar_compose, 28, 0, 1, 6)
-        self.pushButton_attachments = QtWidgets.QPushButton(self.tab_compose)
+        self.radioButton_send_campaign = QtWidgets.QRadioButton(self.groupBox_3)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.radioButton_send_campaign.sizePolicy().hasHeightForWidth())
+        self.radioButton_send_campaign.setSizePolicy(sizePolicy)
+        self.radioButton_send_campaign.setMinimumSize(QtCore.QSize(125, 30))
+        self.radioButton_send_campaign.setMaximumSize(QtCore.QSize(125, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(9)
+        font.setBold(True)
+        font.setWeight(75)
+        self.radioButton_send_campaign.setFont(font)
+        self.radioButton_send_campaign.setChecked(True)
+        self.radioButton_send_campaign.setObjectName("radioButton_send_campaign")
+        self.gridLayout_8.addWidget(self.radioButton_send_campaign, 1, 0, 1, 1)
+        self.gridLayout_23.addWidget(self.groupBox_3, 1, 0, 1, 1)
+        self.label_6 = QtWidgets.QLabel(self.frame_2)
+        self.label_6.setMinimumSize(QtCore.QSize(150, 30))
+        self.label_6.setMaximumSize(QtCore.QSize(16777215, 30))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_6.setFont(font)
+        self.label_6.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_6.setObjectName("label_6")
+        self.gridLayout_23.addWidget(self.label_6, 0, 0, 1, 1)
+        self.gridLayout_22.addWidget(self.frame_2, 1, 0, 1, 1)
+        self.frame_12 = QtWidgets.QFrame(self.frame)
+        self.frame_12.setMinimumSize(QtCore.QSize(220, 250))
+        self.frame_12.setMaximumSize(QtCore.QSize(200, 250))
+        self.frame_12.setObjectName("frame_12")
+        self.gridLayout_18 = QtWidgets.QGridLayout(self.frame_12)
+        self.gridLayout_18.setObjectName("gridLayout_18")
+        self.checkBox_email_tracking = QtWidgets.QCheckBox(self.frame_12)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.checkBox_email_tracking.sizePolicy().hasHeightForWidth())
+        self.checkBox_email_tracking.setSizePolicy(sizePolicy)
+        self.checkBox_email_tracking.setMinimumSize(QtCore.QSize(150, 20))
+        self.checkBox_email_tracking.setMaximumSize(QtCore.QSize(16777215, 20))
+        self.checkBox_email_tracking.setObjectName("checkBox_email_tracking")
+        self.gridLayout_18.addWidget(self.checkBox_email_tracking, 1, 0, 1, 1)
+        self.checkBox_add_custom_hostname = QtWidgets.QCheckBox(self.frame_12)
+        self.checkBox_add_custom_hostname.setMinimumSize(QtCore.QSize(150, 20))
+        self.checkBox_add_custom_hostname.setMaximumSize(QtCore.QSize(16777215, 20))
+        self.checkBox_add_custom_hostname.setObjectName("checkBox_add_custom_hostname")
+        self.gridLayout_18.addWidget(self.checkBox_add_custom_hostname, 0, 0, 1, 1)
+        self.checkBox_remove_email_from_target = QtWidgets.QCheckBox(self.frame_12)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.checkBox_remove_email_from_target.sizePolicy().hasHeightForWidth())
+        self.checkBox_remove_email_from_target.setSizePolicy(sizePolicy)
+        self.checkBox_remove_email_from_target.setMinimumSize(QtCore.QSize(150, 20))
+        self.checkBox_remove_email_from_target.setMaximumSize(QtCore.QSize(16777215, 20))
+        self.checkBox_remove_email_from_target.setObjectName("checkBox_remove_email_from_target")
+        self.gridLayout_18.addWidget(self.checkBox_remove_email_from_target, 3, 0, 1, 1)
+        self.checkBox_enable_webhook = QtWidgets.QCheckBox(self.frame_12)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.checkBox_enable_webhook.sizePolicy().hasHeightForWidth())
+        self.checkBox_enable_webhook.setSizePolicy(sizePolicy)
+        self.checkBox_enable_webhook.setMinimumSize(QtCore.QSize(150, 20))
+        self.checkBox_enable_webhook.setMaximumSize(QtCore.QSize(16777215, 20))
+        self.checkBox_enable_webhook.setObjectName("checkBox_enable_webhook")
+        self.gridLayout_18.addWidget(self.checkBox_enable_webhook, 2, 0, 1, 1)
+        self.checkBox_check_for_blocks = QtWidgets.QCheckBox(self.frame_12)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.checkBox_check_for_blocks.sizePolicy().hasHeightForWidth())
+        self.checkBox_check_for_blocks.setSizePolicy(sizePolicy)
+        self.checkBox_check_for_blocks.setMinimumSize(QtCore.QSize(150, 20))
+        self.checkBox_check_for_blocks.setMaximumSize(QtCore.QSize(16777215, 20))
+        self.checkBox_check_for_blocks.setObjectName("checkBox_check_for_blocks")
+        self.gridLayout_18.addWidget(self.checkBox_check_for_blocks, 4, 0, 1, 1)
+        self.gridLayout_22.addWidget(self.frame_12, 1, 2, 1, 1)
+        self.frame_11 = QtWidgets.QFrame(self.frame)
+        self.frame_11.setMinimumSize(QtCore.QSize(200, 160))
+        self.frame_11.setMaximumSize(QtCore.QSize(200, 180))
+        self.frame_11.setObjectName("frame_11")
+        self.gridLayout_17 = QtWidgets.QGridLayout(self.frame_11)
+        self.gridLayout_17.setObjectName("gridLayout_17")
+        self.label_3 = QtWidgets.QLabel(self.frame_11)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_3.sizePolicy().hasHeightForWidth())
+        self.label_3.setSizePolicy(sizePolicy)
+        self.label_3.setMinimumSize(QtCore.QSize(180, 20))
+        self.label_3.setMaximumSize(QtCore.QSize(150, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(9)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_3.setFont(font)
+        self.label_3.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.label_3.setObjectName("label_3")
+        self.gridLayout_17.addWidget(self.label_3, 0, 0, 1, 1)
+        self.label_2 = QtWidgets.QLabel(self.frame_11)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
+        self.label_2.setSizePolicy(sizePolicy)
+        self.label_2.setMinimumSize(QtCore.QSize(180, 20))
+        self.label_2.setMaximumSize(QtCore.QSize(150, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(9)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_2.setFont(font)
+        self.label_2.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.label_2.setObjectName("label_2")
+        self.gridLayout_17.addWidget(self.label_2, 2, 0, 1, 1)
+        self.lineEdit_delay_between_emails = QtWidgets.QLineEdit(self.frame_11)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lineEdit_delay_between_emails.sizePolicy().hasHeightForWidth())
+        self.lineEdit_delay_between_emails.setSizePolicy(sizePolicy)
+        self.lineEdit_delay_between_emails.setMinimumSize(QtCore.QSize(140, 24))
+        self.lineEdit_delay_between_emails.setMaximumSize(QtCore.QSize(140, 24))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(9)
+        self.lineEdit_delay_between_emails.setFont(font)
+        self.lineEdit_delay_between_emails.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEdit_delay_between_emails.setMaxLength(9)
+        self.lineEdit_delay_between_emails.setFrame(False)
+        self.lineEdit_delay_between_emails.setAlignment(QtCore.Qt.AlignCenter)
+        self.lineEdit_delay_between_emails.setObjectName("lineEdit_delay_between_emails")
+        self.gridLayout_17.addWidget(self.lineEdit_delay_between_emails, 5, 0, 1, 1)
+        self.lineEdit_num_per_address = QtWidgets.QLineEdit(self.frame_11)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lineEdit_num_per_address.sizePolicy().hasHeightForWidth())
+        self.lineEdit_num_per_address.setSizePolicy(sizePolicy)
+        self.lineEdit_num_per_address.setMinimumSize(QtCore.QSize(140, 24))
+        self.lineEdit_num_per_address.setMaximumSize(QtCore.QSize(140, 24))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(9)
+        self.lineEdit_num_per_address.setFont(font)
+        self.lineEdit_num_per_address.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEdit_num_per_address.setInputMethodHints(QtCore.Qt.ImhDigitsOnly)
+        self.lineEdit_num_per_address.setMaxLength(4)
+        self.lineEdit_num_per_address.setFrame(False)
+        self.lineEdit_num_per_address.setAlignment(QtCore.Qt.AlignCenter)
+        self.lineEdit_num_per_address.setObjectName("lineEdit_num_per_address")
+        self.gridLayout_17.addWidget(self.lineEdit_num_per_address, 3, 0, 1, 1)
+        self.lineEdit_number_of_threads = QtWidgets.QLineEdit(self.frame_11)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.lineEdit_number_of_threads.sizePolicy().hasHeightForWidth())
+        self.lineEdit_number_of_threads.setSizePolicy(sizePolicy)
+        self.lineEdit_number_of_threads.setMinimumSize(QtCore.QSize(140, 24))
+        self.lineEdit_number_of_threads.setMaximumSize(QtCore.QSize(140, 24))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(9)
+        self.lineEdit_number_of_threads.setFont(font)
+        self.lineEdit_number_of_threads.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEdit_number_of_threads.setInputMethodHints(QtCore.Qt.ImhDigitsOnly)
+        self.lineEdit_number_of_threads.setMaxLength(4)
+        self.lineEdit_number_of_threads.setFrame(False)
+        self.lineEdit_number_of_threads.setAlignment(QtCore.Qt.AlignCenter)
+        self.lineEdit_number_of_threads.setObjectName("lineEdit_number_of_threads")
+        self.gridLayout_17.addWidget(self.lineEdit_number_of_threads, 1, 0, 1, 1)
+        self.label_delay_between_emails = QtWidgets.QLabel(self.frame_11)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.label_delay_between_emails.sizePolicy().hasHeightForWidth())
+        self.label_delay_between_emails.setSizePolicy(sizePolicy)
+        self.label_delay_between_emails.setMinimumSize(QtCore.QSize(180, 20))
+        self.label_delay_between_emails.setMaximumSize(QtCore.QSize(150, 16777215))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(9)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_delay_between_emails.setFont(font)
+        self.label_delay_between_emails.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.label_delay_between_emails.setObjectName("label_delay_between_emails")
+        self.gridLayout_17.addWidget(self.label_delay_between_emails, 4, 0, 1, 1)
+        self.gridLayout_22.addWidget(self.frame_11, 6, 2, 1, 1)
+        self.pushButton_attachments = QtWidgets.QPushButton(self.frame)
         self.pushButton_attachments.setMinimumSize(QtCore.QSize(160, 0))
         self.pushButton_attachments.setMaximumSize(QtCore.QSize(180, 30))
         font = QtGui.QFont()
@@ -1235,9 +1265,58 @@ class Ui_MainWindow(object):
 "        );\n"
 "    }")
         self.pushButton_attachments.setObjectName("pushButton_attachments")
-        self.gridLayout_4.addWidget(self.pushButton_attachments, 8, 3, 1, 1)
-        self.label_compose_status = QtWidgets.QLabel(self.tab_compose)
-        self.label_compose_status.setMinimumSize(QtCore.QSize(0, 20))
+        self.gridLayout_22.addWidget(self.pushButton_attachments, 2, 2, 1, 1)
+        self.gridLayout_4.addWidget(self.frame, 4, 3, 1, 1)
+        self.groupBox_15 = QtWidgets.QGroupBox(self.tab_compose)
+        self.groupBox_15.setMinimumSize(QtCore.QSize(600, 0))
+        self.groupBox_15.setMaximumSize(QtCore.QSize(1920, 1080))
+        self.groupBox_15.setTitle("")
+        self.groupBox_15.setObjectName("groupBox_15")
+        self.gridLayout_21 = QtWidgets.QGridLayout(self.groupBox_15)
+        self.gridLayout_21.setObjectName("gridLayout_21")
+        self.lineEdit_subject = QtWidgets.QLineEdit(self.groupBox_15)
+        self.lineEdit_subject.setMinimumSize(QtCore.QSize(600, 25))
+        self.lineEdit_subject.setMaximumSize(QtCore.QSize(1920, 25))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(13)
+        self.lineEdit_subject.setFont(font)
+        self.lineEdit_subject.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEdit_subject.setFrame(False)
+        self.lineEdit_subject.setClearButtonEnabled(True)
+        self.lineEdit_subject.setObjectName("lineEdit_subject")
+        self.gridLayout_21.addWidget(self.lineEdit_subject, 2, 1, 1, 1)
+        self.label_4 = QtWidgets.QLabel(self.groupBox_15)
+        self.label_4.setMinimumSize(QtCore.QSize(60, 20))
+        self.label_4.setMaximumSize(QtCore.QSize(60, 20))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(9)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_4.setFont(font)
+        self.label_4.setObjectName("label_4")
+        self.gridLayout_21.addWidget(self.label_4, 2, 0, 1, 1)
+        self.textBrowser_compose = QtWidgets.QTextBrowser(self.groupBox_15)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.textBrowser_compose.sizePolicy().hasHeightForWidth())
+        self.textBrowser_compose.setSizePolicy(sizePolicy)
+        self.textBrowser_compose.setMinimumSize(QtCore.QSize(600, 500))
+        self.textBrowser_compose.setMaximumSize(QtCore.QSize(1920, 1080))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(13)
+        self.textBrowser_compose.setFont(font)
+        self.textBrowser_compose.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.textBrowser_compose.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.textBrowser_compose.setReadOnly(False)
+        self.textBrowser_compose.setObjectName("textBrowser_compose")
+        self.gridLayout_21.addWidget(self.textBrowser_compose, 3, 0, 1, 2)
+        self.label_compose_status = QtWidgets.QLabel(self.groupBox_15)
+        self.label_compose_status.setMinimumSize(QtCore.QSize(300, 25))
+        self.label_compose_status.setMaximumSize(QtCore.QSize(1920, 25))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(11)
@@ -1245,53 +1324,19 @@ class Ui_MainWindow(object):
         self.label_compose_status.setText("")
         self.label_compose_status.setAlignment(QtCore.Qt.AlignCenter)
         self.label_compose_status.setObjectName("label_compose_status")
-        self.gridLayout_4.addWidget(self.label_compose_status, 27, 0, 1, 6)
-        self.pushButton_attachments_clear = QtWidgets.QPushButton(self.tab_compose)
-        self.pushButton_attachments_clear.setMinimumSize(QtCore.QSize(160, 0))
-        self.pushButton_attachments_clear.setMaximumSize(QtCore.QSize(180, 30))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(9)
-        self.pushButton_attachments_clear.setFont(font)
-        self.pushButton_attachments_clear.setStyleSheet("QPushButton {\n"
-"    border: 1px solid #555;\n"
-"    border-radius: 3px;\n"
-"    border-style: Solid;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
-"        );\n"
-"    padding: 5px 28px;\n"
-"    color: rgb(255, 255, 255);\n"
-"    }\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
-"        );\n"
-"    }\n"
-"\n"
-"QPushButton:pressed {\n"
-"    border-style: inset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
-"        );\n"
-"    }")
-        self.pushButton_attachments_clear.setObjectName("pushButton_attachments_clear")
-        self.gridLayout_4.addWidget(self.pushButton_attachments_clear, 8, 5, 1, 1)
-        self.comboBox_attachments = QtWidgets.QComboBox(self.tab_compose)
-        self.comboBox_attachments.setMinimumSize(QtCore.QSize(380, 20))
-        self.comboBox_attachments.setMaximumSize(QtCore.QSize(380, 16777215))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(15)
-        self.comboBox_attachments.setFont(font)
-        self.comboBox_attachments.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.comboBox_attachments.setFrame(False)
-        self.comboBox_attachments.setObjectName("comboBox_attachments")
-        self.gridLayout_4.addWidget(self.comboBox_attachments, 9, 3, 1, 3)
+        self.gridLayout_21.addWidget(self.label_compose_status, 4, 0, 1, 2)
+        self.progressBar_compose = QtWidgets.QProgressBar(self.groupBox_15)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.progressBar_compose.sizePolicy().hasHeightForWidth())
+        self.progressBar_compose.setSizePolicy(sizePolicy)
+        self.progressBar_compose.setMinimumSize(QtCore.QSize(200, 20))
+        self.progressBar_compose.setMaximumSize(QtCore.QSize(1920, 25))
+        self.progressBar_compose.setProperty("value", 0)
+        self.progressBar_compose.setObjectName("progressBar_compose")
+        self.gridLayout_21.addWidget(self.progressBar_compose, 5, 0, 1, 2)
+        self.gridLayout_4.addWidget(self.groupBox_15, 3, 0, 4, 1)
         self.tabWidget.addTab(self.tab_compose, "")
         self.tab_database = QtWidgets.QWidget()
         self.tab_database.setObjectName("tab_database")
@@ -1706,10 +1751,10 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(1)
-        self.pushButton_clear_compose.clicked.connect(self.textBrowser_compose.clear)
         self.pushButton_attachments_clear.clicked.connect(self.comboBox_attachments.clear)
         self.pushButton_3.clicked.connect(self.textBrowser_show_email.zoomIn)
         self.pushButton_4.clicked.connect(self.textBrowser_show_email.zoomOut)
+        self.pushButton_clear_compose.clicked.connect(self.textBrowser_compose.clear)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -1741,35 +1786,35 @@ class Ui_MainWindow(object):
         self.pushButton_4.setText(_translate("MainWindow", "-"))
         self.pushButton_forward.setText(_translate("MainWindow", "FORWARD"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_inbox), _translate("MainWindow", "Inbox"))
-        self.label_6.setText(_translate("MainWindow", "CAMPAIGN SETTINGS"))
-        self.label_4.setText(_translate("MainWindow", "SUBJECT:"))
-        self.checkBox_email_tracking.setText(_translate("MainWindow", "Enable Email Tracking"))
-        self.checkBox_remove_email_from_target.setText(_translate("MainWindow", "Remove Email From Target"))
-        self.checkBox_enable_webhook.setText(_translate("MainWindow", "Enable Webhook"))
-        self.checkBox_add_custom_hostname.setText(_translate("MainWindow", "Custom Hostname"))
-        self.checkBox_check_for_blocks.setText(_translate("MainWindow", "Check for blocks"))
+        self.pushButton_compose_zoomIn.setText(_translate("MainWindow", "+"))
+        self.pushButton_compose_zoomOut.setText(_translate("MainWindow", "-"))
+        self.pushButton_clear_compose.setText(_translate("MainWindow", "CLEAR TEXT"))
+        self.pushButton_compose_send_cancel.setText(_translate("MainWindow", "CANCEL"))
+        self.pushButton_test.setText(_translate("MainWindow", "TEST"))
+        self.pushButton_send.setText(_translate("MainWindow", "SEND"))
+        self.pushButton_attachments_clear.setText(_translate("MainWindow", "CLEAR LIST"))
         self.radioButton_html.setText(_translate("MainWindow", "Html"))
         self.radioButton_plain_text.setText(_translate("MainWindow", "Plain Text"))
         self.checkBox_compose_preview.setText(_translate("MainWindow", "Preview"))
-        self.pushButton_clear_compose.setText(_translate("MainWindow", "CLEAR TEXT"))
-        self.pushButton_compose_send_cancel.setText(_translate("MainWindow", "CANCEL"))
-        self.pushButton_send.setText(_translate("MainWindow", "SEND"))
-        self.pushButton_test.setText(_translate("MainWindow", "TEST"))
-        self.pushButton_compose_zoomIn.setText(_translate("MainWindow", "+"))
-        self.pushButton_compose_zoomOut.setText(_translate("MainWindow", "-"))
+        self.radioButton_campaign_group_a.setText(_translate("MainWindow", "Group A"))
+        self.radioButton_campaign_group_b.setText(_translate("MainWindow", "Group B"))
+        self.radioButton_reply.setText(_translate("MainWindow", "Reply"))
+        self.radioButton_send_campaign.setText(_translate("MainWindow", "Send Campaign"))
+        self.label_6.setText(_translate("MainWindow", "CAMPAIGN SETTINGS"))
+        self.checkBox_email_tracking.setText(_translate("MainWindow", "Enable Email Tracking"))
+        self.checkBox_add_custom_hostname.setText(_translate("MainWindow", "Custom Hostname"))
+        self.checkBox_remove_email_from_target.setText(_translate("MainWindow", "Remove Email From Target"))
+        self.checkBox_enable_webhook.setText(_translate("MainWindow", "Enable Webhook"))
+        self.checkBox_check_for_blocks.setText(_translate("MainWindow", "Check for blocks"))
         self.label_3.setText(_translate("MainWindow", "NUMBER OF THREADS"))
-        self.lineEdit_num_per_address.setPlaceholderText(_translate("MainWindow", "ENTER NUMBER"))
+        self.label_2.setText(_translate("MainWindow", "NUM EMAILS PER ACCOUNT"))
         self.lineEdit_delay_between_emails.setText(_translate("MainWindow", "5-20"))
         self.lineEdit_delay_between_emails.setPlaceholderText(_translate("MainWindow", "Enter a Range"))
+        self.lineEdit_num_per_address.setPlaceholderText(_translate("MainWindow", "ENTER NUMBER"))
         self.lineEdit_number_of_threads.setPlaceholderText(_translate("MainWindow", "ENTER NUMBER"))
-        self.label_2.setText(_translate("MainWindow", "NUM EMAILS PER ACCOUNT"))
         self.label_delay_between_emails.setText(_translate("MainWindow", "DELAY BETWEEN EMAILS"))
-        self.radioButton_campaign_group_b.setText(_translate("MainWindow", "Group B"))
-        self.radioButton_campaign_group_a.setText(_translate("MainWindow", "Group A"))
-        self.radioButton_send_campaign.setText(_translate("MainWindow", "Send Campaign"))
-        self.radioButton_reply.setText(_translate("MainWindow", "Reply"))
         self.pushButton_attachments.setText(_translate("MainWindow", "ATTACHMENTS"))
-        self.pushButton_attachments_clear.setText(_translate("MainWindow", "CLEAR LIST"))
+        self.label_4.setText(_translate("MainWindow", "SUBJECT:"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_compose), _translate("MainWindow", "Compose"))
         self.radioButton_db_groupa.setText(_translate("MainWindow", "Group A"))
         self.radioButton_db_groupb.setText(_translate("MainWindow", "Group B"))
