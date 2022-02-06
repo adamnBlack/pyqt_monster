@@ -66,6 +66,8 @@ class myMainClass:
             str(var.tracking['campaign_name']))
         GUI.lineEdit_webhook_link.setText(str(var.webhook_link))
         GUI.lineEdit_target_blacklist.setText(",".join(var.target_blacklist))
+        GUI.lineEdit_inbox_blacklist.setText(",".join(var.inbox_blacklist))
+        GUI.lineEdit_subject.setText(var.compose_email_subject)
 
         GUI.lineEdit_num_per_address.setText(str(var.num_emails_per_address))
         GUI.lineEdit_delay_between_emails.setText(
@@ -104,6 +106,7 @@ class myMainClass:
         GUI.radioButton_html.clicked.connect(self.compose_change)
         GUI.radioButton_plain_text.clicked.connect(self.compose_change)
         GUI.checkBox_compose_preview.clicked.connect(self.compose_preview)
+        GUI.lineEdit_subject.textChanged.connect(self.compose_subject_update)
 
         GUI.pushButton_attachments.clicked.connect(self.openFileNamesDialog)
         GUI.pushButton_attachments_clear.clicked.connect(self.clear_files)
@@ -180,6 +183,9 @@ class myMainClass:
         GUI.pushButton_clear_cached_targets.clicked.connect(
             lambda: threading.Thread(target=self.clear_cached_targets, daemon=True, args=[]).start()
         )
+
+    def compose_subject_update(self, value: str):
+        var.compose_email_subject = value
 
     def clear_cached_targets(self):
         db = database.Database()

@@ -634,3 +634,73 @@ socks.GeneralProxyError: Socket error: 0x05: Connection refused
 [parameters: ('shah_imran_sust@outlook.com',)]
 (Background on this error at: https://sqlalche.me/e/14/gkpj)
 2021-12-25 18:30:13,179 Sending Finished 5c2da212-aa3d-4ea2-b100-76fcb2d3bd88
+2021-12-27 20:17:42,662 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2021-12-27 20:18:04,253 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 3
+ Delay: 0 - 1
+ Campaign ID: b00dd6d3-d251-4dd5-9c39-281e11c8c14d
+ Add Custom Hostname: False
+2021-12-27 20:18:04,330 
+Starting Thread : Name - lorettabowers06@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shah_imran_sust@outlook.com"}, "flag": {"0": 0}}
+2021-12-27 20:18:07,104 Error at Sending - lorettabowers06@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\env\lib\site-packages\socks.py", line 809, in connect
+    negotiate(self, dest_addr, dest_port)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\env\lib\site-packages\socks.py", line 443, in _negotiate_SOCKS5
+    self.proxy_peername, self.proxy_sockname = self._SOCKS5_request(
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\env\lib\site-packages\socks.py", line 533, in _SOCKS5_request
+    raise SOCKS5Error("{:#04x}: {}".format(status, error))
+socks.SOCKS5Error: 0x02: Connection not allowed by ruleset
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 376, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 308, in login
+    server.connect_proxy(host=var.smtp_server, port=var.smtp_port,
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\proxy_smtplib.py", line 162, in connect_proxy
+    s.connect((host, port))
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\env\lib\site-packages\socks.py", line 47, in wrapper
+    return function(*args, **kwargs)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\env\lib\site-packages\socks.py", line 814, in connect
+    raise GeneralProxyError("Socket error", error)
+socks.GeneralProxyError: Socket error: 0x02: Connection not allowed by ruleset
+
+2021-12-27 20:18:07,368 Sending Finished b00dd6d3-d251-4dd5-9c39-281e11c8c14d
+2021-12-28 19:22:36,810 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 3
+ Delay: 0 - 1
+ Campaign ID: 202eee37-96a4-4889-8205-6b80b8dfd7f9
+ Add Custom Hostname: False
+2021-12-28 19:22:36,834 
+Starting Thread : Name - lorettabowers06@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shah_imran_sust@outlook.com"}, "flag": {"0": 0}}
+2021-12-28 19:22:41,334 Error at Sending - lorettabowers06@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 376, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app\smtp.py", line 320, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 745, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 734, in login
+    (code, resp) = self.auth(
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 657, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials l7sm18848267wms.1 - gsmtp')
+
+2021-12-28 19:22:41,843 Sending Finished 202eee37-96a4-4889-8205-6b80b8dfd7f9

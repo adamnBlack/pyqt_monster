@@ -182,3 +182,7 @@ TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
 ,jamescalloway402@gmail.com,Socket error: 0x05: Connection refused,5c2da212-aa3d-4ea2-b100-76fcb2d3bd88,2021-12-25
 shah_imran_sust@outlook.com,elnoraschmitt426@gmail.com,sent,5c2da212-aa3d-4ea2-b100-76fcb2d3bd88,2021-12-25
 shah_imran_sust@outlook.com,monahantoshiko226@gmail.com,sent,5c2da212-aa3d-4ea2-b100-76fcb2d3bd88,2021-12-25
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,lorettabowers06@gmail.com,Socket error: 0x02: Connection not allowed by ruleset,b00dd6d3-d251-4dd5-9c39-281e11c8c14d,2021-12-27
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,lorettabowers06@gmail.com,"(535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials l7sm18848267wms.1 - gsmtp')",202eee37-96a4-4889-8205-6b80b8dfd7f9,2021-12-28

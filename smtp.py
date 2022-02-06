@@ -348,7 +348,7 @@ class SMTP_(threading.Thread):
 
     def run(self):
         try:
-            global sent_q, email_failed, success_sent, remove_target_
+            global sent_q, email_failed, success_sent, remove_target_q
 
             last_recipient = ''
             var.thread_open_campaign += 1
@@ -607,7 +607,7 @@ def main(group, d_start, d_end, group_selected):
     email_failed = 0
     sent_q = queue.Queue()
     target = var.target.copy()
-    target = target[target['EMAIL'] != ""]
+    target = target[target['EMAIL'] != ""] # it removes the rows that doesn't any email address
 
     target.insert(9, 'flag', '')
     target['flag'] = 0
