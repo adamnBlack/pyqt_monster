@@ -11,6 +11,36 @@ logger = var.logging
 logger.getLogger("requests").setLevel(var.logging.WARNING)
 
 
+class CampaignReportWebhook(threading.Thread):
+    def __init__(self, package: dict):
+        threading.Thread.__init__(self)
+        self.threadID = None
+        self.name = "CampaignReport"
+        self.setDaemon(True)
+        self.close = False
+
+        self.headers = {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        }
+        self.package = package
+
+        self.api_link = var.webhook_link
+        self.logger = var.logging
+        self.logger.getLogger("requests").setLevel(var.logging.WARNING)
+
+    def run(self):
+        self.logger.info("Starting Campaign End Report Webhook session...")
+
+        data = dumps(self.package).encode("utf-8")
+        data = loads(data)
+
+        result = requests.post(
+            self.api_link, json=data, headers=self.headers, timeout=10)
+
+        self.logger.info("Ending Campaign End Report Webhook session.")
+
+
 class SendWebhook(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)

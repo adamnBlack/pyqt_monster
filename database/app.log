@@ -704,3 +704,87 @@ Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"},
 smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials l7sm18848267wms.1 - gsmtp')
 
 2021-12-28 19:22:41,843 Sending Finished 202eee37-96a4-4889-8205-6b80b8dfd7f9
+2022-02-16 00:18:22,144 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 2
+ Delay: 0 - 1
+ Campaign ID: 3615291b-8f00-41b3-b60a-cd42c7951453
+ Add Custom Hostname: False
+2022-02-16 00:18:22,265 
+Starting Thread : Name - lorettabowers06@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shah_imran_sust@outlook.com"}, "flag": {"0": 0}}
+2022-02-16 00:18:27,377 Sent - lorettabowers06@gmail.com shah_imran_sust@outlook.com
+2022-02-16 00:18:28,156 Error at Database.add_to_cached_targets() - (sqlite3.IntegrityError) UNIQUE constraint failed: cached_targets.email
+[SQL: INSERT INTO cached_targets (email) VALUES (?)]
+[parameters: ('shah_imran_sust@outlook.com',)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-02-16 00:18:28,374 Sending Finished 3615291b-8f00-41b3-b60a-cd42c7951453
+2022-02-16 00:21:15,273 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 2
+ Delay: 0 - 1
+ Campaign ID: 13e1e5d5-e0cc-4548-b47e-6ef0c8c56cc7
+ Add Custom Hostname: False
+2022-02-16 00:21:15,295 
+Starting Thread : Name - lorettabowers06@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shah_imran_sust@outlook.com"}, "flag": {"0": 0}}
+2022-02-16 00:21:20,143 Sent - lorettabowers06@gmail.com shah_imran_sust@outlook.com
+2022-02-16 00:21:20,278 Error at Database.add_to_cached_targets() - (sqlite3.IntegrityError) UNIQUE constraint failed: cached_targets.email
+[SQL: INSERT INTO cached_targets (email) VALUES (?)]
+[parameters: ('shah_imran_sust@outlook.com',)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-02-16 00:21:21,303 Sending Finished 13e1e5d5-e0cc-4548-b47e-6ef0c8c56cc7
+2022-02-23 21:41:19,621 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 2
+ Delay: 0 - 1
+ Campaign ID: 41bcf8df-e751-4c86-8c7d-d3f360f8abc9
+ Add Custom Hostname: False
+2022-02-23 21:41:19,696 
+Starting Thread : Name - lorettabowers06@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shah_imran_sust@outlook.com"}, "flag": {"0": 0}}
+2022-02-23 21:41:26,220 Sent - lorettabowers06@gmail.com shah_imran_sust@outlook.com
+2022-02-23 21:41:26,628 Error at Database.add_to_cached_targets() - (sqlite3.IntegrityError) UNIQUE constraint failed: cached_targets.email
+[SQL: INSERT INTO cached_targets (email) VALUES (?)]
+[parameters: ('shah_imran_sust@outlook.com',)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-02-23 21:41:26,703 Sending Finished 41bcf8df-e751-4c86-8c7d-d3f360f8abc9
+2022-02-23 21:42:00,081 
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 2
+ Delay: 0 - 1
+ Campaign ID: 387c62d7-eb61-4b13-8c70-23dfe28212ff
+ Add Custom Hostname: False
+2022-02-23 21:42:00,104 
+Starting Thread : Name - lorettabowers06@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shah_imran_sust@outlook.com"}, "flag": {"0": 0}}
+2022-02-23 21:42:06,274 Sent - lorettabowers06@gmail.com shah_imran_sust@outlook.com
+2022-02-23 21:42:07,090 Error at Database.add_to_cached_targets() - (sqlite3.IntegrityError) UNIQUE constraint failed: cached_targets.email
+[SQL: INSERT INTO cached_targets (email) VALUES (?)]
+[parameters: ('shah_imran_sust@outlook.com',)]
+(Background on this error at: https://sqlalche.me/e/14/gkpj)
+2022-02-23 21:42:07,112 Sending Finished 387c62d7-eb61-4b13-8c70-23dfe28212ff

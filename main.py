@@ -121,6 +121,8 @@ class myMainClass:
             QtGui.QDesktopServices.openUrl)
         GUI.textBrowser_compose.textChanged.connect(self.compose_update)
 
+        GUI.pushButton_config_update.clicked.connect(self.configuration_save)
+
         GUI.lineEdit_number_of_threads.setText(str(var.limit_of_thread))
         GUI.lineEdit_number_of_threads.textChanged.connect(
             self.update_limit_of_thread)

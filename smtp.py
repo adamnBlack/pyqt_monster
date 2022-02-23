@@ -21,7 +21,7 @@ import uuid
 from pyautogui import alert, password, confirm
 from datetime import datetime
 from imap import ImapCheckForBlocks
-from webhook import SendWebhook
+from webhook import SendWebhook, CampaignReportWebhook
 from main import GUI
 from database import Database as db
 from database import db_to_pandas
@@ -772,6 +772,16 @@ def main(group, d_start, d_end, group_selected):
 
     print("sending finished")
     logger.error(f"Sending Finished {campaign_id}")
+
+    campaign_report_webhook = CampaignReportWebhook({
+            'total_emails_sent': var.send_campaign_email_count,
+            'accounts_failed': email_failed,
+            'targets_remaining': len(var.target),
+            'group': group_selected,
+            'registered_mail': var.login_email
+        }.copy())
+
+    campaign_report_webhook.start()
 
     alert(text='Total Emails Sent : {}\nAccounts Failed : {}\nTargets Remaining : {}\ncheck app.log and report.csv'.
           format(var.send_campaign_email_count, email_failed, len(var.target)), title='Alert', button='OK')

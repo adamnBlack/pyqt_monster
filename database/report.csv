@@ -186,3 +186,11 @@ TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
 ,lorettabowers06@gmail.com,Socket error: 0x02: Connection not allowed by ruleset,b00dd6d3-d251-4dd5-9c39-281e11c8c14d,2021-12-27
 TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
 ,lorettabowers06@gmail.com,"(535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials l7sm18848267wms.1 - gsmtp')",202eee37-96a4-4889-8205-6b80b8dfd7f9,2021-12-28
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+shah_imran_sust@outlook.com,lorettabowers06@gmail.com,sent,3615291b-8f00-41b3-b60a-cd42c7951453,2022-02-16
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+shah_imran_sust@outlook.com,lorettabowers06@gmail.com,sent,13e1e5d5-e0cc-4548-b47e-6ef0c8c56cc7,2022-02-16
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+shah_imran_sust@outlook.com,lorettabowers06@gmail.com,sent,41bcf8df-e751-4c86-8c7d-d3f360f8abc9,2022-02-23
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+shah_imran_sust@outlook.com,lorettabowers06@gmail.com,sent,387c62d7-eb61-4b13-8c70-23dfe28212ff,2022-02-23

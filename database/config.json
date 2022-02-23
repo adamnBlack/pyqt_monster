@@ -4,15 +4,15 @@
         "num_emails_per_address": 1,
         "delay_between_emails": "0-1",
         "limit_of_thread": 100,
-        "compose_email_subject": "Personal fsda",
-        "compose_email_body": "Hey,what's up? [4] dsd",
+        "compose_email_subject": "Personal fsdafgsdfgsdfdfgsdfdfgsdf ",
+        "compose_email_body": "Hey,what's up? [4] dsdfczxcvzcvxcvzxcvzcxvzcxdfgsdfgsdfdfgsdfgfdgsdf",
         "compose_email_body_html": "<html>\n    <body>\n        <p>{Hey|Hi|Hello} [TONAME],<br>\n        I'm reaching out to you because i {noticed|came across|found|visited} you website {the other day|yesterday} and thought you'd be interested in a {collaboration|partnership}.<br>\n        {Hope you don't mind my outreach!|Looking forward to your replya!}<br>\n        </p>\n    </body>\n</html>\n",
         "login_email": "ss@gmail.com",
         "tracking": {
             "analytics_account": "UA-33237782-1",
             "campaign_name": "Teas fdsg 3442_"
         },
-        "webhook_link": "https://webhook.site/9d38fc37-b984-4605-82c9-a5fab883bf50",
+        "webhook_link": "https://webhook.site/a39236eb-211f-4556-9e8d-7a48edbc5eba",
         "check_for_blocks": false,
         "target_blacklist": [
             "gmail"
