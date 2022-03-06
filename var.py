@@ -12,8 +12,7 @@ import logging
 import sys, os
 
 
-version = '2.2r'
-base_dir = "database"
+
 
 
 def override_where():
@@ -57,30 +56,29 @@ class SingleInstance:
         if self.mutex:
             CloseHandle(self.mutex)
 
+try:
+    def resource_path(relative_path):
+        if hasattr(sys, '_MEIPASS'):
+            return os.path.join(sys._MEIPASS, relative_path)
+        return os.path.join(os.path.abspath("."), relative_path)
 
 
-# admin password = hkHK#j4@jh#@
-# email='orders@gmonster.net'
+    # icon path
+    mail_unread_icon = resource_path("icons/email.ico")
+    mail_read_icon = resource_path("icons/mail.ico")
 
-db_file_loading_config = {
-    "group_a": True,
-    "group_b": True,
-    "target": True
-}
+    # webhook_fired = resource_path("icons/webhook_fired.png")
+    # webhook_not_fired = resource_path("icons/webhook_not_fired.png")
 
-add_custom_hostname = False
+    # delete_icon = resource_path("icons/bin.svg")
+    # deleted_icon = resource_path("icons/delete.svg")
+    # icon path
 
-email_failed = 0
-total_email_downloaded = 0
+except Exception as e:
+    print(e)
 
-sign_up_label = ""
-sign_in_label = ""
-signed_in = False
-
-check_for_blocks = False
-email_tracking_state = False
-
-rid_list = []
+version = '2.2r'
+base_dir = "database"
 
 # Create and configure logger
 logging.basicConfig(filename=base_dir + "/app.log",
@@ -109,26 +107,28 @@ compose_email_body_html = """\
 """
 body_type = "Normal"
 
-try:
-    def resource_path(relative_path):
-        if hasattr(sys, '_MEIPASS'):
-            return os.path.join(sys._MEIPASS, relative_path)
-        return os.path.join(os.path.abspath("."), relative_path)
+# admin password = hkHK#j4@jh#@
+# email='orders@gmonster.net'
 
+db_file_loading_config = {
+    "group_a": True,
+    "group_b": True,
+    "target": True
+}
 
-    # icon path
-    mail_unread_icon = resource_path("icons/email.ico")
-    mail_read_icon = resource_path("icons/mail.ico")
+add_custom_hostname = False
 
-    # webhook_fired = resource_path("icons/webhook_fired.png")
-    # webhook_not_fired = resource_path("icons/webhook_not_fired.png")
+email_failed = 0
+total_email_downloaded = 0
 
-    # delete_icon = resource_path("icons/bin.svg")
-    # deleted_icon = resource_path("icons/delete.svg")
-    # icon path
+sign_up_label = ""
+sign_in_label = ""
+signed_in = False
 
-except Exception as e:
-    print(e)
+check_for_blocks = False
+email_tracking_state = False
+
+rid_list = []
 
 files = []
 
@@ -172,32 +172,6 @@ button_style = """QPushButton {
     }
 """
 
-# button_style = """QPushButton {
-#     color: rgb(255, 255, 255);
-#     border: 1px solid #555;
-#     border-radius: 3px;
-#     border-style: Solid;
-#     background: qradialgradient(
-#         cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-#         radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
-#         );
-#     padding: 5px 28px;
-#     }
-
-# QPushButton:hover {
-#     background: qradialgradient(
-#         cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-#         radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
-#     }
-
-# QPushButton:pressed {
-#     border-style: inset;
-#     background: qradialgradient(
-#         cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
-#         radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
-#         );
-#     }"""
-
 date = "8/24/2020"
 num_emails_per_address = 0
 delay_between_emails = ""
@@ -233,6 +207,12 @@ try:
     tracking = config['tracking']
     webhook_link = config['webhook_link']
     check_for_blocks = config['check_for_blocks']
+    remove_email_from_target = config['remove_email_from_target']
+    add_custom_hostname = config['custom_hostname']
+    enable_webhook_status = config['enable_webhook']
+    email_tracking_state = config['enable_email_tracking']
+    campaign_group = config['campaign_group']
+    body_type = config['body_type']
     target_blacklist = config['target_blacklist']
     inbox_blacklist = config['inbox_blacklist']
     responses_webhook_enabled = config['responses_webhook_enabled']

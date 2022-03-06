@@ -77,6 +77,12 @@ def update_config_json():
                 "tracking": var.tracking,
                 "webhook_link": var.webhook_link,
                 "check_for_blocks": var.check_for_blocks,
+                "remove_email_from_target": var.remove_email_from_target,
+                "enable_webhook": var.enable_webhook_status,
+                "enable_email_tracking": var.email_tracking_state,
+                "custom_hostname": var.add_custom_hostname,
+                "campaign_group": var.campaign_group,
+                "body_type": var.body_type,
                 "target_blacklist": var.target_blacklist,
                 "inbox_blacklist": var.inbox_blacklist,
                 "responses_webhook_enabled": var.responses_webhook_enabled

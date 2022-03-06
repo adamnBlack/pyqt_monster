@@ -788,3 +788,9 @@ Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"},
 [parameters: ('shah_imran_sust@outlook.com',)]
 (Background on this error at: https://sqlalche.me/e/14/gkpj)
 2022-02-23 21:42:07,112 Sending Finished 387c62d7-eb61-4b13-8c70-23dfe28212ff
+2022-02-28 13:31:56,277 File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2022-02-28 13:32:24,585 Error at downloading email - Daphne.Boone2002@gmail.com - b'[AUTHENTICATIONFAILED] Invalid credentials (Failure)'
+2022-02-28 13:32:25,754 Error at downloading email - Elva.Lynn1987@gmail.com - b'[AUTHENTICATIONFAILED] Invalid credentials (Failure)'
+2022-02-28 13:32:52,879 Error at downloading email - lorettabowers06@gmail.com - Socket error: 0x02: Connection not allowed by ruleset
+2022-02-28 13:32:55,115 Error at downloading email - monahantoshiko226@gmail.com - Error connecting to SOCKS5 proxy 23.154.81.120:38986: [WinError 10061] No connection could be made because the target machine actively refused it
+2022-02-28 13:32:55,116 Error at downloading email - elnoraschmitt426@gmail.com - Error connecting to SOCKS5 proxy 23.154.81.120:38986: [WinError 10061] No connection could be made because the target machine actively refused it

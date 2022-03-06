@@ -67,11 +67,14 @@ class myMainClass:
         GUI.lineEdit_webhook_link.setText(str(var.webhook_link))
         GUI.lineEdit_target_blacklist.setText(",".join(var.target_blacklist))
         GUI.lineEdit_inbox_blacklist.setText(",".join(var.inbox_blacklist))
+
+        # campaign page
         GUI.lineEdit_subject.setText(var.compose_email_subject)
 
         GUI.lineEdit_num_per_address.setText(str(var.num_emails_per_address))
         GUI.lineEdit_delay_between_emails.setText(
             str(var.delay_between_emails))
+
         GUI.label_version.setText("VERSION: {}".format(var.version))
 
         self.time_interval_sub_check = 3600
@@ -100,13 +103,45 @@ class myMainClass:
         GUI.textBrowser_compose.setPlainText(var.compose_email_body)
 
         # set the state of checkboxes
+        GUI.checkBox_remove_email_from_target.setChecked(var.remove_email_from_target)
+        GUI.checkBox_add_custom_hostname.setChecked(var.add_custom_hostname)
+        GUI.checkBox_enable_webhook.setChecked(var.enable_webhook_status)
+        GUI.checkBox_email_tracking.setChecked(var.email_tracking_state)
         GUI.checkBox_check_for_blocks.setChecked(var.check_for_blocks)
         GUI.checkBox_responses_webhook.setChecked(var.responses_webhook_enabled)
-        GUI.checkBox_responses_webhook.stateChanged.connect(self.update_responses_webhook_enabled)
+
+        GUI.lineEdit_delay_between_emails.setText(var.delay_between_emails)
+
+        if var.campaign_group == "group_a":
+            GUI.radioButton_campaign_group_a.setChecked(True)
+        else:
+            GUI.radioButton_campaign_group_b.setChecked(True)
+
+        GUI.checkBox_responses_webhook.stateChanged.connect(self.update_checkbox_status)
+        GUI.checkBox_check_for_blocks.stateChanged.connect(
+            self.update_checkbox_status)
+        GUI.checkBox_email_tracking.stateChanged.connect(
+            self.update_checkbox_status)
+        GUI.checkBox_enable_webhook.stateChanged.connect(self.update_checkbox_status)
+        GUI.checkBox_remove_email_from_target.stateChanged.connect(
+            self.update_checkbox_status)
+        GUI.checkBox_add_custom_hostname.stateChanged.connect(
+            self.update_checkbox_status)
+
         GUI.radioButton_html.clicked.connect(self.compose_change)
         GUI.radioButton_plain_text.clicked.connect(self.compose_change)
+
+        if var.body_type == "Html":
+            GUI.radioButton_html.setChecked(True)
+        else:
+            GUI.radioButton_plain_text.setChecked(True)
+
         GUI.checkBox_compose_preview.clicked.connect(self.compose_preview)
         GUI.lineEdit_subject.textChanged.connect(self.compose_subject_update)
+        GUI.lineEdit_num_per_address.editingFinished.connect(self.update_num_per_address)
+        GUI.lineEdit_delay_between_emails.editingFinished.connect(self.update_delay_between_emails)
+        GUI.radioButton_campaign_group_a.clicked.connect(self.update_campaign_group)
+        GUI.radioButton_campaign_group_b.clicked.connect(self.update_campaign_group)
 
         GUI.pushButton_attachments.clicked.connect(self.openFileNamesDialog)
         GUI.pushButton_attachments_clear.clicked.connect(self.clear_files)
@@ -137,8 +172,6 @@ class myMainClass:
                daemon=True, args=("dialog",)).start()
 
         GUI.comboBox_date_sort.currentTextChanged.connect(self.date_sort)
-        GUI.checkBox_check_for_blocks.stateChanged.connect(
-            self.change_check_for_blocks_state)
         GUI.lineEdit_email_tracking_analytics_account.textChanged.connect(
             self.update_email_tracking_link)
         GUI.lineEdit_email_tracking_campaign_name.textChanged.connect(
@@ -146,11 +179,6 @@ class myMainClass:
 
         GUI.pushButton_configuration_save.clicked.connect(
             self.configuration_save)
-        GUI.checkBox_email_tracking.stateChanged.connect(
-            self.email_tracking_state_update)
-        GUI.checkBox_enable_webhook.stateChanged.connect(self.enable_webhook)
-        GUI.checkBox_remove_email_from_target.stateChanged.connect(
-            self.remove_email_from_target)
 
         GUI.lineEdit_webhook_link.textChanged.connect(self.update_webhook_link)
 
@@ -169,9 +197,6 @@ class myMainClass:
         GUI.checkBox_database_target.stateChanged.connect(
             self.update_db_file_upload_config)
 
-        GUI.checkBox_add_custom_hostname.stateChanged.connect(
-            self.update_checkbox_status)
-
         GUI.pushButton_fire_inbox_webhook.clicked.connect(
             self.start_inbox_stream_thread)
 
@@ -185,6 +210,27 @@ class myMainClass:
         GUI.pushButton_clear_cached_targets.clicked.connect(
             lambda: threading.Thread(target=self.clear_cached_targets, daemon=True, args=[]).start()
         )
+
+    def update_delay_between_emails(self):
+        try:
+            delay_between_emails = GUI.lineEdit_delay_between_emails.text()
+            delay_start = int(delay_between_emails.split("-")[0].strip())
+            delay_end = int(delay_between_emails.split("-")[1].strip())
+            var.delay_between_emails = delay_between_emails
+        except:
+            self.logger.error(traceback.format_exc())
+
+    def update_campaign_group(self):
+        if GUI.radioButton_campaign_group_a.isChecked():
+            var.campaign_group = "group_a"
+        else:
+            var.campaign_group = "group_b"
+
+    def update_num_per_address(self):
+        try:
+            var.num_emails_per_address = int(GUI.lineEdit_num_per_address.text())
+        except:
+            self.logger.error(traceback.format_exc())
 
     def compose_subject_update(self, value: str):
         var.compose_email_subject = value
@@ -210,11 +256,13 @@ class myMainClass:
             var.inbox_blacklist = list()
         print(var.inbox_blacklist)
 
-    def update_responses_webhook_enabled(self):
-        var.responses_webhook_enabled = GUI.checkBox_responses_webhook.isChecked()
-
     def update_checkbox_status(self):
         var.add_custom_hostname = GUI.checkBox_add_custom_hostname.isChecked()
+        var.responses_webhook_enabled = GUI.checkBox_responses_webhook.isChecked()
+        var.enable_webhook_status = GUI.checkBox_enable_webhook.isChecked()
+        var.remove_email_from_target = GUI.checkBox_remove_email_from_target.isChecked()
+        var.check_for_blocks = GUI.checkBox_check_for_blocks.isChecked()
+        var.email_tracking_state = GUI.checkBox_email_tracking.isChecked()
 
     def update_db_file_upload_config(self):
         var.db_file_loading_config['group_a'] = \
@@ -233,18 +281,12 @@ class myMainClass:
         menu.addAction("Copy")
         menu.exec_(GUI.tableView_database.viewport().mapToGlobal(pos))
 
-    def remove_email_from_target(self, temp):
-        var.remove_email_from_target = GUI.checkBox_remove_email_from_target.isChecked()
-
     def update_webhook_link(self, text):
         var.webhook_link = str(text)
 
     def start_inbox_stream_thread(self):
         GUI.tabWidget.setCurrentIndex(0)
         Thread(target=start_inbox_stream, daemon=True).start()
-
-    def enable_webhook(self):
-        var.enable_webhook_status = GUI.checkBox_enable_webhook.isChecked()
 
     def configuration_save(self):
         Thread(target=update_config_json, daemon=True).start()
@@ -259,12 +301,6 @@ class myMainClass:
         else:
             GUI.lineEdit_email_tracking_campaign_name.setText(
                 str(var.tracking['campaign_name']))
-
-    def email_tracking_state_update(self):
-        var.email_tracking_state = GUI.checkBox_email_tracking.isChecked()
-
-    def change_check_for_blocks_state(self):
-        var.check_for_blocks = GUI.checkBox_check_for_blocks.isChecked()
 
     def run_command(self):
         try:
@@ -310,7 +346,7 @@ class myMainClass:
             var.limit_of_thread = int(GUI.lineEdit_number_of_threads.text())
         except Exception as e:
             GUI.lineEdit_number_of_threads.setText(str(var.limit_of_thread))
-            alert(text="Must be number", title='Alert', button='OK')
+            alert(text="Must be a number", title='Alert', button='OK')
 
     def check_for_subscription(self):
         global quit_application
