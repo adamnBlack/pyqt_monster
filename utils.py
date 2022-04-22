@@ -1,5 +1,6 @@
 import re
 import var
+from var import logger
 import random
 import json
 from pyautogui import alert
@@ -85,7 +86,9 @@ def update_config_json():
                 "body_type": var.body_type,
                 "target_blacklist": var.target_blacklist,
                 "inbox_blacklist": var.inbox_blacklist,
-                "responses_webhook_enabled": var.responses_webhook_enabled
+                "responses_webhook_enabled": var.responses_webhook_enabled,
+                "followUp_enabled": var.followUp_enabled,
+                "followUp_days": var.followUp_days
             }
         }
         with open(var.base_dir+'/config.json', 'w') as json_file:

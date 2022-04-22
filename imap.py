@@ -1,5 +1,5 @@
 import queue
-
+import traceback
 import proxy_imaplib
 import socks
 import email
@@ -12,6 +12,7 @@ import codecs
 from utils import difference_between_time
 import webhook
 from database import Database as DB
+from var import logger
 
 
 def utc_to_local(utc_dt):
@@ -29,9 +30,6 @@ def slashescape(err):
 
 
 codecs.register_error('slashescape', slashescape)
-
-logger = var.logging
-logger.getLogger("requests").setLevel(var.logging.WARNING)
 
 
 def check_if_blacklisted(input_string: str):
@@ -72,14 +70,12 @@ def set_read_flag(index):
         imap.logout()
         print("Set read flag")
     except Exception as e:
-        print("Error at set_read_flag : {}".format(e))
         logger.error("Error at set_read_flag - {} - {}".format(imap_user, e))
 
 
 def delete_email(group):
     try:
         var.thread_open += 1
-        global logger
         print("group name ", group.iloc[0]['user'])
         print(len(var.inbox_data))
 
@@ -123,6 +119,7 @@ def delete_email(group):
 
 class ImapBase:
     def __init__(self, **kwargs):
+        super().__init__()
         self.proxy_host = kwargs["proxy_host"]
         self.proxy_port = kwargs["proxy_port"]
         self.proxy_type = kwargs["proxy_type"]
@@ -133,7 +130,6 @@ class ImapBase:
         self.imap_user = kwargs["imap_user"]
         self.imap_pass = kwargs["imap_pass"]
 
-        global logger
         self.logger = logger
 
     def login(self):
@@ -220,6 +216,47 @@ class ImapCheckForBlocks(ImapBase):
             return False
 
 
+class ImapFollowUpCheck(ImapBase, threading.Thread):
+    followup_required = list()
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.setDaemon(True)
+
+        self.campaign_time: datetime = kwargs['campaign_time']
+        self.target_info = kwargs['target_info']
+        self.kwargs = kwargs
+
+    def run(self):
+        try:
+            logger.error(f"Starting ImapFollowUpCheck: {self.imap_user}")
+            imap = self.login()
+            imap.select("Inbox", readonly=True)
+
+            date = self.campaign_time - timedelta(days=1)
+
+            for item in self.target_info:
+                logger.error(f"Looking for ImapFollowUpCheck: {item['target_email']}")
+                tmp, data = imap.search(
+                    None,
+                    f'(SINCE "{date.strftime("%d-%b-%Y")}"'
+                    f' FROM "{item["target_email"]}")')
+
+                if len(data[0].split()) > 0:
+                    self.kwargs['target_info'].remove(self.target_info)
+
+            if len(self.kwwargs['target_info']) > 0:
+                self.followup_required.append(self.kwargs)
+            else:
+                logger.error(f"ImapFollowUpCheck: {self.imap_user} "
+                             f"MSG: No Followup needed ")
+
+            logger.error(f"Finishing ImapFollowUpCheck: {self.imap_user}")
+
+        except Exception as e:
+            logger.error(f"Error at ImapFollowUpCheck: {e}\n{traceback.format_exc()}")
+
+
 class IMAP_(threading.Thread):
     def __init__(self, threadID, name, proxy_host, proxy_port, proxy_type, proxy_user, proxy_pass, imap_user, imap_pass,
                  FIRSTFROMNAME, LASTFROMNAME, targets, responses_webhook_enabled):
@@ -238,7 +275,6 @@ class IMAP_(threading.Thread):
         self.imap_pass = imap_pass
         self.FIRSTFROMNAME = FIRSTFROMNAME
         self.LASTFROMNAME = LASTFROMNAME
-        global logger
         self.logger = logger
         self.targets = targets
         self.responses_webhook_enabled = responses_webhook_enabled

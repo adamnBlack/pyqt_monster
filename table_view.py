@@ -1,6 +1,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt, pyqtSignal, QObject
 import var
+from var import logger
 import database
 
 
@@ -9,8 +10,7 @@ class TableModel(QtCore.QAbstractTableModel):
     def __init__(self, data):
         super().__init__()
         self._data = data
-        self.logger = var.logging
-        self.logger.getLogger("requests").setLevel(var.logging.WARNING)
+        self.logger = logger
 
     def data(self, index, role):
         if role == Qt.DisplayRole:

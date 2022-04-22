@@ -1,6 +1,7 @@
 from PyQt5 import QtCore, QtGui
 from threading import Thread
 import var
+from var import logger
 from p_gui import Ui_Dialog
 import os
 import requests
@@ -152,7 +153,7 @@ def thread_starter():
 
     for group_name, df_group in temp_df:
 
-        if var.stop_delete == True:
+        if var.stop_delete:
             break
 
         while var.thread_open >= var.limit_of_thread and var.stop_delete == False:

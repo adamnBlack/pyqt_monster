@@ -6,13 +6,11 @@ from win32event import CreateMutex
 from win32api import CloseHandle, GetLastError
 from winerror import ERROR_ALREADY_EXISTS
 from pyautogui import alert
-import logging
+from apscheduler.schedulers.background import BackgroundScheduler
+from logger import logger
 
 # pd.set_option('display.max_colwidth',1000)
 import sys, os
-
-
-
 
 
 def override_where():
@@ -81,10 +79,10 @@ version = '2.2r'
 base_dir = "database"
 
 # Create and configure logger
-logging.basicConfig(filename=base_dir + "/app.log",
-                    format='%(asctime)s %(message)s',
-                    filemode='a')
-logging.getLogger("requests").setLevel(logging.WARNING)
+# logging.basicConfig(filename=base_dir + "/app.log",
+#                     format='%(asctime)s %(message)s',
+#                     filemode='a')
+#
 
 compose_email_subject = "Just a friendly outreach about [3]"
 compose_email_body = '''{Hey|Hi|Hello} [TONAME],
@@ -109,6 +107,9 @@ body_type = "Normal"
 
 # admin password = hkHK#j4@jh#@
 # email='orders@gmonster.net'
+
+scheduler = BackgroundScheduler(logger=logger)
+scheduler.start()
 
 db_file_loading_config = {
     "group_a": True,
@@ -216,6 +217,8 @@ try:
     target_blacklist = config['target_blacklist']
     inbox_blacklist = config['inbox_blacklist']
     responses_webhook_enabled = config['responses_webhook_enabled']
+    followUp_enabled = config['followUp_enabled']
+    followUp_days = config['followUp_days']
 except Exception as e:
     print("Exception occurred at config loading : {}".format(e))
 

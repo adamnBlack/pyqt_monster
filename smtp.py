@@ -1,3 +1,5 @@
+import pandas as pd
+
 from proxy_smtplib import SMTP
 from email.mime.multipart import MIMEMultipart
 from email.header import Header
@@ -9,36 +11,32 @@ from email import encoders
 from pathlib import Path
 import socks
 import threading
-import var
 import time
 import utils
 import smtplib
 import csv
-import queue
 import random
 import json
 import uuid
 from pyautogui import alert, password, confirm
-from datetime import datetime
-from imap import ImapCheckForBlocks
+from datetime import datetime, timedelta
+from imap import ImapCheckForBlocks, ImapFollowUpCheck
 from webhook import SendWebhook, CampaignReportWebhook
 from main import GUI
-from database import Database as db
+from database import Database as DB
 from database import db_to_pandas
 from collections import defaultdict
 from bs4 import BeautifulSoup
 import traceback
 import queue
+import var
+from var import logger
 
 # defaultdict accept a function. Whatever that
 # functions return is default value for non-existent keys
 success_sent = defaultdict(lambda: False)
-
+logger = logger
 email_failed = 0
-
-logger = var.logging
-logger.getLogger("requests").setLevel(var.logging.WARNING)
-
 sent_q = queue.Queue()
 
 
@@ -272,8 +270,11 @@ def reply():
 
 
 class SMTP_(threading.Thread):
+    followup_queue = queue.Queue()
+
     def __init__(self, threadID, name, proxy_host, proxy_port, proxy_user,
-                 proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME, target, d_start, d_end, campaign_id, cached_targets):
+                 proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME, target, d_start, d_end, campaign_id, cached_targets,
+                 followup_enabled):
         threading.Thread.__init__(self)
         self.threadID = threadID
         self.name = name
@@ -287,14 +288,15 @@ class SMTP_(threading.Thread):
         self.FIRSTFROMNAME = FIRSTFROMNAME
         self.LASTFROMNAME = LASTFROMNAME
         self.target = target
-        print("Length - {} {}".format(len(self.target), self.user))
-        global logger
         self.logger = logger
+
+        logger.info("Length - {} {}".format(len(self.target), self.user))
         self.d_start = d_start
         self.d_end = d_end
         self.campaign_id = campaign_id
         self.local_hostname = None
         self.cached_targets = cached_targets
+        self.followup_enabled = followup_enabled
 
     def login(self):
         try:
@@ -466,6 +468,14 @@ class SMTP_(threading.Thread):
                     }
                     var.send_report.put(t_dict.copy())
 
+                    if self.followup_enabled:
+                        self.followup_queue.put({
+                            "group_email": self.user,
+                            "target_email": item['EMAIL'],
+                            "campaign_id": self.campaign_id,
+                            "email_subject": msg["Subject"]
+                        })
+
                     if var.enable_webhook_status:
                         t_dict = {
                             "target": item['EMAIL'],
@@ -480,7 +490,7 @@ class SMTP_(threading.Thread):
                     var.command_q.put("self.update_compose_progressbar()")
 
                     if var.remove_email_from_target:
-                        # target = db()
+                        # target = DB()
                         # result = target.remove(table="targets", id=item['ID'])
                         remove_target_q.put(item['ID'])
 
@@ -503,6 +513,9 @@ class SMTP_(threading.Thread):
                             print(f"Found no block messages : {self.name}")
                             # self.logger.error(
                             #     f"Found no block messages : {self.name} {str(datetime.now())}")
+
+                        # this is where you might want to anything that you want every campagin threads to do
+
 
                     server.quit()
 
@@ -539,7 +552,7 @@ class RemoveTarget(threading.Thread):
         self.setDaemon(True)
 
         self.close = False
-        self.target = db()
+        self.target = DB()
 
     def run(self):
         global remove_target_q
@@ -570,7 +583,7 @@ class AddCachedTargets(threading.Thread):
         self.setDaemon(True)
 
         self._close = False
-        self.db = db()
+        self.db = DB()
         self.targets_q = queue.Queue()
 
     def run(self) -> None:
@@ -596,8 +609,31 @@ class AddCachedTargets(threading.Thread):
         self._close = value
 
 
+class AddFollowUps:
+    def __init__(self, followup_queue: queue.Queue, campaign_time: datetime):
+        self.db: DB() = DB()
+        self.followup_queue = followup_queue
+        self.campaign_time = campaign_time
+
+    def send(self) -> None:
+        logger.info(f"{self.__class__.__name__} starting...")
+
+        followups = []
+        while not self.followup_queue.empty():
+            followup = self.followup_queue.get()
+            followup['campaign_time'] = self.campaign_time
+            followups.append(followup.copy())
+
+        result = self.db.add_follow_up(followups)
+
+        if result:
+            logger.info(f"{self.__class__.__name__} successful")
+        else:
+            logger.info(f"{self.__class__.__name__} unsuccessful")
+
+
 def main(group, d_start, d_end, group_selected):
-    global sent_q, email_failed, logger, success_sent, remove_target_q
+    global sent_q, email_failed, success_sent, remove_target_q
 
     success_sent.clear()
 
@@ -607,7 +643,9 @@ def main(group, d_start, d_end, group_selected):
     email_failed = 0
     sent_q = queue.Queue()
     target = var.target.copy()
-    target = target[target['EMAIL'] != ""] # it removes the rows that doesn't any email address
+
+    # it removes the rows that doesn't any email address
+    target = target[target['EMAIL'] != ""]
 
     target.insert(9, 'flag', '')
     target['flag'] = 0
@@ -618,7 +656,7 @@ def main(group, d_start, d_end, group_selected):
     target_len = len(target)
     group_len = len(group)
 
-    campaign_id = uuid.uuid4()
+    campaign_id = str(uuid.uuid4())
 
     logger.error(f"\n Starting Send Campaign : "
                  + f"\n Target Removal - {var.remove_email_from_target}"
@@ -650,6 +688,12 @@ def main(group, d_start, d_end, group_selected):
 
     add_cached_targets = AddCachedTargets()
     add_cached_targets.start()
+
+    followup_enabled = var.followUp_enabled
+    campaign_time = datetime.utcnow()
+
+    with SMTP_.followup_queue.mutex:
+        SMTP_.followup_queue.queue.clear()
 
     while var.send_campaign_email_count < target_len and group['flag'].sum() < group_len:
         target = target[target['flag'] == 0]
@@ -691,21 +735,17 @@ def main(group, d_start, d_end, group_selected):
 
                 group.at[index, 'flag'] = 1
 
-                print(index, name, target.loc[start:end], start, end, len(
-                    target.loc[start:end]), d_start, d_end)
-
                 logger.error(f"\nStarting Thread : Name - {name}"
                              + f"\nTargets - {json.dumps(target.loc[start:end].to_dict())}")
 
                 SMTP_(index, name, proxy_host, proxy_port, proxy_user,
                       proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME,
-                      target.loc[start:end].copy(), d_start, d_end, campaign_id, add_cached_targets).start()
+                      target.loc[start:end].copy(), d_start, d_end, campaign_id, add_cached_targets,
+                      followup_enabled).start()
 
                 while var.thread_open_campaign >= var.limit_of_thread and var.stop_send_campaign == False:
                     time.sleep(1)
             except Exception as e:
-                print("Error at smtp thread opening {} - {} - {}".format(
-                    campaign_id, user, e))
                 logger.error("Error at smtp thread opening {} - {} - {}".format(
                     campaign_id, user, e))
 
@@ -742,11 +782,10 @@ def main(group, d_start, d_end, group_selected):
                 temp_dict = var.send_report.get()
                 writer.writerow(temp_dict)
     except Exception as e:
-        print('Error while saving report - {}'.format(e))
         logger.error('Error while saving report - {}'.format(e))
 
     if var.remove_email_from_target:
-        print("removing email from target...")
+        logger.info("removing email from target...")
 
         while not remove_target_q.empty():
             time.sleep(1)
@@ -760,6 +799,15 @@ def main(group, d_start, d_end, group_selected):
 
     add_cached_targets.close = True
 
+    if followup_enabled:
+        add_follow_ups = AddFollowUps(SMTP_.followup_queue, campaign_time)
+        add_follow_ups.send()
+
+        var.scheduler.add_job(follow_up, 'date',
+                              args=(campaign_id,),
+                              next_run_time=datetime.now()+timedelta(seconds=7))
+        logger.error(f"FollowUp scheduled: {campaign_id}")
+
     var.email_failed = email_failed
 
     var.command_q.put("GUI.pushButton_send.setEnabled(True)")
@@ -770,7 +818,6 @@ def main(group, d_start, d_end, group_selected):
     var.command_q.put("self.compose_config_visibility(on=True)")
     var.send_campaign_run_status = False
 
-    print("sending finished")
     logger.error(f"Sending Finished {campaign_id}")
 
     campaign_report_webhook = CampaignReportWebhook({
@@ -785,3 +832,60 @@ def main(group, d_start, d_end, group_selected):
 
     alert(text='Total Emails Sent : {}\nAccounts Failed : {}\nTargets Remaining : {}\ncheck app.log and report.csv'.
           format(var.send_campaign_email_count, email_failed, len(var.target)), title='Alert', button='OK')
+
+
+def follow_up(campaign_id: str):
+    logger.info(f"Starting Followup process, Campaign Id - {campaign_id}")
+    db: DB = DB()
+    followups = db.get_all_followup(campaign_id)
+    followups_df = pd.DataFrame(followups)
+    followup_group_df = followups_df.groupby('group_email')
+
+    for group_name, df_group in followup_group_df:
+        groups = [var.group_a, var.group_b]
+        groups = pd.concat(groups)
+        groups.rename(columns={
+            'EMAIL': 'imap_user',
+            'EMAIL_PASS': 'imap_pass',
+            'PROXY_USER': 'proxy_user',
+            'PROXY_PASS': 'proxy_pass'
+        }, inplace=True)
+
+        if group_name in groups['imap_user'].values:
+            index = groups.loc[groups['imap_user'] == group_name].index
+            groups_dict = groups.loc[index].to_dict('records')[0]
+            groups_dict['target_info'] = []
+
+            for row_index, row in df_group.iterrows():
+                groups_dict['campaign_time'] = row['campaign_time']
+
+                target = var.target.copy()
+                target.rename(columns={
+                    'EMAIL': 'target_email'
+                })
+                index = target.loc[target['imap_user'] == row['target_email']].index
+                target_dict = target.loc[index].to_dict('records')[0]
+                target_dict['email_subject'] = row['email_subject']
+
+                groups_dict['target_info'] = groups_dict['target_info'] + [target_dict.copy()]
+
+                if groups_dict["PROXY:PORT"] != " ":
+                    groups_dict['proxy_host'] = groups_dict["PROXY:PORT"].split(':')[0]
+                    groups_dict['proxy_port'] = int(groups_dict["PROXY:PORT"].split(':')[1])
+                else:
+                    groups_dict['proxy_host'] = ''
+                    groups_dict['proxy_port'] = ''
+
+                groups_dict['proxy_type'] = socks.PROXY_TYPE_SOCKS5
+
+            imap_followup_check_thread = ImapFollowUpCheck(**groups_dict)
+            imap_followup_check_thread.start()
+
+
+            # then i have to get group info
+            # then put it into a func
+        else:
+            pass
+
+    logger.error(f"Finishing Followup processes, Campaign Id - {campaign_id}")
+

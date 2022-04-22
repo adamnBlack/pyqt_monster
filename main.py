@@ -45,8 +45,7 @@ class myMainClass:
         GUI.tableView_database.setItemDelegate(delegate)
 
         # all types of initialization
-        self.logger = var.logging
-        self.logger.getLogger("requests").setLevel(var.logging.WARNING)
+        self.logger = var.logger
 
         # self.font = QtGui.QFont()
         # self.font.setFamily("Calibri")
@@ -109,7 +108,9 @@ class myMainClass:
         GUI.checkBox_email_tracking.setChecked(var.email_tracking_state)
         GUI.checkBox_check_for_blocks.setChecked(var.check_for_blocks)
         GUI.checkBox_responses_webhook.setChecked(var.responses_webhook_enabled)
+        GUI.checkBox_configuration_followup_enabled.setChecked(var.followUp_enabled)
 
+        GUI.lineEdit_configuration_followup_days.setText(str(var.followUp_days))
         GUI.lineEdit_delay_between_emails.setText(var.delay_between_emails)
 
         if var.campaign_group == "group_a":
@@ -117,16 +118,27 @@ class myMainClass:
         else:
             GUI.radioButton_campaign_group_b.setChecked(True)
 
-        GUI.checkBox_responses_webhook.stateChanged.connect(self.update_checkbox_status)
+        GUI.checkBox_responses_webhook.stateChanged.connect(
+            self.update_checkbox_status
+        )
         GUI.checkBox_check_for_blocks.stateChanged.connect(
-            self.update_checkbox_status)
+            self.update_checkbox_status
+        )
         GUI.checkBox_email_tracking.stateChanged.connect(
-            self.update_checkbox_status)
-        GUI.checkBox_enable_webhook.stateChanged.connect(self.update_checkbox_status)
+            self.update_checkbox_status
+        )
+        GUI.checkBox_enable_webhook.stateChanged.connect(
+            self.update_checkbox_status
+        )
         GUI.checkBox_remove_email_from_target.stateChanged.connect(
-            self.update_checkbox_status)
+            self.update_checkbox_status
+        )
         GUI.checkBox_add_custom_hostname.stateChanged.connect(
-            self.update_checkbox_status)
+            self.update_checkbox_status
+        )
+        GUI.checkBox_configuration_followup_enabled.stateChanged.connect(
+            self.update_checkbox_status
+        )
 
         GUI.radioButton_html.clicked.connect(self.compose_change)
         GUI.radioButton_plain_text.clicked.connect(self.compose_change)
@@ -153,7 +165,8 @@ class myMainClass:
         GUI.pushButton_forward.clicked.connect(self.forward)
         GUI.pushButton_test.clicked.connect(self.test_send)
         GUI.textBrowser_show_email.anchorClicked.connect(
-            QtGui.QDesktopServices.openUrl)
+            QtGui.QDesktopServices.openUrl
+        )
         GUI.textBrowser_compose.textChanged.connect(self.compose_update)
 
         GUI.pushButton_config_update.clicked.connect(self.configuration_save)
@@ -191,25 +204,37 @@ class myMainClass:
             self.compose_send_cancel)
 
         GUI.checkBox_database_group_a.stateChanged.connect(
-            self.update_db_file_upload_config)
+            self.update_db_file_upload_config
+        )
         GUI.checkBox_database_group_b.stateChanged.connect(
-            self.update_db_file_upload_config)
+            self.update_db_file_upload_config
+        )
         GUI.checkBox_database_target.stateChanged.connect(
-            self.update_db_file_upload_config)
-
+            self.update_db_file_upload_config
+        )
         GUI.pushButton_fire_inbox_webhook.clicked.connect(
-            self.start_inbox_stream_thread)
-
+            self.start_inbox_stream_thread
+        )
         GUI.lineEdit_target_blacklist.textChanged.connect(
-            self.change_target_blacklist)
-
+            self.change_target_blacklist
+        )
         GUI.lineEdit_inbox_blacklist.textChanged.connect(
             self.change_inbox_blacklist
+        )
+        GUI.lineEdit_configuration_followup_days.textChanged.connect(
+            self.change_followup_days
         )
 
         GUI.pushButton_clear_cached_targets.clicked.connect(
             lambda: threading.Thread(target=self.clear_cached_targets, daemon=True, args=[]).start()
         )
+
+    def change_followup_days(self):
+        value = GUI.lineEdit_configuration_followup_days.text()
+        if value.isdigit():
+            var.followUp_days = int(value)
+        else:
+            self.logger.error("FollowUp days value can only be Numerical")
 
     def update_delay_between_emails(self):
         try:
@@ -263,6 +288,7 @@ class myMainClass:
         var.remove_email_from_target = GUI.checkBox_remove_email_from_target.isChecked()
         var.check_for_blocks = GUI.checkBox_check_for_blocks.isChecked()
         var.email_tracking_state = GUI.checkBox_email_tracking.isChecked()
+        var.followUp_enabled = GUI.checkBox_configuration_followup_enabled.isChecked()
 
     def update_db_file_upload_config(self):
         var.db_file_loading_config['group_a'] = \
@@ -756,7 +782,7 @@ class myMainClass:
                     dialog.ui = Download(dialog, var.group_b)
 
                 else:
-                    print("no db")
+                    print("no DB")
                     alert(text='No database loaded yet!!!',
                           title='Error', button='OK')
 
@@ -984,6 +1010,7 @@ else:
     # mainWindow.show()
 
     import var
+    from var import logger
     import imap
     import smtp
     from utils import update_config_json, prepare_html

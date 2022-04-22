@@ -6,9 +6,7 @@ import requests
 import queue
 import traceback
 import os, sys
-
-logger = var.logging
-logger.getLogger("requests").setLevel(var.logging.WARNING)
+from var import logger
 
 
 class CampaignReportWebhook(threading.Thread):
@@ -26,8 +24,7 @@ class CampaignReportWebhook(threading.Thread):
         self.package = package
 
         self.api_link = var.webhook_link
-        self.logger = var.logging
-        self.logger.getLogger("requests").setLevel(var.logging.WARNING)
+        self.logger = logger
 
     def run(self):
         self.logger.info("Starting Campaign End Report Webhook session...")
@@ -55,8 +52,7 @@ class SendWebhook(threading.Thread):
         }
 
         self.api_link = var.webhook_link
-        self.logger = var.logging
-        self.logger.getLogger("requests").setLevel(var.logging.WARNING)
+        self.logger = logger
 
     def run(self):
         print("Webhook Started...")
@@ -118,8 +114,7 @@ class SendWebhook_Inbox(threading.Thread):
         }
 
         self.api_link = var.webhook_link
-        self.logger = var.logging
-        self.logger.getLogger("requests").setLevel(var.logging.WARNING)
+        self.logger = logger
         self.total_length = total_length
 
     def run(self):

@@ -1,6 +1,7 @@
 from PyQt5 import QtCore, QtGui
 from threading import Thread
 import var
+from var import logger
 from p_gui import Ui_Dialog
 import os, sys
 
@@ -36,7 +37,7 @@ class Download(Ui_Dialog):
 
     def update_gui(self):
         try:
-            if var.download_email_status == True:
+            if var.download_email_status:
                 self.label_status.setText(f"Total Email Downloaded : {var.total_email_downloaded}")
 
             else:

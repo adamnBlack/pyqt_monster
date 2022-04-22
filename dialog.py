@@ -301,6 +301,7 @@ else:
     mainWindow.show()
 
     import var
+    from var import logger
 
     myMC = myMainClass()
 

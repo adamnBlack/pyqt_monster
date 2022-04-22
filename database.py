@@ -1,20 +1,20 @@
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, text
+from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, text, DateTime
 from sqlalchemy.orm import sessionmaker
 import var
 import main
 import pandas as pd
 from pyautogui import alert
 import os
+import datetime
+import traceback
+import queue
+from var import logger
 
-db_path = var.base_dir + "/group.db"
+db_path = var.base_dir + "/group.DB"
 Base = declarative_base()
 engine = create_engine(
     f'sqlite:///{db_path}', connect_args={'check_same_thread': False})
-
-global logger
-logger = var.logging
-logger.getLogger("requests").setLevel(var.logging.WARNING)
 
 
 class Group_A(Base):
@@ -60,6 +60,16 @@ class CachedTargets(Base):
     email = Column(String, unique=True)
 
 
+class FollowUp(Base):
+    __tablename__ = 'follow_up'
+    id = Column(Integer, primary_key=True)
+    group_email = Column(String)
+    target_email = Column(String)
+    campaign_id = Column(String)
+    email_subject = Column(String)
+    campaign_time = Column(DateTime)
+
+
 Base.metadata.create_all(engine)
 
 
@@ -82,7 +92,8 @@ class Database:
             "group_a": Group_A,
             "group_b": Group_B,
             "targets": Targets,
-            "cached_targets": CachedTargets
+            "cached_targets": CachedTargets,
+            "follow_up": FollowUp
         }
 
     def remove(self, table=None, id=None):
@@ -113,9 +124,12 @@ class Database:
 
     def add_to_cached_targets(self, email):
         try:
-            cached_targets = CachedTargets(email=email)
-            self.session.add(cached_targets)
-            self.session.commit()
+            if not self.session.query(CachedTargets).filter(CachedTargets.email == email).one():
+                cached_targets = CachedTargets(email=email)
+                self.session.add(cached_targets)
+                self.session.commit()
+            else:
+                self.logger.info(f"Database.add_to_cached_targets() - Already Exists")
 
         except Exception as e:
             self.session.rollback()
@@ -138,6 +152,56 @@ class Database:
         except Exception as e:
             self.session.rollback()
             self.logger.error(f"Error at Database.clear_cached_targets() - {e}")
+
+    def get_all_followup(self, campaign_id=None):
+        if campaign_id:
+            results = [
+                {
+                    'id': item.id,
+                    'group_email': item.group_email,
+                    'target_email': item.target_email,
+                    'campaign_id': item.campaign_id,
+                    'email_subject': item.email_subject,
+                    'campaign_time': item.campaign_time
+
+                } for item in self.session.query(FollowUp).filter(FollowUp.campaign_id == campaign_id).all()
+            ]
+            return results
+        else:
+            return None
+
+    def add_follow_up(self, list_of_dict: list):
+        try:
+            follow_ups = [
+                dict(
+                        group_email=item['group_email'],
+                        target_email=item['target_email'],
+                        campaign_id=item['campaign_id'],
+                        email_subject=item['email_subject'],
+                        campaign_time=item['campaign_time']
+                    ) for item in list_of_dict]
+
+            self.session.bulk_insert_mappings(FollowUp, follow_ups)
+            self.session.commit()
+
+            return True
+        except Exception as e:
+            self.session.rollback()
+            self.logger.error(f"Error at Database.add_follow_up() - {e}\n{traceback.format_exc()}")
+
+            return False
+
+    def delete_all_followup(self, campaign_id=None):
+        try:
+            self.session.query(FollowUp).filter(FollowUp.campaign_id == campaign_id).delete()
+            self.session.commit()
+
+            return True
+        except Exception as e:
+            self.session.rollback()
+            self.logger.error(f"Error at Database.delete_all_followup() - {e}")
+
+            return False
 
 
 def db_update_row(row):
@@ -176,7 +240,7 @@ def db_update_row(row):
             objects.EMAIL = row["EMAIL"]
 
         session.commit()
-        print("db updated")
+        print("DB updated")
         return True
 
     except Exception as e:
@@ -201,7 +265,7 @@ def db_remove_row(id):
         if objects:
             session.delete(objects)
             session.commit()
-            print("db updated")
+            print("DB updated")
             return True
         else:
             return False
@@ -230,7 +294,7 @@ def db_remove_rows(ids):
 
         session.commit()
 
-        print("db updated")
+        print("DB updated")
 
     except Exception as e:
         session.rollback()
@@ -277,7 +341,7 @@ def db_insert_row():
 
         session.add(objects)
         session.commit()
-        print("db updated")
+        print("DB updated")
         return True, objects.id
 
     except Exception as e:
@@ -648,9 +712,9 @@ def clear_table(group_a=None, group_b=None, target=None):
 
     except Exception as e:
         session.rollback()
-        print("Exeception occured at clear db table : {}".format(e))
+        print("Exeception occured at clear DB table : {}".format(e))
         global logger
-        logger.error(f"Error at clear db table - {e}")
+        logger.error(f"Error at clear DB table - {e}")
 
 
 def load_db():
@@ -665,8 +729,8 @@ def load_db():
             raise error
 
     except Exception as e:
-        print("Exeception occured at db loading : {}".format(e))
-        alert(text="Exeception occured at db loading : {}".format(
+        print("Exeception occured at DB loading : {}".format(e))
+        alert(text="Exeception occured at DB loading : {}".format(
             e), title='Alert', button='OK')
 
 
