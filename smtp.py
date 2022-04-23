@@ -1,5 +1,8 @@
+import os
+
 import pandas as pd
 
+from followup_smtp import FollowUpSend
 from proxy_smtplib import SMTP
 from email.mime.multipart import MIMEMultipart
 from email.header import Header
@@ -453,7 +456,7 @@ class SMTP_(threading.Thread):
 
                     self.cached_targets.targets_q.put(item['EMAIL'])
 
-                    self.logger.error(f"Sent - {self.user} {item['EMAIL']}")
+                    self.logger.info(f"Sent - {self.user} {item['EMAIL']}")
 
                     sent_q.put((item['EMAIL'], index))
                     var.send_campaign_email_count += 1
@@ -469,7 +472,7 @@ class SMTP_(threading.Thread):
                     var.send_report.put(t_dict.copy())
 
                     if self.followup_enabled:
-                        self.followup_queue.put({
+                        SMTP_.followup_queue.put({
                             "group_email": self.user,
                             "target_email": item['EMAIL'],
                             "campaign_id": self.campaign_id,
@@ -515,7 +518,6 @@ class SMTP_(threading.Thread):
                             #     f"Found no block messages : {self.name} {str(datetime.now())}")
 
                         # this is where you might want to anything that you want every campagin threads to do
-
 
                     server.quit()
 
@@ -689,7 +691,7 @@ def main(group, d_start, d_end, group_selected):
     add_cached_targets = AddCachedTargets()
     add_cached_targets.start()
 
-    followup_enabled = var.followUp_enabled
+    followup_enabled = var.followup_enabled
     campaign_time = datetime.utcnow()
 
     with SMTP_.followup_queue.mutex:
@@ -805,8 +807,8 @@ def main(group, d_start, d_end, group_selected):
 
         var.scheduler.add_job(follow_up, 'date',
                               args=(campaign_id,),
-                              next_run_time=datetime.now()+timedelta(seconds=7))
-        logger.error(f"FollowUp scheduled: {campaign_id}")
+                              next_run_time=datetime.now()+timedelta(days=var.followup_days))
+        logger.info(f"FollowUp scheduled: {campaign_id}")
 
     var.email_failed = email_failed
 
@@ -818,7 +820,7 @@ def main(group, d_start, d_end, group_selected):
     var.command_q.put("self.compose_config_visibility(on=True)")
     var.send_campaign_run_status = False
 
-    logger.error(f"Sending Finished {campaign_id}")
+    logger.info(f"Sending Finished {campaign_id}")
 
     campaign_report_webhook = CampaignReportWebhook({
             'total_emails_sent': var.send_campaign_email_count,
@@ -835,57 +837,108 @@ def main(group, d_start, d_end, group_selected):
 
 
 def follow_up(campaign_id: str):
-    logger.info(f"Starting Followup process, Campaign Id - {campaign_id}")
-    db: DB = DB()
-    followups = db.get_all_followup(campaign_id)
-    followups_df = pd.DataFrame(followups)
-    followup_group_df = followups_df.groupby('group_email')
+    try:
+        logger.info(f"Starting Followup process, Campaign Id - {campaign_id}")
 
-    for group_name, df_group in followup_group_df:
-        groups = [var.group_a, var.group_b]
-        groups = pd.concat(groups)
-        groups.rename(columns={
-            'EMAIL': 'imap_user',
-            'EMAIL_PASS': 'imap_pass',
-            'PROXY_USER': 'proxy_user',
-            'PROXY_PASS': 'proxy_pass'
-        }, inplace=True)
+        ImapFollowUpCheck.followup_required = []
+        ImapFollowUpCheck.thread_open = 0
 
-        if group_name in groups['imap_user'].values:
-            index = groups.loc[groups['imap_user'] == group_name].index
-            groups_dict = groups.loc[index].to_dict('records')[0]
-            groups_dict['target_info'] = []
+        db: DB = DB()
+        followups = db.get_all_followup(campaign_id)
+        followups_df = pd.DataFrame(followups)
+        followup_group_df = followups_df.groupby('group_email')
 
-            for row_index, row in df_group.iterrows():
-                groups_dict['campaign_time'] = row['campaign_time']
+        for group_name, df_group in followup_group_df:
+            groups = [var.group_a.copy(), var.group_b.copy()]
+            groups = pd.concat(groups)
+            groups.rename(columns={
+                'EMAIL': 'imap_user',
+                'EMAIL_PASS': 'imap_pass',
+                'PROXY_USER': 'proxy_user',
+                'PROXY_PASS': 'proxy_pass'
+            }, inplace=True)
 
-                target = var.target.copy()
-                target.rename(columns={
-                    'EMAIL': 'target_email'
-                })
-                index = target.loc[target['imap_user'] == row['target_email']].index
-                target_dict = target.loc[index].to_dict('records')[0]
-                target_dict['email_subject'] = row['email_subject']
+            if group_name in groups['imap_user'].values:
 
-                groups_dict['target_info'] = groups_dict['target_info'] + [target_dict.copy()]
+                index = groups.loc[groups['imap_user'] == group_name].index
+                groups_dict = groups.loc[index].to_dict('records')[0]
+                groups_dict['target_info'] = []
 
-                if groups_dict["PROXY:PORT"] != " ":
-                    groups_dict['proxy_host'] = groups_dict["PROXY:PORT"].split(':')[0]
-                    groups_dict['proxy_port'] = int(groups_dict["PROXY:PORT"].split(':')[1])
-                else:
-                    groups_dict['proxy_host'] = ''
-                    groups_dict['proxy_port'] = ''
+                for row_index, row in df_group.iterrows():
+                    groups_dict['campaign_time'] = row['campaign_time']
 
-                groups_dict['proxy_type'] = socks.PROXY_TYPE_SOCKS5
+                    target = var.target.copy()
+                    target.rename(columns={
+                        'EMAIL': 'target_email'
+                    }, inplace=True)
+                    index = target.loc[target['target_email'] == row['target_email']].index
+                    target_dict = target.loc[index].to_dict('records')[0]
+                    target_dict['email_subject'] = row['email_subject']
 
-            imap_followup_check_thread = ImapFollowUpCheck(**groups_dict)
-            imap_followup_check_thread.start()
+                    groups_dict['target_info'] = groups_dict['target_info'] + [target_dict.copy()]
 
+                    if groups_dict["PROXY:PORT"] != " ":
+                        groups_dict['proxy_host'] = groups_dict["PROXY:PORT"].split(':')[0]
+                        groups_dict['proxy_port'] = int(groups_dict["PROXY:PORT"].split(':')[1])
+                    else:
+                        groups_dict['proxy_host'] = ''
+                        groups_dict['proxy_port'] = ''
 
-            # then i have to get group info
-            # then put it into a func
-        else:
-            pass
+                    groups_dict['proxy_type'] = socks.PROXY_TYPE_SOCKS5
 
-    logger.error(f"Finishing Followup processes, Campaign Id - {campaign_id}")
+                imap_followup_check_thread = ImapFollowUpCheck(**groups_dict)
+                imap_followup_check_thread.start()
 
+                time.sleep(5)
+                while ImapFollowUpCheck.thread_open >= var.limit_of_thread:
+                    time.sleep(1)
+
+            else:
+                logger.info(f"follow_up: {group_name} missing from database")
+
+        while ImapFollowUpCheck.thread_open != 0:
+            time.sleep(1)
+
+        followup_required = ImapFollowUpCheck.followup_required
+
+        logger.info(f"follow_up: {len(followup_required)} email to be sent")
+
+        for item in followup_required:
+            item: dict
+            item['user'] = item.pop('imap_user')
+            item['passwd'] = item.pop('imap_pass')
+            item['smtp_server'] = var.smtp_server
+            item['smtp_port'] = var.smtp_port
+            item['delay_start'] = var.delay_start
+            item['delay_end'] = var.delay_end
+            item['attachment_files'] = var.files
+            item['campaign_id'] = campaign_id
+
+            follow_up_send = FollowUpSend(**item)
+            follow_up_send.start()
+
+            time.sleep(5)
+            while FollowUpSend.thread_open >= var.limit_of_thread:
+                time.sleep(1)
+
+        while FollowUpSend.thread_open != 0:
+            time.sleep(1)
+
+        try:
+            field_names = ['TARGET', 'FROMEMAIL', 'STATUS', 'CAMPAIGN', "DATE"]
+            with open(os.path.join(os.getcwd(), var.base_dir, var.followup_report_file_path),
+                      'a', newline='', encoding="utf-8") as csvfile:
+                writer = csv.DictWriter(csvfile, fieldnames=field_names)
+                writer.writeheader()
+                while not FollowUpSend.send_report.empty():
+                    report = FollowUpSend.send_report.get()
+                    writer.writerow(report)
+
+                logger.info(f"Saving followup report")
+        except Exception as e:
+            logger.error(f'Error at follow_up - {e}\n{traceback.format_exc()}')
+
+        logger.info(f"Finishing Followup process, Campaign Id - {campaign_id}")
+
+    except Exception as e:
+        logger.error(f"Error at follow_up: {e}\n{traceback.format_exc()}")

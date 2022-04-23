@@ -11,6 +11,8 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem
 from pyautogui import alert, confirm
 import traceback
+# import tzdata
+# import tzdata.zoneinfo.Asia
 
 from gui import Ui_MainWindow
 
@@ -108,9 +110,11 @@ class myMainClass:
         GUI.checkBox_email_tracking.setChecked(var.email_tracking_state)
         GUI.checkBox_check_for_blocks.setChecked(var.check_for_blocks)
         GUI.checkBox_responses_webhook.setChecked(var.responses_webhook_enabled)
-        GUI.checkBox_configuration_followup_enabled.setChecked(var.followUp_enabled)
+        GUI.checkBox_configuration_followup_enabled.setChecked(var.followup_enabled)
 
-        GUI.lineEdit_configuration_followup_days.setText(str(var.followUp_days))
+        GUI.lineEdit_configuration_followup_days.setText(str(var.followup_days))
+        GUI.lineEdit_follow_up_subject.setText(var.followup_subject)
+        GUI.textBrowser_follow_up_body.setText(var.followup_body)
         GUI.lineEdit_delay_between_emails.setText(var.delay_between_emails)
 
         if var.campaign_group == "group_a":
@@ -138,6 +142,15 @@ class myMainClass:
         )
         GUI.checkBox_configuration_followup_enabled.stateChanged.connect(
             self.update_checkbox_status
+        )
+        GUI.lineEdit_follow_up_subject.textChanged.connect(
+            self.update_followup_subject
+        )
+        GUI.textBrowser_follow_up_body.textChanged.connect(
+            self.update_followup_body
+        )
+        GUI.pushButton_follow_up_save.clicked.connect(
+            self.configuration_save
         )
 
         GUI.radioButton_html.clicked.connect(self.compose_change)
@@ -229,18 +242,24 @@ class myMainClass:
             lambda: threading.Thread(target=self.clear_cached_targets, daemon=True, args=[]).start()
         )
 
+    def update_followup_body(self):
+        var.followup_body = GUI.textBrowser_follow_up_body.toPlainText()
+
+    def update_followup_subject(self):
+        var.followup_subject = GUI.lineEdit_follow_up_subject.text()
+
     def change_followup_days(self):
         value = GUI.lineEdit_configuration_followup_days.text()
-        if value.isdigit():
-            var.followUp_days = int(value)
+        if is_number(value):
+            var.followup_days = float(value)
         else:
             self.logger.error("FollowUp days value can only be Numerical")
 
     def update_delay_between_emails(self):
         try:
             delay_between_emails = GUI.lineEdit_delay_between_emails.text()
-            delay_start = int(delay_between_emails.split("-")[0].strip())
-            delay_end = int(delay_between_emails.split("-")[1].strip())
+            var.delay_start = int(delay_between_emails.split("-")[0].strip())
+            var.delay_end = int(delay_between_emails.split("-")[1].strip())
             var.delay_between_emails = delay_between_emails
         except:
             self.logger.error(traceback.format_exc())
@@ -288,7 +307,7 @@ class myMainClass:
         var.remove_email_from_target = GUI.checkBox_remove_email_from_target.isChecked()
         var.check_for_blocks = GUI.checkBox_check_for_blocks.isChecked()
         var.email_tracking_state = GUI.checkBox_email_tracking.isChecked()
-        var.followUp_enabled = GUI.checkBox_configuration_followup_enabled.isChecked()
+        var.followup_enabled = GUI.checkBox_configuration_followup_enabled.isChecked()
 
     def update_db_file_upload_config(self):
         var.db_file_loading_config['group_a'] = \
@@ -1013,7 +1032,7 @@ else:
     from var import logger
     import imap
     import smtp
-    from utils import update_config_json, prepare_html
+    from utils import update_config_json, prepare_html, is_number
     from progressbar import Delete_email
     from download_email import Download
     from campaign_reply import Reply

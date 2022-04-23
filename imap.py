@@ -218,6 +218,7 @@ class ImapCheckForBlocks(ImapBase):
 
 class ImapFollowUpCheck(ImapBase, threading.Thread):
     followup_required = list()
+    thread_open = int()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -229,32 +230,44 @@ class ImapFollowUpCheck(ImapBase, threading.Thread):
 
     def run(self):
         try:
-            logger.error(f"Starting ImapFollowUpCheck: {self.imap_user}")
+            logger.info(f"Starting ImapFollowUpCheck: {self.imap_user}")
+
+            ImapFollowUpCheck.thread_open += 1
+
             imap = self.login()
             imap.select("Inbox", readonly=True)
 
             date = self.campaign_time - timedelta(days=1)
 
+            target_that_replied = []
+
             for item in self.target_info:
-                logger.error(f"Looking for ImapFollowUpCheck: {item['target_email']}")
+                logger.info(f"Looking for ImapFollowUpCheck: {item['target_email']}")
+
                 tmp, data = imap.search(
                     None,
                     f'(SINCE "{date.strftime("%d-%b-%Y")}"'
                     f' FROM "{item["target_email"]}")')
 
-                if len(data[0].split()) > 0:
-                    self.kwargs['target_info'].remove(self.target_info)
+                if not len(data[0].split()) > 0:
+                    target_that_replied.append(item)
 
-            if len(self.kwwargs['target_info']) > 0:
-                self.followup_required.append(self.kwargs)
+            if len(target_that_replied) > 0:
+                self.kwargs['target_info'] = target_that_replied
+                ImapFollowUpCheck.followup_required.append(self.kwargs)
+                logger.info(f"ImapFollowUpCheck: {self.imap_user} "
+                            f"Added to FollowUp list ")
             else:
-                logger.error(f"ImapFollowUpCheck: {self.imap_user} "
-                             f"MSG: No Followup needed ")
+                logger.info(f"ImapFollowUpCheck: {self.imap_user} "
+                            f"MSG: No Followup needed ")
 
-            logger.error(f"Finishing ImapFollowUpCheck: {self.imap_user}")
+            logger.info(f"Finishing ImapFollowUpCheck: {self.imap_user}")
 
         except Exception as e:
             logger.error(f"Error at ImapFollowUpCheck: {e}\n{traceback.format_exc()}")
+
+        finally:
+            ImapFollowUpCheck.thread_open -= 1
 
 
 class IMAP_(threading.Thread):
@@ -392,7 +405,6 @@ class IMAP_(threading.Thread):
                         # print(from_name, from_mail, to_name, to_mail, subject, body)
                         print("utc - ", utc_to_local(mail_date),
                               "| Non utc - ", mail_date)
-
 
                         try:
                             if mail_date.tzinfo:

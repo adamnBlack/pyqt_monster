@@ -1,10 +1,10 @@
 {
     "config": {
-        "date": "11/28/2021",
+        "date": "4/20/2022",
         "num_emails_per_address": 1,
         "delay_between_emails": "0-1",
         "limit_of_thread": 100,
-        "compose_email_subject": "Personal fsdafgsdfgsdfdfgsdfdfgsdf ",
+        "compose_email_subject": "Personal",
         "compose_email_body": "Hey,what's up? [4]",
         "compose_email_body_html": "<html>\n    <body>\n        <p>{Hey|Hi|Hello} [TONAME],<br>\n        I'm reaching out to you because i {noticed|came across|found|visited} you website {the other day|yesterday} and thought you'd be interested in a {collaboration|partnership}.<br>\n        {Hope you don't mind my outreach!|Looking forward to your replya!}<br>\n        </p>\n    </body>\n</html>\n",
         "login_email": "ss@gmail.com",
@@ -27,7 +27,9 @@
             "sada"
         ],
         "responses_webhook_enabled": false,
-        "followUp_enabled": true,
-        "followUp_days": 1
+        "followup_enabled": true,
+        "followup_days": 0.001,
+        "followup_subject": "Follow Up",
+        "followup_body": "<html>\n    <body>\n        <p>{Hey|Hi|Hello} [TONAME],<br>\n        I'm reaching out to you because i {noticed|came across|found|visited} you website {the other day|yesterday} and thought you'd be interested in a {collaboration|partnership}.<br>\n        {Hope you don't mind my outreach!|Looking forward to your reply!}<br>\n        </p>\n    </body>\n</html>\n"
     }
 }

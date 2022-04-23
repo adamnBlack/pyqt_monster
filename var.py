@@ -1,3 +1,4 @@
+import traceback
 from json import load, dumps
 import pandas as pd
 import queue
@@ -77,6 +78,7 @@ except Exception as e:
 
 version = '2.2r'
 base_dir = "database"
+followup_report_file_path = "followup_report.csv"
 
 # Create and configure logger
 # logging.basicConfig(filename=base_dir + "/app.log",
@@ -217,10 +219,15 @@ try:
     target_blacklist = config['target_blacklist']
     inbox_blacklist = config['inbox_blacklist']
     responses_webhook_enabled = config['responses_webhook_enabled']
-    followUp_enabled = config['followUp_enabled']
-    followUp_days = config['followUp_days']
+    followup_enabled = config['followup_enabled']
+    followup_days = config['followup_days']
+    followup_subject = config['followup_subject']
+    followup_body = config['followup_body']
 except Exception as e:
     print("Exception occurred at config loading : {}".format(e))
+
+delay_start = int(delay_between_emails.split("-")[0].strip())
+delay_end = int(delay_between_emails.split("-")[1].strip())
 
 
 def email_tracking_link():

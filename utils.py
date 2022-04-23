@@ -7,6 +7,14 @@ from pyautogui import alert
 import uuid
 
 
+def is_number(s):
+    try:
+        float(s)
+        return True
+    except ValueError:
+        return False
+
+
 def difference_between_time(first_time, last_time):
     difference = last_time - first_time
     seconds_in_day = 24 * 60 * 60
@@ -87,15 +95,17 @@ def update_config_json():
                 "target_blacklist": var.target_blacklist,
                 "inbox_blacklist": var.inbox_blacklist,
                 "responses_webhook_enabled": var.responses_webhook_enabled,
-                "followUp_enabled": var.followUp_enabled,
-                "followUp_days": var.followUp_days
+                "followup_enabled": var.followup_enabled,
+                "followup_days": var.followup_days,
+                "followup_subject": var.followup_subject,
+                "followup_body": var.followup_body
             }
         }
         with open(var.base_dir+'/config.json', 'w') as json_file:
             json.dump(data, json_file, indent=4)
-        print("config updated")
+        logger.info("config updated")
     except Exception as e:
-        print("Exception occurred at update_config_json : {}".format(e))
+        logger.error("Exception occurred at update_config_json : {}".format(e))
         alert(text="Exception occurred at update_config_json : {}".format(e),
               title='Alert', button='OK')
 
