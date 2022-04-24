@@ -801,7 +801,7 @@ def main(group, d_start, d_end, group_selected):
 
     add_cached_targets.close = True
 
-    if followup_enabled:
+    if followup_enabled and not var.stop_send_campaign:
         add_follow_ups = AddFollowUps(SMTP_.followup_queue, campaign_time)
         add_follow_ups.send()
 

@@ -11,8 +11,6 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem
 from pyautogui import alert, confirm
 import traceback
-# import tzdata
-# import tzdata.zoneinfo.Asia
 
 from gui import Ui_MainWindow
 
@@ -449,7 +447,7 @@ class myMainClass:
 
             except Exception as e:
                 self.try_failed += 1
-                print("error at check_for_subcription: {}".format(traceback.format_exc()))
+                logger.error("error at check_for_subscription: {}".format(traceback.format_exc()))
 
                 GUI.label_email_status.setText(
                     "Check your internet connection.")
