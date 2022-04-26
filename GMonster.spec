@@ -1,4 +1,8 @@
 # -*- mode: python ; coding: utf-8 -*-
+from PyInstaller.utils.hooks import copy_metadata
+
+datas = []
+datas += copy_metadata('apscheduler', recursive=True)
 
 block_cipher = None
 
@@ -6,8 +10,8 @@ block_cipher = None
 a = Analysis(['var.py'],
              pathex=['D:\\Upwork\\2020\\gmail_app\\gmail_app'],
              binaries=[],
-             datas=[],
-             hiddenimports=["tzdata", "tzlocal"],
+             datas=datas,
+             hiddenimports=[],
              hookspath=[],
              runtime_hooks=[],
              excludes=[],

@@ -1,43 +1,159 @@
-2022-04-24 21:46:55,830 [MainThread  ] [INFO ]  Scheduler started
-2022-04-24 21:46:56,346 [MainThread  ] [INFO ]  Scheduler started
-2022-04-24 21:47:06,017 [MainThread  ] [INFO ]  Scheduler started
-2022-04-24 21:47:06,551 [MainThread  ] [INFO ]  Scheduler started
-2022-04-24 21:55:31,646 [MainThread  ] [INFO ]  Scheduler started
-2022-04-24 21:55:32,162 [MainThread  ] [INFO ]  Scheduler started
-2022-04-24 21:55:32,573 [Thread-1    ] [ERROR]  error at check_for_subscription: Traceback (most recent call last):
-  File "main.py", line 400, in check_for_subscription
-    response = requests.post(url, timeout=10)
-  File "requests\api.py", line 117, in post
-  File "requests\api.py", line 61, in request
-  File "requests\sessions.py", line 542, in request
-  File "requests\sessions.py", line 655, in send
-  File "requests\adapters.py", line 416, in send
-  File "requests\adapters.py", line 228, in cert_verify
-OSError: Could not find a suitable TLS CA certificate bundle, invalid path: D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\database\cacert.pem
-
-2022-04-24 22:04:05,493 [MainThread  ] [INFO ]  Scheduler started
-2022-04-24 22:04:06,014 [MainThread  ] [INFO ]  Scheduler started
-2022-04-24 22:04:20,683 [Thread-3    ] [INFO ]  config updated
-2022-04-24 22:04:20,685 [Thread-4    ] [ERROR]  
+2022-04-27 04:03:55,401 [MainThread  ] [INFO ]  Scheduler started
+2022-04-27 04:03:55,935 [MainThread  ] [INFO ]  Scheduler started
+2022-04-27 04:04:02,680 [Thread-3    ] [INFO ]  config updated
+2022-04-27 04:04:02,681 [Thread-4    ] [ERROR]  
  Starting Send Campaign : 
- Target Removal - False
+ Target Removal - True
  Group Selected: Group A
- Webhook Enabled: False
+ Webhook Enabled: True
  Email Block Check: False
  Emails Per Account: 1
- Len of Group: 2
- Len of Targets: 3
+ Len of Group: 71
+ Len of Targets: 0
  Delay: 0 - 1
- Campaign ID: 0f3e7ffa-149d-47e3-a28c-76c18b996989
+ Campaign ID: 1947cb04-fd91-48ac-b8e0-ac14e25b191c
  Add Custom Hostname: False
-2022-04-24 22:04:20,701 [Thread-4    ] [ERROR]  
-Starting Thread : Name - jamescalloway402@gmail.com
-Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": "Shah"}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shah_imran_sust@outlook.com"}, "flag": {"0": 0}}
-2022-04-24 22:04:20,701 [Thread-4    ] [INFO ]  Length - 1 jamescalloway402@gmail.com
-2022-04-24 22:04:20,703 [Thread-4    ] [ERROR]  
-Starting Thread : Name - 0101dave.gibbons22@gmail.com
-Targets - {"ID": {"1": 2}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": "Shah"}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shah_imran_sust@outlook.com"}, "flag": {"1": 0}}
-2022-04-24 22:04:20,704 [Thread-4    ] [INFO ]  Length - 1 0101dave.gibbons22@gmail.com
-2022-04-24 22:04:24,709 [Thread-4    ] [INFO ]  Sending Finished 0f3e7ffa-149d-47e3-a28c-76c18b996989
-2022-04-24 22:04:24,710 [CampaignRepo] [INFO ]  Starting Campaign End Report Webhook session...
-2022-04-24 22:04:25,623 [CampaignRepo] [INFO ]  Ending Campaign End Report Webhook session.
+2022-04-27 04:04:04,684 [Thread-4    ] [INFO ]  removing email from target...
+2022-04-27 04:04:04,725 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-27 04:04:04,726 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-04-27 04:05:57,936 [MainThread  ] [INFO ]  Scheduler started
+2022-04-27 04:05:58,472 [MainThread  ] [INFO ]  Scheduler started
+2022-04-27 04:11:31,277 [Thread-3    ] [INFO ]  config updated
+2022-04-27 04:11:31,281 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 71
+ Len of Targets: 0
+ Delay: 0 - 1
+ Campaign ID: 748cb42b-251d-43da-a662-d1b8ed89f939
+ Add Custom Hostname: False
+2022-04-27 04:11:33,286 [Thread-4    ] [INFO ]  removing email from target...
+2022-04-27 04:11:33,331 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-27 04:11:33,333 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-04-27 04:11:33,389 [Thread-4    ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-27 04:11:33,390 [Thread-4    ] [INFO ]  FollowUp scheduled: 748cb42b-251d-43da-a662-d1b8ed89f939
+2022-04-27 04:11:33,391 [Thread-4    ] [INFO ]  Sending Finished 748cb42b-251d-43da-a662-d1b8ed89f939
+2022-04-27 04:11:33,391 [CampaignRepo] [INFO ]  Starting Campaign End Report Webhook session...
+2022-04-27 04:11:34,316 [CampaignRepo] [INFO ]  Ending Campaign End Report Webhook session.
+2022-04-27 04:20:23,886 [MainThread  ] [INFO ]  Scheduler started
+2022-04-27 04:20:24,472 [MainThread  ] [INFO ]  Scheduler started
+2022-04-27 04:20:29,889 [Thread-3    ] [INFO ]  config updated
+2022-04-27 04:20:29,891 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 71
+ Len of Targets: 0
+ Delay: 0 - 1
+ Campaign ID: fa0fa064-ff61-4ab9-adda-8f294ffe6879
+ Add Custom Hostname: False
+2022-04-27 04:20:31,894 [Thread-4    ] [INFO ]  removing email from target...
+2022-04-27 04:20:31,935 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-27 04:20:31,936 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-04-27 04:23:44,397 [MainThread  ] [INFO ]  Scheduler started
+2022-04-27 04:23:44,946 [MainThread  ] [INFO ]  Scheduler started
+2022-04-27 04:23:50,677 [Thread-3    ] [INFO ]  config updated
+2022-04-27 04:23:50,680 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 71
+ Len of Targets: 0
+ Delay: 0 - 1
+ Campaign ID: d2591268-27fd-4513-b78f-accabb27b957
+ Add Custom Hostname: False
+2022-04-27 04:23:52,682 [Thread-4    ] [INFO ]  removing email from target...
+2022-04-27 04:23:52,720 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-27 04:23:52,721 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-04-27 04:50:31,406 [MainThread  ] [INFO ]  Scheduler started
+2022-04-27 04:50:32,334 [MainThread  ] [INFO ]  Scheduler started
+2022-04-27 04:51:23,910 [Thread-3    ] [INFO ]  config updated
+2022-04-27 04:51:23,911 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 71
+ Len of Targets: 0
+ Delay: 0 - 1
+ Campaign ID: 58d1a2bb-c4cb-4b88-8006-ee2ff1abe89d
+ Add Custom Hostname: False
+2022-04-27 04:51:25,924 [Thread-4    ] [INFO ]  removing email from target...
+2022-04-27 04:51:25,977 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-27 04:51:25,979 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-04-27 05:05:02,500 [MainThread  ] [INFO ]  Scheduler started
+2022-04-27 05:05:03,073 [MainThread  ] [INFO ]  Scheduler started
+2022-04-27 05:05:14,612 [Thread-3    ] [INFO ]  config updated
+2022-04-27 05:05:14,613 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 71
+ Len of Targets: 0
+ Delay: 0 - 1
+ Campaign ID: 68dd5969-baad-4221-b157-98cead59781e
+ Add Custom Hostname: False
+2022-04-27 05:05:16,626 [Thread-4    ] [INFO ]  removing email from target...
+2022-04-27 05:05:16,676 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-27 05:05:16,678 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-04-27 05:27:12,761 [MainThread  ] [INFO ]  Scheduler started
+2022-04-27 05:27:13,316 [MainThread  ] [INFO ]  Scheduler started
+2022-04-27 05:27:23,383 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 71
+ Len of Targets: 0
+ Delay: 0 - 1
+ Campaign ID: 617502f5-69a7-4bdd-8479-29db57dc1764
+ Add Custom Hostname: False
+2022-04-27 05:27:23,384 [Thread-3    ] [INFO ]  config updated
+2022-04-27 05:27:25,392 [Thread-4    ] [INFO ]  removing email from target...
+2022-04-27 05:27:25,439 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-27 05:27:25,442 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-04-27 05:27:25,493 [Thread-4    ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-27 05:27:25,494 [Thread-4    ] [INFO ]  FollowUp scheduled: 617502f5-69a7-4bdd-8479-29db57dc1764
+2022-04-27 05:27:25,497 [Thread-4    ] [INFO ]  Sending Finished 617502f5-69a7-4bdd-8479-29db57dc1764
+2022-04-27 05:27:25,498 [CampaignRepo] [INFO ]  Starting Campaign End Report Webhook session...
+2022-04-27 05:27:26,427 [CampaignRepo] [INFO ]  Ending Campaign End Report Webhook session.
+2022-04-27 05:32:41,308 [MainThread  ] [INFO ]  Scheduler started
+2022-04-27 05:32:41,887 [MainThread  ] [INFO ]  Scheduler started
+2022-04-27 05:32:46,809 [Thread-3    ] [INFO ]  config updated
+2022-04-27 05:32:46,811 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 71
+ Len of Targets: 0
+ Delay: 0 - 1
+ Campaign ID: 60844eb3-78e6-4a38-a8e0-f467945c1aa9
+ Add Custom Hostname: False
+2022-04-27 05:32:48,819 [Thread-4    ] [INFO ]  removing email from target...
+2022-04-27 05:32:48,859 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-27 05:32:48,860 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-04-27 05:32:48,911 [Thread-4    ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-27 05:32:48,911 [Thread-4    ] [INFO ]  FollowUp scheduled: 60844eb3-78e6-4a38-a8e0-f467945c1aa9
+2022-04-27 05:32:48,912 [Thread-4    ] [INFO ]  Sending Finished 60844eb3-78e6-4a38-a8e0-f467945c1aa9
+2022-04-27 05:32:48,912 [CampaignRepo] [INFO ]  Starting Campaign End Report Webhook session...
+2022-04-27 05:32:49,812 [CampaignRepo] [INFO ]  Ending Campaign End Report Webhook session.

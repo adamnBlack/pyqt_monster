@@ -524,7 +524,6 @@ class SMTP_(threading.Thread):
         except Exception as e:
             email_failed += 1
 
-            print("error at SMTP - {} - {}".format(self.name, e))
             self.logger.error(
                 "Error at Sending - {} - {}".format(self.name, traceback.format_exc()))
 
@@ -822,15 +821,16 @@ def main(group, d_start, d_end, group_selected):
 
     logger.info(f"Sending Finished {campaign_id}")
 
-    campaign_report_webhook = CampaignReportWebhook({
-            'total_emails_sent': var.send_campaign_email_count,
-            'accounts_failed': email_failed,
-            'targets_remaining': len(var.target),
-            'group': group_selected,
-            'registered_mail': var.login_email
-        }.copy())
+    if var.enable_webhook_status:
+        campaign_report_webhook = CampaignReportWebhook({
+                'total_emails_sent': var.send_campaign_email_count,
+                'accounts_failed': email_failed,
+                'targets_remaining': len(var.target),
+                'group': group_selected,
+                'registered_mail': var.login_email
+            }.copy())
 
-    campaign_report_webhook.start()
+        campaign_report_webhook.start()
 
     alert(text='Total Emails Sent : {}\nAccounts Failed : {}\nTargets Remaining : {}\ncheck app.log and report.csv'.
           format(var.send_campaign_email_count, email_failed, len(var.target)), title='Alert', button='OK')
@@ -846,6 +846,7 @@ def follow_up(campaign_id: str):
         db: DB = DB()
         followups = db.get_all_followup(campaign_id)
         followups_df = pd.DataFrame(followups)
+        logger.info(f"{followups_df.head(5)}")
         followup_group_df = followups_df.groupby('group_email')
 
         for group_name, df_group in followup_group_df:

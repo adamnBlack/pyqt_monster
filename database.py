@@ -124,7 +124,7 @@ class Database:
 
     def add_to_cached_targets(self, email):
         try:
-            if not self.session.query(CachedTargets).filter(CachedTargets.email == email).one():
+            if not self.session.query(CachedTargets).filter(CachedTargets.email == email).first():
                 cached_targets = CachedTargets(email=email)
                 self.session.add(cached_targets)
                 self.session.commit()
