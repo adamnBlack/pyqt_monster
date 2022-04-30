@@ -127,8 +127,8 @@ class ImapBase:
         self.proxy_pass = kwargs["proxy_pass"]
         self.imap_host = var.imap_server
         self.imap_port = var.imap_port
-        self.imap_user = kwargs["imap_user"]
-        self.imap_pass = kwargs["imap_pass"]
+        self.imap_user = kwargs["user"]
+        self.imap_pass = kwargs["password"]
 
         self.logger = logger
 
@@ -219,6 +219,7 @@ class ImapCheckForBlocks(ImapBase):
 class ImapFollowUpCheck(ImapBase, threading.Thread):
     followup_required = list()
     thread_open = int()
+    email_to_be_sent = int()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -251,6 +252,7 @@ class ImapFollowUpCheck(ImapBase, threading.Thread):
 
                 if not len(data[0].split()) > 0:
                     target_that_replied.append(item)
+                    ImapFollowUpCheck.email_to_be_sent += 1
 
             if len(target_that_replied) > 0:
                 self.kwargs['target_info'] = target_that_replied

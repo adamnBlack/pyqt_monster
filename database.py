@@ -1,6 +1,7 @@
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, text, DateTime
+from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, Text, DateTime, JSON, TypeDecorator, types
 from sqlalchemy.orm import sessionmaker
+import json
 import var
 import main
 import pandas as pd
@@ -15,6 +16,27 @@ db_path = var.base_dir + "/group.DB"
 Base = declarative_base()
 engine = create_engine(
     f'sqlite:///{db_path}', connect_args={'check_same_thread': False})
+
+
+class Json(TypeDecorator):
+
+    @property
+    def python_type(self):
+        return object
+
+    impl = types.String
+
+    def process_bind_param(self, value, dialect):
+        return json.dumps(value)
+
+    def process_literal_param(self, value, dialect):
+        return value
+
+    def process_result_value(self, value, dialect):
+        try:
+            return json.loads(value)
+        except (ValueError, TypeError):
+            return None
 
 
 class Group_A(Base):
@@ -64,7 +86,9 @@ class FollowUp(Base):
     __tablename__ = 'follow_up'
     id = Column(Integer, primary_key=True)
     group_email = Column(String)
+    group_info = Column(JSON)
     target_email = Column(String)
+    target_info = Column(JSON)
     campaign_id = Column(String)
     email_subject = Column(String)
     campaign_time = Column(DateTime)
@@ -159,9 +183,10 @@ class Database:
                 {
                     'id': item.id,
                     'group_email': item.group_email,
+                    'group_info': item.group_info,
                     'target_email': item.target_email,
+                    'target_info': item.target_info,
                     'campaign_id': item.campaign_id,
-                    'email_subject': item.email_subject,
                     'campaign_time': item.campaign_time
 
                 } for item in self.session.query(FollowUp).filter(FollowUp.campaign_id == campaign_id).all()
@@ -175,9 +200,10 @@ class Database:
             follow_ups = [
                 dict(
                         group_email=item['group_email'],
+                        group_info=item['group_info'],
                         target_email=item['target_email'],
+                        target_info=item['target_info'],
                         campaign_id=item['campaign_id'],
-                        email_subject=item['email_subject'],
                         campaign_time=item['campaign_time']
                     ) for item in list_of_dict]
 

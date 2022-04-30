@@ -28,7 +28,7 @@ class SmtpBase:
         self.proxy_pass = kwargs["proxy_pass"]
         self.proxy_type = kwargs["proxy_type"]
         self.user = kwargs["user"]
-        self.passwd = kwargs["passwd"]
+        self.passwd = kwargs["password"]
         self.first_from_name = kwargs["FIRSTFROMNAME"]
         self.last_from_name = kwargs["LASTFROMNAME"]
         self.smtp_server = kwargs['smtp_server']

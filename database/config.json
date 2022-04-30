@@ -1,8 +1,8 @@
 {
     "config": {
         "date": "4/20/2022",
-        "num_emails_per_address": 1,
-        "delay_between_emails": "0-1",
+        "num_emails_per_address": 4,
+        "delay_between_emails": "0-10",
         "limit_of_thread": 100,
         "compose_email_subject": "Personal",
         "compose_email_body": "Hey,what's up? [4]",
@@ -14,8 +14,8 @@
         },
         "webhook_link": "https://webhook.site/a39236eb-211f-4556-9e8d-7a48edbc5eba",
         "check_for_blocks": false,
-        "remove_email_from_target": true,
-        "enable_webhook": true,
+        "remove_email_from_target": false,
+        "enable_webhook": false,
         "enable_email_tracking": false,
         "custom_hostname": false,
         "campaign_group": "group_a",
@@ -26,7 +26,7 @@
         ],
         "responses_webhook_enabled": false,
         "followup_enabled": true,
-        "followup_days": 0.001,
+        "followup_days": 0.0001,
         "followup_subject": "Follow Up",
         "followup_body": "<html>\n    <body>\n        <p>{Hey|Hi|Hello} [TONAME],<br>\n        I'm reaching out to you because i {noticed|came across|found|visited} you website {the other day|yesterday} and thought you'd be interested in a {collaboration|partnership}.<br>\n        {Hope you don't mind my outreach!|Looking forward to your reply!}<br>\n        </p>\n    </body>\n</html>\n"
     }

@@ -157,3 +157,1530 @@
 2022-04-27 05:32:48,912 [Thread-4    ] [INFO ]  Sending Finished 60844eb3-78e6-4a38-a8e0-f467945c1aa9
 2022-04-27 05:32:48,912 [CampaignRepo] [INFO ]  Starting Campaign End Report Webhook session...
 2022-04-27 05:32:49,812 [CampaignRepo] [INFO ]  Ending Campaign End Report Webhook session.
+2022-04-30 00:05:53,675 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 00:05:57,507 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 00:51:38,342 [Thread-3    ] [ERROR]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2022-04-30 00:51:56,107 [Thread-4    ] [INFO ]  config updated
+2022-04-30 00:51:56,112 [Thread-5    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 71
+ Len of Targets: 8
+ Delay: 0 - 1
+ Campaign ID: 7facbde5-6ee0-421a-b597-287f14379a3a
+ Add Custom Hostname: False
+2022-04-30 00:51:56,305 [Thread-5    ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": " "}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2022-04-30 00:51:56,307 [Thread-5    ] [INFO ]  Length - 1 jamescalloway402@gmail.com
+2022-04-30 00:51:56,310 [Thread-5    ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": " "}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2022-04-30 00:51:56,312 [Thread-5    ] [INFO ]  Length - 1 0101dave.gibbons22@gmail.com
+2022-04-30 00:51:56,314 [Thread-5    ] [ERROR]  
+Starting Thread : Name - ch4460165@gmail.com
+Targets - {"ID": {"2": 3}, "1": {"2": " "}, "2": {"2": " "}, "3": {"2": " "}, "4": {"2": " "}, "5": {"2": " "}, "6": {"2": " "}, "TONAME": {"2": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com"}, "flag": {"2": 0}}
+2022-04-30 00:51:56,315 [Thread-5    ] [INFO ]  Length - 1 ch4460165@gmail.com
+2022-04-30 00:51:56,316 [Thread-5    ] [ERROR]  
+Starting Thread : Name - bermannydia@gmail.com
+Targets - {"ID": {"3": 4}, "1": {"3": " "}, "2": {"3": " "}, "3": {"3": " "}, "4": {"3": " "}, "5": {"3": " "}, "6": {"3": " "}, "TONAME": {"3": "Imran"}, "EMAIL": {"3": "shahimrans64@gmail.com"}, "flag": {"3": 0}}
+2022-04-30 00:51:56,318 [Thread-5    ] [INFO ]  Length - 1 bermannydia@gmail.com
+2022-04-30 00:51:56,320 [Thread-5    ] [ERROR]  
+Starting Thread : Name - nelsondigna95@gmail.com
+Targets - {"ID": {"4": 5}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 00:51:56,322 [Thread-5    ] [INFO ]  Length - 1 nelsondigna95@gmail.com
+2022-04-30 00:51:56,324 [Thread-5    ] [ERROR]  
+Starting Thread : Name - alyse865480clayton865480@gmail.com
+Targets - {"ID": {"5": 6}, "1": {"5": " "}, "2": {"5": " "}, "3": {"5": " "}, "4": {"5": " "}, "5": {"5": " "}, "6": {"5": " "}, "TONAME": {"5": "Imran"}, "EMAIL": {"5": "shahimrans64@gmail.com"}, "flag": {"5": 0}}
+2022-04-30 00:51:56,325 [Thread-5    ] [INFO ]  Length - 1 alyse865480clayton865480@gmail.com
+2022-04-30 00:51:56,327 [Thread-5    ] [ERROR]  
+Starting Thread : Name - gaylenebarr52@gmail.com
+Targets - {"ID": {"6": 7}, "1": {"6": " "}, "2": {"6": " "}, "3": {"6": " "}, "4": {"6": " "}, "5": {"6": " "}, "6": {"6": " "}, "TONAME": {"6": "Imran"}, "EMAIL": {"6": "shahimrans64@gmail.com"}, "flag": {"6": 0}}
+2022-04-30 00:51:56,329 [Thread-5    ] [INFO ]  Length - 1 gaylenebarr52@gmail.com
+2022-04-30 00:51:56,331 [Thread-5    ] [ERROR]  
+Starting Thread : Name - cammie554076robbins554076@gmail.com
+Targets - {"ID": {"7": 8}, "1": {"7": " "}, "2": {"7": " "}, "3": {"7": " "}, "4": {"7": " "}, "5": {"7": " "}, "6": {"7": " "}, "TONAME": {"7": "Imran"}, "EMAIL": {"7": "shahimrans64@gmail.com"}, "flag": {"7": 0}}
+2022-04-30 00:51:56,332 [Thread-5    ] [INFO ]  Length - 1 cammie554076robbins554076@gmail.com
+2022-04-30 00:52:00,439 [gaylenebarr5] [ERROR]  Error at Sending - gaylenebarr52@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials n7-20020a5d5887000000b0020c52a10710sm93810wrf.84 - gsmtp')
+
+2022-04-30 00:52:00,648 [alyse865480c] [ERROR]  Error at Sending - alyse865480clayton865480@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials k7-20020a5d5247000000b0020c4a8d5487sm2376161wrc.18 - gsmtp')
+
+2022-04-30 00:52:00,697 [bermannydia@] [ERROR]  Error at Sending - bermannydia@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials z11-20020a7bc14b000000b0039419dfbb39sm3456303wmi.33 - gsmtp')
+
+2022-04-30 00:52:01,930 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com shahimrans64@gmail.com
+2022-04-30 00:52:02,082 [0101dave.gib] [ERROR]  Error at Sending - 0101dave.gibbons22@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 489, in run
+    "target_info": item.to_dict('records'),
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pandas\core\series.py", line 1573, in to_dict
+    into_c = com.standardize_mapping(into)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pandas\core\common.py", line 389, in standardize_mapping
+    raise TypeError(f"unsupported type: {into}")
+TypeError: unsupported type: <class 'str'>
+
+2022-04-30 00:52:02,147 [SendReport  ] [INFO ]  POSTed 3 data to webhook
+2022-04-30 00:52:02,301 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com shahimrans64@gmail.com
+2022-04-30 00:52:02,305 [jamescallowa] [ERROR]  Error at Sending - jamescalloway402@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 489, in run
+    "target_info": item.to_dict('records'),
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pandas\core\series.py", line 1573, in to_dict
+    into_c = com.standardize_mapping(into)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pandas\core\common.py", line 389, in standardize_mapping
+    raise TypeError(f"unsupported type: {into}")
+TypeError: unsupported type: <class 'str'>
+
+2022-04-30 00:52:02,834 [cammie554076] [INFO ]  Sent - cammie554076robbins554076@gmail.com shahimrans64@gmail.com
+2022-04-30 00:52:02,837 [cammie554076] [ERROR]  Error at Sending - cammie554076robbins554076@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 489, in run
+    "target_info": item.to_dict('records'),
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pandas\core\series.py", line 1573, in to_dict
+    into_c = com.standardize_mapping(into)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pandas\core\common.py", line 389, in standardize_mapping
+    raise TypeError(f"unsupported type: {into}")
+TypeError: unsupported type: <class 'str'>
+
+2022-04-30 00:52:02,992 [ch4460165@gm] [INFO ]  Sent - ch4460165@gmail.com shahimrans64@gmail.com
+2022-04-30 00:52:02,993 [ch4460165@gm] [ERROR]  Error at Sending - ch4460165@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 489, in run
+    "target_info": item.to_dict('records'),
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pandas\core\series.py", line 1573, in to_dict
+    into_c = com.standardize_mapping(into)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pandas\core\common.py", line 389, in standardize_mapping
+    raise TypeError(f"unsupported type: {into}")
+TypeError: unsupported type: <class 'str'>
+
+2022-04-30 00:52:03,039 [nelsondigna9] [INFO ]  Sent - nelsondigna95@gmail.com shahimrans64@gmail.com
+2022-04-30 00:52:03,040 [nelsondigna9] [ERROR]  Error at Sending - nelsondigna95@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 489, in run
+    "target_info": item.to_dict('records'),
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pandas\core\series.py", line 1573, in to_dict
+    into_c = com.standardize_mapping(into)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pandas\core\common.py", line 389, in standardize_mapping
+    raise TypeError(f"unsupported type: {into}")
+TypeError: unsupported type: <class 'str'>
+
+2022-04-30 00:52:03,314 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 00:52:03,341 [Thread-5    ] [ERROR]  
+Starting Thread : Name - allisonkanesha97@gmail.com
+Targets - {"ID": {"0": 4}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": " "}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2022-04-30 00:52:03,344 [Thread-5    ] [INFO ]  Length - 1 allisonkanesha97@gmail.com
+2022-04-30 00:52:03,346 [Thread-5    ] [ERROR]  
+Starting Thread : Name - pughlael052@gmail.com
+Targets - {"ID": {"1": 6}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": " "}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2022-04-30 00:52:03,348 [Thread-5    ] [INFO ]  Length - 1 pughlael052@gmail.com
+2022-04-30 00:52:03,350 [Thread-5    ] [ERROR]  
+Starting Thread : Name - ebonisherwood39@gmail.com
+Targets - {"ID": {"2": 7}, "1": {"2": " "}, "2": {"2": " "}, "3": {"2": " "}, "4": {"2": " "}, "5": {"2": " "}, "6": {"2": " "}, "TONAME": {"2": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com"}, "flag": {"2": 0}}
+2022-04-30 00:52:03,351 [Thread-5    ] [INFO ]  Length - 1 ebonisherwood39@gmail.com
+2022-04-30 00:52:04,317 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 00:52:04,356 [Thread-5    ] [ERROR]  
+Starting Thread : Name - kishagauthier@gmail.com
+Targets - {"ID": {"0": 4}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": " "}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2022-04-30 00:52:04,359 [Thread-5    ] [INFO ]  Length - 1 kishagauthier@gmail.com
+2022-04-30 00:52:04,363 [Thread-5    ] [ERROR]  
+Starting Thread : Name - trangmckinney@gmail.com
+Targets - {"ID": {"1": 6}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": " "}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2022-04-30 00:52:04,365 [Thread-5    ] [INFO ]  Length - 1 trangmckinney@gmail.com
+2022-04-30 00:52:04,367 [Thread-5    ] [ERROR]  
+Starting Thread : Name - janeencrowley2@gmail.com
+Targets - {"ID": {"2": 7}, "1": {"2": " "}, "2": {"2": " "}, "3": {"2": " "}, "4": {"2": " "}, "5": {"2": " "}, "6": {"2": " "}, "TONAME": {"2": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com"}, "flag": {"2": 0}}
+2022-04-30 00:52:04,369 [Thread-5    ] [INFO ]  Length - 1 janeencrowley2@gmail.com
+2022-04-30 00:52:05,318 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 00:52:05,374 [Thread-5    ] [ERROR]  
+Starting Thread : Name - newcombmichiko@gmail.com
+Targets - {"ID": {"0": 4}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": " "}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2022-04-30 00:52:05,378 [Thread-5    ] [INFO ]  Length - 1 newcombmichiko@gmail.com
+2022-04-30 00:52:05,381 [Thread-5    ] [ERROR]  
+Starting Thread : Name - dyershanelle@gmail.com
+Targets - {"ID": {"1": 6}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": " "}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2022-04-30 00:52:05,383 [Thread-5    ] [INFO ]  Length - 1 dyershanelle@gmail.com
+2022-04-30 00:52:05,384 [Thread-5    ] [ERROR]  
+Starting Thread : Name - gwenda767321hayes767321@gmail.com
+Targets - {"ID": {"2": 7}, "1": {"2": " "}, "2": {"2": " "}, "3": {"2": " "}, "4": {"2": " "}, "5": {"2": " "}, "6": {"2": " "}, "TONAME": {"2": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com"}, "flag": {"2": 0}}
+2022-04-30 00:52:05,386 [Thread-5    ] [INFO ]  Length - 1 gwenda767321hayes767321@gmail.com
+2022-04-30 00:52:06,321 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 00:52:06,391 [Thread-5    ] [ERROR]  
+Starting Thread : Name - vanessa780734costa780734@gmail.com
+Targets - {"ID": {"0": 4}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": " "}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2022-04-30 00:52:06,399 [Thread-5    ] [INFO ]  Length - 1 vanessa780734costa780734@gmail.com
+2022-04-30 00:52:06,404 [Thread-5    ] [ERROR]  
+Starting Thread : Name - augustinarector@gmail.com
+Targets - {"ID": {"1": 6}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": " "}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2022-04-30 00:52:06,408 [Thread-5    ] [INFO ]  Length - 1 augustinarector@gmail.com
+2022-04-30 00:52:06,417 [Thread-5    ] [ERROR]  
+Starting Thread : Name - manacarpenter349@gmail.com
+Targets - {"ID": {"2": 7}, "1": {"2": " "}, "2": {"2": " "}, "3": {"2": " "}, "4": {"2": " "}, "5": {"2": " "}, "6": {"2": " "}, "TONAME": {"2": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com"}, "flag": {"2": 0}}
+2022-04-30 00:52:06,420 [Thread-5    ] [INFO ]  Length - 1 manacarpenter349@gmail.com
+2022-04-30 00:52:10,517 [Thread-5    ] [INFO ]  removing email from target...
+2022-04-30 00:52:10,568 [Thread-5    ] [INFO ]  Sending Finished 7facbde5-6ee0-421a-b597-287f14379a3a
+2022-04-30 00:52:10,569 [CampaignRepo] [INFO ]  Starting Campaign End Report Webhook session...
+2022-04-30 00:52:11,455 [CampaignRepo] [INFO ]  Ending Campaign End Report Webhook session.
+2022-04-30 00:56:02,092 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 00:56:02,659 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 00:58:21,919 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 00:58:22,471 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 00:58:28,345 [Thread-3    ] [INFO ]  config updated
+2022-04-30 00:58:28,349 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 8
+ Delay: 0 - 1
+ Campaign ID: 65a9d692-6027-46e3-a067-8ac6d39f07c3
+ Add Custom Hostname: False
+2022-04-30 00:58:28,377 [Thread-4    ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": " "}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2022-04-30 00:58:28,379 [Thread-4    ] [INFO ]  Length - 1 jamescalloway402@gmail.com
+2022-04-30 00:58:28,382 [Thread-4    ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": " "}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2022-04-30 00:58:28,390 [Thread-4    ] [INFO ]  Length - 1 0101dave.gibbons22@gmail.com
+2022-04-30 00:58:33,315 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com shahimrans64@gmail.com
+2022-04-30 00:58:33,383 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 00:58:33,522 [RemoveTarget] [INFO ]  Deleted id - 2
+2022-04-30 00:58:33,691 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com shahimrans64@gmail.com
+2022-04-30 00:58:34,319 [SendReport  ] [INFO ]  POSTed 1 data to webhook
+2022-04-30 00:58:34,386 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 00:58:34,890 [RemoveTarget] [INFO ]  Deleted id - 1
+2022-04-30 00:58:36,175 [SendReport  ] [INFO ]  POSTed 1 data to webhook
+2022-04-30 00:58:36,398 [Thread-4    ] [INFO ]  removing email from target...
+2022-04-30 00:58:36,464 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-30 00:58:36,466 [Thread-4    ] [ERROR]  Error at Database.add_follow_up() - 'target_info'
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\database.py", line 210, in add_follow_up
+    ) for item in list_of_dict]
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\database.py", line 210, in <listcomp>
+    ) for item in list_of_dict]
+KeyError: 'target_info'
+
+2022-04-30 00:58:36,470 [Thread-4    ] [INFO ]  AddFollowUps unsuccessful
+2022-04-30 00:58:36,565 [Thread-4    ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-30 00:58:36,567 [Thread-4    ] [INFO ]  FollowUp scheduled: 65a9d692-6027-46e3-a067-8ac6d39f07c3
+2022-04-30 00:58:36,568 [Thread-4    ] [INFO ]  Sending Finished 65a9d692-6027-46e3-a067-8ac6d39f07c3
+2022-04-30 00:58:36,570 [CampaignRepo] [INFO ]  Starting Campaign End Report Webhook session...
+2022-04-30 00:58:37,444 [CampaignRepo] [INFO ]  Ending Campaign End Report Webhook session.
+2022-04-30 00:59:49,282 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 00:59:49,863 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 00:59:55,307 [Thread-3    ] [INFO ]  config updated
+2022-04-30 00:59:55,312 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 6
+ Delay: 0 - 1
+ Campaign ID: 1953d8d1-27fd-497f-ba60-a0c04afd001c
+ Add Custom Hostname: False
+2022-04-30 00:59:55,340 [Thread-4    ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 3}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": " "}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2022-04-30 00:59:55,342 [Thread-4    ] [INFO ]  Length - 1 jamescalloway402@gmail.com
+2022-04-30 00:59:55,344 [Thread-4    ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"1": 4}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": " "}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2022-04-30 00:59:55,347 [Thread-4    ] [INFO ]  Length - 1 0101dave.gibbons22@gmail.com
+2022-04-30 01:00:00,164 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com shahimrans64@gmail.com
+2022-04-30 01:00:00,342 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 01:00:00,480 [RemoveTarget] [INFO ]  Deleted id - 4
+2022-04-30 01:00:00,572 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com shahimrans64@gmail.com
+2022-04-30 01:00:01,345 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 01:00:01,544 [RemoveTarget] [INFO ]  Deleted id - 3
+2022-04-30 01:00:01,674 [SendReport  ] [INFO ]  POSTed 1 data to webhook
+2022-04-30 01:00:03,355 [Thread-4    ] [INFO ]  removing email from target...
+2022-04-30 01:00:03,412 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-30 01:00:03,414 [Thread-4    ] [ERROR]  Error at Database.add_follow_up() - 'target_info'
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\database.py", line 210, in add_follow_up
+    ) for item in list_of_dict]
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\database.py", line 210, in <listcomp>
+    ) for item in list_of_dict]
+KeyError: 'target_info'
+
+2022-04-30 01:00:03,417 [Thread-4    ] [INFO ]  AddFollowUps unsuccessful
+2022-04-30 01:00:03,482 [Thread-4    ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-30 01:00:03,483 [Thread-4    ] [INFO ]  FollowUp scheduled: 1953d8d1-27fd-497f-ba60-a0c04afd001c
+2022-04-30 01:00:03,483 [Thread-4    ] [INFO ]  Sending Finished 1953d8d1-27fd-497f-ba60-a0c04afd001c
+2022-04-30 01:00:03,484 [CampaignRepo] [INFO ]  Starting Campaign End Report Webhook session...
+2022-04-30 01:00:05,235 [SendReport  ] [INFO ]  POSTed 1 data to webhook
+2022-04-30 01:00:06,299 [CampaignRepo] [INFO ]  Ending Campaign End Report Webhook session.
+2022-04-30 01:01:05,832 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 01:01:06,380 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 01:01:10,601 [Thread-3    ] [INFO ]  config updated
+2022-04-30 01:01:10,611 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 4
+ Delay: 0 - 1
+ Campaign ID: 4aa310e5-29e9-4799-ab98-264bf865d7f7
+ Add Custom Hostname: False
+2022-04-30 01:01:10,636 [Thread-4    ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 5}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": " "}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2022-04-30 01:01:10,642 [Thread-4    ] [INFO ]  Length - 1 jamescalloway402@gmail.com
+2022-04-30 01:01:10,645 [Thread-4    ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"1": 6}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": " "}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2022-04-30 01:01:10,648 [Thread-4    ] [INFO ]  Length - 1 0101dave.gibbons22@gmail.com
+2022-04-30 01:01:15,524 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com shahimrans64@gmail.com
+2022-04-30 01:01:15,772 [RemoveTarget] [INFO ]  Deleted id - 6
+2022-04-30 01:01:15,776 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 01:01:15,981 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com shahimrans64@gmail.com
+2022-04-30 01:01:16,573 [SendReport  ] [INFO ]  POSTed 1 data to webhook
+2022-04-30 01:01:16,779 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 01:01:16,846 [RemoveTarget] [INFO ]  Deleted id - 5
+2022-04-30 01:01:18,458 [SendReport  ] [INFO ]  POSTed 1 data to webhook
+2022-04-30 01:01:18,657 [Thread-4    ] [INFO ]  removing email from target...
+2022-04-30 01:01:18,722 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-30 01:01:18,865 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-04-30 01:01:18,927 [Thread-4    ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-30 01:01:18,928 [Thread-4    ] [INFO ]  FollowUp scheduled: 4aa310e5-29e9-4799-ab98-264bf865d7f7
+2022-04-30 01:01:18,929 [Thread-4    ] [INFO ]  Sending Finished 4aa310e5-29e9-4799-ab98-264bf865d7f7
+2022-04-30 01:01:18,930 [CampaignRepo] [INFO ]  Starting Campaign End Report Webhook session...
+2022-04-30 01:01:19,804 [CampaignRepo] [INFO ]  Ending Campaign End Report Webhook session.
+2022-04-30 01:02:45,278 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - 4aa310e5-29e9-4799-ab98-264bf865d7f7
+2022-04-30 01:02:45,279 [APScheduler ] [INFO ]  Removed job a27c851905c246ceaf6b57da9728db42
+2022-04-30 01:02:45,291 [ThreadPoolEx] [INFO ]  <pandas.core.groupby.generic.DataFrameGroupBy object at 0x000002A73EFCC940>
+2022-04-30 01:02:45,292 [ThreadPoolEx] [INFO ]  Finishing Followup process, Campaign Id - 4aa310e5-29e9-4799-ab98-264bf865d7f7
+2022-04-30 01:03:47,179 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 01:03:47,735 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 01:03:52,845 [Thread-3    ] [INFO ]  config updated
+2022-04-30 01:03:52,849 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 2
+ Delay: 0 - 1
+ Campaign ID: f7561ee0-4afa-4b42-80d9-b022ebe0fcb3
+ Add Custom Hostname: False
+2022-04-30 01:03:52,882 [Thread-4    ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 7}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": " "}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2022-04-30 01:03:52,885 [Thread-4    ] [INFO ]  Length - 1 jamescalloway402@gmail.com
+2022-04-30 01:03:52,888 [Thread-4    ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"1": 8}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": " "}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2022-04-30 01:03:52,895 [Thread-4    ] [INFO ]  Length - 1 0101dave.gibbons22@gmail.com
+2022-04-30 01:03:57,822 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com shahimrans64@gmail.com
+2022-04-30 01:03:57,889 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 01:03:58,030 [RemoveTarget] [INFO ]  Deleted id - 8
+2022-04-30 01:03:58,369 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com shahimrans64@gmail.com
+2022-04-30 01:03:58,824 [SendReport  ] [INFO ]  POSTed 1 data to webhook
+2022-04-30 01:03:58,890 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 01:03:59,098 [RemoveTarget] [INFO ]  Deleted id - 7
+2022-04-30 01:04:00,680 [SendReport  ] [INFO ]  POSTed 1 data to webhook
+2022-04-30 01:04:00,903 [Thread-4    ] [INFO ]  removing email from target...
+2022-04-30 01:04:01,105 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-30 01:04:01,168 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-04-30 01:04:01,228 [Thread-4    ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-30 01:04:01,229 [Thread-4    ] [INFO ]  FollowUp scheduled: 2022-04-30 01:05:27.568067 f7561ee0-4afa-4b42-80d9-b022ebe0fcb3
+2022-04-30 01:04:01,229 [Thread-4    ] [INFO ]  Sending Finished f7561ee0-4afa-4b42-80d9-b022ebe0fcb3
+2022-04-30 01:04:01,230 [CampaignRepo] [INFO ]  Starting Campaign End Report Webhook session...
+2022-04-30 01:04:02,098 [CampaignRepo] [INFO ]  Ending Campaign End Report Webhook session.
+2022-04-30 01:05:27,569 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - f7561ee0-4afa-4b42-80d9-b022ebe0fcb3
+2022-04-30 01:05:27,570 [APScheduler ] [INFO ]  Removed job 1de0915b6ca94700a21b9e8c86b04bc6
+2022-04-30 01:05:27,698 [ThreadPoolEx] [INFO ]     id                   group_email  ... email_subject              campaign_time
+0   3  0101dave.gibbons22@gmail.com  ...      Personal 2022-04-29 19:03:52.876024
+1   4    jamescalloway402@gmail.com  ...      Personal 2022-04-29 19:03:52.876024
+
+[2 rows x 8 columns]
+2022-04-30 01:05:27,701 [ThreadPoolEx] [INFO ]  Finishing Followup process, Campaign Id - f7561ee0-4afa-4b42-80d9-b022ebe0fcb3
+2022-04-30 01:06:01,459 [Thread-11   ] [ERROR]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2022-04-30 01:06:49,491 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 01:06:50,063 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 01:07:56,072 [Thread-3    ] [INFO ]  config updated
+2022-04-30 01:08:07,043 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 01:08:07,602 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 01:08:11,598 [Thread-3    ] [INFO ]  config updated
+2022-04-30 01:08:11,601 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 8
+ Delay: 0 - 1
+ Campaign ID: 96850859-1483-4dca-9f65-f0fceda636dc
+ Add Custom Hostname: False
+2022-04-30 01:08:11,627 [Thread-4    ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 1}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": " "}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2022-04-30 01:08:11,630 [Thread-4    ] [INFO ]  Length - 1 jamescalloway402@gmail.com
+2022-04-30 01:08:11,633 [Thread-4    ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"1": 2}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": " "}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2022-04-30 01:08:11,636 [Thread-4    ] [INFO ]  Length - 1 0101dave.gibbons22@gmail.com
+2022-04-30 01:08:16,399 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com shahimrans64@gmail.com
+2022-04-30 01:08:16,641 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 01:08:16,737 [RemoveTarget] [INFO ]  Deleted id - 2
+2022-04-30 01:08:17,481 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com shahimrans64@gmail.com
+2022-04-30 01:08:17,580 [SendReport  ] [INFO ]  POSTed 1 data to webhook
+2022-04-30 01:08:17,643 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 01:08:17,798 [RemoveTarget] [INFO ]  Deleted id - 1
+2022-04-30 01:08:19,459 [SendReport  ] [INFO ]  POSTed 1 data to webhook
+2022-04-30 01:08:20,647 [Thread-4    ] [INFO ]  removing email from target...
+2022-04-30 01:08:20,709 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-30 01:08:20,841 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-04-30 01:08:20,899 [Thread-4    ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-30 01:08:20,899 [Thread-4    ] [INFO ]  FollowUp scheduled: 2022-04-30 01:08:29.482739 96850859-1483-4dca-9f65-f0fceda636dc
+2022-04-30 01:08:20,900 [Thread-4    ] [INFO ]  Sending Finished 96850859-1483-4dca-9f65-f0fceda636dc
+2022-04-30 01:08:20,902 [CampaignRepo] [INFO ]  Starting Campaign End Report Webhook session...
+2022-04-30 01:08:21,804 [CampaignRepo] [INFO ]  Ending Campaign End Report Webhook session.
+2022-04-30 01:08:29,490 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - 96850859-1483-4dca-9f65-f0fceda636dc
+2022-04-30 01:08:29,490 [APScheduler ] [INFO ]  Removed job 8287970486f24780aae9d3d74076be56
+2022-04-30 01:08:29,518 [ThreadPoolEx] [INFO ]     id                   group_email  ... email_subject              campaign_time
+0   5  0101dave.gibbons22@gmail.com  ...      Personal 2022-04-29 19:08:11.622844
+1   6    jamescalloway402@gmail.com  ...      Personal 2022-04-29 19:08:11.622844
+
+[2 rows x 8 columns]
+2022-04-30 01:08:29,520 [ThreadPoolEx] [INFO ]  Finishing Followup process, Campaign Id - 96850859-1483-4dca-9f65-f0fceda636dc
+2022-04-30 12:00:13,704 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 12:00:16,453 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 12:00:36,728 [Thread-3    ] [INFO ]  config updated
+2022-04-30 12:00:36,735 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 6
+ Delay: 0 - 1
+ Campaign ID: f0a35d0b-4f64-400c-ac74-256f76bb1885
+ Add Custom Hostname: False
+2022-04-30 12:00:36,849 [Thread-4    ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 3}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": " "}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2022-04-30 12:00:36,851 [Thread-4    ] [INFO ]  Length - 1 jamescalloway402@gmail.com
+2022-04-30 12:00:36,853 [Thread-4    ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"1": 4}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": " "}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2022-04-30 12:00:36,857 [Thread-4    ] [INFO ]  Length - 1 0101dave.gibbons22@gmail.com
+2022-04-30 12:00:42,613 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com shahimrans64@gmail.com
+2022-04-30 12:00:42,753 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 12:00:42,765 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com shahimrans64@gmail.com
+2022-04-30 12:00:42,904 [RemoveTarget] [INFO ]  Deleted id - 4
+2022-04-30 12:00:43,716 [SendReport  ] [INFO ]  POSTed 1 data to webhook
+2022-04-30 12:00:43,756 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 12:00:43,966 [RemoveTarget] [INFO ]  Deleted id - 3
+2022-04-30 12:00:45,579 [SendReport  ] [INFO ]  POSTed 1 data to webhook
+2022-04-30 12:00:45,866 [Thread-4    ] [INFO ]  removing email from target...
+2022-04-30 12:00:45,929 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-30 12:00:45,938 [Thread-4    ] [ERROR]  Error at Database.add_follow_up() - 'email_subject'
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\database.py", line 210, in add_follow_up
+    ) for item in list_of_dict]
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\database.py", line 210, in <listcomp>
+    ) for item in list_of_dict]
+KeyError: 'email_subject'
+
+2022-04-30 12:00:45,940 [Thread-4    ] [INFO ]  AddFollowUps unsuccessful
+2022-04-30 12:00:46,196 [Thread-4    ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-30 12:00:46,197 [Thread-4    ] [INFO ]  FollowUp scheduled: 2022-04-30 12:00:54.580229 f0a35d0b-4f64-400c-ac74-256f76bb1885
+2022-04-30 12:00:46,198 [Thread-4    ] [INFO ]  Sending Finished f0a35d0b-4f64-400c-ac74-256f76bb1885
+2022-04-30 12:00:46,199 [CampaignRepo] [INFO ]  Starting Campaign End Report Webhook session...
+2022-04-30 12:00:47,071 [CampaignRepo] [INFO ]  Ending Campaign End Report Webhook session.
+2022-04-30 12:00:54,591 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - f0a35d0b-4f64-400c-ac74-256f76bb1885
+2022-04-30 12:00:54,591 [APScheduler ] [INFO ]  Removed job 4491985afc3a48a49a6bbe92271eac49
+2022-04-30 12:00:54,689 [ThreadPoolEx] [ERROR]  Error at follow_up, Campaign Id - f0a35d0b-4f64-400c-ac74-256f76bb1885: 'group_email'
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 864, in follow_up
+    followup_group_df = followups_df.groupby('group_email')
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pandas\core\frame.py", line 6525, in groupby
+    dropna=dropna,
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pandas\core\groupby\groupby.py", line 533, in __init__
+    dropna=self.dropna,
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pandas\core\groupby\grouper.py", line 786, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'group_email'
+
+2022-04-30 12:02:42,791 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 12:02:43,317 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 12:02:47,804 [Thread-3    ] [INFO ]  config updated
+2022-04-30 12:02:47,808 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 4
+ Delay: 0 - 1
+ Campaign ID: a1d5cb08-6d30-4559-bbc4-ea871547c2bf
+ Add Custom Hostname: False
+2022-04-30 12:02:47,820 [Thread-4    ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 5}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": " "}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2022-04-30 12:02:47,821 [Thread-4    ] [INFO ]  Length - 1 jamescalloway402@gmail.com
+2022-04-30 12:02:47,823 [Thread-4    ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"1": 6}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": " "}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2022-04-30 12:02:47,825 [Thread-4    ] [INFO ]  Length - 1 0101dave.gibbons22@gmail.com
+2022-04-30 12:02:52,881 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com shahimrans64@gmail.com
+2022-04-30 12:02:53,036 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com shahimrans64@gmail.com
+2022-04-30 12:02:53,828 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 12:02:53,889 [RemoveTarget] [INFO ]  Deleted id - 6
+2022-04-30 12:02:54,758 [SendReport  ] [INFO ]  POSTed 2 data to webhook
+2022-04-30 12:02:54,834 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 12:02:54,953 [RemoveTarget] [INFO ]  Deleted id - 5
+2022-04-30 12:02:55,831 [Thread-4    ] [INFO ]  removing email from target...
+2022-04-30 12:02:55,890 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-30 12:02:55,948 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-04-30 12:02:56,004 [Thread-4    ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-30 12:02:56,005 [Thread-4    ] [INFO ]  FollowUp scheduled: 2022-04-30 12:03:04.589771 a1d5cb08-6d30-4559-bbc4-ea871547c2bf
+2022-04-30 12:02:56,006 [Thread-4    ] [INFO ]  Sending Finished a1d5cb08-6d30-4559-bbc4-ea871547c2bf
+2022-04-30 12:02:56,007 [CampaignRepo] [INFO ]  Starting Campaign End Report Webhook session...
+2022-04-30 12:02:56,876 [CampaignRepo] [INFO ]  Ending Campaign End Report Webhook session.
+2022-04-30 12:03:04,605 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - a1d5cb08-6d30-4559-bbc4-ea871547c2bf
+2022-04-30 12:03:04,606 [APScheduler ] [INFO ]  Removed job 930eff6e91b84348ae6d668c37d297af
+2022-04-30 12:03:04,732 [ThreadPoolEx] [ERROR]  Error at follow_up, Campaign Id - a1d5cb08-6d30-4559-bbc4-ea871547c2bf: 'groups'
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pandas\core\indexes\base.py", line 2898, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas\_libs\index.pyx", line 70, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\index.pyx", line 101, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1675, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 1683, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'groups'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 886, in follow_up
+    groups_dict['groups_info'] = df_group['groups']
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pandas\core\frame.py", line 2906, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pandas\core\indexes\base.py", line 2900, in get_loc
+    raise KeyError(key) from err
+KeyError: 'groups'
+
+2022-04-30 12:05:36,744 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 12:05:37,291 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 12:05:41,729 [Thread-3    ] [INFO ]  config updated
+2022-04-30 12:05:41,737 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: True
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 2
+ Delay: 0 - 1
+ Campaign ID: 2fb1c110-4448-4ad7-b574-4d67229150b0
+ Add Custom Hostname: False
+2022-04-30 12:05:41,748 [Thread-4    ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 7}, "1": {"0": " "}, "2": {"0": " "}, "3": {"0": " "}, "4": {"0": " "}, "5": {"0": " "}, "6": {"0": " "}, "TONAME": {"0": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com"}, "flag": {"0": 0}}
+2022-04-30 12:05:41,751 [Thread-4    ] [INFO ]  Length - 1 jamescalloway402@gmail.com
+2022-04-30 12:05:41,753 [Thread-4    ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"1": 8}, "1": {"1": " "}, "2": {"1": " "}, "3": {"1": " "}, "4": {"1": " "}, "5": {"1": " "}, "6": {"1": " "}, "TONAME": {"1": "Imran"}, "EMAIL": {"1": "shahimrans64@gmail.com"}, "flag": {"1": 0}}
+2022-04-30 12:05:41,755 [Thread-4    ] [INFO ]  Length - 1 0101dave.gibbons22@gmail.com
+2022-04-30 12:05:46,498 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com shahimrans64@gmail.com
+2022-04-30 12:05:46,754 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 12:05:46,804 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com shahimrans64@gmail.com
+2022-04-30 12:05:46,898 [RemoveTarget] [INFO ]  Deleted id - 8
+2022-04-30 12:05:47,712 [SendReport  ] [INFO ]  POSTed 1 data to webhook
+2022-04-30 12:05:47,757 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 12:05:47,956 [RemoveTarget] [INFO ]  Deleted id - 7
+2022-04-30 12:05:49,603 [SendReport  ] [INFO ]  POSTed 1 data to webhook
+2022-04-30 12:05:49,761 [Thread-4    ] [INFO ]  removing email from target...
+2022-04-30 12:05:49,958 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-30 12:05:50,016 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-04-30 12:05:50,078 [Thread-4    ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-30 12:05:50,078 [Thread-4    ] [INFO ]  FollowUp scheduled: 2022-04-30 12:05:58.657252 2fb1c110-4448-4ad7-b574-4d67229150b0
+2022-04-30 12:05:50,078 [Thread-4    ] [INFO ]  Sending Finished 2fb1c110-4448-4ad7-b574-4d67229150b0
+2022-04-30 12:05:50,080 [CampaignRepo] [INFO ]  Starting Campaign End Report Webhook session...
+2022-04-30 12:05:50,969 [CampaignRepo] [INFO ]  Ending Campaign End Report Webhook session.
+2022-04-30 12:05:58,661 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - 2fb1c110-4448-4ad7-b574-4d67229150b0
+2022-04-30 12:05:58,661 [APScheduler ] [INFO ]  Removed job 259bd2bd433a44b8b5f45ef57eb6d428
+2022-04-30 12:05:58,718 [ThreadPoolEx] [INFO ]  Finishing Followup process, Campaign Id - 2fb1c110-4448-4ad7-b574-4d67229150b0
+2022-04-30 12:06:30,781 [Thread-11   ] [ERROR]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2022-04-30 12:06:57,289 [Thread-12   ] [INFO ]  config updated
+2022-04-30 12:06:57,293 [Thread-13   ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 2
+ Len of Group: 71
+ Len of Targets: 8
+ Delay: 0 - 1
+ Campaign ID: 99fc5ba4-574f-4e53-a7f0-85fda704ac70
+ Add Custom Hostname: False
+2022-04-30 12:06:57,309 [Thread-13   ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 1, "1": 2}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:06:57,311 [Thread-13   ] [INFO ]  Length - 2 jamescalloway402@gmail.com
+2022-04-30 12:06:57,314 [Thread-13   ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"2": 3, "3": 4}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:06:57,316 [Thread-13   ] [INFO ]  Length - 2 0101dave.gibbons22@gmail.com
+2022-04-30 12:06:57,318 [Thread-13   ] [ERROR]  
+Starting Thread : Name - ch4460165@gmail.com
+Targets - {"ID": {"4": 5, "5": 6}, "1": {"4": " ", "5": " "}, "2": {"4": " ", "5": " "}, "3": {"4": " ", "5": " "}, "4": {"4": " ", "5": " "}, "5": {"4": " ", "5": " "}, "6": {"4": " ", "5": " "}, "TONAME": {"4": "Imran", "5": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com", "5": "shahimrans64@gmail.com"}, "flag": {"4": 0, "5": 0}}
+2022-04-30 12:06:57,319 [Thread-13   ] [INFO ]  Length - 2 ch4460165@gmail.com
+2022-04-30 12:06:57,321 [Thread-13   ] [ERROR]  
+Starting Thread : Name - bermannydia@gmail.com
+Targets - {"ID": {"6": 7, "7": 8}, "1": {"6": " ", "7": " "}, "2": {"6": " ", "7": " "}, "3": {"6": " ", "7": " "}, "4": {"6": " ", "7": " "}, "5": {"6": " ", "7": " "}, "6": {"6": " ", "7": " "}, "TONAME": {"6": "Imran", "7": "Imran"}, "EMAIL": {"6": "shahimrans64@gmail.com", "7": "shahimrans64@gmail.com"}, "flag": {"6": 0, "7": 0}}
+2022-04-30 12:06:57,322 [Thread-13   ] [INFO ]  Length - 2 bermannydia@gmail.com
+2022-04-30 12:07:01,477 [bermannydia@] [ERROR]  Error at Sending - bermannydia@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials u10-20020adfb20a000000b0020c5253d8e7sm1103264wra.51 - gsmtp')
+
+2022-04-30 12:07:02,104 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com shahimrans64@gmail.com
+2022-04-30 12:07:02,305 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 12:07:02,615 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com shahimrans64@gmail.com
+2022-04-30 12:07:03,303 [ch4460165@gm] [INFO ]  Sent - ch4460165@gmail.com shahimrans64@gmail.com
+2022-04-30 12:07:03,308 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 12:07:04,314 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 12:07:05,329 [Thread-13   ] [ERROR]  
+Starting Thread : Name - nelsondigna95@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:05,331 [Thread-13   ] [INFO ]  Length - 2 nelsondigna95@gmail.com
+2022-04-30 12:07:05,332 [Thread-13   ] [ERROR]  
+Starting Thread : Name - alyse865480clayton865480@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:05,333 [Thread-13   ] [INFO ]  Length - 2 alyse865480clayton865480@gmail.com
+2022-04-30 12:07:05,335 [Thread-13   ] [ERROR]  
+Starting Thread : Name - gaylenebarr52@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:05,336 [Thread-13   ] [INFO ]  Length - 1 gaylenebarr52@gmail.com
+2022-04-30 12:07:07,342 [Thread-13   ] [ERROR]  
+Starting Thread : Name - cammie554076robbins554076@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:07,344 [Thread-13   ] [INFO ]  Length - 2 cammie554076robbins554076@gmail.com
+2022-04-30 12:07:07,346 [Thread-13   ] [ERROR]  
+Starting Thread : Name - allisonkanesha97@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:07,347 [Thread-13   ] [INFO ]  Length - 2 allisonkanesha97@gmail.com
+2022-04-30 12:07:07,348 [Thread-13   ] [ERROR]  
+Starting Thread : Name - pughlael052@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:07,349 [Thread-13   ] [INFO ]  Length - 1 pughlael052@gmail.com
+2022-04-30 12:07:09,354 [Thread-13   ] [ERROR]  
+Starting Thread : Name - ebonisherwood39@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:09,355 [Thread-13   ] [INFO ]  Length - 2 ebonisherwood39@gmail.com
+2022-04-30 12:07:09,357 [Thread-13   ] [ERROR]  
+Starting Thread : Name - kishagauthier@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:09,358 [Thread-13   ] [INFO ]  Length - 2 kishagauthier@gmail.com
+2022-04-30 12:07:09,360 [Thread-13   ] [ERROR]  
+Starting Thread : Name - trangmckinney@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:09,361 [Thread-13   ] [INFO ]  Length - 1 trangmckinney@gmail.com
+2022-04-30 12:07:11,366 [Thread-13   ] [ERROR]  
+Starting Thread : Name - janeencrowley2@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:11,367 [Thread-13   ] [INFO ]  Length - 2 janeencrowley2@gmail.com
+2022-04-30 12:07:11,368 [Thread-13   ] [ERROR]  
+Starting Thread : Name - newcombmichiko@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:11,369 [Thread-13   ] [INFO ]  Length - 2 newcombmichiko@gmail.com
+2022-04-30 12:07:11,372 [Thread-13   ] [ERROR]  
+Starting Thread : Name - dyershanelle@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:11,373 [Thread-13   ] [INFO ]  Length - 1 dyershanelle@gmail.com
+2022-04-30 12:07:13,377 [Thread-13   ] [ERROR]  
+Starting Thread : Name - gwenda767321hayes767321@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:13,381 [Thread-13   ] [INFO ]  Length - 2 gwenda767321hayes767321@gmail.com
+2022-04-30 12:07:13,382 [Thread-13   ] [ERROR]  
+Starting Thread : Name - vanessa780734costa780734@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:13,383 [Thread-13   ] [INFO ]  Length - 2 vanessa780734costa780734@gmail.com
+2022-04-30 12:07:13,385 [Thread-13   ] [ERROR]  
+Starting Thread : Name - augustinarector@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:13,386 [Thread-13   ] [INFO ]  Length - 1 augustinarector@gmail.com
+2022-04-30 12:07:15,390 [Thread-13   ] [ERROR]  
+Starting Thread : Name - manacarpenter349@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:15,392 [Thread-13   ] [INFO ]  Length - 2 manacarpenter349@gmail.com
+2022-04-30 12:07:15,394 [Thread-13   ] [ERROR]  
+Starting Thread : Name - americapitts65@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:15,396 [Thread-13   ] [INFO ]  Length - 2 americapitts65@gmail.com
+2022-04-30 12:07:15,398 [Thread-13   ] [ERROR]  
+Starting Thread : Name - deatonmei321@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:15,399 [Thread-13   ] [INFO ]  Length - 1 deatonmei321@gmail.com
+2022-04-30 12:07:17,403 [Thread-13   ] [ERROR]  
+Starting Thread : Name - ec3170717@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:17,405 [Thread-13   ] [INFO ]  Length - 2 ec3170717@gmail.com
+2022-04-30 12:07:17,406 [Thread-13   ] [ERROR]  
+Starting Thread : Name - dickinsonalicia6@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:17,408 [Thread-13   ] [INFO ]  Length - 2 dickinsonalicia6@gmail.com
+2022-04-30 12:07:17,410 [Thread-13   ] [ERROR]  
+Starting Thread : Name - driscollmiranda7@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:17,411 [Thread-13   ] [INFO ]  Length - 1 driscollmiranda7@gmail.com
+2022-04-30 12:07:19,419 [Thread-13   ] [ERROR]  
+Starting Thread : Name - evelineperry913@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:19,419 [Thread-13   ] [INFO ]  Length - 2 evelineperry913@gmail.com
+2022-04-30 12:07:19,421 [Thread-13   ] [ERROR]  
+Starting Thread : Name - amieecallahan2@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:19,422 [Thread-13   ] [INFO ]  Length - 2 amieecallahan2@gmail.com
+2022-04-30 12:07:19,424 [Thread-13   ] [ERROR]  
+Starting Thread : Name - hardinghildegard@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:19,425 [Thread-13   ] [INFO ]  Length - 1 hardinghildegard@gmail.com
+2022-04-30 12:07:21,430 [Thread-13   ] [ERROR]  
+Starting Thread : Name - britt277384hanks277384@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:21,433 [Thread-13   ] [INFO ]  Length - 2 britt277384hanks277384@gmail.com
+2022-04-30 12:07:21,434 [Thread-13   ] [ERROR]  
+Starting Thread : Name - coyledominque371@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:21,436 [Thread-13   ] [INFO ]  Length - 2 coyledominque371@gmail.com
+2022-04-30 12:07:21,437 [Thread-13   ] [ERROR]  
+Starting Thread : Name - fshavon9@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:21,438 [Thread-13   ] [INFO ]  Length - 1 fshavon9@gmail.com
+2022-04-30 12:07:23,443 [Thread-13   ] [ERROR]  
+Starting Thread : Name - shawnta656165rowell656165@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:23,445 [Thread-13   ] [INFO ]  Length - 2 shawnta656165rowell656165@gmail.com
+2022-04-30 12:07:23,446 [Thread-13   ] [ERROR]  
+Starting Thread : Name - rikkishelley66@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:23,447 [Thread-13   ] [INFO ]  Length - 2 rikkishelley66@gmail.com
+2022-04-30 12:07:23,450 [Thread-13   ] [ERROR]  
+Starting Thread : Name - shenikablanton85@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:23,450 [Thread-13   ] [INFO ]  Length - 1 shenikablanton85@gmail.com
+2022-04-30 12:07:25,454 [Thread-13   ] [ERROR]  
+Starting Thread : Name - manhewitt301@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:25,456 [Thread-13   ] [INFO ]  Length - 2 manhewitt301@gmail.com
+2022-04-30 12:07:25,458 [Thread-13   ] [ERROR]  
+Starting Thread : Name - readl2810@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:25,459 [Thread-13   ] [INFO ]  Length - 2 readl2810@gmail.com
+2022-04-30 12:07:25,461 [Thread-13   ] [ERROR]  
+Starting Thread : Name - latriciay373@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:25,462 [Thread-13   ] [INFO ]  Length - 1 latriciay373@gmail.com
+2022-04-30 12:07:27,469 [Thread-13   ] [ERROR]  
+Starting Thread : Name - kearneykira733@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:27,471 [Thread-13   ] [INFO ]  Length - 2 kearneykira733@gmail.com
+2022-04-30 12:07:27,473 [Thread-13   ] [ERROR]  
+Starting Thread : Name - hoskinsj787@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:27,474 [Thread-13   ] [INFO ]  Length - 2 hoskinsj787@gmail.com
+2022-04-30 12:07:27,476 [Thread-13   ] [ERROR]  
+Starting Thread : Name - elwandalee81@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:27,476 [Thread-13   ] [INFO ]  Length - 1 elwandalee81@gmail.com
+2022-04-30 12:07:29,484 [Thread-13   ] [ERROR]  
+Starting Thread : Name - mccabefelicidad@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:29,486 [Thread-13   ] [INFO ]  Length - 2 mccabefelicidad@gmail.com
+2022-04-30 12:07:29,488 [Thread-13   ] [ERROR]  
+Starting Thread : Name - fultonalbert1@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:29,489 [Thread-13   ] [INFO ]  Length - 2 fultonalbert1@gmail.com
+2022-04-30 12:07:29,490 [Thread-13   ] [ERROR]  
+Starting Thread : Name - lnu94846@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:29,491 [Thread-13   ] [INFO ]  Length - 1 lnu94846@gmail.com
+2022-04-30 12:07:31,500 [Thread-13   ] [ERROR]  
+Starting Thread : Name - sleesa675@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:31,502 [Thread-13   ] [INFO ]  Length - 2 sleesa675@gmail.com
+2022-04-30 12:07:31,503 [Thread-13   ] [ERROR]  
+Starting Thread : Name - storeylaura638@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:31,504 [Thread-13   ] [INFO ]  Length - 2 storeylaura638@gmail.com
+2022-04-30 12:07:31,506 [Thread-13   ] [ERROR]  
+Starting Thread : Name - sixta2895@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:31,507 [Thread-13   ] [INFO ]  Length - 1 sixta2895@gmail.com
+2022-04-30 12:07:33,512 [Thread-13   ] [ERROR]  
+Starting Thread : Name - jenice140790stephens140790@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:33,514 [Thread-13   ] [INFO ]  Length - 2 jenice140790stephens140790@gmail.com
+2022-04-30 12:07:33,516 [Thread-13   ] [ERROR]  
+Starting Thread : Name - callpinkie9@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:33,517 [Thread-13   ] [INFO ]  Length - 2 callpinkie9@gmail.com
+2022-04-30 12:07:33,518 [Thread-13   ] [ERROR]  
+Starting Thread : Name - lenitaf11@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:33,519 [Thread-13   ] [INFO ]  Length - 1 lenitaf11@gmail.com
+2022-04-30 12:07:35,524 [Thread-13   ] [ERROR]  
+Starting Thread : Name - loisesavage633@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:35,526 [Thread-13   ] [INFO ]  Length - 2 loisesavage633@gmail.com
+2022-04-30 12:07:35,528 [Thread-13   ] [ERROR]  
+Starting Thread : Name - john33221platt33221@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:35,529 [Thread-13   ] [INFO ]  Length - 2 john33221platt33221@gmail.com
+2022-04-30 12:07:35,530 [Thread-13   ] [ERROR]  
+Starting Thread : Name - mistiecarrier@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:35,531 [Thread-13   ] [INFO ]  Length - 1 mistiecarrier@gmail.com
+2022-04-30 12:07:37,536 [Thread-13   ] [ERROR]  
+Starting Thread : Name - hay77876@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:37,538 [Thread-13   ] [INFO ]  Length - 2 hay77876@gmail.com
+2022-04-30 12:07:37,540 [Thread-13   ] [ERROR]  
+Starting Thread : Name - gossgwyneth962@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:37,541 [Thread-13   ] [INFO ]  Length - 2 gossgwyneth962@gmail.com
+2022-04-30 12:07:37,543 [Thread-13   ] [ERROR]  
+Starting Thread : Name - eleasesnodgrass@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:37,544 [Thread-13   ] [INFO ]  Length - 1 eleasesnodgrass@gmail.com
+2022-04-30 12:07:39,548 [Thread-13   ] [ERROR]  
+Starting Thread : Name - ahart2837@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:39,550 [Thread-13   ] [INFO ]  Length - 2 ahart2837@gmail.com
+2022-04-30 12:07:39,552 [Thread-13   ] [ERROR]  
+Starting Thread : Name - tempiedowns9@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:39,554 [Thread-13   ] [INFO ]  Length - 2 tempiedowns9@gmail.com
+2022-04-30 12:07:39,556 [Thread-13   ] [ERROR]  
+Starting Thread : Name - gkane748@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:39,557 [Thread-13   ] [INFO ]  Length - 1 gkane748@gmail.com
+2022-04-30 12:07:41,561 [Thread-13   ] [ERROR]  
+Starting Thread : Name - belangertambra515@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:41,563 [Thread-13   ] [INFO ]  Length - 2 belangertambra515@gmail.com
+2022-04-30 12:07:41,564 [Thread-13   ] [ERROR]  
+Starting Thread : Name - grubbraina@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:41,566 [Thread-13   ] [INFO ]  Length - 2 grubbraina@gmail.com
+2022-04-30 12:07:41,567 [Thread-13   ] [ERROR]  
+Starting Thread : Name - roxy48338strauss48338@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:41,569 [Thread-13   ] [INFO ]  Length - 1 roxy48338strauss48338@gmail.com
+2022-04-30 12:07:43,573 [Thread-13   ] [ERROR]  
+Starting Thread : Name - raymondcora90@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:43,575 [Thread-13   ] [INFO ]  Length - 2 raymondcora90@gmail.com
+2022-04-30 12:07:43,577 [Thread-13   ] [ERROR]  
+Starting Thread : Name - dodgedaine@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:43,578 [Thread-13   ] [INFO ]  Length - 2 dodgedaine@gmail.com
+2022-04-30 12:07:43,580 [Thread-13   ] [ERROR]  
+Starting Thread : Name - joycedemetrius368@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:43,581 [Thread-13   ] [INFO ]  Length - 1 joycedemetrius368@gmail.com
+2022-04-30 12:07:45,587 [Thread-13   ] [ERROR]  
+Starting Thread : Name - frediapower@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:45,588 [Thread-13   ] [INFO ]  Length - 2 frediapower@gmail.com
+2022-04-30 12:07:45,590 [Thread-13   ] [ERROR]  
+Starting Thread : Name - willardhilaria545@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:45,592 [Thread-13   ] [INFO ]  Length - 2 willardhilaria545@gmail.com
+2022-04-30 12:07:45,594 [Thread-13   ] [ERROR]  
+Starting Thread : Name - connorlorinda932@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:45,594 [Thread-13   ] [INFO ]  Length - 1 connorlorinda932@gmail.com
+2022-04-30 12:07:47,602 [Thread-13   ] [ERROR]  
+Starting Thread : Name - vaughant649@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:47,605 [Thread-13   ] [INFO ]  Length - 2 vaughant649@gmail.com
+2022-04-30 12:07:47,607 [Thread-13   ] [ERROR]  
+Starting Thread : Name - tuttleantonette@gmail.com
+Targets - {"ID": {"2": 6, "3": 7}, "1": {"2": " ", "3": " "}, "2": {"2": " ", "3": " "}, "3": {"2": " ", "3": " "}, "4": {"2": " ", "3": " "}, "5": {"2": " ", "3": " "}, "6": {"2": " ", "3": " "}, "TONAME": {"2": "Imran", "3": "Imran"}, "EMAIL": {"2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"2": 0, "3": 0}}
+2022-04-30 12:07:47,608 [Thread-13   ] [INFO ]  Length - 2 tuttleantonette@gmail.com
+2022-04-30 12:07:47,610 [Thread-13   ] [ERROR]  
+Starting Thread : Name - mahaliacrouch@gmail.com
+Targets - {"ID": {"4": 8}, "1": {"4": " "}, "2": {"4": " "}, "3": {"4": " "}, "4": {"4": " "}, "5": {"4": " "}, "6": {"4": " "}, "TONAME": {"4": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com"}, "flag": {"4": 0}}
+2022-04-30 12:07:47,611 [Thread-13   ] [INFO ]  Length - 1 mahaliacrouch@gmail.com
+2022-04-30 12:07:49,615 [Thread-13   ] [ERROR]  
+Starting Thread : Name - knottlacresha7@gmail.com
+Targets - {"ID": {"0": 2, "1": 4}, "1": {"0": " ", "1": " "}, "2": {"0": " ", "1": " "}, "3": {"0": " ", "1": " "}, "4": {"0": " ", "1": " "}, "5": {"0": " ", "1": " "}, "6": {"0": " ", "1": " "}, "TONAME": {"0": "Imran", "1": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0}}
+2022-04-30 12:07:49,617 [Thread-13   ] [INFO ]  Length - 2 knottlacresha7@gmail.com
+2022-04-30 12:07:51,623 [Thread-13   ] [INFO ]  AddFollowUps starting...
+2022-04-30 12:07:51,768 [Thread-13   ] [INFO ]  AddFollowUps successful
+2022-04-30 12:07:51,769 [Thread-13   ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-30 12:07:51,769 [Thread-13   ] [INFO ]  FollowUp scheduled: 2022-04-30 12:08:00.409279 99fc5ba4-574f-4e53-a7f0-85fda704ac70
+2022-04-30 12:07:51,770 [Thread-13   ] [INFO ]  Sending Finished 99fc5ba4-574f-4e53-a7f0-85fda704ac70
+2022-04-30 12:08:00,410 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - 99fc5ba4-574f-4e53-a7f0-85fda704ac70
+2022-04-30 12:08:00,411 [APScheduler ] [INFO ]  Removed job 089da7834fea43e387446cccc08e9b93
+2022-04-30 12:08:00,439 [ThreadPoolEx] [INFO ]  Finishing Followup process, Campaign Id - 99fc5ba4-574f-4e53-a7f0-85fda704ac70
+2022-04-30 12:09:36,593 [Thread-87   ] [INFO ]  config updated
+2022-04-30 12:09:36,597 [Thread-88   ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 4
+ Len of Group: 2
+ Len of Targets: 8
+ Delay: 0 - 10
+ Campaign ID: d4f13ff7-2776-4771-9ae8-a8e3d92e96f3
+ Add Custom Hostname: False
+2022-04-30 12:09:36,610 [Thread-88   ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 1, "1": 2, "2": 3, "3": 4}, "1": {"0": " ", "1": " ", "2": " ", "3": " "}, "2": {"0": " ", "1": " ", "2": " ", "3": " "}, "3": {"0": " ", "1": " ", "2": " ", "3": " "}, "4": {"0": " ", "1": " ", "2": " ", "3": " "}, "5": {"0": " ", "1": " ", "2": " ", "3": " "}, "6": {"0": " ", "1": " ", "2": " ", "3": " "}, "TONAME": {"0": "Imran", "1": "Imran", "2": "Imran", "3": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com", "2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0, "2": 0, "3": 0}}
+2022-04-30 12:09:36,612 [Thread-88   ] [INFO ]  Length - 4 jamescalloway402@gmail.com
+2022-04-30 12:09:36,614 [Thread-88   ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"4": 5, "5": 6, "6": 7, "7": 8}, "1": {"4": " ", "5": " ", "6": " ", "7": " "}, "2": {"4": " ", "5": " ", "6": " ", "7": " "}, "3": {"4": " ", "5": " ", "6": " ", "7": " "}, "4": {"4": " ", "5": " ", "6": " ", "7": " "}, "5": {"4": " ", "5": " ", "6": " ", "7": " "}, "6": {"4": " ", "5": " ", "6": " ", "7": " "}, "TONAME": {"4": "Imran", "5": "Imran", "6": "Imran", "7": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com", "5": "shahimrans64@gmail.com", "6": "shahimrans64@gmail.com", "7": "shahimrans64@gmail.com"}, "flag": {"4": 0, "5": 0, "6": 0, "7": 0}}
+2022-04-30 12:09:36,615 [Thread-88   ] [INFO ]  Length - 4 0101dave.gibbons22@gmail.com
+2022-04-30 12:09:44,389 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com shahimrans64@gmail.com
+2022-04-30 12:09:44,615 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 12:09:45,717 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com shahimrans64@gmail.com
+2022-04-30 12:09:46,620 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 12:09:58,634 [Thread-88   ] [INFO ]  AddFollowUps starting...
+2022-04-30 12:09:58,686 [Thread-88   ] [INFO ]  AddFollowUps successful
+2022-04-30 12:09:58,687 [Thread-88   ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-30 12:09:58,687 [Thread-88   ] [INFO ]  FollowUp scheduled: 2022-04-30 12:10:07.327168 d4f13ff7-2776-4771-9ae8-a8e3d92e96f3
+2022-04-30 12:09:58,688 [Thread-88   ] [INFO ]  Sending Finished d4f13ff7-2776-4771-9ae8-a8e3d92e96f3
+2022-04-30 12:10:07,328 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - d4f13ff7-2776-4771-9ae8-a8e3d92e96f3
+2022-04-30 12:10:07,328 [APScheduler ] [INFO ]  Removed job 5ad547a54611466fb2cc4f31c25e43a6
+2022-04-30 12:10:07,341 [ThreadPoolEx] [INFO ]  Finishing Followup process, Campaign Id - d4f13ff7-2776-4771-9ae8-a8e3d92e96f3
+2022-04-30 12:13:09,186 [Thread-92   ] [ERROR]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2022-04-30 12:13:25,329 [Thread-93   ] [INFO ]  config updated
+2022-04-30 12:13:25,331 [Thread-94   ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 4
+ Len of Group: 71
+ Len of Targets: 8
+ Delay: 0 - 10
+ Campaign ID: b0a56d71-bee9-44bc-a436-f03fd46ac921
+ Add Custom Hostname: False
+2022-04-30 12:13:25,342 [Thread-94   ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 1, "1": 2, "2": 3, "3": 4}, "1": {"0": " ", "1": " ", "2": " ", "3": " "}, "2": {"0": " ", "1": " ", "2": " ", "3": " "}, "3": {"0": " ", "1": " ", "2": " ", "3": " "}, "4": {"0": " ", "1": " ", "2": " ", "3": " "}, "5": {"0": " ", "1": " ", "2": " ", "3": " "}, "6": {"0": " ", "1": " ", "2": " ", "3": " "}, "TONAME": {"0": "Adele", "1": "Melany", "2": "Khalilah", "3": "Angela"}, "EMAIL": {"0": "adeleputnam310@gmail.com", "1": "melanymoss86@gmail.com", "2": "hopekhalilah110@gmail.com", "3": "angelacoffman453@gmail.com"}, "flag": {"0": 0, "1": 0, "2": 0, "3": 0}}
+2022-04-30 12:13:25,346 [Thread-94   ] [INFO ]  Length - 4 jamescalloway402@gmail.com
+2022-04-30 12:13:25,349 [Thread-94   ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"4": 5, "5": 6, "6": 7, "7": 8}, "1": {"4": " ", "5": " ", "6": " ", "7": " "}, "2": {"4": " ", "5": " ", "6": " ", "7": " "}, "3": {"4": " ", "5": " ", "6": " ", "7": " "}, "4": {"4": " ", "5": " ", "6": " ", "7": " "}, "5": {"4": " ", "5": " ", "6": " ", "7": " "}, "6": {"4": " ", "5": " ", "6": " ", "7": " "}, "TONAME": {"4": "Joie", "5": "Enzim", "6": "Karri", "7": "Loralee"}, "EMAIL": {"4": "joiehacker719@gmail.com", "5": "en2contact@gmail.com", "6": "krush4092@gmail.com", "7": "rhodesloralee@gmail.com"}, "flag": {"4": 0, "5": 0, "6": 0, "7": 0}}
+2022-04-30 12:13:25,351 [Thread-94   ] [INFO ]  Length - 4 0101dave.gibbons22@gmail.com
+2022-04-30 12:13:35,336 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com joiehacker719@gmail.com
+2022-04-30 12:13:39,731 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com adeleputnam310@gmail.com
+2022-04-30 12:13:42,341 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com en2contact@gmail.com
+2022-04-30 12:13:46,963 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com melanymoss86@gmail.com
+2022-04-30 12:13:53,386 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com hopekhalilah110@gmail.com
+2022-04-30 12:13:55,659 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com krush4092@gmail.com
+2022-04-30 12:13:58,688 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com angelacoffman453@gmail.com
+2022-04-30 12:14:08,018 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com rhodesloralee@gmail.com
+2022-04-30 12:14:08,380 [Thread-94   ] [INFO ]  AddFollowUps starting...
+2022-04-30 12:14:08,541 [Thread-94   ] [INFO ]  AddFollowUps successful
+2022-04-30 12:14:08,543 [Thread-94   ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-30 12:14:08,544 [Thread-94   ] [INFO ]  FollowUp scheduled: 2022-04-30 12:14:17.183747 b0a56d71-bee9-44bc-a436-f03fd46ac921
+2022-04-30 12:14:08,546 [Thread-94   ] [INFO ]  Sending Finished b0a56d71-bee9-44bc-a436-f03fd46ac921
+2022-04-30 12:14:17,185 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - b0a56d71-bee9-44bc-a436-f03fd46ac921
+2022-04-30 12:14:17,185 [APScheduler ] [INFO ]  Removed job 23c45288cd5541318e248243816e7ac0
+2022-04-30 12:14:17,204 [ThreadPoolEx] [INFO ]  Finishing Followup process, Campaign Id - b0a56d71-bee9-44bc-a436-f03fd46ac921
+2022-04-30 12:48:33,426 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 12:48:33,972 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 12:48:55,761 [Thread-3    ] [INFO ]  config updated
+2022-04-30 12:48:55,765 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 4
+ Len of Group: 71
+ Len of Targets: 8
+ Delay: 0 - 10
+ Campaign ID: 7e415358-176c-44f3-8dca-7689ca7f3db9
+ Add Custom Hostname: False
+2022-04-30 12:48:55,777 [Thread-4    ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 1, "1": 2, "2": 3, "3": 4}, "1": {"0": " ", "1": " ", "2": " ", "3": " "}, "2": {"0": " ", "1": " ", "2": " ", "3": " "}, "3": {"0": " ", "1": " ", "2": " ", "3": " "}, "4": {"0": " ", "1": " ", "2": " ", "3": " "}, "5": {"0": " ", "1": " ", "2": " ", "3": " "}, "6": {"0": " ", "1": " ", "2": " ", "3": " "}, "TONAME": {"0": "Adele", "1": "Melany", "2": "Khalilah", "3": "Angela"}, "EMAIL": {"0": "adeleputnam310@gmail.com", "1": "melanymoss86@gmail.com", "2": "hopekhalilah110@gmail.com", "3": "angelacoffman453@gmail.com"}, "flag": {"0": 0, "1": 0, "2": 0, "3": 0}}
+2022-04-30 12:48:55,780 [Thread-4    ] [INFO ]  Length - 4 jamescalloway402@gmail.com
+2022-04-30 12:48:55,781 [Thread-4    ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"4": 5, "5": 6, "6": 7, "7": 8}, "1": {"4": " ", "5": " ", "6": " ", "7": " "}, "2": {"4": " ", "5": " ", "6": " ", "7": " "}, "3": {"4": " ", "5": " ", "6": " ", "7": " "}, "4": {"4": " ", "5": " ", "6": " ", "7": " "}, "5": {"4": " ", "5": " ", "6": " ", "7": " "}, "6": {"4": " ", "5": " ", "6": " ", "7": " "}, "TONAME": {"4": "Joie", "5": "Enzim", "6": "Karri", "7": "Loralee"}, "EMAIL": {"4": "joiehacker719@gmail.com", "5": "en2contact@gmail.com", "6": "krush4092@gmail.com", "7": "rhodesloralee@gmail.com"}, "flag": {"4": 0, "5": 0, "6": 0, "7": 0}}
+2022-04-30 12:48:55,783 [Thread-4    ] [INFO ]  Length - 4 0101dave.gibbons22@gmail.com
+2022-04-30 12:49:01,207 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com joiehacker719@gmail.com
+2022-04-30 12:49:01,778 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 12:49:08,220 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com adeleputnam310@gmail.com
+2022-04-30 12:49:08,786 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 12:49:14,191 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com en2contact@gmail.com
+2022-04-30 12:49:14,793 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 12:49:19,165 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com krush4092@gmail.com
+2022-04-30 12:49:19,799 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 12:49:22,563 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com melanymoss86@gmail.com
+2022-04-30 12:49:22,802 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 12:49:30,120 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com rhodesloralee@gmail.com
+2022-04-30 12:49:30,811 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 12:49:33,055 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com hopekhalilah110@gmail.com
+2022-04-30 12:49:33,813 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 12:49:45,276 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com angelacoffman453@gmail.com
+2022-04-30 12:49:45,823 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 12:49:46,823 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-30 12:49:46,825 [Thread-4    ] [ERROR]  Error at Database.add_follow_up() - 'group_info'
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\database.py", line 208, in add_follow_up
+    ) for item in list_of_dict]
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\database.py", line 208, in <listcomp>
+    ) for item in list_of_dict]
+KeyError: 'group_info'
+
+2022-04-30 12:49:46,826 [Thread-4    ] [INFO ]  AddFollowUps unsuccessful
+2022-04-30 12:49:46,882 [Thread-4    ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-30 12:49:46,882 [Thread-4    ] [INFO ]  FollowUp scheduled: 2022-04-30 12:49:55.466963 7e415358-176c-44f3-8dca-7689ca7f3db9
+2022-04-30 12:49:46,883 [Thread-4    ] [INFO ]  Sending Finished 7e415358-176c-44f3-8dca-7689ca7f3db9
+2022-04-30 12:49:55,475 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - 7e415358-176c-44f3-8dca-7689ca7f3db9
+2022-04-30 12:49:55,475 [APScheduler ] [INFO ]  Removed job 4ae43f69789c4332b4840ad5f96f1e26
+2022-04-30 12:49:55,484 [ThreadPoolEx] [ERROR]  Error at follow_up, Campaign Id - 7e415358-176c-44f3-8dca-7689ca7f3db9: 'group_email'
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 865, in follow_up
+    followup_group_df = followups_df.groupby('group_email')
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pandas\core\frame.py", line 6525, in groupby
+    dropna=dropna,
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pandas\core\groupby\groupby.py", line 533, in __init__
+    dropna=self.dropna,
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pandas\core\groupby\grouper.py", line 786, in get_grouper
+    raise KeyError(gpr)
+KeyError: 'group_email'
+
+2022-04-30 13:08:17,062 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 13:08:17,713 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 13:08:22,753 [Thread-3    ] [INFO ]  config updated
+2022-04-30 13:08:22,757 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 4
+ Len of Group: 71
+ Len of Targets: 8
+ Delay: 0 - 10
+ Campaign ID: 9f735005-1cb7-4c09-ad0c-a57e5c8235f4
+ Add Custom Hostname: False
+2022-04-30 13:08:22,776 [Thread-4    ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 1, "1": 2, "2": 3, "3": 4}, "1": {"0": " ", "1": " ", "2": " ", "3": " "}, "2": {"0": " ", "1": " ", "2": " ", "3": " "}, "3": {"0": " ", "1": " ", "2": " ", "3": " "}, "4": {"0": " ", "1": " ", "2": " ", "3": " "}, "5": {"0": " ", "1": " ", "2": " ", "3": " "}, "6": {"0": " ", "1": " ", "2": " ", "3": " "}, "TONAME": {"0": "Adele", "1": "Melany", "2": "Khalilah", "3": "Angela"}, "EMAIL": {"0": "adeleputnam310@gmail.com", "1": "melanymoss86@gmail.com", "2": "hopekhalilah110@gmail.com", "3": "angelacoffman453@gmail.com"}, "flag": {"0": 0, "1": 0, "2": 0, "3": 0}}
+2022-04-30 13:08:22,779 [Thread-4    ] [INFO ]  Length - 4 jamescalloway402@gmail.com
+2022-04-30 13:08:22,781 [Thread-4    ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"4": 5, "5": 6, "6": 7, "7": 8}, "1": {"4": " ", "5": " ", "6": " ", "7": " "}, "2": {"4": " ", "5": " ", "6": " ", "7": " "}, "3": {"4": " ", "5": " ", "6": " ", "7": " "}, "4": {"4": " ", "5": " ", "6": " ", "7": " "}, "5": {"4": " ", "5": " ", "6": " ", "7": " "}, "6": {"4": " ", "5": " ", "6": " ", "7": " "}, "TONAME": {"4": "Joie", "5": "Enzim", "6": "Karri", "7": "Loralee"}, "EMAIL": {"4": "joiehacker719@gmail.com", "5": "en2contact@gmail.com", "6": "krush4092@gmail.com", "7": "rhodesloralee@gmail.com"}, "flag": {"4": 0, "5": 0, "6": 0, "7": 0}}
+2022-04-30 13:08:22,783 [Thread-4    ] [INFO ]  Length - 4 0101dave.gibbons22@gmail.com
+2022-04-30 13:08:33,299 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com adeleputnam310@gmail.com
+2022-04-30 13:08:33,779 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:08:35,175 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com joiehacker719@gmail.com
+2022-04-30 13:08:35,782 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:08:42,887 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com melanymoss86@gmail.com
+2022-04-30 13:08:43,789 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:08:45,155 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com en2contact@gmail.com
+2022-04-30 13:08:45,793 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:08:54,226 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com hopekhalilah110@gmail.com
+2022-04-30 13:08:54,803 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:08:55,195 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com krush4092@gmail.com
+2022-04-30 13:08:55,806 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:09:00,212 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com rhodesloralee@gmail.com
+2022-04-30 13:09:00,810 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:09:08,636 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com angelacoffman453@gmail.com
+2022-04-30 13:09:08,817 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:09:09,816 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-30 13:09:09,909 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-04-30 13:09:09,971 [Thread-4    ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-30 13:09:09,972 [Thread-4    ] [INFO ]  FollowUp scheduled: 2022-04-30 13:09:18.550937 9f735005-1cb7-4c09-ad0c-a57e5c8235f4
+2022-04-30 13:09:09,973 [Thread-4    ] [INFO ]  Sending Finished 9f735005-1cb7-4c09-ad0c-a57e5c8235f4
+2022-04-30 13:09:18,552 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - 9f735005-1cb7-4c09-ad0c-a57e5c8235f4
+2022-04-30 13:09:18,552 [APScheduler ] [INFO ]  Removed job fad8eb9a360f4d63aa9affa3dc3c80c2
+2022-04-30 13:09:18,564 [ThreadPoolEx] [ERROR]  Error at follow_up, Campaign Id - 9f735005-1cb7-4c09-ad0c-a57e5c8235f4: 'list' object has no attribute 'update'
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 872, in follow_up
+    groups_dict.update(groups_dict['group_info'])
+AttributeError: 'list' object has no attribute 'update'
+
+2022-04-30 13:18:52,691 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 13:18:53,240 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 13:19:12,242 [Thread-3    ] [INFO ]  config updated
+2022-04-30 13:19:12,252 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 4
+ Len of Group: 71
+ Len of Targets: 8
+ Delay: 0 - 10
+ Campaign ID: 40984655-a06e-483c-8a41-c143b4af6c4e
+ Add Custom Hostname: False
+2022-04-30 13:19:12,264 [Thread-4    ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 1, "1": 2, "2": 3, "3": 4}, "1": {"0": " ", "1": " ", "2": " ", "3": " "}, "2": {"0": " ", "1": " ", "2": " ", "3": " "}, "3": {"0": " ", "1": " ", "2": " ", "3": " "}, "4": {"0": " ", "1": " ", "2": " ", "3": " "}, "5": {"0": " ", "1": " ", "2": " ", "3": " "}, "6": {"0": " ", "1": " ", "2": " ", "3": " "}, "TONAME": {"0": "Adele", "1": "Melany", "2": "Khalilah", "3": "Angela"}, "EMAIL": {"0": "adeleputnam310@gmail.com", "1": "melanymoss86@gmail.com", "2": "hopekhalilah110@gmail.com", "3": "angelacoffman453@gmail.com"}, "flag": {"0": 0, "1": 0, "2": 0, "3": 0}}
+2022-04-30 13:19:12,265 [Thread-4    ] [INFO ]  Length - 4 jamescalloway402@gmail.com
+2022-04-30 13:19:12,267 [Thread-4    ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"4": 5, "5": 6, "6": 7, "7": 8}, "1": {"4": " ", "5": " ", "6": " ", "7": " "}, "2": {"4": " ", "5": " ", "6": " ", "7": " "}, "3": {"4": " ", "5": " ", "6": " ", "7": " "}, "4": {"4": " ", "5": " ", "6": " ", "7": " "}, "5": {"4": " ", "5": " ", "6": " ", "7": " "}, "6": {"4": " ", "5": " ", "6": " ", "7": " "}, "TONAME": {"4": "Joie", "5": "Enzim", "6": "Karri", "7": "Loralee"}, "EMAIL": {"4": "joiehacker719@gmail.com", "5": "en2contact@gmail.com", "6": "krush4092@gmail.com", "7": "rhodesloralee@gmail.com"}, "flag": {"4": 0, "5": 0, "6": 0, "7": 0}}
+2022-04-30 13:19:12,269 [Thread-4    ] [INFO ]  Length - 4 0101dave.gibbons22@gmail.com
+2022-04-30 13:19:21,273 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com joiehacker719@gmail.com
+2022-04-30 13:19:22,265 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:19:23,849 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com adeleputnam310@gmail.com
+2022-04-30 13:19:24,268 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:19:30,154 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com melanymoss86@gmail.com
+2022-04-30 13:19:30,275 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:19:34,247 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com en2contact@gmail.com
+2022-04-30 13:19:34,280 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:19:36,473 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com hopekhalilah110@gmail.com
+2022-04-30 13:19:37,283 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:19:45,284 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com krush4092@gmail.com
+2022-04-30 13:19:45,294 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:19:46,837 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com angelacoffman453@gmail.com
+2022-04-30 13:19:47,297 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:19:56,226 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com rhodesloralee@gmail.com
+2022-04-30 13:19:56,302 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:19:57,301 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-30 13:19:57,363 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-04-30 13:19:57,422 [Thread-4    ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-30 13:19:57,423 [Thread-4    ] [INFO ]  FollowUp scheduled: 2022-04-30 13:20:06.004326 40984655-a06e-483c-8a41-c143b4af6c4e
+2022-04-30 13:19:57,424 [Thread-4    ] [INFO ]  Sending Finished 40984655-a06e-483c-8a41-c143b4af6c4e
+2022-04-30 13:20:06,004 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - 40984655-a06e-483c-8a41-c143b4af6c4e
+2022-04-30 13:20:06,004 [APScheduler ] [INFO ]  Removed job a818f9f8f5a1454fab70d38b308f4be3
+2022-04-30 13:20:06,018 [Thread-8    ] [INFO ]  Starting ImapFollowUpCheck: 0101dave.gibbons22@gmail.com
+2022-04-30 13:20:08,480 [Thread-8    ] [INFO ]  Looking for ImapFollowUpCheck: joiehacker719@gmail.com
+2022-04-30 13:20:08,758 [Thread-8    ] [INFO ]  Looking for ImapFollowUpCheck: en2contact@gmail.com
+2022-04-30 13:20:09,028 [Thread-8    ] [INFO ]  Looking for ImapFollowUpCheck: krush4092@gmail.com
+2022-04-30 13:20:09,337 [Thread-8    ] [INFO ]  Looking for ImapFollowUpCheck: rhodesloralee@gmail.com
+2022-04-30 13:20:09,631 [Thread-8    ] [INFO ]  ImapFollowUpCheck: 0101dave.gibbons22@gmail.com Added to FollowUp list 
+2022-04-30 13:20:09,632 [Thread-8    ] [INFO ]  Finishing ImapFollowUpCheck: 0101dave.gibbons22@gmail.com
+2022-04-30 13:20:11,023 [Thread-9    ] [INFO ]  Starting ImapFollowUpCheck: jamescalloway402@gmail.com
+2022-04-30 13:20:13,579 [Thread-9    ] [INFO ]  Looking for ImapFollowUpCheck: adeleputnam310@gmail.com
+2022-04-30 13:20:13,846 [Thread-9    ] [INFO ]  Looking for ImapFollowUpCheck: melanymoss86@gmail.com
+2022-04-30 13:20:14,116 [Thread-9    ] [INFO ]  Looking for ImapFollowUpCheck: hopekhalilah110@gmail.com
+2022-04-30 13:20:18,324 [Thread-9    ] [INFO ]  Looking for ImapFollowUpCheck: angelacoffman453@gmail.com
+2022-04-30 13:20:18,596 [Thread-9    ] [INFO ]  ImapFollowUpCheck: jamescalloway402@gmail.com Added to FollowUp list 
+2022-04-30 13:20:18,597 [Thread-9    ] [INFO ]  Finishing ImapFollowUpCheck: jamescalloway402@gmail.com
+2022-04-30 13:20:19,025 [ThreadPoolEx] [INFO ]  follow_up: 2 email to be sent
+2022-04-30 13:20:19,027 [ThreadPoolEx] [ERROR]  Error at follow_up, Campaign Id - 40984655-a06e-483c-8a41-c143b4af6c4e: 'FIRSTFROMNAME'
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 902, in follow_up
+    follow_up_send = FollowUpSend(**item)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\followup_smtp.py", line 75, in __init__
+    super().__init__(**kwargs)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\followup_smtp.py", line 32, in __init__
+    self.first_from_name = kwargs["FIRSTFROMNAME"]
+KeyError: 'FIRSTFROMNAME'
+
+2022-04-30 13:21:36,726 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 13:21:37,273 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 13:21:55,190 [Thread-3    ] [INFO ]  config updated
+2022-04-30 13:21:55,195 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 4
+ Len of Group: 71
+ Len of Targets: 8
+ Delay: 0 - 10
+ Campaign ID: 467c3705-b561-4a59-aa65-b1c88d83bbe8
+ Add Custom Hostname: False
+2022-04-30 13:21:55,214 [Thread-4    ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 1, "1": 2, "2": 3, "3": 4}, "1": {"0": " ", "1": " ", "2": " ", "3": " "}, "2": {"0": " ", "1": " ", "2": " ", "3": " "}, "3": {"0": " ", "1": " ", "2": " ", "3": " "}, "4": {"0": " ", "1": " ", "2": " ", "3": " "}, "5": {"0": " ", "1": " ", "2": " ", "3": " "}, "6": {"0": " ", "1": " ", "2": " ", "3": " "}, "TONAME": {"0": "Adele", "1": "Melany", "2": "Khalilah", "3": "Angela"}, "EMAIL": {"0": "adeleputnam310@gmail.com", "1": "melanymoss86@gmail.com", "2": "hopekhalilah110@gmail.com", "3": "angelacoffman453@gmail.com"}, "flag": {"0": 0, "1": 0, "2": 0, "3": 0}}
+2022-04-30 13:21:55,217 [Thread-4    ] [INFO ]  Length - 4 jamescalloway402@gmail.com
+2022-04-30 13:21:55,219 [Thread-4    ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"4": 5, "5": 6, "6": 7, "7": 8}, "1": {"4": " ", "5": " ", "6": " ", "7": " "}, "2": {"4": " ", "5": " ", "6": " ", "7": " "}, "3": {"4": " ", "5": " ", "6": " ", "7": " "}, "4": {"4": " ", "5": " ", "6": " ", "7": " "}, "5": {"4": " ", "5": " ", "6": " ", "7": " "}, "6": {"4": " ", "5": " ", "6": " ", "7": " "}, "TONAME": {"4": "Joie", "5": "Enzim", "6": "Karri", "7": "Loralee"}, "EMAIL": {"4": "joiehacker719@gmail.com", "5": "en2contact@gmail.com", "6": "krush4092@gmail.com", "7": "rhodesloralee@gmail.com"}, "flag": {"4": 0, "5": 0, "6": 0, "7": 0}}
+2022-04-30 13:21:55,220 [Thread-4    ] [INFO ]  Length - 4 0101dave.gibbons22@gmail.com
+2022-04-30 13:22:00,269 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com adeleputnam310@gmail.com
+2022-04-30 13:22:01,204 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:22:06,227 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com joiehacker719@gmail.com
+2022-04-30 13:22:07,210 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:22:12,273 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com en2contact@gmail.com
+2022-04-30 13:22:13,215 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:22:13,568 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com melanymoss86@gmail.com
+2022-04-30 13:22:14,217 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:22:19,920 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com hopekhalilah110@gmail.com
+2022-04-30 13:22:20,221 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:22:26,154 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com krush4092@gmail.com
+2022-04-30 13:22:26,226 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:22:31,167 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com rhodesloralee@gmail.com
+2022-04-30 13:22:31,231 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:22:33,575 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com angelacoffman453@gmail.com
+2022-04-30 13:22:34,234 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:22:34,246 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-30 13:22:34,387 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-04-30 13:22:34,448 [Thread-4    ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-30 13:22:34,449 [Thread-4    ] [INFO ]  FollowUp scheduled: 2022-04-30 13:22:43.028095 467c3705-b561-4a59-aa65-b1c88d83bbe8
+2022-04-30 13:22:34,449 [Thread-4    ] [INFO ]  Sending Finished 467c3705-b561-4a59-aa65-b1c88d83bbe8
+2022-04-30 13:22:43,039 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - 467c3705-b561-4a59-aa65-b1c88d83bbe8
+2022-04-30 13:22:43,039 [APScheduler ] [INFO ]  Removed job 165e152630424f99b3fd5d0434bad05b
+2022-04-30 13:22:43,055 [Thread-8    ] [INFO ]  Starting ImapFollowUpCheck: 0101dave.gibbons22@gmail.com
+2022-04-30 13:22:45,580 [Thread-8    ] [INFO ]  Looking for ImapFollowUpCheck: joiehacker719@gmail.com
+2022-04-30 13:22:45,838 [Thread-8    ] [INFO ]  Looking for ImapFollowUpCheck: en2contact@gmail.com
+2022-04-30 13:22:46,212 [Thread-8    ] [INFO ]  Looking for ImapFollowUpCheck: krush4092@gmail.com
+2022-04-30 13:22:46,613 [Thread-8    ] [INFO ]  Looking for ImapFollowUpCheck: rhodesloralee@gmail.com
+2022-04-30 13:22:46,940 [Thread-8    ] [INFO ]  ImapFollowUpCheck: 0101dave.gibbons22@gmail.com Added to FollowUp list 
+2022-04-30 13:22:46,940 [Thread-8    ] [INFO ]  Finishing ImapFollowUpCheck: 0101dave.gibbons22@gmail.com
+2022-04-30 13:22:48,058 [Thread-9    ] [INFO ]  Starting ImapFollowUpCheck: jamescalloway402@gmail.com
+2022-04-30 13:22:50,613 [Thread-9    ] [INFO ]  Looking for ImapFollowUpCheck: adeleputnam310@gmail.com
+2022-04-30 13:22:50,882 [Thread-9    ] [INFO ]  Looking for ImapFollowUpCheck: melanymoss86@gmail.com
+2022-04-30 13:22:51,154 [Thread-9    ] [INFO ]  Looking for ImapFollowUpCheck: hopekhalilah110@gmail.com
+2022-04-30 13:22:51,426 [Thread-9    ] [INFO ]  Looking for ImapFollowUpCheck: angelacoffman453@gmail.com
+2022-04-30 13:22:51,699 [Thread-9    ] [INFO ]  ImapFollowUpCheck: jamescalloway402@gmail.com Added to FollowUp list 
+2022-04-30 13:22:51,700 [Thread-9    ] [INFO ]  Finishing ImapFollowUpCheck: jamescalloway402@gmail.com
+2022-04-30 13:22:53,059 [ThreadPoolEx] [INFO ]  follow_up: 2 email to be sent
+2022-04-30 13:22:53,061 [0101dave.gib] [INFO ]  Starting FollowUpSend: 0101dave.gibbons22@gmail.com
+2022-04-30 13:22:58,062 [jamescallowa] [INFO ]  Starting FollowUpSend: jamescalloway402@gmail.com
+2022-04-30 13:23:31,247 [0101dave.gib] [INFO ]  Exiting FollowUpSend: 0101dave.gibbons22@gmail.com
+2022-04-30 13:23:41,763 [jamescallowa] [INFO ]  Exiting FollowUpSend: jamescalloway402@gmail.com
+2022-04-30 13:23:42,085 [ThreadPoolEx] [INFO ]  Saving followup report
+2022-04-30 13:23:42,186 [ThreadPoolEx] [INFO ]  Finishing Followup process, Campaign Id - 467c3705-b561-4a59-aa65-b1c88d83bbe8
+2022-04-30 13:28:02,308 [Thread-14   ] [ERROR]  File loading Config: {'group_a': False, 'group_b': False, 'target': True}
+2022-04-30 13:28:21,651 [Thread-15   ] [INFO ]  config updated
+2022-04-30 13:28:21,656 [Thread-16   ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 4
+ Len of Group: 2
+ Len of Targets: 8
+ Delay: 0 - 10
+ Campaign ID: b26dd9fb-827c-4d13-b755-6448c09f9167
+ Add Custom Hostname: False
+2022-04-30 13:28:21,666 [Thread-16   ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 1, "1": 2, "2": 3, "3": 4}, "1": {"0": " ", "1": " ", "2": " ", "3": " "}, "2": {"0": " ", "1": " ", "2": " ", "3": " "}, "3": {"0": " ", "1": " ", "2": " ", "3": " "}, "4": {"0": " ", "1": " ", "2": " ", "3": " "}, "5": {"0": " ", "1": " ", "2": " ", "3": " "}, "6": {"0": " ", "1": " ", "2": " ", "3": " "}, "TONAME": {"0": "Imran", "1": "Imran", "2": "Imran", "3": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com", "2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0, "2": 0, "3": 0}}
+2022-04-30 13:28:21,669 [Thread-16   ] [INFO ]  Length - 4 jamescalloway402@gmail.com
+2022-04-30 13:28:21,671 [Thread-16   ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"4": 5, "5": 6, "6": 7, "7": 8}, "1": {"4": " ", "5": " ", "6": " ", "7": " "}, "2": {"4": " ", "5": " ", "6": " ", "7": " "}, "3": {"4": " ", "5": " ", "6": " ", "7": " "}, "4": {"4": " ", "5": " ", "6": " ", "7": " "}, "5": {"4": " ", "5": " ", "6": " ", "7": " "}, "6": {"4": " ", "5": " ", "6": " ", "7": " "}, "TONAME": {"4": "Imran", "5": "Imran", "6": "Imran", "7": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com", "5": "shahimrans64@gmail.com", "6": "shahimrans64@gmail.com", "7": "shahimrans64@gmail.com"}, "flag": {"4": 0, "5": 0, "6": 0, "7": 0}}
+2022-04-30 13:28:21,673 [Thread-16   ] [INFO ]  Length - 4 0101dave.gibbons22@gmail.com
+2022-04-30 13:28:27,796 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com shahimrans64@gmail.com
+2022-04-30 13:28:28,671 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:28:42,686 [Thread-16   ] [INFO ]  AddFollowUps starting...
+2022-04-30 13:28:42,832 [Thread-16   ] [INFO ]  AddFollowUps successful
+2022-04-30 13:28:42,833 [Thread-16   ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-30 13:28:42,833 [Thread-16   ] [INFO ]  FollowUp scheduled: 2022-04-30 13:28:51.473989 b26dd9fb-827c-4d13-b755-6448c09f9167
+2022-04-30 13:28:42,834 [Thread-16   ] [INFO ]  Sending Finished b26dd9fb-827c-4d13-b755-6448c09f9167
+2022-04-30 13:28:51,475 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - b26dd9fb-827c-4d13-b755-6448c09f9167
+2022-04-30 13:28:51,476 [APScheduler ] [INFO ]  Removed job d054b9f6f5794a568d849217e402545c
+2022-04-30 13:28:51,490 [Thread-20   ] [INFO ]  Starting ImapFollowUpCheck: 0101dave.gibbons22@gmail.com
+2022-04-30 13:28:53,928 [Thread-20   ] [INFO ]  Looking for ImapFollowUpCheck: shahimrans64@gmail.com
+2022-04-30 13:28:54,199 [Thread-20   ] [INFO ]  ImapFollowUpCheck: 0101dave.gibbons22@gmail.com Added to FollowUp list 
+2022-04-30 13:28:54,200 [Thread-20   ] [INFO ]  Finishing ImapFollowUpCheck: 0101dave.gibbons22@gmail.com
+2022-04-30 13:28:56,491 [ThreadPoolEx] [INFO ]  follow_up: 1 email to be sent
+2022-04-30 13:28:56,492 [0101dave.gib] [INFO ]  Starting FollowUpSend: 0101dave.gibbons22@gmail.com
+2022-04-30 13:29:10,330 [0101dave.gib] [INFO ]  Exiting FollowUpSend: 0101dave.gibbons22@gmail.com
+2022-04-30 13:29:10,498 [ThreadPoolEx] [INFO ]  Saving followup report
+2022-04-30 13:29:10,500 [ThreadPoolEx] [INFO ]  Finishing Followup process, Campaign Id - b26dd9fb-827c-4d13-b755-6448c09f9167
+2022-04-30 13:29:55,392 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 13:29:55,942 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 13:30:00,567 [Thread-3    ] [INFO ]  config updated
+2022-04-30 13:30:00,580 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 4
+ Len of Group: 2
+ Len of Targets: 8
+ Delay: 0 - 10
+ Campaign ID: 080c75bd-1304-45c6-9f45-fd89c8f9d00b
+ Add Custom Hostname: False
+2022-04-30 13:30:00,601 [Thread-4    ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 1, "1": 2, "2": 3, "3": 4}, "1": {"0": " ", "1": " ", "2": " ", "3": " "}, "2": {"0": " ", "1": " ", "2": " ", "3": " "}, "3": {"0": " ", "1": " ", "2": " ", "3": " "}, "4": {"0": " ", "1": " ", "2": " ", "3": " "}, "5": {"0": " ", "1": " ", "2": " ", "3": " "}, "6": {"0": " ", "1": " ", "2": " ", "3": " "}, "TONAME": {"0": "Imran", "1": "Imran", "2": "Imran", "3": "Imran"}, "EMAIL": {"0": "shahimrans64@gmail.com", "1": "shahimrans64@gmail.com", "2": "shahimrans64@gmail.com", "3": "shahimrans64@gmail.com"}, "flag": {"0": 0, "1": 0, "2": 0, "3": 0}}
+2022-04-30 13:30:00,605 [Thread-4    ] [INFO ]  Length - 4 jamescalloway402@gmail.com
+2022-04-30 13:30:00,611 [Thread-4    ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"4": 5, "5": 6, "6": 7, "7": 8}, "1": {"4": " ", "5": " ", "6": " ", "7": " "}, "2": {"4": " ", "5": " ", "6": " ", "7": " "}, "3": {"4": " ", "5": " ", "6": " ", "7": " "}, "4": {"4": " ", "5": " ", "6": " ", "7": " "}, "5": {"4": " ", "5": " ", "6": " ", "7": " "}, "6": {"4": " ", "5": " ", "6": " ", "7": " "}, "TONAME": {"4": "Imran", "5": "Imran", "6": "Imran", "7": "Imran"}, "EMAIL": {"4": "shahimrans64@gmail.com", "5": "shahimrans64@gmail.com", "6": "shahimrans64@gmail.com", "7": "shahimrans64@gmail.com"}, "flag": {"4": 0, "5": 0, "6": 0, "7": 0}}
+2022-04-30 13:30:00,615 [Thread-4    ] [INFO ]  Length - 4 0101dave.gibbons22@gmail.com
+2022-04-30 13:30:08,816 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com shahimrans64@gmail.com
+2022-04-30 13:30:09,593 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:30:28,638 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-30 13:30:28,790 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-04-30 13:30:28,856 [Thread-4    ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-30 13:30:28,857 [Thread-4    ] [INFO ]  FollowUp scheduled: 2022-04-30 13:30:37.431024 080c75bd-1304-45c6-9f45-fd89c8f9d00b
+2022-04-30 13:30:28,857 [Thread-4    ] [INFO ]  Sending Finished 080c75bd-1304-45c6-9f45-fd89c8f9d00b
+2022-04-30 13:30:37,433 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - 080c75bd-1304-45c6-9f45-fd89c8f9d00b
+2022-04-30 13:30:37,433 [APScheduler ] [INFO ]  Removed job 9a3ba7971f0a4f63bc59417a0fae507c
+2022-04-30 13:30:37,446 [Thread-8    ] [INFO ]  Starting ImapFollowUpCheck: jamescalloway402@gmail.com
+2022-04-30 13:30:39,874 [Thread-8    ] [INFO ]  Looking for ImapFollowUpCheck: shahimrans64@gmail.com
+2022-04-30 13:30:40,137 [Thread-8    ] [INFO ]  ImapFollowUpCheck: jamescalloway402@gmail.com Added to FollowUp list 
+2022-04-30 13:30:40,140 [Thread-8    ] [INFO ]  Finishing ImapFollowUpCheck: jamescalloway402@gmail.com
+2022-04-30 13:30:42,447 [ThreadPoolEx] [INFO ]  follow_up: 1 email to be sent
+2022-04-30 13:30:42,449 [jamescallowa] [INFO ]  Starting FollowUpSend: jamescalloway402@gmail.com
+2022-04-30 13:30:49,745 [jamescallowa] [INFO ]  Exiting FollowUpSend: jamescalloway402@gmail.com
+2022-04-30 13:30:50,453 [ThreadPoolEx] [INFO ]  Saving followup report
+2022-04-30 13:30:50,456 [ThreadPoolEx] [INFO ]  Finishing Followup process, Campaign Id - 080c75bd-1304-45c6-9f45-fd89c8f9d00b
+2022-04-30 13:31:41,571 [Thread-10   ] [ERROR]  File loading Config: {'group_a': False, 'group_b': False, 'target': True}
+2022-04-30 13:31:51,401 [Thread-11   ] [INFO ]  config updated
+2022-04-30 13:31:51,407 [Thread-12   ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 4
+ Len of Group: 2
+ Len of Targets: 8
+ Delay: 0 - 10
+ Campaign ID: cc491146-5932-4678-82fa-acdaa19e2c3b
+ Add Custom Hostname: False
+2022-04-30 13:31:51,414 [Thread-12   ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 1, "1": 2, "2": 3, "3": 4}, "1": {"0": " ", "1": " ", "2": " ", "3": " "}, "2": {"0": " ", "1": " ", "2": " ", "3": " "}, "3": {"0": " ", "1": " ", "2": " ", "3": " "}, "4": {"0": " ", "1": " ", "2": " ", "3": " "}, "5": {"0": " ", "1": " ", "2": " ", "3": " "}, "6": {"0": " ", "1": " ", "2": " ", "3": " "}, "TONAME": {"0": "Adele", "1": "Melany", "2": "Khalilah", "3": "Angela"}, "EMAIL": {"0": "adeleputnam310@gmail.com", "1": "melanymoss86@gmail.com", "2": "hopekhalilah110@gmail.com", "3": "angelacoffman453@gmail.com"}, "flag": {"0": 0, "1": 0, "2": 0, "3": 0}}
+2022-04-30 13:31:51,417 [Thread-12   ] [INFO ]  Length - 4 jamescalloway402@gmail.com
+2022-04-30 13:31:51,419 [Thread-12   ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"4": 5, "5": 6, "6": 7, "7": 8}, "1": {"4": " ", "5": " ", "6": " ", "7": " "}, "2": {"4": " ", "5": " ", "6": " ", "7": " "}, "3": {"4": " ", "5": " ", "6": " ", "7": " "}, "4": {"4": " ", "5": " ", "6": " ", "7": " "}, "5": {"4": " ", "5": " ", "6": " ", "7": " "}, "6": {"4": " ", "5": " ", "6": " ", "7": " "}, "TONAME": {"4": "Joie", "5": "Enzim", "6": "Karri", "7": "Loralee"}, "EMAIL": {"4": "joiehacker719@gmail.com", "5": "en2contact@gmail.com", "6": "krush4092@gmail.com", "7": "rhodesloralee@gmail.com"}, "flag": {"4": 0, "5": 0, "6": 0, "7": 0}}
+2022-04-30 13:31:51,421 [Thread-12   ] [INFO ]  Length - 4 0101dave.gibbons22@gmail.com
+2022-04-30 13:31:57,503 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com adeleputnam310@gmail.com
+2022-04-30 13:31:58,418 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:32:01,478 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com joiehacker719@gmail.com
+2022-04-30 13:32:02,424 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:32:02,995 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com melanymoss86@gmail.com
+2022-04-30 13:32:03,427 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:32:08,698 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com en2contact@gmail.com
+2022-04-30 13:32:09,433 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:32:17,565 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com hopekhalilah110@gmail.com
+2022-04-30 13:32:18,442 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:32:18,738 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com krush4092@gmail.com
+2022-04-30 13:32:19,446 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:32:30,948 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com angelacoffman453@gmail.com
+2022-04-30 13:32:31,457 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:32:31,748 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com rhodesloralee@gmail.com
+2022-04-30 13:32:32,462 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:32:33,451 [Thread-12   ] [INFO ]  AddFollowUps starting...
+2022-04-30 13:32:33,596 [Thread-12   ] [INFO ]  AddFollowUps successful
+2022-04-30 13:32:33,597 [Thread-12   ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-30 13:32:33,598 [Thread-12   ] [INFO ]  FollowUp scheduled: 2022-04-30 13:32:42.237964 cc491146-5932-4678-82fa-acdaa19e2c3b
+2022-04-30 13:32:33,599 [Thread-12   ] [INFO ]  Sending Finished cc491146-5932-4678-82fa-acdaa19e2c3b
+2022-04-30 13:32:42,253 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - cc491146-5932-4678-82fa-acdaa19e2c3b
+2022-04-30 13:32:42,253 [APScheduler ] [INFO ]  Removed job e6d1a63ef1ec4aa09a94c0104e66f2ab
+2022-04-30 13:32:42,265 [Thread-16   ] [INFO ]  Starting ImapFollowUpCheck: 0101dave.gibbons22@gmail.com
+2022-04-30 13:32:44,470 [Thread-16   ] [INFO ]  Looking for ImapFollowUpCheck: joiehacker719@gmail.com
+2022-04-30 13:32:44,731 [Thread-16   ] [INFO ]  Looking for ImapFollowUpCheck: en2contact@gmail.com
+2022-04-30 13:32:45,027 [Thread-16   ] [INFO ]  Looking for ImapFollowUpCheck: krush4092@gmail.com
+2022-04-30 13:32:45,290 [Thread-16   ] [INFO ]  Looking for ImapFollowUpCheck: rhodesloralee@gmail.com
+2022-04-30 13:32:45,556 [Thread-16   ] [INFO ]  ImapFollowUpCheck: 0101dave.gibbons22@gmail.com Added to FollowUp list 
+2022-04-30 13:32:45,558 [Thread-16   ] [INFO ]  Finishing ImapFollowUpCheck: 0101dave.gibbons22@gmail.com
+2022-04-30 13:32:47,272 [Thread-17   ] [INFO ]  Starting ImapFollowUpCheck: jamescalloway402@gmail.com
+2022-04-30 13:32:49,752 [Thread-17   ] [INFO ]  Looking for ImapFollowUpCheck: adeleputnam310@gmail.com
+2022-04-30 13:32:50,010 [Thread-17   ] [INFO ]  Looking for ImapFollowUpCheck: melanymoss86@gmail.com
+2022-04-30 13:32:50,273 [Thread-17   ] [INFO ]  Looking for ImapFollowUpCheck: hopekhalilah110@gmail.com
+2022-04-30 13:32:50,529 [Thread-17   ] [INFO ]  Looking for ImapFollowUpCheck: angelacoffman453@gmail.com
+2022-04-30 13:32:50,787 [Thread-17   ] [INFO ]  ImapFollowUpCheck: jamescalloway402@gmail.com Added to FollowUp list 
+2022-04-30 13:32:50,788 [Thread-17   ] [INFO ]  Finishing ImapFollowUpCheck: jamescalloway402@gmail.com
+2022-04-30 13:32:52,273 [ThreadPoolEx] [INFO ]  follow_up: 2 email to be sent
+2022-04-30 13:32:52,274 [0101dave.gib] [INFO ]  Starting FollowUpSend: 0101dave.gibbons22@gmail.com
+2022-04-30 13:32:57,275 [jamescallowa] [INFO ]  Starting FollowUpSend: jamescalloway402@gmail.com
+2022-04-30 13:33:19,987 [0101dave.gib] [INFO ]  Exiting FollowUpSend: 0101dave.gibbons22@gmail.com
+2022-04-30 13:33:44,919 [jamescallowa] [INFO ]  Exiting FollowUpSend: jamescalloway402@gmail.com
+2022-04-30 13:33:45,300 [ThreadPoolEx] [INFO ]  Saving followup report
+2022-04-30 13:33:45,301 [ThreadPoolEx] [INFO ]  Finishing Followup process, Campaign Id - cc491146-5932-4678-82fa-acdaa19e2c3b
+2022-04-30 13:37:42,215 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 13:37:42,761 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 13:37:47,366 [Thread-3    ] [INFO ]  config updated
+2022-04-30 13:37:47,370 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 4
+ Len of Group: 2
+ Len of Targets: 8
+ Delay: 0 - 10
+ Campaign ID: f6528a9e-49dc-47d2-90e0-13428ab6a5e5
+ Add Custom Hostname: False
+2022-04-30 13:37:47,384 [Thread-4    ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 1, "1": 2, "2": 3, "3": 4}, "1": {"0": " ", "1": " ", "2": " ", "3": " "}, "2": {"0": " ", "1": " ", "2": " ", "3": " "}, "3": {"0": " ", "1": " ", "2": " ", "3": " "}, "4": {"0": " ", "1": " ", "2": " ", "3": " "}, "5": {"0": " ", "1": " ", "2": " ", "3": " "}, "6": {"0": " ", "1": " ", "2": " ", "3": " "}, "TONAME": {"0": "Adele", "1": "Melany", "2": "Khalilah", "3": "Angela"}, "EMAIL": {"0": "adeleputnam310@gmail.com", "1": "melanymoss86@gmail.com", "2": "hopekhalilah110@gmail.com", "3": "angelacoffman453@gmail.com"}, "flag": {"0": 0, "1": 0, "2": 0, "3": 0}}
+2022-04-30 13:37:47,388 [Thread-4    ] [INFO ]  Length - 4 jamescalloway402@gmail.com
+2022-04-30 13:37:47,390 [Thread-4    ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"4": 5, "5": 6, "6": 7, "7": 8}, "1": {"4": " ", "5": " ", "6": " ", "7": " "}, "2": {"4": " ", "5": " ", "6": " ", "7": " "}, "3": {"4": " ", "5": " ", "6": " ", "7": " "}, "4": {"4": " ", "5": " ", "6": " ", "7": " "}, "5": {"4": " ", "5": " ", "6": " ", "7": " "}, "6": {"4": " ", "5": " ", "6": " ", "7": " "}, "TONAME": {"4": "Joie", "5": "Enzim", "6": "Karri", "7": "Loralee"}, "EMAIL": {"4": "joiehacker719@gmail.com", "5": "en2contact@gmail.com", "6": "krush4092@gmail.com", "7": "rhodesloralee@gmail.com"}, "flag": {"4": 0, "5": 0, "6": 0, "7": 0}}
+2022-04-30 13:37:47,392 [Thread-4    ] [INFO ]  Length - 4 0101dave.gibbons22@gmail.com
+2022-04-30 13:37:54,446 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com adeleputnam310@gmail.com
+2022-04-30 13:37:55,380 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:37:56,553 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com joiehacker719@gmail.com
+2022-04-30 13:37:57,384 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:38:04,762 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com melanymoss86@gmail.com
+2022-04-30 13:38:05,391 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:38:05,701 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com en2contact@gmail.com
+2022-04-30 13:38:06,394 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:38:11,692 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com krush4092@gmail.com
+2022-04-30 13:38:12,399 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:38:14,113 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com hopekhalilah110@gmail.com
+2022-04-30 13:38:14,401 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:38:19,430 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com angelacoffman453@gmail.com
+2022-04-30 13:38:20,408 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:38:24,653 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com rhodesloralee@gmail.com
+2022-04-30 13:38:25,414 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:38:25,418 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-30 13:38:25,599 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-04-30 13:38:25,655 [Thread-4    ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-30 13:38:25,655 [Thread-4    ] [INFO ]  FollowUp scheduled: 2022-04-30 13:38:34.240718 f6528a9e-49dc-47d2-90e0-13428ab6a5e5
+2022-04-30 13:38:25,656 [Thread-4    ] [INFO ]  Sending Finished f6528a9e-49dc-47d2-90e0-13428ab6a5e5
+2022-04-30 13:38:34,242 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - f6528a9e-49dc-47d2-90e0-13428ab6a5e5
+2022-04-30 13:38:34,243 [APScheduler ] [INFO ]  Removed job d0b8e353eeef487db47e0ea0750726ac
+2022-04-30 13:38:34,258 [Thread-8    ] [INFO ]  Starting ImapFollowUpCheck: 0101dave.gibbons22@gmail.com
+2022-04-30 13:38:36,366 [Thread-8    ] [INFO ]  Looking for ImapFollowUpCheck: joiehacker719@gmail.com
+2022-04-30 13:38:36,638 [Thread-8    ] [INFO ]  Looking for ImapFollowUpCheck: en2contact@gmail.com
+2022-04-30 13:38:36,939 [Thread-8    ] [INFO ]  Looking for ImapFollowUpCheck: krush4092@gmail.com
+2022-04-30 13:38:37,214 [Thread-8    ] [INFO ]  Looking for ImapFollowUpCheck: rhodesloralee@gmail.com
+2022-04-30 13:38:37,530 [Thread-8    ] [INFO ]  ImapFollowUpCheck: 0101dave.gibbons22@gmail.com Added to FollowUp list 
+2022-04-30 13:38:37,531 [Thread-8    ] [INFO ]  Finishing ImapFollowUpCheck: 0101dave.gibbons22@gmail.com
+2022-04-30 13:38:39,261 [Thread-9    ] [INFO ]  Starting ImapFollowUpCheck: jamescalloway402@gmail.com
+2022-04-30 13:38:45,301 [Thread-9    ] [INFO ]  Looking for ImapFollowUpCheck: adeleputnam310@gmail.com
+2022-04-30 13:38:45,557 [Thread-9    ] [INFO ]  Looking for ImapFollowUpCheck: melanymoss86@gmail.com
+2022-04-30 13:38:45,817 [Thread-9    ] [INFO ]  Looking for ImapFollowUpCheck: hopekhalilah110@gmail.com
+2022-04-30 13:38:46,073 [Thread-9    ] [INFO ]  Looking for ImapFollowUpCheck: angelacoffman453@gmail.com
+2022-04-30 13:38:46,334 [Thread-9    ] [INFO ]  ImapFollowUpCheck: jamescalloway402@gmail.com Added to FollowUp list 
+2022-04-30 13:38:46,335 [Thread-9    ] [INFO ]  Finishing ImapFollowUpCheck: jamescalloway402@gmail.com
+2022-04-30 13:38:47,266 [ThreadPoolEx] [ERROR]  Error at follow_up, Campaign Id - f6528a9e-49dc-47d2-90e0-13428ab6a5e5: list indices must be integers or slices, not str
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 891, in follow_up
+    logger.info(f"follow_up: {len(followup_required['target_info'])} email to be sent")
+TypeError: list indices must be integers or slices, not str
+
+2022-04-30 13:42:51,776 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 13:42:52,349 [MainThread  ] [INFO ]  Scheduler started
+2022-04-30 13:43:00,528 [Thread-3    ] [INFO ]  config updated
+2022-04-30 13:43:00,537 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 4
+ Len of Group: 2
+ Len of Targets: 8
+ Delay: 0 - 10
+ Campaign ID: fbcd50d3-3c14-4bde-97a1-1b43c3a284f4
+ Add Custom Hostname: False
+2022-04-30 13:43:00,551 [Thread-4    ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 1, "1": 2, "2": 3, "3": 4}, "1": {"0": " ", "1": " ", "2": " ", "3": " "}, "2": {"0": " ", "1": " ", "2": " ", "3": " "}, "3": {"0": " ", "1": " ", "2": " ", "3": " "}, "4": {"0": " ", "1": " ", "2": " ", "3": " "}, "5": {"0": " ", "1": " ", "2": " ", "3": " "}, "6": {"0": " ", "1": " ", "2": " ", "3": " "}, "TONAME": {"0": "Adele", "1": "Melany", "2": "Khalilah", "3": "Angela"}, "EMAIL": {"0": "adeleputnam310@gmail.com", "1": "melanymoss86@gmail.com", "2": "hopekhalilah110@gmail.com", "3": "angelacoffman453@gmail.com"}, "flag": {"0": 0, "1": 0, "2": 0, "3": 0}}
+2022-04-30 13:43:00,553 [Thread-4    ] [INFO ]  Length - 4 jamescalloway402@gmail.com
+2022-04-30 13:43:00,557 [Thread-4    ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"4": 5, "5": 6, "6": 7, "7": 8}, "1": {"4": " ", "5": " ", "6": " ", "7": " "}, "2": {"4": " ", "5": " ", "6": " ", "7": " "}, "3": {"4": " ", "5": " ", "6": " ", "7": " "}, "4": {"4": " ", "5": " ", "6": " ", "7": " "}, "5": {"4": " ", "5": " ", "6": " ", "7": " "}, "6": {"4": " ", "5": " ", "6": " ", "7": " "}, "TONAME": {"4": "Joie", "5": "Enzim", "6": "Karri", "7": "Loralee"}, "EMAIL": {"4": "joiehacker719@gmail.com", "5": "en2contact@gmail.com", "6": "krush4092@gmail.com", "7": "rhodesloralee@gmail.com"}, "flag": {"4": 0, "5": 0, "6": 0, "7": 0}}
+2022-04-30 13:43:00,559 [Thread-4    ] [INFO ]  Length - 4 0101dave.gibbons22@gmail.com
+2022-04-30 13:43:05,779 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com adeleputnam310@gmail.com
+2022-04-30 13:43:06,552 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:43:11,768 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com joiehacker719@gmail.com
+2022-04-30 13:43:12,559 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:43:19,303 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com melanymoss86@gmail.com
+2022-04-30 13:43:19,566 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:43:25,335 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com en2contact@gmail.com
+2022-04-30 13:43:25,570 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:43:32,696 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com hopekhalilah110@gmail.com
+2022-04-30 13:43:33,518 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com krush4092@gmail.com
+2022-04-30 13:43:33,578 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:43:34,582 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:43:38,750 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com rhodesloralee@gmail.com
+2022-04-30 13:43:39,590 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:43:44,247 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com angelacoffman453@gmail.com
+2022-04-30 13:43:44,597 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-04-30 13:43:45,592 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-04-30 13:43:45,738 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-04-30 13:43:45,799 [Thread-4    ] [INFO ]  Added job "follow_up" to job store "default"
+2022-04-30 13:43:45,800 [Thread-4    ] [INFO ]  FollowUp scheduled: 2022-04-30 13:43:54.380161 fbcd50d3-3c14-4bde-97a1-1b43c3a284f4
+2022-04-30 13:43:45,801 [Thread-4    ] [INFO ]  Sending Finished fbcd50d3-3c14-4bde-97a1-1b43c3a284f4
+2022-04-30 13:43:54,382 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - fbcd50d3-3c14-4bde-97a1-1b43c3a284f4
+2022-04-30 13:43:54,383 [APScheduler ] [INFO ]  Removed job d1755a4e50db402ea6d1498b83cb36ce
+2022-04-30 13:43:54,400 [Thread-8    ] [INFO ]  Starting ImapFollowUpCheck: 0101dave.gibbons22@gmail.com
+2022-04-30 13:43:57,063 [Thread-8    ] [INFO ]  Looking for ImapFollowUpCheck: joiehacker719@gmail.com
+2022-04-30 13:43:57,339 [Thread-8    ] [INFO ]  Looking for ImapFollowUpCheck: en2contact@gmail.com
+2022-04-30 13:43:57,616 [Thread-8    ] [INFO ]  Looking for ImapFollowUpCheck: krush4092@gmail.com
+2022-04-30 13:43:57,907 [Thread-8    ] [INFO ]  Looking for ImapFollowUpCheck: rhodesloralee@gmail.com
+2022-04-30 13:43:58,227 [Thread-8    ] [INFO ]  ImapFollowUpCheck: 0101dave.gibbons22@gmail.com Added to FollowUp list 
+2022-04-30 13:43:58,228 [Thread-8    ] [INFO ]  Finishing ImapFollowUpCheck: 0101dave.gibbons22@gmail.com
+2022-04-30 13:43:59,403 [Thread-9    ] [INFO ]  Starting ImapFollowUpCheck: jamescalloway402@gmail.com
+2022-04-30 13:44:01,869 [Thread-9    ] [INFO ]  Looking for ImapFollowUpCheck: adeleputnam310@gmail.com
+2022-04-30 13:44:02,135 [Thread-9    ] [INFO ]  Looking for ImapFollowUpCheck: melanymoss86@gmail.com
+2022-04-30 13:44:02,393 [Thread-9    ] [INFO ]  Looking for ImapFollowUpCheck: hopekhalilah110@gmail.com
+2022-04-30 13:44:02,651 [Thread-9    ] [INFO ]  Looking for ImapFollowUpCheck: angelacoffman453@gmail.com
+2022-04-30 13:44:02,906 [Thread-9    ] [INFO ]  ImapFollowUpCheck: jamescalloway402@gmail.com Added to FollowUp list 
+2022-04-30 13:44:02,907 [Thread-9    ] [INFO ]  Finishing ImapFollowUpCheck: jamescalloway402@gmail.com
+2022-04-30 13:44:04,404 [ThreadPoolEx] [INFO ]  follow_up, Campaign Id - fbcd50d3-3c14-4bde-97a1-1b43c3a284f4: 8 email to be sent
+2022-04-30 13:44:04,405 [0101dave.gib] [INFO ]  Starting FollowUpSend: 0101dave.gibbons22@gmail.com
+2022-04-30 13:44:09,407 [jamescallowa] [INFO ]  Starting FollowUpSend: jamescalloway402@gmail.com
+2022-04-30 13:44:49,450 [jamescallowa] [INFO ]  Exiting FollowUpSend: jamescalloway402@gmail.com
+2022-04-30 13:44:54,037 [0101dave.gib] [INFO ]  Exiting FollowUpSend: 0101dave.gibbons22@gmail.com
+2022-04-30 13:44:54,437 [ThreadPoolEx] [INFO ]  Saving followup report, Campaign Id - fbcd50d3-3c14-4bde-97a1-1b43c3a284f4
+2022-04-30 13:44:54,438 [ThreadPoolEx] [INFO ]  Finishing Followup process, Campaign Id - fbcd50d3-3c14-4bde-97a1-1b43c3a284f4
