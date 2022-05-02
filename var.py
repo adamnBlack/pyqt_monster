@@ -123,6 +123,8 @@ add_custom_hostname = False
 
 email_failed = 0
 total_email_downloaded = 0
+# in seconds
+waiting_period_for_followup = 600
 
 sign_up_label = ""
 sign_in_label = ""

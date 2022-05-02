@@ -70,6 +70,8 @@ class FollowUpSend(SmtpBase, threading.Thread):
     thread_open = 0
     stop_follow_up = False
     send_report = queue.Queue()
+    email_to_be_sent = int()
+    email_sent = int()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -138,6 +140,10 @@ class FollowUpSend(SmtpBase, threading.Thread):
                     try:
                         server.sendmail(
                             self.user, item['target_email'], msg.as_string())
+
+                        FollowUpSend.email_sent += 1
+                        var.command_q.put(f"GUI.progressBar_compose.setValue"
+                                          f"({(FollowUpSend.email_sent/FollowUpSend.email_to_be_sent) * 100})")
                         break
                     except Exception as e:
                         if counter == 2:

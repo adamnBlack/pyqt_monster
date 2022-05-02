@@ -855,6 +855,18 @@ def follow_up(campaign_id: str):
     try:
         logger.info(f"Starting Followup process, Campaign ID - {campaign_id}")
 
+        while var.send_campaign_run_status:
+            time.sleep(var.waiting_period_for_followup)
+            logger.info(f"Waiting to start Followup process because campaign is running"
+                        f", Campaign ID - {campaign_id}")
+
+        logger.info(f"Starting Followup process again, Campaign ID - {campaign_id}")
+
+        var.command_q.put("GUI.progressBar_compose.setValue(0)")
+        var.command_q.put("self.send_button_visibility(on=False)")
+        var.command_q.put("self.compose_config_visibility(on=False)")
+        var.command_q.put("GUI.label_compose_status.setText('Follow Up: 0/2')")
+
         ImapFollowUpCheck.followup_required = []
         ImapFollowUpCheck.thread_open = 0
         ImapFollowUpCheck.email_to_be_sent = 0
@@ -867,6 +879,8 @@ def follow_up(campaign_id: str):
             followups_df = pd.DataFrame(followups)
 
             followup_group_df = followups_df.groupby('group_email')
+
+            ImapFollowUpCheck.total_follow_up_checks = len(followup_group_df)
 
             for group_name, df_group in followup_group_df:
                 groups_dict = df_group.to_dict('records')[0]
@@ -887,9 +901,14 @@ def follow_up(campaign_id: str):
             while ImapFollowUpCheck.thread_open != 0:
                 time.sleep(1)
 
+            var.command_q.put("GUI.label_compose_status.setText('Follow Up: 1/2')")
+
             followup_required = ImapFollowUpCheck.followup_required
+            FollowUpSend.email_to_be_sent = ImapFollowUpCheck.email_to_be_sent
+
             if len(followup_required) > 0:
-                logger.info(f"follow_up, Campaign Id - {campaign_id}: {ImapFollowUpCheck.email_to_be_sent} email to be sent")
+                logger.info(f"follow_up, Campaign Id - {campaign_id}: "
+                            f"{FollowUpSend.email_to_be_sent} email to be sent")
 
                 for item in followup_required:
                     item: dict
@@ -931,8 +950,13 @@ def follow_up(campaign_id: str):
         else:
             logger.info(f"No Followups entry found. Campaign Id - {campaign_id}")
 
-        logger.info(f"Finishing Followup process, Campaign Id - {campaign_id}")
+        var.command_q.put("GUI.label_compose_status.setText('Follow Up: 2/2 Done')")
 
     except Exception as e:
         logger.error(f"Error at follow_up, Campaign Id - {campaign_id}:"
                      f" {e}\n{traceback.format_exc()}")
+
+    finally:
+        var.command_q.put("self.send_button_visibility(on=True)")
+        var.command_q.put("self.compose_config_visibility(on=True)")
+        logger.info(f"Finishing Followup process, Campaign Id - {campaign_id}")

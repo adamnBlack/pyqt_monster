@@ -1684,3 +1684,71 @@ Targets - {"ID": {"4": 5, "5": 6, "6": 7, "7": 8}, "1": {"4": " ", "5": " ", "6"
 2022-04-30 13:44:54,037 [0101dave.gib] [INFO ]  Exiting FollowUpSend: 0101dave.gibbons22@gmail.com
 2022-04-30 13:44:54,437 [ThreadPoolEx] [INFO ]  Saving followup report, Campaign Id - fbcd50d3-3c14-4bde-97a1-1b43c3a284f4
 2022-04-30 13:44:54,438 [ThreadPoolEx] [INFO ]  Finishing Followup process, Campaign Id - fbcd50d3-3c14-4bde-97a1-1b43c3a284f4
+2022-05-03 01:47:37,468 [MainThread  ] [INFO ]  Scheduler started
+2022-05-03 01:47:41,453 [MainThread  ] [INFO ]  Scheduler started
+2022-05-03 01:47:52,704 [Thread-3    ] [INFO ]  config updated
+2022-05-03 01:47:52,714 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 4
+ Len of Group: 2
+ Len of Targets: 8
+ Delay: 0 - 10
+ Campaign ID: de03fb55-033f-437f-acb0-95f92986b8a1
+ Add Custom Hostname: False
+2022-05-03 01:47:52,840 [Thread-4    ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 1, "1": 2, "2": 3, "3": 4}, "1": {"0": " ", "1": " ", "2": " ", "3": " "}, "2": {"0": " ", "1": " ", "2": " ", "3": " "}, "3": {"0": " ", "1": " ", "2": " ", "3": " "}, "4": {"0": " ", "1": " ", "2": " ", "3": " "}, "5": {"0": " ", "1": " ", "2": " ", "3": " "}, "6": {"0": " ", "1": " ", "2": " ", "3": " "}, "TONAME": {"0": "Adele", "1": "Melany", "2": "Khalilah", "3": "Angela"}, "EMAIL": {"0": "adeleputnam310@gmail.com", "1": "melanymoss86@gmail.com", "2": "hopekhalilah110@gmail.com", "3": "angelacoffman453@gmail.com"}, "flag": {"0": 0, "1": 0, "2": 0, "3": 0}}
+2022-05-03 01:47:52,845 [Thread-4    ] [INFO ]  Length - 4 jamescalloway402@gmail.com
+2022-05-03 01:47:52,847 [Thread-4    ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"4": 5, "5": 6, "6": 7, "7": 8}, "1": {"4": " ", "5": " ", "6": " ", "7": " "}, "2": {"4": " ", "5": " ", "6": " ", "7": " "}, "3": {"4": " ", "5": " ", "6": " ", "7": " "}, "4": {"4": " ", "5": " ", "6": " ", "7": " "}, "5": {"4": " ", "5": " ", "6": " ", "7": " "}, "6": {"4": " ", "5": " ", "6": " ", "7": " "}, "TONAME": {"4": "Joie", "5": "Enzim", "6": "Karri", "7": "Loralee"}, "EMAIL": {"4": "joiehacker719@gmail.com", "5": "en2contact@gmail.com", "6": "krush4092@gmail.com", "7": "rhodesloralee@gmail.com"}, "flag": {"4": 0, "5": 0, "6": 0, "7": 0}}
+2022-05-03 01:47:52,849 [Thread-4    ] [INFO ]  Length - 4 0101dave.gibbons22@gmail.com
+2022-05-03 01:47:59,028 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com joiehacker719@gmail.com
+2022-05-03 01:47:59,725 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-05-03 01:47:59,933 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com adeleputnam310@gmail.com
+2022-05-03 01:48:00,730 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-05-03 01:48:07,163 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com melanymoss86@gmail.com
+2022-05-03 01:48:07,736 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-05-03 01:48:11,253 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com en2contact@gmail.com
+2022-05-03 01:48:11,741 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-05-03 01:48:12,625 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com hopekhalilah110@gmail.com
+2022-05-03 01:48:12,744 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-05-03 01:48:19,969 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com angelacoffman453@gmail.com
+2022-05-03 01:48:20,750 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-05-03 01:48:25,214 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com krush4092@gmail.com
+2022-05-03 01:48:25,755 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-05-03 01:48:30,204 [0101dave.gib] [INFO ]  Sent - 0101dave.gibbons22@gmail.com rhodesloralee@gmail.com
+2022-05-03 01:48:30,759 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-05-03 01:48:30,878 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-05-03 01:48:31,024 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-05-03 01:48:31,168 [Thread-4    ] [INFO ]  Added job "follow_up" to job store "default"
+2022-05-03 01:48:31,169 [Thread-4    ] [INFO ]  FollowUp scheduled: 2022-05-03 01:48:39.665980 de03fb55-033f-437f-acb0-95f92986b8a1
+2022-05-03 01:48:31,169 [Thread-4    ] [INFO ]  Sending Finished de03fb55-033f-437f-acb0-95f92986b8a1
+2022-05-03 01:48:39,668 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - de03fb55-033f-437f-acb0-95f92986b8a1
+2022-05-03 01:48:39,669 [APScheduler ] [INFO ]  Removed job 18ff9109a7274e7da09d097ef5d30f3e
+2022-05-03 01:48:39,670 [ThreadPoolEx] [INFO ]  Starting Followup process again, Campaign ID - de03fb55-033f-437f-acb0-95f92986b8a1
+2022-05-03 01:48:39,790 [Thread-8    ] [INFO ]  Starting ImapFollowUpCheck: 0101dave.gibbons22@gmail.com
+2022-05-03 01:48:42,521 [Thread-8    ] [INFO ]  Looking for ImapFollowUpCheck: joiehacker719@gmail.com
+2022-05-03 01:48:42,864 [Thread-8    ] [INFO ]  Looking for ImapFollowUpCheck: en2contact@gmail.com
+2022-05-03 01:48:43,164 [Thread-8    ] [INFO ]  Looking for ImapFollowUpCheck: krush4092@gmail.com
+2022-05-03 01:48:43,515 [Thread-8    ] [INFO ]  Looking for ImapFollowUpCheck: rhodesloralee@gmail.com
+2022-05-03 01:48:43,814 [Thread-8    ] [INFO ]  ImapFollowUpCheck: 0101dave.gibbons22@gmail.com Added to FollowUp list 
+2022-05-03 01:48:43,814 [Thread-8    ] [INFO ]  Finishing ImapFollowUpCheck: 0101dave.gibbons22@gmail.com
+2022-05-03 01:48:44,793 [Thread-9    ] [INFO ]  Starting ImapFollowUpCheck: jamescalloway402@gmail.com
+2022-05-03 01:48:47,314 [Thread-9    ] [INFO ]  Looking for ImapFollowUpCheck: adeleputnam310@gmail.com
+2022-05-03 01:48:47,587 [Thread-9    ] [INFO ]  Looking for ImapFollowUpCheck: melanymoss86@gmail.com
+2022-05-03 01:48:47,849 [Thread-9    ] [INFO ]  Looking for ImapFollowUpCheck: hopekhalilah110@gmail.com
+2022-05-03 01:48:48,116 [Thread-9    ] [INFO ]  Looking for ImapFollowUpCheck: angelacoffman453@gmail.com
+2022-05-03 01:48:48,377 [Thread-9    ] [INFO ]  ImapFollowUpCheck: jamescalloway402@gmail.com Added to FollowUp list 
+2022-05-03 01:48:48,377 [Thread-9    ] [INFO ]  Finishing ImapFollowUpCheck: jamescalloway402@gmail.com
+2022-05-03 01:48:49,794 [ThreadPoolEx] [INFO ]  follow_up, Campaign Id - de03fb55-033f-437f-acb0-95f92986b8a1: 8 email to be sent
+2022-05-03 01:48:49,798 [0101dave.gib] [INFO ]  Starting FollowUpSend: 0101dave.gibbons22@gmail.com
+2022-05-03 01:48:54,800 [jamescallowa] [INFO ]  Starting FollowUpSend: jamescalloway402@gmail.com
+2022-05-03 01:49:33,424 [0101dave.gib] [INFO ]  Exiting FollowUpSend: 0101dave.gibbons22@gmail.com
+2022-05-03 01:49:40,689 [jamescallowa] [INFO ]  Exiting FollowUpSend: jamescalloway402@gmail.com
+2022-05-03 01:49:40,827 [ThreadPoolEx] [INFO ]  Saving followup report, Campaign Id - de03fb55-033f-437f-acb0-95f92986b8a1
+2022-05-03 01:49:40,858 [ThreadPoolEx] [INFO ]  Finishing Followup process, Campaign Id - de03fb55-033f-437f-acb0-95f92986b8a1

@@ -220,6 +220,8 @@ class ImapFollowUpCheck(ImapBase, threading.Thread):
     followup_required = list()
     thread_open = int()
     email_to_be_sent = int()
+    checking_finished = int()
+    total_follow_up_checks = int()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -270,6 +272,10 @@ class ImapFollowUpCheck(ImapBase, threading.Thread):
 
         finally:
             ImapFollowUpCheck.thread_open -= 1
+            ImapFollowUpCheck.checking_finished += 1
+
+            var.command_q.put(f"GUI.progressBar_compose.setValue"
+                              f"({(ImapFollowUpCheck.checking_finished/ImapFollowUpCheck.total_follow_up_checks) * 100})")
 
 
 class IMAP_(threading.Thread):
@@ -369,7 +375,7 @@ class IMAP_(threading.Thread):
                         email.utils.parseaddr(email_message['From'])[1]))
                     )
 
-                    if not check_if_blacklisted(from_mail):
+                    if not check_if_blacklisted(from_mail) and not check_if_blacklisted(subject):
                         to_name = str(email.header.make_header(email.header.decode_header(
                             email.utils.parseaddr(email_message['To'])[0]))
                         )
