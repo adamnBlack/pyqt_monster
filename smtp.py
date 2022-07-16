@@ -8,7 +8,7 @@ from email.mime.multipart import MIMEMultipart
 from email.header import Header
 from email.utils import formataddr
 from email.mime.text import MIMEText
-from email.utils import COMMASPACE, formatdate
+from email.utils import formatdate
 from email.mime.base import MIMEBase
 from email import encoders
 from pathlib import Path
@@ -519,7 +519,7 @@ class SMTP_(threading.Thread):
                         imap_object = ImapCheckForBlocks(time_limit=elapsed_time, proxy_host=self.proxy_host,
                                                          proxy_port=self.proxy_port, proxy_type=socks.PROXY_TYPE_SOCKS5,
                                                          proxy_user=self.proxy_user, proxy_pass=self.proxy_pass,
-                                                         imap_user=self.user, imap_pass=self.passwd)
+                                                         user=self.user, password=self.passwd)
 
                         if imap_object.check_for_block_messages():
                             print(f"Found block messages : {self.name}")
@@ -751,7 +751,8 @@ def main(group, d_start, d_end, group_selected):
                 group.at[index, 'flag'] = 1
 
                 logger.error(f"\nStarting Thread : Name - {name}"
-                             + f"\nTargets - {json.dumps(target.loc[start:end].to_dict())}")
+                             f"\nTargets Count - {len(target.loc[start:end])}")
+                             # + f"\nTargets - {json.dumps(target.loc[start:end].to_dict())}")
 
                 SMTP_(index, name, proxy_host, proxy_port, proxy_user,
                       proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME,
@@ -760,9 +761,8 @@ def main(group, d_start, d_end, group_selected):
 
                 while var.thread_open_campaign >= var.limit_of_thread and var.stop_send_campaign == False:
                     time.sleep(1)
-            except Exception as e:
-                logger.error("Error at smtp thread opening {} - {} - {}".format(
-                    campaign_id, user, e))
+            except:
+                logger.error(f"Error at smtp thread opening {campaign_id} - {user} - {traceback.format_exc()}")
 
         while var.thread_open_campaign != 0 and var.stop_send_campaign == False:
             time.sleep(1)

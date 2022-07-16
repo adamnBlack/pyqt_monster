@@ -1752,3 +1752,806 @@ Targets - {"ID": {"4": 5, "5": 6, "6": 7, "7": 8}, "1": {"4": " ", "5": " ", "6"
 2022-05-03 01:49:40,689 [jamescallowa] [INFO ]  Exiting FollowUpSend: jamescalloway402@gmail.com
 2022-05-03 01:49:40,827 [ThreadPoolEx] [INFO ]  Saving followup report, Campaign Id - de03fb55-033f-437f-acb0-95f92986b8a1
 2022-05-03 01:49:40,858 [ThreadPoolEx] [INFO ]  Finishing Followup process, Campaign Id - de03fb55-033f-437f-acb0-95f92986b8a1
+2022-05-16 19:57:02,678 [MainThread  ] [INFO ]  Scheduler started
+2022-05-16 19:57:06,238 [MainThread  ] [INFO ]  Scheduler started
+2022-05-16 19:57:18,846 [Thread-3    ] [ERROR]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2022-05-16 19:58:06,149 [Thread-4    ] [INFO ]  config updated
+2022-05-16 19:58:06,164 [Thread-5    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 4
+ Len of Group: 71
+ Len of Targets: 800
+ Delay: 0 - 10
+ Campaign ID: 7aafb2ef-e47a-454f-83f2-0b18e75e5950
+ Add Custom Hostname: False
+2022-05-16 19:58:06,294 [Thread-5    ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets - {"ID": {"0": 1, "1": 2, "2": 3, "3": 4}, "1": {"0": " ", "1": " ", "2": " ", "3": " "}, "2": {"0": "Chicago", "1": "Chicago", "2": "Chicago", "3": "Chicago"}, "3": {"0": "Standard City and Suburban Heating and Air Conditioning Co", "1": "McCabe Custom Duct Mfg", "2": "Paul's Heating & Cooling Inc", "3": "MAMARONECK AVENUE PLUMBING CO"}, "4": {"0": " ", "1": " ", "2": " ", "3": " "}, "5": {"0": " ", "1": " ", "2": " ", "3": " "}, "6": {"0": " ", "1": " ", "2": " ", "3": " "}, "TONAME": {"0": "Lawana", "1": "Piper", "2": "Vallie", "3": "Otilia"}, "EMAIL": {"0": "abcrepairman@gmail.com", "1": "maletzhvac@gmail.com", "2": "aironheating@usa.com", "3": "expressheating@gmail.com"}, "flag": {"0": 0, "1": 0, "2": 0, "3": 0}}
+2022-05-16 19:58:06,298 [Thread-5    ] [INFO ]  Length - 4 jamescalloway402@gmail.com
+2022-05-16 19:58:06,300 [Thread-5    ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets - {"ID": {"4": 5, "5": 6, "6": 7, "7": 8}, "1": {"4": " ", "5": " ", "6": " ", "7": " "}, "2": {"4": "Chicago", "5": "Chicago", "6": "Chicago", "7": "Chicago"}, "3": {"4": "Sunny Moon Heating and Cooling; Inc", "5": "Kings AC and Electrical", "6": "Comfort One Inc Heating & Air Conditioning", "7": "Torres Inc"}, "4": {"4": " ", "5": " ", "6": " ", "7": " "}, "5": {"4": " ", "5": " ", "6": " ", "7": " "}, "6": {"4": " ", "5": " ", "6": " ", "7": " "}, "TONAME": {"4": "Leonora", "5": "Zaida", "6": "Della", "7": "Codi"}, "EMAIL": {"4": "certifiedheating@aol.com", "5": "stervenchristophorus875@gmail.com", "6": "ndrstffrd@gmail.com", "7": "boersmaplumbing@gmail.com"}, "flag": {"4": 0, "5": 0, "6": 0, "7": 0}}
+2022-05-16 19:58:06,301 [Thread-5    ] [INFO ]  Length - 4 0101dave.gibbons22@gmail.com
+2022-05-16 19:58:06,303 [Thread-5    ] [ERROR]  
+Starting Thread : Name - ch4460165@gmail.com
+Targets - {"ID": {"8": 9, "9": 10, "10": 11, "11": 12}, "1": {"8": " ", "9": " ", "10": " ", "11": " "}, "2": {"8": "Chicago", "9": "Chicago", "10": "Chicago", "11": "Chicago"}, "3": {"8": "NW Commercial", "9": "Freedom Heating & Cooling", "10": "Osbourn Plumbing & Heating", "11": "Heating And Cooling Near Me"}, "4": {"8": " ", "9": " ", "10": " ", "11": " "}, "5": {"8": " ", "9": " ", "10": " ", "11": " "}, "6": {"8": " ", "9": " ", "10": " ", "11": " "}, "TONAME": {"8": "Colene", "9": "Nichelle", "10": "Matilde", "11": "Ernestina"}, "EMAIL": {"8": "grizsessions0@gmail.com", "9": "listonskelly@gmail.com", "10": "johnford956@sbcglobal.net", "11": "bcboard@sbcglobal.net"}, "flag": {"8": 0, "9": 0, "10": 0, "11": 0}}
+2022-05-16 19:58:06,307 [Thread-5    ] [INFO ]  Length - 4 ch4460165@gmail.com
+2022-05-16 19:58:06,310 [Thread-5    ] [ERROR]  
+Starting Thread : Name - bermannydia@gmail.com
+Targets - {"ID": {"12": 13, "13": 14, "14": 15, "15": 16}, "1": {"12": " ", "13": " ", "14": " ", "15": " "}, "2": {"12": "Chicago", "13": "Chicago", "14": "Chicago", "15": "Chicago"}, "3": {"12": "Primary Plumbing", "13": "Wayne & Son Heating Air Conditioning & Sheet Metal", "14": "Healthy Way Heating and Cooling Inc.", "15": "Solo Mechanical Maintenance; Inc."}, "4": {"12": " ", "13": " ", "14": " ", "15": " "}, "5": {"12": " ", "13": " ", "14": " ", "15": " "}, "6": {"12": " ", "13": " ", "14": " ", "15": " "}, "TONAME": {"12": "Deandra", "13": "Bibi", "14": "Ludie", "15": "Sharilyn"}, "EMAIL": {"12": "expediencehvac@live.com", "13": "healthywayhvac@gmail.com", "14": "valencia.mario8@gmail.com", "15": "infinitehvac@gmail.com"}, "flag": {"12": 0, "13": 0, "14": 0, "15": 0}}
+2022-05-16 19:58:06,314 [Thread-5    ] [INFO ]  Length - 4 bermannydia@gmail.com
+2022-05-16 19:58:06,316 [Thread-5    ] [ERROR]  
+Starting Thread : Name - nelsondigna95@gmail.com
+Targets - {"ID": {"16": 17, "17": 18, "18": 19, "19": 20}, "1": {"16": " ", "17": " ", "18": " ", "19": " "}, "2": {"16": "Chicago", "17": "Chicago", "18": "Chicago", "19": "Chicago"}, "3": {"16": "Dave's Air Conditioning & Heater Repair | Free Estimates", "17": "Englewood Heating", "18": "Adams Plumbing & Sewer Contractor", "19": "Academy Air HVAC"}, "4": {"16": " ", "17": " ", "18": " ", "19": " "}, "5": {"16": " ", "17": " ", "18": " ", "19": " "}, "6": {"16": " ", "17": " ", "18": " ", "19": " "}, "TONAME": {"16": "Sharolyn", "17": "Hedy", "18": "Lawanna", "19": "Jerlene"}, "EMAIL": {"16": "englewoodheating@gmail.com", "17": "untildn@gmail.com", "18": "heatmanj@aol.com", "19": "greenleafconstruction@yahoo.com"}, "flag": {"16": 0, "17": 0, "18": 0, "19": 0}}
+2022-05-16 19:58:06,322 [Thread-5    ] [INFO ]  Length - 4 nelsondigna95@gmail.com
+2022-05-16 19:58:06,329 [Thread-5    ] [ERROR]  
+Starting Thread : Name - alyse865480clayton865480@gmail.com
+Targets - {"ID": {"20": 21, "21": 22, "22": 23, "23": 24}, "1": {"20": " ", "21": " ", "22": " ", "23": " "}, "2": {"20": "Chicago", "21": "Chicago", "22": "Chicago", "23": "Chicago"}, "3": {"20": "Greenleaf Hvac Inc", "21": "All Green Construction", "22": "Smith Corp", "23": "Carey Company"}, "4": {"20": " ", "21": " ", "22": " ", "23": " "}, "5": {"20": " ", "21": " ", "22": " ", "23": " "}, "6": {"20": " ", "21": " ", "22": " ", "23": " "}, "TONAME": {"20": "Lorriane", "21": "Leeann", "22": "Maryann", "23": "Ute"}, "EMAIL": {"20": "ll4711@sbcglobal.net", "21": "heatingrepairchicago@gmail.com", "22": "georgbleasby094@gmail.com", "23": "earvindelaney@gmail.com"}, "flag": {"20": 0, "21": 0, "22": 0, "23": 0}}
+2022-05-16 19:58:06,334 [Thread-5    ] [INFO ]  Length - 4 alyse865480clayton865480@gmail.com
+2022-05-16 19:58:06,336 [Thread-5    ] [ERROR]  
+Starting Thread : Name - gaylenebarr52@gmail.com
+Targets - {"ID": {"24": 25, "25": 26, "26": 27, "27": 28}, "1": {"24": " ", "25": " ", "26": " ", "27": " "}, "2": {"24": "Chicago", "25": "Chicago", "26": "Chicago", "27": "Chicago"}, "3": {"24": "Uncle Sams Plumbing and Heating", "25": "King Air Conditioning & Radiator", "26": "Mike's Repair and Installation Service", "27": "Romo's Heating and Cooling"}, "4": {"24": " ", "25": " ", "26": " ", "27": " "}, "5": {"24": " ", "25": " ", "26": " ", "27": " "}, "6": {"24": " ", "25": " ", "26": " ", "27": " "}, "TONAME": {"24": "Albertha", "25": "Deetta", "26": "Ronni", "27": "Ardelia"}, "EMAIL": {"24": "daviewaldeckundpyrmont@gmail.com", "25": "drifter91@sbcglobal.net", "26": "gappnegdoben@gmail.com", "27": "mdomer058@gmail.com"}, "flag": {"24": 0, "25": 0, "26": 0, "27": 0}}
+2022-05-16 19:58:06,339 [Thread-5    ] [INFO ]  Length - 4 gaylenebarr52@gmail.com
+2022-05-16 19:58:06,342 [Thread-5    ] [ERROR]  
+Starting Thread : Name - cammie554076robbins554076@gmail.com
+Targets - {"ID": {"28": 29, "29": 30, "30": 31, "31": 32}, "1": {"28": " ", "29": " ", "30": " ", "31": " "}, "2": {"28": "Chicago", "29": "Chicago", "30": "Chicago", "31": "Chicago"}, "3": {"28": "D & B Mechanical", "29": "D & D Water Heaters", "30": "Louis Heating And Cooling", "31": "TD Heating & Air Conditioning"}, "4": {"28": " ", "29": " ", "30": " ", "31": " "}, "5": {"28": " ", "29": " ", "30": " ", "31": " "}, "6": {"28": " ", "29": " ", "30": " ", "31": " "}, "TONAME": {"28": "Carita", "29": "Loriann", "30": "Monnie", "31": "Marcia"}, "EMAIL": {"28": "etorres7400@sbcglobal.net", "29": "martainnpheobe@gmail.com", "30": "interheating@gmail.com", "31": "coralhvac@gmail.com"}, "flag": {"28": 0, "29": 0, "30": 0, "31": 0}}
+2022-05-16 19:58:06,344 [Thread-5    ] [INFO ]  Length - 4 cammie554076robbins554076@gmail.com
+2022-05-16 19:58:06,346 [Thread-5    ] [ERROR]  
+Starting Thread : Name - allisonkanesha97@gmail.com
+Targets - {"ID": {"32": 33, "33": 34, "34": 35, "35": 36}, "1": {"32": " ", "33": " ", "34": " ", "35": " "}, "2": {"32": "Chicago", "33": "Chicago", "34": "Chicago", "35": "Chicago"}, "3": {"32": "Meyers Plumbing & Electric Co", "33": "Same Day Appliance & Air Conditioning Repair", "34": "Brown Enviro-Control Inc", "35": "Nelson Company"}, "4": {"32": " ", "33": " ", "34": " ", "35": " "}, "5": {"32": " ", "33": " ", "34": " ", "35": " "}, "6": {"32": " ", "33": " ", "34": " ", "35": " "}, "TONAME": {"32": "Brandi", "33": "Opal", "34": "Jone", "35": "Martina"}, "EMAIL": {"32": "atemperature@hotmail.com", "33": "atticexpert@comcast.net", "34": "lauritzlaney765@gmail.com", "35": "goringb20@gmail.com"}, "flag": {"32": 0, "33": 0, "34": 0, "35": 0}}
+2022-05-16 19:58:06,348 [Thread-5    ] [INFO ]  Length - 4 allisonkanesha97@gmail.com
+2022-05-16 19:58:06,349 [Thread-5    ] [ERROR]  
+Starting Thread : Name - pughlael052@gmail.com
+Targets - {"ID": {"36": 37, "37": 38, "38": 39, "39": 40}, "1": {"36": " ", "37": " ", "38": " ", "39": " "}, "2": {"36": "Chicago", "37": "Chicago", "38": "Chicago", "39": "Chicago"}, "3": {"36": "Broadway Sewer Cleaners", "37": "Xpress Heating and Cooling", "38": "A to Z Heating and Cooling", "39": "Petty Company"}, "4": {"36": " ", "37": " ", "38": " ", "39": " "}, "5": {"36": " ", "37": " ", "38": " ", "39": " "}, "6": {"36": " ", "37": " ", "38": " ", "39": " "}, "TONAME": {"36": "Velia", "37": "Olympia", "38": "Zaida", "39": "Della"}, "EMAIL": {"36": "xpressheat@gmail.com", "37": "bristowhastings991@gmail.com", "38": "eismueller.sons@gmail.com", "39": "nickmaroulis8@gmail.com"}, "flag": {"36": 0, "37": 0, "38": 0, "39": 0}}
+2022-05-16 19:58:06,351 [Thread-5    ] [INFO ]  Length - 4 pughlael052@gmail.com
+2022-05-16 19:58:06,352 [Thread-5    ] [ERROR]  
+Starting Thread : Name - ebonisherwood39@gmail.com
+Targets - {"ID": {"40": 41, "41": 42, "42": 43, "43": 44}, "1": {"40": " ", "41": " ", "42": " ", "43": " "}, "2": {"40": "Chicago", "41": "Chicago", "42": "Chicago", "43": "Chicago"}, "3": {"40": "Best Furnace Cleaning Repair", "41": "Complete Service Professionals", "42": "Hopkins Solutions", "43": "Larsen Solutions"}, "4": {"40": " ", "41": " ", "42": " ", "43": " "}, "5": {"40": " ", "41": " ", "42": " ", "43": " "}, "6": {"40": " ", "41": " ", "42": " ", "43": " "}, "TONAME": {"40": "Lawana", "41": "Piper", "42": "Vallie", "43": "Otilia"}, "EMAIL": {"40": "thelittleguy72@gmail.com", "41": "kaylaporter1994@gmail.com", "42": "mackenziebarny02@gmail.com", "43": "gyouliphyti@gmail.com"}, "flag": {"40": 0, "41": 0, "42": 0, "43": 0}}
+2022-05-16 19:58:06,353 [Thread-5    ] [INFO ]  Length - 4 ebonisherwood39@gmail.com
+2022-05-16 19:58:06,356 [Thread-5    ] [ERROR]  
+Starting Thread : Name - kishagauthier@gmail.com
+Targets - {"ID": {"44": 45, "45": 46, "46": 47, "47": 48}, "1": {"44": " ", "45": " ", "46": "http://www.chicagoheightsilhvaccontractor.com", "47": "http://www.honestyhvac.com"}, "2": {"44": "Chicago", "45": "Chicago", "46": "Chicago Heights", "47": "Chicago Heights"}, "3": {"44": "Cahaba Contractors", "45": "Desert Quality Heating", "46": "Chicago Heating Repair", "47": "Honest Heating & Cooling"}, "4": {"44": " ", "45": " ", "46": " ", "47": " "}, "5": {"44": " ", "45": " ", "46": " ", "47": " "}, "6": {"44": " ", "45": " ", "46": " ", "47": " "}, "TONAME": {"44": "Leonora", "45": "Zaida", "46": "Della", "47": "Codi"}, "EMAIL": {"44": "pjwydra@comcast.net", "45": "rtessequeau@gmail.com", "46": "mountaintopheatingair@gmail.com", "47": "info@honestyhvac.com"}, "flag": {"44": 0, "45": 0, "46": 0, "47": 0}}
+2022-05-16 19:58:06,357 [Thread-5    ] [INFO ]  Length - 4 kishagauthier@gmail.com
+2022-05-16 19:58:06,359 [Thread-5    ] [ERROR]  
+Starting Thread : Name - trangmckinney@gmail.com
+Targets - {"ID": {"48": 49, "49": 50, "50": 51, "51": 52}, "1": {"48": "http://vandyckmechanical.com", "49": "http://www.lennox.com", "50": "http://www.airrite.us", "51": "http://www.bobsairrepair.com"}, "2": {"48": "Chickasha", "49": "Chickasha", "50": "Chico", "51": "Chico"}, "3": {"48": "Vance Comfort Zone Refrig", "49": "Sunwave Air Conditioning & Heating", "50": "Air-Rite Heating & Cooling Inc", "51": "Reed Bob Plumbing & Heating"}, "4": {"48": " ", "49": " ", "50": " ", "51": " "}, "5": {"48": " ", "49": " ", "50": " ", "51": " "}, "6": {"48": " ", "49": " ", "50": " ", "51": " "}, "TONAME": {"48": "Colene", "49": "Nichelle", "50": "Matilde", "51": "Ernestina"}, "EMAIL": {"48": "customerservice@vandyckmechanical.com", "49": "dehartac@swbell.net", "50": "steve@airrite.us", "51": "bobsairrepair@gmail.com"}, "flag": {"48": 0, "49": 0, "50": 0, "51": 0}}
+2022-05-16 19:58:06,361 [Thread-5    ] [INFO ]  Length - 4 trangmckinney@gmail.com
+2022-05-16 19:58:06,362 [Thread-5    ] [ERROR]  
+Starting Thread : Name - janeencrowley2@gmail.com
+Targets - {"ID": {"52": 53, "53": 54, "54": 55, "55": 56}, "1": {"52": "http://www.caeschico.com", "53": " ", "54": "http://jjkandsonservices.com", "55": "http://www.dansappliancerepairs.com"}, "2": {"52": "Chico", "53": "Chico", "54": "Chicopee", "55": "Chicopee"}, "3": {"52": "Caddell Plumbing LLC", "53": "St. Louis Premier Comfort Specialists", "54": "JJ HVAC Solutions", "55": "Dan Rainville & Assoc"}, "4": {"52": " ", "53": " ", "54": " ", "55": " "}, "5": {"52": " ", "53": " ", "54": " ", "55": " "}, "6": {"52": " ", "53": " ", "54": " ", "55": " "}, "TONAME": {"52": "Deandra", "53": "Bibi", "54": "Ludie", "55": "Sharilyn"}, "EMAIL": {"52": "jason@caeschico.com", "53": "5starrefrigeration@gmail.com", "54": "jjknson@gmail.com", "55": "dancloutier4@hotmail.com"}, "flag": {"52": 0, "53": 0, "54": 0, "55": 0}}
+2022-05-16 19:58:06,364 [Thread-5    ] [INFO ]  Length - 4 janeencrowley2@gmail.com
+2022-05-16 19:58:06,366 [Thread-5    ] [ERROR]  
+Starting Thread : Name - newcombmichiko@gmail.com
+Targets - {"ID": {"56": 57, "57": 58, "58": 59, "59": 60}, "1": {"56": "http://www.snowsplumbing.com", "57": "https://plus.google.com/102681600700734310668/about", "58": "https://www.kaebleoil.biz", "59": " "}, "2": {"56": "Chicopee", "57": "Chicopee", "58": "Chicopee", "59": "Chicopee"}, "3": {"56": "Snow and Jones; Inc.", "57": "Reliable Fuel Inc", "58": "JV Mechanical Contractors inc", "59": "Stover Energy"}, "4": {"56": " ", "57": " ", "58": " ", "59": " "}, "5": {"56": " ", "57": " ", "58": " ", "59": " "}, "6": {"56": " ", "57": " ", "58": " ", "59": " "}, "TONAME": {"56": "Sharolyn", "57": "Hedy", "58": "Lawanna", "59": "Jerlene"}, "EMAIL": {"56": "bill@snowsplumbing.com", "57": "breathez31@charter.net", "58": "kaebleoil2010@gmail.com", "59": "airstream413@gmail.com"}, "flag": {"56": 0, "57": 0, "58": 0, "59": 0}}
+2022-05-16 19:58:06,367 [Thread-5    ] [INFO ]  Length - 4 newcombmichiko@gmail.com
+2022-05-16 19:58:06,369 [Thread-5    ] [ERROR]  
+Starting Thread : Name - dyershanelle@gmail.com
+Targets - {"ID": {"60": 61, "61": 62, "62": 63, "63": 64}, "1": {"60": " ", "61": " ", "62": " ", "63": " "}, "2": {"60": "chicopee", "61": "Chicopee", "62": "Chicopee", "63": "Chicopee"}, "3": {"60": "Heating Services in Western MA", "61": "Air From Paradise Team", "62": "Bisson Plumbing Heating & Cooling", "63": "Demeter's Climate Control"}, "4": {"60": " ", "61": " ", "62": " ", "63": " "}, "5": {"60": " ", "61": " ", "62": " ", "63": " "}, "6": {"60": " ", "61": " ", "62": " ", "63": " "}, "TONAME": {"60": "Lorriane", "61": "Leeann", "62": "Maryann", "63": "Ute"}, "EMAIL": {"60": "jd4951@hotmail.com", "61": "taborsheetmetal@gmail.com", "62": "ronsservice1@charter.net", "63": "airtempsolutionsllc@gmail.com"}, "flag": {"60": 0, "61": 0, "62": 0, "63": 0}}
+2022-05-16 19:58:06,370 [Thread-5    ] [INFO ]  Length - 4 dyershanelle@gmail.com
+2022-05-16 19:58:06,372 [Thread-5    ] [ERROR]  
+Starting Thread : Name - gwenda767321hayes767321@gmail.com
+Targets - {"ID": {"64": 65, "65": 66, "66": 67, "67": 68}, "1": {"64": " ", "65": "http://www.skeltonsair.com", "66": "http://www.greatpacificelbow.com", "67": "http://www.maceair.com"}, "2": {"64": "Chicopee", "65": "Childersburg", "66": "Chino", "67": "Chino"}, "3": {"64": "Rite-Temp Heating & Air Conditioning", "65": "Skaggs-Walsh Inc", "66": "Great Lakes Power Inc", "67": "Mac-Co Heating And Cooling"}, "4": {"64": " ", "65": " ", "66": " ", "67": " "}, "5": {"64": " ", "65": " ", "66": " ", "67": " "}, "6": {"64": " ", "65": " ", "66": " ", "67": " "}, "TONAME": {"64": "Albertha", "65": "Deetta", "66": "Ronni", "67": "Ardelia"}, "EMAIL": {"64": "mike.croteau2@gmail.com", "65": "noreply@google.com", "66": "erik@steelcousa.com", "67": "glenngross144@yahoo.com"}, "flag": {"64": 0, "65": 0, "66": 0, "67": 0}}
+2022-05-16 19:58:06,374 [Thread-5    ] [INFO ]  Length - 4 gwenda767321hayes767321@gmail.com
+2022-05-16 19:58:06,375 [Thread-5    ] [ERROR]  
+Starting Thread : Name - vanessa780734costa780734@gmail.com
+Targets - {"ID": {"68": 69, "69": 70, "70": 71, "71": 72}, "1": {"68": "https://abcheatandac.net", "69": " ", "70": " ", "71": " "}, "2": {"68": "Chino", "69": "Chino", "70": "Chino Hills", "71": "Chino Hills"}, "3": {"68": "ABC Austin Service Express", "69": "Cleveland Air", "70": "snowball trading HAVC company", "71": "Darrell's Plumbing and Heating"}, "4": {"68": " ", "69": " ", "70": " ", "71": " "}, "5": {"68": " ", "69": " ", "70": " ", "71": " "}, "6": {"68": " ", "69": " ", "70": " ", "71": " "}, "TONAME": {"68": "Carita", "69": "Loriann", "70": "Monnie", "71": "Marcia"}, "EMAIL": {"68": "tariordan@gmail.com", "69": "robert.mach10@gmail.com", "70": "goodhousedoctor@gmail.com", "71": "devlinwaynwrite@gmail.com"}, "flag": {"68": 0, "69": 0, "70": 0, "71": 0}}
+2022-05-16 19:58:06,377 [Thread-5    ] [INFO ]  Length - 4 vanessa780734costa780734@gmail.com
+2022-05-16 19:58:06,379 [Thread-5    ] [ERROR]  
+Starting Thread : Name - augustinarector@gmail.com
+Targets - {"ID": {"72": 73, "73": 74, "74": 75, "75": 76}, "1": {"72": "http://hobbsheatingandair.com", "73": "http://ncelectricservice.com", "74": "http://www.apex-rentals.com", "75": "http://www.hovlands-inc.com"}, "2": {"72": "Chipley", "73": "Chippewa Falls", "74": "Chippewa Falls", "75": "Chippewa Falls"}, "3": {"72": "Sweeny H M Co", "73": "Northern Colorado Air", "74": "Apex Refrigeration", "75": "Houze Heating & Air Conditioning"}, "4": {"72": " ", "73": " ", "74": " ", "75": " "}, "5": {"72": " ", "73": " ", "74": " ", "75": " "}, "6": {"72": " ", "73": " ", "74": " ", "75": " "}, "TONAME": {"72": "Brandi", "73": "Opal", "74": "Jone", "75": "Martina"}, "EMAIL": {"72": "hobbshvac@outlook.com", "73": "info@ncelectricservice.com", "74": "grafenauer@gmail.com", "75": "doster@hovlands-inc.com"}, "flag": {"72": 0, "73": 0, "74": 0, "75": 0}}
+2022-05-16 19:58:06,381 [Thread-5    ] [INFO ]  Length - 4 augustinarector@gmail.com
+2022-05-16 19:58:06,383 [Thread-5    ] [ERROR]  
+Starting Thread : Name - manacarpenter349@gmail.com
+Targets - {"ID": {"76": 77, "77": 78, "78": 79, "79": 80}, "1": {"76": "http://www.kurthheatingandcooling.com", "77": "https://www.sertichplumbingheating.com", "78": " ", "79": "http://rorrerdrilling.com"}, "2": {"76": "Chippewa Falls", "77": "Chisholm", "78": "Choteau", "79": "Christiansburg"}, "3": {"76": "Kuna Heating and Air Conditioning", "77": "Sentry Oil Inc", "78": "Fabulous Flue Chimney Sweep", "79": "Rorick Electric Heating & Air"}, "4": {"76": " ", "77": " ", "78": " ", "79": " "}, "5": {"76": " ", "77": " ", "78": " ", "79": " "}, "6": {"76": " ", "77": " ", "78": " ", "79": " "}, "TONAME": {"76": "Velia", "77": "Olympia", "78": "Zaida", "79": "Della"}, "EMAIL": {"76": "karen@kurth-hvac.com", "77": "sertichplumbing@gmail.com", "78": "progas@3rivers.net", "79": "erorrer@rorrerdrilling.com"}, "flag": {"76": 0, "77": 0, "78": 0, "79": 0}}
+2022-05-16 19:58:06,388 [Thread-5    ] [INFO ]  Length - 4 manacarpenter349@gmail.com
+2022-05-16 19:58:06,389 [Thread-5    ] [ERROR]  
+Starting Thread : Name - americapitts65@gmail.com
+Targets - {"ID": {"80": 81, "81": 82, "82": 83, "83": 84}, "1": {"80": "http://www.blueridgeheatingandair.com", "81": "http://eaglefleet.com", "82": "http://rgheatingandcooling.com", "83": "http://www.allbrandsairconditioning.com"}, "2": {"80": "Christiansburg", "81": "Chula Vista", "82": "Chula Vista", "83": "Chula Vista"}, "3": {"80": "Blue Ridge Company", "81": "Eagle Crest Enterprises", "82": "RGG Service and Repair; Inc.", "83": "All Brand Appliance Parts"}, "4": {"80": " ", "81": " ", "82": " ", "83": " "}, "5": {"80": " ", "81": " ", "82": " ", "83": " "}, "6": {"80": " ", "81": " ", "82": " ", "83": " "}, "TONAME": {"80": "Lawana", "81": "Piper", "82": "Vallie", "83": "Otilia"}, "EMAIL": {"80": "asmithcrabcreek@aol.com", "81": "shawn@eaglefleet.com", "82": "info@rgheatingandcooling.com", "83": "splimber1@gmail.com"}, "flag": {"80": 0, "81": 0, "82": 0, "83": 0}}
+2022-05-16 19:58:06,391 [Thread-5    ] [INFO ]  Length - 4 americapitts65@gmail.com
+2022-05-16 19:58:06,392 [Thread-5    ] [ERROR]  
+Starting Thread : Name - deatonmei321@gmail.com
+Targets - {"ID": {"84": 85, "85": 86, "86": 87, "87": 88}, "1": {"84": "http://www.bonitapoint76.com", "85": "http://www.brsmechanicalsd.com", "86": "http://www.heatingandcoolingsandiego.com", "87": "http://www.rgheatingandcooling.com"}, "2": {"84": "Chula Vista", "85": "Chula Vista", "86": "Chula Vista", "87": "Chula Vista"}, "3": {"84": "Bonita Auto Center", "85": "BRRR HEATING OIL; INC", "86": "Hubbard Heating & Cooling", "87": "RGB Mechanical Contractors Inc"}, "4": {"84": " ", "85": " ", "86": " ", "87": " "}, "5": {"84": " ", "85": " ", "86": " ", "87": " "}, "6": {"84": " ", "85": " ", "86": " ", "87": " "}, "TONAME": {"84": "Leonora", "85": "Zaida", "86": "Della", "87": "Codi"}, "EMAIL": {"84": "bonitapointautocare76@gmail.com", "85": "brsmechanicalsd@gmail.com", "86": "combscustomcooling@gmail.com", "87": "rgheatingandcoolinginc@gmail.com"}, "flag": {"84": 0, "85": 0, "86": 0, "87": 0}}
+2022-05-16 19:58:06,394 [Thread-5    ] [INFO ]  Length - 4 deatonmei321@gmail.com
+2022-05-16 19:58:06,395 [Thread-5    ] [ERROR]  
+Starting Thread : Name - ec3170717@gmail.com
+Targets - {"ID": {"88": 89, "89": 90, "90": 91, "91": 92}, "1": {"88": "http://www.southbayheatingac.com", "89": "https://www.facebook.com/AAHeatingAndAc", "90": " ", "91": " "}, "2": {"88": "Chula Vista", "89": "Chula Vista", "90": "Chula Vista", "91": "Chula Vista"}, "3": {"88": "Turnbow Construction & Home Building; Inc.", "89": "Fabian & Son", "90": "Gross  Mechanical", "91": "Precision Masonry"}, "4": {"88": " ", "89": " ", "90": " ", "91": " "}, "5": {"88": " ", "89": " ", "90": " ", "91": " "}, "6": {"88": " ", "89": " ", "90": " ", "91": " "}, "TONAME": {"88": "Colene", "89": "Nichelle", "90": "Matilde", "91": "Ernestina"}, "EMAIL": {"88": "southbayhvacpro@gmail.com", "89": "aaheatingservices@gmail.com", "90": "betoarballo@hotmail.com", "91": "timspeller@hotmail.com"}, "flag": {"88": 0, "89": 0, "90": 0, "91": 0}}
+2022-05-16 19:58:06,397 [Thread-5    ] [INFO ]  Length - 4 ec3170717@gmail.com
+2022-05-16 19:58:06,398 [Thread-5    ] [ERROR]  
+Starting Thread : Name - dickinsonalicia6@gmail.com
+Targets - {"ID": {"92": 93, "93": 94, "94": 95, "95": 96}, "1": {"92": " ", "93": " ", "94": " ", "95": "http://www.ducts-r-us.com"}, "2": {"92": "Chunchula", "93": "Church Hill", "94": "Church Hill", "95": "Church Point"}, "3": {"92": "A1 Son Appliance & Aircondition Repair", "93": "R&R Heating and Air", "94": "Simerly Heat & Air", "95": "Ducts Inc"}, "4": {"92": " ", "93": " ", "94": " ", "95": " "}, "5": {"92": " ", "93": " ", "94": " ", "95": " "}, "6": {"92": " ", "93": " ", "94": " ", "95": " "}, "TONAME": {"92": "Deandra", "93": "Bibi", "94": "Ludie", "95": "Sharilyn"}, "EMAIL": {"92": "dallaswolf1@live.com", "93": "worryfree_hc@yahoo.com", "94": "rickwells12@gmail.com", "95": "randy.ductsrus@gmail.com"}, "flag": {"92": 0, "93": 0, "94": 0, "95": 0}}
+2022-05-16 19:58:06,400 [Thread-5    ] [INFO ]  Length - 4 dickinsonalicia6@gmail.com
+2022-05-16 19:58:06,401 [Thread-5    ] [ERROR]  
+Starting Thread : Name - driscollmiranda7@gmail.com
+Targets - {"ID": {"96": 97, "97": 98, "98": 99, "99": 100}, "1": {"96": "http://www.hawleyplumbing.com", "97": "http://www.ecoenergyny.com", "98": "http://www.pipitoneenterprises.com", "99": "http://goveaservice.ezlocal.com"}, "2": {"96": "Churchton", "97": "Churchville", "98": "Churchville", "99": "Cicero"}, "3": {"96": "Hawley Air Conditioning & Heating", "97": "Eco Energy Heating & Cooling LLC", "98": "Pi Piper Inc.", "99": "VacMan Air Duct Cleaning"}, "4": {"96": " ", "97": " ", "98": " ", "99": " "}, "5": {"96": " ", "97": " ", "98": " ", "99": " "}, "6": {"96": " ", "97": " ", "98": " ", "99": " "}, "TONAME": {"96": "Sharolyn", "97": "Hedy", "98": "Lawanna", "99": "Jerlene"}, "EMAIL": {"96": "ahplumbing@hotmail.com", "97": "eco@ecoenergyny.com", "98": "pipenter@rochester.rr.com", "99": "goveaestebanp@gmail.com"}, "flag": {"96": 0, "97": 0, "98": 0, "99": 0}}
+2022-05-16 19:58:06,403 [Thread-5    ] [INFO ]  Length - 4 driscollmiranda7@gmail.com
+2022-05-16 19:58:06,404 [Thread-5    ] [ERROR]  
+Starting Thread : Name - evelineperry913@gmail.com
+Targets - {"ID": {"100": 101, "101": 102, "102": 103, "103": 104}, "1": {"100": "http://smartchoicehvac.net", "101": "https://www.cnyhomerenovations.com", "102": " ", "103": " "}, "2": {"100": "Cicero", "101": "Cicero", "102": "Cicero", "103": "Cicero"}, "3": {"100": "S Maccna", "101": "C-N-O Comfort Zone", "102": "Thomas Roofing", "103": "Midwest Rodding;inc."}, "4": {"100": " ", "101": " ", "102": " ", "103": " "}, "5": {"100": " ", "101": " ", "102": " ", "103": " "}, "6": {"100": " ", "101": " ", "102": " ", "103": " "}, "TONAME": {"100": "Lorriane", "101": "Leeann", "102": "Maryann", "103": "Ute"}, "EMAIL": {"100": "victor@smartchoicehvac.net", "101": "cnyhomerepairs@gmail.com", "102": "tuergodfree@gmail.com", "103": "jorgeamoraza@gmail.com"}, "flag": {"100": 0, "101": 0, "102": 0, "103": 0}}
+2022-05-16 19:58:06,406 [Thread-5    ] [INFO ]  Length - 4 evelineperry913@gmail.com
+2022-05-16 19:58:06,408 [Thread-5    ] [ERROR]  
+Starting Thread : Name - amieecallahan2@gmail.com
+Targets - {"ID": {"104": 105, "105": 106, "106": 107, "107": 108}, "1": {"104": "http://cincinnatiair.com", "105": "http://cincinnatiohgeneralcontractor.com", "106": "http://cooltimeshvac.com", "107": "http://dealer.maytaghvac.com/READINGHEATINGCOOLING-CINCINNATI-OH"}, "2": {"104": "Cincinnati", "105": "Cincinnati", "106": "Cincinnati", "107": "Cincinnati"}, "3": {"104": "Cianciotti Heating & Air", "105": "Cincinnati Air Conditioning", "106": "Cool Temp Air", "107": "Pullen Air Conditioning; Inc."}, "4": {"104": " ", "105": " ", "106": " ", "107": " "}, "5": {"104": " ", "105": " ", "106": " ", "107": " "}, "6": {"104": " ", "105": " ", "106": " ", "107": " "}, "TONAME": {"104": "Albertha", "105": "Deetta", "106": "Ronni", "107": "Ardelia"}, "EMAIL": {"104": "mikegeiger@cincinnatiair.com", "105": "ondemandreo@aol.com", "106": "cooltimes@fuse.net", "107": "readingheating@msn.com"}, "flag": {"104": 0, "105": 0, "106": 0, "107": 0}}
+2022-05-16 19:58:06,409 [Thread-5    ] [INFO ]  Length - 4 amieecallahan2@gmail.com
+2022-05-16 19:58:06,411 [Thread-5    ] [ERROR]  
+Starting Thread : Name - hardinghildegard@gmail.com
+Targets - {"ID": {"108": 109, "109": 110, "110": 111, "111": 112}, "1": {"108": "http://dellingservices.com", "109": "http://glennsautomotiverepair.com", "110": "http://haderhvac.com", "111": "http://jonle.com"}, "2": {"108": "Cincinnati", "109": "Cincinnati", "110": "Cincinnati", "111": "Cincinnati"}, "3": {"108": "DelFera & Son Heating & Air Conditioning", "109": "Glastonbury Burner & Boiler", "110": "SZH Construction", "111": "Jones Supply"}, "4": {"108": " ", "109": " ", "110": " ", "111": " "}, "5": {"108": " ", "109": " ", "110": " ", "111": " "}, "6": {"108": " ", "109": " ", "110": " ", "111": " "}, "TONAME": {"108": "Carita", "109": "Loriann", "110": "Monnie", "111": "Marcia"}, "EMAIL": {"108": "dellingservices@gmail.com", "109": "glenncroucher@gmail.com", "110": "dbeiser@hadersolutions.com", "111": "sales@tricountyht.com"}, "flag": {"108": 0, "109": 0, "110": 0, "111": 0}}
+2022-05-16 19:58:06,412 [Thread-5    ] [INFO ]  Length - 4 hardinghildegard@gmail.com
+2022-05-16 19:58:06,414 [Thread-5    ] [ERROR]  
+Starting Thread : Name - britt277384hanks277384@gmail.com
+Targets - {"ID": {"112": 113, "113": 114, "114": 115, "115": 116}, "1": {"112": "http://pottsheating.com", "113": "http://rylixelectric.com", "114": "http://schibi.com", "115": "http://www.333help.com"}, "2": {"112": "Cincinnati", "113": "Cincinnati", "114": "Cincinnati", "115": "Cincinnati"}, "3": {"112": "Potomac Cooling", "113": "Ryder Technology", "114": "Schenck Fuels Inc", "115": "32 Degrees Heating & Air Conditioning"}, "4": {"112": " ", "113": " ", "114": " ", "115": " "}, "5": {"112": " ", "113": " ", "114": " ", "115": " "}, "6": {"112": " ", "113": " ", "114": " ", "115": " "}, "TONAME": {"112": "Brandi", "113": "Opal", "114": "Jone", "115": "Martina"}, "EMAIL": {"112": "pottshvac@gmail.com", "113": "gclark@rylixelectric.com", "114": "schibiheating@schibi.com", "115": "info@333help.com"}, "flag": {"112": 0, "113": 0, "114": 0, "115": 0}}
+2022-05-16 19:58:06,415 [Thread-5    ] [INFO ]  Length - 4 britt277384hanks277384@gmail.com
+2022-05-16 19:58:06,418 [Thread-5    ] [ERROR]  
+Starting Thread : Name - coyledominque371@gmail.com
+Targets - {"ID": {"116": 117, "117": 118, "118": 119, "119": 120}, "1": {"116": "http://www.adamsheat.com", "117": "http://www.affordable24-7oh.com", "118": "http://www.aireserv.com", "119": "http://www.americanheat.com"}, "2": {"116": "Cincinnati", "117": "Cincinnati", "118": "Cincinnati", "119": "Cincinnati"}, "3": {"116": "Adams Air Care", "117": "Affiliated Steam & Hot Water", "118": "Aire Serv", "119": "American Geothemal"}, "4": {"116": " ", "117": " ", "118": " ", "119": " "}, "5": {"116": " ", "117": " ", "118": " ", "119": " "}, "6": {"116": " ", "117": " ", "118": " ", "119": " "}, "TONAME": {"116": "Velia", "117": "Olympia", "118": "Zaida", "119": "Della"}, "EMAIL": {"116": "service@adamsheat.com", "117": "lotking@gmail.com", "118": "benjansen@fuse.net", "119": "mdemps@fuse.net"}, "flag": {"116": 0, "117": 0, "118": 0, "119": 0}}
+2022-05-16 19:58:06,420 [Thread-5    ] [INFO ]  Length - 4 coyledominque371@gmail.com
+2022-05-16 19:58:06,421 [Thread-5    ] [ERROR]  
+Starting Thread : Name - fshavon9@gmail.com
+Targets - {"ID": {"120": 121, "121": 122, "122": 123, "123": 124}, "1": {"120": "http://www.autorepairanderson.com", "121": "http://www.beckmanservices.com", "122": "http://www.beresfordcompany.com", "123": "http://www.cincinnatiheatingandcooling.com"}, "2": {"120": "Cincinnati", "121": "Cincinnati", "122": "Cincinnati", "123": "Cincinnati"}, "3": {"120": "Auto Radiator Co.", "121": "Beckman Bros.; Inc. Heating & Air Conditioning", "122": "Berea Refrigeration Heating & Air", "123": "Cincinnati Gas Lite Company Inc"}, "4": {"120": " ", "121": " ", "122": " ", "123": " "}, "5": {"120": " ", "121": " ", "122": " ", "123": " "}, "6": {"120": " ", "121": " ", "122": " ", "123": " "}, "TONAME": {"120": "Lawana", "121": "Piper", "122": "Vallie", "123": "Otilia"}, "EMAIL": {"120": "aareast@cinci.rr.com", "121": "bsi@beckmanservices.com", "122": "beresford@fuse.net", "123": "airplus@fuse.net"}, "flag": {"120": 0, "121": 0, "122": 0, "123": 0}}
+2022-05-16 19:58:06,422 [Thread-5    ] [INFO ]  Length - 4 fshavon9@gmail.com
+2022-05-16 19:58:06,425 [Thread-5    ] [ERROR]  
+Starting Thread : Name - shawnta656165rowell656165@gmail.com
+Targets - {"ID": {"124": 125, "125": 126, "126": 127, "127": 128}, "1": {"124": "http://www.comfortbyjansen.com", "125": "http://www.commercialspec.com", "126": "http://www.commhvac.com", "127": "http://www.dandrradiatorservice.com"}, "2": {"124": "Cincinnati", "125": "Cincinnati", "126": "Cincinnati", "127": "Cincinnati"}, "3": {"124": "Freier's Comfortbydesign.Net", "125": "Commercial Specialists Inc", "126": "Commercial Steel Treating Corp", "127": "D & R Plumbing Heating & Air Conditioning"}, "4": {"124": " ", "125": " ", "126": " ", "127": " "}, "5": {"124": " ", "125": " ", "126": " ", "127": " "}, "6": {"124": " ", "125": " ", "126": " ", "127": " "}, "TONAME": {"124": "Leonora", "125": "Zaida", "126": "Della", "127": "Codi"}, "EMAIL": {"124": "info@comfortbyjansen.com", "125": "russw@commercialspec.com", "126": "webmaster@cinfab.com", "127": "dr.radiator@outlook.com"}, "flag": {"124": 0, "125": 0, "126": 0, "127": 0}}
+2022-05-16 19:58:06,427 [Thread-5    ] [INFO ]  Length - 4 shawnta656165rowell656165@gmail.com
+2022-05-16 19:58:06,429 [Thread-5    ] [ERROR]  
+Starting Thread : Name - rikkishelley66@gmail.com
+Targets - {"ID": {"128": 129, "129": 130, "130": 131, "131": 132}, "1": {"128": "http://www.daysappliance.com", "129": "http://www.engelsautoserviceandtowing.com", "130": "http://www.frankniesencompany.com", "131": "http://www.gozimmer.com"}, "2": {"128": "Cincinnati", "129": "Cincinnati", "130": "Cincinnati", "131": "Cincinnati"}, "3": {"128": "Day Plumbing & Heating Co Inc", "129": "Engel Heating & Cooling", "130": "Frank Millard Company Inc", "131": "Brau Heatg & Air Conditioning"}, "4": {"128": " ", "129": " ", "130": " ", "131": " "}, "5": {"128": " ", "129": " ", "130": " ", "131": " "}, "6": {"128": " ", "129": " ", "130": " ", "131": " "}, "TONAME": {"128": "Colene", "129": "Nichelle", "130": "Matilde", "131": "Ernestina"}, "EMAIL": {"128": "daysappliance@fuse.net", "129": "engels@fuse.net", "130": "fnco1884@gmail.com", "131": "tallen@gozimmer.com"}, "flag": {"128": 0, "129": 0, "130": 0, "131": 0}}
+2022-05-16 19:58:06,430 [Thread-5    ] [INFO ]  Length - 4 rikkishelley66@gmail.com
+2022-05-16 19:58:06,432 [Thread-5    ] [ERROR]  
+Starting Thread : Name - shenikablanton85@gmail.com
+Targets - {"ID": {"132": 133, "133": 134, "134": 135, "135": 136}, "1": {"132": "http://www.habeggercorp.com", "133": "http://www.howardadamsheating.com", "134": "http://www.lutesupply.com", "135": "http://www.nelsoncomfort.com"}, "2": {"132": "Cincinnati", "133": "Cincinnati", "134": "Cincinnati", "135": "Cincinnati"}, "3": {"132": "Carrier Distributing Co DSL", "133": "Hovland's Inc", "134": "Lutes Heating & Air Conditioning Inc", "135": "Nelson Brothers Plumbing & Sewer Inc"}, "4": {"132": " ", "133": " ", "134": " ", "135": " "}, "5": {"132": " ", "133": " ", "134": " ", "135": " "}, "6": {"132": " ", "133": " ", "134": " ", "135": " "}, "TONAME": {"132": "Deandra", "133": "Bibi", "134": "Ludie", "135": "Sharilyn"}, "EMAIL": {"132": "lex@habeggercorp.com", "133": "kentadams@fuse.net", "134": "mis@lutesupply.com", "135": "service@nelsoncomfort.com"}, "flag": {"132": 0, "133": 0, "134": 0, "135": 0}}
+2022-05-16 19:58:06,434 [Thread-5    ] [INFO ]  Length - 4 shenikablanton85@gmail.com
+2022-05-16 19:58:06,435 [Thread-5    ] [ERROR]  
+Starting Thread : Name - manhewitt301@gmail.com
+Targets - {"ID": {"136": 137, "137": 138, "138": 139, "139": 140}, "1": {"136": "http://www.neyer.com", "137": "http://www.powerheatlight.com", "138": "http://www.progresssupply.com/default.aspx?page=home", "139": "http://www.rashsavillecrawford.com"}, "2": {"136": "Cincinnati", "137": "Cincinnati", "138": "Cincinnati", "139": "Cincinnati"}, "3": {"136": "Next Step Energy", "137": "Power Cool Inc", "138": "Progress Supply", "139": "Rascher Plumbing & Heating"}, "4": {"136": " ", "137": " ", "138": " ", "139": " "}, "5": {"136": " ", "137": " ", "138": " ", "139": " "}, "6": {"136": " ", "137": " ", "138": " ", "139": " "}, "TONAME": {"136": "Sharolyn", "137": "Hedy", "138": "Lawanna", "139": "Jerlene"}, "EMAIL": {"136": "kwneyer@msn.com", "137": "mikeallens@fuse.net", "138": "phil@progresssupply.com", "139": "info@rashsavillecrawford.com"}, "flag": {"136": 0, "137": 0, "138": 0, "139": 0}}
+2022-05-16 19:58:06,437 [Thread-5    ] [INFO ]  Length - 4 manhewitt301@gmail.com
+2022-05-16 19:58:06,438 [Thread-5    ] [ERROR]  
+Starting Thread : Name - readl2810@gmail.com
+Targets - {"ID": {"140": 141, "141": 142, "142": 143, "143": 144}, "1": {"140": "http://www.sackoair.com", "141": "http://www.schmidtheating.com", "142": "http://www.smithhughes.com", "143": "http://www.spot-coolers.com"}, "2": {"140": "Cincinnati", "141": "Cincinnati", "142": "Cincinnati", "143": "Cincinnati"}, "3": {"140": "Sac Heating and Cooling", "141": "Schmid Plumbing-Heating Inc", "142": "Air Filtration Systems", "143": "Spolski Construction Inc"}, "4": {"140": " ", "141": " ", "142": " ", "143": " "}, "5": {"140": " ", "141": " ", "142": " ", "143": " "}, "6": {"140": " ", "141": " ", "142": " ", "143": " "}, "TONAME": {"140": "Lorriane", "141": "Leeann", "142": "Maryann", "143": "Ute"}, "EMAIL": {"140": "sackoair@gmail.com", "141": "steve@schmidtheating.com", "142": "brad@smithhughes.com", "143": "corey.west@spot-coolers.com"}, "flag": {"140": 0, "141": 0, "142": 0, "143": 0}}
+2022-05-16 19:58:06,440 [Thread-5    ] [INFO ]  Length - 4 readl2810@gmail.com
+2022-05-16 19:58:06,442 [Thread-5    ] [ERROR]  
+Starting Thread : Name - latriciay373@gmail.com
+Targets - {"ID": {"144": 145, "145": 146, "146": 147, "147": 148}, "1": {"144": "http://www.tricityohio.com", "145": "http://www.tropicalhvac.com", "146": "https://chillyheatingandcooling.com", "147": "https://millenniumgroupll.com"}, "2": {"144": "Cincinnati", "145": "Cincinnati", "146": "Cincinnati", "147": "Cincinnati"}, "3": {"144": "Tri City Heating", "145": "Tropical Heating & Air", "146": "ChillTec Climate Solutions", "147": "Mike Murphy & Sons Inc"}, "4": {"144": " ", "145": " ", "146": " ", "147": " "}, "5": {"144": " ", "145": " ", "146": " ", "147": " "}, "6": {"144": " ", "145": " ", "146": " ", "147": " "}, "TONAME": {"144": "Albertha", "145": "Deetta", "146": "Ronni", "147": "Ardelia"}, "EMAIL": {"144": "tmjdlj@fuse.net", "145": "bradmitchell2011@gmail.com", "146": "chillyheatingandcooling@hotmail.com", "147": "millenniumgroupll83@gmail.com"}, "flag": {"144": 0, "145": 0, "146": 0, "147": 0}}
+2022-05-16 19:58:06,443 [Thread-5    ] [INFO ]  Length - 4 latriciay373@gmail.com
+2022-05-16 19:58:06,445 [Thread-5    ] [ERROR]  
+Starting Thread : Name - kearneykira733@gmail.com
+Targets - {"ID": {"148": 149, "149": 150, "150": 151, "151": 152}, "1": {"148": "https://suremechanical.com", "149": "https://thomasgalbraith.com", "150": "https://www.habeggercorp.com", "151": "https://www.mooreairco.com"}, "2": {"148": "Cincinnati", "149": "Cincinnati", "150": "Cincinnati", "151": "Cincinnati"}, "3": {"148": "Surefire Heating & Cooling", "149": "Thomas F Gorman Plumbing", "150": "The Habegger Corp", "151": "Moore Air and Heat"}, "4": {"148": " ", "149": " ", "150": " ", "151": " "}, "5": {"148": " ", "149": " ", "150": " ", "151": " "}, "6": {"148": " ", "149": " ", "150": " ", "151": " "}, "TONAME": {"148": "Carita", "149": "Loriann", "150": "Monnie", "151": "Marcia"}, "EMAIL": {"148": "info@suremechanical.com", "149": "info@thomasgalbraith.com", "150": "cth@habeggercorp.com", "151": "john.moore@bmes-hvac.com"}, "flag": {"148": 0, "149": 0, "150": 0, "151": 0}}
+2022-05-16 19:58:06,448 [Thread-5    ] [INFO ]  Length - 4 kearneykira733@gmail.com
+2022-05-16 19:58:06,449 [Thread-5    ] [ERROR]  
+Starting Thread : Name - hoskinsj787@gmail.com
+Targets - {"ID": {"152": 153, "153": 154, "154": 155, "155": 156}, "1": {"152": "https://www.trane.com/index.html", "153": " ", "154": " ", "155": " "}, "2": {"152": "Cincinnati", "153": "Cincinnati", "154": "Cincinnati", "155": "Cincinnati"}, "3": {"152": "CMS Heating Cooling & Insulation Inc", "153": "Scott D Breen Plumbing & Heating", "154": "Airtron Heating & Cooling", "155": "Wilfert Electric"}, "4": {"152": " ", "153": " ", "154": " ", "155": " "}, "5": {"152": " ", "153": " ", "154": " ", "155": " "}, "6": {"152": " ", "153": " ", "154": " ", "155": " "}, "TONAME": {"152": "Brandi", "153": "Opal", "154": "Jone", "155": "Martina"}, "EMAIL": {"152": "jjsmithhvac1@gmail.com", "153": "raisor1@gmail.com", "154": "delpair@gmail.com", "155": "service@prescription-air.com"}, "flag": {"152": 0, "153": 0, "154": 0, "155": 0}}
+2022-05-16 19:58:06,451 [Thread-5    ] [INFO ]  Length - 4 hoskinsj787@gmail.com
+2022-05-16 19:58:06,452 [Thread-5    ] [ERROR]  
+Starting Thread : Name - elwandalee81@gmail.com
+Targets - {"ID": {"156": 157, "157": 158, "158": 159, "159": 160}, "1": {"156": " ", "157": " ", "158": " ", "159": " "}, "2": {"156": "Cincinnati", "157": "Cincinnati", "158": "Cincinnati", "159": "Cincinnati"}, "3": {"156": "Artic Heating & Air Conditioning; Inc.", "157": "Adrian's Heating & Air Conditioning; LLC", "158": "Duncan Services", "159": "Herzog Heating & Air Conditioning"}, "4": {"156": " ", "157": " ", "158": " ", "159": " "}, "5": {"156": " ", "157": " ", "158": " ", "159": " "}, "6": {"156": " ", "157": " ", "158": " ", "159": " "}, "TONAME": {"156": "Velia", "157": "Olympia", "158": "Zaida", "159": "Della"}, "EMAIL": {"156": "sdfries@hotmail.com", "157": "raquelhowar@gmail.com", "158": "donellychristoper@gmail.com", "159": "lwebb@comfortspec.com"}, "flag": {"156": 0, "157": 0, "158": 0, "159": 0}}
+2022-05-16 19:58:06,454 [Thread-5    ] [INFO ]  Length - 4 elwandalee81@gmail.com
+2022-05-16 19:58:06,455 [Thread-5    ] [ERROR]  
+Starting Thread : Name - mccabefelicidad@gmail.com
+Targets - {"ID": {"160": 161, "161": 162, "162": 163, "163": 164}, "1": {"160": " ", "161": " ", "162": " ", "163": " "}, "2": {"160": "Cincinnati", "161": "Cincinnati", "162": "Cincinnati", "163": "Cincinnati"}, "3": {"160": "Smith Refrigeration & Air Conditioning", "161": "Stoutenborough Electric", "162": "Anderson Plumbing Heating and Cooling", "163": "M D Air"}, "4": {"160": " ", "161": " ", "162": " ", "163": " "}, "5": {"160": " ", "161": " ", "162": " ", "163": " "}, "6": {"160": " ", "161": " ", "162": " ", "163": " "}, "TONAME": {"160": "Lawana", "161": "Piper", "162": "Vallie", "163": "Otilia"}, "EMAIL": {"160": "fcrane@craneheatingandair.com", "161": "dawsonhvac@yahoo.com", "162": "stephen@sanderssonsllc.com", "163": "dheuer@cinci.rr.com"}, "flag": {"160": 0, "161": 0, "162": 0, "163": 0}}
+2022-05-16 19:58:06,457 [Thread-5    ] [INFO ]  Length - 4 mccabefelicidad@gmail.com
+2022-05-16 19:58:06,459 [Thread-5    ] [ERROR]  
+Starting Thread : Name - fultonalbert1@gmail.com
+Targets - {"ID": {"164": 165, "165": 166, "166": 167, "167": 168}, "1": {"164": " ", "165": " ", "166": " ", "167": " "}, "2": {"164": "Cincinnati", "165": "Cincinnati", "166": "Cincinnati", "167": "Cincinnati"}, "3": {"164": "Berry's Cooling & Heating< LLC", "165": "All-Temp Heatg & Air", "166": "Campbells Plumbing and Heating Inc", "167": "Better Choice Heating & Air Conditioning Inc"}, "4": {"164": " ", "165": " ", "166": " ", "167": " "}, "5": {"164": " ", "165": " ", "166": " ", "167": " "}, "6": {"164": " ", "165": " ", "166": " ", "167": " "}, "TONAME": {"164": "Leonora", "165": "Zaida", "166": "Della", "167": "Codi"}, "EMAIL": {"164": "mcgeeheatingandair@fuse.net", "165": "angela@victoryairmechanical.com", "166": "pat@caligurihvac.com", "167": "elissa.jfdb@gmail.com"}, "flag": {"164": 0, "165": 0, "166": 0, "167": 0}}
+2022-05-16 19:58:06,463 [Thread-5    ] [INFO ]  Length - 4 fultonalbert1@gmail.com
+2022-05-16 19:58:06,465 [Thread-5    ] [ERROR]  
+Starting Thread : Name - lnu94846@gmail.com
+Targets - {"ID": {"168": 169, "169": 170, "170": 171, "171": 172}, "1": {"168": " ", "169": " ", "170": " ", "171": " "}, "2": {"168": "Cincinnati", "169": "Cincinnati", "170": "Cincinnati", "171": "Cincinnati"}, "3": {"168": "Affordable Climate Control & Maintenance", "169": "Family Home Repair & Remodeling", "170": "A1 Roof Tech", "171": "Dan Jacobs Services"}, "4": {"168": " ", "169": " ", "170": " ", "171": " "}, "5": {"168": " ", "169": " ", "170": " ", "171": " "}, "6": {"168": " ", "169": " ", "170": " ", "171": " "}, "TONAME": {"168": "Colene", "169": "Nichelle", "170": "Matilde", "171": "Ernestina"}, "EMAIL": {"168": "sandy.ctmco@fuse.net", "169": "jaselectric@fuse.net", "170": "e3cmsi@gmail.com", "171": "ars1816@fuse.net"}, "flag": {"168": 0, "169": 0, "170": 0, "171": 0}}
+2022-05-16 19:58:06,467 [Thread-5    ] [INFO ]  Length - 4 lnu94846@gmail.com
+2022-05-16 19:58:06,469 [Thread-5    ] [ERROR]  
+Starting Thread : Name - sleesa675@gmail.com
+Targets - {"ID": {"172": 173, "173": 174, "174": 175, "175": 176}, "1": {"172": " ", "173": " ", "174": " ", "175": " "}, "2": {"172": "Cincinnati", "173": "Cincinnati", "174": "Cincinnati", "175": "Cincinnati"}, "3": {"172": "B&B Heating & Air Conditioning", "173": "E W Heating & Cooling", "174": "Aspen Air Filter Services", "175": "Cincinnati Mechanical Services"}, "4": {"172": " ", "173": " ", "174": " ", "175": " "}, "5": {"172": " ", "173": " ", "174": " ", "175": " "}, "6": {"172": " ", "173": " ", "174": " ", "175": " "}, "TONAME": {"172": "Deandra", "173": "Bibi", "174": "Ludie", "175": "Sharilyn"}, "EMAIL": {"172": "ewcooling@fuse.net", "173": "aspenairfilter@yahoo.com", "174": "mwilfong@fuse.net", "175": "rlms@cinci.rr.com"}, "flag": {"172": 0, "173": 0, "174": 0, "175": 0}}
+2022-05-16 19:58:06,472 [Thread-5    ] [INFO ]  Length - 4 sleesa675@gmail.com
+2022-05-16 19:58:06,474 [Thread-5    ] [ERROR]  
+Starting Thread : Name - storeylaura638@gmail.com
+Targets - {"ID": {"176": 177, "177": 178, "178": 179, "179": 180}, "1": {"176": "http://mongosautorepair.com", "177": "http://www.climatemechanics.com", "178": "http://www.hammelandmccrady.com", "179": "http://www.lennoxdealer.com/hurstpack"}, "2": {"176": "Cinnaminson", "177": "Cinnaminson", "178": "Circleville", "179": "Circleville"}, "3": {"176": "Moneta Heating & Air", "177": "Climate Mechanics", "178": "Hamlin Plumbing & Heating CO INC.", "179": "House Of Heating Inc"}, "4": {"176": " ", "177": " ", "178": " ", "179": " "}, "5": {"176": " ", "177": " ", "178": " ", "179": " "}, "6": {"176": " ", "177": " ", "178": " ", "179": " "}, "TONAME": {"176": "Sharolyn", "177": "Hedy", "178": "Lawanna", "179": "Jerlene"}, "EMAIL": {"176": "nikkim3875@aol.com", "177": "njclimatemaster@aol.com", "178": "mtmccrady@msn.com", "179": "packhvac@gmail.com"}, "flag": {"176": 0, "177": 0, "178": 0, "179": 0}}
+2022-05-16 19:58:06,476 [Thread-5    ] [INFO ]  Length - 4 storeylaura638@gmail.com
+2022-05-16 19:58:06,478 [Thread-5    ] [ERROR]  
+Starting Thread : Name - sixta2895@gmail.com
+Targets - {"ID": {"180": 181, "181": 182, "182": 183, "183": 184}, "1": {"180": "http://www.massageenvy.com", "181": " ", "182": "http://lindanservices.com", "183": "http://proairac.com"}, "2": {"180": "Circleville", "181": "Citronelle", "182": "Citrus Heights", "183": "Citrus Heights"}, "3": {"180": "Masram Mechanical LP", "181": "Trinity Air Solution LLC", "182": "Air Tech Environmental Systems", "183": "Theodore P Prisendorf"}, "4": {"180": " ", "181": " ", "182": " ", "183": " "}, "5": {"180": " ", "181": " ", "182": " ", "183": " "}, "6": {"180": " ", "181": " ", "182": " ", "183": " "}, "TONAME": {"180": "Lorriane", "181": "Leeann", "182": "Maryann", "183": "Ute"}, "EMAIL": {"180": "randy@thermalinsulationsystems.com", "181": "bedgoodhvac@gmail.com", "182": "airmaxheatingcooling1@gmail.com", "183": "proair@surewest.net"}, "flag": {"180": 0, "181": 0, "182": 0, "183": 0}}
+2022-05-16 19:58:06,480 [Thread-5    ] [INFO ]  Length - 4 sixta2895@gmail.com
+2022-05-16 19:58:06,482 [Thread-5    ] [ERROR]  
+Starting Thread : Name - jenice140790stephens140790@gmail.com
+Targets - {"ID": {"184": 185, "185": 186, "186": 187, "187": 188}, "1": {"184": "http://www.applpartscenter.biz", "185": "http://www.capitolmechanical.net", "186": "http://www.sacramentoheatingandac.com", "187": " "}, "2": {"184": "Citrus Heights", "185": "Citrus Heights", "186": "Citrus Heights", "187": "Citrus Heights"}, "3": {"184": "Applied Solar Energy Solutions", "185": "Capitol Air Systems Inc", "186": "Comunale Co Inc", "187": "Heating & Cool Waves Engineering; LLC."}, "4": {"184": " ", "185": " ", "186": " ", "187": " "}, "5": {"184": " ", "185": " ", "186": " ", "187": " "}, "6": {"184": " ", "185": " ", "186": " ", "187": " "}, "TONAME": {"184": "Albertha", "185": "Deetta", "186": "Ronni", "187": "Ardelia"}, "EMAIL": {"184": "apc7360@gmail.com", "185": "info@capitolmechanical.net", "186": "energyexperts33@gmail.com", "187": "totalaircare@yahoo.com"}, "flag": {"184": 0, "185": 0, "186": 0, "187": 0}}
+2022-05-16 19:58:06,484 [Thread-5    ] [INFO ]  Length - 4 jenice140790stephens140790@gmail.com
+2022-05-16 19:58:06,485 [Thread-5    ] [ERROR]  
+Starting Thread : Name - callpinkie9@gmail.com
+Targets - {"ID": {"188": 189, "189": 190, "190": 191, "191": 192}, "1": {"188": " ", "189": " ", "190": "website", "191": "http://www.xtransinc.com"}, "2": {"188": "Citrus Heights", "189": "Citrus Springs", "190": "city", "191": "City Of Industry"}, "3": {"188": "FIX MY HEATING AND COOLING  Lic. #959929", "189": "Air Knockout", "190": "company name", "191": "X L Mechanical Inc"}, "4": {"188": " ", "189": " ", "190": " ", "191": " "}, "5": {"188": " ", "189": " ", "190": " ", "191": " "}, "6": {"188": " ", "189": " ", "190": " ", "191": " "}, "TONAME": {"188": "Carita", "189": "Loriann", "190": "Monnie", "191": "Marcia"}, "EMAIL": {"188": "aheatingandair@gmail.com", "189": "boydandsonsair@gmail.com", "190": "email", "191": "xtransinc@gmail.com"}, "flag": {"188": 0, "189": 0, "190": 0, "191": 0}}
+2022-05-16 19:58:06,488 [Thread-5    ] [INFO ]  Length - 4 callpinkie9@gmail.com
+2022-05-16 19:58:06,491 [Thread-5    ] [ERROR]  
+Starting Thread : Name - lenitaf11@gmail.com
+Targets - {"ID": {"192": 193, "193": 194, "194": 195, "195": 196}, "1": {"192": "http://milwaukiehvac.com", "193": "http://www.callcentralair.com", "194": "http://www.havenspapoolhearth.com", "195": "http://www.montavillasheetmetal.net"}, "2": {"192": "Clackamas", "193": "Clackamas", "194": "Clackamas", "195": "Clackamas"}, "3": {"192": "Milstead & Milstead", "193": "Carlson Heating Cooling & Electric Co", "194": "Weston Bros Inc Air Conditioners", "195": "Montauk Plumbing and Heating"}, "4": {"192": " ", "193": " ", "194": " ", "195": " "}, "5": {"192": " ", "193": " ", "194": " ", "195": " "}, "6": {"192": " ", "193": " ", "194": " ", "195": " "}, "TONAME": {"192": "Brandi", "193": "Opal", "194": "Jone", "195": "Martina"}, "EMAIL": {"192": "milwaukieheating@msn.com", "193": "support@centralairpdx.com", "194": "service@havenspapoolhearth.com", "195": "lauriemsmetal@comcast.net"}, "flag": {"192": 0, "193": 0, "194": 0, "195": 0}}
+2022-05-16 19:58:06,495 [Thread-5    ] [INFO ]  Length - 4 lenitaf11@gmail.com
+2022-05-16 19:58:06,497 [Thread-5    ] [ERROR]  
+Starting Thread : Name - loisesavage633@gmail.com
+Targets - {"ID": {"196": 197, "197": 198, "198": 199, "199": 200}, "1": {"196": "http://www.robbenandsons.com", "197": "http://www.servicenowinc.com", "198": "http://www.ultimatecomfortheating.com", "199": "http://yearroundcomfort.com"}, "2": {"196": "Clackamas", "197": "Clackamas", "198": "Clackamas", "199": "Clackamas"}, "3": {"196": "Roadwise", "197": "Watts Heating & Cooling Inc", "198": "Ultimate Comfort AC & Heating", "199": "YB Plumbing"}, "4": {"196": " ", "197": " ", "198": " ", "199": " "}, "5": {"196": " ", "197": " ", "198": " ", "199": " "}, "6": {"196": " ", "197": " ", "198": " ", "199": " "}, "TONAME": {"196": "Velia", "197": "Olympia", "198": "Zaida", "199": "Della"}, "EMAIL": {"196": "johnna@robbenandsons.com", "197": "kurt@servicenowinc.com", "198": "info@ultimatecomfortheating.com", "199": "donna@yearroundcomfort.com"}, "flag": {"196": 0, "197": 0, "198": 0, "199": 0}}
+2022-05-16 19:58:06,499 [Thread-5    ] [INFO ]  Length - 4 loisesavage633@gmail.com
+2022-05-16 19:58:06,501 [Thread-5    ] [ERROR]  
+Starting Thread : Name - john33221platt33221@gmail.com
+Targets - {"ID": {"200": 201, "201": 202, "202": 203, "203": 204}, "1": {"200": "https://www.colrivcontr.com", "201": "http://jamescarrandsons.plumbing", "202": "http://www.rhbhvac.com", "203": "http://www.climatecontrol-hvac.com"}, "2": {"200": "Clackamas", "201": "Clairton", "202": "Clairton", "203": "Clare"}, "3": {"200": "Colonial Heating & Cooling Company Inc", "201": "Magdad inc.", "202": "Eco Air", "203": "Climate Control Mechanic Service"}, "4": {"200": " ", "201": " ", "202": " ", "203": " "}, "5": {"200": " ", "201": " ", "202": " ", "203": " "}, "6": {"200": " ", "201": " ", "202": " ", "203": " "}, "TONAME": {"200": "Lawana", "201": "Piper", "202": "Vallie", "203": "Otilia"}, "EMAIL": {"200": "charlesp@colrivcontr.com", "201": "jim@jamescarrandsons.plumbing", "202": "rhb@rhbhvac.com", "203": "climatecontrolhvac@gmail.com"}, "flag": {"200": 0, "201": 0, "202": 0, "203": 0}}
+2022-05-16 19:58:06,503 [Thread-5    ] [INFO ]  Length - 4 john33221platt33221@gmail.com
+2022-05-16 19:58:06,507 [Thread-5    ] [ERROR]  
+Starting Thread : Name - mistiecarrier@gmail.com
+Targets - {"ID": {"204": 205, "205": 206, "206": 207, "207": 208}, "1": {"204": "http://www.martinheatingandcooling.biz", "205": "http://foothillairconditioning.com", "206": "http://www.rehinkley.com", "207": " "}, "2": {"204": "Clare", "205": "Claremont", "206": "Claremont", "207": "Claremont"}, "3": {"204": "Martin Heat And Air", "205": "Fontaine Mechanical Heating & Air Conditioning Inc.", "206": "REHCO Heating And Air Conditioning", "207": "Harriman's Heating"}, "4": {"204": " ", "205": " ", "206": " ", "207": " "}, "5": {"204": " ", "205": " ", "206": " ", "207": " "}, "6": {"204": " ", "205": " ", "206": " ", "207": " "}, "TONAME": {"204": "Leonora", "205": "Zaida", "206": "Della", "207": "Codi"}, "EMAIL": {"204": "ksmith@martinheating.biz", "205": "albertpena@foothillairconditioning.com", "206": "lissa@rehinkley.com", "207": "bill.limoges@live.com"}, "flag": {"204": 0, "205": 0, "206": 0, "207": 0}}
+2022-05-16 19:58:06,512 [Thread-5    ] [INFO ]  Length - 4 mistiecarrier@gmail.com
+2022-05-16 19:58:06,514 [Thread-5    ] [ERROR]  
+Starting Thread : Name - hay77876@gmail.com
+Targets - {"ID": {"208": 209, "209": 210, "210": 211, "211": 212}, "1": {"208": "https://www.facebook.com/LegacyHeatandAir", "209": "http://www.donweimerheatingandair.com", "210": "http://www.united-heating-cooling.com", "211": " "}, "2": {"208": "Claremore", "209": "Clarence", "210": "Clarence", "211": "Clarence"}, "3": {"208": "L & D Builders", "209": "Don Way Heat & Cooling LLC", "210": "United Heating and Plumbing", "211": "Gamin Heating / Cooling ; Inc."}, "4": {"208": " ", "209": " ", "210": " ", "211": " "}, "5": {"208": " ", "209": " ", "210": " ", "211": " "}, "6": {"208": " ", "209": " ", "210": " ", "211": " "}, "TONAME": {"208": "Colene", "209": "Nichelle", "210": "Matilde", "211": "Ernestina"}, "EMAIL": {"208": "legacyheatandair@gmail.com", "209": "donaldweimer@gmail.com", "210": "cozyfireplaces@gmail.com", "211": "wnyservice@yahoo.com"}, "flag": {"208": 0, "209": 0, "210": 0, "211": 0}}
+2022-05-16 19:58:06,518 [Thread-5    ] [INFO ]  Length - 4 hay77876@gmail.com
+2022-05-16 19:58:06,519 [Thread-5    ] [ERROR]  
+Starting Thread : Name - gossgwyneth962@gmail.com
+Targets - {"ID": {"212": 213, "213": 214, "214": 215, "215": 216}, "1": {"212": " ", "213": "http://www.wmssales.org", "214": " ", "215": "https://www.wallinph.com"}, "2": {"212": "Clarence", "213": "Clarence Center", "214": "Clarence Center", "215": "Clarinda"}, "3": {"212": "ABC Heating & Air Conditioning Inc", "213": "Williams Distributing", "214": "My Plumber", "215": "Walker Company Heating & Air"}, "4": {"212": " ", "213": " ", "214": " ", "215": " "}, "5": {"212": " ", "213": " ", "214": " ", "215": " "}, "6": {"212": " ", "213": " ", "214": " ", "215": " "}, "TONAME": {"212": "Deandra", "213": "Bibi", "214": "Ludie", "215": "Sharilyn"}, "EMAIL": {"212": "rmleepe@netins.net", "213": "info@neo-metro.com", "214": "gaminheat@roadrunner.com", "215": "jmartin@wallinph.com"}, "flag": {"212": 0, "213": 0, "214": 0, "215": 0}}
+2022-05-16 19:58:06,522 [Thread-5    ] [INFO ]  Length - 4 gossgwyneth962@gmail.com
+2022-05-16 19:58:06,526 [Thread-5    ] [ERROR]  
+Starting Thread : Name - eleasesnodgrass@gmail.com
+Targets - {"ID": {"216": 217, "217": 218, "218": 219, "219": 220}, "1": {"216": "http://www.americanspecialty.com", "217": " ", "218": "http://www.airductcleanersofmichigan.com", "219": "http://www.brooklynplumbingandheating.com"}, "2": {"216": "Clark", "217": "Clark", "218": "Clarklake", "219": "Clarklake"}, "3": {"216": "American Solar Corporation", "217": "Mort Gleen Electric", "218": "AIRDUCT CLEAN", "219": "Ads Cooling & Heating"}, "4": {"216": " ", "217": " ", "218": " ", "219": " "}, "5": {"216": " ", "217": " ", "218": " ", "219": " "}, "6": {"216": " ", "217": " ", "218": " ", "219": " "}, "TONAME": {"216": "Sharolyn", "217": "Hedy", "218": "Lawanna", "219": "Jerlene"}, "EMAIL": {"216": "info@americanspecialtyonline.com", "217": "kpalumbo5@comcast.net", "218": "cheryl@cleansweeps.com", "219": "office@brooklynplumbingandheating.com"}, "flag": {"216": 0, "217": 0, "218": 0, "219": 0}}
+2022-05-16 19:58:06,528 [Thread-5    ] [INFO ]  Length - 4 eleasesnodgrass@gmail.com
+2022-05-16 19:58:06,530 [Thread-5    ] [ERROR]  
+Starting Thread : Name - ahart2837@gmail.com
+Targets - {"ID": {"220": 221, "221": 222, "222": 223, "223": 224}, "1": {"220": "https://www.aspenheating.com", "221": "http://pisanchynplumbing.com", "222": "http://www.heatingairfueloil.com", "223": "http://www.davisonheating.com"}, "2": {"220": "Clarklake", "221": "Clarks Summit", "222": "Clarksboro", "223": "Clarkston"}, "3": {"220": "Ash Creek Plumbing; Heating & Electric", "221": "Pipkin Electric", "222": "All Systems Heating & Air Conditining", "223": "Davison Heating; Cooling & Plumbing"}, "4": {"220": " ", "221": " ", "222": " ", "223": " "}, "5": {"220": " ", "221": " ", "222": " ", "223": " "}, "6": {"220": " ", "221": " ", "222": " ", "223": " "}, "TONAME": {"220": "Lorriane", "221": "Leeann", "222": "Maryann", "223": "Ute"}, "EMAIL": {"220": "bob@webhorsemarketing.com", "221": "wayne@pisanchynplumbing.com", "222": "messickfuel@comcast.net", "223": "willie@davisonheating.com"}, "flag": {"220": 0, "221": 0, "222": 0, "223": 0}}
+2022-05-16 19:58:06,531 [Thread-5    ] [INFO ]  Length - 4 ahart2837@gmail.com
+2022-05-16 19:58:06,533 [Thread-5    ] [ERROR]  
+Starting Thread : Name - tempiedowns9@gmail.com
+Targets - {"ID": {"224": 225, "225": 226, "226": 227, "227": 228}, "1": {"224": "http://www.michiganpurecomfort.com", "225": " ", "226": " ", "227": "http://www.appliancerepairsclarksville.com"}, "2": {"224": "Clarkston", "225": "Clarkston", "226": "Clarkston", "227": "Clarksville"}, "3": {"224": "Michigan Power Rodding", "225": "Gage Mechanical", "226": "ABM Mechanical Contractors", "227": "Authorized Appliance Repair"}, "4": {"224": " ", "225": " ", "226": " ", "227": " "}, "5": {"224": " ", "225": " ", "226": " ", "227": " "}, "6": {"224": " ", "225": " ", "226": " ", "227": " "}, "TONAME": {"224": "Albertha", "225": "Deetta", "226": "Ronni", "227": "Ardelia"}, "EMAIL": {"224": "michiganpurecomfort@gmail.com", "225": "pallottaheatingandcooling@comcast.net", "226": "pencemechanical@gmail.com", "227": "john.maltais01@gmail.com"}, "flag": {"224": 0, "225": 0, "226": 0, "227": 0}}
+2022-05-16 19:58:06,535 [Thread-5    ] [INFO ]  Length - 4 tempiedowns9@gmail.com
+2022-05-16 19:58:06,537 [Thread-5    ] [ERROR]  
+Starting Thread : Name - gkane748@gmail.com
+Targets - {"ID": {"228": 229, "229": 230, "230": 231, "231": 232}, "1": {"228": "http://www.repairkingkentuckiana.weebly.com", "229": "https://api.superpages.com/xml/search?SRC=ypintfeed&subaffiliate=DXC&PGID=e02.7182.8182845904523&SPGID=1610900392498.81735b12&ADID=12222425&DEST=http%3A%2F%2Fwww.hvacnearyou.com%2Fp%2Fsuperpages%2Fmainstream-heating-cooling-clarksville-tennessee2.html&C=Heating%20Contractors%20%26%20Specialties&T=Clarksville&S=TN&PH=(931)%20263-6693&FL=url&TL=off&position=0&PS=1&PI=1&Results=FEED_CLCK&uid=81735b12-9700-44b5-a381-6ceae0fc5bd2&REF=https%3A%2F%2Fwww.yellowpages.com&IP=138.122.194.204&UserAgent=Mozilla%2F5.0%20(Windows%20NT%2010.0%3B%20Win64%3B%20x64)%20AppleWebKit%2F537.36%20(KHTML%2C%20like%20Gecko)%20Chrome%2F80.0.3987.132%20Safari%2F537.36", "230": "https://paulsalignmentbrakerepair.com", "231": "https://wedekingcustomcomfort.com"}, "2": {"228": "Clarksville", "229": "Clarksville", "230": "Clarksville", "231": "Clarksville"}, "3": {"228": "Rentmeister Electric", "229": "Huhtala Oil Co", "230": "Paul Revere Revolutionary Service", "231": "Royal Aire Heating Air Conditioning & Solar"}, "4": {"228": " ", "229": " ", "230": " ", "231": " "}, "5": {"228": " ", "229": " ", "230": " ", "231": " "}, "6": {"228": " ", "229": " ", "230": " ", "231": " "}, "TONAME": {"228": "Carita", "229": "Loriann", "230": "Monnie", "231": "Marcia"}, "EMAIL": {"228": "repairkingkentuckiana@gmail.com", "229": "ericalayne@mainstreamac.com", "230": "jmcraig@twc.com", "231": "wedeking42@gmail.com"}, "flag": {"228": 0, "229": 0, "230": 0, "231": 0}}
+2022-05-16 19:58:06,545 [Thread-5    ] [INFO ]  Length - 4 gkane748@gmail.com
+2022-05-16 19:58:06,547 [Thread-5    ] [ERROR]  
+Starting Thread : Name - belangertambra515@gmail.com
+Targets - {"ID": {"232": 233, "233": 234, "234": 235, "235": 236}, "1": {"232": "https://www.empiremasonryandchimney.com", "233": "http://www.rossheating.net", "234": "http://www.eichholzservices.com", "235": "https://www.coit.com/wilmington?utm_source=Local&utm_medium=organic&utm_campaign=local_listing"}, "2": {"232": "Clarksville", "233": "Clay", "234": "Claymont", "235": "Claymont"}, "3": {"232": "Empire Plumbing Heating & Air Conditioning", "233": "Rossetti Heating & Cooling", "234": "Eichelberger & Sons Heating and Air Conditioning", "235": "COIT Cleaning and Restoration of Indianapolis"}, "4": {"232": " ", "233": " ", "234": " ", "235": " "}, "5": {"232": " ", "233": " ", "234": " ", "235": " "}, "6": {"232": " ", "233": " ", "234": " ", "235": " "}, "TONAME": {"232": "Brandi", "233": "Opal", "234": "Jone", "235": "Martina"}, "EMAIL": {"232": "empirechimney@icloud.com", "233": "rheating1@gmail.com", "234": "es.info@eichholzservices.com", "235": "customerservice@inz.coit.com"}, "flag": {"232": 0, "233": 0, "234": 0, "235": 0}}
+2022-05-16 19:58:06,550 [Thread-5    ] [INFO ]  Length - 4 belangertambra515@gmail.com
+2022-05-16 19:58:06,552 [Thread-5    ] [ERROR]  
+Starting Thread : Name - grubbraina@gmail.com
+Targets - {"ID": {"236": 237, "237": 238, "238": 239, "239": 240}, "1": {"236": " ", "237": " ", "238": " ", "239": "http://fourthcoast.com"}, "2": {"236": "Claymont", "237": "Claypool", "238": "Claypool", "239": "Clayton"}, "3": {"236": "Honest Abe's Air Conditioning Inc.", "237": "Bradley Heating & Cooling", "238": "Bischoff Plumbing; Heating & Cooling LLC", "239": "Four Seasons Heating And Air LLC"}, "4": {"236": " ", "237": " ", "238": " ", "239": " "}, "5": {"236": " ", "237": " ", "238": " ", "239": " "}, "6": {"236": " ", "237": " ", "238": " ", "239": " "}, "TONAME": {"236": "Velia", "237": "Olympia", "238": "Zaida", "239": "Della"}, "EMAIL": {"236": "oldschoolheat@gmail.com", "237": "sjohnston.comfortcontrol@gmail.com", "238": "marsref2009@privategarden.org", "239": "mailfb@fourthcoast.com"}, "flag": {"236": 0, "237": 0, "238": 0, "239": 0}}
+2022-05-16 19:58:06,556 [Thread-5    ] [INFO ]  Length - 4 grubbraina@gmail.com
+2022-05-16 19:58:06,560 [Thread-5    ] [ERROR]  
+Starting Thread : Name - roxy48338strauss48338@gmail.com
+Targets - {"ID": {"240": 241, "241": 242, "242": 243, "243": 244}, "1": {"240": "http://www.modernmechhvac.com", "241": "http://www.richardsonhvac.com", "242": "https://www.drdetailpro.com", "243": " "}, "2": {"240": "Clayton", "241": "Clayton", "242": "Clayton", "243": "Clayton"}, "3": {"240": "Modern Indoor Comfort Zone", "241": "Richard's Fuel and Heating Inc.", "242": "Downriver Refrigeration Supply Co", "243": "Advanced Plumbing"}, "4": {"240": " ", "241": " ", "242": " ", "243": " "}, "5": {"240": " ", "241": " ", "242": " ", "243": " "}, "6": {"240": " ", "241": " ", "242": " ", "243": " "}, "TONAME": {"240": "Lawana", "241": "Piper", "242": "Vallie", "243": "Otilia"}, "EMAIL": {"240": "modernmech@nc.rr.com", "241": "richardsonhvac@live.com", "242": "info@drdetailpro.com", "243": "carolinaclimatecontrol.hvac@gmail.com"}, "flag": {"240": 0, "241": 0, "242": 0, "243": 0}}
+2022-05-16 19:58:06,563 [Thread-5    ] [INFO ]  Length - 4 roxy48338strauss48338@gmail.com
+2022-05-16 19:58:06,567 [Thread-5    ] [ERROR]  
+Starting Thread : Name - raymondcora90@gmail.com
+Targets - {"ID": {"244": 245, "245": 246, "246": 247, "247": 248}, "1": {"244": " ", "245": " ", "246": " ", "247": " "}, "2": {"244": "Clayton", "245": "Clayton", "246": "Clayton", "247": "Clearbrook"}, "3": {"244": "Clayton Valley Mechanical", "245": "Fast Tech Heating & Air", "246": "Triangle Heating And Air Inc", "247": "Rick Vorderbruggen Plumbing & Heating"}, "4": {"244": " ", "245": " ", "246": " ", "247": " "}, "5": {"244": " ", "245": " ", "246": " ", "247": " "}, "6": {"244": " ", "245": " ", "246": " ", "247": " "}, "TONAME": {"244": "Leonora", "245": "Zaida", "246": "Della", "247": "Codi"}, "EMAIL": {"244": "plantaganetmanny@gmail.com", "245": "edclarke91@comcast.net", "246": "tellmeast0rywhereweallchange@gmail.com", "247": "ceinc@icloud.com"}, "flag": {"244": 0, "245": 0, "246": 0, "247": 0}}
+2022-05-16 19:58:06,569 [Thread-5    ] [INFO ]  Length - 4 raymondcora90@gmail.com
+2022-05-16 19:58:06,572 [Thread-5    ] [ERROR]  
+Starting Thread : Name - dodgedaine@gmail.com
+Targets - {"ID": {"248": 249, "249": 250, "250": 251, "251": 252}, "1": {"248": "http://fdrhvac.com", "249": "http://indoorairtests.com", "250": "http://www.areawideac.com", "251": "http://www.service-techcorp.com"}, "2": {"248": "Clearfield", "249": "Clearwater", "250": "Clearwater", "251": "Clearwater"}, "3": {"248": "Flick Distributing Company", "249": "Indoor Air Technologies", "250": "Area Supply", "251": "Service-Tech Corporation"}, "4": {"248": " ", "249": " ", "250": " ", "251": " "}, "5": {"248": " ", "249": " ", "250": " ", "251": " "}, "6": {"248": " ", "249": " ", "250": " ", "251": " "}, "TONAME": {"248": "Colene", "249": "Nichelle", "250": "Matilde", "251": "Ernestina"}, "EMAIL": {"248": "fdrinc1@gmail.com", "249": "iaq@pureaircontrols.com", "250": "areawideac@tampabay.rr.com", "251": "pkeller@service-techcorp.com"}, "flag": {"248": 0, "249": 0, "250": 0, "251": 0}}
+2022-05-16 19:58:06,576 [Thread-5    ] [INFO ]  Length - 4 dodgedaine@gmail.com
+2022-05-16 19:58:06,578 [Thread-5    ] [ERROR]  
+Starting Thread : Name - joycedemetrius368@gmail.com
+Targets - {"ID": {"252": 253, "253": 254, "254": 255, "255": 256}, "1": {"252": "http://www.velocityairconditioning.com", "253": "https://reliantacguys.com", "254": " ", "255": "http://www.airmasters-inc.com"}, "2": {"252": "Clearwater", "253": "Clearwater", "254": "Clearwater", "255": "Cleburne"}, "3": {"252": "Vega's HVAC", "253": "Reliable Comfort Co", "254": "Jeffery's Plumbing and Heating", "255": "Air Masters"}, "4": {"252": " ", "253": " ", "254": " ", "255": " "}, "5": {"252": " ", "253": " ", "254": " ", "255": " "}, "6": {"252": " ", "253": " ", "254": " ", "255": " "}, "TONAME": {"252": "Deandra", "253": "Bibi", "254": "Ludie", "255": "Sharilyn"}, "EMAIL": {"252": "velocitytampabay@gmail.com", "253": "tbathke.reliant.hvac@gmail.com", "254": "dmmechanical1@gmail.com", "255": "tjcantu@hotmail.com"}, "flag": {"252": 0, "253": 0, "254": 0, "255": 0}}
+2022-05-16 19:58:06,580 [Thread-5    ] [INFO ]  Length - 4 joycedemetrius368@gmail.com
+2022-05-16 19:58:06,582 [Thread-5    ] [ERROR]  
+Starting Thread : Name - frediapower@gmail.com
+Targets - {"ID": {"256": 257, "257": 258, "258": 259, "259": 260}, "1": {"256": "http://www.duggerbrothers.com", "257": "http://www.gatewoodelectricmotors.com", "258": " ", "259": " "}, "2": {"256": "Cleburne", "257": "Cleburne", "258": "Cleburne", "259": "Cleburne"}, "3": {"256": "Dugan Supply Co", "257": "Gateway Supply Co.", "258": "Associated Piping Services", "259": "Burleson Service Company"}, "4": {"256": " ", "257": " ", "258": " ", "259": " "}, "5": {"256": " ", "257": " ", "258": " ", "259": " "}, "6": {"256": " ", "257": " ", "258": " ", "259": " "}, "TONAME": {"256": "Sharolyn", "257": "Hedy", "258": "Lawanna", "259": "Jerlene"}, "EMAIL": {"256": "customerservice@duggerbrothers.com", "257": "sales@gatewoodelectricmotors.com", "258": "infiniteair2016@gmail.com", "259": "txheatandair@gmail.com"}, "flag": {"256": 0, "257": 0, "258": 0, "259": 0}}
+2022-05-16 19:58:06,585 [Thread-5    ] [INFO ]  Length - 4 frediapower@gmail.com
+2022-05-16 19:58:06,587 [Thread-5    ] [ERROR]  
+Starting Thread : Name - willardhilaria545@gmail.com
+Targets - {"ID": {"260": 261, "261": 262, "262": 263, "263": 264}, "1": {"260": "http://www.hallpropane.com", "261": "http://www.gfbowman.com", "262": "http://www.meyeroilco.com", "263": "http://www.gatorheatandair.com"}, "2": {"260": "Clemmons", "261": "Cleona", "262": "Cleona", "263": "Clermont"}, "3": {"260": "Snow Plumbing & Heating", "261": "Gladstone Furnace & Air Conditioning", "262": "Meyer Mechanical", "263": "Gator Air Conditioning & Heating Service Inc"}, "4": {"260": " ", "261": " ", "262": " ", "263": " "}, "5": {"260": " ", "261": " ", "262": " ", "263": " "}, "6": {"260": " ", "261": " ", "262": " ", "263": " "}, "TONAME": {"260": "Lorriane", "261": "Leeann", "262": "Maryann", "263": "Ute"}, "EMAIL": {"260": "sales.clemmons@hallpropane.com", "261": "info@gfbowman.com", "262": "karnold@meyeroilco.com", "263": "maria@gatorheatandair.com"}, "flag": {"260": 0, "261": 0, "262": 0, "263": 0}}
+2022-05-16 19:58:06,592 [Thread-5    ] [INFO ]  Length - 4 willardhilaria545@gmail.com
+2022-05-16 19:58:06,594 [Thread-5    ] [ERROR]  
+Starting Thread : Name - connorlorinda932@gmail.com
+Targets - {"ID": {"264": 265, "265": 266, "266": 267, "267": 268}, "1": {"264": "http://www.globalcoolingair.com", "265": "http://www.randtair.com", "266": "https://www.hankselectricclermont.com/_CGI/SEARCH3", "267": "https://www.topskyair.com"}, "2": {"264": "Clermont", "265": "Clermont", "266": "Clermont", "267": "Clermont"}, "3": {"264": "Global Air Conditioning Inc.", "265": "R&R Refrigeration Heating & Air Conditioning", "266": "H & H Plumbing", "267": "Top Notch Heating; Cooling & Plumbing"}, "4": {"264": " ", "265": " ", "266": " ", "267": " "}, "5": {"264": " ", "265": " ", "266": " ", "267": " "}, "6": {"264": " ", "265": " ", "266": " ", "267": " "}, "TONAME": {"264": "Albertha", "265": "Deetta", "266": "Ronni", "267": "Ardelia"}, "EMAIL": {"264": "info@globalcoolingair.com", "265": "rtheatingandair@hotmail.com", "266": "hankselec@aol.com", "267": "topskyair@gmail.com"}, "flag": {"264": 0, "265": 0, "266": 0, "267": 0}}
+2022-05-16 19:58:06,598 [Thread-5    ] [INFO ]  Length - 4 connorlorinda932@gmail.com
+2022-05-16 19:58:06,600 [Thread-5    ] [ERROR]  
+Starting Thread : Name - vaughant649@gmail.com
+Targets - {"ID": {"268": 269, "269": 270, "270": 271, "271": 272}, "1": {"268": " ", "269": " ", "270": " ", "271": "http://dealer.maytaghvac.com/bethuneairgroup-cleveland-tn"}, "2": {"268": "Clermont", "269": "Clermont", "270": "Clermont", "271": "Cleveland"}, "3": {"268": "Middletown Plumbing Service", "269": "County Appliance repairs", "270": "Torres Co", "271": "American Contracting; Inc."}, "4": {"268": " ", "269": " ", "270": " ", "271": " "}, "5": {"268": " ", "269": " ", "270": " ", "271": " "}, "6": {"268": " ", "269": " ", "270": " ", "271": " "}, "TONAME": {"268": "Carita", "269": "Loriann", "270": "Monnie", "271": "Marcia"}, "EMAIL": {"268": "bobdavis@davisair.net", "269": "jimmysac@gmail.com", "270": "airworks.john@gmail.com", "271": "bethuneairgroup@hotmail.com"}, "flag": {"268": 0, "269": 0, "270": 0, "271": 0}}
+2022-05-16 19:58:06,602 [Thread-5    ] [INFO ]  Length - 4 vaughant649@gmail.com
+2022-05-16 19:58:06,604 [Thread-5    ] [ERROR]  
+Starting Thread : Name - tuttleantonette@gmail.com
+Targets - {"ID": {"272": 273, "273": 274, "274": 275, "275": 276}, "1": {"272": "http://deltawhq.com", "273": "http://docsair.com", "274": "http://dynamicairinc.net", "275": "http://herbshvac.com"}, "2": {"272": "Cleveland", "273": "Cleveland", "274": "Cleveland", "275": "Cleveland"}, "3": {"272": "Delta Solutions", "273": "Dobrava Brothers", "274": "Dykes Aire", "275": "Herbert Clements & Sons Inc"}, "4": {"272": " ", "273": " ", "274": " ", "275": " "}, "5": {"272": " ", "273": " ", "274": " ", "275": " "}, "6": {"272": " ", "273": " ", "274": " ", "275": " "}, "TONAME": {"272": "Brandi", "273": "Opal", "274": "Jone", "275": "Martina"}, "EMAIL": {"272": "sales@deltawhq.com", "273": "ufixmyair@gmail.com", "274": "dynair1@hotmail.com", "275": "herbsheating@gmail.com"}, "flag": {"272": 0, "273": 0, "274": 0, "275": 0}}
+2022-05-16 19:58:06,610 [Thread-5    ] [INFO ]  Length - 4 tuttleantonette@gmail.com
+2022-05-16 19:58:06,612 [Thread-5    ] [ERROR]  
+Starting Thread : Name - mahaliacrouch@gmail.com
+Targets - {"ID": {"276": 277, "277": 278, "278": 279, "279": 280}, "1": {"276": "http://homesmartstore.com", "277": "http://ieefa.org", "278": "http://mcphillips.comuf.com", "279": "http://readerroofing.com"}, "2": {"276": "Cleveland", "277": "Cleveland", "278": "Cleveland", "279": "Cleveland"}, "3": {"276": "Homepro Heating & Cooling", "277": "Integrated Design & Supply", "278": "Sioux Equipment Company", "279": "Ralph D Russo Plumbing & Heating"}, "4": {"276": " ", "277": " ", "278": " ", "279": " "}, "5": {"276": " ", "277": " ", "278": " ", "279": " "}, "6": {"276": " ", "277": " ", "278": " ", "279": " "}, "TONAME": {"276": "Velia", "277": "Olympia", "278": "Zaida", "279": "Della"}, "EMAIL": {"276": "astropartsnow@gmail.com", "277": "sbuchanan@ieefa.org", "278": "seanmcphillips1986@gmail.com", "279": "info@readerroofing.com"}, "flag": {"276": 0, "277": 0, "278": 0, "279": 0}}
+2022-05-16 19:58:06,615 [Thread-5    ] [INFO ]  Length - 4 mahaliacrouch@gmail.com
+2022-05-16 19:58:06,616 [Thread-5    ] [ERROR]  
+Starting Thread : Name - knottlacresha7@gmail.com
+Targets - {"ID": {"280": 281, "281": 282, "282": 283, "283": 284}, "1": {"280": "http://rodriguezheating.com", "281": "http://witwerair.com", "282": "http://www.accuraterefrigeration.org", "283": "http://www.airductcleaningclevelandoh.com"}, "2": {"280": "Cleveland", "281": "Cleveland", "282": "Cleveland", "283": "Cleveland"}, "3": {"280": "Rodrick Plumbing & Heating", "281": "The Witmer Company", "282": "Accurate Mechanical", "283": "air duct cleaning"}, "4": {"280": " ", "281": " ", "282": " ", "283": " "}, "5": {"280": " ", "281": " ", "282": " ", "283": " "}, "6": {"280": " ", "281": " ", "282": " ", "283": " "}, "TONAME": {"280": "Lawana", "281": "Piper", "282": "Vallie", "283": "Otilia"}, "EMAIL": {"280": "daveluk660@gmail.com", "281": "info@brooklynheatingandac.com", "282": "accref@cox.net", "283": "genesteamohio@gmail.com"}, "flag": {"280": 0, "281": 0, "282": 0, "283": 0}}
+2022-05-16 19:58:06,619 [Thread-5    ] [INFO ]  Length - 4 knottlacresha7@gmail.com
+2022-05-16 19:58:09,954 [pughlael052@] [ERROR]  Error at Sending - pughlael052@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials a7-20020a7bc1c7000000b0039429bfebeasm15168099wmj.2 - gsmtp')
+
+2022-05-16 19:58:10,671 [fultonalbert] [ERROR]  Error at Sending - fultonalbert1@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials y4-20020a2e9d44000000b0024f3d1dae9fsm1572542ljj.39 - gsmtp')
+
+2022-05-16 19:58:10,712 [gaylenebarr5] [ERROR]  Error at Sending - gaylenebarr52@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials q4-20020a1ce904000000b003971176b011sm1419597wmc.0 - gsmtp')
+
+2022-05-16 19:58:10,749 [hardinghilde] [ERROR]  Error at Sending - hardinghildegard@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials bg12-20020a05600c3c8c00b003942a244ecbsm10539082wmb.16 - gsmtp')
+
+2022-05-16 19:58:10,802 [frediapower@] [ERROR]  Error at Sending - frediapower@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials z5-20020a170902ccc500b0016152774878sm4632626ple.176 - gsmtp')
+
+2022-05-16 19:58:10,806 [gossgwyneth9] [ERROR]  Error at Sending - gossgwyneth962@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials o1-20020adfba01000000b0020c5253d914sm10064196wrg.96 - gsmtp')
+
+2022-05-16 19:58:11,262 [evelineperry] [ERROR]  Error at Sending - evelineperry913@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials d17-20020adf9b91000000b0020d02ddf4d0sm5542302wrc.69 - gsmtp')
+
+2022-05-16 19:58:11,543 [sleesa675@gm] [INFO ]  Sent - sleesa675@gmail.com ewcooling@fuse.net
+2022-05-16 19:58:11,598 [gwenda767321] [INFO ]  Sent - gwenda767321hayes767321@gmail.com mike.croteau2@gmail.com
+2022-05-16 19:58:11,978 [dyershanelle] [INFO ]  Sent - dyershanelle@gmail.com jd4951@hotmail.com
+2022-05-16 19:58:12,261 [knottlacresh] [INFO ]  Sent - knottlacresha7@gmail.com daveluk660@gmail.com
+2022-05-16 19:58:12,298 [dickinsonali] [INFO ]  Sent - dickinsonalicia6@gmail.com dallaswolf1@live.com
+2022-05-16 19:58:12,430 [john33221pla] [INFO ]  Sent - john33221platt33221@gmail.com charlesp@colrivcontr.com
+2022-05-16 19:58:12,500 [tempiedowns9] [INFO ]  Sent - tempiedowns9@gmail.com michiganpurecomfort@gmail.com
+2022-05-16 19:58:12,567 [vanessa78073] [ERROR]  Error at Sending - vanessa780734costa780734@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials h21-20020a05651c159500b0024f3d1daf03sm1573565ljq.139 - gsmtp')
+
+2022-05-16 19:58:12,699 [mahaliacrouc] [INFO ]  Sent - mahaliacrouch@gmail.com astropartsnow@gmail.com
+2022-05-16 19:58:12,807 [eleasesnodgr] [ERROR]  Error at Sending - eleasesnodgrass@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials a1-20020a170902900100b0015e8d4eb2dfsm6955573plp.297 - gsmtp')
+
+2022-05-16 19:58:12,854 [mistiecarrie] [INFO ]  Sent - mistiecarrier@gmail.com ksmith@martinheating.biz
+2022-05-16 19:58:12,980 [tuttleantone] [ERROR]  Error at Sending - tuttleantonette@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials j10-20020a05600c42ca00b003942a244ec9sm11730758wme.14 - gsmtp')
+
+2022-05-16 19:58:13,752 [nelsondigna9] [INFO ]  Sent - nelsondigna95@gmail.com englewoodheating@gmail.com
+2022-05-16 19:58:13,802 [joycedemetri] [INFO ]  Sent - joycedemetrius368@gmail.com velocitytampabay@gmail.com
+2022-05-16 19:58:13,841 [grubbraina@g] [ERROR]  Error at Sending - grubbraina@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials j13-20020a170902c3cd00b0015ea95948ebsm7048997plj.134 - gsmtp')
+
+2022-05-16 19:58:13,940 [ebonisherwoo] [ERROR]  Error at Sending - ebonisherwood39@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials p19-20020a05600c1d9300b003942a244ed1sm10081139wms.22 - gsmtp')
+
+2022-05-16 19:58:14,152 [manhewitt301] [ERROR]  Error at Sending - manhewitt301@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials v15-20020adf8b4f000000b0020d0c48d135sm2000667wra.15 - gsmtp')
+
+2022-05-16 19:58:14,616 [alyse865480c] [ERROR]  Error at Sending - alyse865480clayton865480@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials e14-20020a05600c4e4e00b003942a244f3asm13348910wmq.19 - gsmtp')
+
+2022-05-16 19:58:14,661 [storeylaura6] [INFO ]  Sent - storeylaura638@gmail.com nikkim3875@aol.com
+2022-05-16 19:58:14,673 [bermannydia@] [ERROR]  Error at Sending - bermannydia@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials y25-20020a1c4b19000000b0039489e1bbd6sm12960618wma.47 - gsmtp')
+
+2022-05-16 19:58:14,714 [ec3170717@gm] [ERROR]  Error at Sending - ec3170717@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials s23-20020a056512203700b0047255d211b9sm1310534lfs.232 - gsmtp')
+
+2022-05-16 19:58:15,017 [newcombmichi] [INFO ]  Sent - newcombmichiko@gmail.com bill@snowsplumbing.com
+2022-05-16 19:58:15,093 [roxy48338str] [ERROR]  Error at Sending - roxy48338strauss48338@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials g18-20020a05600c141200b003942a244f42sm17030389wmi.27 - gsmtp')
+
+2022-05-16 19:58:15,325 [lenitaf11@gm] [ERROR]  Error at Sending - lenitaf11@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials b12-20020a05600c4e0c00b003948f4e750fsm13335211wmq.23 - gsmtp')
+
+2022-05-16 19:58:15,340 [latriciay373] [INFO ]  Sent - latriciay373@gmail.com tmjdlj@fuse.net
+2022-05-16 19:58:15,415 [dodgedaine@g] [ERROR]  Error at Sending - dodgedaine@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials d18-20020adfa352000000b0020cff559b1dsm6270714wrb.47 - gsmtp')
+
+2022-05-16 19:58:15,421 [cammie554076] [INFO ]  Sent - cammie554076robbins554076@gmail.com etorres7400@sbcglobal.net
+2022-05-16 19:58:15,461 [readl2810@gm] [INFO ]  Sent - readl2810@gmail.com sackoair@gmail.com
+2022-05-16 19:58:15,838 [kearneykira7] [ERROR]  Error at Sending - kearneykira733@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials m14-20020a5d64ae000000b0020d0fbf578esm1618283wrp.7 - gsmtp')
+
+2022-05-16 19:58:16,077 [sixta2895@gm] [ERROR]  Error at Sending - sixta2895@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials b12-20020a05600c4e0c00b003948f4e750fsm13335264wmq.23 - gsmtp')
+
+2022-05-16 19:58:16,338 [shenikablant] [INFO ]  Sent - shenikablanton85@gmail.com lex@habeggercorp.com
+2022-05-16 19:58:16,401 [willardhilar] [INFO ]  Sent - willardhilaria545@gmail.com sales.clemmons@hallpropane.com
+2022-05-16 19:58:16,601 [raymondcora9] [INFO ]  Sent - raymondcora90@gmail.com plantaganetmanny@gmail.com
+2022-05-16 19:58:16,917 [connorlorind] [ERROR]  Error at Sending - connorlorinda932@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials p19-20020a05600c1d9300b003942a244ed1sm10081262wms.22 - gsmtp')
+
+2022-05-16 19:58:16,960 [fshavon9@gma] [INFO ]  Sent - fshavon9@gmail.com aareast@cinci.rr.com
+2022-05-16 19:58:16,995 [britt277384h] [INFO ]  Sent - britt277384hanks277384@gmail.com pottshvac@gmail.com
+2022-05-16 19:58:17,301 [elwandalee81] [INFO ]  Sent - elwandalee81@gmail.com sdfries@hotmail.com
+2022-05-16 19:58:17,583 [kishagauthie] [ERROR]  Error at Sending - kishagauthier@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials cp15-20020a170902e78f00b0015e8d4eb283sm6977638plb.205 - gsmtp')
+
+2022-05-16 19:58:17,684 [mistiecarrie] [INFO ]  Sent - mistiecarrier@gmail.com albertpena@foothillairconditioning.com
+2022-05-16 19:58:17,684 [shawnta65616] [INFO ]  Sent - shawnta656165rowell656165@gmail.com info@comfortbyjansen.com
+2022-05-16 19:58:17,765 [mccabefelici] [INFO ]  Sent - mccabefelicidad@gmail.com fcrane@craneheatingandair.com
+2022-05-16 19:58:17,942 [augustinarec] [ERROR]  Error at Sending - augustinarector@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials n6-20020a1c2706000000b003942a244ec0sm12374276wmn.5 - gsmtp')
+
+2022-05-16 19:58:17,989 [americapitts] [ERROR]  Error at Sending - americapitts65@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials b12-20020a05600c4e0c00b003948f4e750fsm13335325wmq.23 - gsmtp')
+
+2022-05-16 19:58:18,696 [gkane748@gma] [INFO ]  Sent - gkane748@gmail.com repairkingkentuckiana@gmail.com
+2022-05-16 19:58:19,015 [callpinkie9@] [ERROR]  Error at Sending - callpinkie9@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials m19-20020adfc593000000b0020c7ec0fdf4sm11800443wrg.117 - gsmtp')
+
+2022-05-16 19:58:19,223 [loisesavage6] [ERROR]  Error at Sending - loisesavage633@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials 4-20020a05600c26c400b003942a244eeasm9834782wmv.47 - gsmtp')
+
+2022-05-16 19:58:19,374 [jenice140790] [ERROR]  Error at Sending - jenice140790stephens140790@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials t6-20020a7bc3c6000000b003942a244f47sm13449789wmj.32 - gsmtp')
+
+2022-05-16 19:58:19,755 [deatonmei321] [ERROR]  Error at Sending - deatonmei321@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials r11-20020a6bd90b000000b0065a47e16f59sm2623977ioc.43 - gsmtp')
+
+2022-05-16 19:58:28,489 [janeencrowle] [ERROR]  Error at Sending - janeencrowley2@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 787, in connect
+    super(socksocket, self).connect(proxy_addr)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 316, in login
+    proxy_user=self.proxy_user, proxy_pass=self.proxy_pass)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 162, in connect_proxy
+    s.connect((host, port))
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 47, in wrapper
+    return function(*args, **kwargs)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 800, in connect
+    raise ProxyConnectionError(msg, error)
+socks.ProxyConnectionError: Error connecting to SOCKS5 proxy 194.32.107.51:4005: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+2022-05-16 19:58:29,459 [amieecallaha] [ERROR]  Error at Sending - amieecallahan2@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 787, in connect
+    super(socksocket, self).connect(proxy_addr)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 316, in login
+    proxy_user=self.proxy_user, proxy_pass=self.proxy_pass)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 162, in connect_proxy
+    s.connect((host, port))
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 47, in wrapper
+    return function(*args, **kwargs)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 800, in connect
+    raise ProxyConnectionError(msg, error)
+socks.ProxyConnectionError: Error connecting to SOCKS5 proxy 194.32.107.51:4003: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+2022-05-16 19:58:31,577 [ahart2837@gm] [ERROR]  Error at Sending - ahart2837@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 787, in connect
+    super(socksocket, self).connect(proxy_addr)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 316, in login
+    proxy_user=self.proxy_user, proxy_pass=self.proxy_pass)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 162, in connect_proxy
+    s.connect((host, port))
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 47, in wrapper
+    return function(*args, **kwargs)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 800, in connect
+    raise ProxyConnectionError(msg, error)
+socks.ProxyConnectionError: Error connecting to SOCKS5 proxy 194.32.107.51:4006: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+2022-05-16 19:58:32,610 [belangertamb] [ERROR]  Error at Sending - belangertambra515@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 787, in connect
+    super(socksocket, self).connect(proxy_addr)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 316, in login
+    proxy_user=self.proxy_user, proxy_pass=self.proxy_pass)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 162, in connect_proxy
+    s.connect((host, port))
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 47, in wrapper
+    return function(*args, **kwargs)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 800, in connect
+    raise ProxyConnectionError(msg, error)
+socks.ProxyConnectionError: Error connecting to SOCKS5 proxy 194.32.107.51:4001: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+2022-05-16 19:58:33,439 [driscollmira] [ERROR]  Error at Sending - driscollmiranda7@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 787, in connect
+    super(socksocket, self).connect(proxy_addr)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 316, in login
+    proxy_user=self.proxy_user, proxy_pass=self.proxy_pass)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 162, in connect_proxy
+    s.connect((host, port))
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 47, in wrapper
+    return function(*args, **kwargs)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 800, in connect
+    raise ProxyConnectionError(msg, error)
+socks.ProxyConnectionError: Error connecting to SOCKS5 proxy 194.32.107.51:4000: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
