@@ -91,7 +91,6 @@ def test(send_to):
             server = smtplib.SMTP(var.smtp_server, var.smtp_port)
             server.set_debuglevel(0)
 
-        server.ehlo()
         server.starttls()
         server.ehlo()
         server.login(send['EMAIL'], send['EMAIL_PASS'])
@@ -161,7 +160,6 @@ def forward(forward_to):
             server.set_debuglevel(0)
             # server.set_debuglevel(1)
 
-        server.ehlo()
         server.starttls()
         server.ehlo()
         server.login(var.email_in_view['user'], var.email_in_view['pass'])
@@ -214,7 +212,6 @@ def reply():
             server.set_debuglevel(0)
             # server.set_debuglevel(1)
 
-        server.ehlo()
         server.starttls()
         server.ehlo()
         server.login(var.email_in_view['user'], var.email_in_view['pass'])
@@ -319,7 +316,6 @@ class SMTP_(threading.Thread):
                 server = smtplib.SMTP(var.smtp_server, var.smtp_port)
                 server.set_debuglevel(0)
 
-            server.ehlo()
             server.starttls()
             server.ehlo()
             server.login(self.user, self.passwd)

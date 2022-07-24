@@ -2555,3 +2555,196 @@ Traceback (most recent call last):
     raise ProxyConnectionError(msg, error)
 socks.ProxyConnectionError: Error connecting to SOCKS5 proxy 194.32.107.51:4000: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
 
+2022-07-25 00:51:03,390 [MainThread  ] [INFO ]  Scheduler started
+2022-07-25 00:51:07,311 [MainThread  ] [INFO ]  Scheduler started
+2022-07-25 00:56:37,853 [Thread-3    ] [ERROR]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2022-07-25 00:56:59,572 [Thread-5    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 71
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: 056322c1-2fa7-4364-8359-1e5427c3ba31
+ Add Custom Hostname: True
+2022-07-25 00:56:59,573 [Thread-4    ] [INFO ]  config updated
+2022-07-25 00:56:59,641 [Thread-5    ] [ERROR]  
+Starting Thread : Name - jamescalloway402@gmail.com
+Targets Count - 1
+2022-07-25 00:56:59,643 [Thread-5    ] [INFO ]  Length - 1 jamescalloway402@gmail.com
+2022-07-25 00:56:59,645 [Thread-5    ] [ERROR]  
+Starting Thread : Name - 0101dave.gibbons22@gmail.com
+Targets Count - 1
+2022-07-25 00:56:59,648 [Thread-5    ] [INFO ]  Length - 1 0101dave.gibbons22@gmail.com
+2022-07-25 00:56:59,650 [Thread-5    ] [ERROR]  
+Starting Thread : Name - ch4460165@gmail.com
+Targets Count - 1
+2022-07-25 00:56:59,651 [Thread-5    ] [INFO ]  Length - 1 ch4460165@gmail.com
+2022-07-25 00:56:59,655 [Thread-5    ] [ERROR]  
+Starting Thread : Name - bermannydia@gmail.com
+Targets Count - 1
+2022-07-25 00:56:59,657 [Thread-5    ] [INFO ]  Length - 1 bermannydia@gmail.com
+2022-07-25 00:56:59,659 [Thread-5    ] [ERROR]  
+Starting Thread : Name - nelsondigna95@gmail.com
+Targets Count - 1
+2022-07-25 00:56:59,661 [Thread-5    ] [INFO ]  Length - 1 nelsondigna95@gmail.com
+2022-07-25 00:56:59,663 [Thread-5    ] [ERROR]  
+Starting Thread : Name - alyse865480clayton865480@gmail.com
+Targets Count - 1
+2022-07-25 00:56:59,664 [Thread-5    ] [INFO ]  Length - 1 alyse865480clayton865480@gmail.com
+2022-07-25 00:56:59,665 [Thread-5    ] [ERROR]  
+Starting Thread : Name - gaylenebarr52@gmail.com
+Targets Count - 1
+2022-07-25 00:56:59,667 [Thread-5    ] [INFO ]  Length - 1 gaylenebarr52@gmail.com
+2022-07-25 00:57:06,032 [ch4460165@gm] [INFO ]  Sent - ch4460165@gmail.com shahimrans64@gmail.com
+2022-07-25 00:57:06,142 [jamescallowa] [INFO ]  Sent - jamescalloway402@gmail.com shahimrans64@gmail.com
+2022-07-25 00:57:06,588 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-07-25 00:57:07,590 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-07-25 00:57:07,868 [gaylenebarr5] [ERROR]  Error at Sending - gaylenebarr52@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials u8-20020a05600c19c800b0039db31f6372sm13835487wmq.2 - gsmtp')
+
+2022-07-25 00:57:08,884 [alyse865480c] [ERROR]  Error at Sending - alyse865480clayton865480@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 325, in login
+    server.login(self.user, self.passwd)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 730, in login
+    raise last_exception
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 721, in login
+    initial_response_ok=initial_response_ok)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\smtplib.py", line 642, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials q184-20020a1c43c1000000b003a302fb9df7sm15343444wma.21 - gsmtp')
+
+2022-07-25 00:57:09,893 [nelsondigna9] [INFO ]  Sent - nelsondigna95@gmail.com shahimrans64@gmail.com
+2022-07-25 00:57:10,595 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-07-25 00:57:23,746 [0101dave.gib] [ERROR]  Error at Sending - 0101dave.gibbons22@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 787, in connect
+    super(socksocket, self).connect(proxy_addr)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 381, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 316, in login
+    proxy_user=self.proxy_user, proxy_pass=self.proxy_pass)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 162, in connect_proxy
+    s.connect((host, port))
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 47, in wrapper
+    return function(*args, **kwargs)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 800, in connect
+    raise ProxyConnectionError(msg, error)
+socks.ProxyConnectionError: Error connecting to SOCKS5 proxy 81.28.96.131:58065: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+2022-07-25 00:57:24,684 [Thread-5    ] [ERROR]  
+Starting Thread : Name - cammie554076robbins554076@gmail.com
+Targets Count - 1
+2022-07-25 00:57:24,686 [Thread-5    ] [INFO ]  Length - 1 cammie554076robbins554076@gmail.com
+2022-07-25 00:57:24,688 [Thread-5    ] [ERROR]  
+Starting Thread : Name - allisonkanesha97@gmail.com
+Targets Count - 1
+2022-07-25 00:57:24,689 [Thread-5    ] [INFO ]  Length - 1 allisonkanesha97@gmail.com
+2022-07-25 00:57:24,690 [Thread-5    ] [ERROR]  
+Starting Thread : Name - pughlael052@gmail.com
+Targets Count - 1
+2022-07-25 00:57:24,691 [Thread-5    ] [INFO ]  Length - 1 pughlael052@gmail.com
+2022-07-25 00:57:24,693 [Thread-5    ] [ERROR]  
+Starting Thread : Name - ebonisherwood39@gmail.com
+Targets Count - 1
+2022-07-25 00:57:24,694 [Thread-5    ] [INFO ]  Length - 1 ebonisherwood39@gmail.com
+2022-07-25 00:57:32,702 [Thread-5    ] [ERROR]  
+Starting Thread : Name - kishagauthier@gmail.com
+Targets Count - 1
+2022-07-25 00:57:32,704 [Thread-5    ] [INFO ]  Length - 1 kishagauthier@gmail.com
+2022-07-25 00:57:32,705 [Thread-5    ] [ERROR]  
+Starting Thread : Name - trangmckinney@gmail.com
+Targets Count - 1
+2022-07-25 00:57:32,706 [Thread-5    ] [INFO ]  Length - 1 trangmckinney@gmail.com
+2022-07-25 00:57:32,708 [Thread-5    ] [ERROR]  
+Starting Thread : Name - janeencrowley2@gmail.com
+Targets Count - 1
+2022-07-25 00:57:32,709 [Thread-5    ] [INFO ]  Length - 1 janeencrowley2@gmail.com
+2022-07-25 00:57:32,710 [Thread-5    ] [ERROR]  
+Starting Thread : Name - newcombmichiko@gmail.com
+Targets Count - 1
+2022-07-25 00:57:32,711 [Thread-5    ] [INFO ]  Length - 1 newcombmichiko@gmail.com
+2022-07-25 00:57:39,720 [Thread-5    ] [ERROR]  
+Starting Thread : Name - dyershanelle@gmail.com
+Targets Count - 1
+2022-07-25 00:57:39,721 [Thread-5    ] [INFO ]  Length - 1 dyershanelle@gmail.com
+2022-07-25 00:57:39,722 [Thread-5    ] [ERROR]  
+Starting Thread : Name - gwenda767321hayes767321@gmail.com
+Targets Count - 1
+2022-07-25 00:57:39,723 [Thread-5    ] [INFO ]  Length - 1 gwenda767321hayes767321@gmail.com
+2022-07-25 00:57:39,724 [Thread-5    ] [ERROR]  
+Starting Thread : Name - vanessa780734costa780734@gmail.com
+Targets Count - 1
+2022-07-25 00:57:39,725 [Thread-5    ] [INFO ]  Length - 1 vanessa780734costa780734@gmail.com
+2022-07-25 00:57:39,726 [Thread-5    ] [ERROR]  
+Starting Thread : Name - augustinarector@gmail.com
+Targets Count - 1
+2022-07-25 00:57:39,728 [Thread-5    ] [INFO ]  Length - 1 augustinarector@gmail.com
+2022-07-25 00:57:46,736 [Thread-5    ] [ERROR]  
+Starting Thread : Name - manacarpenter349@gmail.com
+Targets Count - 1
+2022-07-25 00:57:46,737 [Thread-5    ] [INFO ]  Length - 1 manacarpenter349@gmail.com
+2022-07-25 00:57:46,738 [Thread-5    ] [ERROR]  
+Starting Thread : Name - americapitts65@gmail.com
+Targets Count - 1
+2022-07-25 00:57:46,739 [Thread-5    ] [INFO ]  Length - 1 americapitts65@gmail.com
+2022-07-25 00:57:46,740 [Thread-5    ] [ERROR]  
+Starting Thread : Name - deatonmei321@gmail.com
+Targets Count - 1
+2022-07-25 00:57:46,742 [Thread-5    ] [INFO ]  Length - 1 deatonmei321@gmail.com
+2022-07-25 00:57:46,744 [Thread-5    ] [ERROR]  
+Starting Thread : Name - ec3170717@gmail.com
+Targets Count - 1
+2022-07-25 00:57:46,745 [Thread-5    ] [INFO ]  Length - 1 ec3170717@gmail.com
+2022-07-25 00:57:54,753 [Thread-5    ] [ERROR]  
+Starting Thread : Name - dickinsonalicia6@gmail.com
+Targets Count - 1
+2022-07-25 00:57:54,756 [Thread-5    ] [INFO ]  Length - 1 dickinsonalicia6@gmail.com
+2022-07-25 00:57:54,758 [Thread-5    ] [ERROR]  
+Starting Thread : Name - driscollmiranda7@gmail.com
+Targets Count - 1
+2022-07-25 00:57:54,760 [Thread-5    ] [INFO ]  Length - 1 driscollmiranda7@gmail.com
+2022-07-25 00:57:54,762 [Thread-5    ] [ERROR]  
+Starting Thread : Name - evelineperry913@gmail.com
+Targets Count - 1
+2022-07-25 00:57:54,763 [Thread-5    ] [INFO ]  Length - 1 evelineperry913@gmail.com
+2022-07-25 00:57:54,765 [Thread-5    ] [ERROR]  
+Starting Thread : Name - amieecallahan2@gmail.com
+Targets Count - 1
+2022-07-25 00:57:54,766 [Thread-5    ] [INFO ]  Length - 1 amieecallahan2@gmail.com
+2022-07-25 00:58:05,782 [Thread-5    ] [ERROR]  
+Starting Thread : Name - hardinghildegard@gmail.com
+Targets Count - 1
+2022-07-25 00:58:05,784 [Thread-5    ] [INFO ]  Length - 1 hardinghildegard@gmail.com
+2022-07-25 00:58:05,785 [Thread-5    ] [ERROR]  
+Starting Thread : Name - britt277384hanks277384@gmail.com
+Targets Count - 1
+2022-07-25 00:58:05,787 [Thread-5    ] [INFO ]  Length - 1 britt277384hanks277384@gmail.com
+2022-07-25 00:58:05,788 [Thread-5    ] [ERROR]  
+Starting Thread : Name - coyledominque371@gmail.com
+Targets Count - 1
+2022-07-25 00:58:05,789 [Thread-5    ] [INFO ]  Length - 1 coyledominque371@gmail.com
+2022-07-25 00:58:05,791 [Thread-5    ] [ERROR]  
+Starting Thread : Name - fshavon9@gmail.com
+Targets Count - 1
+2022-07-25 00:58:05,793 [Thread-5    ] [INFO ]  Length - 1 fshavon9@gmail.com
+2022-07-25 00:58:08,830 [Thread-5    ] [INFO ]  Sending Finished 056322c1-2fa7-4364-8359-1e5427c3ba31
