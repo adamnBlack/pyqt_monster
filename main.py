@@ -115,6 +115,12 @@ class myMainClass:
         GUI.textBrowser_follow_up_body.setText(var.followup_body)
         GUI.lineEdit_delay_between_emails.setText(var.delay_between_emails)
 
+        # airtable config
+        GUI.lineEdit_airtable_table_name.setText(var.AirtableConfig.table_name)
+        GUI.lineEdit_airtable_base_id.setText(var.AirtableConfig.base_id)
+        GUI.lineEdit_airtable_api_key.setText(var.AirtableConfig.api_key)
+        GUI.checkBox_airtable_use_desktop_id.setChecked(var.AirtableConfig.use_desktop_id)
+
         if var.campaign_group == "group_a":
             GUI.radioButton_campaign_group_a.setChecked(True)
         else:
@@ -149,6 +155,19 @@ class myMainClass:
         )
         GUI.pushButton_follow_up_save.clicked.connect(
             self.configuration_save
+        )
+
+        GUI.lineEdit_airtable_base_id.textChanged.connect(
+            self.update_airtable_config
+        )
+        GUI.lineEdit_airtable_api_key.textChanged.connect(
+            self.update_airtable_config
+        )
+        GUI.lineEdit_airtable_table_name.textChanged.connect(
+            self.update_airtable_config
+        )
+        GUI.checkBox_airtable_use_desktop_id.stateChanged.connect(
+            self.update_airtable_config
         )
 
         GUI.radioButton_html.clicked.connect(self.compose_change)
@@ -240,6 +259,12 @@ class myMainClass:
             lambda: threading.Thread(target=self.clear_cached_targets, daemon=True, args=[]).start()
         )
 
+    def update_airtable_config(self):
+        var.AirtableConfig.base_id = GUI.lineEdit_airtable_base_id.text()
+        var.AirtableConfig.api_key = GUI.lineEdit_airtable_api_key.text()
+        var.AirtableConfig.table_name = GUI.lineEdit_airtable_table_name.text()
+        var.AirtableConfig.use_desktop_id = True if GUI.checkBox_airtable_use_desktop_id.isChecked() else False
+
     def update_followup_body(self):
         var.followup_body = GUI.textBrowser_follow_up_body.toPlainText()
 
@@ -288,7 +313,6 @@ class myMainClass:
             var.target_blacklist = target_blacklist.split(",")
         else:
             var.target_blacklist = list()
-        print(var.target_blacklist)
 
     def change_inbox_blacklist(self):
         inbox_blacklist = GUI.lineEdit_inbox_blacklist.text().strip().replace(" ", "")
@@ -296,7 +320,6 @@ class myMainClass:
             var.inbox_blacklist = inbox_blacklist.split(",")
         else:
             var.inbox_blacklist = list()
-        print(var.inbox_blacklist)
 
     def update_checkbox_status(self):
         var.add_custom_hostname = GUI.checkBox_add_custom_hostname.isChecked()
@@ -351,7 +374,6 @@ class myMainClass:
                 command = var.command_q.get()
                 eval(command)
         except Exception as e:
-            print("Error at run_command : {}".format(e))
             self.logger.error("Error at run_command - {}".format(e))
 
     def insert_row(self):
@@ -372,7 +394,7 @@ class myMainClass:
                 "GUI.model._data.reset_index(drop=True, inplace=True)")
             var.command_q.put("self.update_db_table()")
         else:
-            print("Select something")
+            self.logger.warning("Select something")
 
     def update_db_table(self):
         GUI.model.layoutAboutToBeChanged.emit()
@@ -398,7 +420,7 @@ class myMainClass:
                 url = var.api + \
                       "verify/check_for_subscription/{}".format(var.login_email)
                 response = requests.post(url, timeout=10)
-                print(response.text)
+
                 data = response.json()
 
                 if response.status_code == 200:
@@ -508,7 +530,6 @@ class myMainClass:
                       title="Alert", button="OK")
 
         except Exception as e:
-            print("Error at batch_delete : {}".format(e))
             self.logger.error("Error at batch_delete - {}".format(e))
 
     def load_db(self):
@@ -691,7 +712,7 @@ class myMainClass:
                 GUI.progressBar_compose.setValue(value)
 
         except Exception as e:
-            print("Error at main.py->update_compose_progressbar : {}".format(e))
+            logger.error("Error at main.py->update_compose_progressbar : {}".format(e))
 
     def send_campaign(self):
         try:
@@ -745,7 +766,6 @@ class myMainClass:
                     var.send_campaign_run_status = False
 
         except Exception as e:
-            print("Error at send_campaign : {}".format(e))
             self.logger.error("Error at send_campaign - {}".format(e))
             alert(text="Error at send_campaign : {}".format(
                 e), title='Error', button='OK')

@@ -12,6 +12,12 @@
             "analytics_account": "UA-33237782-1",
             "campaign_name": "Teas fdsg 3442_"
         },
+        "airtable": {
+            "base_id": "appaCmKFn3MWDzjsF",
+            "api_key": "keyajjzgPaHo8VjWA",
+            "table_name": "target",
+            "use_desktop_id": true
+        },
         "webhook_link": "https://webhook.site/a39236eb-211f-4556-9e8d-7a48edbc5eba",
         "check_for_blocks": false,
         "remove_email_from_target": false,

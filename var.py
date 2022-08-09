@@ -1,5 +1,7 @@
 import traceback
+import uuid
 from json import load, dumps
+from pathlib import Path
 import pandas as pd
 import queue
 from queue import LifoQueue
@@ -55,6 +57,7 @@ class SingleInstance:
         if self.mutex:
             CloseHandle(self.mutex)
 
+
 try:
     def resource_path(relative_path):
         if hasattr(sys, '_MEIPASS'):
@@ -76,6 +79,8 @@ try:
 except Exception as e:
     print(e)
 
+
+gmonster_desktop_id = ''
 version = '2.2r'
 base_dir = "database"
 followup_report_file_path = "followup_report.csv"
@@ -119,6 +124,17 @@ db_file_loading_config = {
     "target": True
 }
 
+
+class AirtableConfig:
+    base_id = ''
+    api_key = ''
+    table_name = ''
+    use_desktop_id = False
+
+    def __init__(self):
+        pass
+
+
 add_custom_hostname = False
 
 email_failed = 0
@@ -148,6 +164,9 @@ thread_open = 0
 acc_finished = 0
 total_acc = 0
 stop_download = False
+
+airtable_base_id = 'appaCmKFn3MWDzjsF'
+airtable_api_key = 'keyajjzgPaHo8VjWA'
 
 thread_open_campaign = 0
 stop_send_campaign = False
@@ -193,6 +212,21 @@ proxy_provider = "https://gmonster.co/product/gmonster-proxies/"
 
 responses_webhook_enabled = False
 inbox_blacklist = []
+gmonster_desktop_id = ''
+id_file_name = "gmonster_id"
+id_file_path = os.path.join(os.getcwd(), base_dir, id_file_name)
+try:
+    if os.path.exists(id_file_path):
+        with open(id_file_path, "r", encoding="utf-8") as file:
+            gmonster_desktop_id = file.read().strip()
+    else:
+        gmonster_desktop_id = str(uuid.uuid4())
+
+        with open(id_file_path, "w", encoding="utf-8") as file:
+            file.write(gmonster_desktop_id)
+
+except Exception as e:
+    logger.info("Exception occurred at id file loading : {}".format(e))
 
 try:
     with open('{}/config.json'.format(base_dir)) as json_file:
@@ -225,8 +259,12 @@ try:
     followup_days = config['followup_days']
     followup_subject = config['followup_subject']
     followup_body = config['followup_body']
+    AirtableConfig.base_id = config['airtable']['base_id']
+    AirtableConfig.api_key = config['airtable']['api_key']
+    AirtableConfig.table_name = config['airtable']['table_name']
+    AirtableConfig.use_desktop_id = config['airtable']['use_desktop_id']
 except Exception as e:
-    print("Exception occurred at config loading : {}".format(e))
+    logger.info("Exception occurred at config loading : {}".format(e))
 
 delay_start = int(delay_between_emails.split("-")[0].strip())
 delay_end = int(delay_between_emails.split("-")[1].strip())
@@ -260,12 +298,12 @@ if __name__ == "__main__":
     except:
         pass
 
+    logger.info("gmonster_desktop_id - {}".format(gmonster_desktop_id))
+
     if is_testing_environment:
         import main
     else:
         import dialog
-
-
 
 # pyinstaller --onedir --icon=icons/icon.ico --name=GMonster --noconsole --noconfirm var.py
 # pyi-makespec --onefile --icon=icons/icon.ico --name=GMonster --noconsole var.py

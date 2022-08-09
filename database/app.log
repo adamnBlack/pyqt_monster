@@ -2748,3 +2748,45 @@ Starting Thread : Name - fshavon9@gmail.com
 Targets Count - 1
 2022-07-25 00:58:05,793 [Thread-5    ] [INFO ]  Length - 1 fshavon9@gmail.com
 2022-07-25 00:58:08,830 [Thread-5    ] [INFO ]  Sending Finished 056322c1-2fa7-4364-8359-1e5427c3ba31
+2022-08-06 22:21:03,476 [MainThread  ] [INFO ]  Scheduler started
+2022-08-06 22:21:07,851 [MainThread  ] [INFO ]  Scheduler started
+2022-08-07 20:45:08,793 [MainThread  ] [INFO ]  Scheduler started
+2022-08-07 20:45:12,678 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 15:55:33,358 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 15:58:30,309 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 15:59:16,234 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 15:59:20,281 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 16:01:32,765 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 16:01:32,768 [MainThread  ] [INFO ]  gmonster_desktop_id - 
+2022-08-09 16:01:33,371 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 16:25:45,409 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 16:25:45,411 [MainThread  ] [INFO ]  Exception occurred at config loading : 'airtable_base_id'
+2022-08-09 16:25:45,413 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-09 16:25:46,018 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 16:25:46,035 [MainThread  ] [INFO ]  Exception occurred at config loading : 'airtable_base_id'
+2022-08-09 16:26:20,121 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 16:26:20,124 [MainThread  ] [INFO ]  Exception occurred at config loading : 'airtable_base_id'
+2022-08-09 16:26:20,125 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-09 16:26:20,762 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 16:26:20,768 [MainThread  ] [INFO ]  Exception occurred at config loading : 'airtable_base_id'
+2022-08-09 16:26:55,581 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 16:26:55,588 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-09 16:26:56,203 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 16:41:01,642 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 16:41:01,645 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-09 16:41:02,345 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 16:47:56,699 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 16:47:56,703 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-09 16:47:57,340 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 16:48:21,008 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 16:48:21,012 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-09 16:48:21,642 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 17:01:38,455 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 17:01:38,458 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-09 17:01:39,104 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 17:02:21,884 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 17:02:21,888 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-09 17:02:22,520 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 17:03:44,262 [MainThread  ] [INFO ]  Scheduler started
+2022-08-09 17:03:44,269 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-09 17:03:44,928 [MainThread  ] [INFO ]  Scheduler started
