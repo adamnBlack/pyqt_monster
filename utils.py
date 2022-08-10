@@ -98,7 +98,13 @@ def update_config_json():
                 "followup_enabled": var.followup_enabled,
                 "followup_days": var.followup_days,
                 "followup_subject": var.followup_subject,
-                "followup_body": var.followup_body
+                "followup_body": var.followup_body,
+                "airtable": {
+                    "api_key": var.AirtableConfig.api_key,
+                    "base_id": var.AirtableConfig.base_id,
+                    "table_name": var.AirtableConfig.table_name,
+                    "use_desktop_id": var.AirtableConfig.use_desktop_id
+                }
             }
         }
         with open(var.base_dir+'/config.json', 'w') as json_file:

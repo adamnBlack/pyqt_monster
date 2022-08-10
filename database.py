@@ -1,11 +1,17 @@
+import logging
+import threading
+
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, Text, DateTime, JSON, TypeDecorator, types
+from sqlalchemy import create_engine, MetaData, Table, Column, Integer, String, Text, DateTime, JSON, TypeDecorator, \
+    types
 from sqlalchemy.orm import sessionmaker
 import json
 import var
 import main
 import pandas as pd
 from pyautogui import alert
+from pyairtable import Table
+from pyairtable.formulas import match
 import os
 import datetime
 import traceback
@@ -199,13 +205,13 @@ class Database:
         try:
             follow_ups = [
                 dict(
-                        group_email=item['group_email'],
-                        group_info=item['group_info'],
-                        target_email=item['target_email'],
-                        target_info=item['target_info'],
-                        campaign_id=item['campaign_id'],
-                        campaign_time=item['campaign_time']
-                    ) for item in list_of_dict]
+                    group_email=item['group_email'],
+                    group_info=item['group_info'],
+                    target_email=item['target_email'],
+                    target_info=item['target_info'],
+                    campaign_id=item['campaign_id'],
+                    campaign_time=item['campaign_time']
+                ) for item in list_of_dict]
 
             self.session.bulk_insert_mappings(FollowUp, follow_ups)
             self.session.commit()
@@ -271,8 +277,6 @@ def db_update_row(row):
 
     except Exception as e:
         session.rollback()
-        print(f"Error at var.db_update_row : {e}")
-        global logger
         logger.error(f"Error at db_update_row - {e}")
         return False
 
@@ -298,8 +302,6 @@ def db_remove_row(id):
 
     except Exception as e:
         session.rollback()
-        print(f"Error at var.db_remove_row : {e}")
-        global logger
         logger.error(f"Error at var.db_remove_row - {e}")
         return False
 
@@ -324,8 +326,6 @@ def db_remove_rows(ids):
 
     except Exception as e:
         session.rollback()
-        print(f"Error at var.db_remove_rows : {e}")
-        global logger
         logger.error(f"Error at var.db_remove_rows - {e}")
 
 
@@ -367,13 +367,11 @@ def db_insert_row():
 
         session.add(objects)
         session.commit()
-        print("DB updated")
+        logger.info("DB updated")
         return True, objects.id
 
     except Exception as e:
         session.rollback()
-        print(f"Error at var.db_insert_row : {e}")
-        global logger
         logger.error(f"Error at var.db_insert_row - {e}")
         return False, None
 
@@ -603,102 +601,108 @@ def dummy_data_db(group_a=True, group_b=True, target=True):
     session.commit()
 
 
-def pandas_to_db():
+def pandas_to_db(group_a=None, group_b=None, target=None):
     try:
         session = get_session()
-        objects = [Group_A(
-            FIRSTFROMNAME=row['FIRSTFROMNAME'],
-            LASTFROMNAME=row['LASTFROMNAME'],
-            EMAIL=row['EMAIL'],
-            EMAIL_PASS=row['EMAIL_PASS'],
-            PROXY_PORT=row['PROXY:PORT'],
-            PROXY_USER=row['PROXY_USER'],
-            PROXY_PASS=row['PROXY_PASS']
+        if group_a:
+            objects = [Group_A(
+                FIRSTFROMNAME=row['FIRSTFROMNAME'],
+                LASTFROMNAME=row['LASTFROMNAME'],
+                EMAIL=row['EMAIL'],
+                EMAIL_PASS=row['EMAIL_PASS'],
+                PROXY_PORT=row['PROXY:PORT'],
+                PROXY_USER=row['PROXY_USER'],
+                PROXY_PASS=row['PROXY_PASS']
 
-        ) for index, row in var.group_a.iterrows()]
+            ) for index, row in var.group_a.iterrows()]
 
-        session.add_all(objects)
+            session.add_all(objects)
 
-        objects = [Group_B(
-            FIRSTFROMNAME=row['FIRSTFROMNAME'],
-            LASTFROMNAME=row['LASTFROMNAME'],
-            EMAIL=row['EMAIL'],
-            EMAIL_PASS=row['EMAIL_PASS'],
-            PROXY_PORT=row['PROXY:PORT'],
-            PROXY_USER=row['PROXY_USER'],
-            PROXY_PASS=row['PROXY_PASS']
+        if group_b:
+            objects = [Group_B(
+                FIRSTFROMNAME=row['FIRSTFROMNAME'],
+                LASTFROMNAME=row['LASTFROMNAME'],
+                EMAIL=row['EMAIL'],
+                EMAIL_PASS=row['EMAIL_PASS'],
+                PROXY_PORT=row['PROXY:PORT'],
+                PROXY_USER=row['PROXY_USER'],
+                PROXY_PASS=row['PROXY_PASS']
 
-        ) for index, row in var.group_b.iterrows()]
+            ) for index, row in var.group_b.iterrows()]
 
-        session.add_all(objects)
+            session.add_all(objects)
 
-        objects = [Targets(
-            one=row['1'],
-            two=row['2'],
-            three=row['3'],
-            four=row['4'],
-            five=row['5'],
-            six=row['6'],
-            TONAME=row['TONAME'],
-            EMAIL=row['EMAIL']
+        if target:
+            objects = [Targets(
+                one=row['1'],
+                two=row['2'],
+                three=row['3'],
+                four=row['4'],
+                five=row['5'],
+                six=row['6'],
+                TONAME=row['TONAME'],
+                EMAIL=row['EMAIL']
 
-        ) for index, row in var.target.iterrows()]
+            ) for index, row in var.target.iterrows()]
 
-        session.add_all(objects)
-        print("Pandas to DB done!")
+            session.add_all(objects)
+
+        session.commit()
+        logger.info("Pandas to DB done!")
     except Exception as e:
-        print(f"Error at var.pandas_to_db : {e}")
-        global logger
         logger.error(f"Error at var.pandas_to_db - {e}")
 
 
-def db_to_pandas():
+def db_to_pandas(group_a=None, group_b=None, target=None):
     session = get_session()
 
-    results = session.query(Group_A).all()
+    if group_a:
+        results = session.query(Group_A).all()
 
-    group_a_list = [{
-                        'ID': item.id,
-                        'FIRSTFROMNAME': item.FIRSTFROMNAME,
-                        'LASTFROMNAME': item.LASTFROMNAME,
-                        'EMAIL': item.EMAIL,
-                        'EMAIL_PASS': item.EMAIL_PASS,
-                        'PROXY:PORT': item.PROXY_PORT,
-                        'PROXY_USER': item.PROXY_USER,
-                        'PROXY_PASS': item.PROXY_PASS
-                    }.copy() for item in results]
-
-    var.group_a = pd.DataFrame(group_a_list)
-
-    results = session.query(Group_B).all()
-
-    group_b_list = [{
-                        'ID': item.id,
-                        'FIRSTFROMNAME': item.FIRSTFROMNAME,
-                        'LASTFROMNAME': item.LASTFROMNAME,
-                        'EMAIL': item.EMAIL,
-                        'EMAIL_PASS': item.EMAIL_PASS,
-                        'PROXY:PORT': item.PROXY_PORT,
-                        'PROXY_USER': item.PROXY_USER,
-                        'PROXY_PASS': item.PROXY_PASS
-                    }.copy() for item in results]
-
-    var.group_b = pd.DataFrame(group_b_list)
-
-    results = session.query(Targets).all()
-
-    if len(results) > 0:
-        targets_list = [{
+        group_a_list = [{
                             'ID': item.id,
-                            '1': item.one,
-                            '2': item.two,
-                            '3': item.three,
-                            '4': item.four,
-                            '5': item.five,
-                            '6': item.six,
-                            'TONAME': item.TONAME,
-                            'EMAIL': item.EMAIL
+                            'FIRSTFROMNAME': item.FIRSTFROMNAME,
+                            'LASTFROMNAME': item.LASTFROMNAME,
+                            'EMAIL': item.EMAIL,
+                            'EMAIL_PASS': item.EMAIL_PASS,
+                            'PROXY:PORT': item.PROXY_PORT,
+                            'PROXY_USER': item.PROXY_USER,
+                            'PROXY_PASS': item.PROXY_PASS
                         }.copy() for item in results]
+
+        var.group_a = pd.DataFrame(group_a_list)
+
+    if group_b:
+        results = session.query(Group_B).all()
+
+        group_b_list = [{
+                            'ID': item.id,
+                            'FIRSTFROMNAME': item.FIRSTFROMNAME,
+                            'LASTFROMNAME': item.LASTFROMNAME,
+                            'EMAIL': item.EMAIL,
+                            'EMAIL_PASS': item.EMAIL_PASS,
+                            'PROXY:PORT': item.PROXY_PORT,
+                            'PROXY_USER': item.PROXY_USER,
+                            'PROXY_PASS': item.PROXY_PASS
+                        }.copy() for item in results]
+
+        var.group_b = pd.DataFrame(group_b_list)
+
+    if target:
+        results = session.query(Targets).all()
+
+        if len(results) > 0:
+            targets_list = [{
+                                'ID': item.id,
+                                '1': item.one,
+                                '2': item.two,
+                                '3': item.three,
+                                '4': item.four,
+                                '5': item.five,
+                                '6': item.six,
+                                'TONAME': item.TONAME,
+                                'EMAIL': item.EMAIL
+                            }.copy() for item in results]
 
     else:
         dummy_data_db(group_a=False, group_b=False, target=True)
@@ -738,15 +742,13 @@ def clear_table(group_a=None, group_b=None, target=None):
 
     except Exception as e:
         session.rollback()
-        print("Exeception occured at clear DB table : {}".format(e))
-        global logger
         logger.error(f"Error at clear DB table - {e}")
 
 
 def load_db():
     try:
         result, error = file_to_db()
-        db_to_pandas()
+        db_to_pandas(group_a=True, group_b=True, target=True)
         var.command_q.put("self.update_db_table()")
         if result:
             alert(text="Database Loaded Successfully",
@@ -755,7 +757,7 @@ def load_db():
             raise error
 
     except Exception as e:
-        print("Exeception occured at DB loading : {}".format(e))
+        logger.error("Exeception occured at DB loading : {}".format(e))
         alert(text="Exeception occured at DB loading : {}".format(
             e), title='Alert', button='OK')
 
@@ -769,10 +771,83 @@ def startup_load_db(parent=None):
 
         dummy_data_db(group_a=group_a, group_b=group_b, target=target)
 
-        db_to_pandas()
+        db_to_pandas(group_a=True, group_b=True, target=True)
         var.command_q.put("self.update_db_table()")
 
     except Exception as e:
-        print("Exeception occured at startup_db loading : {}".format(e))
+        logger.error("Exeception occured at startup_db loading : {}".format(e))
         alert(text="Exeception occured at startup_db loading : {}".format(
             e), title='Alert', button='OK')
+
+
+class PullTargetAirtable(threading.Thread):
+    def __init__(self):
+        super().__init__()
+        self.setDaemon(True)
+
+        self.config = var.AirtableConfig
+        self.table = Table(self.config.api_key, self.config.base_id, self.config.table_name)
+
+    def run(self) -> None:
+        try:
+            logger.info("Starting pulling data from airtable")
+            if self.config.use_desktop_id:
+                targets = self.get_data_with_desktop_id()
+            else:
+                targets = self.get_data()
+
+            targets = self.rearrange_data(targets)
+
+            target_df = pd.DataFrame(targets)
+
+            var.target = target_df
+
+            # clear targets from db
+            clear_table(group_a=None, group_b=None, target=True)
+
+            # pandas to db
+            pandas_to_db(group_a=None, group_b=None, target=True)
+            var.command_q.put("self.update_db_table()")
+
+            logger.info("Completed pulling data from airtable")
+        except Exception as e:
+            logger.error(f"Error in {self.__class__.__name__}: {traceback.format_exc()}")
+
+        finally:
+            pass
+
+    def get_data(self):
+        logger.info("Downloading data from airtable without desktop id")
+        formula = match({"has_sent_email": 0})
+        results = self.table.all(formula=formula)
+        return results
+
+    def get_data_with_desktop_id(self):
+        logger.info("Downloading data from airtable without desktop id")
+        formula = match({"desktop_app_id": var.gmonster_desktop_id, "has_sent_email": 0})
+        results = self.table.all(formula=formula)
+        return results
+
+    def push_data_to_db(self):
+        pass
+
+    def rearrange_data(self, targets):
+        list_of_targets = []
+        for item in targets:
+            temp = item['fields']
+            row = dict()
+            if 'EMAIL' in temp and temp['EMAIL'].strip() != '':
+                row['1'] = temp['1'] if '1' in temp else ''
+                row['2'] = temp['2'] if '2' in temp else ''
+                row['3'] = temp['3'] if '3' in temp else ''
+                row['4'] = temp['4'] if '4' in temp else ''
+                row['5'] = temp['5'] if '5' in temp else ''
+                row['6'] = temp['6'] if '6' in temp else ''
+                row['TONAME'] = temp['TONAME'] if 'TONAME' in temp else ''
+                row['EMAIL'] = temp['EMAIL'] if 'EMAIL' in temp else ''
+
+                list_of_targets.append(row.copy())
+            else:
+                logger.error("EMPTY or MISSING email while downloading TARGET data from airtable")
+
+        return list_of_targets

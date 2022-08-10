@@ -802,7 +802,7 @@ def main(group, d_start, d_end, group_selected):
             time.sleep(1)
 
         remove_target.stop()
-        db_to_pandas()
+        db_to_pandas(group_a=False, group_b=False, target=True)
         var.command_q.put("self.update_db_table()")
 
     while not add_cached_targets.targets_q.empty():

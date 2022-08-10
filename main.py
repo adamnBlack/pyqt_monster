@@ -170,6 +170,10 @@ class myMainClass:
             self.update_airtable_config
         )
 
+        GUI.pushButton_database_load_target_from_airtable.clicked.connect(
+            self.pull_target_from_airtable
+        )
+
         GUI.radioButton_html.clicked.connect(self.compose_change)
         GUI.radioButton_plain_text.clicked.connect(self.compose_change)
 
@@ -258,6 +262,10 @@ class myMainClass:
         GUI.pushButton_clear_cached_targets.clicked.connect(
             lambda: threading.Thread(target=self.clear_cached_targets, daemon=True, args=[]).start()
         )
+
+    def pull_target_from_airtable(self):
+        pull_target_airtable = database.PullTargetAirtable()
+        pull_target_airtable.start()
 
     def update_airtable_config(self):
         var.AirtableConfig.base_id = GUI.lineEdit_airtable_base_id.text()
