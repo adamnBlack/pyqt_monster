@@ -2937,3 +2937,29 @@ requests.exceptions.HTTPError: ('404 Client Error: Not Found for url: https://ap
 2022-08-10 23:50:06,614 [Thread-4    ] [INFO ]  Downloading data from airtable without desktop id
 2022-08-10 23:50:08,525 [Thread-4    ] [INFO ]  Pandas to DB done!
 2022-08-10 23:50:08,526 [Thread-4    ] [INFO ]  Completed pulling data from airtable
+2022-08-11 16:14:19,269 [MainThread  ] [INFO ]  Scheduler started
+2022-08-11 16:14:19,409 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-11 16:14:23,687 [MainThread  ] [INFO ]  Scheduler started
+2022-08-11 16:14:41,046 [Thread-3    ] [INFO ]  Starting pulling data from airtable
+2022-08-11 16:14:41,048 [Thread-3    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-08-11 16:14:42,827 [Thread-3    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-08-11 16:14:42,828 [Thread-3    ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-08-11 16:14:42,994 [Thread-3    ] [INFO ]  Pandas to DB done!
+2022-08-11 16:14:42,995 [Thread-3    ] [INFO ]  Completed pulling data from airtable
+2022-08-11 16:14:55,590 [Thread-4    ] [INFO ]  Starting pulling data from airtable
+2022-08-11 16:14:55,593 [Thread-4    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-08-11 16:14:56,968 [Thread-4    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-08-11 16:14:56,970 [Thread-4    ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-08-11 16:14:57,173 [Thread-4    ] [INFO ]  Pandas to DB done!
+2022-08-11 16:14:57,175 [Thread-4    ] [INFO ]  Completed pulling data from airtable
+2022-08-11 16:34:34,588 [MainThread  ] [INFO ]  Scheduler started
+2022-08-11 16:34:34,592 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-11 16:34:35,324 [MainThread  ] [INFO ]  Scheduler started
+2022-08-11 16:34:55,137 [MainThread  ] [INFO ]  Scheduler started
+2022-08-11 16:34:55,141 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-11 16:34:55,693 [MainThread  ] [INFO ]  Scheduler started
+2022-08-11 16:35:07,726 [Thread-3    ] [INFO ]  config updated
+2022-08-11 16:35:16,795 [MainThread  ] [INFO ]  Scheduler started
+2022-08-11 16:35:16,803 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-11 16:35:17,358 [MainThread  ] [INFO ]  Scheduler started
+2022-08-11 16:35:23,311 [Thread-3    ] [INFO ]  config updated

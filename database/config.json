@@ -33,7 +33,8 @@
             "api_key": "keyajjzgPaHo8VjWA",
             "base_id": "appaCmKFn3MWDzjsF",
             "table_name": "target",
-            "use_desktop_id": true
+            "use_desktop_id": true,
+            "mark_sent_airtable": true
         }
     }
 }

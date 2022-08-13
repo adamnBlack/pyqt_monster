@@ -810,28 +810,27 @@ class PullTargetAirtable(threading.Thread):
             var.command_q.put("self.update_db_table()")
 
             logger.info("Completed pulling data from airtable")
+            alert("Pulling Data Done", title="Success", button="OK")
         except Exception as e:
             logger.error(f"Error in {self.__class__.__name__}: {traceback.format_exc()}")
-
-        finally:
-            pass
+            alert(f"{e}", title=f"Error at {self.__class__.__name__}", button="OK")
 
     def get_data(self):
-        logger.info("Downloading data from airtable without desktop id")
+        logger.info(f"{self.__class__.__name__} - Downloading data from airtable without desktop id")
         formula = match({"has_sent_email": 0})
         results = self.table.all(formula=formula)
+        logger.info(f"{self.__class__.__name__} - Downloading data from airtable without desktop id: DONE")
         return results
 
     def get_data_with_desktop_id(self):
-        logger.info("Downloading data from airtable without desktop id")
+        logger.info(f"{self.__class__.__name__} - Downloading data from airtable without desktop id")
         formula = match({"desktop_app_id": var.gmonster_desktop_id, "has_sent_email": 0})
         results = self.table.all(formula=formula)
+        logger.info(f"{self.__class__.__name__} - Downloading data from airtable without desktop id: DONE")
         return results
 
-    def push_data_to_db(self):
-        pass
-
     def rearrange_data(self, targets):
+        logger.info(f"{self.__class__.__name__} - Rearranging data")
         list_of_targets = []
         for item in targets:
             temp = item['fields']

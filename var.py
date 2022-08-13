@@ -130,6 +130,7 @@ class AirtableConfig:
     api_key = ''
     table_name = ''
     use_desktop_id = False
+    mark_sent_airtable = False
 
     def __init__(self):
         pass
@@ -263,6 +264,7 @@ try:
     AirtableConfig.api_key = config['airtable']['api_key']
     AirtableConfig.table_name = config['airtable']['table_name']
     AirtableConfig.use_desktop_id = config['airtable']['use_desktop_id']
+    AirtableConfig.mark_sent_airtable = config['airtable']['mark_sent_airtable']
 except Exception as e:
     logger.info("Exception occurred at config loading : {}".format(e))
 

@@ -1,7 +1,5 @@
 import os
-
 import pandas as pd
-
 from followup_smtp import FollowUpSend
 from proxy_smtplib import SMTP
 from email.mime.multipart import MIMEMultipart
@@ -21,6 +19,8 @@ import csv
 import random
 import json
 import uuid
+from pyairtable import Table
+from pyairtable.formulas import match
 from pyautogui import alert, password, confirm
 from datetime import datetime, timedelta
 from imap import ImapCheckForBlocks, ImapFollowUpCheck
@@ -507,7 +507,10 @@ class SMTP_(threading.Thread):
                         # result = target.remove(table="targets", id=item['ID'])
                         remove_target_q.put(item['ID'])
 
-                    if count % 5 == 0 and var.check_for_blocks == True:
+                    if var.AirtableConfig.mark_sent_airtable:
+                        MarkTargetSentAirtable.airtable_target_q.put(item['EMAIL'])
+
+                    if count % 5 == 0 and var.check_for_blocks:
                         last_time = datetime.now()
                         elapsed_time = utils.difference_between_time(
                             first_time, last_time)
@@ -518,16 +521,15 @@ class SMTP_(threading.Thread):
                                                          user=self.user, password=self.passwd)
 
                         if imap_object.check_for_block_messages():
-                            print(f"Found block messages : {self.name}")
                             self.logger.error(
                                 f"Found block messages : {self.name} {str(datetime.now())}")
                             break
                         else:
-                            print(f"Found no block messages : {self.name}")
+                            self.logger.error(f"Found no block messages : {self.name}")
                             # self.logger.error(
                             #     f"Found no block messages : {self.name} {str(datetime.now())}")
 
-                        # this is where you might want to anything that you want every campagin threads to do
+                        # this is where you might want to anything that you want every campaign threads to do
 
                     server.quit()
 
@@ -549,6 +551,79 @@ class SMTP_(threading.Thread):
         finally:
             server = None
             var.thread_open_campaign -= 1
+
+
+class MarkTargetSentAirtable(threading.Thread):
+    airtable_target_q = queue.Queue()
+
+    def __init__(self):
+        super().__init__()
+
+        self.threadID = "MarkTargetAsSent01"
+        self.name = "MarkTargetAsSent"
+        self.setDaemon(True)
+
+        self._close = False
+        self.config = var.AirtableConfig
+        self.table = Table(self.config.api_key, self.config.base_id, self.config.table_name)
+
+    def run(self):
+        logger.info(f"Starting {self.__class__.__name__}...")
+
+        list_of_email = []
+        while not self.close:
+            try:
+                if not MarkTargetSentAirtable.airtable_target_q.empty():
+                    email = MarkTargetSentAirtable.airtable_target_q.get()
+                    list_of_email.append(email)
+                else:
+                    if len(list_of_email) > 0:
+                        if var.AirtableConfig.use_desktop_id:
+                            formula = self.formulas_with_desktop_id(list_of_email)
+                        else:
+                            formula = self.formulas_normal(list_of_email)
+
+                        list_of_email = []
+                        results = self.table.all(formula=formula)
+
+                        update_dict_list = []
+                        if len(results) > 0:
+                            for item in results:
+                                item['fields']['has_sent_email'] = 1
+                                update_dict_list.append(item)
+
+                            self.table.batch_update(update_dict_list)
+
+            except Exception as e:
+                logger.error(f"Error at {self.__class__.__name__} : {traceback.format_exc()}")
+
+            time.sleep(1)
+
+        logger.info(f"Completed {self.__class__.__name__}...")
+
+    def formulas_with_desktop_id(self, list_of_email):
+        logger.info(f"formulas_with_desktop_id {self.__class__.__name__}...")
+
+        formula = "AND(OR(" + ",".join([f"{{EMAIL}}='{item}'" for item in list_of_email])
+        + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+
+        return formula
+
+    def formulas_normal(self, list_of_email):
+        logger.info(f"formulas_normal {self.__class__.__name__}...")
+
+        formula = "AND(OR(" + ",".join([f"{{EMAIL}}='{item}'" for item in list_of_email])
+        + f", {{has_sent_email}}=0)"
+
+        return formula
+
+    @property
+    def close(self) -> bool:
+        return self._close
+
+    @close.setter
+    def close(self, value: bool):
+        self._close = value
 
 
 remove_target_q = queue.Queue()
@@ -697,6 +772,12 @@ def main(group, d_start, d_end, group_selected):
         remove_target = RemoveTarget()
         remove_target.start()
 
+    MarkTargetSentAirtable.airtable_target_q = queue.Queue()
+
+    if var.AirtableConfig.mark_sent_airtable:
+        mark_target_sent_airtable = MarkTargetSentAirtable()
+        mark_target_sent_airtable.start()
+
     add_cached_targets = AddCachedTargets()
     add_cached_targets.start()
 
@@ -804,6 +885,14 @@ def main(group, d_start, d_end, group_selected):
         remove_target.stop()
         db_to_pandas(group_a=False, group_b=False, target=True)
         var.command_q.put("self.update_db_table()")
+
+    if var.AirtableConfig.mark_sent_airtable:
+        logger.info("Marking target as sent...")
+
+        while not MarkTargetSentAirtable.airtable_target_q.empty():
+            time.sleep(1)
+
+        mark_target_sent_airtable.stop()
 
     while not add_cached_targets.targets_q.empty():
         time.sleep(1)

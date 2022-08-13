@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1543</width>
+    <width>1300</width>
     <height>800</height>
    </rect>
   </property>
@@ -70,7 +70,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>1</number>
       </property>
       <property name="tabsClosable">
        <bool>false</bool>
@@ -2058,6 +2058,25 @@ QPushButton:pressed {
                 </property>
                </widget>
               </item>
+              <item row="5" column="0">
+               <widget class="QCheckBox" name="checkBox_mark_sent_airtable">
+                <property name="minimumSize">
+                 <size>
+                  <width>150</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>20</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Mark Sent Airtable</string>
+                </property>
+               </widget>
+              </item>
              </layout>
             </widget>
            </item>
@@ -2863,7 +2882,7 @@ QPushButton:pressed {
             <widget class="QPushButton" name="pushButton_database_load_target_from_airtable">
              <property name="minimumSize">
               <size>
-               <width>0</width>
+               <width>150</width>
                <height>50</height>
               </size>
              </property>

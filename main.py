@@ -120,6 +120,7 @@ class myMainClass:
         GUI.lineEdit_airtable_base_id.setText(var.AirtableConfig.base_id)
         GUI.lineEdit_airtable_api_key.setText(var.AirtableConfig.api_key)
         GUI.checkBox_airtable_use_desktop_id.setChecked(var.AirtableConfig.use_desktop_id)
+        GUI.checkBox_mark_sent_airtable.setChecked(var.AirtableConfig.mark_sent_airtable)
 
         if var.campaign_group == "group_a":
             GUI.radioButton_campaign_group_a.setChecked(True)
@@ -167,6 +168,9 @@ class myMainClass:
             self.update_airtable_config
         )
         GUI.checkBox_airtable_use_desktop_id.stateChanged.connect(
+            self.update_airtable_config
+        )
+        GUI.checkBox_mark_sent_airtable.stateChanged.connect(
             self.update_airtable_config
         )
 
@@ -272,6 +276,7 @@ class myMainClass:
         var.AirtableConfig.api_key = GUI.lineEdit_airtable_api_key.text()
         var.AirtableConfig.table_name = GUI.lineEdit_airtable_table_name.text()
         var.AirtableConfig.use_desktop_id = True if GUI.checkBox_airtable_use_desktop_id.isChecked() else False
+        var.AirtableConfig.mark_sent_airtable = True if GUI.checkBox_mark_sent_airtable.isChecked() else False
 
     def update_followup_body(self):
         var.followup_body = GUI.textBrowser_follow_up_body.toPlainText()

@@ -103,7 +103,8 @@ def update_config_json():
                     "api_key": var.AirtableConfig.api_key,
                     "base_id": var.AirtableConfig.base_id,
                     "table_name": var.AirtableConfig.table_name,
-                    "use_desktop_id": var.AirtableConfig.use_desktop_id
+                    "use_desktop_id": var.AirtableConfig.use_desktop_id,
+                    "mark_sent_airtable": var.AirtableConfig.mark_sent_airtable
                 }
             }
         }
