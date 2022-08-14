@@ -290,14 +290,14 @@ class SMTP_(threading.Thread):
         self.LASTFROMNAME = LASTFROMNAME
         self.target = target
         self.logger = logger
-
-        logger.info("Length - {} {}".format(len(self.target), self.user))
         self.d_start = d_start
         self.d_end = d_end
         self.campaign_id = campaign_id
         self.local_hostname = None
         self.cached_targets = cached_targets
         self.followup_enabled = followup_enabled
+
+        self.logger.info("Length - {} {}".format(len(self.target), self.user))
 
     def login(self):
         try:

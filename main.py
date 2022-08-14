@@ -2,8 +2,10 @@ import os
 import re
 import sys
 import threading
+import uuid
 import webbrowser
 import requests
+from json import load, dumps
 from threading import Thread
 from time import sleep
 import pandas as pd
@@ -11,6 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem
 from pyautogui import alert, confirm
 import traceback
+import datetime
 
 from gui import Ui_MainWindow
 
@@ -26,7 +29,17 @@ class MyGui(Ui_MainWindow, QtWidgets.QWidget):
         self.setupUi(main_window)
 
 
-class myMainClass:
+def run_scheduled_campaign(config_filename: str):
+    try:
+        logger.info(f"Starting main.run_scheduled_campaign id: {config_filename}")
+
+        logger.info(f"Completing main.run_scheduled_campaign id: {config_filename}")
+    except Exception as e:
+        logger.info(f"Error at main.run_scheduled_campaign id - "
+                    f"({config_filename}) : {traceback.format_exc()}")
+
+
+class MyMainClass:
     def __init__(self):
         global mainWindow, quit_application, GUI
 
@@ -77,7 +90,8 @@ class myMainClass:
         GUI.label_version.setText("VERSION: {}".format(var.version))
 
         self.time_interval_sub_check = 3600
-        subscription_thread = Thread(target=self.check_for_subscription, daemon=True).start()
+        subscription_thread = Thread(target=self.check_for_subscription, daemon=True)
+        subscription_thread.start()
 
         self.table_timer = QtCore.QTimer()
         self.table_timer.setInterval(10)
@@ -90,6 +104,8 @@ class myMainClass:
 
         date = QtCore.QDate.fromString(var.date, "M/d/yyyy")
         GUI.dateEdit_imap_since.setDate(date)
+
+        GUI.dateTimeEdit_campaign_scheduler.setDate(datetime.datetime.now())
         # GUI.dateEdit_imap_since.setMaximumDate(QtCore.QDate.currentDate().addDays(-1))
 
         GUI.dateEdit_imap_since.dateChanged.connect(self.date_update)
@@ -266,6 +282,100 @@ class myMainClass:
         GUI.pushButton_clear_cached_targets.clicked.connect(
             lambda: threading.Thread(target=self.clear_cached_targets, daemon=True, args=[]).start()
         )
+        GUI.pushButton_schedule_campaign.clicked.connect(
+            lambda: threading.Thread(target=self.schedule_campaign, daemon=True, args=[]).start()
+        )
+        GUI.pushButton_schedule_campaign_remove.clicked.connect(
+            lambda: threading.Thread(target=self.remove_schedule_campaign, daemon=True,
+                                     args=[GUI.comboBox_scheduled_campaign_list.itemData(
+                                         GUI.comboBox_scheduled_campaign_list.currentIndex())]).start()
+        )
+
+    def schedule_campaign(self):
+        try:
+            group_selected = 'group_a' if GUI.radioButton_campaign_group_a.isChecked() else 'group_b'
+            group = var.group_a if GUI.radioButton_campaign_group_a.isChecked() else var.group_b
+
+            var.num_emails_per_address = int(GUI.lineEdit_num_per_address.text())
+            var.delay_between_emails = GUI.lineEdit_delay_between_emails.text()
+            delay_start = int(var.delay_between_emails.split("-")[0].strip())
+            delay_end = int(var.delay_between_emails.split("-")[1].strip())
+
+            len_group = len(group)
+            len_target = len(var.target)
+
+            if len_group * var.num_emails_per_address > len_target:
+                total_email_to_be_sent = len_target
+                maximum_duration = total_email_to_be_sent * delay_end \
+                    if total_email_to_be_sent - var.num_emails_per_address < 0 \
+                    else var.num_emails_per_address * delay_end
+            else:
+                total_email_to_be_sent = len_group * var.num_emails_per_address
+                maximum_duration = var.num_emails_per_address * delay_end
+
+            maximum_duration = maximum_duration / 3600
+            scheduled_time = GUI.dateTimeEdit_campaign_scheduler.dateTime().toPyDateTime()
+
+            result = confirm(f"This campaign is going to take approximately "
+                             f"{maximum_duration:.4f} hours to complete.\n"
+                             f"And this campaign will be scheduled at {scheduled_time.strftime('%m/%d/%Y, %H:%M:%S')}. "
+                             f"\nAre you sure?",
+                             title="Campaign Scheduler", buttons=['OK', 'Cancel'])
+
+            if result == 'OK':
+                config_filename = str(uuid.uuid4())
+                Thread(target=update_config_json, daemon=True, kwargs={"alternative_name": config_filename}).start()
+                job = var.scheduler.add_job(func=self.run_scheduled_campaign, trigger='date',
+                                            args=(config_filename,), id=config_filename,
+                                            name=config_filename, next_run_time=scheduled_time)
+
+                self.reset_schedule_campaign_job_list()
+                logger.info(f"Scheduled job id: {job.id} at {str(scheduled_time)}")
+
+        except Exception as e:
+            logger.error(f"Error at {self.__class__.__name__}: {traceback.format_exc()}")
+
+    def remove_schedule_campaign(self, job_id):
+        try:
+            logger.info(f"Removing job {job_id} from list")
+            var.scheduler.remove_job(job_id=job_id)
+            self.reset_schedule_campaign_job_list()
+            logger.info(f"Removed successfully job {job_id} from list")
+        except Exception as e:
+            logger.error(f"Error at remove_schedule_campaign: {e}")
+
+    def reset_schedule_campaign_job_list(self):
+        var.command_q.put("GUI.comboBox_scheduled_campaign_list.clear()")
+        for item in var.scheduler.get_jobs():
+            text = f"{item.next_run_time} - {item.id}"
+            var.command_q.put(f"GUI.comboBox_scheduled_campaign_list.addItem('{text}', userData='{item.id}')")
+
+    def run_scheduled_campaign(self, config_filename: str):
+        try:
+            logger.info(f"Starting {self.__class__.__name__}.run_scheduled_campaign id: {config_filename}")
+            if not var.send_campaign_run_status:
+                with open('{}/{}.json'.format(var.campaign_scheduler_cache_path, config_filename)) as json_file:
+                    data = load(json_file)
+                    campaign_group = data["config"]['campaign_group']
+
+                if campaign_group == 'group_a':
+                    GUI.radioButton_campaign_group_a.setChecked(True)
+                else:
+                    GUI.radioButton_campaign_group_b.setChecked(True)
+
+                var.stop_send_campaign = False
+                var.thread_open_campaign = 0
+                var.send_campaign_email_count = 0
+
+                self.send_button_visibility(on=False)
+
+                self.send_campaign()
+            else:
+                logger.info("Campaign running, scheduled campaign cancelled || campaign id: {config_filename}")
+            logger.info(f"Completing {self.__class__.__name__}.run_scheduled_campaign id: {config_filename}")
+        except Exception as e:
+            logger.info(f"Error at main.run_scheduled_campaign id - "
+                        f"({config_filename}) : {traceback.format_exc()}")
 
     def pull_target_from_airtable(self):
         pull_target_airtable = database.PullTargetAirtable()
@@ -732,8 +842,7 @@ class myMainClass:
             global Campaign
 
             var.send_campaign_run_status = True
-            var.num_emails_per_address = int(
-                GUI.lineEdit_num_per_address.text())
+            var.num_emails_per_address = int(GUI.lineEdit_num_per_address.text())
             var.delay_between_emails = GUI.lineEdit_delay_between_emails.text()
             delay_start = int(var.delay_between_emails.split("-")[0].strip())
             delay_end = int(var.delay_between_emails.split("-")[1].strip())
@@ -1057,9 +1166,8 @@ else:
     mainWindow.setWindowFlags(mainWindow.windowFlags(
     ) | QtCore.Qt.WindowMinimizeButtonHint | QtCore.Qt.WindowSystemMenuHint)
 
-    GUI = MyGui(mainWindow)
-
     global GUI
+    GUI = MyGui(mainWindow)
 
     mainWindow.showMaximized()
     # mainWindow.show()
@@ -1068,7 +1176,7 @@ else:
     from var import logger
     import imap
     import smtp
-    from utils import update_config_json, prepare_html, is_number
+    from utils import update_config_json, prepare_html, is_number, get_config_json
     from progressbar import Delete_email
     from download_email import Download
     from campaign_reply import Reply
@@ -1077,8 +1185,9 @@ else:
     import database
     from webhook import start_inbox_stream
 
-    myMC = myMainClass()
+    myMC = MyMainClass()
 
     app.exec_()
     print("Exit")
+    var.scheduler.shutdown()
     sys.exit()

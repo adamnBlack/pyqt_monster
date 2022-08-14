@@ -18,7 +18,7 @@
         "enable_webhook": false,
         "enable_email_tracking": false,
         "custom_hostname": true,
-        "campaign_group": "group_b",
+        "campaign_group": "group_a",
         "body_type": "Html",
         "target_blacklist": [],
         "inbox_blacklist": [

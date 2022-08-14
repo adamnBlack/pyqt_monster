@@ -10,6 +10,7 @@ from win32api import CloseHandle, GetLastError
 from winerror import ERROR_ALREADY_EXISTS
 from pyautogui import alert
 from apscheduler.schedulers.background import BackgroundScheduler
+from apscheduler.jobstores.sqlalchemy import SQLAlchemyJobStore
 from logger import logger
 
 # pd.set_option('display.max_colwidth',1000)
@@ -114,6 +115,9 @@ body_type = "Normal"
 
 # admin password = hkHK#j4@jh#@
 # email='orders@gmonster.net'
+jobstores = {
+    'default': SQLAlchemyJobStore(url=f'sqlite:///{base_dir}/jobs.sqlite')
+}
 
 scheduler = BackgroundScheduler(logger=logger)
 scheduler.start()
@@ -210,6 +214,15 @@ api = "https://enzim.pythonanywhere.com/"
 
 gmail_provider = "https://gmonster.co/product/gmail-accounts/"
 proxy_provider = "https://gmonster.co/product/gmonster-proxies/"
+
+# scheduler campaign
+campaign_scheduler_cache_path = os.path.join(os.path.join(os.getcwd(), base_dir, "campaign_scheduler"))
+
+try:
+    if not os.path.exists(campaign_scheduler_cache_path):
+        os.mkdir(campaign_scheduler_cache_path)
+except Exception as e:
+    logger.error(f"Error while creating campaign_scheduler folder - {e}")
 
 responses_webhook_enabled = False
 inbox_blacklist = []

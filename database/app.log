@@ -3766,3 +3766,720 @@ Targets Count - 1
 2022-08-14 12:52:01,815 [MainThread  ] [INFO ]  Scheduler started
 2022-08-14 12:52:01,818 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
 2022-08-14 12:52:02,450 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 13:19:31,408 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 13:19:31,412 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 13:53:45,975 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 13:53:45,979 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 13:53:46,600 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 14:54:36,135 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 14:54:36,138 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 14:54:36,762 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 14:56:22,509 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 14:56:22,512 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 14:56:23,085 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:07:47,540 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:07:47,543 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 15:07:48,223 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:07:51,905 [MainThread  ] [ERROR]  Error at MyMainClass: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 297, in schedule_campaign
+    "Campaign Scheduler", buttons=['OK', 'Cancel'], root=GUI, timeout=20)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pymsgbox\_native_win.py", line 117, in confirm
+    return pymsgbox._confirmTkinter(text, title, buttons, root, timeout)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pymsgbox\__init__.py", line 135, in _confirmTkinter
+    timeout=timeout,
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pymsgbox\__init__.py", line 201, in _buttonbox
+    root.withdraw()
+AttributeError: 'MyGui' object has no attribute 'withdraw'
+
+2022-08-14 15:08:38,332 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:08:38,336 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 15:08:38,909 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:08:42,387 [MainThread  ] [ERROR]  Error at MyMainClass: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 297, in schedule_campaign
+    "Campaign Scheduler", buttons=['OK', 'Cancel'], root=app, timeout=20)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pymsgbox\_native_win.py", line 117, in confirm
+    return pymsgbox._confirmTkinter(text, title, buttons, root, timeout)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pymsgbox\__init__.py", line 135, in _confirmTkinter
+    timeout=timeout,
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pymsgbox\__init__.py", line 201, in _buttonbox
+    root.withdraw()
+AttributeError: 'QApplication' object has no attribute 'withdraw'
+
+2022-08-14 15:08:58,650 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:08:58,653 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 15:08:59,217 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:09:05,613 [MainThread  ] [ERROR]  Error at MyMainClass: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 297, in schedule_campaign
+    "Campaign Scheduler", buttons=['OK', 'Cancel'], root=myMC, timeout=20)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pymsgbox\_native_win.py", line 117, in confirm
+    return pymsgbox._confirmTkinter(text, title, buttons, root, timeout)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pymsgbox\__init__.py", line 135, in _confirmTkinter
+    timeout=timeout,
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pymsgbox\__init__.py", line 201, in _buttonbox
+    root.withdraw()
+AttributeError: 'MyMainClass' object has no attribute 'withdraw'
+
+2022-08-14 15:09:08,316 [MainThread  ] [ERROR]  Error at MyMainClass: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 297, in schedule_campaign
+    "Campaign Scheduler", buttons=['OK', 'Cancel'], root=myMC, timeout=20)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pymsgbox\_native_win.py", line 117, in confirm
+    return pymsgbox._confirmTkinter(text, title, buttons, root, timeout)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pymsgbox\__init__.py", line 135, in _confirmTkinter
+    timeout=timeout,
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pymsgbox\__init__.py", line 201, in _buttonbox
+    root.withdraw()
+AttributeError: 'MyMainClass' object has no attribute 'withdraw'
+
+2022-08-14 15:09:09,185 [MainThread  ] [ERROR]  Error at MyMainClass: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 297, in schedule_campaign
+    "Campaign Scheduler", buttons=['OK', 'Cancel'], root=myMC, timeout=20)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pymsgbox\_native_win.py", line 117, in confirm
+    return pymsgbox._confirmTkinter(text, title, buttons, root, timeout)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pymsgbox\__init__.py", line 135, in _confirmTkinter
+    timeout=timeout,
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pymsgbox\__init__.py", line 201, in _buttonbox
+    root.withdraw()
+AttributeError: 'MyMainClass' object has no attribute 'withdraw'
+
+2022-08-14 15:09:09,363 [MainThread  ] [ERROR]  Error at MyMainClass: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 297, in schedule_campaign
+    "Campaign Scheduler", buttons=['OK', 'Cancel'], root=myMC, timeout=20)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pymsgbox\_native_win.py", line 117, in confirm
+    return pymsgbox._confirmTkinter(text, title, buttons, root, timeout)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pymsgbox\__init__.py", line 135, in _confirmTkinter
+    timeout=timeout,
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pymsgbox\__init__.py", line 201, in _buttonbox
+    root.withdraw()
+AttributeError: 'MyMainClass' object has no attribute 'withdraw'
+
+2022-08-14 15:09:42,572 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:09:42,575 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 15:09:43,148 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:09:46,317 [MainThread  ] [ERROR]  Error at MyMainClass: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 297, in schedule_campaign
+    "Campaign Scheduler", buttons=['OK', 'Cancel'], root=mainWindow, timeout=20)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pymsgbox\_native_win.py", line 117, in confirm
+    return pymsgbox._confirmTkinter(text, title, buttons, root, timeout)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pymsgbox\__init__.py", line 135, in _confirmTkinter
+    timeout=timeout,
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pymsgbox\__init__.py", line 201, in _buttonbox
+    root.withdraw()
+AttributeError: 'MainWindow' object has no attribute 'withdraw'
+
+2022-08-14 15:12:52,026 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:12:52,030 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 15:12:52,632 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:13:56,095 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:13:56,098 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 15:13:56,675 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:17:41,453 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:17:41,458 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 15:17:42,033 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:18:20,162 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:18:20,168 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 15:18:20,762 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:18:44,440 [Thread-3    ] [INFO ]  config updated
+2022-08-14 15:23:07,036 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:23:07,039 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 15:24:44,906 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:24:44,909 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 15:24:45,506 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:27:57,805 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:27:57,809 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 15:27:58,386 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:28:27,676 [MainThread  ] [ERROR]  Error at MyMainClass: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 301, in schedule_campaign
+    print(GUI.dateTimeEdit_campaign_scheduler.dateTime(datetime.d))
+AttributeError: module 'datetime' has no attribute 'd'
+
+2022-08-14 15:28:53,879 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 15:28:53,882 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 15:28:54,474 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 16:20:31,937 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 16:20:31,941 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 16:20:33,541 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 16:31:20,242 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 16:31:20,245 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 16:31:20,870 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 16:32:03,291 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 16:32:03,294 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 16:32:03,875 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 16:33:01,580 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 16:33:01,585 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 16:33:02,255 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 16:33:21,155 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 16:33:21,159 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 16:33:21,738 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 16:33:50,871 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 16:33:50,874 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 16:33:51,502 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 16:59:24,404 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 16:59:24,407 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 16:59:24,991 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:22:25,812 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:22:25,816 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 17:22:26,431 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:22:33,233 [MainThread  ] [INFO ]  config updated
+2022-08-14 17:22:33,444 [MainThread  ] [INFO ]  Added job "scheduled_campaign" to job store "default"
+2022-08-14 17:22:33,445 [APScheduler ] [INFO ]  Removed job 632b0a94-2a64-4d6d-98ab-c2ea36bf1af3
+2022-08-14 17:24:19,296 [MainThread  ] [INFO ]  config updated
+2022-08-14 17:24:19,297 [MainThread  ] [INFO ]  Added job "scheduled_campaign" to job store "default"
+2022-08-14 17:25:00,000 [ThreadPoolEx] [INFO ]  Starting MyMainClass.run_scheduled_campaign id: cedb7b03-bf8b-407a-80f5-e1f171c92bab
+2022-08-14 17:25:00,001 [APScheduler ] [INFO ]  Removed job cedb7b03-bf8b-407a-80f5-e1f171c92bab
+2022-08-14 17:25:00,001 [ThreadPoolEx] [INFO ]  Completing MyMainClass.run_scheduled_campaign id: cedb7b03-bf8b-407a-80f5-e1f171c92bab
+2022-08-14 17:28:21,022 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:28:21,027 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 17:28:21,630 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:29:16,550 [MainThread  ] [INFO ]  config updated
+2022-08-14 17:29:16,726 [MainThread  ] [ERROR]  Error at MyMainClass: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 314, in schedule_campaign
+    name="scheduled_campaign", next_run_time=scheduled_time)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\schedulers\base.py", line 447, in add_job
+    self._real_add_job(job, jobstore, replace_existing)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\schedulers\base.py", line 871, in _real_add_job
+    store.add_job(job)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\jobstores\sqlalchemy.py", line 95, in add_job
+    'job_state': pickle.dumps(job.__getstate__(), self.pickle_protocol)
+TypeError: can't pickle _thread.RLock objects
+
+2022-08-14 17:29:22,215 [MainThread  ] [INFO ]  config updated
+2022-08-14 17:29:22,216 [MainThread  ] [ERROR]  Error at MyMainClass: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 314, in schedule_campaign
+    name="scheduled_campaign", next_run_time=scheduled_time)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\schedulers\base.py", line 447, in add_job
+    self._real_add_job(job, jobstore, replace_existing)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\schedulers\base.py", line 871, in _real_add_job
+    store.add_job(job)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\jobstores\sqlalchemy.py", line 95, in add_job
+    'job_state': pickle.dumps(job.__getstate__(), self.pickle_protocol)
+TypeError: can't pickle _thread.RLock objects
+
+2022-08-14 17:29:27,381 [MainThread  ] [INFO ]  config updated
+2022-08-14 17:29:27,383 [MainThread  ] [ERROR]  Error at MyMainClass: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 314, in schedule_campaign
+    name="scheduled_campaign", next_run_time=scheduled_time)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\schedulers\base.py", line 447, in add_job
+    self._real_add_job(job, jobstore, replace_existing)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\schedulers\base.py", line 871, in _real_add_job
+    store.add_job(job)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\jobstores\sqlalchemy.py", line 95, in add_job
+    'job_state': pickle.dumps(job.__getstate__(), self.pickle_protocol)
+TypeError: can't pickle _thread.RLock objects
+
+2022-08-14 17:29:32,467 [MainThread  ] [INFO ]  config updated
+2022-08-14 17:29:32,469 [MainThread  ] [ERROR]  Error at MyMainClass: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 314, in schedule_campaign
+    name="scheduled_campaign", next_run_time=scheduled_time)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\schedulers\base.py", line 447, in add_job
+    self._real_add_job(job, jobstore, replace_existing)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\schedulers\base.py", line 871, in _real_add_job
+    store.add_job(job)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\jobstores\sqlalchemy.py", line 95, in add_job
+    'job_state': pickle.dumps(job.__getstate__(), self.pickle_protocol)
+TypeError: can't pickle _thread.RLock objects
+
+2022-08-14 17:29:37,345 [MainThread  ] [INFO ]  config updated
+2022-08-14 17:29:37,346 [MainThread  ] [ERROR]  Error at MyMainClass: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 314, in schedule_campaign
+    name="scheduled_campaign", next_run_time=scheduled_time)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\schedulers\base.py", line 447, in add_job
+    self._real_add_job(job, jobstore, replace_existing)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\schedulers\base.py", line 871, in _real_add_job
+    store.add_job(job)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\jobstores\sqlalchemy.py", line 95, in add_job
+    'job_state': pickle.dumps(job.__getstate__(), self.pickle_protocol)
+TypeError: can't pickle _thread.RLock objects
+
+2022-08-14 17:29:42,795 [MainThread  ] [INFO ]  config updated
+2022-08-14 17:29:42,796 [MainThread  ] [ERROR]  Error at MyMainClass: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 314, in schedule_campaign
+    name="scheduled_campaign", next_run_time=scheduled_time)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\schedulers\base.py", line 447, in add_job
+    self._real_add_job(job, jobstore, replace_existing)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\schedulers\base.py", line 871, in _real_add_job
+    store.add_job(job)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\jobstores\sqlalchemy.py", line 95, in add_job
+    'job_state': pickle.dumps(job.__getstate__(), self.pickle_protocol)
+TypeError: can't pickle _thread.RLock objects
+
+2022-08-14 17:29:49,562 [MainThread  ] [INFO ]  config updated
+2022-08-14 17:29:49,563 [MainThread  ] [ERROR]  Error at MyMainClass: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 314, in schedule_campaign
+    name="scheduled_campaign", next_run_time=scheduled_time)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\schedulers\base.py", line 447, in add_job
+    self._real_add_job(job, jobstore, replace_existing)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\schedulers\base.py", line 871, in _real_add_job
+    store.add_job(job)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\jobstores\sqlalchemy.py", line 95, in add_job
+    'job_state': pickle.dumps(job.__getstate__(), self.pickle_protocol)
+TypeError: can't pickle _thread.RLock objects
+
+2022-08-14 17:33:12,715 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:33:12,721 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 17:33:13,324 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:33:40,816 [MainThread  ] [INFO ]  config updated
+2022-08-14 17:33:40,888 [MainThread  ] [ERROR]  Error at MyMainClass: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 314, in schedule_campaign
+    name="scheduled_campaign", next_run_time=scheduled_time)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\schedulers\base.py", line 447, in add_job
+    self._real_add_job(job, jobstore, replace_existing)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\schedulers\base.py", line 871, in _real_add_job
+    store.add_job(job)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\jobstores\sqlalchemy.py", line 95, in add_job
+    'job_state': pickle.dumps(job.__getstate__(), self.pickle_protocol)
+TypeError: can't pickle _thread.RLock objects
+
+2022-08-14 17:34:39,371 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-14 17:34:42,456 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:34:42,459 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 17:34:43,041 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:34:58,127 [MainThread  ] [INFO ]  config updated
+2022-08-14 17:34:58,200 [MainThread  ] [INFO ]  Added job "scheduled_campaign" to job store "default"
+2022-08-14 17:36:00,005 [ThreadPoolEx] [INFO ]  Starting MyMainClass.run_scheduled_campaign id: 335dc8d9-ae78-483d-a9e5-09fc3ba2e883
+2022-08-14 17:36:00,006 [APScheduler ] [INFO ]  Removed job 335dc8d9-ae78-483d-a9e5-09fc3ba2e883
+2022-08-14 17:36:00,006 [ThreadPoolEx] [INFO ]  Completing MyMainClass.run_scheduled_campaign id: 335dc8d9-ae78-483d-a9e5-09fc3ba2e883
+2022-08-14 17:36:18,071 [MainThread  ] [INFO ]  config updated
+2022-08-14 17:36:18,072 [MainThread  ] [INFO ]  Added job "scheduled_campaign" to job store "default"
+2022-08-14 17:36:23,255 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-14 17:36:27,190 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:36:27,193 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 17:36:27,781 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:37:40,801 [MainThread  ] [INFO ]  config updated
+2022-08-14 17:37:40,868 [MainThread  ] [INFO ]  Added job "scheduled_campaign" to job store "default"
+2022-08-14 17:37:44,366 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-14 17:39:10,718 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:39:10,721 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 17:39:11,299 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:39:27,119 [MainThread  ] [INFO ]  config updated
+2022-08-14 17:39:27,197 [MainThread  ] [INFO ]  Added job "scheduled_campaign" to job store "default"
+2022-08-14 17:39:31,040 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-14 17:41:47,592 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:41:47,595 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 17:41:48,168 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:42:07,735 [MainThread  ] [INFO ]  config updated
+2022-08-14 17:42:07,806 [MainThread  ] [INFO ]  Added job "scheduled_campaign" to job store "default"
+2022-08-14 17:42:14,797 [MainThread  ] [INFO ]  config updated
+2022-08-14 17:42:14,798 [MainThread  ] [INFO ]  Added job "scheduled_campaign" to job store "default"
+2022-08-14 17:42:18,148 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-14 17:42:23,339 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:42:23,342 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 17:42:23,918 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:47:21,247 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-14 17:47:26,800 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:47:26,806 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 17:47:27,397 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:47:37,621 [MainThread  ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 17:47:37,847 [MainThread  ] [INFO ]  Added job "scheduled_campaign" to job store "default"
+2022-08-14 17:47:58,747 [MainThread  ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 17:48:43,046 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:48:43,052 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 17:48:43,704 [APScheduler ] [INFO ]  Scheduler started
+2022-08-14 17:49:36,142 [APScheduler ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 17:51:48,209 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:51:48,214 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 17:51:48,807 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:54:02,042 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:54:02,047 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 17:54:02,646 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:54:18,107 [Thread-3    ] [ERROR]  Error at MyMainClass: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 321, in schedule_campaign
+    Thread(target=update_config_json, daemon=True, kwargs={"alternative_name": config_filename}.start())
+AttributeError: 'dict' object has no attribute 'start'
+
+2022-08-14 17:54:25,072 [Thread-4    ] [ERROR]  Error at MyMainClass: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 321, in schedule_campaign
+    Thread(target=update_config_json, daemon=True, kwargs={"alternative_name": config_filename}.start())
+AttributeError: 'dict' object has no attribute 'start'
+
+2022-08-14 17:54:30,292 [Thread-5    ] [ERROR]  Error at MyMainClass: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 321, in schedule_campaign
+    Thread(target=update_config_json, daemon=True, kwargs={"alternative_name": config_filename}.start())
+AttributeError: 'dict' object has no attribute 'start'
+
+2022-08-14 17:54:35,073 [Thread-6    ] [ERROR]  Error at MyMainClass: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 321, in schedule_campaign
+    Thread(target=update_config_json, daemon=True, kwargs={"alternative_name": config_filename}.start())
+AttributeError: 'dict' object has no attribute 'start'
+
+2022-08-14 17:56:00,325 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 17:56:00,331 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 17:56:01,261 [APScheduler ] [INFO ]  Scheduler started
+2022-08-14 17:56:22,525 [Thread-4    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 17:56:55,480 [Thread-6    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 18:01:06,853 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 18:01:06,859 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 18:01:07,447 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 18:01:28,874 [Thread-4    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 18:01:29,104 [Thread-3    ] [INFO ]  Added job "scheduled_campaign" to job store "default"
+2022-08-14 20:23:41,188 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 20:23:41,224 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 20:23:45,340 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 20:24:06,162 [Thread-4    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 20:26:40,142 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 20:26:40,147 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 20:26:40,749 [APScheduler ] [INFO ]  Scheduler started
+2022-08-14 20:26:47,455 [Thread-3    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 20:30:05,840 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 20:30:05,843 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 20:30:06,431 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 20:30:13,850 [Thread-4    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 20:30:13,943 [Thread-3    ] [INFO ]  Added job "8a2cd20c-b2a5-425c-9fcc-03e76f00bd1f" to job store "default"
+2022-08-14 20:30:13,944 [Thread-3    ] [INFO ]  Scheduled job id: 8a2cd20c-b2a5-425c-9fcc-03e76f00bd1f at 2022-08-14 00:00:00
+2022-08-14 20:30:13,944 [APScheduler ] [INFO ]  Removed job 8a2cd20c-b2a5-425c-9fcc-03e76f00bd1f
+2022-08-14 20:30:31,911 [Thread-5    ] [INFO ]  Added job "547965b0-eaea-4db7-a870-e0310e88e68c" to job store "default"
+2022-08-14 20:30:31,926 [Thread-5    ] [INFO ]  Scheduled job id: 547965b0-eaea-4db7-a870-e0310e88e68c at 2022-10-14 00:00:00
+2022-08-14 20:30:32,016 [Thread-6    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 20:31:56,661 [Thread-7    ] [INFO ]  Added job "685b15f2-fc47-49aa-9585-b2e1143c824c" to job store "default"
+2022-08-14 20:31:56,663 [Thread-8    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 20:31:56,677 [Thread-7    ] [INFO ]  Scheduled job id: 685b15f2-fc47-49aa-9585-b2e1143c824c at 2022-12-14 00:00:00
+2022-08-14 20:39:49,533 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-14 21:23:53,156 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 21:23:53,160 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 21:23:53,773 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 21:23:59,351 [Thread-3    ] [INFO ]  config updated
+2022-08-14 21:24:09,629 [Thread-6    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:24:09,712 [Thread-5    ] [INFO ]  Added job "a37b9673-a42d-4300-9123-18660dc5f708" to job store "default"
+2022-08-14 21:24:09,713 [Thread-5    ] [INFO ]  Scheduled job id: a37b9673-a42d-4300-9123-18660dc5f708 at 2022-12-14 00:00:00
+2022-08-14 21:24:12,692 [Thread-7    ] [INFO ]  Added job "6a398978-cea1-40ef-ae8d-161e80b309b5" to job store "default"
+2022-08-14 21:24:12,694 [Thread-7    ] [INFO ]  Scheduled job id: 6a398978-cea1-40ef-ae8d-161e80b309b5 at 2022-12-14 00:00:00
+2022-08-14 21:24:12,694 [Thread-8    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:25:13,156 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-14 21:35:11,697 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 21:35:11,700 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 21:35:12,286 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 21:35:29,374 [Thread-4    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:35:29,460 [Thread-3    ] [INFO ]  Added job "2025441a-c945-4b08-ba82-bdea16070fcd" to job store "default"
+2022-08-14 21:35:29,461 [Thread-3    ] [INFO ]  Scheduled job id: 2025441a-c945-4b08-ba82-bdea16070fcd at 2022-08-14 00:00:00
+2022-08-14 21:35:29,462 [APScheduler ] [INFO ]  Removed job 2025441a-c945-4b08-ba82-bdea16070fcd
+2022-08-14 21:35:32,850 [Thread-5    ] [INFO ]  Added job "e930b8e1-1c5d-4d08-948c-61084aeb8865" to job store "default"
+2022-08-14 21:35:32,851 [Thread-5    ] [INFO ]  Scheduled job id: e930b8e1-1c5d-4d08-948c-61084aeb8865 at 2022-08-14 00:00:00
+2022-08-14 21:35:32,852 [Thread-6    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:35:32,857 [APScheduler ] [INFO ]  Removed job e930b8e1-1c5d-4d08-948c-61084aeb8865
+2022-08-14 21:35:41,662 [Thread-7    ] [INFO ]  Added job "b4c8348a-7c92-403e-9509-84906a6263b6" to job store "default"
+2022-08-14 21:35:41,663 [Thread-8    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:35:41,668 [Thread-7    ] [INFO ]  Scheduled job id: b4c8348a-7c92-403e-9509-84906a6263b6 at 2022-08-14 00:00:00
+2022-08-14 21:35:41,673 [APScheduler ] [INFO ]  Removed job b4c8348a-7c92-403e-9509-84906a6263b6
+2022-08-14 21:36:34,304 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-14 21:40:57,828 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 21:40:57,831 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 21:40:58,417 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 21:41:08,502 [Thread-4    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:41:08,585 [Thread-3    ] [INFO ]  Added job "8f52834b-8d7f-4070-81d7-e6c65eae5dbb" to job store "default"
+2022-08-14 21:41:08,587 [Thread-3    ] [INFO ]  Scheduled job id: 8f52834b-8d7f-4070-81d7-e6c65eae5dbb at 2022-08-18 00:00:00
+2022-08-14 21:41:09,752 [Thread-5    ] [INFO ]  Added job "06bbaaa5-9e58-450a-a32f-959468320c4c" to job store "default"
+2022-08-14 21:41:09,755 [Thread-6    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:41:09,764 [Thread-5    ] [INFO ]  Scheduled job id: 06bbaaa5-9e58-450a-a32f-959468320c4c at 2022-08-18 00:00:00
+2022-08-14 21:41:10,984 [Thread-7    ] [INFO ]  Added job "3a524c9d-77ae-4b47-94c8-b319ee0f2683" to job store "default"
+2022-08-14 21:41:10,985 [Thread-7    ] [INFO ]  Scheduled job id: 3a524c9d-77ae-4b47-94c8-b319ee0f2683 at 2022-08-18 00:00:00
+2022-08-14 21:41:10,986 [Thread-8    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:41:39,170 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-14 21:41:43,063 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 21:41:43,067 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 21:41:43,642 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 21:41:53,903 [Thread-4    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:41:53,983 [Thread-3    ] [INFO ]  Added job "9c9bd2e8-5a43-47a9-983f-83c1635ca6b1" to job store "default"
+2022-08-14 21:41:53,983 [Thread-3    ] [INFO ]  Scheduled job id: 9c9bd2e8-5a43-47a9-983f-83c1635ca6b1 at 2022-08-17 00:00:00
+2022-08-14 21:41:56,205 [Thread-5    ] [INFO ]  Added job "2b2fb79b-d1b0-4b34-8efe-521acba4103e" to job store "default"
+2022-08-14 21:41:56,207 [Thread-6    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:41:56,207 [Thread-5    ] [INFO ]  Scheduled job id: 2b2fb79b-d1b0-4b34-8efe-521acba4103e at 2022-08-17 00:00:00
+2022-08-14 21:41:57,354 [Thread-7    ] [INFO ]  Added job "17baf35f-3a3c-45e6-b855-b3a90d08adb3" to job store "default"
+2022-08-14 21:41:57,355 [Thread-7    ] [INFO ]  Scheduled job id: 17baf35f-3a3c-45e6-b855-b3a90d08adb3 at 2022-08-17 00:00:00
+2022-08-14 21:41:57,356 [Thread-8    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:41:58,466 [Thread-9    ] [INFO ]  Added job "bdce707e-d76c-4633-a05f-47f9e423105c" to job store "default"
+2022-08-14 21:41:58,468 [Thread-10   ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:41:58,468 [Thread-9    ] [INFO ]  Scheduled job id: bdce707e-d76c-4633-a05f-47f9e423105c at 2022-08-17 00:00:00
+2022-08-14 21:42:00,002 [Thread-11   ] [INFO ]  Added job "d38ea8fb-94c4-43eb-a2c5-a2f266496a26" to job store "default"
+2022-08-14 21:42:00,003 [Thread-12   ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:42:00,006 [Thread-11   ] [INFO ]  Scheduled job id: d38ea8fb-94c4-43eb-a2c5-a2f266496a26 at 2022-08-17 00:00:00
+2022-08-14 21:42:02,288 [Thread-13   ] [INFO ]  Added job "7294c748-594c-4125-92a0-b27f4e2d6079" to job store "default"
+2022-08-14 21:42:02,289 [Thread-14   ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:42:02,295 [Thread-13   ] [INFO ]  Scheduled job id: 7294c748-594c-4125-92a0-b27f4e2d6079 at 2022-08-17 00:00:00
+2022-08-14 21:42:03,652 [Thread-15   ] [INFO ]  Added job "6d6f0647-e913-4df1-8225-839656a8c320" to job store "default"
+2022-08-14 21:42:03,653 [Thread-16   ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:42:03,655 [Thread-15   ] [INFO ]  Scheduled job id: 6d6f0647-e913-4df1-8225-839656a8c320 at 2022-08-17 00:00:00
+2022-08-14 21:42:05,188 [Thread-17   ] [INFO ]  Added job "5429b573-e2f0-4c15-b93d-d0330aaa9395" to job store "default"
+2022-08-14 21:42:05,190 [Thread-17   ] [INFO ]  Scheduled job id: 5429b573-e2f0-4c15-b93d-d0330aaa9395 at 2022-08-17 00:00:00
+2022-08-14 21:42:05,191 [Thread-18   ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:42:17,077 [Thread-19   ] [INFO ]  Removing job None from list
+2022-08-14 21:42:17,078 [Thread-19   ] [ERROR]  Error at remove_schedule_campaign: 'No job by the id of None was found'
+2022-08-14 21:42:32,007 [Thread-20   ] [INFO ]  Removing job None from list
+2022-08-14 21:42:32,008 [Thread-20   ] [ERROR]  Error at remove_schedule_campaign: 'No job by the id of None was found'
+2022-08-14 21:43:33,966 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-14 21:43:36,979 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 21:43:36,983 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 21:43:37,567 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 21:43:46,088 [Thread-4    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:43:46,153 [Thread-3    ] [INFO ]  Added job "744ffbed-f69c-4a95-bb8b-7c8e1be315f5" to job store "default"
+2022-08-14 21:43:46,154 [Thread-3    ] [INFO ]  Scheduled job id: 744ffbed-f69c-4a95-bb8b-7c8e1be315f5 at 2022-08-14 00:00:00
+2022-08-14 21:43:46,156 [APScheduler ] [INFO ]  Removed job 744ffbed-f69c-4a95-bb8b-7c8e1be315f5
+2022-08-14 21:43:48,141 [Thread-5    ] [INFO ]  Added job "b54e9cac-3532-42dc-833c-f6549e8f39cf" to job store "default"
+2022-08-14 21:43:48,144 [Thread-6    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:43:48,145 [Thread-5    ] [INFO ]  Scheduled job id: b54e9cac-3532-42dc-833c-f6549e8f39cf at 2022-08-14 00:00:00
+2022-08-14 21:43:48,153 [APScheduler ] [INFO ]  Removed job b54e9cac-3532-42dc-833c-f6549e8f39cf
+2022-08-14 21:43:50,375 [Thread-7    ] [INFO ]  Removing job 2022-08-14 00:00:00+06:00 - b54e9cac-3532-42dc-833c-f6549e8f39cf from list
+2022-08-14 21:43:50,376 [Thread-7    ] [ERROR]  Error at remove_schedule_campaign: 'No job by the id of 2022-08-14 00:00:00+06:00 - b54e9cac-3532-42dc-833c-f6549e8f39cf was found'
+2022-08-14 21:48:59,489 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-14 21:49:04,624 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 21:49:04,628 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 21:49:05,229 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 21:49:10,174 [Thread-4    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:49:10,252 [Thread-3    ] [INFO ]  Added job "f0f4fa3c-3260-449e-8d50-ef57816b6cc2" to job store "default"
+2022-08-14 21:49:10,253 [Thread-3    ] [INFO ]  Scheduled job id: f0f4fa3c-3260-449e-8d50-ef57816b6cc2 at 2022-08-14 00:00:00
+2022-08-14 21:49:10,254 [APScheduler ] [INFO ]  Removed job f0f4fa3c-3260-449e-8d50-ef57816b6cc2
+2022-08-14 21:49:11,519 [Thread-5    ] [INFO ]  Added job "992a63f0-b38f-4cb8-80a9-1ed946b26334" to job store "default"
+2022-08-14 21:49:11,520 [Thread-5    ] [INFO ]  Scheduled job id: 992a63f0-b38f-4cb8-80a9-1ed946b26334 at 2022-08-14 00:00:00
+2022-08-14 21:49:11,521 [Thread-6    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:49:11,524 [APScheduler ] [INFO ]  Removed job 992a63f0-b38f-4cb8-80a9-1ed946b26334
+2022-08-14 21:49:33,803 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-14 21:49:40,864 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 21:49:40,867 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 21:49:41,447 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 21:49:45,421 [Thread-4    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:49:45,506 [Thread-3    ] [INFO ]  Added job "0d774aed-55ff-43bd-a0a4-2b6b8326dc83" to job store "default"
+2022-08-14 21:49:45,508 [Thread-3    ] [INFO ]  Scheduled job id: 0d774aed-55ff-43bd-a0a4-2b6b8326dc83 at 2022-08-14 00:00:00
+2022-08-14 21:49:45,510 [APScheduler ] [INFO ]  Removed job 0d774aed-55ff-43bd-a0a4-2b6b8326dc83
+2022-08-14 21:49:46,466 [Thread-5    ] [INFO ]  Added job "21c62917-31b2-43cd-a710-90b43092547c" to job store "default"
+2022-08-14 21:49:46,468 [Thread-6    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:49:46,478 [Thread-5    ] [INFO ]  Scheduled job id: 21c62917-31b2-43cd-a710-90b43092547c at 2022-08-14 00:00:00
+2022-08-14 21:49:46,481 [APScheduler ] [INFO ]  Removed job 21c62917-31b2-43cd-a710-90b43092547c
+2022-08-14 21:49:47,161 [Thread-7    ] [ERROR]  Error at remove_schedule_campaign: 'str' object has no attribute 'to_string'
+2022-08-14 21:50:00,969 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-14 21:50:07,220 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 21:50:07,224 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 21:50:07,816 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 21:50:11,450 [Thread-4    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:50:11,541 [Thread-3    ] [INFO ]  Added job "aff4b873-bf40-47dc-9f96-09cdedb392b9" to job store "default"
+2022-08-14 21:50:11,545 [Thread-3    ] [INFO ]  Scheduled job id: aff4b873-bf40-47dc-9f96-09cdedb392b9 at 2022-08-14 00:00:00
+2022-08-14 21:50:11,553 [APScheduler ] [INFO ]  Removed job aff4b873-bf40-47dc-9f96-09cdedb392b9
+2022-08-14 21:51:34,857 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-14 21:51:37,916 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 21:51:37,919 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 21:51:38,512 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 21:54:20,059 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-14 21:54:23,510 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 21:54:23,514 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 21:54:24,104 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 21:54:29,192 [Thread-4    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:54:29,290 [Thread-3    ] [INFO ]  Added job "18e28ef5-363a-4ee0-bee9-f59dacd5a7f7" to job store "default"
+2022-08-14 21:54:29,291 [Thread-3    ] [INFO ]  Scheduled job id: 18e28ef5-363a-4ee0-bee9-f59dacd5a7f7 at 2022-08-14 00:00:00
+2022-08-14 21:54:29,292 [APScheduler ] [INFO ]  Removed job 18e28ef5-363a-4ee0-bee9-f59dacd5a7f7
+2022-08-14 21:54:30,407 [Thread-5    ] [INFO ]  Added job "d78aae1b-e9bd-4050-b105-cce7ae27f73e" to job store "default"
+2022-08-14 21:54:30,408 [Thread-6    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:54:30,409 [Thread-5    ] [INFO ]  Scheduled job id: d78aae1b-e9bd-4050-b105-cce7ae27f73e at 2022-08-14 00:00:00
+2022-08-14 21:54:30,415 [APScheduler ] [INFO ]  Removed job d78aae1b-e9bd-4050-b105-cce7ae27f73e
+2022-08-14 21:54:31,168 [Thread-7    ] [INFO ]  Removing job d78aae1b-e9bd-4050-b105-cce7ae27f73e from list
+2022-08-14 21:54:31,169 [Thread-7    ] [ERROR]  Error at remove_schedule_campaign: 'No job by the id of d78aae1b-e9bd-4050-b105-cce7ae27f73e was found'
+2022-08-14 21:54:42,973 [Thread-8    ] [INFO ]  Added job "93d278a1-acb1-4192-a072-50011035bfc8" to job store "default"
+2022-08-14 21:54:42,976 [Thread-8    ] [INFO ]  Scheduled job id: 93d278a1-acb1-4192-a072-50011035bfc8 at 2022-08-16 00:00:00
+2022-08-14 21:54:42,976 [Thread-9    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 21:54:44,581 [Thread-10   ] [INFO ]  Removing job 93d278a1-acb1-4192-a072-50011035bfc8 from list
+2022-08-14 21:54:44,583 [Thread-10   ] [INFO ]  Removed job 93d278a1-acb1-4192-a072-50011035bfc8
+2022-08-14 21:54:44,583 [Thread-10   ] [INFO ]  Removed successfully job 93d278a1-acb1-4192-a072-50011035bfc8 from list
+2022-08-14 21:54:55,487 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-14 22:15:40,225 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 22:15:40,229 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 22:15:40,832 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 22:16:08,955 [Thread-4    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 22:16:09,033 [Thread-3    ] [INFO ]  Added job "97de9511-7ec8-4247-b609-4d1ca25f3518" to job store "default"
+2022-08-14 22:16:09,035 [Thread-3    ] [INFO ]  Scheduled job id: 97de9511-7ec8-4247-b609-4d1ca25f3518 at 2022-08-14 22:18:00
+2022-08-14 22:18:00,001 [ThreadPoolEx] [INFO ]  Starting main.run_scheduled_campaign id: 97de9511-7ec8-4247-b609-4d1ca25f3518
+2022-08-14 22:18:00,001 [APScheduler ] [INFO ]  Removed job 97de9511-7ec8-4247-b609-4d1ca25f3518
+2022-08-14 22:18:00,002 [ThreadPoolEx] [INFO ]  Completing main.run_scheduled_campaign id: 97de9511-7ec8-4247-b609-4d1ca25f3518
+2022-08-14 23:11:00,553 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-14 23:17:39,463 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 23:17:39,466 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 23:17:40,069 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 23:17:56,104 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-14 23:37:35,719 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 23:37:35,722 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 23:37:36,313 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 23:38:39,540 [Thread-4    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 23:38:39,617 [Thread-3    ] [INFO ]  Added job "b37c6f3a-b2e7-485d-9afd-5d3c43a82ffb" to job store "default"
+2022-08-14 23:38:39,618 [Thread-3    ] [INFO ]  Scheduled job id: b37c6f3a-b2e7-485d-9afd-5d3c43a82ffb at 2022-08-14 23:40:00
+2022-08-14 23:40:00,011 [ThreadPoolEx] [INFO ]  Starting MyMainClass.run_scheduled_campaign id: b37c6f3a-b2e7-485d-9afd-5d3c43a82ffb
+2022-08-14 23:40:00,011 [APScheduler ] [INFO ]  Removed job b37c6f3a-b2e7-485d-9afd-5d3c43a82ffb
+2022-08-14 23:40:00,024 [Thread-5    ] [INFO ]  config updated
+2022-08-14 23:40:00,028 [Thread-6    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group B
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 37
+ Len of Targets: 2
+ Delay: 0 - 300
+ Campaign ID: 05876b77-807b-4646-970e-9e813ae99158
+ Add Custom Hostname: True
+2022-08-14 23:40:00,028 [ThreadPoolEx] [INFO ]  Completing MyMainClass.run_scheduled_campaign id: b37c6f3a-b2e7-485d-9afd-5d3c43a82ffb
+2022-08-14 23:40:00,034 [MarkTargetAs] [INFO ]  Starting MarkTargetSentAirtable...
+2022-08-14 23:40:00,500 [Thread-6    ] [ERROR]  
+Starting Thread : Name - Teresasimmonsy3@gmail.com
+Targets Count - 1
+2022-08-14 23:40:00,503 [Thread-6    ] [INFO ]  Length - 1 Teresasimmonsy3@gmail.com
+2022-08-14 23:40:00,506 [Thread-6    ] [ERROR]  
+Starting Thread : Name - Oliviadouglasy2@gmail.com
+Targets Count - 1
+2022-08-14 23:40:00,510 [Thread-6    ] [INFO ]  Length - 1 Oliviadouglasy2@gmail.com
+2022-08-14 23:40:40,910 [Oliviadougla] [ERROR]  Error at Sending - Oliviadouglasy2@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 809, in connect
+    negotiate(self, dest_addr, dest_port)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 444, in _negotiate_SOCKS5
+    self, CONNECT, dest_addr)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 533, in _SOCKS5_request
+    raise SOCKS5Error("{:#04x}: {}".format(status, error))
+socks.SOCKS5Error: 0x05: Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 378, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 314, in login
+    proxy_user=self.proxy_user, proxy_pass=self.proxy_pass)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 162, in connect_proxy
+    s.connect((host, port))
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 47, in wrapper
+    return function(*args, **kwargs)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 814, in connect
+    raise GeneralProxyError("Socket error", error)
+socks.GeneralProxyError: Socket error: 0x05: Connection refused
+
+2022-08-14 23:44:05,061 [Teresasimmon] [ERROR]  Error at Sending - Teresasimmonsy3@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 809, in connect
+    negotiate(self, dest_addr, dest_port)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 444, in _negotiate_SOCKS5
+    self, CONNECT, dest_addr)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 533, in _SOCKS5_request
+    raise SOCKS5Error("{:#04x}: {}".format(status, error))
+socks.SOCKS5Error: 0x05: Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 378, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 314, in login
+    proxy_user=self.proxy_user, proxy_pass=self.proxy_pass)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 162, in connect_proxy
+    s.connect((host, port))
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 47, in wrapper
+    return function(*args, **kwargs)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 814, in connect
+    raise GeneralProxyError("Socket error", error)
+socks.GeneralProxyError: Socket error: 0x05: Connection refused
+
+2022-08-14 23:44:05,899 [Thread-6    ] [ERROR]  
+Starting Thread : Name - Christinaoliveru3@gmail.com
+Targets Count - 1
+2022-08-14 23:44:05,901 [Thread-6    ] [INFO ]  Length - 1 Christinaoliveru3@gmail.com
+2022-08-14 23:44:05,903 [Thread-6    ] [ERROR]  
+Starting Thread : Name - Christinaschneidery4@gmail.com
+Targets Count - 1
+2022-08-14 23:44:05,904 [Thread-6    ] [INFO ]  Length - 1 Christinaschneidery4@gmail.com
+2022-08-14 23:45:07,265 [Christinasch] [ERROR]  Error at Sending - Christinaschneidery4@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 809, in connect
+    negotiate(self, dest_addr, dest_port)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 444, in _negotiate_SOCKS5
+    self, CONNECT, dest_addr)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 533, in _SOCKS5_request
+    raise SOCKS5Error("{:#04x}: {}".format(status, error))
+socks.SOCKS5Error: 0x05: Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 378, in run
+    server = self.login()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 314, in login
+    proxy_user=self.proxy_user, proxy_pass=self.proxy_pass)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 162, in connect_proxy
+    s.connect((host, port))
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 47, in wrapper
+    return function(*args, **kwargs)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\socks.py", line 814, in connect
+    raise GeneralProxyError("Socket error", error)
+socks.GeneralProxyError: Socket error: 0x05: Connection refused
+
+2022-08-14 23:46:46,423 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-14 23:46:50,651 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 23:46:50,654 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 23:46:51,248 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 23:47:31,927 [Thread-4    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 23:47:32,007 [Thread-3    ] [INFO ]  Added job "2f8de1bb-6c5f-40aa-a5ba-0a45421283f7" to job store "default"
+2022-08-14 23:47:32,009 [Thread-3    ] [INFO ]  Scheduled job id: 2f8de1bb-6c5f-40aa-a5ba-0a45421283f7 at 2022-08-14 23:48:00
+2022-08-14 23:48:00,008 [ThreadPoolEx] [INFO ]  Starting MyMainClass.run_scheduled_campaign id: 2f8de1bb-6c5f-40aa-a5ba-0a45421283f7
+2022-08-14 23:48:00,008 [APScheduler ] [INFO ]  Removed job 2f8de1bb-6c5f-40aa-a5ba-0a45421283f7
+2022-08-14 23:48:00,014 [Thread-5    ] [INFO ]  config updated
+2022-08-14 23:48:00,017 [ThreadPoolEx] [INFO ]  Completing MyMainClass.run_scheduled_campaign id: 2f8de1bb-6c5f-40aa-a5ba-0a45421283f7
+2022-08-14 23:48:00,018 [Thread-6    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 9
+ Len of Targets: 2
+ Delay: 0 - 300
+ Campaign ID: fec20274-0165-4836-ba70-b4a5c3a1e901
+ Add Custom Hostname: True
+2022-08-14 23:48:00,023 [MarkTargetAs] [INFO ]  Starting MarkTargetSentAirtable...
+2022-08-14 23:48:00,032 [Thread-6    ] [ERROR]  
+Starting Thread : Name - rosenfeld461@gmail.com
+Targets Count - 1
+2022-08-14 23:48:00,034 [Thread-6    ] [INFO ]  Length - 1 rosenfeld461@gmail.com
+2022-08-14 23:48:00,036 [Thread-6    ] [ERROR]  
+Starting Thread : Name - jackiecliff487@gmail.com
+Targets Count - 1
+2022-08-14 23:48:00,039 [Thread-6    ] [INFO ]  Length - 1 jackiecliff487@gmail.com
+2022-08-14 23:48:23,340 [rosenfeld461] [INFO ]  Sent - rosenfeld461@gmail.com mdshahimranshovon@gmail.com
+2022-08-14 23:48:24,047 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-08-14 23:48:25,043 [MarkTargetAs] [INFO ]  formulas_normal MarkTargetSentAirtable...
+2022-08-14 23:50:22,981 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-14 23:50:29,237 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 23:50:29,241 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 23:50:29,844 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 23:50:46,180 [Thread-3    ] [INFO ]  config updated
+2022-08-14 23:51:09,975 [Thread-5    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 23:51:10,054 [Thread-4    ] [INFO ]  Added job "d8b5228e-51a5-48ad-88ea-1c5a1cc6cf8b" to job store "default"
+2022-08-14 23:51:10,055 [Thread-4    ] [INFO ]  Scheduled job id: d8b5228e-51a5-48ad-88ea-1c5a1cc6cf8b at 2022-08-14 23:52:00
+2022-08-14 23:51:13,781 [Thread-6    ] [INFO ]  Removing job d8b5228e-51a5-48ad-88ea-1c5a1cc6cf8b from list
+2022-08-14 23:51:13,782 [Thread-6    ] [INFO ]  Removed job d8b5228e-51a5-48ad-88ea-1c5a1cc6cf8b
+2022-08-14 23:51:13,783 [Thread-6    ] [INFO ]  Removed successfully job d8b5228e-51a5-48ad-88ea-1c5a1cc6cf8b from list
+2022-08-14 23:51:33,142 [Thread-7    ] [INFO ]  Added job "9f629fe6-5a28-4d7f-a019-bac4b35177fa" to job store "default"
+2022-08-14 23:51:33,143 [Thread-7    ] [INFO ]  Scheduled job id: 9f629fe6-5a28-4d7f-a019-bac4b35177fa at 2022-08-14 23:53:00
+2022-08-14 23:51:33,146 [Thread-8    ] [INFO ]  Scheduler Campaign config saved
+2022-08-14 23:53:00,003 [ThreadPoolEx] [INFO ]  Starting MyMainClass.run_scheduled_campaign id: 9f629fe6-5a28-4d7f-a019-bac4b35177fa
+2022-08-14 23:53:00,003 [APScheduler ] [INFO ]  Removed job 9f629fe6-5a28-4d7f-a019-bac4b35177fa
+2022-08-14 23:53:00,014 [Thread-9    ] [INFO ]  config updated
+2022-08-14 23:53:00,018 [Thread-10   ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 9
+ Len of Targets: 2
+ Delay: 0 - 10
+ Campaign ID: f124dbe9-6502-4f6f-ade7-f4a67f6c235b
+ Add Custom Hostname: True
+2022-08-14 23:53:00,018 [ThreadPoolEx] [INFO ]  Completing MyMainClass.run_scheduled_campaign id: 9f629fe6-5a28-4d7f-a019-bac4b35177fa
+2022-08-14 23:53:00,025 [MarkTargetAs] [INFO ]  Starting MarkTargetSentAirtable...
+2022-08-14 23:53:00,031 [Thread-10   ] [ERROR]  
+Starting Thread : Name - rosenfeld461@gmail.com
+Targets Count - 1
+2022-08-14 23:53:00,035 [Thread-10   ] [INFO ]  Length - 1 rosenfeld461@gmail.com
+2022-08-14 23:53:00,037 [Thread-10   ] [ERROR]  
+Starting Thread : Name - jackiecliff487@gmail.com
+Targets Count - 1
+2022-08-14 23:53:00,040 [Thread-10   ] [INFO ]  Length - 1 jackiecliff487@gmail.com
+2022-08-14 23:53:04,854 [rosenfeld461] [INFO ]  Sent - rosenfeld461@gmail.com mdshahimranshovon@gmail.com
+2022-08-14 23:53:05,031 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-08-14 23:53:05,513 [jackiecliff4] [INFO ]  Sent - jackiecliff487@gmail.com shahimrans64@gmail.com
+2022-08-14 23:53:06,035 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-08-14 23:53:06,108 [Thread-10   ] [INFO ]  Marking target as sent...
+2022-08-14 23:53:07,030 [MarkTargetAs] [INFO ]  Completed MarkTargetSentAirtable...
+2022-08-14 23:55:43,590 [Thread-10   ] [INFO ]  Sending Finished f124dbe9-6502-4f6f-ade7-f4a67f6c235b
+2022-08-14 23:55:48,097 [MainThread  ] [INFO ]  Scheduler has been shut down
