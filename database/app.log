@@ -4483,3 +4483,27 @@ Targets Count - 1
 2022-08-14 23:53:07,030 [MarkTargetAs] [INFO ]  Completed MarkTargetSentAirtable...
 2022-08-14 23:55:43,590 [Thread-10   ] [INFO ]  Sending Finished f124dbe9-6502-4f6f-ade7-f4a67f6c235b
 2022-08-14 23:55:48,097 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-15 00:33:11,712 [MainThread  ] [INFO ]  Scheduler started
+2022-08-15 00:33:11,747 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-15 00:33:12,587 [MainThread  ] [INFO ]  Scheduler started
+2022-08-15 00:34:35,832 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-15 00:34:45,882 [MainThread  ] [INFO ]  Scheduler started
+2022-08-15 00:34:45,885 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-15 00:34:46,501 [MainThread  ] [INFO ]  Scheduler started
+2022-08-15 00:34:53,609 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-15 00:38:31,855 [MainThread  ] [INFO ]  Scheduler started
+2022-08-15 00:38:31,858 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-15 00:38:32,483 [MainThread  ] [INFO ]  Scheduler started
+2022-08-15 00:38:44,924 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-15 00:40:10,149 [MainThread  ] [INFO ]  Scheduler started
+2022-08-15 00:40:10,153 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-15 00:40:10,784 [MainThread  ] [INFO ]  Scheduler started
+2022-08-15 00:40:30,510 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-15 00:40:33,309 [MainThread  ] [INFO ]  Scheduler started
+2022-08-15 00:40:33,312 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-15 00:40:33,922 [MainThread  ] [INFO ]  Scheduler started
+2022-08-15 00:40:37,506 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-08-15 00:40:42,519 [MainThread  ] [INFO ]  Scheduler started
+2022-08-15 00:40:42,522 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-15 00:40:43,158 [MainThread  ] [INFO ]  Scheduler started
+2022-08-15 00:40:48,416 [MainThread  ] [INFO ]  Scheduler has been shut down

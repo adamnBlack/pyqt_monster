@@ -225,9 +225,13 @@ class MyMainClass:
 
         GUI.pushButton_config_update.clicked.connect(self.configuration_save)
 
-        GUI.lineEdit_number_of_threads.setText(str(var.limit_of_thread))
+        GUI.label_desktop_app_id.setText(var.gmonster_desktop_id)
+        GUI.lineEdit_number_of_threads.setText(
+            str(var.limit_of_thread)
+        )
         GUI.lineEdit_number_of_threads.textChanged.connect(
-            self.update_limit_of_thread)
+            self.update_limit_of_thread
+        )
 
         GUI.radioButton_db_groupa.clicked.connect(self.update_db_table)
         GUI.radioButton_db_groupb.clicked.connect(self.update_db_table)
