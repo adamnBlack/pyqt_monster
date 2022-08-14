@@ -2029,6 +2029,7 @@ class Ui_MainWindow(object):
         font.setPointSize(11)
         self.label_desktop_app_id.setFont(font)
         self.label_desktop_app_id.setText("")
+        self.label_desktop_app_id.setTextInteractionFlags(QtCore.Qt.TextBrowserInteraction)
         self.label_desktop_app_id.setObjectName("label_desktop_app_id")
         self.gridLayout_16.addWidget(self.label_desktop_app_id, 16, 1, 1, 1, QtCore.Qt.AlignHCenter)
         self.label_19 = QtWidgets.QLabel(self.groupBox_10)

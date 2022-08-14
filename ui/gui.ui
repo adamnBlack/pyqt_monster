@@ -3754,6 +3754,9 @@ QPushButton:pressed {
              <property name="text">
               <string/>
              </property>
+             <property name="textInteractionFlags">
+              <set>Qt::TextBrowserInteraction</set>
+             </property>
             </widget>
            </item>
            <item row="16" column="0" alignment="Qt::AlignHCenter">
