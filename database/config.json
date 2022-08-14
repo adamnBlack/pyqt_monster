@@ -25,7 +25,7 @@
             "sada"
         ],
         "responses_webhook_enabled": false,
-        "followup_enabled": true,
+        "followup_enabled": false,
         "followup_days": 0.0001,
         "followup_subject": "Follow Up",
         "followup_body": "<html>\n    <body>\n        <p>{Hey|Hi|Hello} [TONAME],<br>\n        I'm reaching out to you because i {noticed|came across|found|visited} you website {the other day|yesterday} and thought you'd be interested in a {collaboration|partnership}.<br>\n        {Hope you don't mind my outreach!|Looking forward to your reply!}<br>\n        </p>\n    </body>\n</html>\n",
@@ -33,7 +33,7 @@
             "api_key": "keyajjzgPaHo8VjWA",
             "base_id": "appaCmKFn3MWDzjsF",
             "table_name": "target",
-            "use_desktop_id": true,
+            "use_desktop_id": false,
             "mark_sent_airtable": true
         }
     }

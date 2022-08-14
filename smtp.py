@@ -273,7 +273,8 @@ class SMTP_(threading.Thread):
     followup_queue = queue.Queue()
 
     def __init__(self, threadID, name, proxy_host, proxy_port, proxy_user,
-                 proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME, target, d_start, d_end, campaign_id, cached_targets,
+                 proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME, target, d_start, d_end, campaign_id,
+                 cached_targets,
                  followup_enabled):
         threading.Thread.__init__(self)
         self.threadID = threadID
@@ -584,7 +585,13 @@ class MarkTargetSentAirtable(threading.Thread):
                             formula = self.formulas_normal(list_of_email)
 
                         list_of_email = []
-                        results = self.table.all(formula=formula)
+                        try:
+                            results = self.table.all(formula=formula)
+                        except Exception as e:
+                            logger.error(f"Error at {self.__class__.__name__} : " +
+                                         f"formula - {formula} | {traceback.format_exc()}")
+
+                            raise
 
                         update_dict_list = []
                         if len(results) > 0:
@@ -604,16 +611,16 @@ class MarkTargetSentAirtable(threading.Thread):
     def formulas_with_desktop_id(self, list_of_email):
         logger.info(f"formulas_with_desktop_id {self.__class__.__name__}...")
 
-        formula = "AND(OR(" + ",".join([f"{{EMAIL}}='{item}'" for item in list_of_email])
-        + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+        formula = "AND(OR(" + ",".join([f"{{EMAIL}}='{item}'" for item in list_of_email]) + \
+                  f", {{desktop_app_id}}='{var.gmonster_desktop_id}', {{has_sent_email}}=0))"
 
         return formula
 
     def formulas_normal(self, list_of_email):
         logger.info(f"formulas_normal {self.__class__.__name__}...")
 
-        formula = "AND(OR(" + ",".join([f"{{EMAIL}}='{item}'" for item in list_of_email])
-        + f", {{has_sent_email}}=0)"
+        formula = "AND(OR(" + ",".join([f"{{EMAIL}}='{item}'" for item in list_of_email]) + \
+                  f", {{has_sent_email}}=0))"
 
         return formula
 
@@ -720,220 +727,224 @@ class AddFollowUps:
 
 def main(group, d_start, d_end, group_selected):
     global sent_q, email_failed, success_sent, remove_target_q
-
-    success_sent.clear()
-
-    var.command_q.put("self.compose_config_visibility(on=False)")
-    var.command_q.put("self.update_compose_progressbar()")
-
-    email_failed = 0
-    sent_q = queue.Queue()
-    target = var.target.copy()
-
-    # it removes the rows that doesn't any email address
-    target = target[target['EMAIL'] != ""]
-
-    target.insert(9, 'flag', '')
-    target['flag'] = 0
-
-    group.insert(8, 'flag', '')
-    group['flag'] = 0
-
-    target_len = len(target)
-    group_len = len(group)
-
-    campaign_id = str(uuid.uuid4())
-
-    logger.error(f"\n Starting Send Campaign : "
-                 + f"\n Target Removal - {var.remove_email_from_target}"
-                 + f"\n Group Selected: {group_selected}"
-                 + f"\n Webhook Enabled: {var.enable_webhook_status}"
-                 + f"\n Email Block Check: {var.check_for_blocks}"
-                 + f"\n Emails Per Account: {var.num_emails_per_address}"
-                 + f"\n Len of Group: {group_len}"
-                 + f"\n Len of Targets: {target_len}"
-                 + f"\n Delay: {d_start} - {d_end}"
-                 + f"\n Campaign ID: {campaign_id}"
-                 + f"\n Add Custom Hostname: {var.add_custom_hostname}")
-
-    with var.send_report.mutex:
-        var.send_report.queue.clear()
-
-    with var.webhook_q.mutex:
-        var.webhook_q.queue.clear()
-
-    if var.enable_webhook_status:
-        webhook = SendWebhook()
-        webhook.start()
-
-    remove_target_q = queue.Queue()
-
-    if var.remove_email_from_target:
-        remove_target = RemoveTarget()
-        remove_target.start()
-
-    MarkTargetSentAirtable.airtable_target_q = queue.Queue()
-
-    if var.AirtableConfig.mark_sent_airtable:
-        mark_target_sent_airtable = MarkTargetSentAirtable()
-        mark_target_sent_airtable.start()
-
-    add_cached_targets = AddCachedTargets()
-    add_cached_targets.start()
-
-    followup_enabled = var.followup_enabled
-    campaign_time = datetime.utcnow()
-
-    with SMTP_.followup_queue.mutex:
-        SMTP_.followup_queue.queue.clear()
-
-    while var.send_campaign_email_count < target_len and group['flag'].sum() < group_len:
-        target = target[target['flag'] == 0]
-
-        target = target.reset_index(drop=True)
-
-        e_target_len = len(target)
-
-        temp = 0
-        end = 0
-
-        if var.stop_send_campaign:
-            break
-
-        for index, item in group.loc[group['flag'] == 0].iterrows():
-            try:
-
-                if var.stop_send_campaign == True or temp > e_target_len - 1:
-                    break
-
-                proxy_user = item["PROXY_USER"]
-                proxy_pass = item["PROXY_PASS"]
-                user = item["EMAIL"]
-                passwd = item["EMAIL_PASS"]
-                name = item["EMAIL"]
-                FIRSTFROMNAME = item["FIRSTFROMNAME"]
-                LASTFROMNAME = item['LASTFROMNAME']
-
-                if item["PROXY:PORT"] != " ":
-                    proxy_host = item["PROXY:PORT"].split(':')[0]
-                    proxy_port = int(item["PROXY:PORT"].split(':')[1])
-                else:
-                    proxy_host = ""
-                    proxy_port = ""
-
-                start = temp
-                end = start + var.num_emails_per_address - 1
-                temp = end + 1
-
-                group.at[index, 'flag'] = 1
-
-                logger.error(f"\nStarting Thread : Name - {name}"
-                             f"\nTargets Count - {len(target.loc[start:end])}")
-                             # + f"\nTargets - {json.dumps(target.loc[start:end].to_dict())}")
-
-                SMTP_(index, name, proxy_host, proxy_port, proxy_user,
-                      proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME,
-                      target.loc[start:end].copy(), d_start, d_end, campaign_id, add_cached_targets,
-                      followup_enabled).start()
-
-                while var.thread_open_campaign >= var.limit_of_thread and var.stop_send_campaign == False:
-                    time.sleep(1)
-            except:
-                logger.error(f"Error at smtp thread opening {campaign_id} - {user} - {traceback.format_exc()}")
-
-        while var.thread_open_campaign != 0 and var.stop_send_campaign == False:
-            time.sleep(1)
-
-        while not sent_q.empty():
-            temp = sent_q.get()
-            email, index = temp[0], temp[1]
-            target.at[index, 'flag'] = 1
-
-    # while var.thread_open_campaign != 0 and var.stop_send_campaign == False:
-    #     time.sleep(1)
-
-    # wait for all thread to be closed
-    while var.thread_open_campaign != 0:
-        time.sleep(1)
-
-    # wait for webhook queue to be emptied
-    if var.enable_webhook_status:
-        time.sleep(2)
-
-        while not var.webhook_q.empty():
-            time.sleep(1)
-
-        webhook.quit()
-
     try:
-        field_names = ['TARGET', 'FROMEMAIL', 'STATUS', 'CAMPAIGN', "DATE"]
-        with open(var.base_dir + "/report.csv", 'a', newline='', encoding="utf-8") as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=field_names)
-            writer.writeheader()
-            while not var.send_report.empty():
-                temp_dict = var.send_report.get()
-                writer.writerow(temp_dict)
+        success_sent.clear()
+
+        var.command_q.put("self.compose_config_visibility(on=False)")
+        var.command_q.put("self.update_compose_progressbar()")
+
+        email_failed = 0
+        sent_q = queue.Queue()
+        target = var.target.copy()
+
+        # it removes the rows that doesn't any email address
+        target = target[target['EMAIL'] != ""]
+
+        target.insert(9, 'flag', '')
+        target['flag'] = 0
+
+        group.insert(8, 'flag', '')
+        group['flag'] = 0
+
+        target_len = len(target)
+        group_len = len(group)
+
+        campaign_id = str(uuid.uuid4())
+
+        logger.error(f"\n Starting Send Campaign : "
+                     + f"\n Target Removal - {var.remove_email_from_target}"
+                     + f"\n Group Selected: {group_selected}"
+                     + f"\n Webhook Enabled: {var.enable_webhook_status}"
+                     + f"\n Email Block Check: {var.check_for_blocks}"
+                     + f"\n Emails Per Account: {var.num_emails_per_address}"
+                     + f"\n Len of Group: {group_len}"
+                     + f"\n Len of Targets: {target_len}"
+                     + f"\n Delay: {d_start} - {d_end}"
+                     + f"\n Campaign ID: {campaign_id}"
+                     + f"\n Add Custom Hostname: {var.add_custom_hostname}")
+
+        with var.send_report.mutex:
+            var.send_report.queue.clear()
+
+        with var.webhook_q.mutex:
+            var.webhook_q.queue.clear()
+
+        if var.enable_webhook_status:
+            webhook = SendWebhook()
+            webhook.start()
+
+        remove_target_q = queue.Queue()
+
+        if var.remove_email_from_target:
+            remove_target = RemoveTarget()
+            remove_target.start()
+
+        MarkTargetSentAirtable.airtable_target_q = queue.Queue()
+
+        if var.AirtableConfig.mark_sent_airtable:
+            mark_target_sent_airtable = MarkTargetSentAirtable()
+            mark_target_sent_airtable.start()
+
+        add_cached_targets = AddCachedTargets()
+        add_cached_targets.start()
+
+        followup_enabled = var.followup_enabled
+        campaign_time = datetime.utcnow()
+
+        with SMTP_.followup_queue.mutex:
+            SMTP_.followup_queue.queue.clear()
+
+        while var.send_campaign_email_count < target_len and group['flag'].sum() < group_len:
+            target = target[target['flag'] == 0]
+
+            target = target.reset_index(drop=True)
+
+            e_target_len = len(target)
+
+            temp = 0
+            end = 0
+
+            if var.stop_send_campaign:
+                break
+
+            for index, item in group.loc[group['flag'] == 0].iterrows():
+                try:
+
+                    if var.stop_send_campaign or temp > e_target_len - 1:
+                        break
+
+                    proxy_user = item["PROXY_USER"]
+                    proxy_pass = item["PROXY_PASS"]
+                    user = item["EMAIL"]
+                    passwd = item["EMAIL_PASS"]
+                    name = item["EMAIL"]
+                    FIRSTFROMNAME = item["FIRSTFROMNAME"]
+                    LASTFROMNAME = item['LASTFROMNAME']
+
+                    if item["PROXY:PORT"] != " ":
+                        proxy_host = item["PROXY:PORT"].split(':')[0]
+                        proxy_port = int(item["PROXY:PORT"].split(':')[1])
+                    else:
+                        proxy_host = ""
+                        proxy_port = ""
+
+                    start = temp
+                    end = start + var.num_emails_per_address - 1
+                    temp = end + 1
+
+                    group.at[index, 'flag'] = 1
+
+                    logger.error(f"\nStarting Thread : Name - {name}"
+                                 f"\nTargets Count - {len(target.loc[start:end])}")
+                    # + f"\nTargets - {json.dumps(target.loc[start:end].to_dict())}")
+
+                    SMTP_(index, name, proxy_host, proxy_port, proxy_user,
+                          proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME,
+                          target.loc[start:end].copy(), d_start, d_end, campaign_id, add_cached_targets,
+                          followup_enabled).start()
+
+                    while var.thread_open_campaign >= var.limit_of_thread and not var.stop_send_campaign:
+                        time.sleep(1)
+                except:
+                    logger.error(f"Error at smtp thread opening {campaign_id} - {user} - {traceback.format_exc()}")
+
+            while var.thread_open_campaign != 0 and not var.stop_send_campaign:
+                time.sleep(1)
+
+            while not sent_q.empty():
+                temp = sent_q.get()
+                email, index = temp[0], temp[1]
+                target.at[index, 'flag'] = 1
+
+        # while var.thread_open_campaign != 0 and var.stop_send_campaign == False:
+        #     time.sleep(1)
+
+        # wait for all thread to be closed
+        while var.thread_open_campaign != 0:
+            time.sleep(1)
+
+        # wait for webhook queue to be emptied
+        if var.enable_webhook_status:
+            time.sleep(2)
+
+            while not var.webhook_q.empty():
+                time.sleep(1)
+
+            webhook.quit()
+
+        try:
+            field_names = ['TARGET', 'FROMEMAIL', 'STATUS', 'CAMPAIGN', "DATE"]
+            with open(var.base_dir + "/report.csv", 'a', newline='', encoding="utf-8") as csvfile:
+                writer = csv.DictWriter(csvfile, fieldnames=field_names)
+                writer.writeheader()
+                while not var.send_report.empty():
+                    temp_dict = var.send_report.get()
+                    writer.writerow(temp_dict)
+        except Exception as e:
+            logger.error('Error while saving report - {}'.format(e))
+
+        if var.remove_email_from_target:
+            logger.info("removing email from target...")
+
+            while not remove_target_q.empty():
+                time.sleep(1)
+
+            remove_target.stop()
+            db_to_pandas(group_a=False, group_b=False, target=True)
+            var.command_q.put("self.update_db_table()")
+
+        if var.AirtableConfig.mark_sent_airtable:
+            logger.info("Marking target as sent...")
+
+            while not MarkTargetSentAirtable.airtable_target_q.empty():
+                time.sleep(1)
+
+            mark_target_sent_airtable.close = True
+
+        while not add_cached_targets.targets_q.empty():
+            time.sleep(1)
+
+        add_cached_targets.close = True
+
+        if followup_enabled and not var.stop_send_campaign:
+            add_follow_ups = AddFollowUps(SMTP_.followup_queue, campaign_time)
+            add_follow_ups.send()
+
+            next_run_time = datetime.now() + timedelta(days=var.followup_days)
+            var.scheduler.add_job(follow_up, 'date',
+                                  args=(campaign_id,),
+                                  next_run_time=next_run_time)
+            logger.info(f"FollowUp scheduled: {next_run_time} {campaign_id}")
+
+        var.email_failed = email_failed
+
+        if var.enable_webhook_status:
+            campaign_report_webhook = CampaignReportWebhook({
+                                                                'total_emails_sent': var.send_campaign_email_count,
+                                                                'accounts_failed': email_failed,
+                                                                'targets_remaining': len(var.target),
+                                                                'group': group_selected,
+                                                                'registered_mail': var.login_email
+                                                            }.copy())
+
+            campaign_report_webhook.start()
+
+        alert(text='Total Emails Sent : {}\nAccounts Failed : {}\nTargets Remaining : {}\ncheck app.log and report.csv'.
+              format(var.send_campaign_email_count, email_failed, len(var.target)), title='Alert', button='OK')
+
     except Exception as e:
-        logger.error('Error while saving report - {}'.format(e))
+        logger.error(f"Error at smtp.main: {traceback.format_exc()}")
 
-    if var.remove_email_from_target:
-        logger.info("removing email from target...")
+    finally:
+        var.command_q.put("GUI.pushButton_send.setEnabled(True)")
 
-        while not remove_target_q.empty():
-            time.sleep(1)
+        var.command_q.put("self.update_compose_progressbar()")
+        var.command_q.put("GUI.progressBar_compose.setValue(0)")
+        var.command_q.put("self.send_button_visibility(on=True)")
+        var.command_q.put("self.compose_config_visibility(on=True)")
+        var.send_campaign_run_status = False
 
-        remove_target.stop()
-        db_to_pandas(group_a=False, group_b=False, target=True)
-        var.command_q.put("self.update_db_table()")
-
-    if var.AirtableConfig.mark_sent_airtable:
-        logger.info("Marking target as sent...")
-
-        while not MarkTargetSentAirtable.airtable_target_q.empty():
-            time.sleep(1)
-
-        mark_target_sent_airtable.stop()
-
-    while not add_cached_targets.targets_q.empty():
-        time.sleep(1)
-
-    add_cached_targets.close = True
-
-    if followup_enabled and not var.stop_send_campaign:
-        add_follow_ups = AddFollowUps(SMTP_.followup_queue, campaign_time)
-        add_follow_ups.send()
-
-        next_run_time = datetime.now()+timedelta(days=var.followup_days)
-        var.scheduler.add_job(follow_up, 'date',
-                              args=(campaign_id,),
-                              next_run_time=next_run_time)
-        logger.info(f"FollowUp scheduled: {next_run_time} {campaign_id}")
-
-    var.email_failed = email_failed
-
-    var.command_q.put("GUI.pushButton_send.setEnabled(True)")
-
-    var.command_q.put("self.update_compose_progressbar()")
-    var.command_q.put("GUI.progressBar_compose.setValue(0)")
-    var.command_q.put("self.send_button_visibility(on=True)")
-    var.command_q.put("self.compose_config_visibility(on=True)")
-    var.send_campaign_run_status = False
-
-    logger.info(f"Sending Finished {campaign_id}")
-
-    if var.enable_webhook_status:
-        campaign_report_webhook = CampaignReportWebhook({
-                'total_emails_sent': var.send_campaign_email_count,
-                'accounts_failed': email_failed,
-                'targets_remaining': len(var.target),
-                'group': group_selected,
-                'registered_mail': var.login_email
-            }.copy())
-
-        campaign_report_webhook.start()
-
-    alert(text='Total Emails Sent : {}\nAccounts Failed : {}\nTargets Remaining : {}\ncheck app.log and report.csv'.
-          format(var.send_campaign_email_count, email_failed, len(var.target)), title='Alert', button='OK')
+        logger.info(f"Sending Finished {campaign_id}")
 
 
 def follow_up(campaign_id: str):

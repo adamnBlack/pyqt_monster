@@ -2963,3 +2963,806 @@ requests.exceptions.HTTPError: ('404 Client Error: Not Found for url: https://ap
 2022-08-11 16:35:16,803 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
 2022-08-11 16:35:17,358 [MainThread  ] [INFO ]  Scheduler started
 2022-08-11 16:35:23,311 [Thread-3    ] [INFO ]  config updated
+2022-08-14 11:51:08,797 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 11:51:08,887 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 11:51:12,909 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 11:51:26,917 [Thread-3    ] [ERROR]  File loading Config: {'group_a': True, 'group_b': True, 'target': False}
+2022-08-14 11:51:35,632 [Thread-4    ] [INFO ]  Starting pulling data from airtable
+2022-08-14 11:51:35,633 [Thread-4    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-08-14 11:51:37,700 [Thread-4    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-08-14 11:51:37,702 [Thread-4    ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-08-14 11:51:37,925 [Thread-4    ] [INFO ]  Pandas to DB done!
+2022-08-14 11:51:37,927 [Thread-4    ] [INFO ]  Completed pulling data from airtable
+2022-08-14 11:51:59,475 [Thread-5    ] [INFO ]  config updated
+2022-08-14 12:07:06,606 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 12:07:06,610 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 12:07:07,145 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 12:07:12,457 [Thread-3    ] [INFO ]  config updated
+2022-08-14 12:07:12,483 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 9
+ Len of Targets: 2
+ Delay: 0 - 10
+ Campaign ID: 133e7e3b-4aef-44ba-aa43-d39b8d4d7174
+ Add Custom Hostname: True
+2022-08-14 12:07:12,589 [MarkTargetAs] [INFO ]  Starting MarkTargetSentAirtable...
+2022-08-14 12:07:12,620 [Thread-4    ] [ERROR]  
+Starting Thread : Name - rosenfeld461@gmail.com
+Targets Count - 1
+2022-08-14 12:07:12,623 [Thread-4    ] [INFO ]  Length - 1 rosenfeld461@gmail.com
+2022-08-14 12:07:12,625 [Thread-4    ] [ERROR]  
+Starting Thread : Name - jackiecliff487@gmail.com
+Targets Count - 1
+2022-08-14 12:07:12,626 [Thread-4    ] [INFO ]  Length - 1 jackiecliff487@gmail.com
+2022-08-14 12:07:20,751 [jackiecliff4] [INFO ]  Sent - jackiecliff487@gmail.com shahimrans64@gmail.com
+2022-08-14 12:07:21,602 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-08-14 12:07:22,600 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:22,604 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:23,609 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:23,610 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:23,865 [rosenfeld461] [INFO ]  Sent - rosenfeld461@gmail.com mdshahimranshovon@gmail.com
+2022-08-14 12:07:24,726 [Thread-4    ] [INFO ]  Marking target as sent...
+2022-08-14 12:07:24,728 [Thread-4    ] [ERROR]  Error at smtp.main: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 897, in main
+    mark_target_sent_airtable.stop()
+AttributeError: 'MarkTargetSentAirtable' object has no attribute 'stop'
+
+2022-08-14 12:07:24,735 [Thread-4    ] [INFO ]  Sending Finished 133e7e3b-4aef-44ba-aa43-d39b8d4d7174
+2022-08-14 12:07:25,613 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:25,616 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:26,619 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:26,623 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:27,629 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:27,629 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:28,633 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:28,636 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:29,643 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:29,644 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:30,647 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:30,651 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:31,657 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:31,658 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:32,661 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:32,666 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:33,669 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:33,671 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:34,675 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:34,676 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:35,678 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:35,680 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:36,683 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:36,685 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:37,690 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:37,691 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:38,694 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:38,695 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:39,697 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:39,698 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:40,700 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:40,701 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:41,705 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:41,707 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:42,712 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:42,714 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:43,722 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:43,722 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:44,725 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:44,729 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:45,734 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:45,734 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:46,737 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:46,738 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:47,743 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:47,745 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:48,751 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:48,752 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:49,755 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:49,755 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:50,759 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:50,760 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:51,764 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:51,767 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:52,773 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:52,774 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:53,778 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:53,778 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:54,782 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:54,784 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:55,791 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:55,791 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:56,793 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:56,795 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:57,800 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:57,801 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:58,806 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:58,807 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:07:59,811 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:07:59,812 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:08:00,816 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:08:00,817 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:08:01,826 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:08:01,827 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:08:02,830 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:08:02,834 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:08:03,840 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:08:03,841 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:08:04,843 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:08:04,847 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:08:05,852 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:08:05,853 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:08:06,856 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:08:06,858 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:08:07,864 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:08:07,867 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:08:08,876 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:08:08,876 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:08:09,879 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:08:09,880 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:08:10,884 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:08:10,886 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 583, in run
+    formula = self.formulas_with_desktop_id(list_of_email)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 609, in formulas_with_desktop_id
+    + f", {{desktop_app_id}}='{var.gmonster_desktop_id}' {{has_sent_email}}=0)"
+TypeError: bad operand type for unary +: 'str'
+
+2022-08-14 12:09:47,729 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 12:09:47,733 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 12:09:48,274 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 12:09:57,328 [Thread-3    ] [INFO ]  config updated
+2022-08-14 12:09:57,362 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 9
+ Len of Targets: 2
+ Delay: 0 - 10
+ Campaign ID: 2d904636-d408-45ff-8450-943c9d66e1ea
+ Add Custom Hostname: True
+2022-08-14 12:09:57,378 [MarkTargetAs] [INFO ]  Starting MarkTargetSentAirtable...
+2022-08-14 12:09:57,384 [Thread-4    ] [ERROR]  
+Starting Thread : Name - rosenfeld461@gmail.com
+Targets Count - 1
+2022-08-14 12:09:57,387 [Thread-4    ] [INFO ]  Length - 1 rosenfeld461@gmail.com
+2022-08-14 12:09:57,392 [Thread-4    ] [ERROR]  
+Starting Thread : Name - jackiecliff487@gmail.com
+Targets Count - 1
+2022-08-14 12:09:57,396 [Thread-4    ] [INFO ]  Length - 1 jackiecliff487@gmail.com
+2022-08-14 12:10:03,735 [jackiecliff4] [INFO ]  Sent - jackiecliff487@gmail.com shahimrans64@gmail.com
+2022-08-14 12:10:04,284 [rosenfeld461] [INFO ]  Sent - rosenfeld461@gmail.com mdshahimranshovon@gmail.com
+2022-08-14 12:10:04,390 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-08-14 12:10:05,394 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-08-14 12:10:05,407 [Thread-4    ] [INFO ]  Marking target as sent...
+2022-08-14 12:10:05,409 [Thread-4    ] [ERROR]  Error at smtp.main: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 897, in main
+    mark_target_sent_airtable.stop()
+AttributeError: 'MarkTargetSentAirtable' object has no attribute 'stop'
+
+2022-08-14 12:10:05,411 [Thread-4    ] [INFO ]  Sending Finished 2d904636-d408-45ff-8450-943c9d66e1ea
+2022-08-14 12:10:06,386 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:10:07,764 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 588, in run
+    results = self.table.all(formula=formula)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\table.py", line 80, in all
+    return super()._all(self.base_id, self.table_name, **options)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\abstract.py", line 127, in _all
+    for records in self._iterate(base_id, table_name, **options):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\abstract.py", line 108, in _iterate
+    data = self._request("get", table_url, params=params)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\abstract.py", line 95, in _request
+    return self._process_response(response)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\abstract.py", line 87, in _process_response
+    raise exc
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\abstract.py", line 74, in _process_response
+    response.raise_for_status()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\requests\models.py", line 953, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: ('422 Client Error: Unprocessable Entity for url: https://api.airtable.com/v0/appaCmKFn3MWDzjsF/target?filterByFormula=AND%28OR%28%7BEMAIL%7D%3D%27shahimrans64%40gmail.com%27%2C%7BEMAIL%7D%3D%27mdshahimranshovon%40gmail.com%27%2C+%7Bdesktop_app_id%7D%3D%27e86e379f-5918-412f-b903-d11e6a1b7c20%27+%7Bhas_sent_email%7D%3D0%29', "422 Client Error: Unprocessable Entity for url: https://api.airtable.com/v0/appaCmKFn3MWDzjsF/target?filterByFormula=AND%28OR%28%7BEMAIL%7D%3D%27shahimrans64%40gmail.com%27%2C%7BEMAIL%7D%3D%27mdshahimranshovon%40gmail.com%27%2C+%7Bdesktop_app_id%7D%3D%27e86e379f-5918-412f-b903-d11e6a1b7c20%27+%7Bhas_sent_email%7D%3D0%29 [Error: {'type': 'INVALID_FILTER_BY_FORMULA', 'message': 'The formula for filtering records is invalid: Invalid formula. Please check your formula text.'}]")
+
+2022-08-14 12:11:25,427 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 12:11:25,430 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 12:11:25,972 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 12:11:30,561 [Thread-3    ] [INFO ]  config updated
+2022-08-14 12:11:30,581 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 9
+ Len of Targets: 2
+ Delay: 0 - 10
+ Campaign ID: 7e121986-5a40-4526-a0d2-a4973d9a4484
+ Add Custom Hostname: True
+2022-08-14 12:11:30,584 [MarkTargetAs] [INFO ]  Starting MarkTargetSentAirtable...
+2022-08-14 12:11:30,598 [Thread-4    ] [ERROR]  
+Starting Thread : Name - rosenfeld461@gmail.com
+Targets Count - 1
+2022-08-14 12:11:30,599 [Thread-4    ] [INFO ]  Length - 1 rosenfeld461@gmail.com
+2022-08-14 12:11:30,602 [Thread-4    ] [ERROR]  
+Starting Thread : Name - jackiecliff487@gmail.com
+Targets Count - 1
+2022-08-14 12:11:30,608 [Thread-4    ] [INFO ]  Length - 1 jackiecliff487@gmail.com
+2022-08-14 12:11:42,188 [rosenfeld461] [INFO ]  Sent - rosenfeld461@gmail.com mdshahimranshovon@gmail.com
+2022-08-14 12:11:42,595 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-08-14 12:11:42,692 [jackiecliff4] [INFO ]  Sent - jackiecliff487@gmail.com shahimrans64@gmail.com
+2022-08-14 12:11:43,599 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-08-14 12:11:43,617 [Thread-4    ] [INFO ]  Marking target as sent...
+2022-08-14 12:11:43,619 [Thread-4    ] [ERROR]  Error at smtp.main: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 898, in main
+    mark_target_sent_airtable.stop()
+AttributeError: 'MarkTargetSentAirtable' object has no attribute 'stop'
+
+2022-08-14 12:11:43,620 [Thread-4    ] [INFO ]  Sending Finished 7e121986-5a40-4526-a0d2-a4973d9a4484
+2022-08-14 12:11:44,596 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:11:45,832 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 589, in run
+    results = self.table.all(formula=formula)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\table.py", line 80, in all
+    return super()._all(self.base_id, self.table_name, **options)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\abstract.py", line 127, in _all
+    for records in self._iterate(base_id, table_name, **options):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\abstract.py", line 108, in _iterate
+    data = self._request("get", table_url, params=params)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\abstract.py", line 95, in _request
+    return self._process_response(response)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\abstract.py", line 87, in _process_response
+    raise exc
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\abstract.py", line 74, in _process_response
+    response.raise_for_status()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\requests\models.py", line 953, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: ('422 Client Error: Unprocessable Entity for url: https://api.airtable.com/v0/appaCmKFn3MWDzjsF/target?filterByFormula=AND%28OR%28%7BEMAIL%7D%3D%27mdshahimranshovon%40gmail.com%27%2C%7BEMAIL%7D%3D%27shahimrans64%40gmail.com%27%2C+%7Bdesktop_app_id%7D%3D%27e86e379f-5918-412f-b903-d11e6a1b7c20%27+%7Bhas_sent_email%7D%3D0%29', "422 Client Error: Unprocessable Entity for url: https://api.airtable.com/v0/appaCmKFn3MWDzjsF/target?filterByFormula=AND%28OR%28%7BEMAIL%7D%3D%27mdshahimranshovon%40gmail.com%27%2C%7BEMAIL%7D%3D%27shahimrans64%40gmail.com%27%2C+%7Bdesktop_app_id%7D%3D%27e86e379f-5918-412f-b903-d11e6a1b7c20%27+%7Bhas_sent_email%7D%3D0%29 [Error: {'type': 'INVALID_FILTER_BY_FORMULA', 'message': 'The formula for filtering records is invalid: Invalid formula. Please check your formula text.'}]")
+
+2022-08-14 12:25:43,462 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 12:25:43,465 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 12:25:44,022 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 12:25:50,276 [Thread-3    ] [INFO ]  config updated
+2022-08-14 12:25:50,295 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 9
+ Len of Targets: 2
+ Delay: 0 - 10
+ Campaign ID: efef2ddd-7efb-47db-a0d8-db9057cc2cc9
+ Add Custom Hostname: True
+2022-08-14 12:25:50,299 [MarkTargetAs] [INFO ]  Starting MarkTargetSentAirtable...
+2022-08-14 12:25:50,309 [Thread-4    ] [ERROR]  
+Starting Thread : Name - rosenfeld461@gmail.com
+Targets Count - 1
+2022-08-14 12:25:50,311 [Thread-4    ] [INFO ]  Length - 1 rosenfeld461@gmail.com
+2022-08-14 12:25:50,313 [Thread-4    ] [ERROR]  
+Starting Thread : Name - jackiecliff487@gmail.com
+Targets Count - 1
+2022-08-14 12:25:50,314 [Thread-4    ] [INFO ]  Length - 1 jackiecliff487@gmail.com
+2022-08-14 12:25:56,787 [Thread-1    ] [ERROR]  error at check_for_subscription: Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\urllib3\connectionpool.py", line 445, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\urllib3\connectionpool.py", line 440, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\ssl.py", line 1012, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\ssl.py", line 874, in read
+    return self._sslobj.read(len, buffer)
+  File "C:\Users\shah_\AppData\Local\Programs\Python\Python36\lib\ssl.py", line 631, in read
+    v = self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\requests\adapters.py", line 449, in send
+    timeout=timeout
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\urllib3\connectionpool.py", line 756, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\urllib3\util\retry.py", line 532, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\urllib3\connectionpool.py", line 706, in urlopen
+    chunked=chunked,
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\urllib3\connectionpool.py", line 447, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\urllib3\connectionpool.py", line 337, in _raise_timeout
+    self, url, "Read timed out. (read timeout=%s)" % timeout_value
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='enzim.pythonanywhere.com', port=443): Read timed out. (read timeout=10)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 435, in check_for_subscription
+    response = requests.post(url, timeout=10)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\requests\api.py", line 117, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\requests\api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\requests\adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='enzim.pythonanywhere.com', port=443): Read timed out. (read timeout=10)
+
+2022-08-14 12:25:57,029 [rosenfeld461] [INFO ]  Sent - rosenfeld461@gmail.com mdshahimranshovon@gmail.com
+2022-08-14 12:25:57,307 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-08-14 12:25:58,306 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:25:59,129 [jackiecliff4] [INFO ]  Sent - jackiecliff487@gmail.com shahimrans64@gmail.com
+2022-08-14 12:25:59,311 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-08-14 12:25:59,577 [MarkTargetAs] [ERROR]  Error at MarkTargetSentAirtable : Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 589, in run
+    results = self.table.all(formula=formula)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\table.py", line 80, in all
+    return super()._all(self.base_id, self.table_name, **options)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\abstract.py", line 127, in _all
+    for records in self._iterate(base_id, table_name, **options):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\abstract.py", line 108, in _iterate
+    data = self._request("get", table_url, params=params)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\abstract.py", line 95, in _request
+    return self._process_response(response)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\abstract.py", line 87, in _process_response
+    raise exc
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\abstract.py", line 74, in _process_response
+    response.raise_for_status()
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\requests\models.py", line 953, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: ('422 Client Error: Unprocessable Entity for url: https://api.airtable.com/v0/appaCmKFn3MWDzjsF/target?filterByFormula=AND%28OR%28%7BEMAIL%7D%3D%27mdshahimranshovon%40gmail.com%27%2C+%7Bdesktop_app_id%7D%3D%27e86e379f-5918-412f-b903-d11e6a1b7c20%27%2C+%7Bhas_sent_email%7D%3D0%29', "422 Client Error: Unprocessable Entity for url: https://api.airtable.com/v0/appaCmKFn3MWDzjsF/target?filterByFormula=AND%28OR%28%7BEMAIL%7D%3D%27mdshahimranshovon%40gmail.com%27%2C+%7Bdesktop_app_id%7D%3D%27e86e379f-5918-412f-b903-d11e6a1b7c20%27%2C+%7Bhas_sent_email%7D%3D0%29 [Error: {'type': 'INVALID_FILTER_BY_FORMULA', 'message': 'The formula for filtering records is invalid: Invalid formula. Please check your formula text.'}]")
+
+2022-08-14 12:26:00,325 [Thread-4    ] [INFO ]  Marking target as sent...
+2022-08-14 12:26:01,327 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-08-14 12:26:01,472 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-08-14 12:26:01,583 [MarkTargetAs] [INFO ]  Completed MarkTargetSentAirtable...
+2022-08-14 12:26:01,680 [Thread-4    ] [INFO ]  Added job "follow_up" to job store "default"
+2022-08-14 12:26:01,682 [Thread-4    ] [INFO ]  FollowUp scheduled: 2022-08-14 12:26:10.113763 efef2ddd-7efb-47db-a0d8-db9057cc2cc9
+2022-08-14 12:26:10,116 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - efef2ddd-7efb-47db-a0d8-db9057cc2cc9
+2022-08-14 12:26:10,117 [APScheduler ] [INFO ]  Removed job fbe73214ae3843be9ee311f98eb31709
+2022-08-14 12:26:11,179 [Thread-4    ] [INFO ]  Sending Finished efef2ddd-7efb-47db-a0d8-db9057cc2cc9
+2022-08-14 12:30:17,299 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 12:30:17,301 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 12:30:17,861 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 12:30:23,968 [Thread-3    ] [INFO ]  config updated
+2022-08-14 12:30:23,976 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 9
+ Len of Targets: 2
+ Delay: 0 - 10
+ Campaign ID: 4447baa7-22da-45e9-96b2-9ecd453fcaa6
+ Add Custom Hostname: True
+2022-08-14 12:30:23,992 [MarkTargetAs] [INFO ]  Starting MarkTargetSentAirtable...
+2022-08-14 12:30:24,004 [Thread-4    ] [ERROR]  
+Starting Thread : Name - rosenfeld461@gmail.com
+Targets Count - 1
+2022-08-14 12:30:24,008 [Thread-4    ] [INFO ]  Length - 1 rosenfeld461@gmail.com
+2022-08-14 12:30:24,010 [Thread-4    ] [ERROR]  
+Starting Thread : Name - jackiecliff487@gmail.com
+Targets Count - 1
+2022-08-14 12:30:24,015 [Thread-4    ] [INFO ]  Length - 1 jackiecliff487@gmail.com
+2022-08-14 12:30:33,020 [rosenfeld461] [INFO ]  Sent - rosenfeld461@gmail.com mdshahimranshovon@gmail.com
+2022-08-14 12:30:34,007 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-08-14 12:30:35,002 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:30:35,052 [jackiecliff4] [INFO ]  Sent - jackiecliff487@gmail.com shahimrans64@gmail.com
+2022-08-14 12:30:36,009 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-08-14 12:30:36,027 [Thread-4    ] [INFO ]  Marking target as sent...
+2022-08-14 12:30:38,028 [Thread-4    ] [INFO ]  AddFollowUps starting...
+2022-08-14 12:30:38,174 [Thread-4    ] [INFO ]  AddFollowUps successful
+2022-08-14 12:30:38,231 [Thread-4    ] [INFO ]  Added job "follow_up" to job store "default"
+2022-08-14 12:30:38,231 [Thread-4    ] [INFO ]  FollowUp scheduled: 2022-08-14 12:30:46.814766 4447baa7-22da-45e9-96b2-9ecd453fcaa6
+2022-08-14 12:30:38,992 [MarkTargetAs] [INFO ]  Completed MarkTargetSentAirtable...
+2022-08-14 12:30:39,987 [Thread-4    ] [INFO ]  Sending Finished 4447baa7-22da-45e9-96b2-9ecd453fcaa6
+2022-08-14 12:30:46,822 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - 4447baa7-22da-45e9-96b2-9ecd453fcaa6
+2022-08-14 12:30:46,823 [APScheduler ] [INFO ]  Removed job f89c8ec2cf0e4fdabcb61c86510f765c
+2022-08-14 12:30:46,825 [ThreadPoolEx] [INFO ]  Starting Followup process again, Campaign ID - 4447baa7-22da-45e9-96b2-9ecd453fcaa6
+2022-08-14 12:30:46,893 [Thread-9    ] [INFO ]  Starting ImapFollowUpCheck: jackiecliff487@gmail.com
+2022-08-14 12:30:50,287 [Thread-9    ] [INFO ]  Looking for ImapFollowUpCheck: shahimrans64@gmail.com
+2022-08-14 12:30:50,617 [Thread-9    ] [INFO ]  ImapFollowUpCheck: jackiecliff487@gmail.com Added to FollowUp list 
+2022-08-14 12:30:50,617 [Thread-9    ] [INFO ]  Finishing ImapFollowUpCheck: jackiecliff487@gmail.com
+2022-08-14 12:30:51,895 [Thread-10   ] [INFO ]  Starting ImapFollowUpCheck: rosenfeld461@gmail.com
+2022-08-14 12:30:55,323 [Thread-10   ] [INFO ]  Looking for ImapFollowUpCheck: mdshahimranshovon@gmail.com
+2022-08-14 12:30:55,708 [Thread-10   ] [INFO ]  ImapFollowUpCheck: rosenfeld461@gmail.com Added to FollowUp list 
+2022-08-14 12:30:55,711 [Thread-10   ] [INFO ]  Finishing ImapFollowUpCheck: rosenfeld461@gmail.com
+2022-08-14 12:30:56,897 [ThreadPoolEx] [INFO ]  follow_up, Campaign Id - 4447baa7-22da-45e9-96b2-9ecd453fcaa6: 2 email to be sent
+2022-08-14 12:30:56,901 [jackiecliff4] [INFO ]  Starting FollowUpSend: jackiecliff487@gmail.com
+2022-08-14 12:31:01,902 [rosenfeld461] [INFO ]  Starting FollowUpSend: rosenfeld461@gmail.com
+2022-08-14 12:31:04,856 [jackiecliff4] [INFO ]  Exiting FollowUpSend: jackiecliff487@gmail.com
+2022-08-14 12:31:12,659 [rosenfeld461] [INFO ]  Exiting FollowUpSend: rosenfeld461@gmail.com
+2022-08-14 12:31:12,908 [ThreadPoolEx] [INFO ]  Saving followup report, Campaign Id - 4447baa7-22da-45e9-96b2-9ecd453fcaa6
+2022-08-14 12:31:12,941 [ThreadPoolEx] [INFO ]  Finishing Followup process, Campaign Id - 4447baa7-22da-45e9-96b2-9ecd453fcaa6
+2022-08-14 12:31:31,987 [Thread-13   ] [INFO ]  config updated
+2022-08-14 12:31:32,021 [Thread-14   ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 9
+ Len of Targets: 2
+ Delay: 0 - 10
+ Campaign ID: 652a7f88-185e-4e6f-aa11-43da2c5cc7aa
+ Add Custom Hostname: True
+2022-08-14 12:31:32,031 [MarkTargetAs] [INFO ]  Starting MarkTargetSentAirtable...
+2022-08-14 12:31:32,037 [Thread-14   ] [ERROR]  
+Starting Thread : Name - rosenfeld461@gmail.com
+Targets Count - 1
+2022-08-14 12:31:32,041 [Thread-14   ] [INFO ]  Length - 1 rosenfeld461@gmail.com
+2022-08-14 12:31:32,043 [Thread-14   ] [ERROR]  
+Starting Thread : Name - jackiecliff487@gmail.com
+Targets Count - 1
+2022-08-14 12:31:32,046 [Thread-14   ] [INFO ]  Length - 1 jackiecliff487@gmail.com
+2022-08-14 12:31:38,806 [jackiecliff4] [INFO ]  Sent - jackiecliff487@gmail.com shahimrans64@gmail.com
+2022-08-14 12:31:39,041 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-08-14 12:31:40,039 [MarkTargetAs] [INFO ]  formulas_with_desktop_id MarkTargetSentAirtable...
+2022-08-14 12:31:46,529 [rosenfeld461] [INFO ]  Sent - rosenfeld461@gmail.com mdshahimranshovon@gmail.com
+2022-08-14 12:31:47,051 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-08-14 12:31:47,059 [Thread-14   ] [INFO ]  Marking target as sent...
+2022-08-14 12:31:48,061 [Thread-14   ] [INFO ]  AddFollowUps starting...
+2022-08-14 12:31:48,067 [MarkTargetAs] [INFO ]  Completed MarkTargetSentAirtable...
+2022-08-14 12:31:48,117 [Thread-14   ] [INFO ]  AddFollowUps successful
+2022-08-14 12:31:48,119 [Thread-14   ] [INFO ]  Added job "follow_up" to job store "default"
+2022-08-14 12:31:48,120 [Thread-14   ] [INFO ]  FollowUp scheduled: 2022-08-14 12:31:56.759812 652a7f88-185e-4e6f-aa11-43da2c5cc7aa
+2022-08-14 12:31:56,762 [ThreadPoolEx] [INFO ]  Starting Followup process, Campaign ID - 652a7f88-185e-4e6f-aa11-43da2c5cc7aa
+2022-08-14 12:31:56,763 [APScheduler ] [INFO ]  Removed job 2f7a2ed0eabb47de8ec9e3d663302360
+2022-08-14 12:32:14,900 [Thread-14   ] [INFO ]  Sending Finished 652a7f88-185e-4e6f-aa11-43da2c5cc7aa
+2022-08-14 12:41:56,764 [ThreadPoolEx] [INFO ]  Waiting to start Followup process because campaign is running, Campaign ID - 652a7f88-185e-4e6f-aa11-43da2c5cc7aa
+2022-08-14 12:41:56,765 [ThreadPoolEx] [INFO ]  Starting Followup process again, Campaign ID - 652a7f88-185e-4e6f-aa11-43da2c5cc7aa
+2022-08-14 12:41:56,778 [Thread-19   ] [INFO ]  Starting ImapFollowUpCheck: jackiecliff487@gmail.com
+2022-08-14 12:41:59,810 [Thread-19   ] [INFO ]  Looking for ImapFollowUpCheck: shahimrans64@gmail.com
+2022-08-14 12:42:00,151 [Thread-19   ] [INFO ]  ImapFollowUpCheck: jackiecliff487@gmail.com Added to FollowUp list 
+2022-08-14 12:42:00,152 [Thread-19   ] [INFO ]  Finishing ImapFollowUpCheck: jackiecliff487@gmail.com
+2022-08-14 12:42:01,792 [Thread-20   ] [INFO ]  Starting ImapFollowUpCheck: rosenfeld461@gmail.com
+2022-08-14 12:42:05,053 [Thread-20   ] [INFO ]  Looking for ImapFollowUpCheck: mdshahimranshovon@gmail.com
+2022-08-14 12:42:05,396 [Thread-20   ] [INFO ]  ImapFollowUpCheck: rosenfeld461@gmail.com Added to FollowUp list 
+2022-08-14 12:42:05,397 [Thread-20   ] [INFO ]  Finishing ImapFollowUpCheck: rosenfeld461@gmail.com
+2022-08-14 12:42:06,802 [ThreadPoolEx] [INFO ]  follow_up, Campaign Id - 652a7f88-185e-4e6f-aa11-43da2c5cc7aa: 2 email to be sent
+2022-08-14 12:42:06,805 [jackiecliff4] [INFO ]  Starting FollowUpSend: jackiecliff487@gmail.com
+2022-08-14 12:42:11,816 [rosenfeld461] [INFO ]  Starting FollowUpSend: rosenfeld461@gmail.com
+2022-08-14 12:42:13,963 [jackiecliff4] [INFO ]  Exiting FollowUpSend: jackiecliff487@gmail.com
+2022-08-14 12:42:21,707 [rosenfeld461] [INFO ]  Exiting FollowUpSend: rosenfeld461@gmail.com
+2022-08-14 12:42:21,893 [ThreadPoolEx] [INFO ]  Saving followup report, Campaign Id - 652a7f88-185e-4e6f-aa11-43da2c5cc7aa
+2022-08-14 12:42:21,894 [ThreadPoolEx] [INFO ]  Finishing Followup process, Campaign Id - 652a7f88-185e-4e6f-aa11-43da2c5cc7aa
+2022-08-14 12:42:52,408 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 12:42:52,412 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 12:42:52,967 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 12:43:04,174 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 12:43:04,177 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 12:43:04,718 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 12:46:09,974 [Thread-4    ] [INFO ]  config updated
+2022-08-14 12:46:09,979 [Thread-5    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 9
+ Len of Targets: 2
+ Delay: 0 - 10
+ Campaign ID: 5f5520db-b274-4b9e-9bca-a78f5ce2088c
+ Add Custom Hostname: True
+2022-08-14 12:46:09,998 [MarkTargetAs] [INFO ]  Starting MarkTargetSentAirtable...
+2022-08-14 12:46:10,005 [Thread-5    ] [ERROR]  
+Starting Thread : Name - rosenfeld461@gmail.com
+Targets Count - 1
+2022-08-14 12:46:10,007 [Thread-5    ] [INFO ]  Length - 1 rosenfeld461@gmail.com
+2022-08-14 12:46:10,010 [Thread-5    ] [ERROR]  
+Starting Thread : Name - jackiecliff487@gmail.com
+Targets Count - 1
+2022-08-14 12:46:10,014 [Thread-5    ] [INFO ]  Length - 1 jackiecliff487@gmail.com
+2022-08-14 12:46:19,570 [rosenfeld461] [INFO ]  Sent - rosenfeld461@gmail.com mdshahimranshovon@gmail.com
+2022-08-14 12:46:21,008 [MarkTargetAs] [INFO ]  formulas_normal MarkTargetSentAirtable...
+2022-08-14 12:46:21,013 [jackiecliff4] [INFO ]  Sent - jackiecliff487@gmail.com shahimrans64@gmail.com
+2022-08-14 12:46:22,025 [Thread-5    ] [INFO ]  Marking target as sent...
+2022-08-14 12:46:25,050 [MarkTargetAs] [INFO ]  Completed MarkTargetSentAirtable...
+2022-08-14 12:51:47,043 [Thread-5    ] [INFO ]  Sending Finished 5f5520db-b274-4b9e-9bca-a78f5ce2088c
+2022-08-14 12:52:01,815 [MainThread  ] [INFO ]  Scheduler started
+2022-08-14 12:52:01,818 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-08-14 12:52:02,450 [MainThread  ] [INFO ]  Scheduler started

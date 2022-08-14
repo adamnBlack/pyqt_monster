@@ -1048,7 +1048,7 @@ if __name__ == '__main__':
     print("ran from here")
 else:
     global app
-    global GUI, mainWindow, myMC
+    global mainWindow, myMC
     app = QtWidgets.QApplication(sys.argv)
 
     mainWindow = MainWindow()
@@ -1058,6 +1058,9 @@ else:
     ) | QtCore.Qt.WindowMinimizeButtonHint | QtCore.Qt.WindowSystemMenuHint)
 
     GUI = MyGui(mainWindow)
+
+    global GUI
+
     mainWindow.showMaximized()
     # mainWindow.show()
 
