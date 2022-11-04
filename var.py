@@ -135,6 +135,8 @@ class AirtableConfig:
     table_name = ''
     use_desktop_id = False
     mark_sent_airtable = False
+    continuous_loading = False
+    continuous_loading_time_period = 24
 
     def __init__(self):
         pass
@@ -278,6 +280,8 @@ try:
     AirtableConfig.table_name = config['airtable']['table_name']
     AirtableConfig.use_desktop_id = config['airtable']['use_desktop_id']
     AirtableConfig.mark_sent_airtable = config['airtable']['mark_sent_airtable']
+    AirtableConfig.continuous_loading = config['airtable']['continuous_loading']
+    AirtableConfig.continuous_loading_time_period = config['airtable']['continuous_loading_time_period']
 except Exception as e:
     logger.info("Exception occurred at config loading : {}".format(e))
 

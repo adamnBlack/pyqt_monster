@@ -119,7 +119,6 @@ def test(send_to):
                 source="body")
             msg.attach(MIMEText(body, "html"))
             msg.attach(MIMEText(html_to_text(body), "plain"))
-
         else:
             body = utils.format_email(
                 var.compose_email_body, send['FIRSTFROMNAME'], send['LASTFROMNAME'],
@@ -137,11 +136,10 @@ def test(send_to):
         server.sendmail(send['EMAIL'], send_to, msg.as_string())
         server.quit()
         server.close()
-        print("done")
+        logger.info(f"Testing Done: send to - {send_to} sent_from - {send['EMAIL']}")
         return True
 
     except Exception as e:
-        print("Error at test send : {}".format(e))
         logger.error("Error at test send - {} - {}".format(send['EMAIL'], e))
         return False
 
@@ -514,7 +512,8 @@ class SMTP_(threading.Thread):
                     if count % 5 == 0 and var.check_for_blocks:
                         last_time = datetime.now()
                         elapsed_time = utils.difference_between_time(
-                            first_time, last_time)
+                            first_time, last_time
+                        )
 
                         imap_object = ImapCheckForBlocks(time_limit=elapsed_time, proxy_host=self.proxy_host,
                                                          proxy_port=self.proxy_port, proxy_type=socks.PROXY_TYPE_SOCKS5,

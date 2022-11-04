@@ -70,7 +70,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>4</number>
+       <number>2</number>
       </property>
       <property name="tabsClosable">
        <bool>false</bool>
@@ -2932,6 +2932,25 @@ QPushButton:pressed {
              <property name="text">
               <string>LOAD TARGET 
 FROM AIRTABLE</string>
+             </property>
+            </widget>
+           </item>
+           <item row="14" column="1">
+            <widget class="QCheckBox" name="checkBox_continuous_loading_airtable">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Continuous Loading </string>
              </property>
             </widget>
            </item>

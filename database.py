@@ -378,7 +378,7 @@ def db_insert_row():
 
 def file_to_db():
     session = get_session()
-    logger.error(f"File loading Config: {var.db_file_loading_config}")
+    logger.info(f"File loading Config: {var.db_file_loading_config}")
 
     group_header = ['FIRSTFROMNAME', 'LASTFROMNAME', 'EMAIL',
                     'EMAIL_PASS', 'PROXY:PORT', 'PROXY_USER', 'PROXY_PASS']
@@ -781,6 +781,8 @@ def startup_load_db(parent=None):
 
 
 class PullTargetAirtable(threading.Thread):
+    still_running = False
+
     def __init__(self):
         super().__init__()
         self.setDaemon(True)
@@ -789,6 +791,7 @@ class PullTargetAirtable(threading.Thread):
         self.table = Table(self.config.api_key, self.config.base_id, self.config.table_name)
 
     def run(self) -> None:
+        PullTargetAirtable.still_running = True
         try:
             logger.info("Starting pulling data from airtable")
             if self.config.use_desktop_id:
@@ -800,20 +803,28 @@ class PullTargetAirtable(threading.Thread):
 
             target_df = pd.DataFrame(targets)
 
-            var.target = target_df
+            if len(target_df) > 0:
+                var.target = target_df
+                # clear targets from db
+                clear_table(group_a=None, group_b=None, target=True)
 
-            # clear targets from db
-            clear_table(group_a=None, group_b=None, target=True)
+                # pandas to db
+                pandas_to_db(group_a=None, group_b=None, target=True)
+                var.command_q.put("self.update_db_table()")
 
-            # pandas to db
-            pandas_to_db(group_a=None, group_b=None, target=True)
-            var.command_q.put("self.update_db_table()")
+                logger.info("Completed pulling data from airtable")
+                alert("Pulling Data Done", title="Success", button="OK")
 
-            logger.info("Completed pulling data from airtable")
-            alert("Pulling Data Done", title="Success", button="OK")
+            else:
+                logger.info("Completed pulling data from airtable But It was empty.")
+                alert(text="Empty Table", title="Failed", button="OK")
+
         except Exception as e:
             logger.error(f"Error in {self.__class__.__name__}: {traceback.format_exc()}")
             alert(f"{e}", title=f"Error at {self.__class__.__name__}", button="OK")
+
+        finally:
+            PullTargetAirtable.still_running = False
 
     def get_data(self):
         logger.info(f"{self.__class__.__name__} - Downloading data from airtable without desktop id")

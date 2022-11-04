@@ -137,6 +137,14 @@ class MyMainClass:
         GUI.lineEdit_airtable_api_key.setText(var.AirtableConfig.api_key)
         GUI.checkBox_airtable_use_desktop_id.setChecked(var.AirtableConfig.use_desktop_id)
         GUI.checkBox_mark_sent_airtable.setChecked(var.AirtableConfig.mark_sent_airtable)
+        GUI.checkBox_continuous_loading_airtable.setChecked(var.AirtableConfig.continuous_loading)
+
+        self.continuous_loading_airtable_timer = QtCore.QTimer()
+        self.continuous_loading_airtable_timer.setInterval(var.AirtableConfig.continuous_loading_time_period*3600*1000)
+        self.continuous_loading_airtable_timer.timeout.connect(self.pull_target_from_airtable)
+
+        if var.AirtableConfig.continuous_loading:
+            self.schedule_airtable_loading()
 
         if var.campaign_group == "group_a":
             GUI.radioButton_campaign_group_a.setChecked(True)
@@ -189,6 +197,12 @@ class MyMainClass:
         GUI.checkBox_mark_sent_airtable.stateChanged.connect(
             self.update_airtable_config
         )
+        GUI.checkBox_continuous_loading_airtable.stateChanged.connect(
+            self.update_airtable_config
+        )
+        GUI.checkBox_continuous_loading_airtable.stateChanged.connect(
+            lambda: self.schedule_airtable_loading(flag=GUI.checkBox_continuous_loading_airtable.isChecked())
+        )
 
         GUI.pushButton_database_load_target_from_airtable.clicked.connect(
             self.pull_target_from_airtable
@@ -239,19 +253,29 @@ class MyMainClass:
 
         GUI.pushButton_add_row.clicked.connect(self.insert_row)
         GUI.pushButton_remove_row.clicked.connect(self.remove_row)
-        Thread(target=database.startup_load_db,
-               daemon=True, args=("dialog",)).start()
 
-        GUI.comboBox_date_sort.currentTextChanged.connect(self.date_sort)
+        Thread(
+            target=database.startup_load_db,
+            daemon=True, args=("dialog",)
+        ).start()
+
+        GUI.comboBox_date_sort.currentTextChanged.connect(
+            self.date_sort
+        )
         GUI.lineEdit_email_tracking_analytics_account.textChanged.connect(
-            self.update_email_tracking_link)
+            self.update_email_tracking_link
+        )
         GUI.lineEdit_email_tracking_campaign_name.textChanged.connect(
-            self.update_email_tracking_link)
+            self.update_email_tracking_link
+        )
 
         GUI.pushButton_configuration_save.clicked.connect(
-            self.configuration_save)
+            self.configuration_save
+        )
 
-        GUI.lineEdit_webhook_link.textChanged.connect(self.update_webhook_link)
+        GUI.lineEdit_webhook_link.textChanged.connect(
+            self.update_webhook_link
+        )
 
         GUI.pushButton_compose_zoomIn.clicked.connect(
             lambda: self.compose_zoomInOut("zoomIn"))
@@ -294,6 +318,20 @@ class MyMainClass:
                                      args=[GUI.comboBox_scheduled_campaign_list.itemData(
                                          GUI.comboBox_scheduled_campaign_list.currentIndex())]).start()
         )
+
+    def schedule_airtable_loading(self, flag=None):
+        if flag or flag is None:
+            logger.info(f"Continuous Loading airtable timer started. Interval - "
+                        f"{var.AirtableConfig.continuous_loading_time_period} hr")
+            self.continuous_loading_airtable_timer.start()
+            alert(text=f"Airtable Continuous Loading enabled. Interval - "
+                       f"{var.AirtableConfig.continuous_loading_time_period} hr", title="Alert", button="OK")
+        else:
+            self.stop_airtable_loading()
+
+    def stop_airtable_loading(self):
+        logger.info("Continuous Loading airtable timer stopped")
+        self.continuous_loading_airtable_timer.stop()
 
     def schedule_campaign(self):
         try:
@@ -391,6 +429,8 @@ class MyMainClass:
         var.AirtableConfig.table_name = GUI.lineEdit_airtable_table_name.text()
         var.AirtableConfig.use_desktop_id = True if GUI.checkBox_airtable_use_desktop_id.isChecked() else False
         var.AirtableConfig.mark_sent_airtable = True if GUI.checkBox_mark_sent_airtable.isChecked() else False
+        var.AirtableConfig.continuous_loading = True if GUI.checkBox_continuous_loading_airtable.isChecked() else False
+        self.configuration_save()
 
     def update_followup_body(self):
         var.followup_body = GUI.textBrowser_follow_up_body.toPlainText()

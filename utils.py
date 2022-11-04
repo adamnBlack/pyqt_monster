@@ -104,7 +104,9 @@ def update_config_json(alternative_name=None):
                     "base_id": var.AirtableConfig.base_id,
                     "table_name": var.AirtableConfig.table_name,
                     "use_desktop_id": var.AirtableConfig.use_desktop_id,
-                    "mark_sent_airtable": var.AirtableConfig.mark_sent_airtable
+                    "mark_sent_airtable": var.AirtableConfig.mark_sent_airtable,
+                    "continuous_loading": var.AirtableConfig.continuous_loading,
+                    "continuous_loading_time_period": var.AirtableConfig.continuous_loading_time_period
                 }
             }
         }
@@ -155,7 +157,9 @@ def get_config_json():
                     "base_id": var.AirtableConfig.base_id,
                     "table_name": var.AirtableConfig.table_name,
                     "use_desktop_id": var.AirtableConfig.use_desktop_id,
-                    "mark_sent_airtable": var.AirtableConfig.mark_sent_airtable
+                    "mark_sent_airtable": var.AirtableConfig.mark_sent_airtable,
+                    "continuous_loading": var.AirtableConfig.continuous_loading,
+                    "continuous_loading_time_period": var.AirtableConfig.continuous_loading_time_period
                 }
             }
         }
@@ -178,9 +182,7 @@ def format_email(text, FIRSTFROMNAME, LASTFROMNAME, one, two, three, four, five,
         text[0] = text[0] + f"<img src='{var.email_tracking_link()}'></body>"
         text = "".join(text)
         rid = uuid.uuid4()
-        # print(rid)
         text = text.replace('[**RID**]', str(rid))
-        # print(text)
 
     result = re.findall(r'\{.*?\}', text)
 
@@ -190,7 +192,7 @@ def format_email(text, FIRSTFROMNAME, LASTFROMNAME, one, two, three, four, five,
         text = text.replace(item, temp)
 
     if var.body_type == "Html":
-        text = text.replace('[LINEBREAK]', "<br>")  # replace linebreaks with
+        text = text.replace('[LINEBREAK]', "<br>\n")  # replace linebreaks with
     else:
         text = text.replace('[LINEBREAK]', "\n")
 

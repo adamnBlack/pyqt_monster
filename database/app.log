@@ -4515,3 +4515,425 @@ Targets Count - 1
 2022-08-15 01:07:27,460 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
 2022-08-15 01:07:28,199 [MainThread  ] [INFO ]  Scheduler started
 2022-08-15 01:07:39,470 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-10-06 10:45:55,192 [MainThread  ] [INFO ]  Scheduler started
+2022-10-06 10:45:55,302 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-10-06 10:45:59,302 [MainThread  ] [INFO ]  Scheduler started
+2022-10-06 10:50:02,548 [Thread-3    ] [ERROR]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2022-10-06 10:50:12,244 [Thread-4    ] [INFO ]  config updated
+2022-10-06 10:50:16,285 [rosenfeld461] [ERROR]  Error at downloading email - rosenfeld461@gmail.com - Error connecting to SOCKS5 proxy 20.197.190.177:23306: [WinError 10061] No connection could be made because the target machine actively refused it
+2022-10-06 10:56:23,779 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-10-06 15:22:02,786 [MainThread  ] [INFO ]  Scheduler started
+2022-10-06 15:22:02,802 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-10-06 15:22:06,599 [MainThread  ] [INFO ]  Scheduler started
+2022-10-06 15:22:18,806 [Thread-3    ] [INFO ]  config updated
+2022-10-06 15:22:28,496 [rosenfeld461] [ERROR]  Error at downloading email - rosenfeld461@gmail.com - Socket error: Connection closed unexpectedly
+2022-10-06 21:38:10,809 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-10-28 22:55:42,967 [MainThread  ] [INFO ]  Scheduler started
+2022-10-28 22:55:43,029 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-10-28 22:55:47,498 [MainThread  ] [INFO ]  Scheduler started
+2022-10-28 22:56:01,359 [Thread-3    ] [ERROR]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2022-10-28 22:56:28,653 [Thread-4    ] [ERROR]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2022-10-28 22:57:30,994 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-10-28 22:57:34,909 [MainThread  ] [INFO ]  Scheduler started
+2022-10-28 22:57:34,924 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-10-28 22:57:35,440 [MainThread  ] [INFO ]  Scheduler started
+2022-10-28 22:57:57,403 [Thread-3    ] [INFO ]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2022-10-28 22:59:05,591 [Thread-4    ] [ERROR]  Error at test send - Teresasimmonsy3@gmail.com - Socket error: 0x05: Connection refused
+2022-10-28 22:59:37,744 [Thread-5    ] [ERROR]  Error at test send - Teresasimmonsy3@gmail.com - Socket error: 0x05: Connection refused
+2022-10-28 23:06:23,375 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-10-28 23:07:01,554 [MainThread  ] [INFO ]  Scheduler started
+2022-10-28 23:07:01,554 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-10-28 23:07:02,117 [MainThread  ] [INFO ]  Scheduler started
+2022-10-28 23:08:11,619 [Thread-3    ] [INFO ]  config updated
+2022-10-28 23:08:48,128 [Thread-4    ] [INFO ]  config updated
+2022-10-28 23:15:08,242 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-10-28 23:15:12,324 [MainThread  ] [INFO ]  Scheduler started
+2022-10-28 23:15:12,327 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-10-28 23:15:12,856 [MainThread  ] [INFO ]  Scheduler started
+2022-10-28 23:26:51,405 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-10-28 23:26:56,892 [MainThread  ] [INFO ]  Scheduler started
+2022-10-28 23:26:56,895 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-10-28 23:26:57,430 [MainThread  ] [INFO ]  Scheduler started
+2022-10-28 23:29:46,747 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-02 11:04:57,620 [MainThread  ] [INFO ]  Scheduler started
+2022-11-02 11:04:57,651 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-02 11:05:01,433 [MainThread  ] [INFO ]  Scheduler started
+2022-11-02 11:06:11,880 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-02 23:37:54,279 [MainThread  ] [INFO ]  Scheduler started
+2022-11-02 23:37:54,339 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-02 23:37:57,599 [MainThread  ] [INFO ]  Scheduler started
+2022-11-02 23:59:50,163 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-03 18:34:44,557 [MainThread  ] [INFO ]  Scheduler started
+2022-11-03 18:34:44,619 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-03 18:34:48,757 [MainThread  ] [INFO ]  Scheduler started
+2022-11-03 20:32:22,215 [Thread-3    ] [INFO ]  config updated
+2022-11-03 20:32:23,115 [Thread-4    ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:23,116 [Thread-4    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:24,115 [Thread-5    ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:24,117 [Thread-5    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:25,118 [Thread-6    ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:25,120 [Thread-6    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:26,115 [Thread-7    ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:26,116 [Thread-7    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:26,902 [Thread-5    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:26,903 [Thread-5    ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:26,987 [Thread-5    ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:26,989 [Thread-5    ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:27,116 [Thread-8    ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:27,117 [Thread-8    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:28,115 [Thread-9    ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:28,116 [Thread-9    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:29,113 [Thread-10   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:29,114 [Thread-10   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:29,144 [Thread-6    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:29,145 [Thread-6    ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:29,204 [Thread-7    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:29,209 [Thread-7    ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:29,318 [Thread-6    ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:29,318 [Thread-6    ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:29,389 [Thread-7    ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:29,392 [Thread-7    ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:30,116 [Thread-11   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:30,117 [Thread-11   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:31,047 [Thread-4    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:31,049 [Thread-4    ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:31,113 [Thread-4    ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:31,115 [Thread-4    ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:31,117 [Thread-12   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:31,119 [Thread-12   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:31,608 [Thread-10   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:31,611 [Thread-10   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:31,669 [Thread-10   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:31,670 [Thread-10   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:32,115 [Thread-13   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:32,116 [Thread-13   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:32,510 [Thread-11   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:32,512 [Thread-11   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:32,584 [Thread-11   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:32,586 [Thread-11   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:33,115 [Thread-14   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:33,116 [Thread-14   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:34,010 [Thread-9    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:34,011 [Thread-9    ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:34,117 [Thread-15   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:34,121 [Thread-15   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:34,184 [Thread-9    ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:34,185 [Thread-9    ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:34,552 [Thread-13   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:34,557 [Thread-13   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:34,784 [Thread-13   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:34,785 [Thread-13   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:34,840 [Thread-12   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:34,841 [Thread-12   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:34,916 [Thread-8    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:34,917 [Thread-8    ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:35,001 [Thread-12   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:35,002 [Thread-12   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:35,117 [Thread-16   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:35,117 [Thread-16   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:35,216 [Thread-8    ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:35,216 [Thread-8    ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:35,483 [Thread-14   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:35,484 [Thread-14   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:35,543 [Thread-14   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:35,544 [Thread-14   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:36,114 [Thread-17   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:36,115 [Thread-17   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:36,457 [Thread-15   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:36,458 [Thread-15   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:36,523 [Thread-15   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:36,525 [Thread-15   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:37,114 [Thread-18   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:37,115 [Thread-18   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:37,453 [Thread-16   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:37,454 [Thread-16   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:37,518 [Thread-16   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:37,520 [Thread-16   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:38,116 [Thread-19   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:38,117 [Thread-19   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:39,115 [Thread-20   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:39,116 [Thread-20   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:39,985 [Thread-17   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:39,986 [Thread-17   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:40,116 [Thread-21   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:40,119 [Thread-21   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:40,252 [Thread-17   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:40,253 [Thread-17   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:40,654 [Thread-18   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:40,656 [Thread-18   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:40,721 [Thread-18   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:40,722 [Thread-18   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:40,971 [Thread-19   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:40,975 [Thread-19   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:41,046 [Thread-19   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:41,047 [Thread-19   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:41,116 [Thread-22   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:41,116 [Thread-22   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:41,744 [Thread-20   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:41,747 [Thread-20   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:41,811 [Thread-20   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:41,812 [Thread-20   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:42,116 [Thread-23   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:42,119 [Thread-23   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:43,052 [Thread-21   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:43,056 [Thread-21   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:43,117 [Thread-24   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:43,117 [Thread-24   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:43,122 [Thread-21   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:43,123 [Thread-21   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:43,894 [Thread-22   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:43,899 [Thread-22   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:43,965 [Thread-22   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:43,966 [Thread-22   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:44,117 [Thread-25   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:44,118 [Thread-25   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:45,115 [Thread-26   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:45,116 [Thread-26   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:45,882 [Thread-24   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:45,885 [Thread-24   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:46,028 [Thread-24   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:46,029 [Thread-24   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:46,116 [Thread-27   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:46,116 [Thread-27   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:46,378 [Thread-23   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:46,380 [Thread-23   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:46,442 [Thread-23   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:46,443 [Thread-23   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:47,116 [Thread-28   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:47,117 [Thread-28   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:48,115 [Thread-29   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:48,116 [Thread-29   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:48,211 [Thread-25   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:48,213 [Thread-25   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:48,292 [Thread-25   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:48,293 [Thread-25   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:49,115 [Thread-30   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:49,116 [Thread-30   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:49,145 [Thread-26   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:49,146 [Thread-26   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:49,210 [Thread-26   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:49,211 [Thread-26   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:49,756 [Thread-28   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:49,757 [Thread-28   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:49,822 [Thread-28   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:49,822 [Thread-28   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:50,063 [Thread-27   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:50,064 [Thread-27   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:50,116 [Thread-31   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:50,117 [Thread-31   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:50,127 [Thread-27   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:50,128 [Thread-27   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:51,116 [Thread-32   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:51,117 [Thread-32   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:51,744 [Thread-30   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:51,745 [Thread-30   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:51,804 [Thread-30   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:51,805 [Thread-30   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:52,115 [Thread-33   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:52,116 [Thread-33   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-03 20:32:52,376 [Thread-31   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:52,377 [Thread-31   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:52,446 [Thread-31   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:52,447 [Thread-31   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:52,791 [Thread-29   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-03 20:32:52,795 [Thread-29   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-03 20:32:52,868 [Thread-29   ] [INFO ]  Pandas to DB done!
+2022-11-03 20:32:52,869 [Thread-29   ] [INFO ]  Completed pulling data from airtable
+2022-11-03 20:32:53,115 [Thread-34   ] [INFO ]  Starting pulling data from airtable
+2022-11-03 20:32:53,117 [Thread-34   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-04 05:42:09,115 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 05:42:09,146 [MainThread  ] [INFO ]  Exception occurred at config loading : 'continuous_loading'
+2022-11-04 05:42:09,146 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-04 05:42:12,990 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 05:42:12,990 [MainThread  ] [INFO ]  Exception occurred at config loading : 'continuous_loading'
+2022-11-04 05:44:59,507 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-04 05:48:26,732 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 05:48:26,732 [MainThread  ] [INFO ]  Exception occurred at config loading : 'continuous_loading'
+2022-11-04 05:48:26,732 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-04 05:48:27,279 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 05:48:27,279 [MainThread  ] [INFO ]  Exception occurred at config loading : 'continuous_loading'
+2022-11-04 05:48:32,751 [MainThread  ] [INFO ]  Continuous Loading airtable timer started
+2022-11-04 05:48:32,752 [Thread-3    ] [INFO ]  config updated
+2022-11-04 05:49:32,743 [Thread-4    ] [INFO ]  Starting pulling data from airtable
+2022-11-04 05:49:32,745 [Thread-4    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-04 05:49:34,763 [Thread-4    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-04 05:49:34,765 [Thread-4    ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-04 05:49:35,145 [Thread-4    ] [INFO ]  Pandas to DB done!
+2022-11-04 05:49:35,146 [Thread-4    ] [INFO ]  Completed pulling data from airtable
+2022-11-04 05:50:28,753 [MainThread  ] [INFO ]  Continuous Loading airtable timer stopped
+2022-11-04 05:50:28,755 [Thread-5    ] [INFO ]  config updated
+2022-11-04 05:50:34,151 [MainThread  ] [INFO ]  Continuous Loading airtable timer started
+2022-11-04 05:50:34,152 [Thread-6    ] [INFO ]  config updated
+2022-11-04 05:51:34,151 [Thread-7    ] [INFO ]  Starting pulling data from airtable
+2022-11-04 05:51:34,153 [Thread-7    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-04 05:51:36,168 [Thread-7    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-04 05:51:36,168 [Thread-7    ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-04 05:51:36,566 [Thread-7    ] [INFO ]  Pandas to DB done!
+2022-11-04 05:51:36,568 [Thread-7    ] [INFO ]  Completed pulling data from airtable
+2022-11-04 05:52:34,149 [Thread-8    ] [INFO ]  Starting pulling data from airtable
+2022-11-04 05:52:34,150 [Thread-8    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-04 05:52:35,570 [Thread-8    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-04 05:52:35,573 [Thread-8    ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-04 05:52:35,990 [Thread-8    ] [INFO ]  Pandas to DB done!
+2022-11-04 05:52:35,992 [Thread-8    ] [INFO ]  Completed pulling data from airtable
+2022-11-04 05:53:27,303 [MainThread  ] [INFO ]  Continuous Loading airtable timer stopped
+2022-11-04 05:53:27,304 [Thread-9    ] [INFO ]  config updated
+2022-11-04 05:53:30,195 [MainThread  ] [INFO ]  Continuous Loading airtable timer started
+2022-11-04 05:53:30,196 [Thread-10   ] [INFO ]  config updated
+2022-11-04 05:54:30,202 [Thread-11   ] [INFO ]  Starting pulling data from airtable
+2022-11-04 05:54:30,204 [Thread-11   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-04 05:54:31,678 [Thread-11   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-04 05:54:31,680 [Thread-11   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-04 05:54:31,841 [Thread-11   ] [INFO ]  Pandas to DB done!
+2022-11-04 05:54:31,842 [Thread-11   ] [INFO ]  Completed pulling data from airtable
+2022-11-04 05:55:30,200 [Thread-12   ] [INFO ]  Starting pulling data from airtable
+2022-11-04 05:55:30,202 [Thread-12   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-04 05:55:31,662 [Thread-12   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-04 05:55:31,663 [Thread-12   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-04 05:55:31,817 [Thread-12   ] [INFO ]  Pandas to DB done!
+2022-11-04 05:55:31,819 [Thread-12   ] [INFO ]  Completed pulling data from airtable
+2022-11-04 05:56:30,192 [Thread-13   ] [INFO ]  Starting pulling data from airtable
+2022-11-04 05:56:30,193 [Thread-13   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-04 05:56:31,643 [Thread-13   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-04 05:56:31,647 [Thread-13   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-04 05:56:31,875 [Thread-13   ] [INFO ]  Pandas to DB done!
+2022-11-04 05:56:31,875 [Thread-13   ] [INFO ]  Completed pulling data from airtable
+2022-11-04 05:57:30,193 [Thread-14   ] [INFO ]  Starting pulling data from airtable
+2022-11-04 05:57:30,194 [Thread-14   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-04 05:57:32,220 [Thread-14   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-04 05:57:32,222 [Thread-14   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-04 05:57:32,286 [Thread-14   ] [INFO ]  Pandas to DB done!
+2022-11-04 05:57:32,286 [Thread-14   ] [INFO ]  Completed pulling data from airtable
+2022-11-04 05:58:30,202 [Thread-15   ] [INFO ]  Starting pulling data from airtable
+2022-11-04 05:58:30,203 [Thread-15   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-04 05:58:32,173 [Thread-15   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-04 05:58:32,174 [Thread-15   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-04 05:58:32,241 [Thread-15   ] [INFO ]  Pandas to DB done!
+2022-11-04 05:58:32,242 [Thread-15   ] [INFO ]  Completed pulling data from airtable
+2022-11-04 05:59:30,201 [Thread-16   ] [INFO ]  Starting pulling data from airtable
+2022-11-04 05:59:30,203 [Thread-16   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-04 05:59:32,190 [Thread-16   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-04 05:59:32,191 [Thread-16   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-04 05:59:32,579 [Thread-16   ] [INFO ]  Pandas to DB done!
+2022-11-04 05:59:32,580 [Thread-16   ] [INFO ]  Completed pulling data from airtable
+2022-11-04 06:00:30,194 [Thread-17   ] [INFO ]  Starting pulling data from airtable
+2022-11-04 06:00:30,195 [Thread-17   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-04 06:00:32,293 [Thread-17   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-04 06:00:32,295 [Thread-17   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-04 06:00:32,442 [Thread-17   ] [INFO ]  Pandas to DB done!
+2022-11-04 06:00:32,444 [Thread-17   ] [INFO ]  Completed pulling data from airtable
+2022-11-04 06:01:30,201 [Thread-18   ] [INFO ]  Starting pulling data from airtable
+2022-11-04 06:01:30,202 [Thread-18   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-04 06:01:32,157 [Thread-18   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-04 06:01:32,158 [Thread-18   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-04 06:01:32,337 [Thread-18   ] [INFO ]  Pandas to DB done!
+2022-11-04 06:01:32,337 [Thread-18   ] [INFO ]  Completed pulling data from airtable
+2022-11-04 06:02:30,194 [Thread-19   ] [INFO ]  Starting pulling data from airtable
+2022-11-04 06:02:30,195 [Thread-19   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-04 06:02:31,679 [Thread-19   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-04 06:02:31,679 [Thread-19   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-04 06:02:31,830 [Thread-19   ] [INFO ]  Pandas to DB done!
+2022-11-04 06:02:31,831 [Thread-19   ] [INFO ]  Completed pulling data from airtable
+2022-11-04 06:03:30,191 [Thread-20   ] [INFO ]  Starting pulling data from airtable
+2022-11-04 06:03:30,193 [Thread-20   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-04 06:03:32,129 [Thread-20   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-04 06:03:32,130 [Thread-20   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-04 06:03:32,552 [Thread-20   ] [INFO ]  Pandas to DB done!
+2022-11-04 06:03:32,552 [Thread-20   ] [INFO ]  Completed pulling data from airtable
+2022-11-04 06:04:30,199 [Thread-21   ] [INFO ]  Starting pulling data from airtable
+2022-11-04 06:04:30,200 [Thread-21   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-04 06:04:31,742 [Thread-21   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-04 06:04:31,743 [Thread-21   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-04 06:04:32,553 [Thread-21   ] [INFO ]  Pandas to DB done!
+2022-11-04 06:04:32,553 [Thread-21   ] [INFO ]  Completed pulling data from airtable
+2022-11-04 06:05:30,201 [Thread-22   ] [INFO ]  Starting pulling data from airtable
+2022-11-04 06:05:30,202 [Thread-22   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-04 06:05:31,722 [Thread-22   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-04 06:05:31,722 [Thread-22   ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-04 06:05:31,886 [Thread-22   ] [INFO ]  Pandas to DB done!
+2022-11-04 06:05:31,887 [Thread-22   ] [INFO ]  Completed pulling data from airtable
+2022-11-04 06:05:44,125 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-04 06:13:01,588 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 06:13:01,592 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-04 06:13:02,154 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 06:13:02,456 [MainThread  ] [INFO ]  Continuous Loading airtable timer started
+2022-11-04 06:13:51,782 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-04 06:14:58,155 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 06:14:58,159 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-04 06:14:58,713 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 06:14:59,003 [MainThread  ] [INFO ]  Continuous Loading airtable timer started
+2022-11-04 06:15:59,014 [Thread-3    ] [INFO ]  Starting pulling data from airtable
+2022-11-04 06:15:59,017 [Thread-3    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-04 06:16:00,665 [Thread-3    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-04 06:16:00,667 [Thread-3    ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-04 06:16:01,002 [Thread-3    ] [INFO ]  Pandas to DB done!
+2022-11-04 06:16:01,003 [Thread-3    ] [INFO ]  Completed pulling data from airtable
+2022-11-04 06:16:19,226 [MainThread  ] [INFO ]  Continuous Loading airtable timer stopped
+2022-11-04 06:16:19,227 [Thread-4    ] [INFO ]  config updated
+2022-11-04 06:16:21,078 [Thread-5    ] [INFO ]  Starting pulling data from airtable
+2022-11-04 06:16:21,079 [Thread-5    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-04 06:16:23,139 [Thread-5    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-04 06:16:23,139 [Thread-5    ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-04 06:16:23,288 [Thread-5    ] [INFO ]  Pandas to DB done!
+2022-11-04 06:16:23,291 [Thread-5    ] [INFO ]  Completed pulling data from airtable
+2022-11-04 06:16:45,874 [MainThread  ] [INFO ]  Continuous Loading airtable timer started
+2022-11-04 06:16:45,874 [Thread-6    ] [INFO ]  config updated
+2022-11-04 06:17:45,872 [Thread-7    ] [INFO ]  Starting pulling data from airtable
+2022-11-04 06:17:45,874 [Thread-7    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-04 06:17:48,074 [Thread-7    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-04 06:17:48,075 [Thread-7    ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-04 06:17:48,214 [Thread-7    ] [INFO ]  Pandas to DB done!
+2022-11-04 06:17:48,216 [Thread-7    ] [INFO ]  Completed pulling data from airtable
+2022-11-04 06:17:55,005 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-04 06:52:06,065 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 06:52:06,070 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-04 06:52:07,492 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 06:53:19,557 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 06:53:19,561 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-04 06:53:20,128 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 06:53:41,570 [MainThread  ] [INFO ]  Continuous Loading airtable timer started
+2022-11-04 06:53:41,570 [Thread-3    ] [INFO ]  config updated
+2022-11-04 06:53:47,557 [MainThread  ] [INFO ]  Continuous Loading airtable timer stopped
+2022-11-04 06:53:47,557 [Thread-4    ] [INFO ]  config updated
+2022-11-04 06:54:40,110 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-04 06:54:43,302 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 06:54:43,316 [MainThread  ] [INFO ]  Exception occurred at config loading : 'continuous_loading'
+2022-11-04 06:54:43,318 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-04 06:54:43,928 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 06:54:43,930 [MainThread  ] [INFO ]  Exception occurred at config loading : 'continuous_loading'
+2022-11-04 06:54:48,334 [MainThread  ] [INFO ]  Continuous Loading airtable timer started
+2022-11-04 06:54:48,334 [Thread-3    ] [INFO ]  config updated
+2022-11-04 06:55:00,210 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-04 06:55:38,214 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 06:55:38,217 [MainThread  ] [INFO ]  Exception occurred at config loading : 'continuous_loading'
+2022-11-04 06:55:38,219 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-04 06:55:38,800 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 06:55:38,802 [MainThread  ] [INFO ]  Exception occurred at config loading : 'continuous_loading'
+2022-11-04 06:55:43,391 [MainThread  ] [INFO ]  Continuous Loading airtable timer started
+2022-11-04 06:55:43,393 [Thread-3    ] [INFO ]  config updated
+2022-11-04 06:56:20,126 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-04 06:56:24,012 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 06:56:24,014 [MainThread  ] [INFO ]  Exception occurred at config loading : 'continuous_loading'
+2022-11-04 06:56:24,016 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-04 06:56:24,619 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 06:56:24,623 [MainThread  ] [INFO ]  Exception occurred at config loading : 'continuous_loading'
+2022-11-04 06:56:36,067 [MainThread  ] [INFO ]  Continuous Loading airtable timer started
+2022-11-04 06:56:36,068 [Thread-3    ] [INFO ]  config updated
+2022-11-04 06:56:48,850 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-04 06:58:28,676 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 06:58:28,680 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-04 06:58:29,249 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 06:58:29,507 [MainThread  ] [INFO ]  Continuous Loading airtable timer started
+2022-11-04 07:00:02,909 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-04 07:03:13,589 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 07:03:13,592 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-04 07:03:14,163 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 07:03:14,400 [MainThread  ] [INFO ]  Continuous Loading airtable timer started. Interval - 24
+2022-11-04 07:03:33,489 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-04 07:08:39,146 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 07:08:39,149 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-04 07:08:39,714 [MainThread  ] [INFO ]  Scheduler started
+2022-11-04 07:08:39,980 [MainThread  ] [INFO ]  Continuous Loading airtable timer started. Interval - 24 hr
+2022-11-04 07:08:46,559 [MainThread  ] [INFO ]  Continuous Loading airtable timer stopped
+2022-11-04 07:08:46,559 [Thread-3    ] [INFO ]  config updated
+2022-11-04 07:11:41,949 [MainThread  ] [INFO ]  Scheduler has been shut down
