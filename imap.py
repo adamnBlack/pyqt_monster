@@ -279,6 +279,8 @@ class ImapFollowUpCheck(ImapBase, threading.Thread):
 
 
 class IMAP_(threading.Thread):
+    auto_fire_responses_enabled = False
+
     def __init__(self, threadID, name, proxy_host, proxy_port, proxy_type, proxy_user, proxy_pass, imap_user, imap_pass,
                  FIRSTFROMNAME, LASTFROMNAME, targets, responses_webhook_enabled):
         threading.Thread.__init__(self)
@@ -314,13 +316,20 @@ class IMAP_(threading.Thread):
 
             imap.login(self.imap_user, self.imap_pass)
             # print(self.folder, self.category)
-            imap.select("Inbox", readonly=True)
 
-            objDate = datetime.strptime(var.date, '%m/%d/%Y')
-            offset_naive_date = objDate
+            if IMAP_.auto_fire_responses_enabled:
+                flags = ['UNSEEN']
+                imap.select("Inbox")
+                obj_date = datetime.now() - timedelta(1)
+            else:
+                flags = ['SEEN', 'UNSEEN']
+                imap.select("Inbox", readonly=True)
+                obj_date = datetime.strptime(var.date, '%m/%d/%Y')
+
+            offset_naive_date = obj_date
             offset_aware_date = utc_to_local(offset_naive_date)
 
-            for item in ['SEEN', 'UNSEEN']:
+            for item in flags:
                 # if self.category:
                 #     tmp, data = imap.search(None,
                 #             '({} SINCE "{}" X-GM-RAW "Category:{}")'.format(
@@ -329,7 +338,7 @@ class IMAP_(threading.Thread):
                 #     tmp, data = imap.search(None, '({} SINCE "{}")'.format(item, objDate.strftime('%d-%b-%Y')))
 
                 tmp, data = imap.search(None, '({} SINCE "{}")'.format(
-                    item, objDate.strftime('%d-%b-%Y')))
+                    item, obj_date.strftime('%d-%b-%Y')))
 
                 for num in data[0].split():
                     if var.stop_download:
@@ -360,7 +369,6 @@ class IMAP_(threading.Thread):
                     try:
                         body = body.decode("utf-8", 'ignore')
                     except:
-                        # print(body)
                         body = body
 
                     subject = email.header.make_header(
@@ -383,7 +391,8 @@ class IMAP_(threading.Thread):
                             email.utils.parseaddr(email_message['To'])[1]))
                         )
                         mail_date = email.utils.parsedate_to_datetime(
-                            email_message['Date'])
+                            email_message['Date']
+                        )
 
                         t_dict = {
                             'uid': uid,
@@ -410,48 +419,50 @@ class IMAP_(threading.Thread):
 
                         }
 
-                        # print(from_name, from_mail, to_name, to_mail, subject, body)
-                        print("utc - ", utc_to_local(mail_date),
-                              "| Non utc - ", mail_date)
-
                         try:
                             if mail_date.tzinfo:
-                                print("Date is offset aware.")
+                                # print("Date is offset aware.")
 
                                 if offset_aware_date <= mail_date:
                                     t_dict['date'] = utc_to_local(mail_date)
                                     var.email_q.put(t_dict.copy())
+                                    self.webhook_process(t_dict)
                                     var.total_email_downloaded += 1
                                 else:
-                                    print("From previous date.")
+                                    pass
+                                    # print("From previous date.")
                             else:
-                                print("Date is offset naive.")
+                                # print("Date is offset naive.")
 
                                 if offset_naive_date <= mail_date:
                                     t_dict['date'] = utc_to_local(mail_date)
                                     var.email_q.put(t_dict.copy())
+                                    self.webhook_process(t_dict)
                                     var.total_email_downloaded += 1
                                 else:
-                                    print("From previous date offset naive.")
+                                    pass
+                                    # print("From previous date offset naive.")
 
                         except Exception as e:
                             self.logger.error(
-                                f"Error on Imap download {self.imap_user} : {e}")
+                                f"Error on Imap download {self.imap_user} : {traceback.format_exc()}")
 
-                        if self.responses_webhook_enabled and t_dict['from_mail'] in self.targets:
-                            t_dict["date"] = str(t_dict["date"])
-                            webhook.inbox_q.put(t_dict.copy())
 
             imap.close()
             imap.logout()
         except Exception as e:
             var.email_failed += 1
-            print("error at Imap - {} - {}".format(self.name, e))
             self.logger.error(
-                "Error at downloading email - {} - {}".format(self.imap_user, e))
+                "Error at downloading email - {} - {}".format(self.imap_user, traceback.format_exc()))
         finally:
             var.acc_finished += 1
             var.thread_open -= 1
+
+    def webhook_process(self, t_dict):
+        if self.responses_webhook_enabled and \
+                (t_dict['from_mail'] in self.targets or IMAP_.auto_fire_responses_enabled):
+            t_dict["date"] = str(t_dict["date"])
+            webhook.inbox_q.put(t_dict.copy())
 
 
 def main(group):
@@ -503,16 +514,11 @@ def main(group):
             while var.thread_open >= var.limit_of_thread and var.stop_download == False:
                 time.sleep(1)
 
-            print(index, name, proxy_host, proxy_port,
-                  proxy_type, proxy_user, proxy_pass, imap_user,
-                  imap_pass, FIRSTFROMNAME, LASTFROMNAME)
-
             IMAP_(index, name, proxy_host, proxy_port,
                   proxy_type, proxy_user, proxy_pass, imap_user,
                   imap_pass, FIRSTFROMNAME, LASTFROMNAME, targets, responses_webhook_enabled).start()
 
         except Exception as e:
-            print("Error at Imap thread open - {} - {}".format(name, e))
             logger.error("Error at Imap thread open - {} - {}".format(name, e))
 
     while var.thread_open != 0 and not var.stop_download:
@@ -528,4 +534,4 @@ def main(group):
     var.download_email_status = False
     # alert(text='Total Emails Downloaded : {}\nAccounts Failed : {}\ncheck app.log'.\
     #             format(var.total_email_downloaded, var.email_failed), title='Alert', button='OK')
-    print("Downloading finished")
+    logger.info("Downloading finished")

@@ -12,7 +12,7 @@
             "analytics_account": "UA-33237782-1",
             "campaign_name": "Teas fdsg 3442_"
         },
-        "webhook_link": "https://webhook.site/a39236eb-211f-4556-9e8d-7a48edbc5eba",
+        "webhook_link": "https://webhook.site/07411cef-49c8-4512-acac-41ddbb1df260",
         "check_for_blocks": false,
         "remove_email_from_target": false,
         "enable_webhook": false,
@@ -25,6 +25,7 @@
             "sada"
         ],
         "responses_webhook_enabled": false,
+        "auto_fire_responses_webhook": true,
         "followup_enabled": false,
         "followup_days": 0.0001,
         "followup_subject": "Follow Up",

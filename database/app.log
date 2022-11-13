@@ -4937,3 +4937,151 @@ Targets Count - 1
 2022-11-04 07:08:46,559 [MainThread  ] [INFO ]  Continuous Loading airtable timer stopped
 2022-11-04 07:08:46,559 [Thread-3    ] [INFO ]  config updated
 2022-11-04 07:11:41,949 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-12 12:37:48,491 [MainThread  ] [INFO ]  Scheduler started
+2022-11-12 12:37:48,540 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-12 12:37:51,996 [MainThread  ] [INFO ]  Scheduler started
+2022-11-12 12:47:50,312 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-13 21:46:07,584 [MainThread  ] [INFO ]  Scheduler started
+2022-11-13 21:46:07,647 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-13 21:46:11,718 [MainThread  ] [INFO ]  Scheduler started
+2022-11-13 21:46:27,156 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-13 22:00:43,760 [MainThread  ] [INFO ]  Scheduler started
+2022-11-13 22:00:43,764 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-13 22:00:44,440 [MainThread  ] [INFO ]  Scheduler started
+2022-11-13 22:05:20,349 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-13 22:05:23,574 [MainThread  ] [INFO ]  Scheduler started
+2022-11-13 22:05:23,579 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-13 22:05:24,251 [MainThread  ] [INFO ]  Scheduler started
+2022-11-13 22:05:30,572 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-11-13 22:06:28,574 [Thread-3    ] [INFO ]  auto_fire_responses_webhook started
+2022-11-13 22:06:28,577 [Thread-3    ] [INFO ]  auto_fire_responses_webhook finished
+2022-11-13 22:06:39,669 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer stopped
+2022-11-13 22:06:49,619 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-11-13 22:06:50,876 [Thread-4    ] [INFO ]  config updated
+2022-11-13 22:06:53,746 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-13 22:06:57,342 [MainThread  ] [INFO ]  Scheduler started
+2022-11-13 22:06:57,346 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-13 22:06:58,015 [MainThread  ] [INFO ]  Scheduler started
+2022-11-13 22:06:58,297 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-11-13 22:07:56,289 [Thread-4    ] [INFO ]  auto_fire_responses_webhook started
+2022-11-13 22:07:56,292 [Thread-4    ] [INFO ]  auto_fire_responses_webhook finished
+2022-11-13 22:08:54,288 [Thread-5    ] [INFO ]  auto_fire_responses_webhook started
+2022-11-13 22:08:54,290 [Thread-5    ] [INFO ]  auto_fire_responses_webhook finished
+2022-11-13 22:09:52,288 [Thread-6    ] [INFO ]  auto_fire_responses_webhook started
+2022-11-13 22:09:52,291 [Thread-6    ] [INFO ]  auto_fire_responses_webhook finished
+2022-11-13 22:10:50,289 [Thread-7    ] [INFO ]  auto_fire_responses_webhook started
+2022-11-13 22:10:50,294 [Thread-7    ] [INFO ]  auto_fire_responses_webhook finished
+2022-11-13 22:11:38,495 [Thread-8    ] [INFO ]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2022-11-13 22:11:48,289 [Thread-9    ] [INFO ]  auto_fire_responses_webhook started
+2022-11-13 22:11:48,291 [Thread-9    ] [INFO ]  auto_fire_responses_webhook finished
+2022-11-13 22:11:58,204 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer stopped
+2022-11-13 22:13:29,383 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-13 22:13:32,843 [MainThread  ] [INFO ]  Scheduler started
+2022-11-13 22:13:32,846 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-13 22:13:33,511 [MainThread  ] [INFO ]  Scheduler started
+2022-11-13 22:13:33,788 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-11-13 22:14:31,789 [Thread-3    ] [INFO ]  auto_fire_responses_webhook started
+2022-11-13 22:14:41,075 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-13 22:27:01,768 [MainThread  ] [INFO ]  Scheduler started
+2022-11-13 22:27:01,770 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-13 22:27:02,440 [MainThread  ] [INFO ]  Scheduler started
+2022-11-13 22:27:02,728 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-11-13 22:27:09,856 [Thread-3    ] [INFO ]  config updated
+2022-11-13 22:28:00,731 [Thread-4    ] [INFO ]  auto_fire_responses_webhook started
+2022-11-13 22:28:03,931 [saidunuhu579] [ERROR]  Error at downloading email - saidunuhu579@gmail.com - strptime() argument 1 must be str, not datetime.datetime
+2022-11-13 22:28:04,173 [lithbello60@] [ERROR]  Error at downloading email - lithbello60@gmail.com - strptime() argument 1 must be str, not datetime.datetime
+2022-11-13 22:28:04,392 [zhalilu1992@] [ERROR]  Error at downloading email - zhalilu1992@gmail.com - strptime() argument 1 must be str, not datetime.datetime
+2022-11-13 22:28:04,624 [seyiowolabi4] [ERROR]  Error at downloading email - seyiowolabi487@gmail.com - strptime() argument 1 must be str, not datetime.datetime
+2022-11-13 22:28:05,045 [clementidakp] [ERROR]  Error at downloading email - clementidakpo@gmail.com - strptime() argument 1 must be str, not datetime.datetime
+2022-11-13 22:28:10,748 [Thread-4    ] [INFO ]  Downloading finished
+2022-11-13 22:28:10,750 [Thread-4    ] [INFO ]  auto_fire_responses_webhook finished
+2022-11-13 22:28:18,136 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-13 22:32:51,418 [MainThread  ] [INFO ]  Scheduler started
+2022-11-13 22:32:51,422 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-13 22:32:52,091 [MainThread  ] [INFO ]  Scheduler started
+2022-11-13 22:32:52,370 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-11-13 22:33:50,365 [Thread-3    ] [INFO ]  auto_fire_responses_webhook started
+2022-11-13 22:33:52,915 [saidunuhu579] [ERROR]  Error at downloading email - saidunuhu579@gmail.com - replace() takes no keyword arguments
+2022-11-13 22:33:53,051 [lithbello60@] [ERROR]  Error at downloading email - lithbello60@gmail.com - replace() takes no keyword arguments
+2022-11-13 22:33:53,428 [zhalilu1992@] [ERROR]  Error at downloading email - zhalilu1992@gmail.com - replace() takes no keyword arguments
+2022-11-13 22:33:53,727 [seyiowolabi4] [ERROR]  Error at downloading email - seyiowolabi487@gmail.com - replace() takes no keyword arguments
+2022-11-13 22:33:54,094 [clementidakp] [ERROR]  Error at downloading email - clementidakpo@gmail.com - replace() takes no keyword arguments
+2022-11-13 22:33:59,378 [Thread-3    ] [INFO ]  Downloading finished
+2022-11-13 22:33:59,383 [Thread-3    ] [INFO ]  auto_fire_responses_webhook finished
+2022-11-13 22:34:42,078 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-13 22:34:44,832 [MainThread  ] [INFO ]  Scheduler started
+2022-11-13 22:34:44,835 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-13 22:34:45,508 [MainThread  ] [INFO ]  Scheduler started
+2022-11-13 22:34:45,798 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-11-13 22:35:43,789 [Thread-3    ] [INFO ]  auto_fire_responses_webhook started
+2022-11-13 22:35:46,337 [lithbello60@] [ERROR]  Error at downloading email - lithbello60@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\imap.py", line 331, in run
+    offset_aware_date = utc_to_local(offset_naive_date)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\imap.py", line 19, in utc_to_local
+    return utc_dt.replace(tzinfo=timezone.utc).astimezone(tz=None)
+TypeError: replace() takes no keyword arguments
+
+2022-11-13 22:35:46,509 [saidunuhu579] [ERROR]  Error at downloading email - saidunuhu579@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\imap.py", line 331, in run
+    offset_aware_date = utc_to_local(offset_naive_date)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\imap.py", line 19, in utc_to_local
+    return utc_dt.replace(tzinfo=timezone.utc).astimezone(tz=None)
+TypeError: replace() takes no keyword arguments
+
+2022-11-13 22:35:47,035 [seyiowolabi4] [ERROR]  Error at downloading email - seyiowolabi487@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\imap.py", line 331, in run
+    offset_aware_date = utc_to_local(offset_naive_date)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\imap.py", line 19, in utc_to_local
+    return utc_dt.replace(tzinfo=timezone.utc).astimezone(tz=None)
+TypeError: replace() takes no keyword arguments
+
+2022-11-13 22:35:47,063 [clementidakp] [ERROR]  Error at downloading email - clementidakpo@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\imap.py", line 331, in run
+    offset_aware_date = utc_to_local(offset_naive_date)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\imap.py", line 19, in utc_to_local
+    return utc_dt.replace(tzinfo=timezone.utc).astimezone(tz=None)
+TypeError: replace() takes no keyword arguments
+
+2022-11-13 22:35:47,123 [zhalilu1992@] [ERROR]  Error at downloading email - zhalilu1992@gmail.com - Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\imap.py", line 331, in run
+    offset_aware_date = utc_to_local(offset_naive_date)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\imap.py", line 19, in utc_to_local
+    return utc_dt.replace(tzinfo=timezone.utc).astimezone(tz=None)
+TypeError: replace() takes no keyword arguments
+
+2022-11-13 22:35:52,805 [Thread-3    ] [INFO ]  Downloading finished
+2022-11-13 22:35:52,805 [Thread-3    ] [INFO ]  auto_fire_responses_webhook finished
+2022-11-13 22:35:53,973 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-13 22:37:08,519 [MainThread  ] [INFO ]  Scheduler started
+2022-11-13 22:37:08,522 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-13 22:37:09,192 [MainThread  ] [INFO ]  Scheduler started
+2022-11-13 22:37:09,486 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-11-13 22:38:07,494 [Thread-3    ] [INFO ]  auto_fire_responses_webhook started
+2022-11-13 22:38:18,510 [Thread-3    ] [INFO ]  Downloading finished
+2022-11-13 22:38:18,511 [Thread-3    ] [INFO ]  auto_fire_responses_webhook finished
+2022-11-13 22:38:36,975 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-13 22:38:48,547 [MainThread  ] [INFO ]  Scheduler started
+2022-11-13 22:38:48,551 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-13 22:38:49,221 [MainThread  ] [INFO ]  Scheduler started
+2022-11-13 22:38:49,505 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-11-13 22:39:47,506 [Thread-3    ] [INFO ]  auto_fire_responses_webhook started
+2022-11-13 22:40:03,525 [Thread-3    ] [INFO ]  Downloading finished
+2022-11-13 22:40:03,528 [Thread-3    ] [INFO ]  auto_fire_responses_webhook finished
+2022-11-13 22:40:45,505 [Thread-10   ] [INFO ]  auto_fire_responses_webhook started
+2022-11-13 22:40:55,520 [Thread-10   ] [INFO ]  Downloading finished
+2022-11-13 22:40:55,523 [Thread-10   ] [INFO ]  auto_fire_responses_webhook finished
+2022-11-13 22:41:43,505 [Thread-17   ] [INFO ]  auto_fire_responses_webhook started
+2022-11-13 22:41:53,517 [Thread-17   ] [INFO ]  Downloading finished
+2022-11-13 22:41:53,518 [Thread-17   ] [INFO ]  auto_fire_responses_webhook finished
+2022-11-13 22:42:41,505 [Thread-24   ] [INFO ]  auto_fire_responses_webhook started
+2022-11-13 22:42:51,520 [Thread-24   ] [INFO ]  Downloading finished
+2022-11-13 22:42:51,523 [Thread-24   ] [INFO ]  auto_fire_responses_webhook finished
+2022-11-13 22:43:39,504 [Thread-31   ] [INFO ]  auto_fire_responses_webhook started
+2022-11-13 22:43:49,515 [Thread-31   ] [INFO ]  Downloading finished
+2022-11-13 22:43:49,516 [Thread-31   ] [INFO ]  auto_fire_responses_webhook finished
+2022-11-13 22:44:37,505 [Thread-38   ] [INFO ]  auto_fire_responses_webhook started
+2022-11-13 22:44:47,519 [Thread-38   ] [INFO ]  Downloading finished
+2022-11-13 22:44:47,520 [Thread-38   ] [INFO ]  auto_fire_responses_webhook finished
+2022-11-13 22:45:35,505 [Thread-45   ] [INFO ]  auto_fire_responses_webhook started
+2022-11-13 22:45:45,547 [Thread-45   ] [INFO ]  Downloading finished
+2022-11-13 22:45:45,549 [Thread-45   ] [INFO ]  auto_fire_responses_webhook finished

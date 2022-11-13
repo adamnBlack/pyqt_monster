@@ -124,6 +124,19 @@ class MyMainClass:
         GUI.checkBox_email_tracking.setChecked(var.email_tracking_state)
         GUI.checkBox_check_for_blocks.setChecked(var.check_for_blocks)
         GUI.checkBox_responses_webhook.setChecked(var.responses_webhook_enabled)
+        GUI.checkBox_auto_fire_responses_webhook.setChecked(var.auto_fire_responses_webhook)
+
+        self.auto_fire_responses_webhook_timer = QtCore.QTimer()
+        self.auto_fire_responses_webhook_timer.setInterval(
+            var.auto_fire_responses_webhook_interval * 3600 * 1000
+        )
+        self.auto_fire_responses_webhook_timer.timeout.connect(
+            lambda: threading.Thread(target=self.fire_responses_webhook, daemon=True, args=[]).start()
+        )
+
+        if var.auto_fire_responses_webhook:
+            self.start_auto_fire_responses_timer()
+
         GUI.checkBox_configuration_followup_enabled.setChecked(var.followup_enabled)
 
         GUI.lineEdit_configuration_followup_days.setText(str(var.followup_days))
@@ -154,6 +167,12 @@ class MyMainClass:
         GUI.checkBox_responses_webhook.stateChanged.connect(
             self.update_checkbox_status
         )
+        GUI.checkBox_auto_fire_responses_webhook.stateChanged.connect(
+            self.update_checkbox_status
+        )
+        GUI.checkBox_auto_fire_responses_webhook.stateChanged.connect(
+            self.start_auto_fire_responses_timer
+        )
         GUI.checkBox_check_for_blocks.stateChanged.connect(
             self.update_checkbox_status
         )
@@ -181,7 +200,6 @@ class MyMainClass:
         GUI.pushButton_follow_up_save.clicked.connect(
             self.configuration_save
         )
-
         GUI.lineEdit_airtable_base_id.textChanged.connect(
             self.update_airtable_config
         )
@@ -319,6 +337,37 @@ class MyMainClass:
                                          GUI.comboBox_scheduled_campaign_list.currentIndex())]).start()
         )
 
+    def start_auto_fire_responses_timer(self):
+        if GUI.checkBox_auto_fire_responses_webhook.isChecked():
+            logger.info("auto_fire_responses_webhook timer started")
+            self.auto_fire_responses_webhook_timer.start()
+        else:
+            self.stop_auto_fire_responses_timer()
+
+    def stop_auto_fire_responses_timer(self):
+        logger.info("auto_fire_responses_webhook timer stopped")
+        self.auto_fire_responses_webhook_timer.stop()
+
+    def fire_responses_webhook(self):
+        logger.info("auto_fire_responses_webhook started")
+        try:
+            var.total_email = 0
+            var.thread_open = 0
+            var.acc_finished = 0
+            var.stop_download = False
+            groups = pd.concat([var.group_a.copy(), var.group_b.copy()])
+            var.download_email_status = True
+            var.responses_webhook_enabled = True
+            imap.IMAP_.auto_fire_responses_enabled = True
+            imap.main(groups)
+            imap.IMAP_.auto_fire_responses_enabled = False
+            var.responses_webhook_enabled = False
+            var.download_email_status = False
+        except Exception as e:
+            logger.error(f"auto_fire_responses_webhook error: {traceback.format_exc()}")
+        finally:
+            logger.info("auto_fire_responses_webhook finished")
+
     def schedule_airtable_loading(self, flag=None):
         if flag or flag is None:
             logger.info(f"Continuous Loading airtable timer started. Interval - "
@@ -360,7 +409,8 @@ class MyMainClass:
 
             result = confirm(f"This campaign is going to take approximately "
                              f"{maximum_duration:.4f} hours to complete.\n"
-                             f"And this campaign will be scheduled at {scheduled_time.strftime('%m/%d/%Y, %H:%M:%S')}. "
+                             f"And this campaign will be scheduled at "
+                             f"{scheduled_time.strftime('%m/%d/%Y, %H:%M:%S')}. "
                              f"\nAre you sure?",
                              title="Campaign Scheduler", buttons=['OK', 'Cancel'])
 
@@ -496,6 +546,7 @@ class MyMainClass:
         var.check_for_blocks = GUI.checkBox_check_for_blocks.isChecked()
         var.email_tracking_state = GUI.checkBox_email_tracking.isChecked()
         var.followup_enabled = GUI.checkBox_configuration_followup_enabled.isChecked()
+        var.auto_fire_responses_webhook = GUI.checkBox_auto_fire_responses_webhook.isChecked()
 
     def update_db_file_upload_config(self):
         var.db_file_loading_config['group_a'] = \
@@ -999,7 +1050,6 @@ class MyMainClass:
                 print("Cancelled")
         except Exception as e:
             var.download_email_status = False
-            print("Error at downloading_email : {}".format(e))
             self.logger.error("Error at downloading_email - {}".format(e))
 
     def email_cancel(self):

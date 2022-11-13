@@ -70,7 +70,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>4</number>
       </property>
       <property name="tabsClosable">
        <bool>false</bool>
@@ -3066,20 +3066,7 @@ QPushButton:pressed {
         <string>Configuration</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_15">
-        <item row="0" column="0">
-         <spacer name="horizontalSpacer_4">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="0" column="1" colspan="2">
+        <item row="0" column="0" colspan="2">
          <widget class="QGroupBox" name="groupBox_9">
           <property name="maximumSize">
            <size>
@@ -3100,6 +3087,25 @@ QPushButton:pressed {
            <string/>
           </property>
           <layout class="QGridLayout" name="gridLayout_14">
+           <item row="6" column="0" colspan="2" alignment="Qt::AlignVCenter">
+            <widget class="QLabel" name="label_valid_input">
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Campaign Name field: letters, numbers and &quot;_&quot; only. (no spaces)</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
            <item row="1" column="0" alignment="Qt::AlignHCenter">
             <widget class="QLabel" name="label_7">
              <property name="minimumSize">
@@ -3122,27 +3128,8 @@ QPushButton:pressed {
              </property>
             </widget>
            </item>
-           <item row="6" column="0" colspan="2" alignment="Qt::AlignVCenter">
-            <widget class="QLabel" name="label_valid_input">
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>12</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>Campaign Name field: letters, numbers and &quot;_&quot; only. (no spaces)</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-             <property name="wordWrap">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0" alignment="Qt::AlignHCenter">
-            <widget class="QLabel" name="label_8">
+           <item row="0" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+            <widget class="QLabel" name="label_9">
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -3151,15 +3138,12 @@ QPushButton:pressed {
              </property>
              <property name="font">
               <font>
-               <family>Calibri</family>
-               <pointsize>11</pointsize>
+               <family>Times New Roman</family>
+               <pointsize>12</pointsize>
               </font>
              </property>
              <property name="text">
-              <string>Campaign Name</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
+              <string>Email Tracking Configuration</string>
              </property>
             </widget>
            </item>
@@ -3188,8 +3172,8 @@ QPushButton:pressed {
              </property>
             </widget>
            </item>
-           <item row="0" column="1" alignment="Qt::AlignHCenter|Qt::AlignVCenter">
-            <widget class="QLabel" name="label_9">
+           <item row="3" column="0" alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="label_8">
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -3198,12 +3182,15 @@ QPushButton:pressed {
              </property>
              <property name="font">
               <font>
-               <family>Times New Roman</family>
-               <pointsize>12</pointsize>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
               </font>
              </property>
              <property name="text">
-              <string>Email Tracking Configuration</string>
+              <string>Campaign Name</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
              </property>
             </widget>
            </item>
@@ -3235,12 +3222,59 @@ QPushButton:pressed {
           </layout>
          </widget>
         </item>
-        <item row="1" column="1" colspan="2">
+        <item row="1" column="0" colspan="2">
          <widget class="QGroupBox" name="groupBox_10">
           <property name="title">
            <string/>
           </property>
           <layout class="QGridLayout" name="gridLayout_16">
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="lineEdit_target_blacklist">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEdit_webhook_link">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
            <item row="2" column="0" alignment="Qt::AlignHCenter">
             <widget class="QLabel" name="label_12">
              <property name="minimumSize">
@@ -3260,7 +3294,7 @@ QPushButton:pressed {
              </property>
             </widget>
            </item>
-           <item row="4" column="1">
+           <item row="5" column="1">
             <widget class="QPushButton" name="pushButton_clear_cached_targets">
              <property name="minimumSize">
               <size>
@@ -3330,76 +3364,6 @@ QPushButton:pressed {
              </property>
             </widget>
            </item>
-           <item row="12" column="1">
-            <widget class="QDateTimeEdit" name="dateTimeEdit_campaign_scheduler">
-             <property name="font">
-              <font>
-               <family>Times New Roman</family>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-             </property>
-             <property name="frame">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="13" column="1" alignment="Qt::AlignHCenter">
-            <widget class="QPushButton" name="pushButton_schedule_campaign">
-             <property name="minimumSize">
-              <size>
-               <width>160</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>180</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
-    border: 1px solid #555;
-    border-radius: 3px;
-    border-style: Solid;
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
-        );
-    padding: 5px 28px;
-	color: rgb(255, 255, 255);
-    }
-
-QPushButton:hover {
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
-        );
-    }
-
-QPushButton:pressed {
-    border-style: inset;
-    background: qradialgradient(
-        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
-        );
-    }</string>
-             </property>
-             <property name="text">
-              <string>Schedule</string>
-             </property>
-            </widget>
-           </item>
            <item row="1" column="0" alignment="Qt::AlignHCenter">
             <widget class="QLabel" name="label_11">
              <property name="minimumSize">
@@ -3416,70 +3380,6 @@ QPushButton:pressed {
              </property>
              <property name="text">
               <string>Target Blacklist</string>
-             </property>
-            </widget>
-           </item>
-           <item row="14" column="1">
-            <widget class="QComboBox" name="comboBox_scheduled_campaign_list">
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(255, 255, 255);
-</string>
-             </property>
-             <property name="frame">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QLineEdit" name="lineEdit_webhook_link">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="frame">
-              <bool>false</bool>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QLineEdit" name="lineEdit_target_blacklist">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="frame">
-              <bool>false</bool>
              </property>
             </widget>
            </item>
@@ -3505,7 +3405,7 @@ QPushButton:pressed {
              </property>
             </widget>
            </item>
-           <item row="5" column="1">
+           <item row="6" column="1">
             <widget class="QCheckBox" name="checkBox_configuration_followup_enabled">
              <property name="minimumSize">
               <size>
@@ -3520,28 +3420,6 @@ QPushButton:pressed {
              </property>
              <property name="text">
               <string>FollowUp Enabled</string>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="1">
-            <widget class="QLineEdit" name="lineEdit_configuration_followup_days">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="frame">
-              <bool>false</bool>
              </property>
             </widget>
            </item>
@@ -3567,8 +3445,8 @@ QPushButton:pressed {
              </property>
             </widget>
            </item>
-           <item row="6" column="0" alignment="Qt::AlignHCenter">
-            <widget class="QLabel" name="label_13">
+           <item row="4" column="1">
+            <widget class="QCheckBox" name="checkBox_auto_fire_responses_webhook">
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -3577,224 +3455,18 @@ QPushButton:pressed {
              </property>
              <property name="font">
               <font>
-               <family>Calibri</family>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>FollowUp Days</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item row="8" column="1">
-            <widget class="QLineEdit" name="lineEdit_airtable_base_id">
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="frame">
-              <bool>false</bool>
-             </property>
-             <property name="echoMode">
-              <enum>QLineEdit::Password</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="8" column="0" alignment="Qt::AlignHCenter">
-            <widget class="QLabel" name="label_15">
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>Base ID</string>
-             </property>
-            </widget>
-           </item>
-           <item row="7" column="1" alignment="Qt::AlignHCenter">
-            <widget class="QLabel" name="label_14">
-             <property name="font">
-              <font>
-               <family>Times New Roman</family>
-               <pointsize>12</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>Airtable Configuration</string>
-             </property>
-            </widget>
-           </item>
-           <item row="9" column="0" alignment="Qt::AlignHCenter">
-            <widget class="QLabel" name="label_16">
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>API Key</string>
-             </property>
-            </widget>
-           </item>
-           <item row="10" column="0" alignment="Qt::AlignHCenter">
-            <widget class="QLabel" name="label_17">
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>Table Name</string>
-             </property>
-            </widget>
-           </item>
-           <item row="10" column="1">
-            <widget class="QLineEdit" name="lineEdit_airtable_table_name">
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="frame">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="9" column="1">
-            <widget class="QLineEdit" name="lineEdit_airtable_api_key">
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="frame">
-              <bool>false</bool>
-             </property>
-             <property name="echoMode">
-              <enum>QLineEdit::Password</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="14" column="0" alignment="Qt::AlignHCenter">
-            <widget class="QLabel" name="label_18">
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>Scheduled Campaign</string>
-             </property>
-            </widget>
-           </item>
-           <item row="15" column="1" alignment="Qt::AlignHCenter">
-            <widget class="QPushButton" name="pushButton_schedule_campaign_remove">
-             <property name="font">
-              <font>
-               <family>Calibri</family>
                <pointsize>10</pointsize>
               </font>
              </property>
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
-    border: 1px solid #555;
-    border-radius: 3px;
-    border-style: Solid;
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
-        );
-    padding: 5px 28px;
-	color: rgb(255, 255, 255);
-    }
-
-QPushButton:hover {
-    background: qradialgradient(
-        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
-        );
-    }
-
-QPushButton:pressed {
-    border-style: inset;
-    background: qradialgradient(
-        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
-        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
-        );
-    }</string>
-             </property>
              <property name="text">
-              <string>Remove</string>
-             </property>
-            </widget>
-           </item>
-           <item row="11" column="1">
-            <widget class="QCheckBox" name="checkBox_airtable_use_desktop_id">
-             <property name="font">
-              <font>
-               <family>Times New Roman</family>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>Use Desktop ID</string>
-             </property>
-            </widget>
-           </item>
-           <item row="16" column="1" alignment="Qt::AlignHCenter">
-            <widget class="QLabel" name="label_desktop_app_id">
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="textInteractionFlags">
-              <set>Qt::TextBrowserInteraction</set>
-             </property>
-            </widget>
-           </item>
-           <item row="16" column="0" alignment="Qt::AlignHCenter">
-            <widget class="QLabel" name="label_19">
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>Desktop ID</string>
+              <string>Auto Fire Responses Webhook</string>
              </property>
             </widget>
            </item>
           </layout>
          </widget>
         </item>
-        <item row="2" column="1">
+        <item row="2" column="0">
          <spacer name="horizontalSpacer_3">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
@@ -3807,7 +3479,7 @@ QPushButton:pressed {
           </property>
          </spacer>
         </item>
-        <item row="2" column="2">
+        <item row="2" column="1">
          <widget class="QPushButton" name="pushButton_configuration_save">
           <property name="enabled">
            <bool>true</bool>
@@ -3863,7 +3535,20 @@ QPushButton:pressed {
           </property>
          </widget>
         </item>
-        <item row="2" column="3">
+        <item row="3" column="1">
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="2">
          <spacer name="horizontalSpacer_5">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
@@ -3876,18 +3561,377 @@ QPushButton:pressed {
           </property>
          </spacer>
         </item>
-        <item row="3" column="2">
-         <spacer name="verticalSpacer_3">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
+        <item row="0" column="2" rowspan="2">
+         <widget class="QGroupBox" name="groupBox_11">
+          <property name="title">
+           <string/>
           </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
+          <layout class="QGridLayout" name="gridLayout_24">
+           <item row="0" column="1" colspan="2" alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="label_14">
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Airtable Configuration</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="2" alignment="Qt::AlignVCenter">
+            <widget class="QLabel" name="label_13">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>FollowUp Days</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLineEdit" name="lineEdit_configuration_followup_days">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLineEdit" name="lineEdit_airtable_base_id">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::Password</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QLineEdit" name="lineEdit_airtable_api_key">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+             <property name="echoMode">
+              <enum>QLineEdit::Password</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QLineEdit" name="lineEdit_airtable_table_name">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QCheckBox" name="checkBox_airtable_use_desktop_id">
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Use Desktop ID</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="2">
+            <widget class="QDateTimeEdit" name="dateTimeEdit_campaign_scheduler">
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="2" alignment="Qt::AlignHCenter">
+            <widget class="QPushButton" name="pushButton_schedule_campaign">
+             <property name="minimumSize">
+              <size>
+               <width>160</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>180</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    border: 1px solid #555;
+    border-radius: 3px;
+    border-style: Solid;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
+        );
+    padding: 5px 28px;
+	color: rgb(255, 255, 255);
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
+        );
+    }</string>
+             </property>
+             <property name="text">
+              <string>Schedule</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0" colspan="2" alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="label_18">
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Scheduled Campaign</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="2">
+            <widget class="QComboBox" name="comboBox_scheduled_campaign_list">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);
+</string>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="2" alignment="Qt::AlignHCenter">
+            <widget class="QPushButton" name="pushButton_schedule_campaign_remove">
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    border: 1px solid #555;
+    border-radius: 3px;
+    border-style: Solid;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD
+        );
+    padding: 5px 28px;
+	color: rgb(255, 255, 255);
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f
+        );
+    }</string>
+             </property>
+             <property name="text">
+              <string>Remove</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0">
+            <widget class="QLabel" name="label_19">
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Desktop ID</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="2">
+            <widget class="QLabel" name="label_desktop_app_id">
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="textInteractionFlags">
+              <set>Qt::TextBrowserInteraction</set>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0" colspan="2" alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="label_17">
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Table Name</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="2" alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="label_16">
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>API Key</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" colspan="2" alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="label_15">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Base ID</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </item>
        </layout>
       </widget>

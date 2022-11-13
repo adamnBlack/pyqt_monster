@@ -227,10 +227,15 @@ except Exception as e:
     logger.error(f"Error while creating campaign_scheduler folder - {e}")
 
 responses_webhook_enabled = False
+auto_fire_responses_webhook = False
+
+# in hour
+auto_fire_responses_webhook_interval = 6
 inbox_blacklist = []
 gmonster_desktop_id = ''
 id_file_name = "gmonster_id"
 id_file_path = os.path.join(os.getcwd(), base_dir, id_file_name)
+
 try:
     if os.path.exists(id_file_path):
         with open(id_file_path, "r", encoding="utf-8") as file:
@@ -271,6 +276,7 @@ try:
     target_blacklist = config['target_blacklist']
     inbox_blacklist = config['inbox_blacklist']
     responses_webhook_enabled = config['responses_webhook_enabled']
+    auto_fire_responses_webhook = config["auto_fire_responses_webhook"]
     followup_enabled = config['followup_enabled']
     followup_days = config['followup_days']
     followup_subject = config['followup_subject']
@@ -284,6 +290,7 @@ try:
     AirtableConfig.continuous_loading_time_period = config['airtable']['continuous_loading_time_period']
 except Exception as e:
     logger.info("Exception occurred at config loading : {}".format(e))
+    sys.exit()
 
 delay_start = int(delay_between_emails.split("-")[0].strip())
 delay_end = int(delay_between_emails.split("-")[1].strip())

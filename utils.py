@@ -95,6 +95,7 @@ def update_config_json(alternative_name=None):
                 "target_blacklist": var.target_blacklist,
                 "inbox_blacklist": var.inbox_blacklist,
                 "responses_webhook_enabled": var.responses_webhook_enabled,
+                "auto_fire_responses_webhook": var.auto_fire_responses_webhook,
                 "followup_enabled": var.followup_enabled,
                 "followup_days": var.followup_days,
                 "followup_subject": var.followup_subject,
