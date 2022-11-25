@@ -810,6 +810,7 @@ class PullTargetAirtable(threading.Thread):
 
                 # pandas to db
                 pandas_to_db(group_a=None, group_b=None, target=True)
+                db_to_pandas(group_a=None, group_b=None, target=True)
                 var.command_q.put("self.update_db_table()")
 
                 logger.info("Completed pulling data from airtable")

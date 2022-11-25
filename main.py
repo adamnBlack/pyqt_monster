@@ -415,7 +415,7 @@ class MyMainClass:
                              title="Campaign Scheduler", buttons=['OK', 'Cancel'])
 
             if result == 'OK':
-                config_filename = str(uuid.uuid4())
+                config_filename = str(uuid.uuid4()) + f"-{var.campaign_group}"
                 Thread(target=update_config_json, daemon=True, kwargs={"alternative_name": config_filename}).start()
                 job = var.scheduler.add_job(func=self.run_scheduled_campaign, trigger='date',
                                             args=(config_filename,), id=config_filename,

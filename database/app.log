@@ -5085,3 +5085,180 @@ TypeError: replace() takes no keyword arguments
 2022-11-13 22:45:35,505 [Thread-45   ] [INFO ]  auto_fire_responses_webhook started
 2022-11-13 22:45:45,547 [Thread-45   ] [INFO ]  Downloading finished
 2022-11-13 22:45:45,549 [Thread-45   ] [INFO ]  auto_fire_responses_webhook finished
+2022-11-18 18:36:24,475 [MainThread  ] [INFO ]  Scheduler started
+2022-11-18 18:36:24,568 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-18 18:36:29,223 [MainThread  ] [INFO ]  Scheduler started
+2022-11-18 18:36:31,497 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-11-18 18:36:39,925 [Thread-3    ] [INFO ]  config updated
+2022-11-18 18:36:39,928 [Thread-4    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: ea1ec9ec-37a6-4137-aabd-8029b89bb8e1
+ Add Custom Hostname: True
+2022-11-18 18:36:39,984 [Thread-4    ] [ERROR]  
+Starting Thread : Name - saidunuhu579@gmail.com
+Targets Count - 1
+2022-11-18 18:36:39,987 [Thread-4    ] [INFO ]  Length - 1 saidunuhu579@gmail.com
+2022-11-18 18:36:39,989 [Thread-4    ] [ERROR]  
+Starting Thread : Name - lithbello60@gmail.com
+Targets Count - 1
+2022-11-18 18:36:39,991 [Thread-4    ] [INFO ]  Length - 1 lithbello60@gmail.com
+2022-11-18 18:36:49,338 [Thread-4    ] [INFO ]  Sending Finished ea1ec9ec-37a6-4137-aabd-8029b89bb8e1
+2022-11-19 06:36:31,808 [Thread-8    ] [INFO ]  auto_fire_responses_webhook started
+2022-11-19 06:36:42,237 [Thread-8    ] [INFO ]  Downloading finished
+2022-11-19 06:36:42,238 [Thread-8    ] [INFO ]  auto_fire_responses_webhook finished
+2022-11-19 12:36:31,808 [Thread-15   ] [INFO ]  auto_fire_responses_webhook started
+2022-11-19 12:36:42,821 [Thread-15   ] [INFO ]  Downloading finished
+2022-11-19 12:36:42,822 [Thread-15   ] [INFO ]  auto_fire_responses_webhook finished
+2022-11-19 16:35:25,612 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-22 12:49:44,112 [MainThread  ] [INFO ]  Scheduler started
+2022-11-22 12:49:44,143 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-22 12:49:47,971 [MainThread  ] [INFO ]  Scheduler started
+2022-11-22 12:49:49,655 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-11-22 13:01:29,002 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer stopped
+2022-11-22 20:39:37,471 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-22 20:39:42,906 [MainThread  ] [INFO ]  Scheduler started
+2022-11-22 20:39:42,910 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-22 20:39:43,455 [MainThread  ] [INFO ]  Scheduler started
+2022-11-22 20:39:43,737 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-11-22 20:40:59,170 [Thread-4    ] [INFO ]  Scheduler Campaign config saved
+2022-11-22 20:40:59,271 [Thread-3    ] [INFO ]  Added job "c7837c87-e3d3-4f8c-91cf-cc21fa9eec25" to job store "default"
+2022-11-22 20:40:59,272 [Thread-3    ] [INFO ]  Scheduled job id: c7837c87-e3d3-4f8c-91cf-cc21fa9eec25 at 2022-11-22 20:41:00
+2022-11-22 20:41:00,000 [ThreadPoolEx] [INFO ]  Starting MyMainClass.run_scheduled_campaign id: c7837c87-e3d3-4f8c-91cf-cc21fa9eec25
+2022-11-22 20:41:00,001 [APScheduler ] [INFO ]  Removed job c7837c87-e3d3-4f8c-91cf-cc21fa9eec25
+2022-11-22 20:41:00,010 [Thread-5    ] [INFO ]  config updated
+2022-11-22 20:41:00,013 [Thread-6    ] [ERROR]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: 8f53e26a-c678-44bd-95a3-117558cced3f
+ Add Custom Hostname: False
+2022-11-22 20:41:00,013 [ThreadPoolEx] [INFO ]  Completing MyMainClass.run_scheduled_campaign id: c7837c87-e3d3-4f8c-91cf-cc21fa9eec25
+2022-11-22 20:41:00,082 [Thread-6    ] [ERROR]  
+Starting Thread : Name - saidunuhu579@gmail.com
+Targets Count - 1
+2022-11-22 20:41:00,084 [Thread-6    ] [INFO ]  Length - 1 saidunuhu579@gmail.com
+2022-11-22 20:41:00,085 [Thread-6    ] [ERROR]  
+Starting Thread : Name - lithbello60@gmail.com
+Targets Count - 1
+2022-11-22 20:41:00,086 [Thread-6    ] [INFO ]  Length - 1 lithbello60@gmail.com
+2022-11-22 20:41:11,382 [lithbello60@] [INFO ]  Sent - lithbello60@gmail.com shahimrans64@gmail.com
+2022-11-22 20:41:12,049 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-11-22 20:41:14,249 [saidunuhu579] [INFO ]  Sent - saidunuhu579@gmail.com shahimrans64@gmail.com
+2022-11-22 20:41:15,053 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-11-22 20:41:16,644 [Thread-6    ] [INFO ]  Sending Finished 8f53e26a-c678-44bd-95a3-117558cced3f
+2022-11-22 20:49:09,760 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-22 20:49:12,925 [MainThread  ] [INFO ]  Scheduler started
+2022-11-22 20:49:12,928 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-22 20:49:13,509 [MainThread  ] [INFO ]  Scheduler started
+2022-11-22 20:49:13,768 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-11-22 20:49:19,145 [Thread-4    ] [INFO ]  Scheduler Campaign config saved
+2022-11-22 20:49:19,199 [Thread-3    ] [INFO ]  Added job "dab0cdab-22b3-4f63-9785-9ba6dee50ff6-group_a" to job store "default"
+2022-11-22 20:49:19,200 [Thread-3    ] [INFO ]  Scheduled job id: dab0cdab-22b3-4f63-9785-9ba6dee50ff6-group_a at 2022-11-22 00:00:00
+2022-11-22 20:49:19,201 [APScheduler ] [INFO ]  Removed job dab0cdab-22b3-4f63-9785-9ba6dee50ff6-group_a
+2022-11-22 20:49:30,395 [Thread-5    ] [INFO ]  Removing job dab0cdab-22b3-4f63-9785-9ba6dee50ff6-group_a from list
+2022-11-22 20:49:30,396 [Thread-5    ] [ERROR]  Error at remove_schedule_campaign: 'No job by the id of dab0cdab-22b3-4f63-9785-9ba6dee50ff6-group_a was found'
+2022-11-22 20:49:34,603 [Thread-6    ] [INFO ]  Removing job dab0cdab-22b3-4f63-9785-9ba6dee50ff6-group_a from list
+2022-11-22 20:49:34,605 [Thread-6    ] [ERROR]  Error at remove_schedule_campaign: 'No job by the id of dab0cdab-22b3-4f63-9785-9ba6dee50ff6-group_a was found'
+2022-11-22 20:52:29,292 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-22 20:52:32,981 [MainThread  ] [INFO ]  Scheduler started
+2022-11-22 20:52:32,984 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-22 20:52:33,535 [MainThread  ] [INFO ]  Scheduler started
+2022-11-22 20:52:33,794 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-11-22 20:52:38,060 [Thread-4    ] [INFO ]  Scheduler Campaign config saved
+2022-11-22 20:52:38,120 [Thread-3    ] [INFO ]  Added job "750ed0b8-c95d-4af1-b49f-c93c150b7411-group_a" to job store "default"
+2022-11-22 20:52:38,122 [Thread-3    ] [INFO ]  Scheduled job id: 750ed0b8-c95d-4af1-b49f-c93c150b7411-group_a at 2022-11-22 00:00:00
+2022-11-22 20:52:38,123 [APScheduler ] [INFO ]  Removed job 750ed0b8-c95d-4af1-b49f-c93c150b7411-group_a
+2022-11-22 20:52:51,361 [Thread-5    ] [INFO ]  Added job "07b35672-5ac8-4423-b4a6-01ef62921e26-group_a" to job store "default"
+2022-11-22 20:52:51,361 [Thread-5    ] [INFO ]  Scheduled job id: 07b35672-5ac8-4423-b4a6-01ef62921e26-group_a at 2022-12-22 00:00:00
+2022-11-22 20:52:51,362 [Thread-6    ] [INFO ]  Scheduler Campaign config saved
+2022-11-22 20:52:56,981 [Thread-7    ] [INFO ]  Removing job 07b35672-5ac8-4423-b4a6-01ef62921e26-group_a from list
+2022-11-22 20:52:56,983 [Thread-7    ] [INFO ]  Removed job 07b35672-5ac8-4423-b4a6-01ef62921e26-group_a
+2022-11-22 20:52:56,984 [Thread-7    ] [INFO ]  Removed successfully job 07b35672-5ac8-4423-b4a6-01ef62921e26-group_a from list
+2022-11-22 20:53:01,847 [Thread-8    ] [INFO ]  Removing job None from list
+2022-11-22 20:53:01,848 [Thread-8    ] [ERROR]  Error at remove_schedule_campaign: 'No job by the id of None was found'
+2022-11-22 20:54:09,090 [Thread-9    ] [INFO ]  Added job "1a9bdb4f-50b8-4110-a708-777f8d9403a1-group_a" to job store "default"
+2022-11-22 20:54:09,091 [Thread-10   ] [INFO ]  Scheduler Campaign config saved
+2022-11-22 20:54:09,093 [Thread-9    ] [INFO ]  Scheduled job id: 1a9bdb4f-50b8-4110-a708-777f8d9403a1-group_a at 2022-11-22 20:55:00
+2022-11-22 20:55:00,010 [ThreadPoolEx] [INFO ]  Starting MyMainClass.run_scheduled_campaign id: 1a9bdb4f-50b8-4110-a708-777f8d9403a1-group_a
+2022-11-22 20:55:00,010 [APScheduler ] [INFO ]  Removed job 1a9bdb4f-50b8-4110-a708-777f8d9403a1-group_a
+2022-11-22 20:55:00,014 [Thread-11   ] [INFO ]  config updated
+2022-11-22 20:55:00,014 [ThreadPoolEx] [INFO ]  Completing MyMainClass.run_scheduled_campaign id: 1a9bdb4f-50b8-4110-a708-777f8d9403a1-group_a
+2022-11-22 20:55:00,018 [Thread-12   ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: 29fe2453-550f-4d55-923c-5ec1b2a78958
+ Add Custom Hostname: False
+2022-11-22 20:55:00,027 [Thread-12   ] [ERROR]  
+Starting Thread : Name - saidunuhu579@gmail.com
+Targets Count - 1
+2022-11-22 20:55:00,028 [Thread-12   ] [INFO ]  Length - 1 saidunuhu579@gmail.com
+2022-11-22 20:55:00,030 [Thread-12   ] [ERROR]  
+Starting Thread : Name - lithbello60@gmail.com
+Targets Count - 1
+2022-11-22 20:55:00,033 [Thread-12   ] [INFO ]  Length - 1 lithbello60@gmail.com
+2022-11-22 20:55:07,059 [lithbello60@] [INFO ]  Sent - lithbello60@gmail.com shahimrans64@gmail.com
+2022-11-22 20:55:07,620 [saidunuhu579] [INFO ]  Sent - saidunuhu579@gmail.com shahimrans64@gmail.com
+2022-11-22 20:55:08,031 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-11-22 20:55:09,035 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2022-11-22 20:55:12,588 [Thread-12   ] [INFO ]  Sending Finished 29fe2453-550f-4d55-923c-5ec1b2a78958
+2022-11-22 20:57:52,498 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-22 20:58:02,008 [MainThread  ] [INFO ]  Scheduler started
+2022-11-22 20:58:02,013 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-22 20:58:02,591 [MainThread  ] [INFO ]  Scheduler started
+2022-11-22 20:58:02,857 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-11-22 20:58:08,811 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-25 21:23:36,711 [MainThread  ] [INFO ]  Scheduler started
+2022-11-25 21:23:36,765 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-25 21:23:40,610 [MainThread  ] [INFO ]  Scheduler started
+2022-11-25 21:23:42,461 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-11-25 21:33:15,563 [Thread-3    ] [INFO ]  Starting pulling data from airtable
+2022-11-25 21:33:15,564 [Thread-3    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-25 21:33:20,587 [Thread-3    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-25 21:33:20,590 [Thread-3    ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-25 21:33:20,816 [Thread-3    ] [INFO ]  Pandas to DB done!
+2022-11-25 21:33:20,817 [Thread-3    ] [INFO ]  Completed pulling data from airtable
+2022-11-25 21:35:00,103 [Thread-4    ] [INFO ]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2022-11-25 21:36:22,075 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-25 21:37:02,361 [MainThread  ] [INFO ]  Scheduler started
+2022-11-25 21:37:02,365 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-25 21:37:02,988 [MainThread  ] [INFO ]  Scheduler started
+2022-11-25 21:37:03,216 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-11-25 21:37:24,641 [Thread-3    ] [INFO ]  Starting pulling data from airtable
+2022-11-25 21:37:24,642 [Thread-3    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-25 21:37:26,785 [Thread-3    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-25 21:37:26,790 [Thread-3    ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-25 21:37:26,918 [Thread-3    ] [INFO ]  Pandas to DB done!
+2022-11-25 21:37:26,920 [Thread-3    ] [INFO ]  Completed pulling data from airtable
+2022-11-25 21:43:48,000 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-11-25 21:43:52,474 [MainThread  ] [INFO ]  Scheduler started
+2022-11-25 21:43:52,477 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-11-25 21:43:53,015 [MainThread  ] [INFO ]  Scheduler started
+2022-11-25 21:43:53,321 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-11-25 21:43:58,162 [Thread-3    ] [INFO ]  Starting pulling data from airtable
+2022-11-25 21:43:58,163 [Thread-3    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2022-11-25 21:43:59,973 [Thread-3    ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id: DONE
+2022-11-25 21:43:59,974 [Thread-3    ] [INFO ]  PullTargetAirtable - Rearranging data
+2022-11-25 21:44:00,095 [Thread-3    ] [INFO ]  Pandas to DB done!
+2022-11-25 21:44:00,149 [Thread-3    ] [INFO ]  Completed pulling data from airtable
+2022-11-25 21:44:10,084 [MainThread  ] [INFO ]  Scheduler has been shut down
