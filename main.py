@@ -2,6 +2,7 @@ import os
 import re
 import sys
 import threading
+import time
 import uuid
 import webbrowser
 import requests
@@ -27,16 +28,6 @@ class MyGui(Ui_MainWindow, QtWidgets.QWidget):
         QtWidgets.QWidget.__init__(self)
 
         self.setupUi(main_window)
-
-
-def run_scheduled_campaign(config_filename: str):
-    try:
-        logger.info(f"Starting main.run_scheduled_campaign id: {config_filename}")
-
-        logger.info(f"Completing main.run_scheduled_campaign id: {config_filename}")
-    except Exception as e:
-        logger.info(f"Error at main.run_scheduled_campaign id - "
-                    f"({config_filename}) : {traceback.format_exc()}")
 
 
 class MyMainClass:
@@ -455,6 +446,13 @@ class MyMainClass:
                 else:
                     GUI.radioButton_campaign_group_b.setChecked(True)
 
+                if var.AirtableConfig.continuous_loading:
+                    pull_target_airtable = database.PullTargetAirtable()
+                    pull_target_airtable.start()
+
+                    while database.PullTargetAirtable.still_running:
+                        time.sleep(1)
+
                 var.stop_send_campaign = False
                 var.thread_open_campaign = 0
                 var.send_campaign_email_count = 0
@@ -465,6 +463,7 @@ class MyMainClass:
             else:
                 logger.info("Campaign running, scheduled campaign cancelled || campaign id: {config_filename}")
             logger.info(f"Completing {self.__class__.__name__}.run_scheduled_campaign id: {config_filename}")
+            self.reset_schedule_campaign_job_list()
         except Exception as e:
             logger.info(f"Error at main.run_scheduled_campaign id - "
                         f"({config_filename}) : {traceback.format_exc()}")
@@ -934,8 +933,6 @@ class MyMainClass:
 
     def send_campaign(self):
         try:
-            global Campaign
-
             var.send_campaign_run_status = True
             var.num_emails_per_address = int(GUI.lineEdit_num_per_address.text())
             var.delay_between_emails = GUI.lineEdit_delay_between_emails.text()
@@ -960,6 +957,7 @@ class MyMainClass:
                         var.group_a.copy(), delay_start, delay_end, "Group A", ]).start()
 
                 else:
+                    self.logger.error(f"At send_campaign - Empty Target table")
                     self.send_button_visibility(on=True)
                     GUI.label_email_status.setText("Database empty")
                     var.send_campaign_run_status = False
@@ -978,12 +976,13 @@ class MyMainClass:
                         var.group_b.copy(), delay_start, delay_end, "Group B", ]).start()
 
                 else:
+                    self.logger.error(f"At send_campaign - Empty Target table")
                     self.send_button_visibility(on=True)
                     GUI.label_email_status.setText("Database empty")
                     var.send_campaign_run_status = False
 
         except Exception as e:
-            self.logger.error("Error at send_campaign - {}".format(e))
+            self.logger.error("Error at send_campaign - {}".format(traceback.format_exc()))
             alert(text="Error at send_campaign : {}".format(
                 e), title='Error', button='OK')
             var.send_campaign_run_status = False

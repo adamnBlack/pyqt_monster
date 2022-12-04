@@ -688,25 +688,8 @@ def db_to_pandas(group_a=None, group_b=None, target=None):
 
         var.group_b = pd.DataFrame(group_b_list)
 
-    if target:
-        results = session.query(Targets).all()
-
-        if len(results) > 0:
-            targets_list = [{
-                                'ID': item.id,
-                                '1': item.one,
-                                '2': item.two,
-                                '3': item.three,
-                                '4': item.four,
-                                '5': item.five,
-                                '6': item.six,
-                                'TONAME': item.TONAME,
-                                'EMAIL': item.EMAIL
-                            }.copy() for item in results]
-
-    else:
-        dummy_data_db(group_a=False, group_b=False, target=True)
-        results = session.query(Targets).all()
+    def target_push(_session):
+        _results = _session.query(Targets).all()
         targets_list = [{
                             'ID': item.id,
                             '1': item.one,
@@ -717,9 +700,23 @@ def db_to_pandas(group_a=None, group_b=None, target=None):
                             '6': item.six,
                             'TONAME': item.TONAME,
                             'EMAIL': item.EMAIL
-                        }.copy() for item in results]
+                        }.copy() for item in _results]
 
-    var.target = pd.DataFrame(targets_list)
+        var.target = pd.DataFrame(targets_list)
+
+    if target:
+        results = session.query(Targets).all()
+
+        if len(results) > 0:
+            target_push(session)
+        else:
+            dummy_data_db(group_a=False, group_b=False, target=True)
+            target_push(session)
+
+    else:
+        dummy_data_db(group_a=False, group_b=False, target=True)
+        target_push(session)
+
     print(var.group_a.head(5))
     print(var.group_b.head(5))
     print(var.target.head(5))
@@ -814,11 +811,11 @@ class PullTargetAirtable(threading.Thread):
                 var.command_q.put("self.update_db_table()")
 
                 logger.info("Completed pulling data from airtable")
-                alert("Pulling Data Done", title="Success", button="OK")
+                # alert("Pulling Data Done", title="Success", button="OK")
 
             else:
                 logger.info("Completed pulling data from airtable But It was empty.")
-                alert(text="Empty Table", title="Failed", button="OK")
+                # alert(text="Empty Table", title="Failed", button="OK")
 
         except Exception as e:
             logger.error(f"Error in {self.__class__.__name__}: {traceback.format_exc()}")

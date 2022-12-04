@@ -833,7 +833,7 @@ def main(group, d_start, d_end, group_selected):
 
                     group.at[index, 'flag'] = 1
 
-                    logger.error(f"\nStarting Thread : Name - {name}"
+                    logger.info(f"\nStarting Thread : Name - {name}"
                                  f"\nTargets Count - {len(target.loc[start:end])}")
                     # + f"\nTargets - {json.dumps(target.loc[start:end].to_dict())}")
 
@@ -871,16 +871,7 @@ def main(group, d_start, d_end, group_selected):
 
             webhook.quit()
 
-        try:
-            field_names = ['TARGET', 'FROMEMAIL', 'STATUS', 'CAMPAIGN', "DATE"]
-            with open(var.base_dir + "/report.csv", 'a', newline='', encoding="utf-8") as csvfile:
-                writer = csv.DictWriter(csvfile, fieldnames=field_names)
-                writer.writeheader()
-                while not var.send_report.empty():
-                    temp_dict = var.send_report.get()
-                    writer.writerow(temp_dict)
-        except Exception as e:
-            logger.error('Error while saving report - {}'.format(e))
+        save_report()
 
         if var.remove_email_from_target:
             logger.info("removing email from target...")
@@ -928,8 +919,6 @@ def main(group, d_start, d_end, group_selected):
 
             campaign_report_webhook.start()
 
-        alert(text='Total Emails Sent : {}\nAccounts Failed : {}\nTargets Remaining : {}\ncheck app.log and report.csv'.
-              format(var.send_campaign_email_count, email_failed, len(var.target)), title='Alert', button='OK')
 
     except Exception as e:
         logger.error(f"Error at smtp.main: {traceback.format_exc()}")
@@ -944,6 +933,22 @@ def main(group, d_start, d_end, group_selected):
         var.send_campaign_run_status = False
 
         logger.info(f"Sending Finished {campaign_id}")
+
+        alert(text='Total Emails Sent : {}\nAccounts Failed : {}\nTargets Remaining : {}\ncheck app.log and report.csv'.
+              format(var.send_campaign_email_count, email_failed, len(var.target)), title='Alert', button='OK')
+
+
+def save_report():
+    try:
+        field_names = ['TARGET', 'FROMEMAIL', 'STATUS', 'CAMPAIGN', "DATE"]
+        with open(var.base_dir + "/report.csv", 'a', newline='', encoding="utf-8") as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=field_names)
+            writer.writeheader()
+            while not var.send_report.empty():
+                temp_dict = var.send_report.get()
+                writer.writerow(temp_dict)
+    except Exception as e:
+        logger.error('Error while saving report - {}'.format(e))
 
 
 def follow_up(campaign_id: str):

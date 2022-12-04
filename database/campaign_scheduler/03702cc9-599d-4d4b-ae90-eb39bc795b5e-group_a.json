@@ -34,7 +34,7 @@
             "api_key": "keyajjzgPaHo8VjWA",
             "base_id": "appaCmKFn3MWDzjsF",
             "table_name": "target",
-            "use_desktop_id": true,
+            "use_desktop_id": false,
             "mark_sent_airtable": false,
             "continuous_loading": false,
             "continuous_loading_time_period": 24
