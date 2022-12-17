@@ -126,6 +126,7 @@ class MyMainClass:
         )
 
         if var.auto_fire_responses_webhook:
+            logger.info(f"auto_fire_responses_webhook Interval: {var.auto_fire_responses_webhook_interval} hour")
             self.start_auto_fire_responses_timer()
 
         GUI.checkBox_configuration_followup_enabled.setChecked(var.followup_enabled)
@@ -348,11 +349,12 @@ class MyMainClass:
             var.stop_download = False
             groups = pd.concat([var.group_a.copy(), var.group_b.copy()])
             var.download_email_status = True
+            _responses_webhook_enabled = var.responses_webhook_enabled
             var.responses_webhook_enabled = True
             imap.IMAP_.auto_fire_responses_enabled = True
             imap.main(groups)
             imap.IMAP_.auto_fire_responses_enabled = False
-            var.responses_webhook_enabled = False
+            var.responses_webhook_enabled = _responses_webhook_enabled
             var.download_email_status = False
         except Exception as e:
             logger.error(f"auto_fire_responses_webhook error: {traceback.format_exc()}")

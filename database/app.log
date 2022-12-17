@@ -258,3 +258,63 @@ Targets Count - 1
 2022-12-04 16:29:17,343 [RemoveTarget] [INFO ]  Deleted id - 2
 2022-12-04 16:29:18,149 [Thread-44   ] [INFO ]  Sending Finished 55696e37-9231-4a6d-a9ce-b4a6f88295d8
 2022-12-04 16:36:54,892 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-12-17 22:36:44,156 [MainThread  ] [INFO ]  Scheduler started
+2022-12-17 22:36:44,227 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-12-17 22:36:48,152 [MainThread  ] [INFO ]  Scheduler started
+2022-12-17 22:36:49,608 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-12-17 22:37:20,870 [Thread-3    ] [INFO ]  config updated
+2022-12-17 22:48:22,291 [Thread-4    ] [INFO ]  config updated
+2022-12-17 22:48:32,304 [SendReport_I] [ERROR]  Error at SendWebhook Inbox part 2 : Invalid URL '5677b742-b72f-470a-93da-08ab4596ced3@email.webhook.site': No schema supplied. Perhaps you meant http://5677b742-b72f-470a-93da-08ab4596ced3@email.webhook.site?
+2022-12-17 22:48:33,309 [SendReport_I] [ERROR]  Error at SendWebhook Inbox part 2 : Invalid URL '5677b742-b72f-470a-93da-08ab4596ced3@email.webhook.site': No schema supplied. Perhaps you meant http://5677b742-b72f-470a-93da-08ab4596ced3@email.webhook.site?
+2022-12-17 22:48:34,313 [SendReport_I] [ERROR]  Error at SendWebhook Inbox part 2 : Invalid URL '5677b742-b72f-470a-93da-08ab4596ced3@email.webhook.site': No schema supplied. Perhaps you meant http://5677b742-b72f-470a-93da-08ab4596ced3@email.webhook.site?
+2022-12-17 22:48:34,316 [SendReport_I] [ERROR]  Error at SendWebhook Inbox part 2 : Invalid URL '5677b742-b72f-470a-93da-08ab4596ced3@email.webhook.site': No schema supplied. Perhaps you meant http://5677b742-b72f-470a-93da-08ab4596ced3@email.webhook.site?
+2022-12-17 22:48:35,320 [SendReport_I] [ERROR]  Error at SendWebhook Inbox part 2 : Invalid URL '5677b742-b72f-470a-93da-08ab4596ced3@email.webhook.site': No schema supplied. Perhaps you meant http://5677b742-b72f-470a-93da-08ab4596ced3@email.webhook.site?
+2022-12-17 22:48:44,315 [Thread-5    ] [INFO ]  Downloading finished
+2022-12-17 22:48:53,640 [Thread-9    ] [INFO ]  config updated
+2022-12-17 22:49:01,330 [Thread-10   ] [INFO ]  config updated
+2022-12-17 22:49:48,350 [Thread-11   ] [INFO ]  Downloading finished
+2022-12-17 22:51:14,151 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-12-17 23:02:40,588 [MainThread  ] [INFO ]  Scheduler started
+2022-12-17 23:02:40,592 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-12-17 23:02:41,176 [MainThread  ] [INFO ]  Scheduler started
+2022-12-17 23:02:41,387 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-12-17 23:22:40,839 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-12-17 23:28:00,678 [MainThread  ] [INFO ]  Scheduler started
+2022-12-17 23:28:00,681 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-12-17 23:28:01,293 [MainThread  ] [INFO ]  Scheduler started
+2022-12-17 23:28:01,628 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-12-17 23:31:37,631 [Thread-3    ] [INFO ]  auto_fire_responses_webhook started
+2022-12-17 23:31:47,644 [Thread-3    ] [INFO ]  Downloading finished
+2022-12-17 23:31:47,647 [Thread-3    ] [INFO ]  auto_fire_responses_webhook finished
+2022-12-17 23:32:09,276 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-12-17 23:32:42,614 [MainThread  ] [INFO ]  Scheduler started
+2022-12-17 23:32:42,617 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-12-17 23:32:43,187 [MainThread  ] [INFO ]  Scheduler started
+2022-12-17 23:32:43,453 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-12-17 23:36:19,464 [Thread-3    ] [INFO ]  auto_fire_responses_webhook started
+2022-12-17 23:36:29,481 [Thread-3    ] [INFO ]  Downloading finished
+2022-12-17 23:36:29,485 [Thread-3    ] [INFO ]  auto_fire_responses_webhook finished
+2022-12-17 23:38:54,881 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-12-17 23:39:01,609 [MainThread  ] [INFO ]  Scheduler started
+2022-12-17 23:39:01,612 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-12-17 23:39:02,229 [MainThread  ] [INFO ]  Scheduler started
+2022-12-17 23:39:02,564 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-12-17 23:40:36,823 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-12-17 23:40:40,778 [MainThread  ] [INFO ]  Scheduler started
+2022-12-17 23:40:40,781 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-12-17 23:40:41,341 [MainThread  ] [INFO ]  Scheduler started
+2022-12-17 23:40:41,595 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: <bound PYQT_SIGNAL timeout of QTimer object at 0x00000232318393A8>
+2022-12-17 23:40:41,596 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-12-17 23:42:38,168 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-12-17 23:42:41,025 [MainThread  ] [INFO ]  Scheduler started
+2022-12-17 23:42:41,029 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-12-17 23:42:41,584 [MainThread  ] [INFO ]  Scheduler started
+2022-12-17 23:42:41,841 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 21600000
+2022-12-17 23:42:41,842 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-12-17 23:43:02,105 [MainThread  ] [INFO ]  Scheduler has been shut down
+2022-12-17 23:43:06,487 [MainThread  ] [INFO ]  Scheduler started
+2022-12-17 23:43:06,491 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2022-12-17 23:43:07,036 [MainThread  ] [INFO ]  Scheduler started
+2022-12-17 23:43:07,286 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 216000
+2022-12-17 23:43:07,287 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2022-12-17 23:44:00,994 [MainThread  ] [INFO ]  Scheduler has been shut down
