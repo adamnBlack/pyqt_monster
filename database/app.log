@@ -318,3 +318,177 @@ Targets Count - 1
 2022-12-17 23:43:07,286 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 216000
 2022-12-17 23:43:07,287 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
 2022-12-17 23:44:00,994 [MainThread  ] [INFO ]  Scheduler has been shut down
+2023-01-20 12:34:48,614 [MainThread  ] [INFO ]  Logger Started
+2023-01-20 12:34:51,787 [MainThread  ] [INFO ]  Scheduler started
+2023-01-20 12:34:51,901 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-01-20 12:34:56,979 [MainThread  ] [INFO ]  Logger Started
+2023-01-20 12:34:56,980 [MainThread  ] [INFO ]  Scheduler started
+2023-01-20 12:34:58,323 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 6 hour
+2023-01-20 12:34:58,328 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-01-20 15:26:31,816 [MainThread  ] [INFO ]  Scheduler has been shut down
+2023-01-20 16:44:46,389 [MainThread  ] [INFO ]  Logger Started
+2023-01-20 16:44:46,945 [MainThread  ] [INFO ]  Scheduler started
+2023-01-20 16:44:46,950 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-01-20 16:44:47,599 [MainThread  ] [INFO ]  Logger Started
+2023-01-20 16:44:47,603 [MainThread  ] [INFO ]  Scheduler started
+2023-01-20 16:44:47,890 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 6 hour
+2023-01-20 16:44:47,891 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-01-20 16:46:11,938 [MainThread  ] [INFO ]  Logger Started
+2023-01-20 16:46:12,141 [MainThread  ] [INFO ]  Scheduler started
+2023-01-20 16:46:12,146 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-01-20 16:46:12,793 [APScheduler ] [INFO ]  Logger Started
+2023-01-20 16:46:12,798 [APScheduler ] [INFO ]  Scheduler started
+2023-01-20 16:46:13,083 [APScheduler ] [INFO ]  auto_fire_responses_webhook Interval: 6 hour
+2023-01-20 16:46:13,084 [APScheduler ] [INFO ]  auto_fire_responses_webhook timer started
+2023-01-20 17:04:35,718 [MainThread  ] [INFO ]  Logger Started
+2023-01-20 17:04:35,922 [MainThread  ] [INFO ]  Scheduler started
+2023-01-20 17:04:35,928 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-01-20 17:04:36,553 [APScheduler ] [INFO ]  Logger Started
+2023-01-20 17:04:36,561 [APScheduler ] [INFO ]  Scheduler started
+2023-01-20 17:04:36,848 [APScheduler ] [INFO ]  auto_fire_responses_webhook Interval: 6 hour
+2023-01-20 17:04:36,849 [APScheduler ] [INFO ]  auto_fire_responses_webhook timer started
+2023-01-20 17:04:53,695 [Thread-6    ] [INFO ]  Scheduler Campaign config saved
+2023-01-20 17:05:17,438 [Thread-9    ] [INFO ]  Scheduler Campaign config saved
+2023-01-20 20:33:20,826 [MainThread  ] [INFO ]  Logger Started
+2023-01-20 20:33:20,888 [MainThread  ] [INFO ]  Scheduler started
+2023-01-20 20:33:20,893 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-01-20 20:33:21,545 [MainThread  ] [INFO ]  Logger Started
+2023-01-20 20:33:21,548 [MainThread  ] [INFO ]  Scheduler started
+2023-01-20 20:33:21,836 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 6 hour
+2023-01-20 20:33:21,837 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-01-20 20:33:31,708 [Thread-5    ] [INFO ]  Scheduler Campaign config saved
+2023-01-20 20:33:39,823 [APScheduler ] [ERROR]  Unable to restore job "3b55e301-4b9b-465f-8d77-e49d8138eaa4" -- removing it
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\util.py", line 304, in ref_to_obj
+    obj = getattr(obj, name)
+AttributeError: module 'main' has no attribute 'run_scheduled_campaign'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\jobstores\sqlalchemy.py", line 141, in _get_jobs
+    jobs.append(self._reconstitute_job(row.job_state))
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\jobstores\sqlalchemy.py", line 128, in _reconstitute_job
+    job.__setstate__(job_state)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\job.py", line 273, in __setstate__
+    self.func = ref_to_obj(self.func_ref)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\util.py", line 307, in ref_to_obj
+    raise LookupError('Error resolving reference %s: error looking up object' % ref)
+LookupError: Error resolving reference main:run_scheduled_campaign: error looking up object
+2023-01-20 20:33:39,825 [APScheduler ] [ERROR]  Unable to restore job "3b55e301-4b9b-465f-8d77-e49d8138eaa4" -- removing it
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\util.py", line 304, in ref_to_obj
+    obj = getattr(obj, name)
+AttributeError: module 'main' has no attribute 'run_scheduled_campaign'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\jobstores\sqlalchemy.py", line 141, in _get_jobs
+    jobs.append(self._reconstitute_job(row.job_state))
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\jobstores\sqlalchemy.py", line 128, in _reconstitute_job
+    job.__setstate__(job_state)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\job.py", line 273, in __setstate__
+    self.func = ref_to_obj(self.func_ref)
+  File "D:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\env\lib\site-packages\apscheduler\util.py", line 307, in ref_to_obj
+    raise LookupError('Error resolving reference %s: error looking up object' % ref)
+LookupError: Error resolving reference main:run_scheduled_campaign: error looking up object
+2023-01-20 20:44:24,449 [MainThread  ] [INFO ]  Logger Started
+2023-01-20 20:44:24,510 [MainThread  ] [INFO ]  Scheduler started
+2023-01-20 20:44:24,513 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-01-20 20:44:25,145 [MainThread  ] [INFO ]  Logger Started
+2023-01-20 20:44:25,146 [MainThread  ] [INFO ]  Scheduler started
+2023-01-20 20:44:25,433 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 6 hour
+2023-01-20 20:44:25,434 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-01-20 20:44:29,735 [Thread-5    ] [INFO ]  Scheduler Campaign config saved
+2023-01-20 20:44:29,807 [Thread-4    ] [INFO ]  Added job "63121a9b-32b2-47fc-9b8d-3605df3cba53-group_a" to job store "default"
+2023-01-20 20:44:29,808 [Thread-4    ] [INFO ]  Scheduled job id: 63121a9b-32b2-47fc-9b8d-3605df3cba53-group_a at 2023-01-20 00:00:00
+2023-01-20 20:44:29,809 [ThreadPoolEx] [INFO ]  Starting MyMainClass.run_scheduled_campaign id: 63121a9b-32b2-47fc-9b8d-3605df3cba53-group_a
+2023-01-20 20:44:29,809 [APScheduler ] [INFO ]  Removed job 63121a9b-32b2-47fc-9b8d-3605df3cba53-group_a
+2023-01-20 20:44:29,813 [Thread-6    ] [INFO ]  config updated
+2023-01-20 20:44:29,902 [ThreadPoolEx] [INFO ]  Completing MyMainClass.run_scheduled_campaign id: 63121a9b-32b2-47fc-9b8d-3605df3cba53-group_a
+2023-01-20 20:44:29,969 [Thread-7    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 0
+ Delay: 0 - 10
+ Campaign ID: bfc85821-0544-42b1-b4a4-4b87fd4be308
+ Add Custom Hostname: False
+2023-01-20 20:44:30,039 [Thread-7    ] [INFO ]  removing email from target...
+2023-01-20 20:44:30,085 [Thread-7    ] [INFO ]  Sending Finished bfc85821-0544-42b1-b4a4-4b87fd4be308
+2023-01-20 22:08:09,257 [MainThread  ] [INFO ]  Logger Started
+2023-01-20 22:08:12,356 [MainThread  ] [INFO ]  Scheduler started
+2023-01-20 22:08:12,370 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-01-20 22:08:14,841 [MainThread  ] [INFO ]  Logger Started
+2023-01-20 22:08:14,842 [MainThread  ] [INFO ]  Scheduler started
+2023-01-20 22:08:15,144 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 6 hour
+2023-01-20 22:08:15,145 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-01-20 22:40:19,808 [Thread-5    ] [INFO ]  Scheduler Campaign config saved
+2023-01-20 22:40:19,913 [Thread-4    ] [INFO ]  Added job "fadbbc27-eeaa-4b68-ae94-2674c675210f-group_a" to job store "default"
+2023-01-20 22:40:19,915 [Thread-4    ] [INFO ]  Scheduled job id: fadbbc27-eeaa-4b68-ae94-2674c675210f-group_a at 2023-01-20 10:41:00
+2023-01-20 22:40:19,916 [ThreadPoolEx] [INFO ]  Starting MyMainClass.run_scheduled_campaign id: fadbbc27-eeaa-4b68-ae94-2674c675210f-group_a
+2023-01-20 22:40:19,916 [APScheduler ] [INFO ]  Removed job fadbbc27-eeaa-4b68-ae94-2674c675210f-group_a
+2023-01-20 22:40:19,921 [Thread-6    ] [INFO ]  config updated
+2023-01-20 22:40:19,926 [ThreadPoolEx] [INFO ]  Completing MyMainClass.run_scheduled_campaign id: fadbbc27-eeaa-4b68-ae94-2674c675210f-group_a
+2023-01-20 22:40:19,927 [Thread-7    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 0
+ Delay: 0 - 10
+ Campaign ID: 603a47ff-766c-447c-8c80-fdf3e2cc177d
+ Add Custom Hostname: False
+2023-01-20 22:40:19,933 [Thread-7    ] [INFO ]  removing email from target...
+2023-01-20 22:40:19,978 [Thread-7    ] [INFO ]  Sending Finished 603a47ff-766c-447c-8c80-fdf3e2cc177d
+2023-01-20 22:40:31,431 [Thread-10   ] [INFO ]  Added job "1196d901-cca6-47b6-9481-b139ba343402-group_a" to job store "default"
+2023-01-20 22:40:31,432 [Thread-10   ] [INFO ]  Scheduled job id: 1196d901-cca6-47b6-9481-b139ba343402-group_a at 2023-01-20 22:42:00
+2023-01-20 22:40:31,433 [Thread-11   ] [INFO ]  Scheduler Campaign config saved
+2023-01-20 22:40:53,096 [Thread-12   ] [INFO ]  Added job "89fcf5ce-56e8-45dd-9585-796ff40de2cb-group_b" to job store "default"
+2023-01-20 22:40:53,097 [Thread-12   ] [INFO ]  Scheduled job id: 89fcf5ce-56e8-45dd-9585-796ff40de2cb-group_b at 2023-01-20 22:43:00
+2023-01-20 22:40:53,202 [Thread-13   ] [INFO ]  Scheduler Campaign config saved
+2023-01-20 22:42:00,001 [ThreadPoolEx] [INFO ]  Starting MyMainClass.run_scheduled_campaign id: 1196d901-cca6-47b6-9481-b139ba343402-group_a
+2023-01-20 22:42:00,001 [APScheduler ] [INFO ]  Removed job 1196d901-cca6-47b6-9481-b139ba343402-group_a
+2023-01-20 22:42:00,005 [Thread-14   ] [INFO ]  config updated
+2023-01-20 22:42:00,007 [ThreadPoolEx] [INFO ]  Completing MyMainClass.run_scheduled_campaign id: 1196d901-cca6-47b6-9481-b139ba343402-group_a
+2023-01-20 22:42:00,009 [Thread-15   ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 0
+ Delay: 0 - 10
+ Campaign ID: 62c4fc3f-f716-40bd-a631-64a9e1632e0d
+ Add Custom Hostname: False
+2023-01-20 22:42:00,018 [Thread-15   ] [INFO ]  removing email from target...
+2023-01-20 22:42:00,064 [Thread-15   ] [INFO ]  Sending Finished 62c4fc3f-f716-40bd-a631-64a9e1632e0d
+2023-01-20 22:43:00,005 [ThreadPoolEx] [INFO ]  Starting MyMainClass.run_scheduled_campaign id: 89fcf5ce-56e8-45dd-9585-796ff40de2cb-group_b
+2023-01-20 22:43:00,006 [APScheduler ] [INFO ]  Removed job 89fcf5ce-56e8-45dd-9585-796ff40de2cb-group_b
+2023-01-20 22:43:00,360 [Thread-18   ] [INFO ]  config updated
+2023-01-20 22:43:00,361 [ThreadPoolEx] [INFO ]  Completing MyMainClass.run_scheduled_campaign id: 89fcf5ce-56e8-45dd-9585-796ff40de2cb-group_b
+2023-01-20 22:43:00,366 [Thread-19   ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group B
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 2
+ Len of Group: 3
+ Len of Targets: 0
+ Delay: 0 - 10
+ Campaign ID: 52f5422b-c83e-4cd4-aa7b-2ec0913f302f
+ Add Custom Hostname: False
+2023-01-20 22:43:00,381 [Thread-19   ] [INFO ]  removing email from target...
+2023-01-20 22:43:00,435 [Thread-19   ] [INFO ]  Sending Finished 52f5422b-c83e-4cd4-aa7b-2ec0913f302f
+2023-01-20 22:46:04,234 [MainThread  ] [INFO ]  Exiting

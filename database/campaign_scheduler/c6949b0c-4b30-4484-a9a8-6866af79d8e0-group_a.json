@@ -1,7 +1,7 @@
 {
     "config": {
         "date": "4/20/2022",
-        "num_emails_per_address": 2,
+        "num_emails_per_address": 1,
         "delay_between_emails": "0-10",
         "limit_of_thread": 100,
         "compose_email_subject": "Personal",
@@ -18,7 +18,7 @@
         "enable_webhook": false,
         "enable_email_tracking": false,
         "custom_hostname": false,
-        "campaign_group": "group_b",
+        "campaign_group": "group_a",
         "body_type": "Normal",
         "target_blacklist": [],
         "inbox_blacklist": [

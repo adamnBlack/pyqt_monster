@@ -15,6 +15,7 @@ from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem
 from pyautogui import alert, confirm
 import traceback
 import datetime
+import signal
 
 from gui import Ui_MainWindow
 
@@ -74,9 +75,7 @@ class MyMainClass:
         # campaign page
         GUI.lineEdit_subject.setText(var.compose_email_subject)
 
-        GUI.lineEdit_num_per_address.setText(str(var.num_emails_per_address))
-        GUI.lineEdit_delay_between_emails.setText(
-            str(var.delay_between_emails))
+        self.set_campaign_config()
 
         GUI.label_version.setText("VERSION: {}".format(var.version))
 
@@ -250,9 +249,7 @@ class MyMainClass:
         GUI.pushButton_config_update.clicked.connect(self.configuration_save)
 
         GUI.label_desktop_app_id.setText(var.gmonster_desktop_id)
-        GUI.lineEdit_number_of_threads.setText(
-            str(var.limit_of_thread)
-        )
+
         GUI.lineEdit_number_of_threads.textChanged.connect(
             self.update_limit_of_thread
         )
@@ -328,6 +325,8 @@ class MyMainClass:
                                      args=[GUI.comboBox_scheduled_campaign_list.itemData(
                                          GUI.comboBox_scheduled_campaign_list.currentIndex())]).start()
         )
+
+        threading.Thread(target=self.reset_schedule_campaign_job_list, daemon=True, args=[]).start()
 
     def start_auto_fire_responses_timer(self):
         if GUI.checkBox_auto_fire_responses_webhook.isChecked():
@@ -412,13 +411,24 @@ class MyMainClass:
                 Thread(target=update_config_json, daemon=True, kwargs={"alternative_name": config_filename}).start()
                 job = var.scheduler.add_job(func=self.run_scheduled_campaign, trigger='date',
                                             args=(config_filename,), id=config_filename,
-                                            name=config_filename, next_run_time=scheduled_time)
+                                            name=config_filename, next_run_time=scheduled_time, misfire_grace_time=None)
 
                 self.reset_schedule_campaign_job_list()
                 logger.info(f"Scheduled job id: {job.id} at {str(scheduled_time)}")
 
         except Exception as e:
             logger.error(f"Error at {self.__class__.__name__}: {traceback.format_exc()}")
+
+    def set_campaign_config(self):
+        GUI.lineEdit_num_per_address.setText(
+            str(var.num_emails_per_address)
+        )
+        GUI.lineEdit_delay_between_emails.setText(
+            str(var.delay_between_emails)
+        )
+        GUI.lineEdit_number_of_threads.setText(
+            str(var.limit_of_thread)
+        )
 
     def remove_schedule_campaign(self, job_id):
         try:
@@ -442,7 +452,11 @@ class MyMainClass:
                 with open('{}/{}.json'.format(var.campaign_scheduler_cache_path, config_filename)) as json_file:
                     data = load(json_file)
                     campaign_group = data["config"]['campaign_group']
+                    var.num_emails_per_address = data['config']['num_emails_per_address']
+                    var.delay_between_emails = data['config']['delay_between_emails']
+                    var.limit_of_thread = data['config']['limit_of_thread']
 
+                self.set_campaign_config()
                 if campaign_group == 'group_a':
                     GUI.radioButton_campaign_group_a.setChecked(True)
                 else:
@@ -1283,6 +1297,6 @@ else:
     myMC = MyMainClass()
 
     app.exec_()
-    print("Exit")
-    var.scheduler.shutdown()
+    logger.info("Exiting")
+    signal.signal(signal.SIGTERM, var.exit_gracefully)
     sys.exit()

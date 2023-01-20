@@ -119,8 +119,18 @@ jobstores = {
     'default': SQLAlchemyJobStore(url=f'sqlite:///{base_dir}/jobs.sqlite')
 }
 
+logger.info("Logger Started")
 scheduler = BackgroundScheduler(logger=logger)
+# scheduler = BackgroundScheduler(logger=logger, jobstores=jobstores)
+# scheduler.add_jobstore('sqlalchemy', url=f'sqlite:///{base_dir}/jobs.sqlite')
 scheduler.start()
+
+
+def exit_gracefully(signum, frame):
+    global scheduler
+    logger.info('shutdown scheduler gracefully')
+    scheduler.shutdown()
+
 
 db_file_loading_config = {
     "group_a": True,

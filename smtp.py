@@ -903,7 +903,7 @@ def main(group, d_start, d_end, group_selected):
             next_run_time = datetime.now() + timedelta(days=var.followup_days)
             var.scheduler.add_job(follow_up, 'date',
                                   args=(campaign_id,),
-                                  next_run_time=next_run_time)
+                                  next_run_time=next_run_time, misfire_grace_time=None)
             logger.info(f"FollowUp scheduled: {next_run_time} {campaign_id}")
 
         var.email_failed = email_failed
