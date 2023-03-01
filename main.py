@@ -550,6 +550,7 @@ class MyMainClass:
         inbox_blacklist = GUI.lineEdit_inbox_blacklist.text().strip().replace(" ", "")
         if inbox_blacklist:
             var.inbox_blacklist = inbox_blacklist.split(",")
+            var.inbox_blacklist = list(filter(None, var.inbox_blacklist))
         else:
             var.inbox_blacklist = list()
 

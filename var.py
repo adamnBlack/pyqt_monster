@@ -1,3 +1,4 @@
+import logging
 import traceback
 import uuid
 from json import load, dumps
@@ -240,7 +241,8 @@ responses_webhook_enabled = False
 auto_fire_responses_webhook = False
 
 # in hour
-auto_fire_responses_webhook_interval = 6
+auto_fire_responses_webhook_interval = 1
+# auto_fire_responses_webhook_interval = 6 * (2/360)
 inbox_blacklist = []
 gmonster_desktop_id = ''
 id_file_name = "gmonster_id"
@@ -324,7 +326,7 @@ if __name__ == "__main__":
     # check is another instance of same program running
     if myapp.already_running():
         alert(text="Another instance of this program is already running")
-        print("Another instance of this program is already running")
+        logger.info("Another instance of this program is already running")
         sys.exit(1)
 
     is_testing_environment = 0

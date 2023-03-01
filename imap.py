@@ -1,4 +1,6 @@
+import os
 import queue
+import json
 import traceback
 import proxy_imaplib
 import socks
@@ -35,6 +37,7 @@ codecs.register_error('slashescape', slashescape)
 def check_if_blacklisted(input_string: str):
     for keyword in var.inbox_blacklist:
         if keyword in input_string:
+            logger.info(f"Blacklisted due to this keyword: {keyword}")
             return True
 
     return False
@@ -53,8 +56,7 @@ def set_read_flag(index):
         if data['proxy_host'][index] != "":
             proxy_host = data['proxy_host'][index]
             proxy_port = int(data['proxy_port'][index])
-            print(index, data['uid'][index], proxy_host, proxy_port,
-                  proxy_user, proxy_pass, imap_user, imap_pass)
+            logger.info(f"Setting Read Flag: {data['uid'][index]} {imap_user}")
             imap = proxy_imaplib.IMAP(proxy_host=proxy_host, proxy_port=proxy_port, proxy_type=socks.PROXY_TYPE_SOCKS5,
                                       proxy_user=proxy_user, proxy_pass=proxy_pass, host=var.imap_server,
                                       port=var.imap_port, timeout=30)
@@ -68,7 +70,8 @@ def set_read_flag(index):
         imap.uid('STORE', uid, '+FLAGS', '\Seen')
         imap.close()
         imap.logout()
-        print("Set read flag")
+
+        logger.info(f"Set read flag for {imap_user} : Successful")
     except Exception as e:
         logger.error("Error at set_read_flag - {} - {}".format(imap_user, e))
 
@@ -446,7 +449,6 @@ class IMAP_(threading.Thread):
                         except Exception as e:
                             self.logger.error(
                                 f"Error on Imap download {self.imap_user} : {traceback.format_exc()}")
-
 
             imap.close()
             imap.logout()

@@ -1,5 +1,5 @@
 import threading
-from json import loads, dumps
+from json import loads, dumps, dump
 import time
 import var
 import requests
@@ -55,7 +55,7 @@ class SendWebhook(threading.Thread):
         self.logger = logger
 
     def run(self):
-        print("Webhook Started...")
+        logger.info("SendWebhook Started...")
 
         while not self.close:
             dict_list = []
@@ -64,7 +64,6 @@ class SendWebhook(threading.Thread):
                 try:
                     dict_list.append(var.webhook_q.get().copy())
                 except Exception as e:
-                    print(f"Error at SendWebhook part 1 : {e}")
                     self.logger.error(f"Error at SendWebhook part 1 : {e}")
 
             if len(dict_list) > 0:
@@ -84,11 +83,10 @@ class SendWebhook(threading.Thread):
                         f"POSTed {dict_obj['data_len']} data to webhook")
 
                 except Exception as e:
-                    print(f"Error at SendWebhook part 2 : {e}")
                     self.logger.error(f"Error at SendWebhook part 2 : {e}")
 
             time.sleep(1)
-        print("Webhook Finished.")
+        logger.info("SendWebhook Finished.")
 
     def __repr__(self):
         return f"Thread: {self.name}"
@@ -119,15 +117,16 @@ class SendWebhook_Inbox(threading.Thread):
 
     def run(self):
         global inbox_q
-        print("Inbox Webhook Thread Started...")
+        self.logger.info("Inbox Webhook Thread Started...")
         count = 0
+
         while not self.close:
 
             while not inbox_q.empty():
                 try:
+                    temp = {}
                     temp = inbox_q.get().copy()
                 except Exception as e:
-                    print(f"Error at SendWebhook Inbox part 1 : {e}")
                     self.logger.error(
                         f"Error at SendWebhook Inbox part 1 : {e}")
 
@@ -142,18 +141,23 @@ class SendWebhook_Inbox(threading.Thread):
                     result = requests.post(
                         self.api_link, json=data, headers=self.headers, timeout=10)
 
+                    # result = requests.post(
+                    #     "https://webhook.site/2a6b080d-bd56-46f8-b45c-fbf23f30f492",
+                    #     json=data, headers=self.headers, timeout=10)
+
+                    self.logger.info(f"Dump Webhook - {temp}")
+
                     count += 1
 
                     var.command_q.put(
                         f'GUI.label_email_status.setText("Total email sent - {count}/{self.total_length}")')
 
                 except Exception as e:
-                    print(f"Error at SendWebhook Inbox part 2 : {e}")
                     self.logger.error(
                         f"Error at SendWebhook Inbox part 2 : {e}")
 
             time.sleep(1)
-        print("Webhook Inbox Thread Finished.")
+        self.logger.info("Webhook Inbox Thread Finished.")
 
     def __repr__(self):
         return f"Thread: {self.name}"
