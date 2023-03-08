@@ -1,0 +1,25 @@
+{
+    "data": {
+        "uid": "73",
+        "to": "Janice Holley lithbello60@gmail.com",
+        "TONAME": "Janice Holley",
+        "to_mail": "lithbello60@gmail.com",
+        "message-id": "CAGwNhr0qPG4hd1xG3_oun_3jRyK6RczNkDsGZ==HM1M_EWhdtw@mail.gmail.com",
+        "from": "SHAH IMRAN shahimrans64@gmail.com",
+        "from_name": "SHAH IMRAN",
+        "from_mail": "shahimrans64@gmail.com",
+        "date": "2023-02-12 17:08:58+06:00",
+        "subject": "hi there",
+        "user": "lithbello60@gmail.com",
+        "pass": "wrddcsqmfqdkqkrx",
+        "body": "what's up?\r\n",
+        "proxy_host": "185.125.171.221",
+        "proxy_port": 4021,
+        "proxy_user": "2JjU2izT4rk1tGb",
+        "proxy_pass": "bEjmSK36Ma4C36t",
+        "FIRSTFROMNAME": "Janice",
+        "LASTFROMNAME": "Holley",
+        "flag": "UNSEEN",
+        "Webhook_flag": false
+    }
+}

@@ -75,7 +75,14 @@ def test(send_to):
         target = var.target.iloc[0].to_dict()
         compose_email_subject = GUI.lineEdit_subject.text().strip()
         compose_email_body = GUI.textBrowser_compose.toPlainText().strip()
-        msg = MIMEMultipart("alternative")
+
+        msg = MIMEMultipart('mixed')
+
+        content = MIMEMultipart('related')
+        # NOTE: Embedded images would be attached to content
+
+        content_body = MIMEMultipart('alternative')
+
         if send["PROXY:PORT"] != " ":
             proxy_host = send["PROXY:PORT"].split(':')[0]
             proxy_port = int(send["PROXY:PORT"].split(':')[1])
@@ -117,18 +124,22 @@ def test(send_to):
                 var.compose_email_body_html, send['FIRSTFROMNAME'], send['LASTFROMNAME'],
                 target['1'], target['2'], target['3'], target['4'], target['5'], target['6'], target['TONAME'],
                 source="body")
-            msg.attach(MIMEText(body, "html"))
-            msg.attach(MIMEText(html_to_text(body), "plain"))
+            content_body.attach(MIMEText(body, "html"))
+            content_body.attach(MIMEText(html_to_text(body), "plain"))
         else:
             body = utils.format_email(
                 var.compose_email_body, send['FIRSTFROMNAME'], send['LASTFROMNAME'],
                 target['1'], target['2'], target['3'], target['4'], target['5'], target['6'], target['TONAME'])
-            msg.attach(MIMEText(body, "plain"))
+            content_body.attach(MIMEText(body, "plain"))
 
             html_body = "<html><body><p>" + \
                         body.replace("\n", "<br>") + "</p></body></html>"
 
-            msg.attach(MIMEText(html_body, "html"))
+            content_body.attach(MIMEText(html_body, "html"))
+
+        content.attach(content_body)
+
+        msg.attach(content)
 
         for part in t_part:
             msg.attach(part)
@@ -146,7 +157,13 @@ def test(send_to):
 
 def forward(forward_to):
     try:
-        msg = MIMEMultipart("alternative")
+        msg = MIMEMultipart('mixed')
+
+        content = MIMEMultipart('related')
+        # NOTE: Embedded images would be attached to content
+
+        content_body = MIMEMultipart('alternative')
+
         if var.email_in_view['proxy_host'] != "":
             server = SMTP(timeout=30)
             server.connect_proxy(host=var.smtp_server, port=var.smtp_port,
@@ -161,7 +178,7 @@ def forward(forward_to):
         server.starttls()
         server.ehlo()
         server.login(var.email_in_view['user'], var.email_in_view['pass'])
-        print(var.email_in_view['from_mail'])
+
         msg["Subject"] = "Fwd: " + var.email_in_view['original_subject']
         msg['From'] = formataddr((str(Header("{} {}".format(
             var.email_in_view['FIRSTFROMNAME'], var.email_in_view['LASTFROMNAME']), 'utf-8')),
@@ -175,18 +192,22 @@ def forward(forward_to):
                    var.email_in_view['original_body'])
 
         part1 = MIMEText(body, "plain")
-        msg.attach(part1)
+        content_body.attach(part1)
 
         html_body = "<html><body><p>" + \
                     body.replace("\n", "<br>") + "</p></body></html>"
 
-        msg.attach(MIMEText(html_body, "html"))
+        content_body.attach(MIMEText(html_body, "html"))
+
+        content.attach(content_body)
+
+        msg.attach(content)
 
         server.sendmail(var.email_in_view['user'], forward_to, msg.as_string())
 
         server.quit()
         server.close()
-        print("done")
+        logger.info(f"Forwarded to {forward_to} from {var.email_in_view['user']}")
         return True
 
     except Exception as e:
@@ -198,7 +219,13 @@ def forward(forward_to):
 
 def reply():
     try:
-        msg = MIMEMultipart("alternative")
+        msg = MIMEMultipart('mixed')
+
+        content = MIMEMultipart('related')
+        # NOTE: Embedded images would be attached to content
+
+        content_body = MIMEMultipart('alternative')
+
         if var.email_in_view['proxy_host'] != "":
             server = SMTP(timeout=30)
             server.connect_proxy(host=var.smtp_server, port=var.smtp_port,
@@ -230,18 +257,19 @@ def reply():
             var.email_in_view['body'], f_f_name, l_f_name, "", "", "", "", "", "", toname, source="body")
 
         if var.body_type == "Html":
-            part1 = MIMEText(body, "html")
-            msg.attach(MIMEText(html_to_text(body), "plain"))
+            content_body.attach(MIMEText(html_to_text(body), "plain"))
         else:
-            part1 = MIMEText(body, "plain")
             html_body = "<html><body><p>" + \
                         body.replace("\n", "<br>") + "</p></body></html>"
 
-            msg.attach(MIMEText(html_body, "html"))
+            content_body.attach(MIMEText(html_body, "html"))
 
         msg.add_header("In-Reply-To", msg_id)
         msg.add_header("References", msg_id)
-        msg.attach(part1)
+
+        content.attach(content_body)
+
+        msg.attach(content)
 
         for path in var.files:
             part = MIMEBase('application', "octet-stream")
@@ -257,11 +285,10 @@ def reply():
 
         server.quit()
         server.close()
-        print("done")
+        logger.info(f"Replied to {var.email_in_view['from_mail']}")
         return True
 
     except Exception as e:
-        print("Error at reply : {}".format(e))
         logger.error(
             "Error at replying - {} - {}".format(var.email_in_view['user'], e))
         return False
@@ -375,7 +402,12 @@ class SMTP_(threading.Thread):
                 if not success_sent[item['EMAIL']]:
                     server = self.login()
 
-                    msg = MIMEMultipart("alternative")
+                    msg = MIMEMultipart('mixed')
+
+                    content = MIMEMultipart('related')
+                    # NOTE: Embedded images would be attached to content
+
+                    content_body = MIMEMultipart('alternative')
 
                     msg["Subject"] = utils.format_email(var.compose_email_subject, self.FIRSTFROMNAME,
                                                         self.LASTFROMNAME, item['1'], item['2'], item['3'],
@@ -392,9 +424,9 @@ class SMTP_(threading.Thread):
                                                   item['TONAME'], source="body")
 
                         # if contains_non_ascii_characters(body):
-                        msg.attach(
+                        content_body.attach(
                             MIMEText(body.encode('utf-8'), "html", 'utf-8'))
-                        msg.attach(MIMEText(html_to_text(
+                        content_body.attach(MIMEText(html_to_text(
                             body).encode('utf-8'), "plain", 'utf-8'))
 
                         # else:
@@ -411,15 +443,18 @@ class SMTP_(threading.Thread):
                                     body.replace("\n", "<br>") + "</p></body></html>"
 
                         # if contains_non_ascii_characters(body):
-                        msg.attach(
+                        content_body.attach(
                             MIMEText(body.encode('utf-8'), "plain", "utf-8"))
-                        msg.attach(
+                        content_body.attach(
                             MIMEText(html_body.encode('utf-8'), "html", "utf-8"))
 
                         # else:
 
                         # msg.attach(MIMEText(body, "plain"))
                         # msg.attach(MIMEText(html_body, "html"))
+                    content.attach(content_body)
+
+                    msg.attach(content)
 
                     for part in t_part:
                         msg.attach(part)
