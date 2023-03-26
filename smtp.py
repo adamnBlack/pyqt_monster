@@ -439,7 +439,7 @@ class SMTP_(threading.Thread):
                             if counter == 2:
                                 raise
                             time.sleep(random.randint(10, 100))
-                            print("Reconnecting smtp - {}".format(self.name))
+                            self.logger.info("Reconnecting smtp - {}".format(self.name))
                             try:
                                 server = self.login()
                             except:
@@ -724,7 +724,7 @@ class AddFollowUps:
             logger.info(f"{self.__class__.__name__} unsuccessful")
 
 
-def main(group, d_start, d_end, group_selected):
+def main(group, d_start, d_end, group_selected, num_emails_per_address_range):
     global sent_q, email_failed, success_sent, remove_target_q
     try:
         success_sent.clear()
@@ -751,16 +751,16 @@ def main(group, d_start, d_end, group_selected):
         campaign_id = str(uuid.uuid4())
 
         logger.info(f"\n Starting Send Campaign : "
-                     + f"\n Target Removal - {var.remove_email_from_target}"
-                     + f"\n Group Selected: {group_selected}"
-                     + f"\n Webhook Enabled: {var.enable_webhook_status}"
-                     + f"\n Email Block Check: {var.check_for_blocks}"
-                     + f"\n Emails Per Account: {var.num_emails_per_address}"
-                     + f"\n Len of Group: {group_len}"
-                     + f"\n Len of Targets: {target_len}"
-                     + f"\n Delay: {d_start} - {d_end}"
-                     + f"\n Campaign ID: {campaign_id}"
-                     + f"\n Add Custom Hostname: {var.add_custom_hostname}")
+                    + f"\n Target Removal - {var.remove_email_from_target}"
+                    + f"\n Group Selected: {group_selected}"
+                    + f"\n Webhook Enabled: {var.enable_webhook_status}"
+                    + f"\n Email Block Check: {var.check_for_blocks}"
+                    + f"\n Emails Per Account: {var.num_emails_per_address}"
+                    + f"\n Len of Group: {group_len}"
+                    + f"\n Len of Targets: {target_len}"
+                    + f"\n Delay: {d_start} - {d_end}"
+                    + f"\n Campaign ID: {campaign_id}"
+                    + f"\n Add Custom Hostname: {var.add_custom_hostname}")
 
         with var.send_report.mutex:
             var.send_report.queue.clear()
@@ -827,20 +827,26 @@ def main(group, d_start, d_end, group_selected):
                         proxy_host = ""
                         proxy_port = ""
 
+                    num_emails_per_address = random.randint(
+                        num_emails_per_address_range['start'],
+                        num_emails_per_address_range['end']
+                    )
                     start = temp
-                    end = start + var.num_emails_per_address - 1
+                    end = start + num_emails_per_address - 1
                     temp = end + 1
 
                     group.at[index, 'flag'] = 1
 
                     logger.info(f"\nStarting Thread : Name - {name}"
-                                 f"\nTargets Count - {len(target.loc[start:end])}")
+                                f"\nTargets Count - {len(target.loc[start:end])}")
                     # + f"\nTargets - {json.dumps(target.loc[start:end].to_dict())}")
 
                     SMTP_(index, name, proxy_host, proxy_port, proxy_user,
                           proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME,
                           target.loc[start:end].copy(), d_start, d_end, campaign_id, add_cached_targets,
                           followup_enabled).start()
+
+                    logger.info(f"{name} set to sent {num_emails_per_address} emails")
 
                     while var.thread_open_campaign >= var.limit_of_thread and not var.stop_send_campaign:
                         time.sleep(1)
