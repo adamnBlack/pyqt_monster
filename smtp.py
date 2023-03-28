@@ -2,6 +2,7 @@ import os
 import pandas as pd
 from followup_smtp import FollowUpSend
 from proxy_smtplib import SMTP
+from smtp_base import SmtpBase
 from email.mime.multipart import MIMEMultipart
 from email.header import Header
 from email.utils import formataddr
@@ -294,52 +295,41 @@ def reply():
         return False
 
 
-class SMTP_(threading.Thread):
+class Smtp(SmtpBase, threading.Thread):
     followup_queue = queue.Queue()
 
-    def __init__(self, threadID, name, proxy_host, proxy_port, proxy_user,
-                 proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME, target, d_start, d_end, campaign_id,
-                 cached_targets,
-                 followup_enabled):
-        threading.Thread.__init__(self)
-        self.threadID = threadID
-        self.name = name
-        self.setDaemon(True)
-        self.proxy_host = proxy_host
-        self.proxy_port = proxy_port
-        self.proxy_user = proxy_user
-        self.proxy_pass = proxy_pass
-        self.user = user
-        self.passwd = passwd
-        self.FIRSTFROMNAME = FIRSTFROMNAME
-        self.LASTFROMNAME = LASTFROMNAME
-        self.target = target
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+        self.threadID = kwargs["index"]
+        self.name = kwargs["name"]
+        # self.setDaemon(True)
+        self.target = kwargs["target"]
         self.logger = logger
-        self.d_start = d_start
-        self.d_end = d_end
-        self.campaign_id = campaign_id
+        self.d_start = kwargs["d_start"]
+        self.d_end = kwargs["d_end"]
+        self.campaign_id = kwargs["campaign_id"]
         self.local_hostname = None
-        self.cached_targets = cached_targets
-        self.followup_enabled = followup_enabled
+        self.followup_enabled = kwargs["followup_enabled"]
 
-        self.logger.info("Length - {} {}".format(len(self.target), self.user))
+        self.logger.info("SMTP thread starting: Length - {} {}".format(len(self.target), self.user))
 
-    def login(self):
+    def _login(self):
         try:
 
             if var.add_custom_hostname:
-                self.local_hostname = f"{self.FIRSTFROMNAME}-pc"
+                self.local_hostname = f"{self.first_from_name}-pc"
 
             if self.proxy_host != "":
                 server = SMTP(
                     timeout=30, local_hostname=self.local_hostname)
-                server.connect_proxy(host=var.smtp_server, port=var.smtp_port,
+                server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
                                      proxy_host=self.proxy_host, proxy_port=int(self.proxy_port),
                                      proxy_type=socks.PROXY_TYPE_SOCKS5,
                                      proxy_user=self.proxy_user, proxy_pass=self.proxy_pass)
                 # server.set_debuglevel(1)
             else:
-                server = smtplib.SMTP(var.smtp_server, var.smtp_port)
+                server = smtplib.SMTP(self.smtp_server, self.smtp_port)
                 server.set_debuglevel(0)
 
             server.starttls()
@@ -349,13 +339,13 @@ class SMTP_(threading.Thread):
             return server
 
         except Exception as e:
-            print(
+            logger.info(
                 f"Error at SMTP_.login {self.name} : {e.__class__.__name__} : {str(e)}")
 
             if var.enable_webhook_status:
                 t_dict = {
                     "sender": self.user,
-                    "sender_name": f"{self.FIRSTFROMNAME} {self.LASTFROMNAME}",
+                    "sender_name": f"{self.first_from_name} {self.last_from_name}",
                     "time": datetime.utcnow().strftime("%m/%d/%Y %H:%M:%S"),
                     "error_details": f"{e.__class__.__name__} : {str(e)}"
                 }
@@ -375,7 +365,7 @@ class SMTP_(threading.Thread):
 
     def run(self):
         try:
-            global sent_q, email_failed, success_sent, remove_target_q
+            global sent_q, email_failed, success_sent
 
             last_recipient = ''
             var.thread_open_campaign += 1
@@ -400,7 +390,7 @@ class SMTP_(threading.Thread):
                     break
 
                 if not success_sent[item['EMAIL']]:
-                    server = self.login()
+                    server = self._login()
 
                     msg = MIMEMultipart('mixed')
 
@@ -409,17 +399,17 @@ class SMTP_(threading.Thread):
 
                     content_body = MIMEMultipart('alternative')
 
-                    msg["Subject"] = utils.format_email(var.compose_email_subject, self.FIRSTFROMNAME,
-                                                        self.LASTFROMNAME, item['1'], item['2'], item['3'],
+                    msg["Subject"] = utils.format_email(var.compose_email_subject, self.first_from_name,
+                                                        self.last_from_name, item['1'], item['2'], item['3'],
                                                         item['4'], item['5'], item['6'], item['TONAME'])
                     msg['From'] = formataddr((str(Header("{} {}".format(
-                        self.FIRSTFROMNAME, self.LASTFROMNAME), 'utf-8')), self.user))
+                        self.first_from_name, self.last_from_name), 'utf-8')), self.user))
                     msg["To"] = item['EMAIL']
                     last_recipient = item['EMAIL']
                     msg['Date'] = formatdate(localtime=True)
 
                     if var.body_type == "Html":
-                        body = utils.format_email(var.compose_email_body_html, self.FIRSTFROMNAME, self.LASTFROMNAME,
+                        body = utils.format_email(var.compose_email_body_html, self.first_from_name, self.last_from_name,
                                                   item['1'], item['2'], item['3'], item['4'], item['5'], item['6'],
                                                   item['TONAME'], source="body")
 
@@ -435,7 +425,7 @@ class SMTP_(threading.Thread):
                         # msg.attach(MIMEText(html_to_text(body), "plain"))
 
                     else:
-                        body = utils.format_email(var.compose_email_body, self.FIRSTFROMNAME, self.LASTFROMNAME,
+                        body = utils.format_email(var.compose_email_body, self.first_from_name, self.last_from_name,
                                                   item['1'], item['2'], item['3'], item['4'], item['5'], item['6'],
                                                   item['TONAME'], source="body")
 
@@ -474,9 +464,9 @@ class SMTP_(threading.Thread):
                             if counter == 2:
                                 raise
                             time.sleep(random.randint(10, 100))
-                            print("Reconnecting smtp - {}".format(self.name))
+                            logger.warning("Reconnecting smtp - {}".format(self.name))
                             try:
-                                server = self.login()
+                                server = self._login()
                             except:
                                 pass
                             # server.sendmail(
@@ -484,7 +474,7 @@ class SMTP_(threading.Thread):
 
                     success_sent[item['EMAIL']] = True
 
-                    self.cached_targets.targets_q.put(item['EMAIL'])
+                    AddCachedTargets.targets_q.put(item['EMAIL'])
 
                     self.logger.info(f"Sent - {self.user} {item['EMAIL']}")
 
@@ -505,7 +495,7 @@ class SMTP_(threading.Thread):
                         target_info = item.to_dict()
                         target_info['target_email'] = target_info.pop('EMAIL')
                         target_info['email_subject'] = msg["Subject"]
-                        SMTP_.followup_queue.put({
+                        Smtp.followup_queue.put({
                             "group_email": self.user,
                             "group_info": {
                                 "proxy_host": self.proxy_host,
@@ -515,8 +505,8 @@ class SMTP_(threading.Thread):
                                 "user": self.user,
                                 "password": self.passwd,
                                 "proxy_type": socks.PROXY_TYPE_SOCKS5,
-                                "FIRSTFROMNAME": self.FIRSTFROMNAME,
-                                "LASTFROMNAME": self.LASTFROMNAME
+                                "FIRSTFROMNAME": self.first_from_name,
+                                "LASTFROMNAME": self.last_from_name
                             },
                             "target_email": item['EMAIL'],
                             "target_info": target_info,
@@ -527,7 +517,7 @@ class SMTP_(threading.Thread):
                         t_dict = {
                             "target": item['EMAIL'],
                             "sender": self.user,
-                            "sender_name": f"{self.FIRSTFROMNAME} {self.LASTFROMNAME}",
+                            "sender_name": f"{self.first_from_name} {self.last_from_name}",
                             "time": datetime.utcnow().strftime("%m/%d/%Y %H:%M:%S"),
                             "subject": msg["Subject"],
                             "body": body
@@ -539,7 +529,7 @@ class SMTP_(threading.Thread):
                     if var.remove_email_from_target:
                         # target = DB()
                         # result = target.remove(table="targets", id=item['ID'])
-                        remove_target_q.put(item['ID'])
+                        RemoveTarget.remove_target_q.put(item['ID'])
 
                     if var.AirtableConfig.mark_sent_airtable:
                         MarkTargetSentAirtable.airtable_target_q.put(item['EMAIL'])
@@ -667,10 +657,9 @@ class MarkTargetSentAirtable(threading.Thread):
         self._close = value
 
 
-remove_target_q = queue.Queue()
-
-
 class RemoveTarget(threading.Thread):
+    remove_target_q = queue.Queue()
+
     def __init__(self):
         super().__init__()
 
@@ -682,12 +671,10 @@ class RemoveTarget(threading.Thread):
         self.target = DB()
 
     def run(self):
-        global remove_target_q
-
         while not self.close:
             try:
-                if not remove_target_q.empty():
-                    _id = remove_target_q.get()
+                if not RemoveTarget.remove_target_q.empty():
+                    _id = RemoveTarget.remove_target_q.get()
                     result = self.target.remove(table="targets", id=_id)
 
             except Exception as e:
@@ -695,13 +682,15 @@ class RemoveTarget(threading.Thread):
 
             time.sleep(1)
 
-        print("Remove target thread class terminating")
+        logger.info("Remove target thread class terminating")
 
     def stop(self):
         self.close = True
 
 
 class AddCachedTargets(threading.Thread):
+    targets_q = queue.Queue()
+
     def __init__(self):
         super().__init__()
 
@@ -711,13 +700,12 @@ class AddCachedTargets(threading.Thread):
 
         self._close = False
         self.db = DB()
-        self.targets_q = queue.Queue()
 
     def run(self) -> None:
         while not self._close:
             try:
-                if not self.targets_q.empty():
-                    email = self.targets_q.get()
+                if not AddCachedTargets.targets_q.empty():
+                    email = AddCachedTargets.targets_q.get()
                     self.db.add_to_cached_targets(email)
 
             except Exception as e:
@@ -725,7 +713,7 @@ class AddCachedTargets(threading.Thread):
 
             time.sleep(1)
 
-        print("AddCachedTargets thread class terminating")
+        logger.info("AddCachedTargets thread class terminating")
 
     @property
     def close(self):
@@ -760,7 +748,7 @@ class AddFollowUps:
 
 
 def main(group, d_start, d_end, group_selected):
-    global sent_q, email_failed, success_sent, remove_target_q
+    global sent_q, email_failed, success_sent
     try:
         success_sent.clear()
 
@@ -807,7 +795,8 @@ def main(group, d_start, d_end, group_selected):
             webhook = SendWebhook()
             webhook.start()
 
-        remove_target_q = queue.Queue()
+        with RemoveTarget.remove_target_q.mutex:
+            RemoveTarget.remove_target_q.queue.clear()
 
         if var.remove_email_from_target:
             remove_target = RemoveTarget()
@@ -819,14 +808,17 @@ def main(group, d_start, d_end, group_selected):
             mark_target_sent_airtable = MarkTargetSentAirtable()
             mark_target_sent_airtable.start()
 
+        with AddCachedTargets.targets_q.mutex:
+            AddCachedTargets.targets_q.queue.clear()
+
         add_cached_targets = AddCachedTargets()
         add_cached_targets.start()
 
         followup_enabled = var.followup_enabled
         campaign_time = datetime.utcnow()
 
-        with SMTP_.followup_queue.mutex:
-            SMTP_.followup_queue.queue.clear()
+        with Smtp.followup_queue.mutex:
+            Smtp.followup_queue.queue.clear()
 
         while var.send_campaign_email_count < target_len and group['flag'].sum() < group_len:
             target = target[target['flag'] == 0]
@@ -872,10 +864,31 @@ def main(group, d_start, d_end, group_selected):
                                  f"\nTargets Count - {len(target.loc[start:end])}")
                     # + f"\nTargets - {json.dumps(target.loc[start:end].to_dict())}")
 
-                    SMTP_(index, name, proxy_host, proxy_port, proxy_user,
-                          proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME,
-                          target.loc[start:end].copy(), d_start, d_end, campaign_id, add_cached_targets,
-                          followup_enabled).start()
+                    kwargs = {
+                        "index": index,
+                        "name": item["EMAIL"],
+                        "proxy_host": proxy_host,
+                        "proxy_port": proxy_port,
+                        "proxy_user": item["PROXY_USER"],
+                        "proxy_pass": item["PROXY_PASS"],
+                        "proxy_type": socks.PROXY_TYPE_SOCKS5,
+                        "user": item["EMAIL"],
+                        "password": item["EMAIL_PASS"],
+                        "FIRSTFROMNAME": item["FIRSTFROMNAME"],
+                        "LASTFROMNAME": item["LASTFROMNAME"],
+                        "target": target.loc[start:end].copy(),
+                        "d_start": d_start,
+                        "d_end": d_end,
+                        "campaign_id": campaign_id,
+                        "followup_enabled": followup_enabled
+                    }
+
+                    # SMTP_(index, name, proxy_host, proxy_port, proxy_user,
+                    #       proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME,
+                    #       target.loc[start:end].copy(), d_start, d_end, campaign_id, add_cached_targets,
+                    #       followup_enabled).start()
+
+                    Smtp(**kwargs).start()
 
                     while var.thread_open_campaign >= var.limit_of_thread and not var.stop_send_campaign:
                         time.sleep(1)
@@ -911,7 +924,7 @@ def main(group, d_start, d_end, group_selected):
         if var.remove_email_from_target:
             logger.info("removing email from target...")
 
-            while not remove_target_q.empty():
+            while not RemoveTarget.remove_target_q.empty():
                 time.sleep(1)
 
             remove_target.stop()
@@ -926,13 +939,13 @@ def main(group, d_start, d_end, group_selected):
 
             mark_target_sent_airtable.close = True
 
-        while not add_cached_targets.targets_q.empty():
+        while not AddCachedTargets.targets_q.empty():
             time.sleep(1)
 
         add_cached_targets.close = True
 
         if followup_enabled and not var.stop_send_campaign:
-            add_follow_ups = AddFollowUps(SMTP_.followup_queue, campaign_time)
+            add_follow_ups = AddFollowUps(Smtp.followup_queue, campaign_time)
             add_follow_ups.send()
 
             next_run_time = datetime.now() + timedelta(days=var.followup_days)
@@ -1047,8 +1060,6 @@ def follow_up(campaign_id: str):
 
                 for item in followup_required:
                     item: dict
-                    item['smtp_server'] = var.smtp_server
-                    item['smtp_port'] = var.smtp_port
                     item['delay_start'] = var.delay_start
                     item['delay_end'] = var.delay_end
                     item['attachment_files'] = var.files

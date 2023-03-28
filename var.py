@@ -293,6 +293,7 @@ try:
     followup_days = config['followup_days']
     followup_subject = config['followup_subject']
     followup_body = config['followup_body']
+    mail_server = config['mail_server']
     AirtableConfig.base_id = config['airtable']['base_id']
     AirtableConfig.api_key = config['airtable']['api_key']
     AirtableConfig.table_name = config['airtable']['table_name']

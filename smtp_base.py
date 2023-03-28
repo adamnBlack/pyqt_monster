@@ -1,3 +1,4 @@
+import re
 import smtplib
 import traceback
 from proxy_smtplib import SMTP
@@ -18,9 +19,19 @@ class SmtpBase:
         self.passwd = kwargs["password"]
         self.first_from_name = kwargs["FIRSTFROMNAME"]
         self.last_from_name = kwargs["LASTFROMNAME"]
-        self.smtp_server = kwargs['smtp_server']
-        self.smtp_port = kwargs['smtp_port']
         self.local_hostname = None
+
+        try:
+            regex = re.compile(r"(?<=@)(\S+$)")
+            mail_domain = regex.findall(self.user)[0]
+            mail_vendor = mail_domain.split(".")[0]
+
+            self.smtp_server = var.mail_server[mail_vendor]["smtp"]["server"]
+            self.smtp_port = var.mail_server[mail_vendor]["smtp"]["port"]
+        except:
+            logger.error(f"SmtpBase error: {traceback.format_exc()}")
+
+            raise
 
     def _login(self):
         try:
@@ -37,7 +48,7 @@ class SmtpBase:
                                      proxy_pass=self.proxy_pass)
 
             else:
-                server = smtplib.SMTP(var.smtp_server, var.smtp_port)
+                server = smtplib.SMTP(self.smtp_server, self.smtp_port)
                 # server.set_debuglevel(0)
 
             server.ehlo()

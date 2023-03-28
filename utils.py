@@ -75,6 +75,7 @@ def update_config_json(alternative_name=None):
         data = {
             "config":
             {
+                "mail_server": var.mail_server,
                 "date": var.date,
                 "num_emails_per_address": var.num_emails_per_address,
                 "delay_between_emails": var.delay_between_emails,

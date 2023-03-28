@@ -4143,3 +4143,418 @@ socks.ProxyConnectionError: Error connecting to SOCKS5 proxy 185.125.171.221:402
 2023-03-08 23:06:26,719 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
 2023-03-08 23:06:26,720 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
 2023-03-08 23:06:30,561 [MainThread  ] [INFO ]  Exiting
+2023-03-28 23:22:49,524 [MainThread  ] [INFO ]  Logger Started
+2023-03-28 23:22:49,592 [MainThread  ] [INFO ]  Scheduler started
+2023-03-28 23:22:49,666 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-28 23:22:53,255 [MainThread  ] [INFO ]  Logger Started
+2023-03-28 23:22:53,257 [MainThread  ] [INFO ]  Scheduler started
+2023-03-28 23:22:54,827 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-28 23:22:54,830 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-28 23:23:04,894 [Thread-4    ] [INFO ]  config updated
+2023-03-28 23:23:08,330 [Thread-5    ] [INFO ]  config updated
+2023-03-28 23:23:14,399 [Thread-6    ] [INFO ]  config updated
+2023-03-28 23:23:14,524 [Thread-7    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 2
+ Len of Group: 2
+ Len of Targets: 2
+ Delay: 0 - 10
+ Campaign ID: 371d5f1c-1039-42e2-8349-d170f9b81c8b
+ Add Custom Hostname: False
+2023-03-28 23:23:14,627 [Thread-7    ] [INFO ]  
+Starting Thread : Name - saidunuhu579@gmail.com
+Targets Count - 2
+2023-03-28 23:23:14,630 [Thread-7    ] [ERROR]  Error at smtp thread opening 371d5f1c-1039-42e2-8349-d170f9b81c8b - saidunuhu579@gmail.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 891, in main
+    SMTP_(**kwargs)
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 304, in __init__
+    self.threadID = kwargs["threadID"]
+KeyError: 'threadID'
+
+2023-03-28 23:23:14,635 [Thread-7    ] [INFO ]  
+Starting Thread : Name - lithbello60@gmail.com
+Targets Count - 2
+2023-03-28 23:23:14,636 [Thread-7    ] [ERROR]  Error at smtp thread opening 371d5f1c-1039-42e2-8349-d170f9b81c8b - lithbello60@gmail.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 891, in main
+    SMTP_(**kwargs)
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 304, in __init__
+    self.threadID = kwargs["threadID"]
+KeyError: 'threadID'
+
+2023-03-28 23:23:14,674 [Thread-7    ] [INFO ]  Sending Finished 371d5f1c-1039-42e2-8349-d170f9b81c8b
+2023-03-28 23:23:15,529 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-03-28 23:23:27,004 [MainThread  ] [INFO ]  Exiting
+2023-03-28 23:28:10,806 [MainThread  ] [INFO ]  Logger Started
+2023-03-28 23:28:10,862 [MainThread  ] [INFO ]  Scheduler started
+2023-03-28 23:28:10,865 [MainThread  ] [INFO ]  Exception occurred at config loading : 'mail_server'
+2023-03-28 23:31:22,620 [MainThread  ] [INFO ]  Logger Started
+2023-03-28 23:31:22,689 [MainThread  ] [INFO ]  Scheduler started
+2023-03-28 23:31:22,693 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-28 23:31:23,588 [MainThread  ] [INFO ]  Logger Started
+2023-03-28 23:31:23,589 [MainThread  ] [INFO ]  Scheduler started
+2023-03-28 23:31:23,928 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-28 23:31:23,929 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-28 23:31:27,950 [MainThread  ] [INFO ]  Exiting
+2023-03-28 23:32:44,918 [MainThread  ] [INFO ]  Logger Started
+2023-03-28 23:32:44,977 [MainThread  ] [INFO ]  Scheduler started
+2023-03-28 23:32:44,980 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-28 23:32:45,537 [MainThread  ] [INFO ]  Logger Started
+2023-03-28 23:32:45,538 [MainThread  ] [INFO ]  Scheduler started
+2023-03-28 23:32:45,809 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-28 23:32:45,811 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-28 23:32:50,402 [Thread-4    ] [INFO ]  config updated
+2023-03-28 23:33:01,039 [Thread-6    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 2
+ Len of Group: 2
+ Len of Targets: 2
+ Delay: 0 - 10
+ Campaign ID: b4027d04-a1dd-40b9-bb82-a937124f3515
+ Add Custom Hostname: False
+2023-03-28 23:33:01,039 [Thread-5    ] [INFO ]  config updated
+2023-03-28 23:33:01,057 [Thread-6    ] [INFO ]  
+Starting Thread : Name - saidunuhu579@gmail.com
+Targets Count - 2
+2023-03-28 23:33:01,058 [Thread-6    ] [INFO ]  SMTP thread starting: Length - 2 saidunuhu579@gmail.com
+2023-03-28 23:33:01,066 [Thread-6    ] [INFO ]  
+Starting Thread : Name - lithbello60@gmail.com
+Targets Count - 2
+2023-03-28 23:33:01,068 [Thread-6    ] [INFO ]  SMTP thread starting: Length - 2 lithbello60@gmail.com
+2023-03-28 23:33:01,070 [Thread-6    ] [INFO ]  Sending Finished b4027d04-a1dd-40b9-bb82-a937124f3515
+2023-03-28 23:33:02,051 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-03-28 23:34:38,850 [MainThread  ] [INFO ]  Exiting
+2023-03-28 23:34:42,578 [MainThread  ] [INFO ]  Logger Started
+2023-03-28 23:34:42,710 [MainThread  ] [INFO ]  Scheduler started
+2023-03-28 23:34:42,716 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-28 23:34:43,393 [MainThread  ] [INFO ]  Logger Started
+2023-03-28 23:34:43,396 [MainThread  ] [INFO ]  Scheduler started
+2023-03-28 23:34:43,689 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-28 23:34:43,689 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-28 23:34:48,093 [Thread-4    ] [INFO ]  config updated
+2023-03-28 23:34:48,097 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 2
+ Len of Group: 2
+ Len of Targets: 2
+ Delay: 0 - 10
+ Campaign ID: bd6b0ced-6699-43b8-a964-e9318dba9472
+ Add Custom Hostname: False
+2023-03-28 23:34:48,109 [Thread-5    ] [INFO ]  
+Starting Thread : Name - saidunuhu579@gmail.com
+Targets Count - 2
+2023-03-28 23:34:48,128 [Thread-5    ] [ERROR]  Error at smtp thread opening bd6b0ced-6699-43b8-a964-e9318dba9472 - saidunuhu579@gmail.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 892, in main
+    SMTP_(**kwargs)
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 302, in __init__
+    super().__init__(**kwargs)
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp_base.py", line 11, in __init__
+    super().__init__(self)
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\threading.py", line 800, in __init__
+    assert group is None, "group argument must be None for now"
+AssertionError: group argument must be None for now
+
+2023-03-28 23:34:48,140 [Thread-5    ] [INFO ]  
+Starting Thread : Name - lithbello60@gmail.com
+Targets Count - 2
+2023-03-28 23:34:48,142 [Thread-5    ] [ERROR]  Error at smtp thread opening bd6b0ced-6699-43b8-a964-e9318dba9472 - lithbello60@gmail.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 892, in main
+    SMTP_(**kwargs)
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 302, in __init__
+    super().__init__(**kwargs)
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp_base.py", line 11, in __init__
+    super().__init__(self)
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\threading.py", line 800, in __init__
+    assert group is None, "group argument must be None for now"
+AssertionError: group argument must be None for now
+
+2023-03-28 23:34:48,153 [Thread-5    ] [INFO ]  Sending Finished bd6b0ced-6699-43b8-a964-e9318dba9472
+2023-03-28 23:34:49,104 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-03-28 23:36:40,993 [MainThread  ] [INFO ]  Exiting
+2023-03-28 23:36:44,528 [MainThread  ] [INFO ]  Logger Started
+2023-03-28 23:36:44,584 [MainThread  ] [INFO ]  Scheduler started
+2023-03-28 23:36:44,587 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-28 23:36:45,149 [MainThread  ] [INFO ]  Logger Started
+2023-03-28 23:36:45,151 [MainThread  ] [INFO ]  Scheduler started
+2023-03-28 23:36:45,438 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-28 23:36:45,441 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-28 23:36:50,666 [Thread-4    ] [INFO ]  config updated
+2023-03-28 23:36:50,669 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 2
+ Len of Group: 2
+ Len of Targets: 2
+ Delay: 0 - 10
+ Campaign ID: 5918c0c7-a8e2-46da-8dc9-3920f5efc71e
+ Add Custom Hostname: False
+2023-03-28 23:36:50,685 [Thread-5    ] [INFO ]  
+Starting Thread : Name - saidunuhu579@gmail.com
+Targets Count - 2
+2023-03-28 23:36:50,688 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 2 saidunuhu579@gmail.com
+2023-03-28 23:36:50,694 [Thread-5    ] [INFO ]  
+Starting Thread : Name - lithbello60@gmail.com
+Targets Count - 2
+2023-03-28 23:36:50,698 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 2 lithbello60@gmail.com
+2023-03-28 23:36:50,699 [Thread-5    ] [INFO ]  Sending Finished 5918c0c7-a8e2-46da-8dc9-3920f5efc71e
+2023-03-28 23:36:51,681 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-03-28 23:36:56,124 [MainThread  ] [INFO ]  Exiting
+2023-03-28 23:44:44,111 [MainThread  ] [INFO ]  Logger Started
+2023-03-28 23:44:44,168 [MainThread  ] [INFO ]  Scheduler started
+2023-03-28 23:44:44,170 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-28 23:44:44,728 [MainThread  ] [INFO ]  Logger Started
+2023-03-28 23:44:44,729 [MainThread  ] [INFO ]  Scheduler started
+2023-03-28 23:44:45,024 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-28 23:44:45,027 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-28 23:44:50,432 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 2
+ Len of Group: 2
+ Len of Targets: 2
+ Delay: 0 - 10
+ Campaign ID: cd1562d0-71b5-46d1-92c9-bef1c82eb8d1
+ Add Custom Hostname: False
+2023-03-28 23:44:50,432 [Thread-4    ] [INFO ]  config updated
+2023-03-28 23:44:50,449 [Thread-5    ] [INFO ]  
+Starting Thread : Name - saidunuhu579@gmail.com
+Targets Count - 2
+2023-03-28 23:44:50,452 [Thread-5    ] [ERROR]  Error at smtp thread opening cd1562d0-71b5-46d1-92c9-bef1c82eb8d1 - saidunuhu579@gmail.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 891, in main
+    SMTP_(**kwargs)
+NameError: name 'SMTP_' is not defined
+
+2023-03-28 23:44:50,462 [Thread-5    ] [INFO ]  
+Starting Thread : Name - lithbello60@gmail.com
+Targets Count - 2
+2023-03-28 23:44:50,464 [Thread-5    ] [ERROR]  Error at smtp thread opening cd1562d0-71b5-46d1-92c9-bef1c82eb8d1 - lithbello60@gmail.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 891, in main
+    SMTP_(**kwargs)
+NameError: name 'SMTP_' is not defined
+
+2023-03-28 23:44:50,470 [Thread-5    ] [INFO ]  Sending Finished cd1562d0-71b5-46d1-92c9-bef1c82eb8d1
+2023-03-28 23:44:51,442 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-03-28 23:45:46,991 [MainThread  ] [INFO ]  Exiting
+2023-03-28 23:45:51,992 [MainThread  ] [INFO ]  Logger Started
+2023-03-28 23:45:52,049 [MainThread  ] [INFO ]  Scheduler started
+2023-03-28 23:45:52,054 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-28 23:45:52,658 [MainThread  ] [INFO ]  Logger Started
+2023-03-28 23:45:52,659 [MainThread  ] [INFO ]  Scheduler started
+2023-03-28 23:45:52,947 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-28 23:45:52,948 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-28 23:45:57,162 [Thread-4    ] [INFO ]  config updated
+2023-03-28 23:45:57,165 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 2
+ Len of Group: 2
+ Len of Targets: 2
+ Delay: 0 - 10
+ Campaign ID: 9c6ef982-4d28-4740-afde-cb2f9bc7f5fc
+ Add Custom Hostname: False
+2023-03-28 23:45:57,180 [Thread-5    ] [INFO ]  
+Starting Thread : Name - saidunuhu579@gmail.com
+Targets Count - 2
+2023-03-28 23:45:57,182 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 2 saidunuhu579@gmail.com
+2023-03-28 23:45:57,186 [Thread-5    ] [INFO ]  
+Starting Thread : Name - lithbello60@gmail.com
+Targets Count - 2
+2023-03-28 23:45:57,191 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 2 lithbello60@gmail.com
+2023-03-28 23:45:57,193 [Thread-5    ] [INFO ]  Sending Finished 9c6ef982-4d28-4740-afde-cb2f9bc7f5fc
+2023-03-28 23:45:58,175 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-03-28 23:49:16,304 [MainThread  ] [INFO ]  Exiting
+2023-03-28 23:49:19,174 [MainThread  ] [INFO ]  Logger Started
+2023-03-28 23:49:19,232 [MainThread  ] [INFO ]  Scheduler started
+2023-03-28 23:49:19,234 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-28 23:49:19,789 [MainThread  ] [INFO ]  Logger Started
+2023-03-28 23:49:19,791 [MainThread  ] [INFO ]  Scheduler started
+2023-03-28 23:49:20,081 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-28 23:49:20,084 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-28 23:49:25,959 [Thread-4    ] [INFO ]  config updated
+2023-03-28 23:49:25,962 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 2
+ Len of Group: 2
+ Len of Targets: 2
+ Delay: 0 - 10
+ Campaign ID: 97d8da70-fc49-4aab-9dec-853624599686
+ Add Custom Hostname: False
+2023-03-28 23:49:25,981 [Thread-5    ] [INFO ]  
+Starting Thread : Name - saidunuhu579@gmail.com
+Targets Count - 2
+2023-03-28 23:49:26,093 [Thread-5    ] [ERROR]  Error at smtp thread opening 97d8da70-fc49-4aab-9dec-853624599686 - saidunuhu579@gmail.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 892, in main
+    Smtp(**kwargs)
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 307, in __init__
+    self.setDaemon(True)
+AttributeError: 'Smtp' object has no attribute 'setDaemon'
+
+2023-03-28 23:49:26,098 [Thread-5    ] [INFO ]  
+Starting Thread : Name - lithbello60@gmail.com
+Targets Count - 2
+2023-03-28 23:49:26,099 [Thread-5    ] [ERROR]  Error at smtp thread opening 97d8da70-fc49-4aab-9dec-853624599686 - lithbello60@gmail.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 892, in main
+    Smtp(**kwargs)
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 307, in __init__
+    self.setDaemon(True)
+AttributeError: 'Smtp' object has no attribute 'setDaemon'
+
+2023-03-28 23:49:26,104 [Thread-5    ] [INFO ]  Sending Finished 97d8da70-fc49-4aab-9dec-853624599686
+2023-03-28 23:49:26,973 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-03-28 23:49:42,984 [MainThread  ] [INFO ]  Exiting
+2023-03-28 23:49:45,730 [MainThread  ] [INFO ]  Logger Started
+2023-03-28 23:49:45,789 [MainThread  ] [INFO ]  Scheduler started
+2023-03-28 23:49:45,791 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-28 23:49:46,355 [MainThread  ] [INFO ]  Logger Started
+2023-03-28 23:49:46,357 [MainThread  ] [INFO ]  Scheduler started
+2023-03-28 23:49:46,648 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-28 23:49:46,651 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-28 23:49:52,099 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 2
+ Len of Group: 2
+ Len of Targets: 2
+ Delay: 0 - 10
+ Campaign ID: ab8a8b26-74a6-4b71-a9c5-e8388bc9b9cc
+ Add Custom Hostname: False
+2023-03-28 23:49:52,099 [Thread-4    ] [INFO ]  config updated
+2023-03-28 23:49:52,114 [Thread-5    ] [INFO ]  
+Starting Thread : Name - saidunuhu579@gmail.com
+Targets Count - 2
+2023-03-28 23:49:52,117 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 2 saidunuhu579@gmail.com
+2023-03-28 23:49:52,124 [Thread-5    ] [INFO ]  
+Starting Thread : Name - lithbello60@gmail.com
+Targets Count - 2
+2023-03-28 23:49:52,129 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 2 lithbello60@gmail.com
+2023-03-28 23:49:52,130 [Thread-5    ] [INFO ]  Sending Finished ab8a8b26-74a6-4b71-a9c5-e8388bc9b9cc
+2023-03-28 23:49:53,110 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-03-28 23:58:41,306 [MainThread  ] [INFO ]  Exiting
+2023-03-29 00:03:10,414 [MainThread  ] [INFO ]  Logger Started
+2023-03-29 00:03:10,539 [MainThread  ] [INFO ]  Scheduler started
+2023-03-29 00:03:10,546 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-29 00:03:11,404 [MainThread  ] [INFO ]  Logger Started
+2023-03-29 00:03:11,406 [MainThread  ] [INFO ]  Scheduler started
+2023-03-29 00:03:11,701 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-29 00:03:11,702 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-29 00:03:17,290 [Thread-4    ] [INFO ]  config updated
+2023-03-29 00:03:17,290 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 2
+ Len of Group: 2
+ Len of Targets: 2
+ Delay: 0 - 10
+ Campaign ID: b4661ade-1156-487a-8421-d1d8a378e1b9
+ Add Custom Hostname: False
+2023-03-29 00:03:17,322 [Thread-5    ] [INFO ]  
+Starting Thread : Name - saidunuhu579@gmail.com
+Targets Count - 2
+2023-03-29 00:03:17,324 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 2 saidunuhu579@gmail.com
+2023-03-29 00:03:17,327 [Thread-5    ] [INFO ]  
+Starting Thread : Name - lithbello60@gmail.com
+Targets Count - 2
+2023-03-29 00:03:17,329 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 2 lithbello60@gmail.com
+2023-03-29 00:03:17,332 [Thread-5    ] [INFO ]  Sending Finished b4661ade-1156-487a-8421-d1d8a378e1b9
+2023-03-29 00:03:18,313 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-03-29 00:07:21,368 [MainThread  ] [INFO ]  Exiting
+2023-03-29 00:08:53,441 [MainThread  ] [INFO ]  Logger Started
+2023-03-29 00:08:53,499 [MainThread  ] [INFO ]  Scheduler started
+2023-03-29 00:08:53,501 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-29 00:08:54,070 [MainThread  ] [INFO ]  Logger Started
+2023-03-29 00:08:54,071 [MainThread  ] [INFO ]  Scheduler started
+2023-03-29 00:08:54,354 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-29 00:08:54,355 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-29 00:08:58,577 [Thread-4    ] [INFO ]  config updated
+2023-03-29 00:08:58,580 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 2
+ Len of Group: 2
+ Len of Targets: 2
+ Delay: 0 - 10
+ Campaign ID: 96dea7ad-637f-4081-b0dc-63db6f0dbda8
+ Add Custom Hostname: False
+2023-03-29 00:08:58,600 [Thread-5    ] [INFO ]  
+Starting Thread : Name - saidunuhu579@gmail.com
+Targets Count - 2
+2023-03-29 00:08:58,607 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 2 saidunuhu579@gmail.com
+2023-03-29 00:08:58,611 [Thread-5    ] [INFO ]  
+Starting Thread : Name - lithbello60@gmail.com
+Targets Count - 2
+2023-03-29 00:08:58,614 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 2 lithbello60@gmail.com
+2023-03-29 00:09:06,102 [saidunuhu579] [ERROR]  Error at Sending - saidunuhu579@gmail.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 403, in run
+    msg["Subject"] = utils.format_email(var.compose_email_subject, self.FIRSTFROMNAME,
+AttributeError: 'Smtp' object has no attribute 'FIRSTFROMNAME'
+
+2023-03-29 00:09:09,446 [lithbello60@] [ERROR]  Error at Sending - lithbello60@gmail.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 403, in run
+    msg["Subject"] = utils.format_email(var.compose_email_subject, self.FIRSTFROMNAME,
+AttributeError: 'Smtp' object has no attribute 'FIRSTFROMNAME'
+
+2023-03-29 00:09:09,622 [Thread-5    ] [INFO ]  Sending Finished 96dea7ad-637f-4081-b0dc-63db6f0dbda8
+2023-03-29 00:09:10,596 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-03-29 00:11:51,396 [MainThread  ] [INFO ]  Exiting
+2023-03-29 00:11:55,046 [MainThread  ] [INFO ]  Logger Started
+2023-03-29 00:11:55,111 [MainThread  ] [INFO ]  Scheduler started
+2023-03-29 00:11:55,114 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-29 00:11:55,767 [MainThread  ] [INFO ]  Logger Started
+2023-03-29 00:11:55,768 [MainThread  ] [INFO ]  Scheduler started
+2023-03-29 00:11:56,095 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-29 00:11:56,096 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-29 00:12:01,211 [Thread-4    ] [INFO ]  config updated
+2023-03-29 00:12:01,212 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 2
+ Len of Group: 2
+ Len of Targets: 2
+ Delay: 0 - 10
+ Campaign ID: 097a7b72-82cd-4994-beb5-75439f2b8024
+ Add Custom Hostname: False
+2023-03-29 00:12:01,226 [Thread-5    ] [INFO ]  
+Starting Thread : Name - saidunuhu579@gmail.com
+Targets Count - 2
+2023-03-29 00:12:01,228 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 2 saidunuhu579@gmail.com
+2023-03-29 00:12:13,534 [saidunuhu579] [INFO ]  Sent - saidunuhu579@gmail.com mdshahimranshovon@gmail.com
+2023-03-29 00:12:29,183 [saidunuhu579] [INFO ]  Sent - saidunuhu579@gmail.com shahimrans64@gmail.com
+2023-03-29 00:12:30,252 [Thread-5    ] [INFO ]  Sending Finished 097a7b72-82cd-4994-beb5-75439f2b8024
+2023-03-29 00:12:30,450 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-03-29 00:13:18,701 [MainThread  ] [INFO ]  Exiting

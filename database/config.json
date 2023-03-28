@@ -1,5 +1,17 @@
 {
     "config": {
+        "mail_server": {
+            "gmail": {
+                "imap": {
+                    "server": "imap.gmail.com",
+                    "port": 993
+                },
+                "smtp": {
+                    "server": "smtp.gmail.com",
+                    "port": 587
+                }
+            }
+        },
         "date": "2/20/2023",
         "num_emails_per_address": 2,
         "delay_between_emails": "0-10",
@@ -14,11 +26,11 @@
         },
         "webhook_link": "https://webhook.site/b5a53b51-ab92-47f8-8211-a8ef54865a8c",
         "check_for_blocks": false,
-        "remove_email_from_target": true,
+        "remove_email_from_target": false,
         "enable_webhook": false,
         "enable_email_tracking": false,
         "custom_hostname": false,
-        "campaign_group": "group_b",
+        "campaign_group": "group_a",
         "body_type": "Normal",
         "target_blacklist": [],
         "inbox_blacklist": [
