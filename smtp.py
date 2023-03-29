@@ -101,7 +101,7 @@ class TestMail(SmtpBase):
         self.compose_email_subject = GUI.lineEdit_subject.text().strip()
         self.compose_email_body = GUI.textBrowser_compose.toPlainText().strip()
 
-    def execute(self):
+    def send(self):
         try:
             msg = MIMEMultipart('mixed')
 
@@ -196,7 +196,7 @@ class ForwardMail(SmtpBase):
         self.original_subject = var.email_in_view['original_subject']
         self.original_body = var.email_in_view['original_body']
 
-    def execute(self):
+    def send(self):
         try:
             msg = MIMEMultipart('mixed')
 
@@ -265,7 +265,7 @@ class ReplyMail(SmtpBase):
         self.mail_body = var.email_in_view['body']
         self.msg_id = var.email_in_view['message-id']
 
-    def execute(self):
+    def send(self):
         try:
             msg = MIMEMultipart('mixed')
 

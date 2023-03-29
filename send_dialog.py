@@ -68,7 +68,7 @@ class Send(Ui_Dialog):
             self.signal.s.emit("Sending...", 0, True)
 
             forward = ForwardMail(forward_to=forward_to)
-            if forward.execute():
+            if forward.send():
                 self.signal.s.emit("Sent", 100, False)
             else:
                 self.signal.s.emit("Error happened while sending!!!", 0, False)
@@ -81,7 +81,7 @@ class Send(Ui_Dialog):
             self.signal.s.emit("Sending...", 0, True)
 
             test = TestMail(send_to=send_to)
-            if test.execute():
+            if test.send():
                 self.signal.s.emit("Sent", 100, False)
             else:
                 self.signal.s.emit("Error happened while sending!!!", 0, False)

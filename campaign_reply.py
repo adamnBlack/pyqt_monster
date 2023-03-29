@@ -37,7 +37,7 @@ class Reply(Ui_Dialog):
         from smtp import ReplyMail
 
         reply_mail = ReplyMail()
-        result = reply_mail.execute()
+        result = reply_mail.send()
         if result == 1:
             self.label_status.setText("Replying Succesful")
             self.progressBar.setValue(100)
