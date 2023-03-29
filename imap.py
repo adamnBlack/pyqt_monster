@@ -13,6 +13,7 @@ import imaplib
 import codecs
 from utils import difference_between_time
 import webhook
+from imap_base import ImapBase
 from database import Database as DB
 from var import logger
 
@@ -120,35 +121,6 @@ def delete_email(group):
         var.thread_open -= 1
 
 
-class ImapBase:
-    def __init__(self, **kwargs):
-        super().__init__()
-        self.proxy_host = kwargs["proxy_host"]
-        self.proxy_port = kwargs["proxy_port"]
-        self.proxy_type = kwargs["proxy_type"]
-        self.proxy_user = kwargs["proxy_user"]
-        self.proxy_pass = kwargs["proxy_pass"]
-        self.imap_host = var.imap_server
-        self.imap_port = var.imap_port
-        self.imap_user = kwargs["user"]
-        self.imap_pass = kwargs["password"]
-
-        self.logger = logger
-
-    def login(self):
-        if self.proxy_host != "":
-            imap = proxy_imaplib.IMAP(proxy_host=self.proxy_host, proxy_port=self.proxy_port,
-                                      proxy_type=self.proxy_type,
-                                      proxy_user=self.proxy_user, proxy_pass=self.proxy_pass, host=self.imap_host,
-                                      port=self.imap_port, timeout=30)
-        else:
-            imap = imaplib.IMAP4_SSL(var.imap_server)
-
-        imap.login(self.imap_user, self.imap_pass)
-
-        return imap
-
-
 class ImapCheckForBlocks(ImapBase):
     def __init__(self, **kwargs):
         self.time_limit = kwargs["time_limit"]
@@ -212,10 +184,8 @@ class ImapCheckForBlocks(ImapBase):
             return False
 
         except Exception as e:
-            print(
-                "error at Imap_base.check_for_block_messages - {} - {}".format(self.imap_user, e))
             self.logger.error(
-                "Error at Imap_base.check_for_block_messages - {} - {}".format(self.imap_user, e))
+                "Error at Imap_base.check_for_block_messages - {} - {}".format(self.imap_user, traceback.format_exc()))
             return False
 
 
