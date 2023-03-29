@@ -66,71 +66,159 @@ def html_to_text(body):
     return str(text)
 
 
-def test(send_to):
-    try:
+class TestMail(SmtpBase):
+    def __init__(self, send_to=None):
+
         if GUI.radioButton_campaign_group_a.isChecked():
-            send = var.group_a.iloc[0].to_dict()
+            self.send_info = var.group_a.iloc[0].to_dict()
         else:
-            send = var.group_b.iloc[0].to_dict()
+            self.send_info = var.group_b.iloc[0].to_dict()
 
-        target = var.target.iloc[0].to_dict()
-        compose_email_subject = GUI.lineEdit_subject.text().strip()
-        compose_email_body = GUI.textBrowser_compose.toPlainText().strip()
-
-        msg = MIMEMultipart('mixed')
-
-        content = MIMEMultipart('related')
-        # NOTE: Embedded images would be attached to content
-
-        content_body = MIMEMultipart('alternative')
-
-        if send["PROXY:PORT"] != " ":
-            proxy_host = send["PROXY:PORT"].split(':')[0]
-            proxy_port = int(send["PROXY:PORT"].split(':')[1])
+        if self.send_info["PROXY:PORT"] != " ":
+            proxy_host = self.send_info["PROXY:PORT"].split(':')[0]
+            proxy_port = int(self.send_info["PROXY:PORT"].split(':')[1])
         else:
             proxy_host = ""
             proxy_port = ""
-        if proxy_host != "":
-            server = SMTP(timeout=30)
-            server.connect_proxy(host=var.smtp_server, port=var.smtp_port,
-                                 proxy_host=proxy_host, proxy_port=proxy_port, proxy_type=socks.PROXY_TYPE_SOCKS5,
-                                 proxy_user=send['PROXY_USER'], proxy_pass=send["PROXY_PASS"])
-        else:
-            server = smtplib.SMTP(var.smtp_server, var.smtp_port)
-            server.set_debuglevel(0)
 
-        server.starttls()
-        server.ehlo()
-        server.login(send['EMAIL'], send['EMAIL_PASS'])
-        t_part = []
-        for path in var.files:
-            part = MIMEBase('application', "octet-stream")
-            with open(path, 'rb') as file:
-                part.set_payload(file.read())
-            encoders.encode_base64(part)
-            part.add_header('Content-Disposition',
-                            'attachment; filename="{}"'.format(Path(path).name))
-            t_part.append(part)
+        kwargs = {
+            "proxy_host": proxy_host,
+            "proxy_port": proxy_port,
+            "proxy_user": self.send_info["PROXY_USER"],
+            "proxy_pass": self.send_info["PROXY_PASS"],
+            "proxy_type": socks.PROXY_TYPE_SOCKS5,
+            "user": self.send_info["EMAIL"],
+            "password": self.send_info['EMAIL_PASS'],
+            "FIRSTFROMNAME": self.send_info['FIRSTFROMNAME'],
+            "LASTFROMNAME": self.send_info['LASTFROMNAME']
+        }
 
-        msg["Subject"] = utils.format_email(compose_email_subject, send['FIRSTFROMNAME'],
-                                            send['LASTFROMNAME'], target['1'], target['2'], target['3'], target['4'],
-                                            target['5'], target['6'], target['TONAME'])
-        msg['From'] = formataddr((str(Header("{} {}".format(
-            send['FIRSTFROMNAME'], send['LASTFROMNAME']), 'utf-8')), send['EMAIL']))
-        msg["To"] = send_to
-        msg['Date'] = formatdate(localtime=True)
+        super().__init__(**kwargs)
 
-        if var.body_type == "Html":
-            body = utils.format_email(
-                var.compose_email_body_html, send['FIRSTFROMNAME'], send['LASTFROMNAME'],
-                target['1'], target['2'], target['3'], target['4'], target['5'], target['6'], target['TONAME'],
-                source="body")
-            content_body.attach(MIMEText(body, "html"))
-            content_body.attach(MIMEText(html_to_text(body), "plain"))
-        else:
-            body = utils.format_email(
-                var.compose_email_body, send['FIRSTFROMNAME'], send['LASTFROMNAME'],
-                target['1'], target['2'], target['3'], target['4'], target['5'], target['6'], target['TONAME'])
+        self.send_to = send_to
+
+        self.target = var.target.iloc[0].to_dict()
+        self.compose_email_subject = GUI.lineEdit_subject.text().strip()
+        self.compose_email_body = GUI.textBrowser_compose.toPlainText().strip()
+
+    def execute(self):
+        try:
+            msg = MIMEMultipart('mixed')
+
+            content = MIMEMultipart('related')
+            # NOTE: Embedded images would be attached to content
+
+            content_body = MIMEMultipart('alternative')
+
+            server = self._login()
+
+            t_part = []
+            for path in var.files:
+                part = MIMEBase('application', "octet-stream")
+                with open(path, 'rb') as file:
+                    part.set_payload(file.read())
+                encoders.encode_base64(part)
+                part.add_header('Content-Disposition',
+                                'attachment; filename="{}"'.format(Path(path).name))
+                t_part.append(part)
+
+            msg["Subject"] = utils.format_email(self.compose_email_subject, self.first_from_name,
+                                                self.last_from_name, self.target['1'],
+                                                self.target['2'], self.target['3'], self.target['4'],
+                                                self.target['5'], self.target['6'], self.target['TONAME'])
+            msg['From'] = formataddr((str(Header("{} {}".format(
+                self.first_from_name, self.last_from_name), 'utf-8')), self.user))
+            msg["To"] = self.send_to
+            msg['Date'] = formatdate(localtime=True)
+
+            if var.body_type == "Html":
+                body = utils.format_email(
+                    var.compose_email_body_html, self.first_from_name, self.last_from_name,
+                    self.target['1'], self.target['2'], self.target['3'],
+                    self.target['4'], self.target['5'], self.target['6'],
+                    self.target['TONAME'],
+                    source="body")
+
+                content_body.attach(MIMEText(body, "html"))
+                content_body.attach(MIMEText(html_to_text(body), "plain"))
+            else:
+                body = utils.format_email(
+                    var.compose_email_body, self.first_from_name, self.last_from_name,
+                    self.target['1'], self.target['2'], self.target['3'],
+                    self.target['4'], self.target['5'], self.target['6'],
+                    self.target['TONAME'])
+                content_body.attach(MIMEText(body, "plain"))
+
+                html_body = "<html><body><p>" + \
+                            body.replace("\n", "<br>") + "</p></body></html>"
+
+                content_body.attach(MIMEText(html_body, "html"))
+
+            content.attach(content_body)
+
+            msg.attach(content)
+
+            for part in t_part:
+                msg.attach(part)
+
+            server.sendmail(self.user, self.send_to, msg.as_string())
+            server.quit()
+            server.close()
+            logger.info(f"Testing Done: send to - {self.send_to} sent_from - {self.user}")
+
+            return True
+
+        except Exception as e:
+            logger.error("Error at test send - {} - {}".format(self.user, traceback.format_exc()))
+
+            return False
+
+
+class ForwardMail(SmtpBase):
+    def __init__(self, forward_to=None):
+        kwargs = {
+            "proxy_host": var.email_in_view['proxy_host'],
+            "proxy_port": int(var.email_in_view['proxy_port']),
+            "proxy_user": var.email_in_view['proxy_user'],
+            "proxy_pass": var.email_in_view["proxy_pass"],
+            "proxy_type": socks.PROXY_TYPE_SOCKS5,
+            "user": var.email_in_view['user'],
+            "password": var.email_in_view['pass'],
+            "FIRSTFROMNAME": var.email_in_view['FIRSTFROMNAME'],
+            "LASTFROMNAME": var.email_in_view['LASTFROMNAME']
+        }
+
+        super().__init__(**kwargs)
+
+        self.forward_to = forward_to
+        self.from_mail = var.email_in_view['from']
+        self.to_mail = var.email_in_view['to_mail']
+        self.original_subject = var.email_in_view['original_subject']
+        self.original_body = var.email_in_view['original_body']
+
+    def execute(self):
+        try:
+            msg = MIMEMultipart('mixed')
+
+            content = MIMEMultipart('related')
+            # NOTE: Embedded images would be attached to content
+
+            content_body = MIMEMultipart('alternative')
+
+            server = self._login()
+
+            msg["Subject"] = "Fwd: " + self.original_subject
+            msg['From'] = formataddr((str(Header("{} {}".format(
+                self.first_from_name, self.last_from_name), 'utf-8')),
+                                      self.user))
+            msg["To"] = self.forward_to
+            msg['Date'] = formatdate(localtime=True)
+
+            body = "---------- Forwarded message ---------\nFrom: {}\nDate: {}\nSubject: {}\nTo: <{}>\n\n{}". \
+                format(self.from_mail, formatdate(localtime=True),
+                       self.original_subject, self.to_mail,
+                       self.original_body)
+
             content_body.attach(MIMEText(body, "plain"))
 
             html_body = "<html><body><p>" + \
@@ -138,161 +226,105 @@ def test(send_to):
 
             content_body.attach(MIMEText(html_body, "html"))
 
-        content.attach(content_body)
+            content.attach(content_body)
 
-        msg.attach(content)
+            msg.attach(content)
 
-        for part in t_part:
-            msg.attach(part)
+            server.sendmail(self.user, self.forward_to, msg.as_string())
 
-        server.sendmail(send['EMAIL'], send_to, msg.as_string())
-        server.quit()
-        server.close()
-        logger.info(f"Testing Done: send to - {send_to} sent_from - {send['EMAIL']}")
-        return True
+            server.quit()
+            server.close()
+            logger.info(f"Forwarded to {self.forward_to} from {self.user}")
+            return True
 
-    except Exception as e:
-        logger.error("Error at test send - {} - {}".format(send['EMAIL'], e))
-        return False
-
-
-def forward(forward_to):
-    try:
-        msg = MIMEMultipart('mixed')
-
-        content = MIMEMultipart('related')
-        # NOTE: Embedded images would be attached to content
-
-        content_body = MIMEMultipart('alternative')
-
-        if var.email_in_view['proxy_host'] != "":
-            server = SMTP(timeout=30)
-            server.connect_proxy(host=var.smtp_server, port=var.smtp_port,
-                                 proxy_host=var.email_in_view['proxy_host'],
-                                 proxy_port=int(var.email_in_view['proxy_port']), proxy_type=socks.PROXY_TYPE_SOCKS5,
-                                 proxy_user=var.email_in_view['proxy_user'], proxy_pass=var.email_in_view["proxy_pass"])
-        else:
-            server = smtplib.SMTP(var.smtp_server, var.smtp_port)
-            server.set_debuglevel(0)
-            # server.set_debuglevel(1)
-
-        server.starttls()
-        server.ehlo()
-        server.login(var.email_in_view['user'], var.email_in_view['pass'])
-
-        msg["Subject"] = "Fwd: " + var.email_in_view['original_subject']
-        msg['From'] = formataddr((str(Header("{} {}".format(
-            var.email_in_view['FIRSTFROMNAME'], var.email_in_view['LASTFROMNAME']), 'utf-8')),
-                                  var.email_in_view['user']))
-        msg["To"] = forward_to
-        msg['Date'] = formatdate(localtime=True)
-
-        body = "---------- Forwarded message ---------\nFrom: {}\nDate: {}\nSubject: {}\nTo: <{}>\n\n{}". \
-            format(var.email_in_view['from'], formatdate(localtime=True),
-                   var.email_in_view['original_subject'], var.email_in_view['to_mail'],
-                   var.email_in_view['original_body'])
-
-        part1 = MIMEText(body, "plain")
-        content_body.attach(part1)
-
-        html_body = "<html><body><p>" + \
-                    body.replace("\n", "<br>") + "</p></body></html>"
-
-        content_body.attach(MIMEText(html_body, "html"))
-
-        content.attach(content_body)
-
-        msg.attach(content)
-
-        server.sendmail(var.email_in_view['user'], forward_to, msg.as_string())
-
-        server.quit()
-        server.close()
-        logger.info(f"Forwarded to {forward_to} from {var.email_in_view['user']}")
-        return True
-
-    except Exception as e:
-        print("Error at forward : {}".format(e))
-        logger.error(
-            "Error at forward - {} - {}".format(var.email_in_view['user'], e))
-        return False
+        except Exception as e:
+            logger.error(
+                "Error at forward - {} - {}".format(self.user, traceback.format_exc()))
+            return False
 
 
-def reply():
-    try:
-        msg = MIMEMultipart('mixed')
+class ReplyMail(SmtpBase):
+    def __init__(self):
+        kwargs = {
+            "proxy_host": var.email_in_view['proxy_host'],
+            "proxy_port": int(var.email_in_view['proxy_port']),
+            "proxy_user": var.email_in_view['proxy_user'],
+            "proxy_pass": var.email_in_view["proxy_pass"],
+            "proxy_type": socks.PROXY_TYPE_SOCKS5,
+            "user": var.email_in_view['user'],
+            "password": var.email_in_view['pass'],
+            "FIRSTFROMNAME": var.email_in_view['FIRSTFROMNAME'],
+            "LASTFROMNAME": var.email_in_view['LASTFROMNAME']
+        }
 
-        content = MIMEMultipart('related')
-        # NOTE: Embedded images would be attached to content
+        super().__init__(**kwargs)
 
-        content_body = MIMEMultipart('alternative')
+        self.from_name = var.email_in_view['from_name']
+        self.subject = var.email_in_view['subject']
+        self.from_mail = var.email_in_view['from_mail']
+        self.mail_body = var.email_in_view['body']
+        self.msg_id = var.email_in_view['message-id']
 
-        if var.email_in_view['proxy_host'] != "":
-            server = SMTP(timeout=30)
-            server.connect_proxy(host=var.smtp_server, port=var.smtp_port,
-                                 proxy_host=var.email_in_view['proxy_host'],
-                                 proxy_port=int(var.email_in_view['proxy_port']), proxy_type=socks.PROXY_TYPE_SOCKS5,
-                                 proxy_user=var.email_in_view['proxy_user'], proxy_pass=var.email_in_view["proxy_pass"])
-        else:
-            server = smtplib.SMTP(var.smtp_server, var.smtp_port)
-            server.set_debuglevel(0)
-            # server.set_debuglevel(1)
+    def execute(self):
+        try:
+            msg = MIMEMultipart('mixed')
 
-        server.starttls()
-        server.ehlo()
-        server.login(var.email_in_view['user'], var.email_in_view['pass'])
+            content = MIMEMultipart('related')
+            # NOTE: Embedded images would be attached to content
 
-        msg_id = var.email_in_view['message-id']
-        f_f_name = var.email_in_view['FIRSTFROMNAME']
-        l_f_name = var.email_in_view['LASTFROMNAME']
-        toname = var.email_in_view['from_name']
-        msg["Subject"] = utils.format_email(
-            var.email_in_view['subject'], f_f_name, l_f_name, "", "", "", "", "", "", toname)
-        msg['From'] = formataddr((str(Header("{} {}".format(
-            var.email_in_view['FIRSTFROMNAME'], var.email_in_view['LASTFROMNAME']), 'utf-8')),
-                                  var.email_in_view['user']))
-        msg["To"] = var.email_in_view['from_mail']
-        msg['Date'] = formatdate(localtime=True)
+            content_body = MIMEMultipart('alternative')
 
-        body = utils.format_email(
-            var.email_in_view['body'], f_f_name, l_f_name, "", "", "", "", "", "", toname, source="body")
+            server = self._login()
 
-        if var.body_type == "Html":
-            content_body.attach(MIMEText(html_to_text(body), "plain"))
-        else:
-            html_body = "<html><body><p>" + \
-                        body.replace("\n", "<br>") + "</p></body></html>"
+            toname = self.from_name
 
-            content_body.attach(MIMEText(html_body, "html"))
+            msg["Subject"] = utils.format_email(
+                self.subject, self.first_from_name, self.last_from_name, "", "", "", "", "", "", toname)
+            msg['From'] = formataddr((str(Header("{} {}".format(
+                self.first_from_name, self.last_from_name), 'utf-8')),
+                                      self.user))
+            msg["To"] = self.from_mail
+            msg['Date'] = formatdate(localtime=True)
 
-        msg.add_header("In-Reply-To", msg_id)
-        msg.add_header("References", msg_id)
+            body = utils.format_email(
+                self.mail_body, self.first_from_name, self.last_from_name, "", "", "", "", "", "", toname, source="body")
 
-        content.attach(content_body)
+            if var.body_type == "Html":
+                content_body.attach(MIMEText(html_to_text(body), "plain"))
+            else:
+                html_body = "<html><body><p>" + \
+                            body.replace("\n", "<br>") + "</p></body></html>"
 
-        msg.attach(content)
+                content_body.attach(MIMEText(html_body, "html"))
 
-        for path in var.files:
-            part = MIMEBase('application', "octet-stream")
-            with open(path, 'rb') as file:
-                part.set_payload(file.read())
-            encoders.encode_base64(part)
-            part.add_header('Content-Disposition',
-                            'attachment; filename="{}"'.format(Path(path).name))
-            msg.attach(part)
+            msg.add_header("In-Reply-To", self.msg_id)
+            msg.add_header("References", self.msg_id)
 
-        server.sendmail(
-            var.email_in_view['user'], var.email_in_view['from_mail'], msg.as_string())
+            content.attach(content_body)
 
-        server.quit()
-        server.close()
-        logger.info(f"Replied to {var.email_in_view['from_mail']}")
-        return True
+            msg.attach(content)
 
-    except Exception as e:
-        logger.error(
-            "Error at replying - {} - {}".format(var.email_in_view['user'], e))
-        return False
+            for path in var.files:
+                part = MIMEBase('application', "octet-stream")
+                with open(path, 'rb') as file:
+                    part.set_payload(file.read())
+                encoders.encode_base64(part)
+                part.add_header('Content-Disposition',
+                                'attachment; filename="{}"'.format(Path(path).name))
+                msg.attach(part)
+
+            server.sendmail(
+                self.user, self.from_mail, msg.as_string())
+
+            server.quit()
+            server.close()
+            logger.info(f"Replied to {self.from_mail}")
+            return True
+
+        except Exception as e:
+            logger.error(
+                "Error at replying - {} - {}".format(self.user, traceback.format_exc()))
+            return False
 
 
 class Smtp(SmtpBase, threading.Thread):
@@ -303,7 +335,7 @@ class Smtp(SmtpBase, threading.Thread):
 
         self.threadID = kwargs["index"]
         self.name = kwargs["name"]
-        # self.setDaemon(True)
+        self.setDaemon(True)
         self.target = kwargs["target"]
         self.logger = logger
         self.d_start = kwargs["d_start"]

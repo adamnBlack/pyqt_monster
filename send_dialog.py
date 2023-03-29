@@ -3,7 +3,7 @@ from PyQt5.QtCore import pyqtSignal, QObject
 from threading import Thread
 from email_input_gui import Ui_Dialog
 import os, sys
-from smtp import forward, test
+from smtp import ForwardMail, TestMail
 import re
 
 regex = '[^@]+@[^@]+\.[^@]+'
@@ -66,7 +66,9 @@ class Send(Ui_Dialog):
         forward_to = self.lineEdit_email.text().strip()
         if check(forward_to):
             self.signal.s.emit("Sending...", 0, True)
-            if forward(forward_to):
+
+            forward = ForwardMail(forward_to=forward_to)
+            if forward.execute():
                 self.signal.s.emit("Sent", 100, False)
             else:
                 self.signal.s.emit("Error happened while sending!!!", 0, False)
@@ -77,7 +79,9 @@ class Send(Ui_Dialog):
         send_to = self.lineEdit_email.text().strip()
         if check(send_to):
             self.signal.s.emit("Sending...", 0, True)
-            if test(send_to):
+
+            test = TestMail(send_to=send_to)
+            if test.execute():
                 self.signal.s.emit("Sent", 100, False)
             else:
                 self.signal.s.emit("Error happened while sending!!!", 0, False)

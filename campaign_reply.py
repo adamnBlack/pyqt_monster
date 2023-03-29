@@ -1,6 +1,9 @@
+import traceback
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 from threading import Thread
 import var
+from var import logger
 from p_gui import Ui_Dialog
 import os
 import sys
@@ -31,9 +34,10 @@ class Reply(Ui_Dialog):
 
     def reply(self):
         self.label_status.setText("Replying...")
-        from smtp import reply
+        from smtp import ReplyMail
 
-        result = reply()
+        reply_mail = ReplyMail()
+        result = reply_mail.execute()
         if result == 1:
             self.label_status.setText("Replying Succesful")
             self.progressBar.setValue(100)
@@ -73,8 +77,8 @@ class Campaign(Ui_Dialog):
 
     def update_gui(self):
         try:
-            if var.send_campaign_run_status == False:
-                if var.stop_send_campaign == True:
+            if not var.send_campaign_run_status:
+                if var.stop_send_campaign:
                     self.label_status.setText(
                         f"Sending Cancelled : {var.send_campaign_email_count}/{self.total_email_to_be_sent} Accounts Failed : {var.email_failed}")
                 else:
@@ -88,7 +92,7 @@ class Campaign(Ui_Dialog):
                     f"Total Email Sent : {var.send_campaign_email_count}/{self.total_email_to_be_sent}")
                 self.progressBar.setValue(value)
         except Exception as e:
-            print("Error at campaign_reply.Campaign.update_gui : {}".format(e))
+            logger.error("Error at campaign_reply.Campaign.update_gui : {}".format(traceback.format_exc()))
 
     def cancel(self):
         self.timer.stop()
