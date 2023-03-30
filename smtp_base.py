@@ -1,4 +1,5 @@
 import re
+import socks
 import smtplib
 import traceback
 from proxy_smtplib import SMTP
@@ -14,7 +15,7 @@ class SmtpBase:
         self.proxy_port = kwargs["proxy_port"]
         self.proxy_user = kwargs["proxy_user"]
         self.proxy_pass = kwargs["proxy_pass"]
-        self.proxy_type = kwargs["proxy_type"]
+        self.proxy_type = socks.PROXY_TYPE_SOCKS5
         self.user = kwargs["user"]
         self.passwd = kwargs["password"]
         self.first_from_name = kwargs["FIRSTFROMNAME"]

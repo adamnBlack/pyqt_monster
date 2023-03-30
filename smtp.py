@@ -86,7 +86,6 @@ class TestMail(SmtpBase):
             "proxy_port": proxy_port,
             "proxy_user": self.send_info["PROXY_USER"],
             "proxy_pass": self.send_info["PROXY_PASS"],
-            "proxy_type": socks.PROXY_TYPE_SOCKS5,
             "user": self.send_info["EMAIL"],
             "password": self.send_info['EMAIL_PASS'],
             "FIRSTFROMNAME": self.send_info['FIRSTFROMNAME'],
@@ -181,7 +180,6 @@ class ForwardMail(SmtpBase):
             "proxy_port": int(var.email_in_view['proxy_port']),
             "proxy_user": var.email_in_view['proxy_user'],
             "proxy_pass": var.email_in_view["proxy_pass"],
-            "proxy_type": socks.PROXY_TYPE_SOCKS5,
             "user": var.email_in_view['user'],
             "password": var.email_in_view['pass'],
             "FIRSTFROMNAME": var.email_in_view['FIRSTFROMNAME'],
@@ -250,7 +248,6 @@ class ReplyMail(SmtpBase):
             "proxy_port": int(var.email_in_view['proxy_port']),
             "proxy_user": var.email_in_view['proxy_user'],
             "proxy_pass": var.email_in_view["proxy_pass"],
-            "proxy_type": socks.PROXY_TYPE_SOCKS5,
             "user": var.email_in_view['user'],
             "password": var.email_in_view['pass'],
             "FIRSTFROMNAME": var.email_in_view['FIRSTFROMNAME'],
@@ -572,12 +569,12 @@ class Smtp(SmtpBase, threading.Thread):
                             first_time, last_time
                         )
 
-                        imap_object = ImapCheckForBlocks(time_limit=elapsed_time, proxy_host=self.proxy_host,
-                                                         proxy_port=self.proxy_port, proxy_type=socks.PROXY_TYPE_SOCKS5,
-                                                         proxy_user=self.proxy_user, proxy_pass=self.proxy_pass,
-                                                         user=self.user, password=self.passwd)
+                        imap_check = ImapCheckForBlocks(time_limit=elapsed_time, proxy_host=self.proxy_host,
+                                                        proxy_port=self.proxy_port, proxy_user=self.proxy_user,
+                                                        proxy_pass=self.proxy_pass, user=self.user,
+                                                        password=self.passwd)
 
-                        if imap_object.check_for_block_messages():
+                        if imap_check.check_for_block_messages():
                             self.logger.error(
                                 f"Found block messages : {self.name} {str(datetime.now())}")
                             break
@@ -871,13 +868,8 @@ def main(group, d_start, d_end, group_selected):
                     if var.stop_send_campaign or temp > e_target_len - 1:
                         break
 
-                    proxy_user = item["PROXY_USER"]
-                    proxy_pass = item["PROXY_PASS"]
                     user = item["EMAIL"]
-                    passwd = item["EMAIL_PASS"]
                     name = item["EMAIL"]
-                    FIRSTFROMNAME = item["FIRSTFROMNAME"]
-                    LASTFROMNAME = item['LASTFROMNAME']
 
                     if item["PROXY:PORT"] != " ":
                         proxy_host = item["PROXY:PORT"].split(':')[0]
@@ -903,7 +895,6 @@ def main(group, d_start, d_end, group_selected):
                         "proxy_port": proxy_port,
                         "proxy_user": item["PROXY_USER"],
                         "proxy_pass": item["PROXY_PASS"],
-                        "proxy_type": socks.PROXY_TYPE_SOCKS5,
                         "user": item["EMAIL"],
                         "password": item["EMAIL_PASS"],
                         "FIRSTFROMNAME": item["FIRSTFROMNAME"],
@@ -914,11 +905,6 @@ def main(group, d_start, d_end, group_selected):
                         "campaign_id": campaign_id,
                         "followup_enabled": followup_enabled
                     }
-
-                    # SMTP_(index, name, proxy_host, proxy_port, proxy_user,
-                    #       proxy_pass, user, passwd, FIRSTFROMNAME, LASTFROMNAME,
-                    #       target.loc[start:end].copy(), d_start, d_end, campaign_id, add_cached_targets,
-                    #       followup_enabled).start()
 
                     Smtp(**kwargs).start()
 
@@ -999,8 +985,7 @@ def main(group, d_start, d_end, group_selected):
 
             campaign_report_webhook.start()
 
-
-    except Exception as e:
+    except:
         logger.error(f"Error at smtp.main: {traceback.format_exc()}")
 
     finally:

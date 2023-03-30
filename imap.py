@@ -44,81 +44,82 @@ def check_if_blacklisted(input_string: str):
     return False
 
 
-def set_read_flag(index):
-    try:
-        global logger
-        data = var.inbox_data
-        proxy_user = data['proxy_user'][index]
-        proxy_pass = data['proxy_pass'][index]
-        imap_user = data['user'][index]
-        imap_pass = data['pass'][index]
-        uid = data['uid'][index]
+class ImapReadFlagEmail(ImapBase):
+    def __init__(self, index=None):
+        self.index = index
 
-        if data['proxy_host'][index] != "":
-            proxy_host = data['proxy_host'][index]
-            proxy_port = int(data['proxy_port'][index])
-            logger.info(f"Setting Read Flag: {data['uid'][index]} {imap_user}")
-            imap = proxy_imaplib.IMAP(proxy_host=proxy_host, proxy_port=proxy_port, proxy_type=socks.PROXY_TYPE_SOCKS5,
-                                      proxy_user=proxy_user, proxy_pass=proxy_pass, host=var.imap_server,
-                                      port=var.imap_port, timeout=30)
-        else:
-            imap = imaplib.IMAP4_SSL(var.imap_server)
+        kwargs = {
+            "proxy_host": var.inbox_data['proxy_host'][self.index],
+            "proxy_port": int(var.inbox_data['proxy_port'][self.index]),
+            "proxy_user": var.inbox_data['proxy_user'][self.index],
+            "proxy_pass": var.inbox_data['proxy_pass'][self.index],
+            "user": var.inbox_data['user'][self.index],
+            "password": var.inbox_data['pass'][self.index]
+        }
 
-        imap.login(imap_user, imap_pass)
+        super().__init__(**kwargs)
 
-        imap.select("Inbox")
+        self.uid = var.inbox_data['uid'][self.index]
 
-        imap.uid('STORE', uid, '+FLAGS', '\Seen')
-        imap.close()
-        imap.logout()
+    def set_read_flag(self):
+        try:
+            imap = self._login()
 
-        logger.info(f"Set read flag for {imap_user} : Successful")
-    except Exception as e:
-        logger.error("Error at set_read_flag - {} - {}".format(imap_user, e))
+            imap.select("Inbox")
+
+            imap.uid("STORE", self.uid, "+FLAGS", "\Seen")
+
+            imap.close()
+            imap.logout()
+
+            logger.info(f"Set read flag for {self.imap_user} : Successful")
+
+        except:
+            logger.error("Error at set_read_flag - {} - {}".format(self.imap_user, traceback.format_exc()))
+
+        finally:
+            pass
 
 
-def delete_email(group):
-    try:
-        var.thread_open += 1
-        print("group name ", group.iloc[0]['user'])
-        print(len(var.inbox_data))
+class ImapDeleteEmail(ImapBase):
+    def __init__(self, group=None):
+        self.group = group
 
-        proxy_user = group.iloc[0]['proxy_user']
-        proxy_pass = group.iloc[0]['proxy_pass']
-        imap_user = group.iloc[0]['user']
-        imap_pass = group.iloc[0]['pass']
+        kwargs = {
+            "proxy_host": group.iloc[0]['proxy_host'],
+            "proxy_port": int(group.iloc[0]['proxy_port']),
+            "proxy_user": group.iloc[0]['proxy_user'],
+            "proxy_pass": group.iloc[0]['proxy_pass'],
+            "user": group.iloc[0]['user'],
+            "password": group.iloc[0]['pass']
+        }
 
-        if group.iloc[0]['proxy_host'] != "":
-            proxy_host = group.iloc[0]['proxy_host']
-            proxy_port = int(group.iloc[0]['proxy_port'])
-            print(proxy_host, proxy_port, proxy_user,
-                  proxy_pass, imap_user, imap_pass)
-            imap = proxy_imaplib.IMAP(proxy_host=proxy_host, proxy_port=proxy_port, proxy_type=socks.PROXY_TYPE_SOCKS5,
-                                      proxy_user=proxy_user, proxy_pass=proxy_pass, host=var.imap_server,
-                                      port=var.imap_port, timeout=30)
-        else:
-            imap = imaplib.IMAP4_SSL(var.imap_server)
+        super().__init__(**kwargs)
 
-        imap.login(imap_user, imap_pass)
+    def delete(self):
+        try:
+            logger.info(f"Starting deleting mail...")
+            var.thread_open += 1
 
-        imap.select("Inbox")
+            imap = self._login()
 
-        for row_index, row in group.iterrows():
-            if var.stop_delete:
-                break
-            imap.uid('STORE', row['uid'], '+X-GM-LABELS', '\\Trash')
-            var.delete_email_count += 1
-            var.inbox_data.drop(row_index, inplace=True)
-        print(len(var.inbox_data))
-        imap.close()
-        imap.logout()
-        print("Deleted email")
-    except Exception as e:
-        print("Error at deleting email : {}".format(e))
-        logger.error("Error at deleting email - {} - {}".format(imap_user, e))
+            for row_index, row in self.group.iterrows():
+                if var.stop_delete:
+                    break
 
-    finally:
-        var.thread_open -= 1
+                imap.uid('STORE', row['uid'], '+X-GM-LABELS', '\\Trash')
+                var.delete_email_count += 1
+                var.inbox_data.drop(row_index, inplace=True)
+
+            imap.close()
+            imap.logout()
+
+        except Exception as e:
+            logger.error("Error at deleting email - {} - {}".format(self.imap_user, traceback.format_exc()))
+
+        finally:
+            var.thread_open -= 1
+            logger.info(f"Finishing deleting mail...")
 
 
 class ImapCheckForBlocks(ImapBase):
@@ -132,7 +133,7 @@ class ImapCheckForBlocks(ImapBase):
             # SUBJECT - Delivery Status Notification (Failure)
             # Message bloqué   or  Message blocked
 
-            imap = self.login()
+            imap = self._login()
             imap.select("Inbox", readonly=True)
 
             date = datetime.today() - timedelta(days=1)
@@ -210,7 +211,7 @@ class ImapFollowUpCheck(ImapBase, threading.Thread):
 
             ImapFollowUpCheck.thread_open += 1
 
-            imap = self.login()
+            imap = self._login()
             imap.select("Inbox", readonly=True)
 
             date = self.campaign_time - timedelta(days=1)
@@ -251,53 +252,38 @@ class ImapFollowUpCheck(ImapBase, threading.Thread):
                               f"({(ImapFollowUpCheck.checking_finished/ImapFollowUpCheck.total_follow_up_checks) * 100})")
 
 
-class IMAP_(threading.Thread):
+class ImapDownload(ImapBase, threading.Thread):
     auto_fire_responses_enabled = False
 
-    def __init__(self, threadID, name, proxy_host, proxy_port, proxy_type, proxy_user, proxy_pass, imap_user, imap_pass,
-                 FIRSTFROMNAME, LASTFROMNAME, targets, responses_webhook_enabled):
-        threading.Thread.__init__(self)
-        self.threadID = threadID
-        self.name = name
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+
+        self.threadID = kwargs["index"]
+        self.name = kwargs["user"]
         self.setDaemon(True)
-        self.proxy_host = proxy_host
-        self.proxy_port = proxy_port
-        self.proxy_type = proxy_type
-        self.proxy_user = proxy_user
-        self.proxy_pass = proxy_pass
-        self.imap_host = var.imap_server
-        self.imap_port = var.imap_port
-        self.imap_user = imap_user
-        self.imap_pass = imap_pass
-        self.FIRSTFROMNAME = FIRSTFROMNAME
-        self.LASTFROMNAME = LASTFROMNAME
+
+        self.FIRSTFROMNAME = kwargs["FIRSTFROMNAME"]
+        self.LASTFROMNAME = kwargs["LASTFROMNAME"]
         self.logger = logger
-        self.targets = targets
-        self.responses_webhook_enabled = responses_webhook_enabled
+        self.targets = kwargs["targets"]
+        self.responses_webhook_enabled = kwargs["responses_webhook_enabled"]
+        self.date = var.date
 
     def run(self):
         global email_failed, total_email_downloaded
         try:
             var.thread_open += 1
-            if self.proxy_host != "":
-                imap = proxy_imaplib.IMAP(proxy_host=self.proxy_host, proxy_port=self.proxy_port,
-                                          proxy_type=self.proxy_type,
-                                          proxy_user=self.proxy_user, proxy_pass=self.proxy_pass, host=self.imap_host,
-                                          port=self.imap_port, timeout=30)
-            else:
-                imap = imaplib.IMAP4_SSL(var.imap_server)
 
-            imap.login(self.imap_user, self.imap_pass)
-            # print(self.folder, self.category)
+            imap = self._login()
 
-            if IMAP_.auto_fire_responses_enabled:
+            if ImapDownload.auto_fire_responses_enabled:
                 flags = ['UNSEEN']
                 imap.select("Inbox")
                 obj_date = datetime.now() - timedelta(1)
             else:
                 flags = ['SEEN', 'UNSEEN']
                 imap.select("Inbox", readonly=True)
-                obj_date = datetime.strptime(var.date, '%m/%d/%Y')
+                obj_date = datetime.strptime(self.date, '%m/%d/%Y')
 
             offset_naive_date = obj_date
             offset_aware_date = utc_to_local(offset_naive_date)
@@ -316,6 +302,7 @@ class IMAP_(threading.Thread):
                 for num in data[0].split():
                     if var.stop_download:
                         break
+
                     tmp, data = imap.fetch(num, '(UID RFC822)')
                     raw = data[0][0]
                     raw_str = raw.decode("utf-8")
@@ -432,7 +419,7 @@ class IMAP_(threading.Thread):
 
     def webhook_process(self, t_dict):
         if self.responses_webhook_enabled and \
-                (t_dict['from_mail'] in self.targets or IMAP_.auto_fire_responses_enabled):
+                (t_dict['from_mail'] in self.targets or ImapDownload.auto_fire_responses_enabled):
             t_dict["date"] = str(t_dict["date"])
             webhook.inbox_q.put(t_dict.copy())
 
@@ -467,14 +454,7 @@ def main(group):
             if var.stop_download:
                 break
 
-            proxy_type = socks.PROXY_TYPE_SOCKS5
-            proxy_user = item["PROXY_USER"]
-            proxy_pass = item["PROXY_PASS"]
-            imap_user = item["EMAIL"]
-            imap_pass = item["EMAIL_PASS"]
             name = item["EMAIL"]
-            FIRSTFROMNAME = item["FIRSTFROMNAME"]
-            LASTFROMNAME = item["LASTFROMNAME"]
 
             if item["PROXY:PORT"] != " ":
                 proxy_host = item["PROXY:PORT"].split(':')[0]
@@ -483,15 +463,28 @@ def main(group):
                 proxy_host = ""
                 proxy_port = ""
 
+            kwargs = {
+                "proxy_host": proxy_host,
+                "proxy_port": proxy_port,
+                "proxy_user": item["PROXY_USER"],
+                "proxy_pass": item["PROXY_PASS"],
+                "user": item["EMAIL"],
+                "password": item["EMAIL_PASS"],
+                "FIRSTFROMNAME": item["FIRSTFROMNAME"],
+                "LASTFROMNAME": item["LASTFROMNAME"],
+                "targets": targets,
+                "responses_webhook_enabled": responses_webhook_enabled,
+                "index": index
+            }
+
             while var.thread_open >= var.limit_of_thread and var.stop_download == False:
                 time.sleep(1)
 
-            IMAP_(index, name, proxy_host, proxy_port,
-                  proxy_type, proxy_user, proxy_pass, imap_user,
-                  imap_pass, FIRSTFROMNAME, LASTFROMNAME, targets, responses_webhook_enabled).start()
+            imap = ImapDownload(**kwargs)
+            imap.start()
 
-        except Exception as e:
-            logger.error("Error at Imap thread open - {} - {}".format(name, e))
+        except:
+            logger.error("Error at Imap thread open - {} - {}".format(name, traceback.format_exc()))
 
     while var.thread_open != 0 and not var.stop_download:
         time.sleep(1)

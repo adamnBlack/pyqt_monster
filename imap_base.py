@@ -1,5 +1,6 @@
 import var
 import re
+import socks
 import traceback
 import imaplib
 import proxy_imaplib
@@ -9,9 +10,10 @@ from var import logger
 class ImapBase:
     def __init__(self, **kwargs):
         super().__init__()
+
         self.proxy_host = kwargs["proxy_host"]
         self.proxy_port = kwargs["proxy_port"]
-        self.proxy_type = kwargs["proxy_type"]
+        self.proxy_type = socks.PROXY_TYPE_SOCKS5
         self.proxy_user = kwargs["proxy_user"]
         self.proxy_pass = kwargs["proxy_pass"]
         self.imap_user = kwargs["user"]
@@ -31,7 +33,7 @@ class ImapBase:
 
             raise
 
-    def login(self):
+    def _login(self):
         if self.proxy_host != "":
             server = proxy_imaplib.IMAP(
                 proxy_host=self.proxy_host, proxy_port=self.proxy_port,
