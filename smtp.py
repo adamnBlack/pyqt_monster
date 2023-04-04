@@ -49,21 +49,22 @@ def contains_non_ascii_characters(str):
 
 
 def html_to_text(body):
+    # soup = BeautifulSoup(body, features="html.parser")
+    #
+    # for script in soup(["script", "style"]):
+    #     script.extract()
+    #
+    # text = soup.get_text()
+    #
+    # # break into lines and remove leading and trailing space on each
+    # lines = (line.strip() for line in text.splitlines())
+    # # break multi-headlines into a line each
+    # chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
+    # # drop blank lines
+    # text = '\n'.join(chunk for chunk in chunks if chunk)
+
     soup = BeautifulSoup(body, features="html.parser")
-
-    for script in soup(["script", "style"]):
-        script.extract()
-
-    text = soup.get_text()
-
-    # break into lines and remove leading and trailing space on each
-    lines = (line.strip() for line in text.splitlines())
-    # break multi-headlines into a line each
-    chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
-    # drop blank lines
-    text = '\n'.join(chunk for chunk in chunks if chunk)
-
-    return str(text)
+    return soup.get_text('\n')
 
 
 class TestMail(SmtpBase):
@@ -347,7 +348,7 @@ class Smtp(SmtpBase, threading.Thread):
         try:
 
             if var.add_custom_hostname:
-                self.local_hostname = f"{self.first_from_name}-pc"
+                self.local_hostname = f"{self.first_from_name.lower()}-pc"
 
             if self.proxy_host != "":
                 server = SMTP(
@@ -356,14 +357,21 @@ class Smtp(SmtpBase, threading.Thread):
                                      proxy_host=self.proxy_host, proxy_port=int(self.proxy_port),
                                      proxy_type=socks.PROXY_TYPE_SOCKS5,
                                      proxy_user=self.proxy_user, proxy_pass=self.proxy_pass)
-                # server.set_debuglevel(1)
+                server.set_debuglevel(1)
             else:
                 server = smtplib.SMTP(self.smtp_server, self.smtp_port)
                 server.set_debuglevel(0)
 
+            # import ssl
+            #
+            # context = ssl.create_default_context()
+            # server.ehlo(self.first_from_name.lower())
+            server.ehlo()
+            # server.local_hostname = server.local_hostname.lower()
             server.starttls()
             server.ehlo()
             server.login(self.user, self.passwd)
+            # server.ehlo()
 
             return server
 

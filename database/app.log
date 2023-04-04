@@ -4639,3 +4639,1542 @@ Targets Count - 2
 2023-03-29 23:15:26,059 [Thread-12   ] [INFO ]  Forwarded to shahimrans64@gmail.com from lithbello60@gmail.com
 2023-03-29 23:16:23,326 [Thread-13   ] [INFO ]  Replied to shahimrans64@gmail.com
 2023-03-29 23:16:40,773 [MainThread  ] [INFO ]  Exiting
+2023-03-31 19:52:37,329 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 19:52:40,701 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 19:52:40,919 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-31 19:52:45,668 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 19:52:45,669 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 19:52:48,202 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-31 19:52:48,206 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-31 20:10:48,298 [Thread-4    ] [INFO ]  Testing Done: send to - shahimrans64@gmail.com sent_from - saidunuhu579@gmail.com
+2023-03-31 20:11:06,243 [Thread-5    ] [INFO ]  config updated
+2023-03-31 20:11:06,366 [SendReport_I] [INFO ]  Inbox Webhook Thread Started...
+2023-03-31 20:11:11,575 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '19', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr0cx50jneUFp94yXUyLyhVga8Vqv+2EkY+SxS7G00i=ug@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2023-02-22 01:55:16+06:00', 'subject': 'Small Project', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': 'Hi,\r\nSmall world. I just came across one of your clients. He recommended you for\r\none of my upcoming projects. Let me know when we can connect.\r\n\r\nRegards,\r\nShah Imran\r\n', 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:11:13,441 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '20', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr1btEe8PvaDUbom=RzpG3QyJctG3UOu512Du--0gv0rPA@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2023-02-22 04:35:11+06:00', 'subject': 'Re: Small Project', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': 'This is a second mail. I am following up on the progress of the ongoing\r\nproject.\r\n\r\nOn Tue, Feb 21, 2023 at 7:55 PM SHAH IMRAN <shahimrans64@gmail.com> wrote:\r\n\r\n> Hi,\r\n> Small world. I just came across one of your clients. He recommended you\r\n> for one of my upcoming projects. Let me know when we can connect.\r\n>\r\n> Regards,\r\n> Shah Imran\r\n>\r\n', 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:11:18,406 [Thread-6    ] [INFO ]  Downloading finished
+2023-03-31 20:11:18,448 [SendReport_I] [INFO ]  Webhook Inbox Thread Finished.
+2023-03-31 20:14:36,716 [Thread-10   ] [INFO ]  Replied to shahimrans64@gmail.com
+2023-03-31 20:14:56,719 [MainThread  ] [ERROR]  Error at email_show - module 'imap' has no attribute 'set_read_flag'
+2023-03-31 20:14:58,089 [MainThread  ] [ERROR]  Error at email_show - module 'imap' has no attribute 'set_read_flag'
+2023-03-31 20:15:01,234 [MainThread  ] [ERROR]  Error at email_show - module 'imap' has no attribute 'set_read_flag'
+2023-03-31 20:15:01,469 [MainThread  ] [ERROR]  Error at email_show - module 'imap' has no attribute 'set_read_flag'
+2023-03-31 20:15:31,216 [Thread-11   ] [INFO ]  Forwarded to shahimrans64@gmail.com from lithbello60@gmail.com
+2023-03-31 20:33:19,982 [MainThread  ] [INFO ]  Exiting
+2023-03-31 20:33:29,581 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 20:33:29,638 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 20:33:29,643 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-31 20:33:30,233 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 20:33:30,240 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 20:33:30,590 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-31 20:33:30,590 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-31 20:33:38,493 [Thread-4    ] [INFO ]  config updated
+2023-03-31 20:33:38,496 [SendReport_I] [INFO ]  Inbox Webhook Thread Started...
+2023-03-31 20:33:43,686 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '62', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr2zL_2X7JEaefgmfrxy5=r7SedCk8KuVLOLYTYnOFJjcg@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:55:36+06:00', 'subject': 'Re: Personal', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "Thanks, I'll check it out!\r\n\r\nOn Tue, Nov 22, 2022 at 8:41 PM Janice Holley <lithbello60@gmail.com> wrote:\r\n\r\n> Hi Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a collaboration.\r\n> Looking forward to your replya!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:33:44,322 [lithbello60@] [INFO ]  Blacklisted due to this keyword: noreply@google.com
+2023-03-31 20:33:44,715 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '63', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr03jQfeCWk42Q6T2JtDk7PKqgZ8Cy4vO7aYXQETOLRiCw@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:55:45+06:00', 'subject': 'Re: Personal', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "On Tue, Nov 22, 2022 at 8:41 PM Janice Holley <lithbello60@gmail.com> wrote:\r\n\r\n> Hi Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a collaboration.\r\n> Looking forward to your replya!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:33:44,827 [lithbello60@] [INFO ]  Blacklisted due to this keyword: no-reply@mail.instagram.com
+2023-03-31 20:33:45,736 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '64', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr2O8_t6hESMf-2t_xWuKWpP5zCGWHkFyF+G4VGBoSdUWQ@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:55:57+06:00', 'subject': 'Re: Personal', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "Sure, I'd be happy to!\r\n\r\nOn Tue, Nov 22, 2022 at 8:55 PM Janice Holley <lithbello60@gmail.com> wrote:\r\n\r\n> Hi Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a collaboration.\r\n> Hope you don't mind my outreach!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:33:46,662 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '66', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr21P0W2mfwgKHDmNmio+bjiZ1y6YuXMtJv3b_=4g=o_ug@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-12-04 17:04:40+06:00', 'subject': 'Re: Personal', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "Thanks, I'll check it out!\r\n\r\nOn Sun, Dec 4, 2022 at 11:02 AM Janice Holley <lithbello60@gmail.com> wrote:\r\n\r\n> Hi Imran,\r\n> I'm reaching out to you because i came across you website the other day\r\n> and thought you'd be interested in a collaboration.\r\n> Hope you don't mind my outreach!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:33:47,923 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '18', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr3pbm5ZNzn4iJ5_jDd2XNhO6=P2KLuLVevR=wcAqo5dnw@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-12-04 17:04:46+06:00', 'subject': 'Re: Personal', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': "Thanks, I'll check it out!\r\n\r\nOn Sun, Dec 4, 2022 at 11:04 AM Louise Deforge <saidunuhu579@gmail.com>\r\nwrote:\r\n\r\n> Hello Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a collaboration.\r\n> Looking forward to your replya!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:33:49,024 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '19', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr0cx50jneUFp94yXUyLyhVga8Vqv+2EkY+SxS7G00i=ug@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2023-02-22 01:55:16+06:00', 'subject': 'Small Project', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': 'Hi,\r\nSmall world. I just came across one of your clients. He recommended you for\r\none of my upcoming projects. Let me know when we can connect.\r\n\r\nRegards,\r\nShah Imran\r\n', 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:33:50,398 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '72', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr1bgW7F0ZU2zRe0wxK=m3s2HPmSZV1EAhZ5cegBHuV2_A@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2023-02-03 07:25:12+06:00', 'subject': 'PArty all night', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "Hi bro? what's up?\r\nWanna party tonight\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:33:51,307 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '73', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr0qPG4hd1xG3_oun_3jRyK6RczNkDsGZ==HM1M_EWhdtw@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2023-02-12 17:08:58+06:00', 'subject': 'hi there', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "what's up?\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:33:52,240 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '20', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr1btEe8PvaDUbom=RzpG3QyJctG3UOu512Du--0gv0rPA@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2023-02-22 04:35:11+06:00', 'subject': 'Re: Small Project', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': 'This is a second mail. I am following up on the progress of the ongoing\r\nproject.\r\n\r\nOn Tue, Feb 21, 2023 at 7:55 PM SHAH IMRAN <shahimrans64@gmail.com> wrote:\r\n\r\n> Hi,\r\n> Small world. I just came across one of your clients. He recommended you\r\n> for one of my upcoming projects. Let me know when we can connect.\r\n>\r\n> Regards,\r\n> Shah Imran\r\n>\r\n', 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:33:53,267 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '74', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr3ZYyXzHYvob804RA20rvKSekZbD9y8iaBto236xWXsyQ@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2023-02-12 17:15:08+06:00', 'subject': 'Re: hi there', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "dgadgadf dsfdsf\r\n\r\nOn Sun, Feb 12, 2023 at 11:08 AM SHAH IMRAN <shahimrans64@gmail.com> wrote:\r\n\r\n> what's up?\r\n>\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:33:54,203 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '14', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr3mAxfURnfP675DrqCvfe-G+PpShyq6rxnzAR5xuW1D4w@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:55:41+06:00', 'subject': 'Re: Personal', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': "Yes, I am interested.\r\n\r\nOn Tue, Nov 22, 2022 at 8:41 PM Louise Deforge <saidunuhu579@gmail.com>\r\nwrote:\r\n\r\n> Hello Imran,\r\n> I'm reaching out to you because i noticed you website yesterday\r\n> and thought you'd be interested in a collaboration.\r\n> Looking forward to your replya!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'UNSEEN', 'Webhook_flag': False}
+2023-03-31 20:33:55,257 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '15', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr2iFOfkSXXOAXHXQOE5f6evp7hsDxPJnZLn=RxU7BiTHQ@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:56:03+06:00', 'subject': 'Re: Personal', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': "I'm not interested.\r\n\r\nOn Tue, Nov 22, 2022 at 8:55 PM Louise Deforge <saidunuhu579@gmail.com>\r\nwrote:\r\n\r\n> Hey Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a partnership.\r\n> Hope you don't mind my outreach!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'UNSEEN', 'Webhook_flag': False}
+2023-03-31 20:33:56,417 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '16', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr0=QLATp2ps5W_ZAHP6uWGRUYxnHVFyh2HiD6=UEgemuw@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:56:06+06:00', 'subject': 'Re: Personal', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': "On Tue, Nov 22, 2022 at 8:55 PM Louise Deforge <saidunuhu579@gmail.com>\r\nwrote:\r\n\r\n> Hey Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a partnership.\r\n> Hope you don't mind my outreach!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'UNSEEN', 'Webhook_flag': False}
+2023-03-31 20:34:00,515 [Thread-5    ] [INFO ]  Downloading finished
+2023-03-31 20:34:01,423 [SendReport_I] [INFO ]  Webhook Inbox Thread Finished.
+2023-03-31 20:34:16,260 [Thread-9    ] [INFO ]  Set read flag for saidunuhu579@gmail.com : Successful
+2023-03-31 20:34:16,980 [Thread-10   ] [INFO ]  Set read flag for lithbello60@gmail.com : Successful
+2023-03-31 20:34:22,726 [Thread-11   ] [INFO ]  Set read flag for saidunuhu579@gmail.com : Successful
+2023-03-31 20:40:35,615 [Thread-13   ] [INFO ]  Starting deleting mail...
+2023-03-31 20:40:38,069 [Thread-13   ] [ERROR]  Error at deleting email - lithbello60@gmail.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\imap.py", line 112, in run
+    imap.uid('STORE', row['uid'], '+X-GM-LABELS', '\\Trash')
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\imaplib.py", line 885, in uid
+    raise self.error("command %s illegal in state %s, "
+imaplib.IMAP4.error: command STORE illegal in state AUTH, only allowed in states SELECTED
+
+2023-03-31 20:40:38,072 [Thread-13   ] [INFO ]  Finishing deleting mail...
+2023-03-31 20:42:00,610 [MainThread  ] [INFO ]  Exiting
+2023-03-31 20:42:04,911 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 20:42:04,970 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 20:42:04,973 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-31 20:42:05,523 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 20:42:05,524 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 20:42:05,845 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-31 20:42:05,846 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-31 20:42:10,066 [Thread-4    ] [INFO ]  config updated
+2023-03-31 20:42:10,068 [SendReport_I] [INFO ]  Inbox Webhook Thread Started...
+2023-03-31 20:42:16,650 [lithbello60@] [INFO ]  Blacklisted due to this keyword: noreply@google.com
+2023-03-31 20:42:17,174 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '15', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr2iFOfkSXXOAXHXQOE5f6evp7hsDxPJnZLn=RxU7BiTHQ@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:56:03+06:00', 'subject': 'Re: Personal', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': "I'm not interested.\r\n\r\nOn Tue, Nov 22, 2022 at 8:55 PM Louise Deforge <saidunuhu579@gmail.com>\r\nwrote:\r\n\r\n> Hey Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a partnership.\r\n> Hope you don't mind my outreach!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:42:17,248 [lithbello60@] [INFO ]  Blacklisted due to this keyword: no-reply@mail.instagram.com
+2023-03-31 20:42:18,946 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '62', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr2zL_2X7JEaefgmfrxy5=r7SedCk8KuVLOLYTYnOFJjcg@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:55:36+06:00', 'subject': 'Re: Personal', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "Thanks, I'll check it out!\r\n\r\nOn Tue, Nov 22, 2022 at 8:41 PM Janice Holley <lithbello60@gmail.com> wrote:\r\n\r\n> Hi Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a collaboration.\r\n> Looking forward to your replya!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:42:20,505 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '16', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr0=QLATp2ps5W_ZAHP6uWGRUYxnHVFyh2HiD6=UEgemuw@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:56:06+06:00', 'subject': 'Re: Personal', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': "On Tue, Nov 22, 2022 at 8:55 PM Louise Deforge <saidunuhu579@gmail.com>\r\nwrote:\r\n\r\n> Hey Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a partnership.\r\n> Hope you don't mind my outreach!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:42:21,623 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '63', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr03jQfeCWk42Q6T2JtDk7PKqgZ8Cy4vO7aYXQETOLRiCw@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:55:45+06:00', 'subject': 'Re: Personal', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "On Tue, Nov 22, 2022 at 8:41 PM Janice Holley <lithbello60@gmail.com> wrote:\r\n\r\n> Hi Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a collaboration.\r\n> Looking forward to your replya!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:42:22,807 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '18', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr3pbm5ZNzn4iJ5_jDd2XNhO6=P2KLuLVevR=wcAqo5dnw@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-12-04 17:04:46+06:00', 'subject': 'Re: Personal', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': "Thanks, I'll check it out!\r\n\r\nOn Sun, Dec 4, 2022 at 11:04 AM Louise Deforge <saidunuhu579@gmail.com>\r\nwrote:\r\n\r\n> Hello Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a collaboration.\r\n> Looking forward to your replya!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:42:25,122 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '64', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr2O8_t6hESMf-2t_xWuKWpP5zCGWHkFyF+G4VGBoSdUWQ@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:55:57+06:00', 'subject': 'Re: Personal', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "Sure, I'd be happy to!\r\n\r\nOn Tue, Nov 22, 2022 at 8:55 PM Janice Holley <lithbello60@gmail.com> wrote:\r\n\r\n> Hi Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a collaboration.\r\n> Hope you don't mind my outreach!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:42:26,367 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '19', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr0cx50jneUFp94yXUyLyhVga8Vqv+2EkY+SxS7G00i=ug@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2023-02-22 01:55:16+06:00', 'subject': 'Small Project', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': 'Hi,\r\nSmall world. I just came across one of your clients. He recommended you for\r\none of my upcoming projects. Let me know when we can connect.\r\n\r\nRegards,\r\nShah Imran\r\n', 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:42:27,575 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '20', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr1btEe8PvaDUbom=RzpG3QyJctG3UOu512Du--0gv0rPA@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2023-02-22 04:35:11+06:00', 'subject': 'Re: Small Project', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': 'This is a second mail. I am following up on the progress of the ongoing\r\nproject.\r\n\r\nOn Tue, Feb 21, 2023 at 7:55 PM SHAH IMRAN <shahimrans64@gmail.com> wrote:\r\n\r\n> Hi,\r\n> Small world. I just came across one of your clients. He recommended you\r\n> for one of my upcoming projects. Let me know when we can connect.\r\n>\r\n> Regards,\r\n> Shah Imran\r\n>\r\n', 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:42:28,426 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '66', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr21P0W2mfwgKHDmNmio+bjiZ1y6YuXMtJv3b_=4g=o_ug@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-12-04 17:04:40+06:00', 'subject': 'Re: Personal', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "Thanks, I'll check it out!\r\n\r\nOn Sun, Dec 4, 2022 at 11:02 AM Janice Holley <lithbello60@gmail.com> wrote:\r\n\r\n> Hi Imran,\r\n> I'm reaching out to you because i came across you website the other day\r\n> and thought you'd be interested in a collaboration.\r\n> Hope you don't mind my outreach!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:42:29,222 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '14', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr3mAxfURnfP675DrqCvfe-G+PpShyq6rxnzAR5xuW1D4w@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:55:41+06:00', 'subject': 'Re: Personal', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': "Yes, I am interested.\r\n\r\nOn Tue, Nov 22, 2022 at 8:41 PM Louise Deforge <saidunuhu579@gmail.com>\r\nwrote:\r\n\r\n> Hello Imran,\r\n> I'm reaching out to you because i noticed you website yesterday\r\n> and thought you'd be interested in a collaboration.\r\n> Looking forward to your replya!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'UNSEEN', 'Webhook_flag': False}
+2023-03-31 20:42:30,292 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '72', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr1bgW7F0ZU2zRe0wxK=m3s2HPmSZV1EAhZ5cegBHuV2_A@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2023-02-03 07:25:12+06:00', 'subject': 'PArty all night', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "Hi bro? what's up?\r\nWanna party tonight\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:42:31,226 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '73', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr0qPG4hd1xG3_oun_3jRyK6RczNkDsGZ==HM1M_EWhdtw@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2023-02-12 17:08:58+06:00', 'subject': 'hi there', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "what's up?\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:42:31,988 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '74', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr3ZYyXzHYvob804RA20rvKSekZbD9y8iaBto236xWXsyQ@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2023-02-12 17:15:08+06:00', 'subject': 'Re: hi there', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "dgadgadf dsfdsf\r\n\r\nOn Sun, Feb 12, 2023 at 11:08 AM SHAH IMRAN <shahimrans64@gmail.com> wrote:\r\n\r\n> what's up?\r\n>\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 20:42:37,088 [Thread-5    ] [INFO ]  Downloading finished
+2023-03-31 20:42:37,995 [SendReport_I] [INFO ]  Webhook Inbox Thread Finished.
+2023-03-31 20:43:13,013 [Thread-10   ] [INFO ]  Starting deleting mail...
+2023-03-31 20:43:17,045 [Thread-10   ] [INFO ]  Finishing deleting mail...
+2023-03-31 20:46:28,584 [Thread-14   ] [INFO ]  Starting deleting mail...
+2023-03-31 20:46:28,589 [Thread-15   ] [INFO ]  Starting deleting mail...
+2023-03-31 20:46:32,779 [Thread-15   ] [INFO ]  Finishing deleting mail...
+2023-03-31 20:46:33,606 [Thread-14   ] [INFO ]  Finishing deleting mail...
+2023-03-31 20:49:46,542 [MainThread  ] [INFO ]  Exiting
+2023-03-31 21:04:10,564 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 21:04:10,666 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 21:04:10,667 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-31 21:04:11,391 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 21:04:11,392 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 21:04:11,806 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-31 21:04:11,808 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-31 21:04:39,597 [Thread-4    ] [INFO ]  config updated
+2023-03-31 21:04:39,600 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 2
+ Len of Group: 2
+ Len of Targets: 2
+ Delay: 0 - 10
+ Campaign ID: 07e48487-4463-49ce-a449-cc28888401bf
+ Add Custom Hostname: False
+2023-03-31 21:04:39,621 [Thread-5    ] [INFO ]  
+Starting Thread : Name - saidunuhu579@gmail.com
+Targets Count - 2
+2023-03-31 21:04:39,630 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 2 saidunuhu579@gmail.com
+2023-03-31 21:04:50,192 [saidunuhu579] [ERROR]  Error at Sending - saidunuhu579@gmail.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 463, in run
+    print(html_to_text.feed(body).text)
+AttributeError: 'NoneType' object has no attribute 'text'
+
+2023-03-31 21:04:50,642 [Thread-5    ] [INFO ]  
+Starting Thread : Name - lithbello60@gmail.com
+Targets Count - 2
+2023-03-31 21:04:50,645 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 2 lithbello60@gmail.com
+2023-03-31 21:04:55,480 [lithbello60@] [ERROR]  Error at Sending - lithbello60@gmail.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 463, in run
+    print(html_to_text.feed(body).text)
+AttributeError: 'NoneType' object has no attribute 'text'
+
+2023-03-31 21:04:55,794 [Thread-5    ] [INFO ]  Sending Finished 07e48487-4463-49ce-a449-cc28888401bf
+2023-03-31 21:04:56,662 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-03-31 21:43:29,347 [MainThread  ] [INFO ]  Exiting
+2023-03-31 22:03:43,489 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 22:03:43,554 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 22:03:43,584 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-31 22:03:45,111 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 22:03:45,113 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 22:03:45,970 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-31 22:03:45,971 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-31 22:03:53,177 [Thread-4    ] [INFO ]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2023-03-31 22:04:03,314 [Thread-5    ] [INFO ]  config updated
+2023-03-31 22:04:03,320 [SendReport_I] [INFO ]  Inbox Webhook Thread Started...
+2023-03-31 22:04:04,170 [davidgreenbe] [ERROR]  Error at downloading email - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\imap.py", line 281, in run
+    imap = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\imap_base.py", line 38, in _login
+    server = proxy_imaplib.IMAP(
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_imaplib.py", line 41, in __init__
+    self.connect_proxy(proxy_host, proxy_port, proxy_type, proxy_user,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_imaplib.py", line 73, in connect_proxy
+    self.sock = self.ssl_context.wrap_socket(s, server_hostname=self.host)
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:1122)
+
+2023-03-31 22:04:08,492 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '62', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr2zL_2X7JEaefgmfrxy5=r7SedCk8KuVLOLYTYnOFJjcg@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:55:36+06:00', 'subject': 'Re: Personal', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "Thanks, I'll check it out!\r\n\r\nOn Tue, Nov 22, 2022 at 8:41 PM Janice Holley <lithbello60@gmail.com> wrote:\r\n\r\n> Hi Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a collaboration.\r\n> Looking forward to your replya!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 22:04:09,572 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '15', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr2iFOfkSXXOAXHXQOE5f6evp7hsDxPJnZLn=RxU7BiTHQ@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:56:03+06:00', 'subject': 'Re: Personal', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': "I'm not interested.\r\n\r\nOn Tue, Nov 22, 2022 at 8:55 PM Louise Deforge <saidunuhu579@gmail.com>\r\nwrote:\r\n\r\n> Hey Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a partnership.\r\n> Hope you don't mind my outreach!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 22:04:10,242 [lithbello60@] [INFO ]  Blacklisted due to this keyword: noreply@google.com
+2023-03-31 22:04:10,700 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '63', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr03jQfeCWk42Q6T2JtDk7PKqgZ8Cy4vO7aYXQETOLRiCw@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:55:45+06:00', 'subject': 'Re: Personal', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "On Tue, Nov 22, 2022 at 8:41 PM Janice Holley <lithbello60@gmail.com> wrote:\r\n\r\n> Hi Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a collaboration.\r\n> Looking forward to your replya!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 22:04:10,806 [lithbello60@] [INFO ]  Blacklisted due to this keyword: no-reply@mail.instagram.com
+2023-03-31 22:04:13,859 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '16', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr0=QLATp2ps5W_ZAHP6uWGRUYxnHVFyh2HiD6=UEgemuw@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:56:06+06:00', 'subject': 'Re: Personal', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': "On Tue, Nov 22, 2022 at 8:55 PM Louise Deforge <saidunuhu579@gmail.com>\r\nwrote:\r\n\r\n> Hey Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a partnership.\r\n> Hope you don't mind my outreach!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 22:04:14,950 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '64', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr2O8_t6hESMf-2t_xWuKWpP5zCGWHkFyF+G4VGBoSdUWQ@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:55:57+06:00', 'subject': 'Re: Personal', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "Sure, I'd be happy to!\r\n\r\nOn Tue, Nov 22, 2022 at 8:55 PM Janice Holley <lithbello60@gmail.com> wrote:\r\n\r\n> Hi Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a collaboration.\r\n> Hope you don't mind my outreach!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 22:04:18,270 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '18', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr3pbm5ZNzn4iJ5_jDd2XNhO6=P2KLuLVevR=wcAqo5dnw@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-12-04 17:04:46+06:00', 'subject': 'Re: Personal', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': "Thanks, I'll check it out!\r\n\r\nOn Sun, Dec 4, 2022 at 11:04 AM Louise Deforge <saidunuhu579@gmail.com>\r\nwrote:\r\n\r\n> Hello Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a collaboration.\r\n> Looking forward to your replya!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 22:04:20,336 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '20', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr1btEe8PvaDUbom=RzpG3QyJctG3UOu512Du--0gv0rPA@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2023-02-22 04:35:11+06:00', 'subject': 'Re: Small Project', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': 'This is a second mail. I am following up on the progress of the ongoing\r\nproject.\r\n\r\nOn Tue, Feb 21, 2023 at 7:55 PM SHAH IMRAN <shahimrans64@gmail.com> wrote:\r\n\r\n> Hi,\r\n> Small world. I just came across one of your clients. He recommended you\r\n> for one of my upcoming projects. Let me know when we can connect.\r\n>\r\n> Regards,\r\n> Shah Imran\r\n>\r\n', 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 22:04:22,024 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '66', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr21P0W2mfwgKHDmNmio+bjiZ1y6YuXMtJv3b_=4g=o_ug@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-12-04 17:04:40+06:00', 'subject': 'Re: Personal', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "Thanks, I'll check it out!\r\n\r\nOn Sun, Dec 4, 2022 at 11:02 AM Janice Holley <lithbello60@gmail.com> wrote:\r\n\r\n> Hi Imran,\r\n> I'm reaching out to you because i came across you website the other day\r\n> and thought you'd be interested in a collaboration.\r\n> Hope you don't mind my outreach!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 22:04:24,391 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '14', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr3mAxfURnfP675DrqCvfe-G+PpShyq6rxnzAR5xuW1D4w@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:55:41+06:00', 'subject': 'Re: Personal', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': "Yes, I am interested.\r\n\r\nOn Tue, Nov 22, 2022 at 8:41 PM Louise Deforge <saidunuhu579@gmail.com>\r\nwrote:\r\n\r\n> Hello Imran,\r\n> I'm reaching out to you because i noticed you website yesterday\r\n> and thought you'd be interested in a collaboration.\r\n> Looking forward to your replya!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'UNSEEN', 'Webhook_flag': False}
+2023-03-31 22:04:25,399 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '72', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr1bgW7F0ZU2zRe0wxK=m3s2HPmSZV1EAhZ5cegBHuV2_A@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2023-02-03 07:25:12+06:00', 'subject': 'PArty all night', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "Hi bro? what's up?\r\nWanna party tonight\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 22:04:30,344 [Thread-6    ] [INFO ]  Downloading finished
+2023-03-31 22:04:30,406 [SendReport_I] [INFO ]  Webhook Inbox Thread Finished.
+2023-03-31 22:05:06,251 [Thread-12   ] [INFO ]  Set read flag for john.snow42@outlook.hu : Successful
+2023-03-31 22:05:08,554 [Thread-13   ] [INFO ]  Set read flag for john.snow42@outlook.hu : Successful
+2023-03-31 22:05:09,476 [Thread-14   ] [INFO ]  Set read flag for saidunuhu579@gmail.com : Successful
+2023-03-31 22:05:11,544 [Thread-15   ] [INFO ]  Set read flag for john.snow42@outlook.hu : Successful
+2023-03-31 22:08:36,807 [Thread-16   ] [INFO ]  config updated
+2023-03-31 22:08:36,809 [Thread-17   ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 2
+ Len of Group: 4
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: 1213294f-91d4-441c-9750-9dea5b084c3f
+ Add Custom Hostname: False
+2023-03-31 22:08:36,936 [Thread-17   ] [INFO ]  
+Starting Thread : Name - saidunuhu579@gmail.com
+Targets Count - 2
+2023-03-31 22:08:36,938 [Thread-17   ] [INFO ]  SMTP thread starting: Length - 2 saidunuhu579@gmail.com
+2023-03-31 22:08:36,939 [Thread-17   ] [INFO ]  
+Starting Thread : Name - lithbello60@gmail.com
+Targets Count - 2
+2023-03-31 22:08:36,942 [Thread-17   ] [INFO ]  SMTP thread starting: Length - 2 lithbello60@gmail.com
+2023-03-31 22:08:36,946 [Thread-17   ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 2
+2023-03-31 22:08:36,952 [Thread-17   ] [INFO ]  SMTP thread starting: Length - 2 john.snow42@outlook.hu
+2023-03-31 22:08:36,954 [Thread-17   ] [INFO ]  
+Starting Thread : Name - davidgreenberg200@yahoo.com
+Targets Count - 1
+2023-03-31 22:08:36,957 [Thread-17   ] [INFO ]  SMTP thread starting: Length - 1 davidgreenberg200@yahoo.com
+2023-03-31 22:08:42,884 [lithbello60@] [INFO ]  Sent - lithbello60@gmail.com shahimrans64@gmail.com
+2023-03-31 22:08:42,952 [davidgreenbe] [INFO ]  Error at SMTP_.login davidgreenberg200@yahoo.com : SMTPServerDisconnected : Connection unexpectedly closed
+2023-03-31 22:08:42,955 [davidgreenbe] [ERROR]  Error at Sending - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 423, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 356, in _login
+    server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 169, in connect_proxy
+    (code, msg) = self.getreply()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 398, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+
+2023-03-31 22:08:43,829 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2023-03-31 22:08:50,988 [Thread-17   ] [INFO ]  Sending Finished 1213294f-91d4-441c-9750-9dea5b084c3f
+2023-03-31 22:08:51,836 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-03-31 22:10:20,802 [MainThread  ] [INFO ]  Exiting
+2023-03-31 22:14:17,982 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 22:14:18,045 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 22:14:18,048 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-31 22:14:18,641 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 22:14:18,643 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 22:14:19,002 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-31 22:14:19,002 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-31 22:14:25,842 [Thread-4    ] [INFO ]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2023-03-31 22:14:34,444 [Thread-5    ] [INFO ]  config updated
+2023-03-31 22:14:34,462 [SendReport_I] [INFO ]  Inbox Webhook Thread Started...
+2023-03-31 22:14:35,308 [davidgreenbe] [ERROR]  Error at downloading email - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\imap.py", line 281, in run
+    imap = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\imap_base.py", line 38, in _login
+    server = proxy_imaplib.IMAP(
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_imaplib.py", line 41, in __init__
+    self.connect_proxy(proxy_host, proxy_port, proxy_type, proxy_user,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_imaplib.py", line 73, in connect_proxy
+    self.sock = self.ssl_context.wrap_socket(s, server_hostname=self.host)
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:1122)
+
+2023-03-31 22:14:39,484 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '62', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr2zL_2X7JEaefgmfrxy5=r7SedCk8KuVLOLYTYnOFJjcg@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:55:36+06:00', 'subject': 'Re: Personal', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "Thanks, I'll check it out!\r\n\r\nOn Tue, Nov 22, 2022 at 8:41 PM Janice Holley <lithbello60@gmail.com> wrote:\r\n\r\n> Hi Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a collaboration.\r\n> Looking forward to your replya!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 22:14:40,185 [lithbello60@] [INFO ]  Blacklisted due to this keyword: noreply@google.com
+2023-03-31 22:14:40,644 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '14', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr3mAxfURnfP675DrqCvfe-G+PpShyq6rxnzAR5xuW1D4w@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:55:41+06:00', 'subject': 'Re: Personal', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': "Yes, I am interested.\r\n\r\nOn Tue, Nov 22, 2022 at 8:41 PM Louise Deforge <saidunuhu579@gmail.com>\r\nwrote:\r\n\r\n> Hello Imran,\r\n> I'm reaching out to you because i noticed you website yesterday\r\n> and thought you'd be interested in a collaboration.\r\n> Looking forward to your replya!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 22:14:40,684 [lithbello60@] [INFO ]  Blacklisted due to this keyword: no-reply@mail.instagram.com
+2023-03-31 22:14:41,779 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '63', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr03jQfeCWk42Q6T2JtDk7PKqgZ8Cy4vO7aYXQETOLRiCw@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:55:45+06:00', 'subject': 'Re: Personal', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "On Tue, Nov 22, 2022 at 8:41 PM Janice Holley <lithbello60@gmail.com> wrote:\r\n\r\n> Hi Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a collaboration.\r\n> Looking forward to your replya!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 22:14:42,692 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '15', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr2iFOfkSXXOAXHXQOE5f6evp7hsDxPJnZLn=RxU7BiTHQ@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:56:03+06:00', 'subject': 'Re: Personal', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': "I'm not interested.\r\n\r\nOn Tue, Nov 22, 2022 at 8:55 PM Louise Deforge <saidunuhu579@gmail.com>\r\nwrote:\r\n\r\n> Hey Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a partnership.\r\n> Hope you don't mind my outreach!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 22:14:43,968 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '64', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr2O8_t6hESMf-2t_xWuKWpP5zCGWHkFyF+G4VGBoSdUWQ@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:55:57+06:00', 'subject': 'Re: Personal', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "Sure, I'd be happy to!\r\n\r\nOn Tue, Nov 22, 2022 at 8:55 PM Janice Holley <lithbello60@gmail.com> wrote:\r\n\r\n> Hi Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a collaboration.\r\n> Hope you don't mind my outreach!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 22:14:45,087 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '16', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr0=QLATp2ps5W_ZAHP6uWGRUYxnHVFyh2HiD6=UEgemuw@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-11-23 02:56:06+06:00', 'subject': 'Re: Personal', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': "On Tue, Nov 22, 2022 at 8:55 PM Louise Deforge <saidunuhu579@gmail.com>\r\nwrote:\r\n\r\n> Hey Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a partnership.\r\n> Hope you don't mind my outreach!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 22:14:46,186 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '18', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr3pbm5ZNzn4iJ5_jDd2XNhO6=P2KLuLVevR=wcAqo5dnw@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-12-04 17:04:46+06:00', 'subject': 'Re: Personal', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': "Thanks, I'll check it out!\r\n\r\nOn Sun, Dec 4, 2022 at 11:04 AM Louise Deforge <saidunuhu579@gmail.com>\r\nwrote:\r\n\r\n> Hello Imran,\r\n> I'm reaching out to you because i visited you website yesterday\r\n> and thought you'd be interested in a collaboration.\r\n> Looking forward to your replya!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 22:14:47,248 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '66', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr21P0W2mfwgKHDmNmio+bjiZ1y6YuXMtJv3b_=4g=o_ug@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2022-12-04 17:04:40+06:00', 'subject': 'Re: Personal', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "Thanks, I'll check it out!\r\n\r\nOn Sun, Dec 4, 2022 at 11:02 AM Janice Holley <lithbello60@gmail.com> wrote:\r\n\r\n> Hi Imran,\r\n> I'm reaching out to you because i came across you website the other day\r\n> and thought you'd be interested in a collaboration.\r\n> Hope you don't mind my outreach!\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 22:14:48,372 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '20', 'to': 'Louise Deforge saidunuhu579@gmail.com', 'TONAME': 'Louise Deforge', 'to_mail': 'saidunuhu579@gmail.com', 'message-id': 'CAGwNhr1btEe8PvaDUbom=RzpG3QyJctG3UOu512Du--0gv0rPA@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2023-02-22 04:35:11+06:00', 'subject': 'Re: Small Project', 'user': 'saidunuhu579@gmail.com', 'pass': 'ujemlxfzbgwnkzpd', 'body': 'This is a second mail. I am following up on the progress of the ongoing\r\nproject.\r\n\r\nOn Tue, Feb 21, 2023 at 7:55 PM SHAH IMRAN <shahimrans64@gmail.com> wrote:\r\n\r\n> Hi,\r\n> Small world. I just came across one of your clients. He recommended you\r\n> for one of my upcoming projects. Let me know when we can connect.\r\n>\r\n> Regards,\r\n> Shah Imran\r\n>\r\n', 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Louise', 'LASTFROMNAME': 'Deforge', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 22:14:49,381 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '72', 'to': 'Janice Holley lithbello60@gmail.com', 'TONAME': 'Janice Holley', 'to_mail': 'lithbello60@gmail.com', 'message-id': 'CAGwNhr1bgW7F0ZU2zRe0wxK=m3s2HPmSZV1EAhZ5cegBHuV2_A@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2023-02-03 07:25:12+06:00', 'subject': 'PArty all night', 'user': 'lithbello60@gmail.com', 'pass': 'wrddcsqmfqdkqkrx', 'body': "Hi bro? what's up?\r\nWanna party tonight\r\n", 'proxy_host': '185.125.171.221', 'proxy_port': 4021, 'proxy_user': '2JjU2izT4rk1tGb', 'proxy_pass': 'bEjmSK36Ma4C36t', 'FIRSTFROMNAME': 'Janice', 'LASTFROMNAME': 'Holley', 'flag': 'SEEN', 'Webhook_flag': False}
+2023-03-31 22:14:53,486 [Thread-6    ] [INFO ]  Downloading finished
+2023-03-31 22:14:54,389 [SendReport_I] [INFO ]  Webhook Inbox Thread Finished.
+2023-03-31 22:15:06,215 [Thread-12   ] [INFO ]  config updated
+2023-03-31 22:15:06,220 [Thread-13   ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 4
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: 528c80d7-dbe9-424a-af99-7642483d523a
+ Add Custom Hostname: False
+2023-03-31 22:15:06,249 [Thread-13   ] [INFO ]  
+Starting Thread : Name - saidunuhu579@gmail.com
+Targets Count - 1
+2023-03-31 22:15:06,251 [Thread-13   ] [INFO ]  SMTP thread starting: Length - 1 saidunuhu579@gmail.com
+2023-03-31 22:15:06,254 [Thread-13   ] [INFO ]  
+Starting Thread : Name - lithbello60@gmail.com
+Targets Count - 1
+2023-03-31 22:15:06,257 [Thread-13   ] [INFO ]  SMTP thread starting: Length - 1 lithbello60@gmail.com
+2023-03-31 22:15:06,259 [Thread-13   ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-03-31 22:15:06,262 [Thread-13   ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-03-31 22:15:06,271 [Thread-13   ] [INFO ]  
+Starting Thread : Name - davidgreenberg200@yahoo.com
+Targets Count - 1
+2023-03-31 22:15:06,278 [Thread-13   ] [INFO ]  SMTP thread starting: Length - 1 davidgreenberg200@yahoo.com
+2023-03-31 22:15:14,376 [lithbello60@] [INFO ]  Sent - lithbello60@gmail.com shahimrans64@gmail.com
+2023-03-31 22:15:15,239 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2023-03-31 22:15:15,849 [saidunuhu579] [INFO ]  Sent - saidunuhu579@gmail.com shahimrans64@gmail.com
+2023-03-31 22:15:16,240 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2023-03-31 22:15:16,294 [Thread-13   ] [INFO ]  Sending Finished 528c80d7-dbe9-424a-af99-7642483d523a
+2023-03-31 22:15:17,242 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-03-31 22:20:42,240 [Thread-20   ] [INFO ]  config updated
+2023-03-31 22:20:42,244 [Thread-21   ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: 9e3635eb-d605-4542-be5c-95bb31ebddd6
+ Add Custom Hostname: False
+2023-03-31 22:20:42,262 [Thread-21   ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-03-31 22:20:42,264 [Thread-21   ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-03-31 22:20:42,265 [Thread-21   ] [INFO ]  
+Starting Thread : Name - davidgreenberg200@yahoo.com
+Targets Count - 1
+2023-03-31 22:20:42,267 [Thread-21   ] [INFO ]  SMTP thread starting: Length - 1 davidgreenberg200@yahoo.com
+2023-03-31 22:20:50,417 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : STARTTLS extension not supported by server.
+2023-03-31 22:20:50,420 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 423, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 365, in _login
+    server.starttls()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 755, in starttls
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: STARTTLS extension not supported by server.
+
+2023-03-31 22:20:52,075 [davidgreenbe] [INFO ]  Error at SMTP_.login davidgreenberg200@yahoo.com : SMTPServerDisconnected : Connection unexpectedly closed
+2023-03-31 22:20:52,077 [davidgreenbe] [ERROR]  Error at Sending - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 423, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 356, in _login
+    server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 169, in connect_proxy
+    (code, msg) = self.getreply()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 398, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+
+2023-03-31 22:20:52,274 [Thread-21   ] [INFO ]  Sending Finished 9e3635eb-d605-4542-be5c-95bb31ebddd6
+2023-03-31 22:20:53,267 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-03-31 22:22:15,618 [Thread-25   ] [INFO ]  config updated
+2023-03-31 22:22:15,627 [SendReport_I] [INFO ]  Inbox Webhook Thread Started...
+2023-03-31 22:22:16,470 [davidgreenbe] [ERROR]  Error at downloading email - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\imap.py", line 281, in run
+    imap = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\imap_base.py", line 38, in _login
+    server = proxy_imaplib.IMAP(
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_imaplib.py", line 41, in __init__
+    self.connect_proxy(proxy_host, proxy_port, proxy_type, proxy_user,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_imaplib.py", line 73, in connect_proxy
+    self.sock = self.ssl_context.wrap_socket(s, server_hostname=self.host)
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:1122)
+
+2023-03-31 22:22:30,638 [Thread-26   ] [INFO ]  Downloading finished
+2023-03-31 22:22:30,640 [SendReport_I] [INFO ]  Webhook Inbox Thread Finished.
+2023-03-31 22:22:44,794 [Thread-30   ] [INFO ]  Set read flag for john.snow42@outlook.hu : Successful
+2023-03-31 22:24:20,399 [MainThread  ] [INFO ]  Exiting
+2023-03-31 22:24:26,601 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 22:24:26,681 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 22:24:26,684 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-31 22:24:27,438 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 22:24:27,440 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 22:24:27,952 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-31 22:24:27,953 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-31 22:24:31,900 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: db485f13-33ff-41b1-bf56-08c39a9088df
+ Add Custom Hostname: False
+2023-03-31 22:24:31,901 [Thread-4    ] [INFO ]  config updated
+2023-03-31 22:24:31,913 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-03-31 22:24:31,914 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-03-31 22:24:31,916 [Thread-5    ] [INFO ]  
+Starting Thread : Name - davidgreenberg200@yahoo.com
+Targets Count - 1
+2023-03-31 22:24:31,919 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 davidgreenberg200@yahoo.com
+2023-03-31 22:24:40,074 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : STARTTLS extension not supported by server.
+2023-03-31 22:24:40,075 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 423, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 365, in _login
+    server.starttls()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 755, in starttls
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: STARTTLS extension not supported by server.
+
+2023-03-31 22:24:41,648 [davidgreenbe] [INFO ]  Error at SMTP_.login davidgreenberg200@yahoo.com : SMTPServerDisconnected : Connection unexpectedly closed
+2023-03-31 22:24:41,650 [davidgreenbe] [ERROR]  Error at Sending - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 423, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 356, in _login
+    server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 169, in connect_proxy
+    (code, msg) = self.getreply()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 398, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+
+2023-03-31 22:24:41,927 [Thread-5    ] [INFO ]  Sending Finished db485f13-33ff-41b1-bf56-08c39a9088df
+2023-03-31 22:24:42,910 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-03-31 22:25:39,352 [MainThread  ] [INFO ]  Exiting
+2023-03-31 22:25:43,529 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 22:25:43,590 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 22:25:43,592 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-31 22:25:44,192 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 22:25:44,193 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 22:25:44,520 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-31 22:25:44,521 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-31 22:25:48,616 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: a535d73a-205f-4bb3-a46b-290f2165fe3f
+ Add Custom Hostname: False
+2023-03-31 22:25:48,616 [Thread-4    ] [INFO ]  config updated
+2023-03-31 22:25:48,626 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-03-31 22:25:48,628 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-03-31 22:25:48,630 [Thread-5    ] [INFO ]  
+Starting Thread : Name - davidgreenberg200@yahoo.com
+Targets Count - 1
+2023-03-31 22:25:48,631 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 davidgreenberg200@yahoo.com
+2023-03-31 22:25:53,373 [davidgreenbe] [INFO ]  Error at SMTP_.login davidgreenberg200@yahoo.com : SMTPServerDisconnected : Connection unexpectedly closed
+2023-03-31 22:25:53,375 [davidgreenbe] [ERROR]  Error at Sending - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 423, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 356, in _login
+    server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 169, in connect_proxy
+    (code, msg) = self.getreply()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 398, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+
+2023-03-31 22:26:06,126 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : STARTTLS extension not supported by server.
+2023-03-31 22:26:06,128 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 423, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 365, in _login
+    server.starttls()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 755, in starttls
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: STARTTLS extension not supported by server.
+
+2023-03-31 22:26:06,644 [Thread-5    ] [INFO ]  Sending Finished a535d73a-205f-4bb3-a46b-290f2165fe3f
+2023-03-31 22:26:07,631 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-03-31 22:27:47,215 [MainThread  ] [INFO ]  Exiting
+2023-03-31 22:27:51,021 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 22:27:51,102 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 22:27:51,106 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-31 22:27:51,786 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 22:27:51,788 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 22:27:52,146 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-31 22:27:52,147 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-31 22:27:57,247 [Thread-4    ] [INFO ]  config updated
+2023-03-31 22:27:57,249 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: 7c9ccd8b-1109-46b0-bec8-4e11c3b0b44d
+ Add Custom Hostname: False
+2023-03-31 22:27:57,259 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-03-31 22:27:57,260 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-03-31 22:27:57,263 [Thread-5    ] [INFO ]  
+Starting Thread : Name - davidgreenberg200@yahoo.com
+Targets Count - 1
+2023-03-31 22:27:57,264 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 davidgreenberg200@yahoo.com
+2023-03-31 22:28:01,154 [davidgreenbe] [INFO ]  Error at SMTP_.login davidgreenberg200@yahoo.com : SMTPServerDisconnected : Connection unexpectedly closed
+2023-03-31 22:28:01,159 [davidgreenbe] [ERROR]  Error at Sending - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 423, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 356, in _login
+    server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 169, in connect_proxy
+    (code, msg) = self.getreply()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 398, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+
+2023-03-31 22:28:06,426 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : SMTP AUTH extension not supported by server.
+2023-03-31 22:28:06,429 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 423, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 367, in _login
+    server.login(self.user, self.passwd)
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 700, in login
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: SMTP AUTH extension not supported by server.
+
+2023-03-31 22:28:07,271 [Thread-5    ] [INFO ]  Sending Finished 7c9ccd8b-1109-46b0-bec8-4e11c3b0b44d
+2023-03-31 22:28:08,259 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-03-31 22:30:45,083 [MainThread  ] [INFO ]  Exiting
+2023-03-31 22:30:50,192 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 22:30:50,260 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 22:30:50,264 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-31 22:30:50,977 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 22:30:50,978 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 22:30:51,323 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-31 22:30:51,324 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-31 22:30:57,984 [Thread-4    ] [INFO ]  config updated
+2023-03-31 22:30:57,986 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: df1ce97c-20c1-4e98-afc8-86284ff4f173
+ Add Custom Hostname: False
+2023-03-31 22:30:57,996 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-03-31 22:30:57,999 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-03-31 22:30:58,001 [Thread-5    ] [INFO ]  
+Starting Thread : Name - davidgreenberg200@yahoo.com
+Targets Count - 1
+2023-03-31 22:30:58,004 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 davidgreenberg200@yahoo.com
+2023-03-31 22:31:02,449 [davidgreenbe] [INFO ]  Error at SMTP_.login davidgreenberg200@yahoo.com : SMTPServerDisconnected : Connection unexpectedly closed
+2023-03-31 22:31:02,453 [davidgreenbe] [ERROR]  Error at Sending - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 426, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 356, in _login
+    server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 169, in connect_proxy
+    (code, msg) = self.getreply()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 398, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+
+2023-03-31 22:31:09,342 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : STARTTLS extension not supported by server.
+2023-03-31 22:31:09,345 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 426, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 368, in _login
+    server.starttls(context=context)
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 755, in starttls
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: STARTTLS extension not supported by server.
+
+2023-03-31 22:31:10,016 [Thread-5    ] [INFO ]  Sending Finished df1ce97c-20c1-4e98-afc8-86284ff4f173
+2023-03-31 22:31:11,001 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-03-31 22:32:43,077 [MainThread  ] [INFO ]  Exiting
+2023-03-31 22:32:47,144 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 22:32:47,209 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 22:32:47,212 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-03-31 22:32:47,837 [MainThread  ] [INFO ]  Logger Started
+2023-03-31 22:32:47,838 [MainThread  ] [INFO ]  Scheduler started
+2023-03-31 22:32:48,210 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-03-31 22:32:48,211 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-03-31 22:32:52,675 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: 29ee0fb0-dc44-4a4b-831c-6e1fc629027f
+ Add Custom Hostname: False
+2023-03-31 22:32:52,675 [Thread-4    ] [INFO ]  config updated
+2023-03-31 22:32:52,687 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-03-31 22:32:52,688 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-03-31 22:32:52,690 [Thread-5    ] [INFO ]  
+Starting Thread : Name - davidgreenberg200@yahoo.com
+Targets Count - 1
+2023-03-31 22:32:52,692 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 davidgreenberg200@yahoo.com
+2023-03-31 22:32:59,893 [davidgreenbe] [INFO ]  Error at SMTP_.login davidgreenberg200@yahoo.com : SMTPServerDisconnected : Connection unexpectedly closed
+2023-03-31 22:32:59,897 [davidgreenbe] [ERROR]  Error at Sending - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 426, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 356, in _login
+    server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 169, in connect_proxy
+    (code, msg) = self.getreply()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 398, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+
+2023-03-31 22:33:56,878 [john.snow42@] [WARNI]  Reconnecting smtp - john.snow42@outlook.hu
+2023-03-31 22:34:26,768 [MainThread  ] [INFO ]  Exiting
+2023-04-01 00:28:08,907 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 00:28:08,993 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 00:28:09,070 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-01 00:28:12,459 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 00:28:12,459 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 00:28:13,908 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-01 00:28:13,911 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-01 00:28:52,342 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: 034c13d9-f515-47ec-9c44-463d5414c04c
+ Add Custom Hostname: False
+2023-04-01 00:28:52,345 [Thread-4    ] [INFO ]  config updated
+2023-04-01 00:28:52,402 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-04-01 00:28:52,404 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-04-01 00:28:52,406 [Thread-5    ] [INFO ]  
+Starting Thread : Name - davidgreenberg200@yahoo.com
+Targets Count - 1
+2023-04-01 00:28:52,407 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 davidgreenberg200@yahoo.com
+2023-04-01 00:29:03,555 [davidgreenbe] [INFO ]  Error at SMTP_.login davidgreenberg200@yahoo.com : SMTPServerDisconnected : Connection unexpectedly closed
+2023-04-01 00:29:03,584 [davidgreenbe] [ERROR]  Error at Sending - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 426, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 356, in _login
+    server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 169, in connect_proxy
+    (code, msg) = self.getreply()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 398, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+
+2023-04-01 00:29:07,824 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : STARTTLS extension not supported by server.
+2023-04-01 00:29:07,826 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 426, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 368, in _login
+    server.starttls()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 755, in starttls
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: STARTTLS extension not supported by server.
+
+2023-04-01 00:29:08,526 [Thread-5    ] [INFO ]  Sending Finished 034c13d9-f515-47ec-9c44-463d5414c04c
+2023-04-01 00:29:09,358 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-04-01 00:29:19,659 [Thread-9    ] [INFO ]  config updated
+2023-04-01 00:29:19,659 [Thread-10   ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: 49618d99-6e61-49a3-a9b3-e803b5956ab1
+ Add Custom Hostname: True
+2023-04-01 00:29:19,666 [Thread-10   ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-04-01 00:29:19,668 [Thread-10   ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-04-01 00:29:19,670 [Thread-10   ] [INFO ]  
+Starting Thread : Name - davidgreenberg200@yahoo.com
+Targets Count - 1
+2023-04-01 00:29:19,672 [Thread-10   ] [INFO ]  SMTP thread starting: Length - 1 davidgreenberg200@yahoo.com
+2023-04-01 00:29:23,534 [davidgreenbe] [INFO ]  Error at SMTP_.login davidgreenberg200@yahoo.com : SMTPServerDisconnected : Connection unexpectedly closed
+2023-04-01 00:29:23,535 [davidgreenbe] [ERROR]  Error at Sending - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 426, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 356, in _login
+    server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 169, in connect_proxy
+    (code, msg) = self.getreply()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 398, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+
+2023-04-01 00:29:29,975 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : STARTTLS extension not supported by server.
+2023-04-01 00:29:29,977 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 426, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 368, in _login
+    server.starttls()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 755, in starttls
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: STARTTLS extension not supported by server.
+
+2023-04-01 00:29:30,680 [Thread-10   ] [INFO ]  Sending Finished 49618d99-6e61-49a3-a9b3-e803b5956ab1
+2023-04-01 00:29:31,672 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-04-01 00:30:12,816 [MainThread  ] [INFO ]  Exiting
+2023-04-01 00:30:23,355 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 00:30:23,417 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 00:30:23,420 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-01 00:30:24,019 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 00:30:24,020 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 00:30:24,349 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-01 00:30:24,351 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-01 00:30:31,393 [Thread-4    ] [INFO ]  config updated
+2023-04-01 00:30:31,394 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: 6f2cb985-3f6b-4ec7-a74c-91cbe0521eb5
+ Add Custom Hostname: True
+2023-04-01 00:30:31,403 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-04-01 00:30:31,404 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-04-01 00:30:31,406 [Thread-5    ] [INFO ]  
+Starting Thread : Name - davidgreenberg200@yahoo.com
+Targets Count - 1
+2023-04-01 00:30:31,408 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 davidgreenberg200@yahoo.com
+2023-04-01 00:30:42,363 [davidgreenbe] [INFO ]  Error at SMTP_.login davidgreenberg200@yahoo.com : SMTPServerDisconnected : Connection unexpectedly closed
+2023-04-01 00:30:42,367 [davidgreenbe] [ERROR]  Error at Sending - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 427, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 356, in _login
+    server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 169, in connect_proxy
+    (code, msg) = self.getreply()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 398, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+
+2023-04-01 00:30:47,637 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : STARTTLS extension not supported by server.
+2023-04-01 00:30:47,637 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 427, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 369, in _login
+    server.starttls()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 755, in starttls
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: STARTTLS extension not supported by server.
+
+2023-04-01 00:30:48,434 [Thread-5    ] [INFO ]  Sending Finished 6f2cb985-3f6b-4ec7-a74c-91cbe0521eb5
+2023-04-01 00:30:49,405 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-04-01 00:33:30,694 [MainThread  ] [INFO ]  Exiting
+2023-04-01 00:33:40,736 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 00:33:43,912 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 00:33:43,944 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-01 00:33:47,719 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 00:33:47,720 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 00:33:48,870 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-01 00:33:48,871 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-01 00:33:53,434 [Thread-4    ] [INFO ]  config updated
+2023-04-01 00:33:53,435 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: 435f8590-7eed-4c2d-8453-ef19e6e4aed3
+ Add Custom Hostname: True
+2023-04-01 00:33:53,557 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-04-01 00:33:53,559 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-04-01 00:33:53,561 [Thread-5    ] [INFO ]  
+Starting Thread : Name - davidgreenberg200@yahoo.com
+Targets Count - 1
+2023-04-01 00:33:53,562 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 davidgreenberg200@yahoo.com
+2023-04-01 00:34:00,423 [davidgreenbe] [INFO ]  Error at SMTP_.login davidgreenberg200@yahoo.com : SMTPServerDisconnected : Connection unexpectedly closed
+2023-04-01 00:34:00,547 [davidgreenbe] [ERROR]  Error at Sending - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 427, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 356, in _login
+    server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 169, in connect_proxy
+    (code, msg) = self.getreply()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 398, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+
+2023-04-01 00:34:08,794 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : STARTTLS extension not supported by server.
+2023-04-01 00:34:08,795 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 427, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 369, in _login
+    server.starttls()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 755, in starttls
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: STARTTLS extension not supported by server.
+
+2023-04-01 00:34:09,672 [Thread-5    ] [INFO ]  Sending Finished 435f8590-7eed-4c2d-8453-ef19e6e4aed3
+2023-04-01 00:34:10,451 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-04-01 00:42:06,524 [MainThread  ] [INFO ]  Exiting
+2023-04-01 00:42:18,519 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 00:42:18,579 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 00:42:18,581 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-01 00:42:20,194 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 00:42:20,196 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 00:42:21,317 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-01 00:42:21,318 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-01 00:42:24,781 [Thread-4    ] [INFO ]  config updated
+2023-04-01 00:42:24,783 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: 020ec9da-b61f-4c28-8eef-b4ac3de27678
+ Add Custom Hostname: True
+2023-04-01 00:42:24,907 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-04-01 00:42:24,909 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-04-01 00:42:24,910 [Thread-5    ] [INFO ]  
+Starting Thread : Name - davidgreenberg200@yahoo.com
+Targets Count - 1
+2023-04-01 00:42:24,913 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 davidgreenberg200@yahoo.com
+2023-04-01 00:42:30,021 [davidgreenbe] [INFO ]  Error at SMTP_.login davidgreenberg200@yahoo.com : SMTPServerDisconnected : Connection unexpectedly closed
+2023-04-01 00:42:30,134 [davidgreenbe] [ERROR]  Error at Sending - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 427, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 356, in _login
+    server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 169, in connect_proxy
+    (code, msg) = self.getreply()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 398, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+
+2023-04-01 00:42:32,213 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : SMTP AUTH extension not supported by server.
+2023-04-01 00:42:32,214 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 427, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 371, in _login
+    server.login(self.user, self.passwd)
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 700, in login
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: SMTP AUTH extension not supported by server.
+
+2023-04-01 00:42:32,921 [Thread-5    ] [INFO ]  Sending Finished 020ec9da-b61f-4c28-8eef-b4ac3de27678
+2023-04-01 00:42:33,793 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-04-01 00:54:53,529 [MainThread  ] [INFO ]  Exiting
+2023-04-01 00:55:11,809 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 00:55:11,876 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 00:55:11,879 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-01 00:55:14,129 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 00:55:14,130 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 00:55:15,120 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-01 00:55:15,121 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-01 00:55:27,682 [Thread-4    ] [INFO ]  config updated
+2023-04-01 00:55:27,684 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: 94c1be7a-1d77-4827-b933-711bf61b17ac
+ Add Custom Hostname: True
+2023-04-01 00:55:27,815 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-04-01 00:55:27,817 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-04-01 00:55:27,818 [Thread-5    ] [INFO ]  
+Starting Thread : Name - davidgreenberg200@yahoo.com
+Targets Count - 1
+2023-04-01 00:55:27,819 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 davidgreenberg200@yahoo.com
+2023-04-01 00:55:33,121 [davidgreenbe] [INFO ]  Error at SMTP_.login davidgreenberg200@yahoo.com : SMTPServerDisconnected : Connection unexpectedly closed
+2023-04-01 00:55:33,154 [davidgreenbe] [ERROR]  Error at Sending - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 428, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 356, in _login
+    server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 169, in connect_proxy
+    (code, msg) = self.getreply()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 398, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+
+2023-04-01 00:55:41,065 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : SMTP AUTH extension not supported by server.
+2023-04-01 00:55:41,066 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 428, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 371, in _login
+    server.login(self.user, self.passwd)
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 700, in login
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: SMTP AUTH extension not supported by server.
+
+2023-04-01 00:55:41,830 [Thread-5    ] [INFO ]  Sending Finished 94c1be7a-1d77-4827-b933-711bf61b17ac
+2023-04-01 00:55:42,697 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-04-01 00:59:29,752 [MainThread  ] [INFO ]  Exiting
+2023-04-01 00:59:40,756 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 00:59:40,813 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 00:59:40,817 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-01 00:59:42,426 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 00:59:42,427 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 00:59:43,387 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-01 00:59:43,387 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-01 00:59:49,769 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: 411d6394-9567-46b2-8b11-262494c25f40
+ Add Custom Hostname: True
+2023-04-01 00:59:49,769 [Thread-4    ] [INFO ]  config updated
+2023-04-01 00:59:49,889 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-04-01 00:59:49,891 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-04-01 00:59:49,895 [Thread-5    ] [INFO ]  
+Starting Thread : Name - davidgreenberg200@yahoo.com
+Targets Count - 1
+2023-04-01 00:59:49,897 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 davidgreenberg200@yahoo.com
+2023-04-01 00:59:51,861 [davidgreenbe] [INFO ]  Error at SMTP_.login davidgreenberg200@yahoo.com : SMTPServerDisconnected : Connection unexpectedly closed
+2023-04-01 00:59:51,973 [davidgreenbe] [ERROR]  Error at Sending - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 428, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 356, in _login
+    server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 169, in connect_proxy
+    (code, msg) = self.getreply()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 398, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+
+2023-04-01 01:00:03,195 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : STARTTLS extension not supported by server.
+2023-04-01 01:00:03,195 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 428, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 369, in _login
+    server.starttls()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 755, in starttls
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: STARTTLS extension not supported by server.
+
+2023-04-01 01:00:03,907 [Thread-5    ] [INFO ]  Sending Finished 411d6394-9567-46b2-8b11-262494c25f40
+2023-04-01 01:00:04,784 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-04-01 01:02:08,565 [MainThread  ] [INFO ]  Exiting
+2023-04-01 01:02:37,260 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:02:37,411 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:02:37,417 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-01 01:02:38,777 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:02:38,780 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:02:39,408 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-01 01:02:39,410 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-01 01:02:44,054 [Thread-4    ] [INFO ]  config updated
+2023-04-01 01:02:44,057 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: fea50317-80d0-4cc3-bf1d-d529d9b83477
+ Add Custom Hostname: True
+2023-04-01 01:02:44,091 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-04-01 01:02:44,096 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-04-01 01:02:44,101 [Thread-5    ] [INFO ]  
+Starting Thread : Name - davidgreenberg200@yahoo.com
+Targets Count - 1
+2023-04-01 01:02:44,105 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 davidgreenberg200@yahoo.com
+2023-04-01 01:02:50,029 [davidgreenbe] [INFO ]  Error at SMTP_.login davidgreenberg200@yahoo.com : SMTPServerDisconnected : Connection unexpectedly closed
+2023-04-01 01:02:50,033 [davidgreenbe] [ERROR]  Error at Sending - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 429, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 356, in _login
+    server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 169, in connect_proxy
+    (code, msg) = self.getreply()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 398, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+
+2023-04-01 01:02:58,180 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : STARTTLS extension not supported by server.
+2023-04-01 01:02:58,181 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 429, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 370, in _login
+    server.starttls()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 755, in starttls
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: STARTTLS extension not supported by server.
+
+2023-04-01 01:02:59,117 [Thread-5    ] [INFO ]  Sending Finished fea50317-80d0-4cc3-bf1d-d529d9b83477
+2023-04-01 01:03:00,086 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-04-01 01:03:10,187 [MainThread  ] [INFO ]  Exiting
+2023-04-01 01:03:35,250 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:03:35,312 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:03:35,316 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-01 01:03:35,899 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:03:35,900 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:03:36,208 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-01 01:03:36,209 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-01 01:03:40,982 [Thread-4    ] [INFO ]  config updated
+2023-04-01 01:03:40,985 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: b2626c15-1e3d-4e33-8b6f-2c2e37af7a88
+ Add Custom Hostname: True
+2023-04-01 01:03:41,002 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-04-01 01:03:41,004 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-04-01 01:03:41,006 [Thread-5    ] [INFO ]  
+Starting Thread : Name - davidgreenberg200@yahoo.com
+Targets Count - 1
+2023-04-01 01:03:41,008 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 davidgreenberg200@yahoo.com
+2023-04-01 01:03:44,861 [davidgreenbe] [INFO ]  Error at SMTP_.login davidgreenberg200@yahoo.com : SMTPServerDisconnected : Connection unexpectedly closed
+2023-04-01 01:03:44,863 [davidgreenbe] [ERROR]  Error at Sending - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 429, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 356, in _login
+    server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 169, in connect_proxy
+    (code, msg) = self.getreply()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 398, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+
+2023-04-01 01:03:50,211 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : STARTTLS extension not supported by server.
+2023-04-01 01:03:50,212 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 429, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 370, in _login
+    server.starttls()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 755, in starttls
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: STARTTLS extension not supported by server.
+
+2023-04-01 01:03:51,017 [Thread-5    ] [INFO ]  Sending Finished b2626c15-1e3d-4e33-8b6f-2c2e37af7a88
+2023-04-01 01:03:51,996 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-04-01 01:03:56,217 [Thread-10   ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: fdef374f-b965-45c6-ba85-e5c0342e292f
+ Add Custom Hostname: True
+2023-04-01 01:03:56,217 [Thread-9    ] [INFO ]  config updated
+2023-04-01 01:03:56,227 [Thread-10   ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-04-01 01:03:56,229 [Thread-10   ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-04-01 01:03:56,232 [Thread-10   ] [INFO ]  
+Starting Thread : Name - davidgreenberg200@yahoo.com
+Targets Count - 1
+2023-04-01 01:03:56,234 [Thread-10   ] [INFO ]  SMTP thread starting: Length - 1 davidgreenberg200@yahoo.com
+2023-04-01 01:04:07,104 [davidgreenbe] [INFO ]  Error at SMTP_.login davidgreenberg200@yahoo.com : SMTPServerDisconnected : Connection unexpectedly closed
+2023-04-01 01:04:07,105 [davidgreenbe] [ERROR]  Error at Sending - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 429, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 356, in _login
+    server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 169, in connect_proxy
+    (code, msg) = self.getreply()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 398, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+
+2023-04-01 01:04:10,316 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : STARTTLS extension not supported by server.
+2023-04-01 01:04:10,318 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 429, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 370, in _login
+    server.starttls()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 755, in starttls
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: STARTTLS extension not supported by server.
+
+2023-04-01 01:04:11,247 [Thread-10   ] [INFO ]  Sending Finished fdef374f-b965-45c6-ba85-e5c0342e292f
+2023-04-01 01:04:12,234 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-04-01 01:04:32,689 [MainThread  ] [INFO ]  Exiting
+2023-04-01 01:04:37,038 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:04:37,145 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:04:37,149 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-01 01:04:38,101 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:04:38,102 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:04:38,545 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-01 01:04:38,546 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-01 01:04:45,262 [Thread-4    ] [INFO ]  config updated
+2023-04-01 01:04:45,264 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: 6dcaa941-da4e-4812-836c-630a361a0b90
+ Add Custom Hostname: True
+2023-04-01 01:04:45,276 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-04-01 01:04:45,278 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-04-01 01:04:45,280 [Thread-5    ] [INFO ]  
+Starting Thread : Name - davidgreenberg200@yahoo.com
+Targets Count - 1
+2023-04-01 01:04:45,281 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 davidgreenberg200@yahoo.com
+2023-04-01 01:04:52,564 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : STARTTLS extension not supported by server.
+2023-04-01 01:04:52,566 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 429, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 370, in _login
+    server.starttls()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 755, in starttls
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: STARTTLS extension not supported by server.
+
+2023-04-01 01:04:55,260 [davidgreenbe] [INFO ]  Error at SMTP_.login davidgreenberg200@yahoo.com : SMTPServerDisconnected : Connection unexpectedly closed
+2023-04-01 01:04:55,262 [davidgreenbe] [ERROR]  Error at Sending - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 429, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 356, in _login
+    server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 169, in connect_proxy
+    (code, msg) = self.getreply()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 398, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+
+2023-04-01 01:04:55,289 [Thread-5    ] [INFO ]  Sending Finished 6dcaa941-da4e-4812-836c-630a361a0b90
+2023-04-01 01:04:56,276 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-04-01 01:05:26,073 [MainThread  ] [INFO ]  Exiting
+2023-04-01 01:15:26,640 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:15:26,699 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:15:26,702 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-01 01:15:28,346 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:15:28,348 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:15:29,347 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-01 01:15:29,348 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-01 01:15:34,148 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 2
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: 197355ae-c7b9-468d-b884-e923132508db
+ Add Custom Hostname: True
+2023-04-01 01:15:34,148 [Thread-4    ] [INFO ]  config updated
+2023-04-01 01:15:34,267 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-04-01 01:15:34,270 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-04-01 01:15:34,272 [Thread-5    ] [INFO ]  
+Starting Thread : Name - davidgreenberg200@yahoo.com
+Targets Count - 1
+2023-04-01 01:15:34,274 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 davidgreenberg200@yahoo.com
+2023-04-01 01:15:36,249 [davidgreenbe] [INFO ]  Error at SMTP_.login davidgreenberg200@yahoo.com : SMTPServerDisconnected : Connection unexpectedly closed
+2023-04-01 01:15:36,284 [davidgreenbe] [ERROR]  Error at Sending - davidgreenberg200@yahoo.com - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 429, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 356, in _login
+    server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 169, in connect_proxy
+    (code, msg) = self.getreply()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 398, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+
+2023-04-01 01:15:42,587 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : SMTP AUTH extension not supported by server.
+2023-04-01 01:15:42,588 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 429, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 372, in _login
+    server.login(self.user, self.passwd)
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 700, in login
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: SMTP AUTH extension not supported by server.
+
+2023-04-01 01:15:43,282 [Thread-5    ] [INFO ]  Sending Finished 197355ae-c7b9-468d-b884-e923132508db
+2023-04-01 01:15:44,158 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-04-01 01:22:26,233 [MainThread  ] [INFO ]  Exiting
+2023-04-01 01:22:37,779 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:22:37,839 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:22:37,841 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-01 01:22:39,379 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:22:39,380 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:22:40,315 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-01 01:22:40,316 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-01 01:22:55,503 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: 19bd169b-4e0e-47c9-9520-8a313e1cdb3f
+ Add Custom Hostname: True
+2023-04-01 01:22:55,503 [Thread-4    ] [INFO ]  config updated
+2023-04-01 01:22:55,630 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-04-01 01:22:55,632 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-04-01 01:23:07,130 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : STARTTLS extension not supported by server.
+2023-04-01 01:23:07,132 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 430, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 371, in _login
+    server.starttls()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 755, in starttls
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: STARTTLS extension not supported by server.
+
+2023-04-01 01:23:07,643 [Thread-5    ] [INFO ]  Sending Finished 19bd169b-4e0e-47c9-9520-8a313e1cdb3f
+2023-04-01 01:23:08,517 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-04-01 01:26:33,840 [MainThread  ] [INFO ]  Exiting
+2023-04-01 01:26:44,640 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:26:44,702 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:26:44,705 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-01 01:26:45,805 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:26:45,806 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:26:46,165 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-01 01:26:46,165 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-01 01:26:50,918 [Thread-4    ] [INFO ]  config updated
+2023-04-01 01:26:50,918 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: a5a02e38-d8c9-4fa7-8d52-2b1ba23ce6a9
+ Add Custom Hostname: True
+2023-04-01 01:26:50,931 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-04-01 01:26:50,934 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-04-01 01:27:03,177 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : STARTTLS extension not supported by server.
+2023-04-01 01:27:03,179 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 430, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 371, in _login
+    server.starttls()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 755, in starttls
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: STARTTLS extension not supported by server.
+
+2023-04-01 01:27:03,944 [Thread-5    ] [INFO ]  Sending Finished a5a02e38-d8c9-4fa7-8d52-2b1ba23ce6a9
+2023-04-01 01:27:04,930 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-04-01 01:27:11,053 [MainThread  ] [INFO ]  Exiting
+2023-04-01 01:31:20,320 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:31:20,380 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:31:20,384 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-01 01:31:21,016 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:31:21,018 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:31:21,446 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-01 01:31:21,446 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-01 01:31:26,610 [Thread-4    ] [INFO ]  config updated
+2023-04-01 01:31:26,611 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: 410797ea-eea5-4821-8453-6a48d779d0fb
+ Add Custom Hostname: True
+2023-04-01 01:31:26,622 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-04-01 01:31:26,624 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-04-01 01:31:35,112 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : STARTTLS extension not supported by server.
+2023-04-01 01:31:35,115 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 430, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 371, in _login
+    server.starttls()
+  File "C:\Users\Imran\AppData\Local\Programs\Python\Python39\lib\smtplib.py", line 755, in starttls
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: STARTTLS extension not supported by server.
+
+2023-04-01 01:31:35,629 [Thread-5    ] [INFO ]  Sending Finished 410797ea-eea5-4821-8453-6a48d779d0fb
+2023-04-01 01:31:36,622 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-04-01 01:34:19,242 [MainThread  ] [INFO ]  Exiting
+2023-04-01 01:34:23,452 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:34:23,517 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:34:23,520 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-01 01:34:24,117 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:34:24,118 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:34:24,459 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-01 01:34:24,460 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-01 01:34:29,039 [Thread-4    ] [INFO ]  config updated
+2023-04-01 01:34:29,040 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: f198d68b-8c0a-48fa-ad2e-71eb28e1301e
+ Add Custom Hostname: True
+2023-04-01 01:34:29,052 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-04-01 01:34:29,054 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-04-01 01:34:35,291 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : STARTTLS extension not supported by server.
+2023-04-01 01:34:35,292 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 430, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 371, in _login
+    server.starttls()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 203, in starttls
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: STARTTLS extension not supported by server.
+
+2023-04-01 01:34:36,063 [Thread-5    ] [INFO ]  Sending Finished f198d68b-8c0a-48fa-ad2e-71eb28e1301e
+2023-04-01 01:34:37,050 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-04-01 01:35:00,777 [MainThread  ] [INFO ]  Exiting
+2023-04-01 01:35:12,967 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:35:13,034 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:35:13,036 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-01 01:35:13,689 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:35:13,690 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:35:14,052 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-01 01:35:14,053 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-01 01:35:19,688 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: af45d1a0-510c-4309-8cba-1feed9607cda
+ Add Custom Hostname: True
+2023-04-01 01:35:19,688 [Thread-4    ] [INFO ]  config updated
+2023-04-01 01:35:19,701 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-04-01 01:35:19,702 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-04-01 01:35:34,785 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPResponseException : (500, b"5.3.3 Unrecognized command 'unknown' [GV3P280CA0067.SWEP280.PROD.OUTLOOK.COM 2023-03-31T19:35:35.090Z 08DB30BEB43BCCFA]")
+2023-04-01 01:35:34,786 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 430, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 371, in _login
+    server.starttls()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 237, in starttls
+    raise SMTPResponseException(resp, reply)
+smtplib.SMTPResponseException: (500, b"5.3.3 Unrecognized command 'unknown' [GV3P280CA0067.SWEP280.PROD.OUTLOOK.COM 2023-03-31T19:35:35.090Z 08DB30BEB43BCCFA]")
+
+2023-04-01 01:35:35,714 [Thread-5    ] [INFO ]  Sending Finished af45d1a0-510c-4309-8cba-1feed9607cda
+2023-04-01 01:35:36,702 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-04-01 01:37:59,363 [MainThread  ] [INFO ]  Exiting
+2023-04-01 01:38:03,920 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:38:03,981 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:38:03,984 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-01 01:38:04,601 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:38:04,602 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:38:04,953 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-01 01:38:04,954 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-01 01:38:09,242 [Thread-4    ] [INFO ]  config updated
+2023-04-01 01:38:09,243 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: 20307b3a-e9ef-4df6-b403-20f533df3089
+ Add Custom Hostname: True
+2023-04-01 01:38:09,257 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-04-01 01:38:09,258 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-04-01 01:38:18,549 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : STARTTLS extension not supported by server.
+2023-04-01 01:38:18,550 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 430, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 371, in _login
+    server.starttls()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 221, in starttls
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: STARTTLS extension not supported by server.
+
+2023-04-01 01:38:19,265 [Thread-5    ] [INFO ]  Sending Finished 20307b3a-e9ef-4df6-b403-20f533df3089
+2023-04-01 01:38:20,256 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-04-01 01:40:50,012 [MainThread  ] [INFO ]  Exiting
+2023-04-01 01:49:12,129 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:49:12,188 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:49:12,191 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-01 01:49:12,801 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:49:12,802 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:49:13,129 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-01 01:49:13,130 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-01 01:49:18,411 [Thread-4    ] [INFO ]  config updated
+2023-04-01 01:49:18,413 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: e218582b-6033-4304-9a6f-022cfa06e44f
+ Add Custom Hostname: False
+2023-04-01 01:49:18,426 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-04-01 01:49:18,426 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-04-01 01:49:27,597 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : STARTTLS extension not supported by server.
+2023-04-01 01:49:27,598 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 430, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 371, in _login
+    server.starttls()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 221, in starttls
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: STARTTLS extension not supported by server.
+
+2023-04-01 01:49:28,437 [Thread-5    ] [INFO ]  Sending Finished e218582b-6033-4304-9a6f-022cfa06e44f
+2023-04-01 01:49:29,425 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-04-01 01:50:15,646 [MainThread  ] [INFO ]  Exiting
+2023-04-01 01:59:03,170 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:59:03,271 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:59:03,352 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-01 01:59:06,857 [MainThread  ] [INFO ]  Logger Started
+2023-04-01 01:59:06,858 [MainThread  ] [INFO ]  Scheduler started
+2023-04-01 01:59:07,917 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-01 01:59:07,918 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-01 01:59:12,736 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 1
+ Len of Group: 1
+ Len of Targets: 7
+ Delay: 0 - 10
+ Campaign ID: eb8ef3c9-79b4-4cca-bb73-7ee0ac2d3a98
+ Add Custom Hostname: False
+2023-04-01 01:59:12,737 [Thread-4    ] [INFO ]  config updated
+2023-04-01 01:59:12,781 [Thread-5    ] [INFO ]  
+Starting Thread : Name - john.snow42@outlook.hu
+Targets Count - 1
+2023-04-01 01:59:12,785 [Thread-5    ] [INFO ]  SMTP thread starting: Length - 1 john.snow42@outlook.hu
+2023-04-01 01:59:22,898 [john.snow42@] [INFO ]  Error at SMTP_.login john.snow42@outlook.hu : SMTPNotSupportedError : STARTTLS extension not supported by server.
+2023-04-01 01:59:23,012 [john.snow42@] [ERROR]  Error at Sending - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 430, in run
+    server = self._login()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\smtp.py", line 371, in _login
+    server.starttls()
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\proxy_smtplib.py", line 221, in starttls
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: STARTTLS extension not supported by server.
+
+2023-04-01 01:59:23,921 [Thread-5    ] [INFO ]  Sending Finished eb8ef3c9-79b4-4cca-bb73-7ee0ac2d3a98
+2023-04-01 01:59:24,752 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2023-04-01 02:00:53,178 [MainThread  ] [INFO ]  Exiting

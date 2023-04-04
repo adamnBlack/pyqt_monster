@@ -941,3 +941,79 @@ TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
 TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
 mdshahimranshovon@gmail.com,saidunuhu579@gmail.com,sent,097a7b72-82cd-4994-beb5-75439f2b8024,2023-03-29
 shahimrans64@gmail.com,saidunuhu579@gmail.com,sent,097a7b72-82cd-4994-beb5-75439f2b8024,2023-03-29
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+mdshahimranshovon@gmail.com,saidunuhu579@gmail.com,'NoneType' object has no attribute 'text',07e48487-4463-49ce-a449-cc28888401bf,2023-03-31
+mdshahimranshovon@gmail.com,lithbello60@gmail.com,'NoneType' object has no attribute 'text',07e48487-4463-49ce-a449-cc28888401bf,2023-03-31
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+shahimrans64@gmail.com,lithbello60@gmail.com,sent,1213294f-91d4-441c-9750-9dea5b084c3f,2023-03-31
+,davidgreenberg200@yahoo.com,Connection unexpectedly closed,1213294f-91d4-441c-9750-9dea5b084c3f,2023-03-31
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+shahimrans64@gmail.com,lithbello60@gmail.com,sent,528c80d7-dbe9-424a-af99-7642483d523a,2023-03-31
+shahimrans64@gmail.com,saidunuhu579@gmail.com,sent,528c80d7-dbe9-424a-af99-7642483d523a,2023-03-31
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,john.snow42@outlook.hu,STARTTLS extension not supported by server.,9e3635eb-d605-4542-be5c-95bb31ebddd6,2023-03-31
+,davidgreenberg200@yahoo.com,Connection unexpectedly closed,9e3635eb-d605-4542-be5c-95bb31ebddd6,2023-03-31
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,john.snow42@outlook.hu,STARTTLS extension not supported by server.,db485f13-33ff-41b1-bf56-08c39a9088df,2023-03-31
+,davidgreenberg200@yahoo.com,Connection unexpectedly closed,db485f13-33ff-41b1-bf56-08c39a9088df,2023-03-31
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,davidgreenberg200@yahoo.com,Connection unexpectedly closed,a535d73a-205f-4bb3-a46b-290f2165fe3f,2023-03-31
+,john.snow42@outlook.hu,STARTTLS extension not supported by server.,a535d73a-205f-4bb3-a46b-290f2165fe3f,2023-03-31
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,davidgreenberg200@yahoo.com,Connection unexpectedly closed,7c9ccd8b-1109-46b0-bec8-4e11c3b0b44d,2023-03-31
+,john.snow42@outlook.hu,SMTP AUTH extension not supported by server.,7c9ccd8b-1109-46b0-bec8-4e11c3b0b44d,2023-03-31
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,davidgreenberg200@yahoo.com,Connection unexpectedly closed,df1ce97c-20c1-4e98-afc8-86284ff4f173,2023-03-31
+,john.snow42@outlook.hu,STARTTLS extension not supported by server.,df1ce97c-20c1-4e98-afc8-86284ff4f173,2023-03-31
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,davidgreenberg200@yahoo.com,Connection unexpectedly closed,034c13d9-f515-47ec-9c44-463d5414c04c,2023-04-01
+,john.snow42@outlook.hu,STARTTLS extension not supported by server.,034c13d9-f515-47ec-9c44-463d5414c04c,2023-04-01
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,davidgreenberg200@yahoo.com,Connection unexpectedly closed,49618d99-6e61-49a3-a9b3-e803b5956ab1,2023-04-01
+,john.snow42@outlook.hu,STARTTLS extension not supported by server.,49618d99-6e61-49a3-a9b3-e803b5956ab1,2023-04-01
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,davidgreenberg200@yahoo.com,Connection unexpectedly closed,6f2cb985-3f6b-4ec7-a74c-91cbe0521eb5,2023-04-01
+,john.snow42@outlook.hu,STARTTLS extension not supported by server.,6f2cb985-3f6b-4ec7-a74c-91cbe0521eb5,2023-04-01
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,davidgreenberg200@yahoo.com,Connection unexpectedly closed,435f8590-7eed-4c2d-8453-ef19e6e4aed3,2023-04-01
+,john.snow42@outlook.hu,STARTTLS extension not supported by server.,435f8590-7eed-4c2d-8453-ef19e6e4aed3,2023-04-01
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,davidgreenberg200@yahoo.com,Connection unexpectedly closed,020ec9da-b61f-4c28-8eef-b4ac3de27678,2023-04-01
+,john.snow42@outlook.hu,SMTP AUTH extension not supported by server.,020ec9da-b61f-4c28-8eef-b4ac3de27678,2023-04-01
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,davidgreenberg200@yahoo.com,Connection unexpectedly closed,94c1be7a-1d77-4827-b933-711bf61b17ac,2023-04-01
+,john.snow42@outlook.hu,SMTP AUTH extension not supported by server.,94c1be7a-1d77-4827-b933-711bf61b17ac,2023-04-01
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,davidgreenberg200@yahoo.com,Connection unexpectedly closed,411d6394-9567-46b2-8b11-262494c25f40,2023-04-01
+,john.snow42@outlook.hu,STARTTLS extension not supported by server.,411d6394-9567-46b2-8b11-262494c25f40,2023-04-01
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,davidgreenberg200@yahoo.com,Connection unexpectedly closed,fea50317-80d0-4cc3-bf1d-d529d9b83477,2023-04-01
+,john.snow42@outlook.hu,STARTTLS extension not supported by server.,fea50317-80d0-4cc3-bf1d-d529d9b83477,2023-04-01
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,davidgreenberg200@yahoo.com,Connection unexpectedly closed,b2626c15-1e3d-4e33-8b6f-2c2e37af7a88,2023-04-01
+,john.snow42@outlook.hu,STARTTLS extension not supported by server.,b2626c15-1e3d-4e33-8b6f-2c2e37af7a88,2023-04-01
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,davidgreenberg200@yahoo.com,Connection unexpectedly closed,fdef374f-b965-45c6-ba85-e5c0342e292f,2023-04-01
+,john.snow42@outlook.hu,STARTTLS extension not supported by server.,fdef374f-b965-45c6-ba85-e5c0342e292f,2023-04-01
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,john.snow42@outlook.hu,STARTTLS extension not supported by server.,6dcaa941-da4e-4812-836c-630a361a0b90,2023-04-01
+,davidgreenberg200@yahoo.com,Connection unexpectedly closed,6dcaa941-da4e-4812-836c-630a361a0b90,2023-04-01
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,davidgreenberg200@yahoo.com,Connection unexpectedly closed,197355ae-c7b9-468d-b884-e923132508db,2023-04-01
+,john.snow42@outlook.hu,SMTP AUTH extension not supported by server.,197355ae-c7b9-468d-b884-e923132508db,2023-04-01
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,john.snow42@outlook.hu,STARTTLS extension not supported by server.,19bd169b-4e0e-47c9-9520-8a313e1cdb3f,2023-04-01
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,john.snow42@outlook.hu,STARTTLS extension not supported by server.,a5a02e38-d8c9-4fa7-8d52-2b1ba23ce6a9,2023-04-01
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,john.snow42@outlook.hu,STARTTLS extension not supported by server.,410797ea-eea5-4821-8453-6a48d779d0fb,2023-04-01
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,john.snow42@outlook.hu,STARTTLS extension not supported by server.,f198d68b-8c0a-48fa-ad2e-71eb28e1301e,2023-04-01
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,john.snow42@outlook.hu,"(500, b""5.3.3 Unrecognized command 'unknown' [GV3P280CA0067.SWEP280.PROD.OUTLOOK.COM 2023-03-31T19:35:35.090Z 08DB30BEB43BCCFA]"")",af45d1a0-510c-4309-8cba-1feed9607cda,2023-04-01
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,john.snow42@outlook.hu,STARTTLS extension not supported by server.,20307b3a-e9ef-4df6-b403-20f533df3089,2023-04-01
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,john.snow42@outlook.hu,STARTTLS extension not supported by server.,e218582b-6033-4304-9a6f-022cfa06e44f,2023-04-01
+TARGET,FROMEMAIL,STATUS,CAMPAIGN,DATE
+,john.snow42@outlook.hu,STARTTLS extension not supported by server.,eb8ef3c9-79b4-4cca-bb73-7ee0ac2d3a98,2023-04-01

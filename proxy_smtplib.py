@@ -118,6 +118,143 @@ class SMTP(smtplib.SMTP):
         return socket.create_connection((host, port), timeout,
                                         self.source_address)
 
+    def ehlo(self, name=''):
+        """ SMTP 'ehlo' command.
+        Hostname to send for this command defaults to the FQDN of the local
+        host.
+        """
+        from smtplib import SMTPServerDisconnected, OLDSTYLE_AUTH
+        import re
+        self.esmtp_features = {}
+        print("here----", self.local_hostname)
+        self.putcmd(self.ehlo_msg, name or self.local_hostname)
+        (code, msg) = self.getreply()
+        # According to RFC1869 some (badly written)
+        # MTA's will disconnect on an ehlo. Toss an exception if
+        # that happens -ddm
+        if code == -1 and len(msg) == 0:
+            self.close()
+            raise SMTPServerDisconnected("Server not connected")
+        self.ehlo_resp = msg
+        if code != 250:
+            return (code, msg)
+        self.does_esmtp = 1
+        #parse the ehlo response -ddm
+        assert isinstance(self.ehlo_resp, bytes), repr(self.ehlo_resp)
+        resp = self.ehlo_resp.decode("latin-1").split('\n')
+        del resp[0]
+        for each in resp:
+            # To be able to communicate with as many SMTP servers as possible,
+            # we have to take the old-style auth advertisement into account,
+            # because:
+            # 1) Else our SMTP feature parser gets confused.
+            # 2) There are some servers that only advertise the auth methods we
+            #    support using the old style.
+            auth_match = OLDSTYLE_AUTH.match(each)
+            if auth_match:
+                # This doesn't remove duplicates, but that's no problem
+                self.esmtp_features["auth"] = self.esmtp_features.get("auth", "") \
+                        + " " + auth_match.groups(0)[0]
+                continue
+
+            # RFC 1869 requires a space between ehlo keyword and parameters.
+            # It's actually stricter, in that only spaces are allowed between
+            # parameters, but were not going to check for that here.  Note
+            # that the space isn't present if there are no parameters.
+            m = re.match(r'(?P<feature>[A-Za-z0-9][A-Za-z0-9\-]*) ?', each)
+            if m:
+                feature = m.group("feature").lower()
+                params = m.string[m.end("feature"):].strip()
+                if feature == "auth":
+                    self.esmtp_features[feature] = self.esmtp_features.get(feature, "") \
+                            + " " + params
+                else:
+                    self.esmtp_features[feature] = params
+        return (code, msg)
+
+    def ehlo_or_helo_if_needed(self):
+        """Call self.ehlo() and/or self.helo() if needed.
+
+        If there has been no previous EHLO or HELO command this session, this
+        method tries ESMTP EHLO first.
+
+        This method may raise the following exceptions:
+
+         SMTPHeloError            The server didn't reply properly to
+                                  the helo greeting.
+        """
+        from smtplib import SMTPHeloError
+        if self.helo_resp is None and self.ehlo_resp is None:
+            if not (200 <= self.ehlo()[0] <= 299):
+                (code, resp) = self.helo()
+                if not (200 <= code <= 299):
+                    raise SMTPHeloError(code, resp)
+
+    def starttls(self, keyfile=None, certfile=None, context=None):
+        """Puts the connection to the SMTP server into TLS mode.
+
+        If there has been no previous EHLO or HELO command this session, this
+        method tries ESMTP EHLO first.
+
+        If the server supports TLS, this will encrypt the rest of the SMTP
+        session. If you provide the keyfile and certfile parameters,
+        the identity of the SMTP server and client can be checked. This,
+        however, depends on whether the socket module really checks the
+        certificates.
+
+        This method may raise the following exceptions:
+
+         SMTPHeloError            The server didn't reply properly to
+                                  the helo greeting.
+        """
+        # self.ehlo_or_helo_if_needed()
+
+        try:
+            import ssl
+        except ImportError:
+            _have_ssl = False
+        else:
+            _have_ssl = True
+        from smtplib import SMTPNotSupportedError, SMTPResponseException
+        self.ehlo_or_helo_if_needed()
+        if not self.has_extn("starttls"):
+            raise SMTPNotSupportedError(
+                "STARTTLS extension not supported by server.")
+        (resp, reply) = self.docmd("STARTTLS")
+        if resp == 220:
+            if not _have_ssl:
+                raise RuntimeError("No SSL support included in this Python")
+            if context is not None and keyfile is not None:
+                raise ValueError("context and keyfile arguments are mutually "
+                                 "exclusive")
+            if context is not None and certfile is not None:
+                raise ValueError("context and certfile arguments are mutually "
+                                 "exclusive")
+            if keyfile is not None or certfile is not None:
+                import warnings
+                warnings.warn("keyfile and certfile are deprecated, use a "
+                              "custom context instead", DeprecationWarning, 2)
+            if context is None:
+                context = ssl._create_stdlib_context(certfile=certfile,
+                                                     keyfile=keyfile)
+            self.sock = context.wrap_socket(self.sock,
+                                            server_hostname=self._host)
+            self.file = None
+            # RFC 3207:
+            # The client MUST discard any knowledge obtained from
+            # the server, such as the list of SMTP service extensions,
+            # which was not obtained from the TLS negotiation itself.
+            self.helo_resp = None
+            self.ehlo_resp = None
+            self.esmtp_features = {}
+            self.does_esmtp = 0
+        else:
+            # RFC 3207:
+            # 501 Syntax error (no parameters allowed)
+            # 454 TLS not available due to temporary reason
+            raise SMTPResponseException(resp, reply)
+        return (resp, reply)
+
     def connect_proxy(self, proxy_host='localhost', proxy_port=0, proxy_type=socks.HTTP,
                       proxy_user='', proxy_pass='', host='', port=0):
         """Connect to a host on a given port via proxy server

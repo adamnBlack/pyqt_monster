@@ -732,7 +732,7 @@ class MyMainClass:
             temp_df = var.inbox_data.copy()
             temp_df = temp_df.loc[temp_df['checkbox_status'] == 1]
 
-            if temp_df.shape[0] > 0 or GUI.checkBox_delete_all.isChecked() == True:
+            if temp_df.shape[0] > 0 or GUI.checkBox_delete_all.isChecked():
                 result = confirm(
                     text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
                 if result == "OK":
@@ -1153,8 +1153,9 @@ class MyMainClass:
             print('email showed')
             row, column = self.get_index_of_button(GUI.tableWidget_inbox)
             if var.inbox_data['flag'][row] == "UNSEEN":
-                Thread(target=imap.set_read_flag,
-                       daemon=True, args=[row, ]).start()
+                imap_set_read = imap.ImapReadFlagEmail(row)
+                Thread(target=imap_set_read.change_flag,
+                       daemon=True, args=[]).start()
                 var.inbox_data['flag'][row] = "SEEN"
                 button_show_mail = QtWidgets.QPushButton('')
                 button_show_mail.setStyleSheet(var.button_style)

@@ -61,7 +61,7 @@ class ImapReadFlagEmail(ImapBase):
 
         self.uid = var.inbox_data['uid'][self.index]
 
-    def set_read_flag(self):
+    def change_flag(self):
         try:
             imap = self._login()
 
@@ -81,7 +81,7 @@ class ImapReadFlagEmail(ImapBase):
             pass
 
 
-class ImapDeleteEmail(ImapBase):
+class ImapDeleteEmail(ImapBase, threading.Thread):
     def __init__(self, group=None):
         self.group = group
 
@@ -96,12 +96,16 @@ class ImapDeleteEmail(ImapBase):
 
         super().__init__(**kwargs)
 
-    def delete(self):
+        self.setDaemon(True)
+
+    def run(self):
         try:
             logger.info(f"Starting deleting mail...")
             var.thread_open += 1
 
             imap = self._login()
+
+            imap.select("Inbox")
 
             for row_index, row in self.group.iterrows():
                 if var.stop_delete:
@@ -477,7 +481,7 @@ def main(group):
                 "index": index
             }
 
-            while var.thread_open >= var.limit_of_thread and var.stop_download == False:
+            while var.thread_open >= var.limit_of_thread and not var.stop_download:
                 time.sleep(1)
 
             imap = ImapDownload(**kwargs)

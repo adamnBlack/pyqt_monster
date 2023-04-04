@@ -126,7 +126,7 @@ class Delete_email(Ui_Dialog):
                 "Deleted : {}/{}".format(var.delete_email_count, total_email_count))
             self.progressBar.setValue(value)
 
-        elif delete_status == False:
+        elif not delete_status:
             value = (var.delete_email_count/total_email_count)*100
             self.label_status.setText(
                 "Deleting Finished : {}/{}".format(var.delete_email_count, total_email_count))
@@ -149,7 +149,7 @@ def thread_starter():
     var.delete_email_count = 0
     var.stop_delete = False
 
-    from imap import delete_email
+    from imap import ImapDeleteEmail
 
     for group_name, df_group in temp_df:
 
@@ -159,10 +159,10 @@ def thread_starter():
         while var.thread_open >= var.limit_of_thread and var.stop_delete == False:
             time.sleep(1)
 
-        # print('Group name - {}'.format(group_name))
+        delete_email = ImapDeleteEmail(df_group)
+        delete_email.start()
 
-        Thread(target=delete_email, daemon=True, args=(df_group,)).start()
-    while var.thread_open != 0 and var.stop_delete == False:
+    while var.thread_open != 0 and not var.stop_delete:
         time.sleep(1)
 
     # for row_index, row in var.inbox_data.iterrows():
@@ -170,4 +170,4 @@ def thread_starter():
 
     var.inbox_data["checkbox_status"] = 0
     delete_status = False
-    print("deleting finished")
+    logger.info("deleting finished")
