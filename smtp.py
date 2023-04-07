@@ -362,16 +362,10 @@ class Smtp(SmtpBase, threading.Thread):
                 server = smtplib.SMTP(self.smtp_server, self.smtp_port)
                 server.set_debuglevel(0)
 
-            # import ssl
-            #
-            # context = ssl.create_default_context()
-            # server.ehlo(self.first_from_name.lower())
-            server.ehlo()
-            # server.local_hostname = server.local_hostname.lower()
             server.starttls()
             server.ehlo()
             server.login(self.user, self.passwd)
-            # server.ehlo()
+
 
             return server
 

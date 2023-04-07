@@ -8,7 +8,8 @@
                 },
                 "smtp": {
                     "server": "smtp.gmail.com",
-                    "port": 587
+                    "port": 587,
+                    "require_ssl": false
                 }
             },
             "outlook": {
@@ -18,7 +19,8 @@
                 },
                 "smtp": {
                     "server": "smtp.office365.com",
-                    "port": 587
+                    "port": 587,
+                    "require_ssl": false
                 }
             },
             "yahoo": {
@@ -28,7 +30,30 @@
                 },
                 "smtp": {
                     "server": "smtp.mail.yahoo.com",
-                    "port": 587
+                    "port": 465,
+                    "require_ssl": true
+                }
+            },
+            "aol": {
+                "imap": {
+                    "server": "imap.aol.com",
+                    "port": 993
+                },
+                "smtp": {
+                    "server": "smtp.aol.com",
+                    "port": 465,
+                    "require_ssl": true
+                }
+            },
+            "zohomail": {
+                "imap": {
+                    "server": "imap.zoho.eu",
+                    "port": 993
+                },
+                "smtp": {
+                    "server": "smtp.zoho.eu",
+                    "port": 465,
+                    "require_ssl": true
                 }
             }
         },

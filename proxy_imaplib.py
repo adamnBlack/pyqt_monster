@@ -1,12 +1,21 @@
 import socks
 import imaplib
 import socket
+import ssl
+
+from functools import wraps
+def sslwrap(func):
+    @wraps(func)
+    def bar(*args, **kw):
+        kw['ssl_version'] = ssl.PROTOCOL_TLSv1
+        return func(*args, **kw)
+    return bar
 
 
 class IMAP(imaplib.IMAP4_SSL):
     def __init__(self, proxy_host='', proxy_port=0, proxy_type=socks.HTTP,
                  proxy_user='', proxy_pass='', host='', port=imaplib.IMAP4_PORT,
-                 keyfile=None, certfile=None, ssl_context=None, timeout=socket._GLOBAL_DEFAULT_TIMEOUT):
+                 keyfile="key.pem", certfile="certificate.pem", ssl_context=None, timeout=socket._GLOBAL_DEFAULT_TIMEOUT):
 
         if ssl_context is not None and keyfile is not None:
             raise ValueError("ssl_context and keyfile arguments are mutually "
@@ -69,6 +78,13 @@ class IMAP(imaplib.IMAP4_SSL):
         # print(host, port)
         # print(proxy_type, proxy_host, proxy_port, proxy_user, proxy_pass, host, port)
         s.connect((host, port))
+        import ssl
+        # ciphers = "AES256-GCM-SHA384"
+        # self.ssl_context.set_ciphers(ciphers)
+        # self.ssl_context.check_hostname = False
+        # self.ssl_context.verify_mode = ssl.CERT_NONE
+        # self.ssl_context.wrap_socket = sslwrap(self.ssl_context.wrap_socket)
+        self.sock = self.ssl_context.wrap_socket(s, server_hostname=self.host, suppress_ragged_eofs=True)
 
-        self.sock = self.ssl_context.wrap_socket(s, server_hostname=self.host)
+        # self.sock = ssl.wrap_socket(s)
         self.file = self.sock.makefile('rb')
