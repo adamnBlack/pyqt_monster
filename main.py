@@ -19,7 +19,7 @@ import signal
 
 from gui import Ui_MainWindow
 
-print("App started....")
+
 quit_application = False
 
 
@@ -227,7 +227,8 @@ class MyMainClass:
 
         GUI.checkBox_compose_preview.clicked.connect(self.compose_preview)
         GUI.lineEdit_subject.textChanged.connect(self.compose_subject_update)
-        GUI.lineEdit_num_per_address.editingFinished.connect(self.update_num_per_address)
+        # GUI.lineEdit_num_per_address.editingFinished.connect(self.update_num_per_address)
+        GUI.lineEdit_num_per_address.textChanged.connect(self.update_num_per_address)
         GUI.lineEdit_delay_between_emails.editingFinished.connect(self.update_delay_between_emails)
         GUI.radioButton_campaign_group_a.clicked.connect(self.update_campaign_group)
         GUI.radioButton_campaign_group_b.clicked.connect(self.update_campaign_group)
@@ -379,7 +380,11 @@ class MyMainClass:
             group_selected = 'group_a' if GUI.radioButton_campaign_group_a.isChecked() else 'group_b'
             group = var.group_a if GUI.radioButton_campaign_group_a.isChecked() else var.group_b
 
-            var.num_emails_per_address = int(GUI.lineEdit_num_per_address.text())
+            var.num_emails_per_address = str(GUI.lineEdit_num_per_address.text())
+            num_emails_per_address_range = {
+                "start": int(var.num_emails_per_address.split("-")[0].strip()),
+                "end": int(var.num_emails_per_address.split("-")[1].strip())
+            }
             var.delay_between_emails = GUI.lineEdit_delay_between_emails.text()
             delay_start = int(var.delay_between_emails.split("-")[0].strip())
             delay_end = int(var.delay_between_emails.split("-")[1].strip())
@@ -387,20 +392,20 @@ class MyMainClass:
             len_group = len(group)
             len_target = len(var.target)
 
-            if len_group * var.num_emails_per_address > len_target:
+            if len_group * num_emails_per_address_range['end'] > len_target:
                 total_email_to_be_sent = len_target
                 maximum_duration = total_email_to_be_sent * delay_end \
-                    if total_email_to_be_sent - var.num_emails_per_address < 0 \
-                    else var.num_emails_per_address * delay_end
+                    if total_email_to_be_sent - num_emails_per_address_range['end'] < 0 \
+                    else num_emails_per_address_range['end'] * delay_end
             else:
-                total_email_to_be_sent = len_group * var.num_emails_per_address
-                maximum_duration = var.num_emails_per_address * delay_end
+                total_email_to_be_sent = len_group * num_emails_per_address_range['end']
+                maximum_duration = num_emails_per_address_range['end'] * delay_end
 
             maximum_duration = maximum_duration / 3600
             scheduled_time = GUI.dateTimeEdit_campaign_scheduler.dateTime().toPyDateTime()
 
             result = confirm(f"This campaign is going to take approximately "
-                             f"{maximum_duration:.4f} hours to complete.\n"
+                             f"{maximum_duration:.4f} hours to complete AT MAX.\n"
                              f"And this campaign will be scheduled at "
                              f"{scheduled_time.strftime('%m/%d/%Y, %H:%M:%S')}. "
                              f"\nAre you sure?",
@@ -527,7 +532,9 @@ class MyMainClass:
 
     def update_num_per_address(self):
         try:
-            var.num_emails_per_address = int(GUI.lineEdit_num_per_address.text())
+            temp_input = str(GUI.lineEdit_num_per_address.text()).replace(" ", "")
+            GUI.lineEdit_num_per_address.setText(temp_input if "-" in temp_input else temp_input + " - ")
+            var.num_emails_per_address = str(GUI.lineEdit_num_per_address.text())
         except:
             self.logger.error(traceback.format_exc())
 
@@ -660,7 +667,7 @@ class MyMainClass:
                 if response.status_code == 200:
                     if data['status'] == 2:
                         self.try_failed = 0
-                        print(data['end_date'])
+
                         date = str(data['end_date'])
 
                         quit_application = True
@@ -671,7 +678,7 @@ class MyMainClass:
 
                     elif data['status'] == 3:
                         self.try_failed = 0
-                        print("sub deactivated")
+                        self.logger.info("sub deactivated")
 
                         quit_application = True
                         var.command_q.put("mainWindow.close()")
@@ -681,7 +688,8 @@ class MyMainClass:
 
                     elif data['status'] == 1:
                         self.try_failed = 0
-                        print(data['days_left'])
+                        self.logger.info(data['days_left'])
+
                         GUI.label_email_status.setText(
                             "Subscription ends after {} days.".format(data['days_left']))
 
@@ -703,7 +711,7 @@ class MyMainClass:
 
             except Exception as e:
                 self.try_failed += 1
-                logger.error("error at check_for_subscription: {}".format(traceback.format_exc()))
+                self.logger.error("error at check_for_subscription: {}".format(traceback.format_exc()))
 
                 GUI.label_email_status.setText(
                     "Check your internet connection.")
@@ -907,20 +915,19 @@ class MyMainClass:
                     self.reply()
                 else:
                     self.send_button_visibility(on=True)
-                    print('cancelled')
+                    self.logger.info('cancelled')
 
             else:
                 result = confirm(
                     text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
                 if result == 'OK':
-                    print("send_campaign")
+                    self.logger.info("send_campaign")
                     self.send_campaign()
                 else:
                     self.send_button_visibility(on=True)
-                    print('cancelled')
+                    self.logger.info('cancelled')
 
         except Exception as e:
-            print("Error at main.send : {}".format(e))
             self.logger.error("Error at main.send - {}".format(e))
 
     def compose_send_cancel(self):
@@ -931,18 +938,18 @@ class MyMainClass:
             if not var.send_campaign_run_status:
                 if var.stop_send_campaign:
                     GUI.label_compose_status.setText(
-                        f"Sending Cancelled : {var.send_campaign_email_count}/{self.total_email_to_be_sent} "
+                        f"Sending Cancelled : {var.send_campaign_email_count} sent. "
                         f"Accounts Failed : {var.email_failed} Targets Remaining : {len(var.target)}")
                 else:
                     GUI.label_compose_status.setText(
-                        f"Sending Finished : {var.send_campaign_email_count}/{self.total_email_to_be_sent} "
+                        f"Sending Finished : {var.send_campaign_email_count} sent. "
                         f"Accounts Failed : {var.email_failed} Targets Remaining : {len(var.target)}")
 
             else:
                 value = (var.send_campaign_email_count /
                          self.total_email_to_be_sent) * 100
                 GUI.label_compose_status.setText(
-                    f"Total Email Sent : {var.send_campaign_email_count}/{self.total_email_to_be_sent}")
+                    f"Total Email Sent : {var.send_campaign_email_count}")
                 GUI.progressBar_compose.setValue(value)
 
         except Exception as e:
@@ -951,7 +958,11 @@ class MyMainClass:
     def send_campaign(self):
         try:
             var.send_campaign_run_status = True
-            var.num_emails_per_address = int(GUI.lineEdit_num_per_address.text())
+            var.num_emails_per_address = str(GUI.lineEdit_num_per_address.text())
+            num_emails_per_address_range = {
+                "start": int(var.num_emails_per_address.split("-")[0].strip()),
+                "end": int(var.num_emails_per_address.split("-")[1].strip())
+            }
             var.delay_between_emails = GUI.lineEdit_delay_between_emails.text()
             delay_start = int(var.delay_between_emails.split("-")[0].strip())
             delay_end = int(var.delay_between_emails.split("-")[1].strip())
@@ -961,18 +972,19 @@ class MyMainClass:
             var.compose_email_subject = GUI.lineEdit_subject.text()
 
             if GUI.radioButton_campaign_group_a.isChecked():
-                print("Group a")
                 if len(var.group_a) > 0 and len(var.target) > 0:
 
-                    if len(var.group_a) * var.num_emails_per_address > len(var.target):
+                    if len(var.group_a) * num_emails_per_address_range['end'] > len(var.target):
                         self.total_email_to_be_sent = len(var.target)
                     else:
                         self.total_email_to_be_sent = len(
-                            var.group_a) * var.num_emails_per_address
+                            var.group_a) * num_emails_per_address_range['end']
 
                     Thread(target=smtp.main, daemon=True, args=[
-                        var.group_a.copy(), delay_start, delay_end, "Group A", ]).start()
-
+                        var.group_a.copy(), delay_start, delay_end, "Group A",
+                        num_emails_per_address_range,
+                    ]).start()
+                    self.logger.info("send_campaign Group a starting thread")
                 else:
                     self.logger.error(f"At send_campaign - Empty Target table")
                     self.send_button_visibility(on=True)
@@ -980,18 +992,20 @@ class MyMainClass:
                     var.send_campaign_run_status = False
 
             else:
-                print("Group b")
+                self.logger.info("Group b")
                 if len(var.group_b) > 0 and len(var.target) > 0:
 
-                    if len(var.group_b) * var.num_emails_per_address > len(var.target):
+                    if len(var.group_b) * num_emails_per_address_range['end'] > len(var.target):
                         self.total_email_to_be_sent = len(var.target)
                     else:
                         self.total_email_to_be_sent = len(
-                            var.group_b) * var.num_emails_per_address
+                            var.group_b) * num_emails_per_address_range['end']
 
                     Thread(target=smtp.main, daemon=True, args=[
-                        var.group_b.copy(), delay_start, delay_end, "Group B", ]).start()
-
+                        var.group_b.copy(), delay_start, delay_end, "Group B",
+                        num_emails_per_address_range,
+                    ]).start()
+                    self.logger.info("send_campaign Group b starting thread")
                 else:
                     self.logger.error(f"At send_campaign - Empty Target table")
                     self.send_button_visibility(on=True)
@@ -1038,7 +1052,7 @@ class MyMainClass:
                 dialog = QtWidgets.QDialog()
 
                 if GUI.radioButton_group_a.isChecked() and len(var.group_a) > 0:
-                    print("Group a")
+                    self.logger.info("Downloading_email Group a")
                     var.total_acc = len(var.group_a)
                     var.download_email_status = True
                     Thread(target=update_config_json, daemon=True).start()
@@ -1046,7 +1060,7 @@ class MyMainClass:
                     dialog.ui = Download(dialog, var.group_a)
 
                 elif GUI.radioButton_group_b.isChecked() and len(var.group_b) > 0:
-                    print("Group b")
+                    self.logger.info("Downloading_email Group b")
                     var.total_acc = len(var.group_b)
                     var.download_email_status = True
                     Thread(target=update_config_json, daemon=True).start()
@@ -1054,7 +1068,7 @@ class MyMainClass:
                     dialog.ui = Download(dialog, var.group_b)
 
                 else:
-                    print("no DB")
+                    self.logger.info("Downloading_email no db")
                     alert(text='No database loaded yet!!!',
                           title='Error', button='OK')
 
@@ -1063,7 +1077,7 @@ class MyMainClass:
                 self.table_timer.start()
 
             else:
-                print("Cancelled")
+                self.logger.info("Cancelled")
         except Exception as e:
             var.download_email_status = False
             self.logger.error("Error at downloading_email - {}".format(e))
@@ -1072,11 +1086,11 @@ class MyMainClass:
         result = confirm(text='Are you sure?',
                          title='Confirmation Window', buttons=['OK', 'Cancel'])
         if result == 'OK':
-            print("Download Cancel")
+            self.logger.info("email_cancel Download Cancel")
             self.table_timer.stop()
             var.stop_download = True
         else:
-            print("denined")
+            self.logger.info("email_cancel denied")
 
     def add_to_table(self):
         try:
@@ -1127,9 +1141,8 @@ class MyMainClass:
             else:
                 self.table_timer.stop()
                 GUI.label_email_status.setText("Showing Finished")
-                print("finished")
+                self.logger.info("add_to_table finished")
         except Exception as e:
-            print("Error at add_to_table : {}".format(e))
             self.logger.error("Error at add_to_table - {}".format(e))
 
     def clickBox(self, state):

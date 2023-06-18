@@ -22,48 +22,15 @@
                     "port": 587,
                     "require_ssl": false
                 }
-            },
-            "yahoo": {
-                "imap": {
-                    "server": "imap.mail.yahoo.com",
-                    "port": 993
-                },
-                "smtp": {
-                    "server": "smtp.mail.yahoo.com",
-                    "port": 465,
-                    "require_ssl": true
-                }
-            },
-            "aol": {
-                "imap": {
-                    "server": "imap.aol.com",
-                    "port": 993
-                },
-                "smtp": {
-                    "server": "smtp.aol.com",
-                    "port": 465,
-                    "require_ssl": true
-                }
-            },
-            "zohomail": {
-                "imap": {
-                    "server": "imap.zoho.eu",
-                    "port": 993
-                },
-                "smtp": {
-                    "server": "smtp.zoho.eu",
-                    "port": 465,
-                    "require_ssl": true
-                }
             }
         },
-        "date": "11/21/2022",
-        "num_emails_per_address": 1,
-        "delay_between_emails": "0-10",
+        "date": "2/20/2023",
+        "num_emails_per_address": "2-10",
+        "delay_between_emails": "0-2",
         "limit_of_thread": 100,
         "compose_email_subject": "Personal",
         "compose_email_body": "Hey,what's up? [4]",
-        "compose_email_body_html": "<html>\n<body>\n<p>{Hey|Hi|Hello} there,</p>\n\n\n<p>My {colleague|co-worker} {Lucas|Mike|James} just {found|discovered|came across} you on Instagram and {loved|was impressed by|enjoyed} your {content|posts|feed}! He {passed on|shared} your {details|information} and {told|recommended} me to {reach out|contact|get in touch} with you!</p>\n\n\n<p>My name is [FIRSTFROMNAME] and I am {in charge of|responsible for|tasked with} {finding|discovering|recruiting} new {talent|accounts} for our {Instagram|social media} marketing agency. {Similar|Comparable|Like-minded} {accounts|profiles} to yours are {CRUSHING it|killing it|succeeding} on {Instagram|the platform} - {from what I've seen|based on my observation|in my opinion}, you could be doing even {better|greater|more} than them!</p>\n\n\n<p>Our {US|United States}- and {European|EU}-based {team|staff|crew} have been {providing|offering|delivering} {organic|natural} Instagram growth since {2017|the past few years} and have helped over {12,500|twelve thousand five hundred} clients reach their Instagram {potential|goals}. {In short|Simply put|To put it simply}, we are {experts|specialists|mavens} when it comes to Instagram.</p>\n\n\n<p>We're {confident|sure|positive} that we can help you {grow|increase|boost} another {10k - 15k|10,000 - 15,000|ten to fifteen thousand} {real|authentic|genuine}, targeted {followers|fans} in {2023|the upcoming year}! Yes! {REAL|Authentic|Genuine} {followers|fans} that {ENGAGE|interact|participate}. No {fakes|frauds|counterfeits}, no {bots|automated accounts|robotic followers}.</p>\n\n\n<p>You can {partner|collaborate} with us {now|at this moment|immediately} for {FREE|no charge} at <a href=\"https://www.gramgrowth.net\">GramGrowth</a> and {start|begin|commence} {growing|expanding} {today|right away|immediately}.</p>\n\n\n<p>We {choose|select|handpick} who we {reach out to|contact|approach} {carefully|thoughtfully|deliberately} and take on a {limited|restricted|controlled} number of clients at a time to {ensure|guarantee|assure} high-quality results - if this interests you, {try|test|experiment with} it {7-days|seven days} for free {now|at present|currently} before {spots|positions|slots} close.</p>\n\n\n<p>If you don't like our service, {cancel|terminate} at any time - there's {zero|no} {risk|danger}. We know you'll love it!</p>\n\n\n<p>If you have any questions, {feel free|don't hesitate|be sure} to contact us at <a href=\"https://www.gramgrowth.net\">GramGrowth</a></p>\n\n\n<p>I hope you don't mind my {outreach|reaching out|contacting you}.</p>\n\n\n<p>{Kind regards|Best regards|Sincerely},<br>\n[FIRSTFROMNAME]</p>\n<br>\n<a href=\"https://www.gramgrowth.net/unsubscribe\">Unsubscribe</a>\n</body>\n</html>",
+        "compose_email_body_html": "<html>\n    <body>\n        <p>{Hey|Hi|Hello} [TONAME],<br>\n        I'm reaching out to you because i {noticed|came across|found|visited} you website {the other day|yesterday} and thought you'd be interested in a {collaboration|partnership}.<br>\n        {Hope you don't mind my outreach!|Looking forward to your reply!}<br>\n\n\t<a href=\"https://www.w3schools.com\">Visit W3Schools</a>\n        </p>\n    </body>\n</html>",
         "login_email": "ss@gmail.com",
         "tracking": {
             "analytics_account": "UA-33237782-1",

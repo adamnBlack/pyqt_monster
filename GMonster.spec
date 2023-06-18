@@ -8,7 +8,7 @@ block_cipher = None
 
 
 a = Analysis(['var.py'],
-             pathex=['D:\\Upwork\\2020\\gmail_app\\gmail_app'],
+             pathex=['F:\\Upwork\\2020\\gmail_app\\gmail_app_old\\gmail_app_old'],
              binaries=[],
              datas=datas,
              hiddenimports=[],
@@ -20,7 +20,7 @@ a = Analysis(['var.py'],
              cipher=block_cipher,
              noarchive=False)
 
-a.datas += Tree('D:\\Upwork\\2020\\gmail_app\\gmail_app\\icons', prefix='icons\\')
+a.datas += Tree('F:\\Upwork\\2020\\gmail_app\\gmail_app_old\\gmail_app_old\\icons', prefix='icons\\')
 
 pyz = PYZ(a.pure, a.zipped_data,
              cipher=block_cipher)

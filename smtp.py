@@ -64,6 +64,7 @@ def html_to_text(body):
     # text = '\n'.join(chunk for chunk in chunks if chunk)
 
     soup = BeautifulSoup(body, features="html.parser")
+
     return soup.get_text('\n')
 
 
@@ -444,16 +445,8 @@ class Smtp(SmtpBase, threading.Thread):
                                                   item['1'], item['2'], item['3'], item['4'], item['5'], item['6'],
                                                   item['TONAME'], source="body")
 
-                        # if contains_non_ascii_characters(body):
                         content_body.attach(
                             MIMEText(body.encode('utf-8'), "html", 'utf-8'))
-                        content_body.attach(MIMEText(html_to_text(
-                            body).encode('utf-8'), "plain", 'utf-8'))
-
-                        # else:
-
-                        # msg.attach(MIMEText(body, "html"))
-                        # msg.attach(MIMEText(html_to_text(body), "plain"))
 
                     else:
                         body = utils.format_email(var.compose_email_body, self.first_from_name, self.last_from_name,
@@ -463,16 +456,11 @@ class Smtp(SmtpBase, threading.Thread):
                         html_body = "<html><body><p>" + \
                                     body.replace("\n", "<br>") + "</p></body></html>"
 
-                        # if contains_non_ascii_characters(body):
                         content_body.attach(
                             MIMEText(body.encode('utf-8'), "plain", "utf-8"))
                         content_body.attach(
                             MIMEText(html_body.encode('utf-8'), "html", "utf-8"))
 
-                        # else:
-
-                        # msg.attach(MIMEText(body, "plain"))
-                        # msg.attach(MIMEText(html_body, "html"))
                     content.attach(content_body)
 
                     msg.attach(content)
@@ -496,6 +484,7 @@ class Smtp(SmtpBase, threading.Thread):
                                 raise
                             time.sleep(random.randint(10, 100))
                             logger.warning("Reconnecting smtp - {}".format(self.name))
+
                             try:
                                 server = self._login()
                             except:
@@ -778,8 +767,8 @@ class AddFollowUps:
             logger.info(f"{self.__class__.__name__} unsuccessful")
 
 
-def main(group, d_start, d_end, group_selected):
-    global sent_q, email_failed, success_sent
+def main(group, d_start, d_end, group_selected, num_emails_per_address_range):
+    global sent_q, email_failed, success_sent, remove_target_q
     try:
         success_sent.clear()
 
@@ -805,16 +794,16 @@ def main(group, d_start, d_end, group_selected):
         campaign_id = str(uuid.uuid4())
 
         logger.info(f"\n Starting Send Campaign : "
-                     + f"\n Target Removal - {var.remove_email_from_target}"
-                     + f"\n Group Selected: {group_selected}"
-                     + f"\n Webhook Enabled: {var.enable_webhook_status}"
-                     + f"\n Email Block Check: {var.check_for_blocks}"
-                     + f"\n Emails Per Account: {var.num_emails_per_address}"
-                     + f"\n Len of Group: {group_len}"
-                     + f"\n Len of Targets: {target_len}"
-                     + f"\n Delay: {d_start} - {d_end}"
-                     + f"\n Campaign ID: {campaign_id}"
-                     + f"\n Add Custom Hostname: {var.add_custom_hostname}")
+                    + f"\n Target Removal - {var.remove_email_from_target}"
+                    + f"\n Group Selected: {group_selected}"
+                    + f"\n Webhook Enabled: {var.enable_webhook_status}"
+                    + f"\n Email Block Check: {var.check_for_blocks}"
+                    + f"\n Emails Per Account: {var.num_emails_per_address}"
+                    + f"\n Len of Group: {group_len}"
+                    + f"\n Len of Targets: {target_len}"
+                    + f"\n Delay: {d_start} - {d_end}"
+                    + f"\n Campaign ID: {campaign_id}"
+                    + f"\n Add Custom Hostname: {var.add_custom_hostname}")
 
         with var.send_report.mutex:
             var.send_report.queue.clear()
@@ -880,14 +869,18 @@ def main(group, d_start, d_end, group_selected):
                         proxy_host = ""
                         proxy_port = ""
 
+                    num_emails_per_address = random.randint(
+                        num_emails_per_address_range['start'],
+                        num_emails_per_address_range['end']
+                    )
                     start = temp
-                    end = start + var.num_emails_per_address - 1
+                    end = start + num_emails_per_address - 1
                     temp = end + 1
 
                     group.at[index, 'flag'] = 1
 
                     logger.info(f"\nStarting Thread : Name - {name}"
-                                 f"\nTargets Count - {len(target.loc[start:end])}")
+                                f"\nTargets Count - {len(target.loc[start:end])}")
                     # + f"\nTargets - {json.dumps(target.loc[start:end].to_dict())}")
 
                     kwargs = {
@@ -909,6 +902,8 @@ def main(group, d_start, d_end, group_selected):
                     }
 
                     Smtp(**kwargs).start()
+
+                    logger.info(f"{name} set to sent {num_emails_per_address} emails")
 
                     while var.thread_open_campaign >= var.limit_of_thread and not var.stop_send_campaign:
                         time.sleep(1)
