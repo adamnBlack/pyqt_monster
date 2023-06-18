@@ -909,7 +909,7 @@ class Ui_MainWindow(object):
         self.lineEdit_num_per_address.setFont(font)
         self.lineEdit_num_per_address.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.lineEdit_num_per_address.setInputMethodHints(QtCore.Qt.ImhDigitsOnly)
-        self.lineEdit_num_per_address.setMaxLength(4)
+        self.lineEdit_num_per_address.setMaxLength(15)
         self.lineEdit_num_per_address.setFrame(False)
         self.lineEdit_num_per_address.setAlignment(QtCore.Qt.AlignCenter)
         self.lineEdit_num_per_address.setObjectName("lineEdit_num_per_address")
@@ -2114,7 +2114,7 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(4)
+        self.tabWidget.setCurrentIndex(1)
         self.pushButton_attachments_clear.clicked.connect(self.comboBox_attachments.clear)
         self.pushButton_3.clicked.connect(self.textBrowser_show_email.zoomIn)
         self.pushButton_4.clicked.connect(self.textBrowser_show_email.zoomOut)

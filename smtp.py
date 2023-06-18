@@ -50,19 +50,7 @@ def contains_non_ascii_characters(str):
 def html_to_text(body):
     soup = BeautifulSoup(body, features="html.parser")
 
-    for script in soup(["script", "style"]):
-        script.extract()
-
-    text = soup.get_text()
-
-    # break into lines and remove leading and trailing space on each
-    lines = (line.strip() for line in text.splitlines())
-    # break multi-headlines into a line each
-    chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
-    # drop blank lines
-    text = '\n'.join(chunk for chunk in chunks if chunk)
-
-    return str(text)
+    return soup.get_text('\n')
 
 
 def test(send_to):
@@ -118,7 +106,9 @@ def test(send_to):
                 target['1'], target['2'], target['3'], target['4'], target['5'], target['6'], target['TONAME'],
                 source="body")
             msg.attach(MIMEText(body, "html"))
-            msg.attach(MIMEText(html_to_text(body), "plain"))
+
+            # if "<a" not in body:
+            #     msg.attach(MIMEText(html_to_text(body), "plain"))
         else:
             body = utils.format_email(
                 var.compose_email_body, send['FIRSTFROMNAME'], send['LASTFROMNAME'],
@@ -394,8 +384,10 @@ class SMTP_(threading.Thread):
                         # if contains_non_ascii_characters(body):
                         msg.attach(
                             MIMEText(body.encode('utf-8'), "html", 'utf-8'))
-                        msg.attach(MIMEText(html_to_text(
-                            body).encode('utf-8'), "plain", 'utf-8'))
+
+                        # if "<a" not in body:
+                        #     msg.attach(MIMEText(html_to_text(
+                        #         body).encode('utf-8'), "plain", 'utf-8'))
 
                         # else:
 

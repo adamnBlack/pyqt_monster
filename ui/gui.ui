@@ -1538,7 +1538,7 @@ QPushButton:pressed {
                  <set>Qt::ImhDigitsOnly</set>
                 </property>
                 <property name="maxLength">
-                 <number>4</number>
+                 <number>9</number>
                 </property>
                 <property name="frame">
                  <bool>false</bool>

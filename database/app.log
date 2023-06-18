@@ -4435,3 +4435,335 @@ Targets Count - 10
 2023-03-26 21:59:43,134 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
 2023-03-26 21:59:43,207 [Thread-12   ] [INFO ]  Sending Finished d1fb84a6-99b9-4dd1-bc67-6da4bb2bc487
 2023-03-26 22:00:11,628 [MainThread  ] [INFO ]  Exiting
+2023-04-07 13:40:10,248 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 13:40:13,316 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 13:40:13,389 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-07 13:40:17,245 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 13:40:17,246 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 13:40:18,517 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-07 13:40:18,518 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-07 13:40:19,728 [Thread-1    ] [INFO ]  13790
+2023-04-07 13:41:20,726 [MainThread  ] [INFO ]  Exiting
+2023-04-07 17:01:06,630 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:01:06,743 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:01:06,752 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-07 17:01:10,720 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:01:10,721 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:01:11,735 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-07 17:01:11,735 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-07 17:01:12,746 [Thread-1    ] [INFO ]  13790
+2023-04-07 17:02:07,823 [Thread-4    ] [INFO ]  Testing Done: send to - shahimrans64@gmail.com sent_from - saidunuhu579@gmail.com
+2023-04-07 17:20:39,928 [Thread-5    ] [INFO ]  config updated
+2023-04-07 17:20:42,355 [MainThread  ] [INFO ]  Exiting
+2023-04-07 17:23:12,219 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:23:14,799 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:23:14,806 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-07 17:23:17,223 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:23:17,225 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:23:17,542 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-07 17:23:17,543 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-07 17:23:18,495 [Thread-1    ] [INFO ]  13790
+2023-04-07 17:24:07,038 [Thread-4    ] [INFO ]  Testing Done: send to - shahimrans64@gmail.com sent_from - saidunuhu579@gmail.com
+2023-04-07 17:24:31,914 [MainThread  ] [INFO ]  Exiting
+2023-04-07 17:26:03,912 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:26:03,974 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:26:03,977 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-07 17:26:04,722 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:26:04,729 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:26:05,060 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-07 17:26:05,061 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-07 17:26:05,996 [Thread-1    ] [INFO ]  13790
+2023-04-07 17:26:35,815 [Thread-4    ] [INFO ]  Testing Done: send to - shahimrans64@gmail.com sent_from - saidunuhu579@gmail.com
+2023-04-07 17:27:03,513 [MainThread  ] [INFO ]  Exiting
+2023-04-07 17:27:09,832 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:27:09,889 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:27:09,892 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-07 17:27:10,552 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:27:10,553 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:27:10,873 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-07 17:27:10,873 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-07 17:27:11,810 [Thread-1    ] [INFO ]  13790
+2023-04-07 17:27:22,919 [Thread-4    ] [INFO ]  config updated
+2023-04-07 17:27:38,913 [Thread-5    ] [INFO ]  Testing Done: send to - shahimrans64@gmail.com sent_from - saidunuhu579@gmail.com
+2023-04-07 17:29:23,344 [MainThread  ] [INFO ]  Exiting
+2023-04-07 17:29:26,870 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:29:26,965 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:29:26,970 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-07 17:29:27,867 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:29:27,870 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:29:28,224 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-07 17:29:28,225 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-07 17:29:29,233 [Thread-1    ] [INFO ]  13790
+2023-04-07 17:29:48,991 [Thread-4    ] [INFO ]  Testing Done: send to - shahimrans64@gmail.com sent_from - saidunuhu579@gmail.com
+2023-04-07 17:31:09,988 [MainThread  ] [INFO ]  Exiting
+2023-04-07 17:31:14,160 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:31:14,275 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:31:14,280 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-07 17:31:15,134 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:31:15,135 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:31:15,505 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-07 17:31:15,506 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-07 17:31:16,557 [Thread-1    ] [INFO ]  13790
+2023-04-07 17:31:36,988 [Thread-4    ] [INFO ]  Testing Done: send to - shahimrans64@gmail.com sent_from - saidunuhu579@gmail.com
+2023-04-07 17:31:57,622 [MainThread  ] [INFO ]  Exiting
+2023-04-07 17:36:51,983 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:36:52,044 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:36:52,047 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-07 17:36:52,757 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:36:52,763 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:36:53,105 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-07 17:36:53,105 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-07 17:36:54,226 [Thread-1    ] [INFO ]  13790
+2023-04-07 17:37:25,780 [MainThread  ] [ERROR]  Traceback (most recent call last):
+  File "F:\Upwork\2020\gmail_app\gmail_app_old\gmail_app_old\main.py", line 520, in update_delay_between_emails
+    var.delay_start = int(delay_between_emails.split("-")[0].strip())
+ValueError: invalid literal for int() with base 10: ''
+
+2023-04-07 17:38:44,283 [MainThread  ] [INFO ]  Exiting
+2023-04-07 17:38:48,207 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:38:48,309 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:38:48,313 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-07 17:38:49,173 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:38:49,174 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:38:49,500 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-07 17:38:49,502 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-07 17:38:50,647 [Thread-1    ] [INFO ]  13790
+2023-04-07 17:39:07,736 [MainThread  ] [INFO ]  Exiting
+2023-04-07 17:39:32,092 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:39:32,154 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:39:32,157 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-07 17:39:32,846 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:39:32,847 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:39:33,172 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-07 17:39:33,173 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-07 17:39:34,212 [Thread-1    ] [INFO ]  13790
+2023-04-07 17:40:04,485 [MainThread  ] [INFO ]  Exiting
+2023-04-07 17:41:09,884 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:41:09,940 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:41:09,942 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-07 17:41:10,635 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:41:10,636 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:41:10,931 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-07 17:41:10,933 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-07 17:41:12,067 [Thread-1    ] [INFO ]  13790
+2023-04-07 17:41:40,829 [MainThread  ] [INFO ]  Exiting
+2023-04-07 17:41:45,351 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:41:45,408 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:41:45,411 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-07 17:41:46,086 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:41:46,088 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:41:46,399 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-07 17:41:46,400 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-07 17:41:47,513 [Thread-1    ] [INFO ]  13790
+2023-04-07 17:42:19,809 [MainThread  ] [INFO ]  Exiting
+2023-04-07 17:42:57,351 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:42:57,412 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:42:57,414 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-07 17:42:58,104 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:42:58,105 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:42:58,423 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-07 17:42:58,426 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-07 17:42:59,493 [Thread-1    ] [INFO ]  13790
+2023-04-07 17:44:10,228 [MainThread  ] [INFO ]  Exiting
+2023-04-07 17:44:13,998 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:44:14,053 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:44:14,057 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-07 17:44:14,751 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:44:14,755 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:44:15,051 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-07 17:44:15,051 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-07 17:44:15,989 [Thread-1    ] [INFO ]  13790
+2023-04-07 17:44:17,979 [MainThread  ] [INFO ]  Exiting
+2023-04-07 17:44:29,047 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:44:29,104 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:44:29,107 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-07 17:44:29,783 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:44:29,785 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:44:30,089 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-07 17:44:30,091 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-07 17:44:31,022 [Thread-1    ] [INFO ]  13790
+2023-04-07 17:44:50,438 [MainThread  ] [INFO ]  Exiting
+2023-04-07 17:45:33,055 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:45:33,113 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:45:33,116 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-07 17:45:33,809 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:45:33,812 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:45:34,099 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-07 17:45:34,100 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-07 17:45:35,002 [Thread-1    ] [INFO ]  13790
+2023-04-07 17:45:49,207 [MainThread  ] [INFO ]  cancelled
+2023-04-07 17:45:58,855 [MainThread  ] [INFO ]  send_campaign
+2023-04-07 17:45:58,860 [MainThread  ] [INFO ]  send_campaign Group a starting thread
+2023-04-07 17:45:58,861 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 2-10
+ Len of Group: 2
+ Len of Targets: 18
+ Delay: 0 - 2
+ Campaign ID: 67466bcb-bf1f-4840-8d92-1fbde570fc69
+ Add Custom Hostname: False
+2023-04-07 17:45:58,861 [Thread-4    ] [INFO ]  config updated
+2023-04-07 17:45:59,063 [Thread-5    ] [INFO ]  
+Starting Thread : Name - saidunuhu579@gmail.com
+Targets Count - 3
+2023-04-07 17:45:59,064 [Thread-5    ] [INFO ]  Length - 3 saidunuhu579@gmail.com
+2023-04-07 17:45:59,065 [Thread-5    ] [INFO ]  saidunuhu579@gmail.com set to sent 3 emails
+2023-04-07 17:45:59,066 [Thread-5    ] [INFO ]  
+Starting Thread : Name - lithbello60@gmail.com
+Targets Count - 6
+2023-04-07 17:45:59,068 [Thread-5    ] [INFO ]  Length - 6 lithbello60@gmail.com
+2023-04-07 17:45:59,069 [Thread-5    ] [INFO ]  lithbello60@gmail.com set to sent 6 emails
+2023-04-07 17:46:05,896 [saidunuhu579] [INFO ]  Sent - saidunuhu579@gmail.com shahimrans64@gmail.com
+2023-04-07 17:46:06,495 [lithbello60@] [INFO ]  Sent - lithbello60@gmail.com shahimrans64@gmail.com
+2023-04-07 17:46:06,886 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2023-04-07 17:46:07,888 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2023-04-07 17:46:14,081 [Thread-5    ] [INFO ]  Sending Finished 67466bcb-bf1f-4840-8d92-1fbde570fc69
+2023-04-07 17:46:28,503 [MainThread  ] [INFO ]  Exiting
+2023-04-07 17:55:47,513 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:55:47,571 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:55:47,574 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-04-07 17:55:48,257 [MainThread  ] [INFO ]  Logger Started
+2023-04-07 17:55:48,258 [MainThread  ] [INFO ]  Scheduler started
+2023-04-07 17:55:48,574 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-04-07 17:55:48,575 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-04-07 17:55:50,176 [Thread-1    ] [INFO ]  13790
+2023-04-07 17:55:54,568 [MainThread  ] [INFO ]  send_campaign
+2023-04-07 17:55:54,571 [MainThread  ] [INFO ]  send_campaign Group a starting thread
+2023-04-07 17:55:54,574 [Thread-5    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 2-10
+ Len of Group: 2
+ Len of Targets: 18
+ Delay: 0 - 2
+ Campaign ID: 70c4bf06-ca12-44b5-8855-35ecd976670d
+ Add Custom Hostname: False
+2023-04-07 17:55:54,574 [Thread-4    ] [INFO ]  config updated
+2023-04-07 17:55:54,584 [Thread-5    ] [INFO ]  
+Starting Thread : Name - saidunuhu579@gmail.com
+Targets Count - 10
+2023-04-07 17:55:54,585 [Thread-5    ] [INFO ]  Length - 10 saidunuhu579@gmail.com
+2023-04-07 17:55:54,587 [Thread-5    ] [INFO ]  saidunuhu579@gmail.com set to sent 10 emails
+2023-04-07 17:55:54,589 [Thread-5    ] [INFO ]  
+Starting Thread : Name - lithbello60@gmail.com
+Targets Count - 8
+2023-04-07 17:55:54,590 [Thread-5    ] [INFO ]  Length - 8 lithbello60@gmail.com
+2023-04-07 17:55:54,592 [Thread-5    ] [INFO ]  lithbello60@gmail.com set to sent 9 emails
+2023-04-07 17:56:00,946 [saidunuhu579] [INFO ]  Sent - saidunuhu579@gmail.com shahimrans64@gmail.com
+2023-04-07 17:56:01,587 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2023-04-07 17:56:01,909 [lithbello60@] [INFO ]  Sent - lithbello60@gmail.com shahimrans64@gmail.com
+2023-04-07 17:56:02,588 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2023-04-07 17:56:13,606 [Thread-5    ] [INFO ]  Sending Finished 70c4bf06-ca12-44b5-8855-35ecd976670d
+2023-04-07 17:56:33,872 [MainThread  ] [INFO ]  Exiting
+2023-05-07 20:55:54,397 [MainThread  ] [INFO ]  Logger Started
+2023-05-07 20:55:58,736 [MainThread  ] [INFO ]  Scheduler started
+2023-05-07 20:55:58,798 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-05-07 20:56:02,470 [MainThread  ] [INFO ]  Logger Started
+2023-05-07 20:56:02,471 [MainThread  ] [INFO ]  Scheduler started
+2023-05-07 20:56:03,344 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-05-07 20:56:03,345 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-05-07 20:56:04,750 [Thread-1    ] [INFO ]  13760
+2023-05-07 20:56:22,419 [Thread-4    ] [INFO ]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2023-05-07 21:10:49,006 [MainThread  ] [INFO ]  send_campaign
+2023-05-07 21:10:49,341 [MainThread  ] [INFO ]  send_campaign Group a starting thread
+2023-05-07 21:10:49,344 [Thread-6    ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - False
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: False
+ Emails Per Account: 2-10
+ Len of Group: 1
+ Len of Targets: 18
+ Delay: 0 - 2
+ Campaign ID: 55f7e286-b03c-4dd4-80bb-82ec10d179bd
+ Add Custom Hostname: False
+2023-05-07 21:10:49,356 [Thread-5    ] [INFO ]  config updated
+2023-05-07 21:10:49,425 [Thread-6    ] [INFO ]  
+Starting Thread : Name - lithbello60@gmail.com
+Targets Count - 9
+2023-05-07 21:10:49,427 [Thread-6    ] [INFO ]  Length - 9 lithbello60@gmail.com
+2023-05-07 21:10:49,430 [Thread-6    ] [INFO ]  lithbello60@gmail.com set to sent 9 emails
+2023-05-07 21:10:54,882 [lithbello60@] [INFO ]  Sent - lithbello60@gmail.com shahimrans64@gmail.com
+2023-05-07 21:10:55,357 [AddCachedTar] [INFO ]  Database.add_to_cached_targets() - Already Exists
+2023-05-07 21:11:05,549 [Thread-6    ] [INFO ]  Sending Finished 55f7e286-b03c-4dd4-80bb-82ec10d179bd
+2023-05-07 21:19:18,616 [MainThread  ] [INFO ]  Exiting
+2023-05-24 00:03:16,709 [MainThread  ] [INFO ]  Logger Started
+2023-05-24 00:03:20,038 [MainThread  ] [INFO ]  Scheduler started
+2023-05-24 00:03:20,129 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-05-24 00:03:24,685 [MainThread  ] [INFO ]  Logger Started
+2023-05-24 00:03:24,687 [MainThread  ] [INFO ]  Scheduler started
+2023-05-24 00:03:26,281 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-05-24 00:03:26,281 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-05-24 00:03:27,390 [Thread-1    ] [INFO ]  13744
+2023-05-24 00:09:49,154 [MainThread  ] [INFO ]  Exiting
+2023-05-30 02:02:34,780 [MainThread  ] [INFO ]  Logger Started
+2023-05-30 02:02:38,398 [MainThread  ] [INFO ]  Scheduler started
+2023-05-30 02:02:38,470 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-05-30 02:02:42,628 [MainThread  ] [INFO ]  Logger Started
+2023-05-30 02:02:42,634 [MainThread  ] [INFO ]  Scheduler started
+2023-05-30 02:02:44,071 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-05-30 02:02:44,074 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-05-30 02:02:45,148 [Thread-1    ] [INFO ]  13738
+2023-05-30 02:03:59,653 [MainThread  ] [INFO ]  Exiting
+2023-05-30 02:04:02,589 [MainThread  ] [INFO ]  Logger Started
+2023-05-30 02:04:02,643 [MainThread  ] [INFO ]  Scheduler started
+2023-05-30 02:04:02,646 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-05-30 02:04:03,279 [MainThread  ] [INFO ]  Logger Started
+2023-05-30 02:04:03,284 [MainThread  ] [INFO ]  Scheduler started
+2023-05-30 02:04:03,564 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-05-30 02:04:03,565 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-05-30 02:04:04,519 [Thread-1    ] [INFO ]  13738
+2023-05-30 02:10:27,130 [Thread-4    ] [INFO ]  Testing Done: send to - shahimrans64@gmail.com sent_from - lithbello60@gmail.com
+2023-05-30 02:31:46,413 [MainThread  ] [INFO ]  Exiting
+2023-06-04 23:52:01,015 [MainThread  ] [INFO ]  Logger Started
+2023-06-04 23:52:05,008 [MainThread  ] [INFO ]  Scheduler started
+2023-06-04 23:52:05,025 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-06-04 23:52:08,298 [MainThread  ] [INFO ]  Logger Started
+2023-06-04 23:52:08,298 [MainThread  ] [INFO ]  Scheduler started
+2023-06-04 23:52:09,216 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-06-04 23:52:09,217 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-06-04 23:52:10,231 [Thread-1    ] [INFO ]  13732
+2023-06-04 23:52:59,606 [Thread-4    ] [INFO ]  Testing Done: send to - shahimrans64@gmail.com sent_from - seyiowolabi487@gmail.com
+2023-06-05 00:07:08,180 [MainThread  ] [INFO ]  Exiting
+2023-06-05 16:51:34,266 [MainThread  ] [INFO ]  Logger Started
+2023-06-05 16:51:39,052 [MainThread  ] [INFO ]  Scheduler started
+2023-06-05 16:51:39,186 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-06-05 16:51:43,464 [MainThread  ] [INFO ]  Logger Started
+2023-06-05 16:51:43,464 [MainThread  ] [INFO ]  Scheduler started
+2023-06-05 16:51:45,181 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-06-05 16:51:45,181 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-06-05 16:51:46,176 [Thread-1    ] [INFO ]  13731
+2023-06-05 16:51:54,462 [MainThread  ] [INFO ]  cancelled
+2023-06-05 16:52:14,917 [Thread-4    ] [INFO ]  Testing Done: send to - shahimrans64@gmail.com sent_from - seyiowolabi487@gmail.com
+2023-06-05 16:54:03,812 [Thread-5    ] [INFO ]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2023-06-05 16:54:50,268 [Thread-6    ] [ERROR]  Error at test send - seyiowolabi487@gmail.com - Socket error: timed out
+2023-06-05 16:56:26,446 [Thread-7    ] [ERROR]  Error at test send - seyiowolabi487@gmail.com - Socket error: timed out
+2023-06-05 17:13:14,975 [MainThread  ] [INFO ]  Exiting
+2023-06-08 13:13:48,186 [MainThread  ] [INFO ]  Logger Started
+2023-06-08 13:13:51,288 [MainThread  ] [INFO ]  Scheduler started
+2023-06-08 13:13:51,325 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-06-08 13:13:55,626 [MainThread  ] [INFO ]  Logger Started
+2023-06-08 13:13:55,627 [MainThread  ] [INFO ]  Scheduler started
+2023-06-08 13:13:57,333 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-06-08 13:13:57,334 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-06-08 13:13:58,377 [Thread-1    ] [INFO ]  13728
+2023-06-08 13:14:04,213 [Thread-4    ] [INFO ]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2023-06-08 13:14:22,585 [MainThread  ] [INFO ]  Exiting
+2023-06-08 13:15:25,890 [MainThread  ] [INFO ]  Logger Started
+2023-06-08 13:15:25,946 [MainThread  ] [INFO ]  Scheduler started
+2023-06-08 13:15:25,949 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-06-08 13:15:26,639 [MainThread  ] [INFO ]  Logger Started
+2023-06-08 13:15:26,640 [MainThread  ] [INFO ]  Scheduler started
+2023-06-08 13:15:26,909 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-06-08 13:15:26,910 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-06-08 13:15:27,832 [Thread-1    ] [INFO ]  13728
+2023-06-08 13:15:38,535 [Thread-4    ] [INFO ]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2023-06-08 13:25:55,575 [MainThread  ] [INFO ]  Exiting

@@ -19,7 +19,7 @@ import signal
 
 from gui import Ui_MainWindow
 
-print("App started....")
+
 quit_application = False
 
 
@@ -227,7 +227,8 @@ class MyMainClass:
 
         GUI.checkBox_compose_preview.clicked.connect(self.compose_preview)
         GUI.lineEdit_subject.textChanged.connect(self.compose_subject_update)
-        GUI.lineEdit_num_per_address.editingFinished.connect(self.update_num_per_address)
+        # GUI.lineEdit_num_per_address.editingFinished.connect(self.update_num_per_address)
+        GUI.lineEdit_num_per_address.textChanged.connect(self.update_num_per_address)
         GUI.lineEdit_delay_between_emails.editingFinished.connect(self.update_delay_between_emails)
         GUI.radioButton_campaign_group_a.clicked.connect(self.update_campaign_group)
         GUI.radioButton_campaign_group_b.clicked.connect(self.update_campaign_group)
@@ -531,6 +532,8 @@ class MyMainClass:
 
     def update_num_per_address(self):
         try:
+            temp_input = str(GUI.lineEdit_num_per_address.text()).replace(" ", "")
+            GUI.lineEdit_num_per_address.setText(temp_input if "-" in temp_input else temp_input + " - ")
             var.num_emails_per_address = str(GUI.lineEdit_num_per_address.text())
         except:
             self.logger.error(traceback.format_exc())
@@ -947,7 +950,7 @@ class MyMainClass:
                          self.total_email_to_be_sent) * 100
                 GUI.label_compose_status.setText(
                     f"Total Email Sent : {var.send_campaign_email_count}")
-                # GUI.progressBar_compose.setValue(value)
+                GUI.progressBar_compose.setValue(value)
 
         except Exception as e:
             logger.error("Error at main.py->update_compose_progressbar : {}".format(e))
