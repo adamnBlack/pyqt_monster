@@ -153,6 +153,7 @@ class AirtableConfig:
         pass
 
 
+CONFUSABLES_CHARACTER = [" ", " ", " ", " "]
 add_custom_hostname = False
 
 email_failed = 0

@@ -7,6 +7,10 @@ from pyautogui import alert
 import uuid
 
 
+def random_boolean(percent=50):
+    return random.randrange(100) < percent
+
+
 def is_number(s):
     try:
         float(s)
@@ -179,7 +183,7 @@ def format_email(text, FIRSTFROMNAME, LASTFROMNAME, one, two, three, four, five,
     text = text.replace('[6]', str(six))
     text = text.replace('[TONAME]', str(TONAME))
 
-    if var.body_type == "Html" and var.email_tracking_state == True and source != None:
+    if var.body_type == "Html" and var.email_tracking_state is True and source is not None:
         text = text.split("</body>")
         text[0] = text[0] + f"<img src='{var.email_tracking_link()}'></body>"
         text = "".join(text)
@@ -197,6 +201,9 @@ def format_email(text, FIRSTFROMNAME, LASTFROMNAME, one, two, three, four, five,
         text = text.replace('[LINEBREAK]', "<br>\n")  # replace linebreaks with
     else:
         text = text.replace('[LINEBREAK]', "\n")
+
+    if random_boolean():
+        text = text.replace(" ", random.choice(var.CONFUSABLES_CHARACTER))
 
     return text
 

@@ -30,7 +30,7 @@
         "limit_of_thread": 100,
         "compose_email_subject": "Personal",
         "compose_email_body": "Hey,what's up? [4]",
-        "compose_email_body_html": "<html>\n    <body>\n        <p>{Hey|Hi|Hello} [TONAME],<br>\n        I'm reaching out to you because i {noticed|came across|found|visited} you website {the other day|yesterday} and thought you'd be interested in a {collaboration|partnership}.<br>\n        {Hope you don't mind my outreach!|Looking forward to your reply!}<br>\n\n\t<a href=\"https://www.w3schools.com\">Visit W3Schools</a>\n        </p>\n    </body>\n</html>",
+        "compose_email_body_html": "[1]\n\n[2] [LINEBREAK] [3]\n",
         "login_email": "ss@gmail.com",
         "tracking": {
             "analytics_account": "UA-33237782-1",
