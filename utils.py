@@ -105,6 +105,7 @@ def update_config_json(alternative_name=None):
                 "followup_days": var.followup_days,
                 "followup_subject": var.followup_subject,
                 "followup_body": var.followup_body,
+                "hostname_list": var.hostname_list,
                 "airtable": {
                     "api_key": var.AirtableConfig.api_key,
                     "base_id": var.AirtableConfig.base_id,
@@ -158,6 +159,7 @@ def get_config_json():
                 "followup_days": var.followup_days,
                 "followup_subject": var.followup_subject,
                 "followup_body": var.followup_body,
+                "hostname_list": var.hostname_list,
                 "airtable": {
                     "api_key": var.AirtableConfig.api_key,
                     "base_id": var.AirtableConfig.base_id,

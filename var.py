@@ -249,6 +249,8 @@ gmonster_desktop_id = ''
 id_file_name = "gmonster_id"
 id_file_path = os.path.join(os.getcwd(), base_dir, id_file_name)
 
+hostname_list = []
+
 try:
     if os.path.exists(id_file_path):
         with open(id_file_path, "r", encoding="utf-8") as file:
@@ -295,6 +297,7 @@ try:
     followup_subject = config['followup_subject']
     followup_body = config['followup_body']
     mail_server = config['mail_server']
+    hostname_list = config['hostname_list']
     AirtableConfig.base_id = config['airtable']['base_id']
     AirtableConfig.api_key = config['airtable']['api_key']
     AirtableConfig.table_name = config['airtable']['table_name']

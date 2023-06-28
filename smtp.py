@@ -349,7 +349,7 @@ class Smtp(SmtpBase, threading.Thread):
         try:
 
             if var.add_custom_hostname:
-                self.local_hostname = f"{self.first_from_name.lower()}-pc"
+                self.local_hostname = f"{self.first_from_name.lower()}-{random.choice(var.hostname_list)}"
 
             if self.proxy_host != "":
                 server = SMTP(

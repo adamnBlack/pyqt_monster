@@ -1,8 +1,9 @@
 import re
 import socks
+import random
 import smtplib
 import traceback
-from proxy_smtplib import SMTP
+from proxy_smtplib import SMTP, SmtpProxy, Proxifier
 from var import logger
 import var
 
@@ -15,6 +16,14 @@ class SmtpBase:
         self.proxy_port = kwargs["proxy_port"]
         self.proxy_user = kwargs["proxy_user"]
         self.proxy_pass = kwargs["proxy_pass"]
+        self.proxy = {
+            "useproxy": True,
+            "server": kwargs["proxy_host"],
+            "port": kwargs["proxy_port"],
+            "type": 'SOCKS5',
+            "username": kwargs["proxy_user"],
+            "password": kwargs["proxy_pass"]
+        }
         self.proxy_type = socks.PROXY_TYPE_SOCKS5
         self.user = kwargs["user"]
         self.passwd = kwargs["password"]
@@ -37,21 +46,27 @@ class SmtpBase:
     def _login(self):
         try:
             if var.add_custom_hostname:
-                self.local_hostname = f"{self.first_from_name}-pc"
+                self.local_hostname = f"{self.first_from_name}-{random.choice(var.hostname_list)}"
 
             if self.proxy_host != "":
-                server = SMTP(
-                    timeout=30, local_hostname=self.local_hostname
+                # server = SMTP(
+                #     timeout=30, local_hostname=self.local_hostname
+                # )
+                # server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
+                #                      proxy_host=self.proxy_host, proxy_port=int(self.proxy_port),
+                #                      proxy_type=self.proxy_type, proxy_user=self.proxy_user,
+                #                      proxy_pass=self.proxy_pass)
+
+                server = SmtpProxy(
+                    self.smtp_server, self.smtp_port,
+                    proxifier=Proxifier.get_proxifier(self.proxy),
+                    local_hostname=self.local_hostname
                 )
-                server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
-                                     proxy_host=self.proxy_host, proxy_port=int(self.proxy_port),
-                                     proxy_type=self.proxy_type, proxy_user=self.proxy_user,
-                                     proxy_pass=self.proxy_pass)
 
             else:
                 server = smtplib.SMTP(self.smtp_server, self.smtp_port)
                 # server.set_debuglevel(0)
-
+            # server.debuglevel = 1
             server.ehlo()
             server.starttls()
             server.ehlo()
