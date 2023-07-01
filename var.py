@@ -326,13 +326,13 @@ db_path = "database/group.db"
 
 if __name__ == "__main__":
     # do this at beginning of your application
-    myapp = SingleInstance()
+    # myapp = SingleInstance()
 
     # check is another instance of same program running
-    if myapp.already_running():
-        alert(text="Another instance of this program is already running")
-        logger.info("Another instance of this program is already running")
-        sys.exit(1)
+    # if myapp.already_running():
+    #     alert(text="Another instance of this program is already running")
+    #     logger.info("Another instance of this program is already running")
+    #     sys.exit(1)
 
     is_testing_environment = 0
     try:
