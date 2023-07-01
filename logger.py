@@ -1,13 +1,13 @@
 import logging
 import os
 
-base_dir = "database"
+base_dir = "logs"
 
 logFormatter = logging.Formatter("%(asctime)s [%(threadName)-12.12s] [%(levelname)-5.5s]  %(message)s")
 logger = logging.getLogger()
 
 fileHandler = logging.FileHandler(f"{os.path.join(os.getcwd(), base_dir)}/"
-                                  f"app.log")
+                                  f"gmonster.log")
 fileHandler.setFormatter(logFormatter)
 logger.addHandler(fileHandler)
 

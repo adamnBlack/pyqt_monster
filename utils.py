@@ -122,7 +122,7 @@ def update_config_json(alternative_name=None):
                 json.dump(data, json_file, indent=4)
             logger.info("Scheduler Campaign config saved")
         else:
-            with open(var.base_dir+'/config.json', 'w') as json_file:
+            with open(var.config_file_path, 'w') as json_file:
                 json.dump(data, json_file, indent=4)
             logger.info("config updated")
     except Exception as e:

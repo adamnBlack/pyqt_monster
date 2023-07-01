@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 from followup_smtp import FollowUpSend
-from proxy_smtplib import SMTP
+from proxy_smtplib import SMTP, SmtpProxy, Proxifier
 from smtp_base import SmtpBase
 from email.mime.multipart import MIMEMultipart
 from email.header import Header
@@ -352,21 +352,27 @@ class Smtp(SmtpBase, threading.Thread):
                 self.local_hostname = f"{self.first_from_name.lower()}-{random.choice(var.hostname_list)}"
 
             if self.proxy_host != "":
-                server = SMTP(
-                    timeout=30, local_hostname=self.local_hostname)
-                server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
-                                     proxy_host=self.proxy_host, proxy_port=int(self.proxy_port),
-                                     proxy_type=socks.PROXY_TYPE_SOCKS5,
-                                     proxy_user=self.proxy_user, proxy_pass=self.proxy_pass)
-                server.set_debuglevel(1)
+                # server = SMTP(
+                #     timeout=30, local_hostname=self.local_hostname)
+                # server.connect_proxy(host=self.smtp_server, port=self.smtp_port,
+                #                      proxy_host=self.proxy_host, proxy_port=int(self.proxy_port),
+                #                      proxy_type=socks.PROXY_TYPE_SOCKS5,
+                #                      proxy_user=self.proxy_user, proxy_pass=self.proxy_pass)
+                # server.set_debuglevel(0)
+
+                server = SmtpProxy(
+                    self.smtp_server, self.smtp_port,
+                    proxifier=Proxifier.get_proxifier(self.proxy),
+                    local_hostname=self.local_hostname
+                )
             else:
                 server = smtplib.SMTP(self.smtp_server, self.smtp_port)
                 server.set_debuglevel(0)
 
+            server.ehlo()
             server.starttls()
             server.ehlo()
             server.login(self.user, self.passwd)
-
 
             return server
 

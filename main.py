@@ -16,6 +16,7 @@ from pyautogui import alert, confirm
 import traceback
 import datetime
 import signal
+import subprocess
 
 from gui import Ui_MainWindow
 
@@ -242,6 +243,7 @@ class MyMainClass:
         GUI.pushButton_delete.clicked.connect(self.batch_delete)
         GUI.pushButton_forward.clicked.connect(self.forward)
         GUI.pushButton_test.clicked.connect(self.test_send)
+        GUI.pushButton_launch_wum.clicked.connect(self.launch_wum)
         GUI.textBrowser_show_email.anchorClicked.connect(
             QtGui.QDesktopServices.openUrl
         )
@@ -328,6 +330,9 @@ class MyMainClass:
         )
 
         threading.Thread(target=self.reset_schedule_campaign_job_list, daemon=True, args=[]).start()
+
+    def launch_wum(self):
+        subprocess.Popen([os.path.join(os.getcwd(), var.wum_exe_path)])
 
     def start_auto_fire_responses_timer(self):
         if GUI.checkBox_auto_fire_responses_webhook.isChecked():
@@ -1299,13 +1304,6 @@ else:
     import var
     from var import logger
     import imap
-    import smtp
-    import smtp
-    import smtp
-    import smtp
-    import smtp
-    import smtp
-    import smtp
     import smtp
     from utils import update_config_json, prepare_html, is_number, get_config_json
     from progressbar import Delete_email
