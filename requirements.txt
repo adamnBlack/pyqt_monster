@@ -1,3 +1,4 @@
+airtable==0.4.8
 altgraph==0.17
 APScheduler==3.9.1
 astroid==2.8.0
