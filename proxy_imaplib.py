@@ -15,7 +15,7 @@ def sslwrap(func):
 class IMAP(imaplib.IMAP4_SSL):
     def __init__(self, proxy_host='', proxy_port=0, proxy_type=socks.HTTP,
                  proxy_user='', proxy_pass='', host='', port=imaplib.IMAP4_PORT,
-                 keyfile="key.pem", certfile="certificate.pem", ssl_context=None, timeout=socket._GLOBAL_DEFAULT_TIMEOUT):
+                 keyfile=None, certfile=None, ssl_context=None, timeout=socket._GLOBAL_DEFAULT_TIMEOUT):
 
         if ssl_context is not None and keyfile is not None:
             raise ValueError("ssl_context and keyfile arguments are mutually "

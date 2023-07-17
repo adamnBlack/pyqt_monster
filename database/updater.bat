@@ -1,3 +1,4 @@
+
 @echo off
 
 rem Wait for a period of time (e.g., 20 seconds)
@@ -8,10 +9,11 @@ set "tempExePath=.\temp\GMonster.exe"  rem Replace with the actual path of the u
 set "originalExePath=.\GMonster.exe"  rem Replace with the actual path of the original executable
 copy /y "%tempExePath%" "%originalExePath%"
 
-set "tempExePath=.\temp\WUM.exe"  rem Replace with the actual path of the updated executable
-set "originalExePath=.\WUM.exe"  rem Replace with the actual path of the original executable
-copy /y "%tempExePath%" "%originalExePath%"
-
 rem Execute the updated version of the application
 start "" "%originalExePath%"
 
+set "tempExePath=.\temp\WUM.exe"  rem Replace with the actual path of the updated executable
+set "originalExePath=.\WUM.exe"  rem Replace with the actual path of the original executable
+copy /y "%tempExePath%" "%originalExePath%"
+            
+            
