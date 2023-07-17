@@ -331,6 +331,8 @@ class MyMainClass:
 
         threading.Thread(target=self.reset_schedule_campaign_job_list, daemon=True, args=[]).start()
 
+        threading.Thread(target=update_checker, daemon=True, args=[]).start()
+
     def launch_wum(self):
         subprocess.Popen([os.path.join(os.getcwd(), var.wum_exe_path)])
 
@@ -758,7 +760,7 @@ class MyMainClass:
                     var.thread_open = 0
 
                     dialog = QtWidgets.QDialog()
-                    dialog.ui = Delete_email(dialog)
+                    dialog.ui = DeleteEmail(dialog)
                     dialog.exec_()
 
                     option = str(GUI.comboBox_date_sort.currentText())
@@ -1306,13 +1308,14 @@ else:
     import imap
     import smtp
     from utils import update_config_json, prepare_html, is_number, get_config_json
-    from progressbar import Delete_email
+    from progressbar import DeleteEmail
     from download_email import Download
     from campaign_reply import Reply
     from send_dialog import Send
     from table_view import TableModel, InLineEditDelegate
     import database
     from webhook import start_inbox_stream
+    from update_checker import update_checker
 
     myMC = MyMainClass()
 

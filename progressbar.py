@@ -1,4 +1,4 @@
-from PyQt5 import QtCore, QtGui
+from PyQt5 import QtCore, QtGui, QtWidgets
 from threading import Thread
 import var
 from var import logger
@@ -7,7 +7,11 @@ import os
 import requests
 import sys
 import time
+import shutil
+import subprocess
+import traceback
 from PyQt5.QtCore import pyqtSignal, QObject
+from zipfile import ZipFile
 
 cancel = False
 total_email_count = 0
@@ -19,7 +23,7 @@ class Communicate(QObject):
 
 
 class Download(Ui_Dialog):
-    def __init__(self, dialog, name, link, size, path):
+    def __init__(self, dialog, name, link, size):
         Ui_Dialog.__init__(self)
         self.setupUi(dialog)
         self.dialog = dialog
@@ -30,7 +34,7 @@ class Download(Ui_Dialog):
         self.link = link
         self.size = size
         self.size_in_kb = int(round(size/1024))
-        self.file_path = path
+        self.file_path = var.update_temp_path
         self.pushButton_cancel.clicked.connect(self.cancel)
         self.label_status.setText(
             "Dowloaded  {} of {} kb".format(0, self.size_in_kb))
@@ -54,35 +58,46 @@ class Download(Ui_Dialog):
     def download(self):
         global cancel
         try:
-            # ua = UserAgent()
-            # userAgent = ua.random
             headers = {'user-agent': 'Wget/1.16 (linux-gnu)'}
-            # headers = {'user-agent': '{}'.format(userAgent)}
-            # print(headers)
+
             filepath = "{}/GMonster{}.zip".format(self.file_path, self.name)
-            print(filepath)
+
+            temp_path = f"{self.file_path}"
+            if not os.path.exists(temp_path):
+                os.makedirs(temp_path)
+                logger.info("Created temp dir for extraction process")
+
             url = var.api + "verify/version/download/{}".format(self.name)
             response = requests.post(url, timeout=10)
             data = response.json()
-            print(data)
+
             url = self.link
             r = requests.get(url, stream=True, headers=headers)
             downloaded = 0
             with open(filepath, 'wb') as f:
                 for chunk in r.iter_content(chunk_size=1024):
                     if chunk:
-                        if cancel == True:
+                        if cancel:
                             break
                         downloaded += len(chunk)
                         print("Dowloaded {}/{}".format(downloaded,
                               self.size), end='\r')
                         self.signal.s.emit(int(round(downloaded/1024)), "")
                         f.write(chunk)
-            print("download finished")
+
+            logger.info("Update downloaded")
             self.signal.s.emit(int(round(downloaded/1024)),
                                "Download Finished")
-        except Exception as e:
-            print("Error at download update: {}".format(e))
+
+            with ZipFile(filepath, 'r') as zip_file:
+                zip_file.extractall(path=temp_path)
+
+            subprocess.Popen([var.update_bat_file_path], shell=True)
+
+            logger.info("Closing the application.")
+            QtCore.QCoreApplication.quit()
+        except:
+            logger.info("Error at download update: {}".format(traceback.format_exc()))
 
 
 def set_icon(obj):
@@ -98,7 +113,7 @@ def set_icon(obj):
         print(e)
 
 
-class Delete_email(Ui_Dialog):
+class DeleteEmail(Ui_Dialog):
     def __init__(self, dialog):
         global delete_status
         delete_status = True

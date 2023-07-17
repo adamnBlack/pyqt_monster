@@ -250,26 +250,31 @@ class myMainClass():
                         data['name'], data['link'], data['size'])
                 else:
                     mainWindow.close()
-                    print("Download rejected")
+                    logger.info("Download rejected")
             else:
                 self.update_needed = True
 
             GUI.label.setText("Update checking finished. Now you can login.")
-            print("Check Update finished")
+            logger.info("Check Update finished")
         except Exception as e:
-            print("error at check_update: {}".format(e))
+            logger.error("error at check_update: {}".format(e))
 
     def path(self, name, link, size):
         from progressbar import Download
         print(name, link, size)
-        path = str(QFileDialog.getExistingDirectory(None, "Select Directory"))
-        if path:
-            print(path)
-            dialog = QtWidgets.QDialog()
-            dialog.ui = Download(dialog, name, link, size, path)
-            dialog.exec_()
-        else:
-            print("Download cancelled")
+        # path = str(QFileDialog.getExistingDirectory(None, "Select Directory"))
+        # if path:
+        #     print(path)
+        #     dialog = QtWidgets.QDialog()
+        #     dialog.ui = Download(dialog, name, link, size, path)
+        #     dialog.exec_()
+        # else:
+        #     print("Download cancelled")
+
+        dialog = QtWidgets.QDialog()
+        dialog.ui = Download(dialog, name, link, size)
+        dialog.exec_()
+
         mainWindow.close()
 
 
