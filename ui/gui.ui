@@ -3444,7 +3444,26 @@ QPushButton:pressed {
            <string/>
           </property>
           <layout class="QGridLayout" name="gridLayout_16">
-           <item row="4" column="1">
+           <item row="3" column="0" alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="label_12">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Inbox Blacklist</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
             <widget class="QCheckBox" name="checkBox_auto_fire_responses_webhook">
              <property name="minimumSize">
               <size>
@@ -3459,28 +3478,6 @@ QPushButton:pressed {
              </property>
              <property name="text">
               <string>Auto Fire Responses Webhook</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0" alignment="Qt::AlignHCenter">
-            <widget class="QLabel" name="label_10">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>Webhook Link</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
              </property>
             </widget>
            </item>
@@ -3509,30 +3506,8 @@ QPushButton:pressed {
              </property>
             </widget>
            </item>
-           <item row="1" column="1">
-            <widget class="QLineEdit" name="lineEdit_target_blacklist">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>25</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Calibri</family>
-               <pointsize>11</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">background-color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="frame">
-              <bool>false</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0" alignment="Qt::AlignHCenter">
-            <widget class="QLabel" name="label_12">
+           <item row="0" column="0" alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="label_10">
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -3546,11 +3521,14 @@ QPushButton:pressed {
               </font>
              </property>
              <property name="text">
-              <string>Inbox Blacklist</string>
+              <string>Webhook Link</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
              </property>
             </widget>
            </item>
-           <item row="3" column="1">
+           <item row="4" column="1">
             <widget class="QCheckBox" name="checkBox_responses_webhook">
              <property name="minimumSize">
               <size>
@@ -3568,7 +3546,7 @@ QPushButton:pressed {
              </property>
             </widget>
            </item>
-           <item row="5" column="1">
+           <item row="6" column="1">
             <widget class="QPushButton" name="pushButton_clear_cached_targets">
              <property name="minimumSize">
               <size>
@@ -3620,8 +3598,8 @@ QPushButton:pressed {
              </property>
             </widget>
            </item>
-           <item row="1" column="0" alignment="Qt::AlignHCenter">
-            <widget class="QLabel" name="label_11">
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="lineEdit_target_blacklist">
              <property name="minimumSize">
               <size>
                <width>0</width>
@@ -3634,12 +3612,15 @@ QPushButton:pressed {
                <pointsize>11</pointsize>
               </font>
              </property>
-             <property name="text">
-              <string>Target Blacklist</string>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
              </property>
             </widget>
            </item>
-           <item row="2" column="1">
+           <item row="3" column="1">
             <widget class="QLineEdit" name="lineEdit_inbox_blacklist">
              <property name="minimumSize">
               <size>
@@ -3661,7 +3642,7 @@ QPushButton:pressed {
              </property>
             </widget>
            </item>
-           <item row="7" column="1">
+           <item row="8" column="1">
             <widget class="QCheckBox" name="checkBox_configuration_followup_enabled">
              <property name="minimumSize">
               <size>
@@ -3679,7 +3660,26 @@ QPushButton:pressed {
              </property>
             </widget>
            </item>
-           <item row="8" column="1">
+           <item row="1" column="0" alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="label_11">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Target Blacklist</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="1">
             <widget class="QPushButton" name="pushButton_launch_wum">
              <property name="minimumSize">
               <size>
@@ -3728,6 +3728,47 @@ QPushButton:pressed {
              </property>
              <property name="text">
               <string>Launch WUM</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="lineEdit_inbox_whitelist">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="frame">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" alignment="Qt::AlignHCenter">
+            <widget class="QLabel" name="label_20">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Calibri</family>
+               <pointsize>11</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Target Whitelist</string>
              </property>
             </widget>
            </item>

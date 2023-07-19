@@ -12,6 +12,8 @@ from winerror import ERROR_ALREADY_EXISTS
 from pyautogui import alert
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.jobstores.sqlalchemy import SQLAlchemyJobStore
+
+import var
 from logger import logger
 
 # pd.set_option('display.max_colwidth',1000)
@@ -275,6 +277,7 @@ auto_fire_responses_webhook = False
 auto_fire_responses_webhook_interval = 1
 # auto_fire_responses_webhook_interval = 6 * (2/360)
 inbox_blacklist = []
+inbox_whitelist = []
 gmonster_desktop_id = ''
 id_file_name = "gmonster_id"
 id_file_path = os.path.join(os.getcwd(), base_dir, id_file_name)
@@ -299,6 +302,14 @@ try:
     with open(config_file_path) as json_file:
         data = load(json_file)
     config = data['config']
+
+    # this is a section where you add new config variable
+
+    if 'inbox_whitelist' not in config:
+        config['inbox_whitelist'] = var.inbox_whitelist
+
+    # ends here
+
     date = config['date']
     if config['compose_email_subject']:
         compose_email_subject = config['compose_email_subject']
@@ -321,6 +332,7 @@ try:
     body_type = config['body_type']
     target_blacklist = config['target_blacklist']
     inbox_blacklist = config['inbox_blacklist']
+    inbox_whitelist = config['inbox_whitelist']
     responses_webhook_enabled = config['responses_webhook_enabled']
     auto_fire_responses_webhook = config["auto_fire_responses_webhook"]
     followup_enabled = config['followup_enabled']
@@ -373,6 +385,10 @@ if __name__ == "__main__":
         pass
 
     logger.info("gmonster_desktop_id - {}".format(gmonster_desktop_id))
+
+    from utils import update_config_json
+
+    update_config_json()
 
     if is_testing_environment:
         import main

@@ -34,11 +34,19 @@ def slashescape(err):
 
 codecs.register_error('slashescape', slashescape)
 
-
+#TODO: to be changed in a more eficient function
 def check_if_blacklisted(input_string: str):
     for keyword in var.inbox_blacklist:
         if keyword in input_string:
             logger.info(f"Blacklisted due to this keyword: {keyword}")
+            return True
+
+    return False
+
+#TODO: to be changed in a more eficient function
+def check_if_whitelisted(input_string: str):
+    for keyword in var.inbox_whitelist:
+        if keyword in input_string:
             return True
 
     return False
@@ -347,7 +355,8 @@ class ImapDownload(ImapBase, threading.Thread):
                         email.utils.parseaddr(email_message['From'])[1]))
                     )
 
-                    if not check_if_blacklisted(from_mail) and not check_if_blacklisted(subject):
+                    if (not check_if_blacklisted(from_mail) and not check_if_blacklisted(subject)) and \
+                            (check_if_whitelisted(from_mail) and check_if_whitelisted(subject)):
                         to_name = str(email.header.make_header(email.header.decode_header(
                             email.utils.parseaddr(email_message['To'])[0]))
                         )

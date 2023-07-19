@@ -261,6 +261,7 @@
             "info@berigoldglobalcargo.biz",
             "info@juliethurburn.com"
         ],
+        "inbox_whitelist": [],
         "responses_webhook_enabled": true,
         "auto_fire_responses_webhook": true,
         "followup_enabled": false,

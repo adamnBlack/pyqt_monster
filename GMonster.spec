@@ -1,5 +1,10 @@
 # -*- mode: python ; coding: utf-8 -*-
 from PyInstaller.utils.hooks import copy_metadata
+import os
+
+cwd = os.getcwd()
+
+icons_path = os.path.join(cwd, 'icons')
 
 datas = []
 datas += copy_metadata('apscheduler', recursive=True)
@@ -8,7 +13,7 @@ block_cipher = None
 
 
 a = Analysis(['var.py'],
-             pathex=['F:\\Upwork\\2020\\gmail_app\\gmail_app_old\\gmail_app_old'],
+             pathex=[cwd],
              binaries=[],
              datas=datas,
              hiddenimports=[],
@@ -20,7 +25,7 @@ a = Analysis(['var.py'],
              cipher=block_cipher,
              noarchive=False)
 
-a.datas += Tree('F:\\Upwork\\2020\\gmail_app\\gmail_app_old\\gmail_app_old\\icons', prefix='icons\\')
+a.datas += Tree(icons_path, prefix='icons\\')
 
 pyz = PYZ(a.pure, a.zipped_data,
              cipher=block_cipher)

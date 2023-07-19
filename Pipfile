@@ -4,10 +4,23 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+pandas = "*"
+pyqt5 = "*"
 socks = "*"
 pysocks = "*"
+pyautogui = "*"
+requests = "*"
+apscheduler = "*"
+pywin32 = "*"
+sqlalchemy = "*"
+pyairtable = "*"
+bs4 = "*"
+idna = "*"
+pyinstaller = "*"
 
 [dev-packages]
+pylint = "*"
 
 [requires]
-python_version = "3.11.2"
+python_version = "3.9"
+python_full_version = "3.9.0"

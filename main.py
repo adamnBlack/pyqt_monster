@@ -72,6 +72,7 @@ class MyMainClass:
         GUI.lineEdit_webhook_link.setText(str(var.webhook_link))
         GUI.lineEdit_target_blacklist.setText(",".join(var.target_blacklist))
         GUI.lineEdit_inbox_blacklist.setText(",".join(var.inbox_blacklist))
+        GUI.lineEdit_inbox_whitelist.setText(",".join(var.inbox_whitelist))
 
         # campaign page
         GUI.lineEdit_subject.setText(var.compose_email_subject)
@@ -312,6 +313,9 @@ class MyMainClass:
         )
         GUI.lineEdit_inbox_blacklist.textChanged.connect(
             self.change_inbox_blacklist
+        )
+        GUI.lineEdit_inbox_whitelist.textChanged.connect(
+            self.change_inbox_whitelist
         )
         GUI.lineEdit_configuration_followup_days.textChanged.connect(
             self.change_followup_days
@@ -567,6 +571,14 @@ class MyMainClass:
             var.inbox_blacklist = list(filter(None, var.inbox_blacklist))
         else:
             var.inbox_blacklist = list()
+
+    def change_inbox_whitelist(self):
+        inbox_whitelist = GUI.lineEdit_inbox_whitelist.text().strip().replace(" ", "")
+        if inbox_whitelist:
+            var.inbox_whitelist = inbox_whitelist.split(",")
+            var.inbox_whitelist = list(filter(None, var.inbox_whitelist))
+        else:
+            var.inbox_whitelist = list()
 
     def update_checkbox_status(self):
         var.add_custom_hostname = GUI.checkBox_add_custom_hostname.isChecked()

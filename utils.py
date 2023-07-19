@@ -30,11 +30,11 @@ def difference_between_time(first_time, last_time):
 
 def prepare_html(body):
     # print(body)
-    mails = re.findall('[\w\.-]+@[\w\.-]+\.\w+', body)
-    urls = re.findall('https?://[^\s<>"]+|www\.[^\s<>"]+', body)
+    mails = re.findall(r'[\w\.-]+@[\w\.-]+\.\w+', body)
+    urls = re.findall(r'https?://[^\s<>"]+|www\.[^\s<>"]+', body)
     for item in urls:
         try:
-            a_tag = '<a href="{}">{}</a>'.format(item, item)
+            a_tag = f'<a href="{item}">{item}</a>'
             if "<{}>".format(item) in body:
                 body = body.replace("<{}>".format(item), a_tag)
             else:
@@ -99,6 +99,7 @@ def update_config_json(alternative_name=None):
                 "body_type": var.body_type,
                 "target_blacklist": var.target_blacklist,
                 "inbox_blacklist": var.inbox_blacklist,
+                "inbox_whitelist": var.inbox_whitelist,
                 "responses_webhook_enabled": var.responses_webhook_enabled,
                 "auto_fire_responses_webhook": var.auto_fire_responses_webhook,
                 "followup_enabled": var.followup_enabled,
@@ -154,6 +155,7 @@ def get_config_json():
                 "body_type": var.body_type,
                 "target_blacklist": var.target_blacklist,
                 "inbox_blacklist": var.inbox_blacklist,
+                "inbox_whitelist": var.inbox_whitelist,
                 "responses_webhook_enabled": var.responses_webhook_enabled,
                 "followup_enabled": var.followup_enabled,
                 "followup_days": var.followup_days,
