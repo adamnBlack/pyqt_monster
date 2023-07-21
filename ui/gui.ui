@@ -3768,7 +3768,7 @@ QPushButton:pressed {
               </font>
              </property>
              <property name="text">
-              <string>Target Whitelist</string>
+              <string>Inbox Whitelist</string>
              </property>
             </widget>
            </item>

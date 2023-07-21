@@ -17,6 +17,7 @@ pyairtable = "*"
 bs4 = "*"
 idna = "*"
 pyinstaller = "*"
+openpyxl = "*"
 
 [dev-packages]
 pylint = "*"

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'ui/gui.ui'
+# Form implementation generated from reading ui file 'ui\gui.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -2272,7 +2272,7 @@ class Ui_MainWindow(object):
         self.checkBox_configuration_followup_enabled.setText(_translate("MainWindow", "FollowUp Enabled"))
         self.label_11.setText(_translate("MainWindow", "Target Blacklist"))
         self.pushButton_launch_wum.setText(_translate("MainWindow", "Launch WUM"))
-        self.label_20.setText(_translate("MainWindow", "Target Whitelist"))
+        self.label_20.setText(_translate("MainWindow", "Inbox Whitelist"))
         self.label_valid_input.setText(_translate("MainWindow", "Campaign Name field: letters, numbers and \"_\" only. (no spaces)"))
         self.label_7.setText(_translate("MainWindow", "Analytics Account"))
         self.label_9.setText(_translate("MainWindow", "Email Tracking Configuration"))

@@ -29,7 +29,7 @@ class ImapBase:
             self.imap_server = var.mail_server[mail_vendor]["imap"]["server"]
             self.imap_port = var.mail_server[mail_vendor]["imap"]["port"]
         except:
-            logger.error(f"SmtpBase error: {traceback.format_exc()}")
+            logger.error(f"ImapBase error: {traceback.format_exc()}")
 
             raise
 

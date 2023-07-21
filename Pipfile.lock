@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "374c7c4fdecde7195503903395a1b27a6b0a647cb55ebf7a8a94f2a7c7f2465a"
+            "sha256": "a85fa32e2a703b2343ef1c41f7d7b6685d1fb5183ba72c13963e812ed4eb58d3"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -150,6 +150,14 @@
             ],
             "version": "==1.1"
         },
+        "et-xmlfile": {
+            "hashes": [
+                "sha256:8eb9e2bc2f8c97e37a2dc85a09ecdcdec9d8a396530a6d5a33b30b9a92da0c5c",
+                "sha256:a2ba85d1d6a74ef63837eed693bcb89c3f752169b0e3e7ae5b16ca5e1b3deada"
+            ],
+            "markers": "python_version >= '3.6'",
+            "version": "==1.1.0"
+        },
         "greenlet": {
             "hashes": [
                 "sha256:03a8f4f3430c3b3ff8d10a2a86028c660355ab637cee9333d63d66b56f09d52a",
@@ -268,6 +276,14 @@
             ],
             "markers": "python_version < '3.10'",
             "version": "==1.25.1"
+        },
+        "openpyxl": {
+            "hashes": [
+                "sha256:a6f5977418eff3b2d5500d54d9db50c8277a368436f4e4f8ddb1be3422870184",
+                "sha256:f91456ead12ab3c6c2e9491cf33ba6d08357d802192379bb482f1033ade496f5"
+            ],
+            "index": "pypi",
+            "version": "==3.1.2"
         },
         "pandas": {
             "hashes": [
@@ -411,11 +427,11 @@
         },
         "pyinstaller-hooks-contrib": {
             "hashes": [
-                "sha256:cca6cdc31e739954b5bbbf05ef3f71fe448e9cdacad3a2197243bcf99bea2c00",
-                "sha256:e60185332a6b56691f471d364e9e9405b03091ca27c96e0dbebdedb7624457fd"
+                "sha256:596a72009d8692b043e0acbf5e1b476d93149900142ba01845dded91a0770cb5",
+                "sha256:aa6d7d038814df6aa7bec7bdbebc7cb4c693d3398df858f6062957f0797d397b"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==2023.5"
+            "version": "==2023.6"
         },
         "pymsgbox": {
             "hashes": [
