@@ -118,6 +118,9 @@ class MyMainClass:
         GUI.checkBox_responses_webhook.setChecked(var.responses_webhook_enabled)
         GUI.checkBox_auto_fire_responses_webhook.setChecked(var.auto_fire_responses_webhook)
 
+        GUI.checkBox_inbox_whitelist.setChecked(var.inbox_whitelist_checkbox)
+        GUI.checkBox_space_encoding.setChecked(var.space_encoding_checkbox)
+
         self.auto_fire_responses_webhook_timer = QtCore.QTimer()
         self.auto_fire_responses_webhook_timer.setInterval(
             var.auto_fire_responses_webhook_interval * 3600 * 1000
@@ -217,6 +220,13 @@ class MyMainClass:
 
         GUI.pushButton_database_load_target_from_airtable.clicked.connect(
             self.pull_target_from_airtable
+        )
+
+        GUI.checkBox_space_encoding.stateChanged.connect(
+            self.update_checkbox_status
+        )
+        GUI.checkBox_inbox_whitelist.stateChanged.connect(
+            self.update_checkbox_status
         )
 
         GUI.radioButton_html.clicked.connect(self.compose_change)
@@ -362,9 +372,9 @@ class MyMainClass:
             var.download_email_status = True
             _responses_webhook_enabled = var.responses_webhook_enabled
             var.responses_webhook_enabled = True
-            imap.IMAP_.auto_fire_responses_enabled = True
+            imap.ImapDownload.auto_fire_responses_enabled = True
             imap.main(groups)
-            imap.IMAP_.auto_fire_responses_enabled = False
+            imap.ImapDownload.auto_fire_responses_enabled = False
             var.responses_webhook_enabled = _responses_webhook_enabled
             var.download_email_status = False
         except Exception as e:
@@ -589,6 +599,8 @@ class MyMainClass:
         var.email_tracking_state = GUI.checkBox_email_tracking.isChecked()
         var.followup_enabled = GUI.checkBox_configuration_followup_enabled.isChecked()
         var.auto_fire_responses_webhook = GUI.checkBox_auto_fire_responses_webhook.isChecked()
+        var.space_encoding_checkbox = GUI.checkBox_space_encoding.isChecked()
+        var.inbox_whitelist_checkbox = GUI.checkBox_inbox_whitelist.isChecked()
 
     def update_db_file_upload_config(self):
         var.db_file_loading_config['group_a'] = \

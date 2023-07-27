@@ -273,6 +273,9 @@
             "pc",
             "desktop"
         ],
+        "inbox_whitelist_checkbox": true,
+        "space_encoding_checkbox": false,
+        "test_email": "",
         "airtable": {
             "api_key": "keyajjzgPaHo8VjWA",
             "base_id": "appaCmKFn3MWDzjsF",

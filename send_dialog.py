@@ -1,6 +1,9 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import pyqtSignal, QObject
 from threading import Thread
+
+import utils
+import var
 from email_input_gui import Ui_Dialog
 import os, sys
 from smtp import ForwardMail, TestMail
@@ -43,6 +46,7 @@ class Send(Ui_Dialog):
         set_icon(self.dialog)
         self.type = parent
         self.pushButton_send.clicked.connect(self.thread_starter)
+        self.lineEdit_email.setText(var.test_email)
         self.signal = Communicate()
         self.signal.s.connect(self.update_gui)
 
@@ -63,7 +67,8 @@ class Send(Ui_Dialog):
         self.pushButton_send.setDisabled(button)
 
     def forward(self):
-        forward_to = self.lineEdit_email.text().strip()
+        forward_to = var.test_email = self.lineEdit_email.text().strip()
+        Thread(target=utils.update_config_json, args=[]).start()
         if check(forward_to):
             self.signal.s.emit("Sending...", 0, True)
 
@@ -76,7 +81,8 @@ class Send(Ui_Dialog):
             self.signal.s.emit("Enter a proper email address...", 0, False)
 
     def test(self):
-        send_to = self.lineEdit_email.text().strip()
+        send_to = var.test_email = self.lineEdit_email.text().strip()
+        Thread(target=utils.update_config_json, args=[]).start()
         if check(send_to):
             self.signal.s.emit("Sending...", 0, True)
 

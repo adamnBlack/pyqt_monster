@@ -107,6 +107,9 @@ def update_config_json(alternative_name=None):
                 "followup_subject": var.followup_subject,
                 "followup_body": var.followup_body,
                 "hostname_list": var.hostname_list,
+                "inbox_whitelist_checkbox": var.inbox_whitelist_checkbox,
+                "space_encoding_checkbox": var.space_encoding_checkbox,
+                "test_email": var.test_email,
                 "airtable": {
                     "api_key": var.AirtableConfig.api_key,
                     "base_id": var.AirtableConfig.base_id,
@@ -162,6 +165,9 @@ def get_config_json():
                 "followup_subject": var.followup_subject,
                 "followup_body": var.followup_body,
                 "hostname_list": var.hostname_list,
+                "inbox_whitelist_checkbox": var.inbox_whitelist_checkbox,
+                "space_encoding_checkbox": var.space_encoding_checkbox,
+                "test_email": var.test_email,
                 "airtable": {
                     "api_key": var.AirtableConfig.api_key,
                     "base_id": var.AirtableConfig.base_id,
@@ -206,8 +212,9 @@ def format_email(text, FIRSTFROMNAME, LASTFROMNAME, one, two, three, four, five,
     else:
         text = text.replace('[LINEBREAK]', "\n")
 
-    if random_boolean():
-        text = text.replace(" ", random.choice(var.CONFUSABLES_CHARACTER))
+    if var.space_encoding_checkbox:
+        if random_boolean():
+            text = text.replace(" ", random.choice(var.CONFUSABLES_CHARACTER))
 
     return text
 

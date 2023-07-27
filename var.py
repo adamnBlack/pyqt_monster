@@ -283,6 +283,10 @@ id_file_name = "gmonster_id"
 id_file_path = os.path.join(os.getcwd(), base_dir, id_file_name)
 
 hostname_list = []
+inbox_whitelist_checkbox = False
+space_encoding_checkbox = False
+
+test_email = ''
 
 try:
     if os.path.exists(id_file_path):
@@ -307,6 +311,15 @@ try:
 
     if 'inbox_whitelist' not in config:
         config['inbox_whitelist'] = var.inbox_whitelist
+
+    if 'inbox_whitelist_checkbox' not in config:
+        config['inbox_whitelist_checkbox'] = inbox_whitelist_checkbox
+
+    if 'space_encoding_checkbox' not in config:
+        config['space_encoding_checkbox'] = space_encoding_checkbox
+
+    if 'test_email' not in config:
+        config['test_email'] = test_email
 
     # ends here
 
@@ -341,6 +354,9 @@ try:
     followup_body = config['followup_body']
     mail_server = config['mail_server']
     hostname_list = config['hostname_list']
+    inbox_whitelist_checkbox = config['inbox_whitelist_checkbox']
+    space_encoding_checkbox = config['space_encoding_checkbox']
+    test_email = config['test_email']
     AirtableConfig.base_id = config['airtable']['base_id']
     AirtableConfig.api_key = config['airtable']['api_key']
     AirtableConfig.table_name = config['airtable']['table_name']
@@ -401,3 +417,5 @@ if __name__ == "__main__":
 # pyinstaller --onefile --icon=icons/icon.ico --name=GMonster --upx-dir=E:\Upwork\2020\upx-3.96-win64 GMonster.spec
 # pyinstaller GMonster.spec
 # a.datas += Tree('E:\\Upwork\\2020\\gmail_app\\gmail_app\\icons', prefix='icons\\')
+
+# https://plainenglish.io/blog/pyinstaller-exe-false-positive-trojan-virus-resolved-b33842bd3184
