@@ -357,9 +357,10 @@ class ImapDownload(ImapBase, threading.Thread):
                         email.utils.parseaddr(email_message['From'])[1]))
                     )
 
-                    if (not check_if_blacklisted(from_mail) and not check_if_blacklisted(subject)) and \
-                            (var.inbox_whitelist_checkbox and check_if_whitelisted(from_mail)
-                             and check_if_whitelisted(subject)):
+                    if (not check_if_blacklisted(from_mail.lower()) and not check_if_blacklisted(subject.lower())) and \
+                            (((check_if_whitelisted(from_mail.lower()) or check_if_whitelisted(subject.lower()))
+                             or not var.inbox_whitelist_checkbox)):
+
                         to_name = str(email.header.make_header(email.header.decode_header(
                             email.utils.parseaddr(email_message['To'])[0]))
                         )

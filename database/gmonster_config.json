@@ -24,7 +24,7 @@
                 }
             }
         },
-        "date": "2/20/2023",
+        "date": "7/27/2023",
         "num_emails_per_address": "2-10",
         "delay_between_emails": "0-2",
         "limit_of_thread": 100,
@@ -261,7 +261,9 @@
             "info@berigoldglobalcargo.biz",
             "info@juliethurburn.com"
         ],
-        "inbox_whitelist": [],
+        "inbox_whitelist": [
+            "shah"
+        ],
         "responses_webhook_enabled": true,
         "auto_fire_responses_webhook": true,
         "followup_enabled": false,

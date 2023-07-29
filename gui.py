@@ -1878,6 +1878,117 @@ class Ui_MainWindow(object):
         self.label_15.setObjectName("label_15")
         self.gridLayout_24.addWidget(self.label_15, 2, 0, 1, 2, QtCore.Qt.AlignHCenter)
         self.gridLayout_15.addWidget(self.groupBox_11, 0, 2, 2, 1)
+        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_15.addItem(spacerItem, 3, 2, 1, 1)
+        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_15.addItem(spacerItem1, 4, 1, 1, 1)
+        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_15.addItem(spacerItem2, 3, 0, 1, 1)
+        self.pushButton_configuration_save = QtWidgets.QPushButton(self.tab_configuration)
+        self.pushButton_configuration_save.setEnabled(True)
+        self.pushButton_configuration_save.setMinimumSize(QtCore.QSize(0, 25))
+        self.pushButton_configuration_save.setMaximumSize(QtCore.QSize(100, 100))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.pushButton_configuration_save.setFont(font)
+        self.pushButton_configuration_save.setStyleSheet("QPushButton {\n"
+"    border: 1px solid #555;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    color: rgb(255, 255, 255);\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
+"        );\n"
+"    }")
+        self.pushButton_configuration_save.setObjectName("pushButton_configuration_save")
+        self.gridLayout_15.addWidget(self.pushButton_configuration_save, 3, 1, 1, 1)
+        self.groupBox_9 = QtWidgets.QGroupBox(self.tab_configuration)
+        self.groupBox_9.setMaximumSize(QtCore.QSize(16777215, 16777212))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(13)
+        self.groupBox_9.setFont(font)
+        self.groupBox_9.setStyleSheet("")
+        self.groupBox_9.setTitle("")
+        self.groupBox_9.setObjectName("groupBox_9")
+        self.gridLayout_14 = QtWidgets.QGridLayout(self.groupBox_9)
+        self.gridLayout_14.setObjectName("gridLayout_14")
+        self.label_valid_input = QtWidgets.QLabel(self.groupBox_9)
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(12)
+        self.label_valid_input.setFont(font)
+        self.label_valid_input.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_valid_input.setWordWrap(True)
+        self.label_valid_input.setObjectName("label_valid_input")
+        self.gridLayout_14.addWidget(self.label_valid_input, 6, 0, 1, 2, QtCore.Qt.AlignVCenter)
+        self.label_7 = QtWidgets.QLabel(self.groupBox_9)
+        self.label_7.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.label_7.setFont(font)
+        self.label_7.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_7.setObjectName("label_7")
+        self.gridLayout_14.addWidget(self.label_7, 1, 0, 1, 1, QtCore.Qt.AlignHCenter)
+        self.label_9 = QtWidgets.QLabel(self.groupBox_9)
+        self.label_9.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(12)
+        self.label_9.setFont(font)
+        self.label_9.setObjectName("label_9")
+        self.gridLayout_14.addWidget(self.label_9, 0, 1, 1, 1, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
+        self.lineEdit_email_tracking_campaign_name = QtWidgets.QLineEdit(self.groupBox_9)
+        self.lineEdit_email_tracking_campaign_name.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.lineEdit_email_tracking_campaign_name.setFont(font)
+        self.lineEdit_email_tracking_campaign_name.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEdit_email_tracking_campaign_name.setFrame(False)
+        self.lineEdit_email_tracking_campaign_name.setClearButtonEnabled(True)
+        self.lineEdit_email_tracking_campaign_name.setObjectName("lineEdit_email_tracking_campaign_name")
+        self.gridLayout_14.addWidget(self.lineEdit_email_tracking_campaign_name, 3, 1, 1, 1)
+        self.label_8 = QtWidgets.QLabel(self.groupBox_9)
+        self.label_8.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.label_8.setFont(font)
+        self.label_8.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_8.setObjectName("label_8")
+        self.gridLayout_14.addWidget(self.label_8, 3, 0, 1, 1, QtCore.Qt.AlignHCenter)
+        self.lineEdit_email_tracking_analytics_account = QtWidgets.QLineEdit(self.groupBox_9)
+        self.lineEdit_email_tracking_analytics_account.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.lineEdit_email_tracking_analytics_account.setFont(font)
+        self.lineEdit_email_tracking_analytics_account.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEdit_email_tracking_analytics_account.setFrame(False)
+        self.lineEdit_email_tracking_analytics_account.setClearButtonEnabled(True)
+        self.lineEdit_email_tracking_analytics_account.setObjectName("lineEdit_email_tracking_analytics_account")
+        self.gridLayout_14.addWidget(self.lineEdit_email_tracking_analytics_account, 1, 1, 1, 1)
+        self.gridLayout_15.addWidget(self.groupBox_9, 0, 0, 1, 2)
         self.groupBox_10 = QtWidgets.QGroupBox(self.tab_configuration)
         self.groupBox_10.setTitle("")
         self.groupBox_10.setObjectName("groupBox_10")
@@ -2061,117 +2172,6 @@ class Ui_MainWindow(object):
         self.checkBox_space_encoding.setObjectName("checkBox_space_encoding")
         self.gridLayout_16.addWidget(self.checkBox_space_encoding, 12, 2, 1, 1)
         self.gridLayout_15.addWidget(self.groupBox_10, 1, 0, 1, 2)
-        self.groupBox_9 = QtWidgets.QGroupBox(self.tab_configuration)
-        self.groupBox_9.setMaximumSize(QtCore.QSize(16777215, 16777212))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(13)
-        self.groupBox_9.setFont(font)
-        self.groupBox_9.setStyleSheet("")
-        self.groupBox_9.setTitle("")
-        self.groupBox_9.setObjectName("groupBox_9")
-        self.gridLayout_14 = QtWidgets.QGridLayout(self.groupBox_9)
-        self.gridLayout_14.setObjectName("gridLayout_14")
-        self.label_valid_input = QtWidgets.QLabel(self.groupBox_9)
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(12)
-        self.label_valid_input.setFont(font)
-        self.label_valid_input.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_valid_input.setWordWrap(True)
-        self.label_valid_input.setObjectName("label_valid_input")
-        self.gridLayout_14.addWidget(self.label_valid_input, 6, 0, 1, 2, QtCore.Qt.AlignVCenter)
-        self.label_7 = QtWidgets.QLabel(self.groupBox_9)
-        self.label_7.setMinimumSize(QtCore.QSize(0, 25))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.label_7.setFont(font)
-        self.label_7.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_7.setObjectName("label_7")
-        self.gridLayout_14.addWidget(self.label_7, 1, 0, 1, 1, QtCore.Qt.AlignHCenter)
-        self.label_9 = QtWidgets.QLabel(self.groupBox_9)
-        self.label_9.setMinimumSize(QtCore.QSize(0, 25))
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(12)
-        self.label_9.setFont(font)
-        self.label_9.setObjectName("label_9")
-        self.gridLayout_14.addWidget(self.label_9, 0, 1, 1, 1, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
-        self.lineEdit_email_tracking_campaign_name = QtWidgets.QLineEdit(self.groupBox_9)
-        self.lineEdit_email_tracking_campaign_name.setMinimumSize(QtCore.QSize(0, 25))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.lineEdit_email_tracking_campaign_name.setFont(font)
-        self.lineEdit_email_tracking_campaign_name.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.lineEdit_email_tracking_campaign_name.setFrame(False)
-        self.lineEdit_email_tracking_campaign_name.setClearButtonEnabled(True)
-        self.lineEdit_email_tracking_campaign_name.setObjectName("lineEdit_email_tracking_campaign_name")
-        self.gridLayout_14.addWidget(self.lineEdit_email_tracking_campaign_name, 3, 1, 1, 1)
-        self.label_8 = QtWidgets.QLabel(self.groupBox_9)
-        self.label_8.setMinimumSize(QtCore.QSize(0, 25))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.label_8.setFont(font)
-        self.label_8.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_8.setObjectName("label_8")
-        self.gridLayout_14.addWidget(self.label_8, 3, 0, 1, 1, QtCore.Qt.AlignHCenter)
-        self.lineEdit_email_tracking_analytics_account = QtWidgets.QLineEdit(self.groupBox_9)
-        self.lineEdit_email_tracking_analytics_account.setMinimumSize(QtCore.QSize(0, 25))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.lineEdit_email_tracking_analytics_account.setFont(font)
-        self.lineEdit_email_tracking_analytics_account.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.lineEdit_email_tracking_analytics_account.setFrame(False)
-        self.lineEdit_email_tracking_analytics_account.setClearButtonEnabled(True)
-        self.lineEdit_email_tracking_analytics_account.setObjectName("lineEdit_email_tracking_analytics_account")
-        self.gridLayout_14.addWidget(self.lineEdit_email_tracking_analytics_account, 1, 1, 1, 1)
-        self.gridLayout_15.addWidget(self.groupBox_9, 0, 0, 1, 2)
-        spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_15.addItem(spacerItem, 3, 0, 1, 1)
-        spacerItem1 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_15.addItem(spacerItem1, 4, 1, 1, 1)
-        spacerItem2 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_15.addItem(spacerItem2, 3, 2, 1, 1)
-        self.pushButton_configuration_save = QtWidgets.QPushButton(self.tab_configuration)
-        self.pushButton_configuration_save.setEnabled(True)
-        self.pushButton_configuration_save.setMinimumSize(QtCore.QSize(0, 25))
-        self.pushButton_configuration_save.setMaximumSize(QtCore.QSize(100, 100))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.pushButton_configuration_save.setFont(font)
-        self.pushButton_configuration_save.setStyleSheet("QPushButton {\n"
-"    border: 1px solid #555;\n"
-"    border-radius: 3px;\n"
-"    border-style: Solid;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
-"        );\n"
-"    padding: 5px 28px;\n"
-"    color: rgb(255, 255, 255);\n"
-"    }\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
-"        );\n"
-"    }\n"
-"\n"
-"QPushButton:pressed {\n"
-"    border-style: inset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
-"        );\n"
-"    }")
-        self.pushButton_configuration_save.setObjectName("pushButton_configuration_save")
-        self.gridLayout_15.addWidget(self.pushButton_configuration_save, 3, 1, 1, 1)
         self.tabWidget.addTab(self.tab_configuration, "")
         self.gridLayout.addWidget(self.tabWidget, 0, 2, 1, 1)
         MainWindow.setCentralWidget(self.centralwidget)
@@ -2278,7 +2278,12 @@ class Ui_MainWindow(object):
         self.label_17.setText(_translate("MainWindow", "Table Name"))
         self.label_16.setText(_translate("MainWindow", "API Key"))
         self.label_15.setText(_translate("MainWindow", "Base ID"))
-        self.checkBox_inbox_whitelist.setText(_translate("MainWindow", "Enable"))
+        self.pushButton_configuration_save.setText(_translate("MainWindow", "Save"))
+        self.label_valid_input.setText(_translate("MainWindow", "Campaign Name field: letters, numbers and \"_\" only. (no spaces)"))
+        self.label_7.setText(_translate("MainWindow", "Analytics Account"))
+        self.label_9.setText(_translate("MainWindow", "Email Tracking Configuration"))
+        self.label_8.setText(_translate("MainWindow", "Campaign Name"))
+        self.checkBox_inbox_whitelist.setText(_translate("MainWindow", "Enable Inbox Whitelist"))
         self.checkBox_auto_fire_responses_webhook.setText(_translate("MainWindow", "Auto Fire Responses Webhook"))
         self.label_10.setText(_translate("MainWindow", "Webhook Link"))
         self.label_12.setText(_translate("MainWindow", "Inbox Blacklist"))
@@ -2288,11 +2293,6 @@ class Ui_MainWindow(object):
         self.label_11.setText(_translate("MainWindow", "Target Blacklist"))
         self.pushButton_launch_wum.setText(_translate("MainWindow", "Launch WUM"))
         self.label_20.setText(_translate("MainWindow", "Inbox Whitelist"))
-        self.checkBox_space_encoding.setText(_translate("MainWindow", "Space Encoding"))
-        self.label_valid_input.setText(_translate("MainWindow", "Campaign Name field: letters, numbers and \"_\" only. (no spaces)"))
-        self.label_7.setText(_translate("MainWindow", "Analytics Account"))
-        self.label_9.setText(_translate("MainWindow", "Email Tracking Configuration"))
-        self.label_8.setText(_translate("MainWindow", "Campaign Name"))
-        self.pushButton_configuration_save.setText(_translate("MainWindow", "Save"))
+        self.checkBox_space_encoding.setText(_translate("MainWindow", "Random Character Encoding"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_configuration), _translate("MainWindow", "Configuration"))
 import logo_rc

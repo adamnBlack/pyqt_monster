@@ -1132,8 +1132,8 @@ class MyMainClass:
                     break
                 row_data = var.email_q.get()
                 row_data['checkbox_status'] = 0
-                var.inbox_data = var.inbox_data.append(
-                    row_data, ignore_index=True)
+
+                var.inbox_data = pd.concat([var.inbox_data, pd.DataFrame([row_data])], ignore_index=True)
 
                 GUI.tableWidget_inbox.setRowCount(var.row_pos + 1)
 
