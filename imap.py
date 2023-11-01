@@ -1,4 +1,5 @@
 import os
+import re
 import queue
 import json
 import traceback
@@ -282,6 +283,7 @@ class ImapDownload(ImapBase, threading.Thread):
         self.targets = kwargs["targets"]
         self.responses_webhook_enabled = kwargs["responses_webhook_enabled"]
         self.date = var.date
+        self.inbox_whitelist_pattern = re.compile(r'\b(?:' + '|'.join(var.inbox_whitelist) + r')\b', re.IGNORECASE)
 
     def run(self):
         global email_failed, total_email_downloaded
@@ -356,9 +358,10 @@ class ImapDownload(ImapBase, threading.Thread):
                     from_mail = str(email.header.make_header(email.header.decode_header(
                         email.utils.parseaddr(email_message['From'])[1]))
                     )
+                    matches = self.inbox_whitelist_pattern.findall(body)
 
                     if (not check_if_blacklisted(from_mail.lower()) and not check_if_blacklisted(subject.lower())) and \
-                            (((check_if_whitelisted(from_mail.lower()) or check_if_whitelisted(subject.lower()))
+                            (((check_if_whitelisted(from_mail.lower()) or check_if_whitelisted(subject.lower()) or matches)
                              or not var.inbox_whitelist_checkbox)):
 
                         to_name = str(email.header.make_header(email.header.decode_header(
@@ -392,8 +395,8 @@ class ImapDownload(ImapBase, threading.Thread):
                             'FIRSTFROMNAME': self.FIRSTFROMNAME,
                             'LASTFROMNAME': self.LASTFROMNAME,
                             'flag': item,
-                            'Webhook_flag': False  # means not fired yet
-
+                            'Webhook_flag': False,  # means not fired yet
+                            'Whitelist_keyword': matches
                         }
 
                         try:
@@ -423,6 +426,7 @@ class ImapDownload(ImapBase, threading.Thread):
                         except Exception as e:
                             self.logger.error(
                                 f"Error on Imap download {self.imap_user} : {traceback.format_exc()}")
+
 
             imap.close()
             imap.logout()

@@ -141,7 +141,6 @@ class TestMail(SmtpBase):
                     source="body")
 
                 content_body.attach(MIMEText(body, "html"))
-                content_body.attach(MIMEText(html_to_text(body), "plain"))
             else:
                 body = utils.format_email(
                     var.compose_email_body, self.first_from_name, self.last_from_name,

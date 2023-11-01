@@ -1,0 +1,133 @@
+2023-09-25 01:21:07,907 [MainThread  ] [INFO ]  Logger Started
+2023-09-25 01:21:07,921 [MainThread  ] [INFO ]  Scheduler started
+2023-09-25 01:21:07,936 [MainThread  ] [INFO ]  Logger Started
+2023-09-25 01:21:07,936 [MainThread  ] [INFO ]  Scheduler started
+2023-09-25 01:21:07,939 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-09-25 01:21:07,942 [MainThread  ] [INFO ]  config updated
+2023-09-25 01:21:09,213 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-09-25 01:21:09,213 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-09-25 01:21:10,206 [Thread-1    ] [INFO ]  13620
+2023-09-25 01:26:05,609 [MainThread  ] [INFO ]  Exiting
+2023-09-25 01:26:11,735 [MainThread  ] [INFO ]  Logger Started
+2023-09-25 01:26:11,740 [MainThread  ] [INFO ]  Scheduler started
+2023-09-25 01:26:11,746 [MainThread  ] [INFO ]  Logger Started
+2023-09-25 01:26:11,746 [MainThread  ] [INFO ]  Scheduler started
+2023-09-25 01:26:11,748 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-09-25 01:26:11,751 [MainThread  ] [INFO ]  config updated
+2023-09-25 01:26:12,668 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-09-25 01:26:12,669 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-09-25 01:26:13,614 [Thread-1    ] [INFO ]  13620
+2023-09-25 01:26:18,798 [Thread-5    ] [INFO ]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2023-09-25 01:26:26,316 [MainThread  ] [INFO ]  Downloading_email Group a
+2023-09-25 01:26:26,324 [Thread-6    ] [INFO ]  config updated
+2023-09-25 01:26:26,325 [SendReport_I] [INFO ]  Inbox Webhook Thread Started...
+2023-09-25 01:26:42,519 [argentinaadr] [INFO ]  Blacklisted due to this keyword: birthdays@facebookmail.com
+2023-09-25 01:26:43,016 [argentinaadr] [INFO ]  Blacklisted due to this keyword: birthdays@facebookmail.com
+2023-09-25 01:26:43,530 [argentinaadr] [INFO ]  Blacklisted due to this keyword: birthdays@facebookmail.com
+2023-09-25 01:26:44,027 [argentinaadr] [INFO ]  Blacklisted due to this keyword: birthdays@facebookmail.com
+2023-09-25 01:26:44,521 [argentinaadr] [INFO ]  Blacklisted due to this keyword: birthdays@facebookmail.com
+2023-09-25 01:26:45,019 [argentinaadr] [INFO ]  Blacklisted due to this keyword: birthdays@facebookmail.com
+2023-09-25 01:26:45,851 [argentinaadr] [INFO ]  Blacklisted due to this keyword: notification@priority.facebookmail.com
+2023-09-25 01:26:46,359 [argentinaadr] [INFO ]  Blacklisted due to this keyword: birthdays@facebookmail.com
+2023-09-25 01:26:46,852 [argentinaadr] [INFO ]  Blacklisted due to this keyword: reminders@facebookmail.com
+2023-09-25 01:26:51,253 [argentinaadr] [INFO ]  Blacklisted due to this keyword: birthdays@facebookmail.com
+2023-09-25 01:26:51,759 [argentinaadr] [INFO ]  Blacklisted due to this keyword: friendupdates@facebookmail.com
+2023-09-25 01:26:52,283 [argentinaadr] [INFO ]  Blacklisted due to this keyword: friendupdates@facebookmail.com
+2023-09-25 01:26:53,959 [argentinaadr] [INFO ]  Blacklisted due to this keyword: reminders@facebookmail.com
+2023-09-25 01:26:57,532 [argentinaadr] [INFO ]  Blacklisted due to this keyword: birthdays@facebookmail.com
+2023-09-25 01:26:58,468 [argentinaadr] [INFO ]  Blacklisted due to this keyword: notification@priority.facebookmail.com
+2023-09-25 01:26:58,964 [argentinaadr] [INFO ]  Blacklisted due to this keyword: reminders@facebookmail.com
+2023-09-25 01:26:59,459 [argentinaadr] [INFO ]  Blacklisted due to this keyword: birthdays@facebookmail.com
+2023-09-25 01:27:24,910 [MainThread  ] [INFO ]  add_to_table finished
+2023-09-25 01:27:30,366 [Thread-7    ] [INFO ]  Downloading finished
+2023-09-25 01:27:31,365 [SendReport_I] [INFO ]  Webhook Inbox Thread Finished.
+2023-09-25 01:27:36,953 [Thread-10   ] [INFO ]  config updated
+2023-09-25 01:27:45,228 [Thread-11   ] [INFO ]  config updated
+2023-09-25 01:27:49,893 [MainThread  ] [INFO ]  Downloading_email Group a
+2023-09-25 01:27:49,900 [Thread-12   ] [INFO ]  config updated
+2023-09-25 01:27:49,903 [SendReport_I] [INFO ]  Inbox Webhook Thread Started...
+2023-09-25 01:31:13,636 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2023-09-25 01:31:13,637 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2023-09-25 01:36:14,543 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2023-09-25 01:36:14,544 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2023-09-25 01:41:15,488 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2023-09-25 01:41:15,488 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2023-09-25 01:46:16,453 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2023-09-25 01:46:16,454 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2023-09-25 01:51:17,406 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2023-09-25 01:51:17,407 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2023-09-25 01:54:03,910 [Thread-13   ] [INFO ]  Downloading finished
+2023-09-25 01:54:04,896 [SendReport_I] [INFO ]  Webhook Inbox Thread Finished.
+2023-09-25 01:54:05,903 [Thread-16   ] [INFO ]  Set read flag for argentinaadriano08@gmail.com : Successful
+2023-09-25 01:54:08,033 [Thread-17   ] [INFO ]  Set read flag for argentinaadriano08@gmail.com : Successful
+2023-09-25 01:54:09,092 [Thread-18   ] [INFO ]  Set read flag for argentinaadriano08@gmail.com : Successful
+2023-09-25 01:54:12,186 [Thread-20   ] [INFO ]  Set read flag for argentinaadriano08@gmail.com : Successful
+2023-09-25 01:54:12,351 [Thread-19   ] [INFO ]  Set read flag for argentinaadriano08@gmail.com : Successful
+2023-09-25 01:54:15,034 [Thread-22   ] [INFO ]  Set read flag for argentinaadriano08@gmail.com : Successful
+2023-09-25 01:54:15,972 [Thread-23   ] [INFO ]  Set read flag for argentinaadriano08@gmail.com : Successful
+2023-09-25 01:54:16,735 [Thread-24   ] [INFO ]  Set read flag for argentinaadriano08@gmail.com : Successful
+2023-09-25 01:54:17,346 [Thread-21   ] [INFO ]  Set read flag for argentinaadriano08@gmail.com : Successful
+2023-09-25 01:54:18,463 [Thread-25   ] [INFO ]  Set read flag for argentinaadriano08@gmail.com : Successful
+2023-09-25 01:54:51,086 [MainThread  ] [INFO ]  add_to_table finished
+2023-09-25 01:56:18,330 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2023-09-25 01:56:18,331 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2023-09-25 02:01:19,295 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2023-09-25 02:01:19,295 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2023-09-25 02:02:13,992 [Thread-26   ] [INFO ]  config updated
+2023-09-25 02:02:45,983 [MainThread  ] [INFO ]  Downloading_email Group a
+2023-09-25 02:02:45,989 [Thread-27   ] [INFO ]  config updated
+2023-09-25 02:02:45,992 [SendReport_I] [INFO ]  Inbox Webhook Thread Started...
+2023-09-25 02:06:20,243 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2023-09-25 02:06:20,244 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2023-09-25 02:07:32,915 [MainThread  ] [INFO ]  add_to_table finished
+2023-09-25 02:07:33,154 [Thread-28   ] [INFO ]  Downloading finished
+2023-09-25 02:07:33,159 [SendReport_I] [INFO ]  Webhook Inbox Thread Finished.
+2023-09-25 02:07:39,338 [Thread-32   ] [INFO ]  Set read flag for argentinaadriano08@gmail.com : Successful
+2023-09-25 02:07:40,250 [Thread-33   ] [INFO ]  Set read flag for argentinaadriano08@gmail.com : Successful
+2023-09-25 02:07:40,809 [Thread-31   ] [INFO ]  Set read flag for argentinaadriano08@gmail.com : Successful
+2023-09-25 02:07:41,023 [Thread-35   ] [INFO ]  Set read flag for argentinaadriano08@gmail.com : Successful
+2023-09-25 02:07:43,161 [Thread-34   ] [INFO ]  Set read flag for argentinaadriano08@gmail.com : Successful
+2023-09-25 02:11:21,253 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2023-09-25 02:11:21,254 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2023-09-25 02:14:08,984 [MainThread  ] [INFO ]  Exiting
+2023-09-25 02:14:12,852 [MainThread  ] [INFO ]  Logger Started
+2023-09-25 02:14:12,858 [MainThread  ] [INFO ]  Scheduler started
+2023-09-25 02:14:12,862 [MainThread  ] [INFO ]  Logger Started
+2023-09-25 02:14:12,864 [MainThread  ] [INFO ]  Scheduler started
+2023-09-25 02:14:12,866 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-09-25 02:14:12,870 [MainThread  ] [INFO ]  config updated
+2023-09-25 02:14:13,764 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-09-25 02:14:13,765 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-09-25 02:14:14,680 [Thread-1    ] [INFO ]  13620
+2023-09-25 02:14:28,470 [MainThread  ] [INFO ]  Downloading_email Group a
+2023-09-25 02:14:28,475 [Thread-5    ] [INFO ]  config updated
+2023-09-25 02:14:28,482 [SendReport_I] [INFO ]  Inbox Webhook Thread Started...
+2023-09-25 02:15:05,559 [MainThread  ] [INFO ]  add_to_table finished
+2023-09-25 02:15:10,505 [Thread-6    ] [INFO ]  Downloading finished
+2023-09-25 02:15:10,506 [SendReport_I] [INFO ]  Webhook Inbox Thread Finished.
+2023-09-25 02:19:14,735 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2023-09-25 02:19:14,736 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2023-09-25 02:23:05,322 [Thread-9    ] [INFO ]  config updated
+2023-09-25 02:23:09,305 [MainThread  ] [INFO ]  Downloading_email Group a
+2023-09-25 02:23:09,312 [Thread-10   ] [INFO ]  config updated
+2023-09-25 02:23:09,314 [SendReport_I] [INFO ]  Inbox Webhook Thread Started...
+2023-09-25 02:23:14,967 [argentinaadr] [INFO ]  Blacklisted due to this keyword: welcome
+2023-09-25 02:23:15,829 [argentinaadr] [INFO ]  Blacklisted due to this keyword: welcome
+2023-09-25 02:23:16,691 [argentinaadr] [INFO ]  Blacklisted due to this keyword: welcome
+2023-09-25 02:23:17,559 [argentinaadr] [INFO ]  Blacklisted due to this keyword: welcome
+2023-09-25 02:23:18,421 [argentinaadr] [INFO ]  Blacklisted due to this keyword: welcome
+2023-09-25 02:23:27,231 [argentinaadr] [INFO ]  Blacklisted due to this keyword: welcome
+2023-09-25 02:23:28,097 [argentinaadr] [INFO ]  Blacklisted due to this keyword: welcome
+2023-09-25 02:23:28,615 [MainThread  ] [INFO ]  add_to_table finished
+2023-09-25 02:23:29,447 [argentinaadr] [INFO ]  Blacklisted due to this keyword: welcome
+2023-09-25 02:23:34,332 [Thread-11   ] [INFO ]  Downloading finished
+2023-09-25 02:23:34,335 [SendReport_I] [INFO ]  Webhook Inbox Thread Finished.
+2023-09-25 02:24:15,646 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2023-09-25 02:24:15,650 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2023-09-25 02:29:16,601 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2023-09-25 02:29:16,603 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2023-09-25 02:34:17,547 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2023-09-25 02:34:17,548 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2023-09-25 02:39:18,540 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2023-09-25 02:39:18,541 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2023-09-25 02:43:23,680 [MainThread  ] [INFO ]  Exiting
