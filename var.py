@@ -347,6 +347,7 @@ try:
     inbox_whitelist = config['inbox_whitelist']
     responses_webhook_enabled = config['responses_webhook_enabled']
     auto_fire_responses_webhook = config["auto_fire_responses_webhook"]
+    auto_fire_responses_webhook_interval = config['auto_fire_responses_webhook_interval']
     followup_enabled = config['followup_enabled']
     followup_days = config['followup_days']
     followup_subject = config['followup_subject']

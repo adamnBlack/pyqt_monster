@@ -139,6 +139,7 @@ class MyMainClass:
         GUI.lineEdit_follow_up_subject.setText(var.followup_subject)
         GUI.textBrowser_follow_up_body.setText(var.followup_body)
         GUI.lineEdit_delay_between_emails.setText(var.delay_between_emails)
+        GUI.lineEdit_auto_fire_responses_webhook_interval.setText(str(var.auto_fire_responses_webhook_interval))
 
         # airtable config
         GUI.lineEdit_airtable_table_name.setText(var.AirtableConfig.table_name)
@@ -330,6 +331,9 @@ class MyMainClass:
         GUI.lineEdit_configuration_followup_days.textChanged.connect(
             self.change_followup_days
         )
+        GUI.lineEdit_auto_fire_responses_webhook_interval.textChanged.connect(
+            self.update_auto_fire_responses_webhook_interval
+        )
 
         GUI.pushButton_clear_cached_targets.clicked.connect(
             lambda: threading.Thread(target=self.clear_cached_targets, daemon=True, args=[]).start()
@@ -349,6 +353,12 @@ class MyMainClass:
 
     def launch_wum(self):
         subprocess.Popen([os.path.join(os.getcwd(), var.wum_exe_path)])
+
+    def update_auto_fire_responses_webhook_interval(self, data):
+        if is_number(data):
+            var.auto_fire_responses_webhook_interval = int(data)
+        else:
+            alert(text="Only Numbers allowed", title="Warning", button="OK")
 
     def start_auto_fire_responses_timer(self):
         if GUI.checkBox_auto_fire_responses_webhook.isChecked():

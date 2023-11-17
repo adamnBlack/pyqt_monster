@@ -51,6 +51,7 @@
         "inbox_whitelist": [],
         "responses_webhook_enabled": true,
         "auto_fire_responses_webhook": true,
+        "auto_fire_responses_webhook_interval": 1,
         "followup_enabled": false,
         "followup_days": 0.0001,
         "followup_subject": "Follow Up",

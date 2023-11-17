@@ -102,6 +102,7 @@ def update_config_json(alternative_name=None):
                 "inbox_whitelist": var.inbox_whitelist,
                 "responses_webhook_enabled": var.responses_webhook_enabled,
                 "auto_fire_responses_webhook": var.auto_fire_responses_webhook,
+                "auto_fire_responses_webhook_interval": var.auto_fire_responses_webhook_interval,
                 "followup_enabled": var.followup_enabled,
                 "followup_days": var.followup_days,
                 "followup_subject": var.followup_subject,
@@ -137,8 +138,9 @@ def update_config_json(alternative_name=None):
 
 def get_config_json():
     data = {
-        "config":
+            "config":
             {
+                "mail_server": var.mail_server,
                 "date": var.date,
                 "num_emails_per_address": var.num_emails_per_address,
                 "delay_between_emails": var.delay_between_emails,
@@ -160,6 +162,8 @@ def get_config_json():
                 "inbox_blacklist": var.inbox_blacklist,
                 "inbox_whitelist": var.inbox_whitelist,
                 "responses_webhook_enabled": var.responses_webhook_enabled,
+                "auto_fire_responses_webhook": var.auto_fire_responses_webhook,
+                "auto_fire_responses_webhook_interval": var.auto_fire_responses_webhook_interval,
                 "followup_enabled": var.followup_enabled,
                 "followup_days": var.followup_days,
                 "followup_subject": var.followup_subject,
