@@ -1994,6 +1994,38 @@ class Ui_MainWindow(object):
         self.groupBox_10.setObjectName("groupBox_10")
         self.gridLayout_16 = QtWidgets.QGridLayout(self.groupBox_10)
         self.gridLayout_16.setObjectName("gridLayout_16")
+        self.label_21 = QtWidgets.QLabel(self.groupBox_10)
+        self.label_21.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.label_21.setFont(font)
+        self.label_21.setObjectName("label_21")
+        self.gridLayout_16.addWidget(self.label_21, 11, 0, 1, 1, QtCore.Qt.AlignHCenter)
+        self.label_25 = QtWidgets.QLabel(self.groupBox_10)
+        self.label_25.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.label_25.setFont(font)
+        self.label_25.setObjectName("label_25")
+        self.gridLayout_16.addWidget(self.label_25, 7, 0, 1, 1)
+        self.lineEdit_cc_emails = QtWidgets.QLineEdit(self.groupBox_10)
+        self.lineEdit_cc_emails.setMinimumSize(QtCore.QSize(0, 25))
+        self.lineEdit_cc_emails.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEdit_cc_emails.setFrame(False)
+        self.lineEdit_cc_emails.setObjectName("lineEdit_cc_emails")
+        self.gridLayout_16.addWidget(self.lineEdit_cc_emails, 11, 2, 1, 1)
+        self.lineEdit_inbox_blacklist = QtWidgets.QLineEdit(self.groupBox_10)
+        self.lineEdit_inbox_blacklist.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.lineEdit_inbox_blacklist.setFont(font)
+        self.lineEdit_inbox_blacklist.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEdit_inbox_blacklist.setFrame(False)
+        self.lineEdit_inbox_blacklist.setObjectName("lineEdit_inbox_blacklist")
+        self.gridLayout_16.addWidget(self.lineEdit_inbox_blacklist, 5, 2, 1, 1)
         self.lineEdit_auto_fire_responses_webhook_interval = QtWidgets.QLineEdit(self.groupBox_10)
         self.lineEdit_auto_fire_responses_webhook_interval.setMinimumSize(QtCore.QSize(0, 25))
         font = QtGui.QFont()
@@ -2005,31 +2037,6 @@ class Ui_MainWindow(object):
         self.lineEdit_auto_fire_responses_webhook_interval.setFrame(False)
         self.lineEdit_auto_fire_responses_webhook_interval.setObjectName("lineEdit_auto_fire_responses_webhook_interval")
         self.gridLayout_16.addWidget(self.lineEdit_auto_fire_responses_webhook_interval, 7, 2, 1, 1)
-        self.lineEdit_inbox_blacklist = QtWidgets.QLineEdit(self.groupBox_10)
-        self.lineEdit_inbox_blacklist.setMinimumSize(QtCore.QSize(0, 25))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.lineEdit_inbox_blacklist.setFont(font)
-        self.lineEdit_inbox_blacklist.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.lineEdit_inbox_blacklist.setFrame(False)
-        self.lineEdit_inbox_blacklist.setObjectName("lineEdit_inbox_blacklist")
-        self.gridLayout_16.addWidget(self.lineEdit_inbox_blacklist, 5, 2, 1, 1)
-        self.label_25 = QtWidgets.QLabel(self.groupBox_10)
-        self.label_25.setMinimumSize(QtCore.QSize(0, 25))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.label_25.setFont(font)
-        self.label_25.setObjectName("label_25")
-        self.gridLayout_16.addWidget(self.label_25, 7, 0, 1, 1)
-        self.checkBox_inbox_whitelist = QtWidgets.QCheckBox(self.groupBox_10)
-        self.checkBox_inbox_whitelist.setMinimumSize(QtCore.QSize(0, 25))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.checkBox_inbox_whitelist.setFont(font)
-        self.checkBox_inbox_whitelist.setObjectName("checkBox_inbox_whitelist")
-        self.gridLayout_16.addWidget(self.checkBox_inbox_whitelist, 4, 2, 1, 1)
         self.lineEdit_webhook_link = QtWidgets.QLineEdit(self.groupBox_10)
         self.lineEdit_webhook_link.setMinimumSize(QtCore.QSize(0, 25))
         font = QtGui.QFont()
@@ -2041,6 +2048,13 @@ class Ui_MainWindow(object):
         self.lineEdit_webhook_link.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.lineEdit_webhook_link.setObjectName("lineEdit_webhook_link")
         self.gridLayout_16.addWidget(self.lineEdit_webhook_link, 0, 2, 1, 1)
+        self.checkBox_inbox_whitelist = QtWidgets.QCheckBox(self.groupBox_10)
+        self.checkBox_inbox_whitelist.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.checkBox_inbox_whitelist.setFont(font)
+        self.checkBox_inbox_whitelist.setObjectName("checkBox_inbox_whitelist")
+        self.gridLayout_16.addWidget(self.checkBox_inbox_whitelist, 4, 2, 1, 1)
         self.label_12 = QtWidgets.QLabel(self.groupBox_10)
         self.label_12.setMinimumSize(QtCore.QSize(0, 25))
         font = QtGui.QFont()
@@ -2049,22 +2063,6 @@ class Ui_MainWindow(object):
         self.label_12.setFont(font)
         self.label_12.setObjectName("label_12")
         self.gridLayout_16.addWidget(self.label_12, 5, 0, 1, 1, QtCore.Qt.AlignHCenter)
-        self.label_10 = QtWidgets.QLabel(self.groupBox_10)
-        self.label_10.setMinimumSize(QtCore.QSize(0, 25))
-        font = QtGui.QFont()
-        font.setFamily("Calibri")
-        font.setPointSize(11)
-        self.label_10.setFont(font)
-        self.label_10.setAlignment(QtCore.Qt.AlignCenter)
-        self.label_10.setObjectName("label_10")
-        self.gridLayout_16.addWidget(self.label_10, 0, 0, 1, 1, QtCore.Qt.AlignHCenter)
-        self.checkBox_configuration_followup_enabled = QtWidgets.QCheckBox(self.groupBox_10)
-        self.checkBox_configuration_followup_enabled.setMinimumSize(QtCore.QSize(0, 25))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.checkBox_configuration_followup_enabled.setFont(font)
-        self.checkBox_configuration_followup_enabled.setObjectName("checkBox_configuration_followup_enabled")
-        self.gridLayout_16.addWidget(self.checkBox_configuration_followup_enabled, 13, 2, 1, 1)
         self.checkBox_responses_webhook = QtWidgets.QCheckBox(self.groupBox_10)
         self.checkBox_responses_webhook.setMinimumSize(QtCore.QSize(0, 25))
         font = QtGui.QFont()
@@ -2082,50 +2080,30 @@ class Ui_MainWindow(object):
         self.lineEdit_target_blacklist.setFrame(False)
         self.lineEdit_target_blacklist.setObjectName("lineEdit_target_blacklist")
         self.gridLayout_16.addWidget(self.lineEdit_target_blacklist, 1, 2, 1, 1)
-        self.pushButton_clear_cached_targets = QtWidgets.QPushButton(self.groupBox_10)
-        self.pushButton_clear_cached_targets.setMinimumSize(QtCore.QSize(290, 25))
-        self.pushButton_clear_cached_targets.setMaximumSize(QtCore.QSize(290, 16777215))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.pushButton_clear_cached_targets.setFont(font)
-        self.pushButton_clear_cached_targets.setStyleSheet("QPushButton {\n"
-"    border: 1px solid #555;\n"
-"    border-radius: 3px;\n"
-"    border-style: Solid;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
-"        );\n"
-"    padding: 5px 28px;\n"
-"    color: rgb(255, 255, 255);\n"
-"    }\n"
-"\n"
-"QPushButton:hover {\n"
-"    background: qradialgradient(\n"
-"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
-"        );\n"
-"    }\n"
-"\n"
-"QPushButton:pressed {\n"
-"    border-style: inset;\n"
-"    background: qradialgradient(\n"
-"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
-"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
-"        );\n"
-"    }")
-        self.pushButton_clear_cached_targets.setObjectName("pushButton_clear_cached_targets")
-        self.gridLayout_16.addWidget(self.pushButton_clear_cached_targets, 11, 2, 1, 1)
-        self.lineEdit_inbox_whitelist = QtWidgets.QLineEdit(self.groupBox_10)
-        self.lineEdit_inbox_whitelist.setMinimumSize(QtCore.QSize(0, 25))
+        self.label_10 = QtWidgets.QLabel(self.groupBox_10)
+        self.label_10.setMinimumSize(QtCore.QSize(0, 25))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(11)
-        self.lineEdit_inbox_whitelist.setFont(font)
-        self.lineEdit_inbox_whitelist.setStyleSheet("background-color: rgb(255, 255, 255);")
-        self.lineEdit_inbox_whitelist.setFrame(False)
-        self.lineEdit_inbox_whitelist.setObjectName("lineEdit_inbox_whitelist")
-        self.gridLayout_16.addWidget(self.lineEdit_inbox_whitelist, 2, 2, 1, 1)
+        self.label_10.setFont(font)
+        self.label_10.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_10.setObjectName("label_10")
+        self.gridLayout_16.addWidget(self.label_10, 0, 0, 1, 1, QtCore.Qt.AlignHCenter)
+        self.checkBox_configuration_followup_enabled = QtWidgets.QCheckBox(self.groupBox_10)
+        self.checkBox_configuration_followup_enabled.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.checkBox_configuration_followup_enabled.setFont(font)
+        self.checkBox_configuration_followup_enabled.setObjectName("checkBox_configuration_followup_enabled")
+        self.gridLayout_16.addWidget(self.checkBox_configuration_followup_enabled, 15, 2, 1, 1)
+        self.label_11 = QtWidgets.QLabel(self.groupBox_10)
+        self.label_11.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("Calibri")
+        font.setPointSize(11)
+        self.label_11.setFont(font)
+        self.label_11.setObjectName("label_11")
+        self.gridLayout_16.addWidget(self.label_11, 1, 0, 1, 1, QtCore.Qt.AlignHCenter)
         self.pushButton_launch_wum = QtWidgets.QPushButton(self.groupBox_10)
         self.pushButton_launch_wum.setMinimumSize(QtCore.QSize(290, 25))
         self.pushButton_launch_wum.setMaximumSize(QtCore.QSize(290, 16777215))
@@ -2159,22 +2137,51 @@ class Ui_MainWindow(object):
 "        );\n"
 "    }")
         self.pushButton_launch_wum.setObjectName("pushButton_launch_wum")
-        self.gridLayout_16.addWidget(self.pushButton_launch_wum, 14, 2, 1, 1)
-        self.label_11 = QtWidgets.QLabel(self.groupBox_10)
-        self.label_11.setMinimumSize(QtCore.QSize(0, 25))
+        self.gridLayout_16.addWidget(self.pushButton_launch_wum, 16, 2, 1, 1)
+        self.pushButton_clear_cached_targets = QtWidgets.QPushButton(self.groupBox_10)
+        self.pushButton_clear_cached_targets.setMinimumSize(QtCore.QSize(290, 25))
+        self.pushButton_clear_cached_targets.setMaximumSize(QtCore.QSize(290, 16777215))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.pushButton_clear_cached_targets.setFont(font)
+        self.pushButton_clear_cached_targets.setStyleSheet("QPushButton {\n"
+"    border: 1px solid #555;\n"
+"    border-radius: 3px;\n"
+"    border-style: Solid;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #4B7DAD\n"
+"        );\n"
+"    padding: 5px 28px;\n"
+"    color: rgb(255, 255, 255);\n"
+"    }\n"
+"\n"
+"QPushButton:hover {\n"
+"    background: qradialgradient(\n"
+"        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #709fb0\n"
+"        );\n"
+"    }\n"
+"\n"
+"QPushButton:pressed {\n"
+"    border-style: inset;\n"
+"    background: qradialgradient(\n"
+"        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,\n"
+"        radius: 1.35, stop: 0 #e5e5e5, stop: 1 #79d70f\n"
+"        );\n"
+"    }")
+        self.pushButton_clear_cached_targets.setObjectName("pushButton_clear_cached_targets")
+        self.gridLayout_16.addWidget(self.pushButton_clear_cached_targets, 13, 2, 1, 1)
+        self.lineEdit_inbox_whitelist = QtWidgets.QLineEdit(self.groupBox_10)
+        self.lineEdit_inbox_whitelist.setMinimumSize(QtCore.QSize(0, 25))
         font = QtGui.QFont()
         font.setFamily("Calibri")
         font.setPointSize(11)
-        self.label_11.setFont(font)
-        self.label_11.setObjectName("label_11")
-        self.gridLayout_16.addWidget(self.label_11, 1, 0, 1, 1, QtCore.Qt.AlignHCenter)
-        self.checkBox_space_encoding = QtWidgets.QCheckBox(self.groupBox_10)
-        self.checkBox_space_encoding.setMinimumSize(QtCore.QSize(0, 25))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.checkBox_space_encoding.setFont(font)
-        self.checkBox_space_encoding.setObjectName("checkBox_space_encoding")
-        self.gridLayout_16.addWidget(self.checkBox_space_encoding, 15, 2, 1, 1)
+        self.lineEdit_inbox_whitelist.setFont(font)
+        self.lineEdit_inbox_whitelist.setStyleSheet("background-color: rgb(255, 255, 255);")
+        self.lineEdit_inbox_whitelist.setFrame(False)
+        self.lineEdit_inbox_whitelist.setObjectName("lineEdit_inbox_whitelist")
+        self.gridLayout_16.addWidget(self.lineEdit_inbox_whitelist, 2, 2, 1, 1)
         self.label_20 = QtWidgets.QLabel(self.groupBox_10)
         self.label_20.setMinimumSize(QtCore.QSize(0, 25))
         font = QtGui.QFont()
@@ -2183,6 +2190,13 @@ class Ui_MainWindow(object):
         self.label_20.setFont(font)
         self.label_20.setObjectName("label_20")
         self.gridLayout_16.addWidget(self.label_20, 2, 0, 1, 1, QtCore.Qt.AlignHCenter)
+        self.checkBox_space_encoding = QtWidgets.QCheckBox(self.groupBox_10)
+        self.checkBox_space_encoding.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.checkBox_space_encoding.setFont(font)
+        self.checkBox_space_encoding.setObjectName("checkBox_space_encoding")
+        self.gridLayout_16.addWidget(self.checkBox_space_encoding, 17, 2, 1, 1)
         self.checkBox_auto_fire_responses_webhook = QtWidgets.QCheckBox(self.groupBox_10)
         self.checkBox_auto_fire_responses_webhook.setMinimumSize(QtCore.QSize(0, 25))
         font = QtGui.QFont()
@@ -2190,6 +2204,14 @@ class Ui_MainWindow(object):
         self.checkBox_auto_fire_responses_webhook.setFont(font)
         self.checkBox_auto_fire_responses_webhook.setObjectName("checkBox_auto_fire_responses_webhook")
         self.gridLayout_16.addWidget(self.checkBox_auto_fire_responses_webhook, 10, 2, 1, 1)
+        self.checkBox_enable_cc_emails = QtWidgets.QCheckBox(self.groupBox_10)
+        self.checkBox_enable_cc_emails.setMinimumSize(QtCore.QSize(0, 25))
+        font = QtGui.QFont()
+        font.setFamily("MS Shell Dlg 2")
+        font.setPointSize(10)
+        self.checkBox_enable_cc_emails.setFont(font)
+        self.checkBox_enable_cc_emails.setObjectName("checkBox_enable_cc_emails")
+        self.gridLayout_16.addWidget(self.checkBox_enable_cc_emails, 12, 2, 1, 1)
         self.gridLayout_15.addWidget(self.groupBox_10, 1, 0, 1, 2)
         self.tabWidget.addTab(self.tab_configuration, "")
         self.gridLayout.addWidget(self.tabWidget, 0, 2, 1, 1)
@@ -2302,17 +2324,19 @@ class Ui_MainWindow(object):
         self.label_7.setText(_translate("MainWindow", "Analytics Account"))
         self.label_9.setText(_translate("MainWindow", "Email Tracking Configuration"))
         self.label_8.setText(_translate("MainWindow", "Campaign Name"))
+        self.label_21.setText(_translate("MainWindow", "CC Emails"))
         self.label_25.setText(_translate("MainWindow", "Webhook Interval"))
         self.checkBox_inbox_whitelist.setText(_translate("MainWindow", "Enable Inbox Whitelist"))
         self.label_12.setText(_translate("MainWindow", "Inbox Blacklist"))
+        self.checkBox_responses_webhook.setText(_translate("MainWindow", "Responses Webhook Enabled"))
         self.label_10.setText(_translate("MainWindow", "Webhook Link"))
         self.checkBox_configuration_followup_enabled.setText(_translate("MainWindow", "FollowUp Enabled"))
-        self.checkBox_responses_webhook.setText(_translate("MainWindow", "Responses Webhook Enabled"))
-        self.pushButton_clear_cached_targets.setText(_translate("MainWindow", "Clear Cached Targets from DB"))
-        self.pushButton_launch_wum.setText(_translate("MainWindow", "Launch WUM"))
         self.label_11.setText(_translate("MainWindow", "Target Blacklist"))
-        self.checkBox_space_encoding.setText(_translate("MainWindow", "Random Character Encoding"))
+        self.pushButton_launch_wum.setText(_translate("MainWindow", "Launch WUM"))
+        self.pushButton_clear_cached_targets.setText(_translate("MainWindow", "Clear Cached Targets from DB"))
         self.label_20.setText(_translate("MainWindow", "Inbox Whitelist"))
+        self.checkBox_space_encoding.setText(_translate("MainWindow", "Random Character Encoding"))
         self.checkBox_auto_fire_responses_webhook.setText(_translate("MainWindow", "Auto Fire Responses Webhook"))
+        self.checkBox_enable_cc_emails.setText(_translate("MainWindow", "Enable CC Emails"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_configuration), _translate("MainWindow", "Configuration"))
 import logo_rc

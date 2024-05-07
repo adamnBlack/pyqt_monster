@@ -265,6 +265,8 @@ class ReplyMail(SmtpBase):
 
     def send(self):
         try:
+            send_to = self.from_mail
+
             msg = MIMEMultipart('mixed')
 
             content = MIMEMultipart('related')
@@ -282,6 +284,11 @@ class ReplyMail(SmtpBase):
                 self.first_from_name, self.last_from_name), 'utf-8')),
                                       self.user))
             msg["To"] = self.from_mail
+
+            if var.cc_emails_enabled:
+                msg['Cc'] = var.cc_emails
+                send_to = var.cc_emails.split(",") + [send_to]
+
             msg['Date'] = formatdate(localtime=True)
 
             body = utils.format_email(
@@ -312,7 +319,7 @@ class ReplyMail(SmtpBase):
                 msg.attach(part)
 
             server.sendmail(
-                self.user, self.from_mail, msg.as_string())
+                self.user, send_to, msg.as_string())
 
             server.quit()
             server.close()

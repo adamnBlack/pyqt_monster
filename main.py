@@ -117,6 +117,7 @@ class MyMainClass:
         GUI.checkBox_check_for_blocks.setChecked(var.check_for_blocks)
         GUI.checkBox_responses_webhook.setChecked(var.responses_webhook_enabled)
         GUI.checkBox_auto_fire_responses_webhook.setChecked(var.auto_fire_responses_webhook)
+        GUI.checkBox_enable_cc_emails.setChecked(var.cc_emails_enabled)
 
         GUI.checkBox_inbox_whitelist.setChecked(var.inbox_whitelist_checkbox)
         GUI.checkBox_space_encoding.setChecked(var.space_encoding_checkbox)
@@ -140,6 +141,7 @@ class MyMainClass:
         GUI.textBrowser_follow_up_body.setText(var.followup_body)
         GUI.lineEdit_delay_between_emails.setText(var.delay_between_emails)
         GUI.lineEdit_auto_fire_responses_webhook_interval.setText(str(var.auto_fire_responses_webhook_interval))
+        GUI.lineEdit_cc_emails.setText(var.cc_emails)
 
         # airtable config
         GUI.lineEdit_airtable_table_name.setText(var.AirtableConfig.table_name)
@@ -227,6 +229,9 @@ class MyMainClass:
             self.update_checkbox_status
         )
         GUI.checkBox_inbox_whitelist.stateChanged.connect(
+            self.update_checkbox_status
+        )
+        GUI.checkBox_enable_cc_emails.stateChanged.connect(
             self.update_checkbox_status
         )
 
@@ -333,6 +338,9 @@ class MyMainClass:
         )
         GUI.lineEdit_auto_fire_responses_webhook_interval.textChanged.connect(
             self.update_auto_fire_responses_webhook_interval
+        )
+        GUI.lineEdit_cc_emails.textChanged.connect(
+            self.update_cc_emails
         )
 
         GUI.pushButton_clear_cached_targets.clicked.connect(
@@ -524,6 +532,9 @@ class MyMainClass:
         pull_target_airtable = database.PullTargetAirtable()
         pull_target_airtable.start()
 
+    def update_cc_emails(self):
+        var.cc_emails = GUI.lineEdit_cc_emails.text().replace(" ", "")
+
     def update_airtable_config(self):
         var.AirtableConfig.base_id = GUI.lineEdit_airtable_base_id.text()
         var.AirtableConfig.api_key = GUI.lineEdit_airtable_api_key.text()
@@ -611,6 +622,7 @@ class MyMainClass:
         var.auto_fire_responses_webhook = GUI.checkBox_auto_fire_responses_webhook.isChecked()
         var.space_encoding_checkbox = GUI.checkBox_space_encoding.isChecked()
         var.inbox_whitelist_checkbox = GUI.checkBox_inbox_whitelist.isChecked()
+        var.cc_emails_enabled = GUI.checkBox_enable_cc_emails.isChecked()
 
     def update_db_file_upload_config(self):
         var.db_file_loading_config['group_a'] = \

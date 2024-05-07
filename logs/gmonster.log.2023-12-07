@@ -1,0 +1,89 @@
+2023-11-17 12:35:30,461 [MainThread  ] [INFO ]  Logger Started
+2023-11-17 12:35:30,477 [MainThread  ] [INFO ]  Scheduler started
+2023-11-17 12:35:30,483 [MainThread  ] [INFO ]  Logger Started
+2023-11-17 12:35:30,483 [MainThread  ] [INFO ]  Scheduler started
+2023-11-17 12:35:30,486 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-11-17 12:35:30,488 [MainThread  ] [INFO ]  config updated
+2023-11-17 12:35:31,558 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-11-17 12:35:31,559 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-11-17 12:35:32,525 [Thread-1    ] [INFO ]  13566
+2023-11-17 12:36:49,060 [MainThread  ] [INFO ]  Exiting
+2023-11-17 12:36:52,881 [MainThread  ] [INFO ]  Logger Started
+2023-11-17 12:36:52,887 [MainThread  ] [INFO ]  Scheduler started
+2023-11-17 12:36:52,892 [MainThread  ] [INFO ]  Logger Started
+2023-11-17 12:36:52,893 [MainThread  ] [INFO ]  Scheduler started
+2023-11-17 12:36:52,896 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-11-17 12:36:52,900 [MainThread  ] [INFO ]  config updated
+2023-11-17 12:36:53,741 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-11-17 12:36:53,742 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-11-17 12:37:06,361 [MainThread  ] [INFO ]  Logger Started
+2023-11-17 12:37:06,367 [MainThread  ] [INFO ]  Scheduler started
+2023-11-17 12:37:06,374 [MainThread  ] [INFO ]  Logger Started
+2023-11-17 12:37:06,374 [MainThread  ] [INFO ]  Scheduler started
+2023-11-17 12:37:06,377 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-11-17 12:37:06,381 [MainThread  ] [INFO ]  config updated
+2023-11-17 12:37:07,246 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-11-17 12:37:07,247 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-11-17 12:37:08,123 [Thread-1    ] [INFO ]  13566
+2023-11-17 12:38:09,237 [MainThread  ] [INFO ]  Exiting
+2023-11-17 12:38:11,924 [MainThread  ] [INFO ]  Logger Started
+2023-11-17 12:38:11,930 [MainThread  ] [INFO ]  Scheduler started
+2023-11-17 12:38:11,934 [MainThread  ] [INFO ]  Logger Started
+2023-11-17 12:38:11,935 [MainThread  ] [INFO ]  Scheduler started
+2023-11-17 12:38:11,937 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-11-17 12:38:11,941 [MainThread  ] [INFO ]  config updated
+2023-11-17 12:38:12,922 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-11-17 12:38:12,923 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-11-17 12:38:13,744 [Thread-1    ] [INFO ]  13566
+2023-11-17 12:38:36,964 [MainThread  ] [INFO ]  Exiting
+2023-11-17 12:38:40,023 [MainThread  ] [INFO ]  Logger Started
+2023-11-17 12:38:40,029 [MainThread  ] [INFO ]  Scheduler started
+2023-11-17 12:38:40,034 [MainThread  ] [INFO ]  Logger Started
+2023-11-17 12:38:40,035 [MainThread  ] [INFO ]  Scheduler started
+2023-11-17 12:38:40,037 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-11-17 12:38:40,041 [MainThread  ] [INFO ]  config updated
+2023-11-17 12:38:40,901 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-11-17 12:38:40,901 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-11-17 12:38:41,758 [Thread-1    ] [INFO ]  13566
+2023-11-17 12:40:31,856 [MainThread  ] [INFO ]  Exiting
+2023-12-07 16:05:58,100 [MainThread  ] [INFO ]  Logger Started
+2023-12-07 16:05:58,102 [MainThread  ] [INFO ]  Scheduler started
+2023-12-07 16:05:58,107 [MainThread  ] [INFO ]  Logger Started
+2023-12-07 16:05:58,108 [MainThread  ] [INFO ]  Scheduler started
+2023-12-07 16:05:58,110 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-12-07 16:05:58,112 [MainThread  ] [INFO ]  config updated
+2023-12-07 16:05:58,980 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-12-07 16:05:58,980 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-12-07 16:06:01,288 [Thread-1    ] [INFO ]  13546
+2023-12-07 16:06:17,722 [MainThread  ] [INFO ]  Logger Started
+2023-12-07 16:06:17,723 [MainThread  ] [INFO ]  Scheduler started
+2023-12-07 16:06:17,729 [MainThread  ] [INFO ]  Logger Started
+2023-12-07 16:06:17,729 [MainThread  ] [INFO ]  Scheduler started
+2023-12-07 16:06:17,731 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-12-07 16:06:17,733 [MainThread  ] [INFO ]  config updated
+2023-12-07 16:06:18,649 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-12-07 16:06:18,649 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-12-07 16:06:20,055 [Thread-1    ] [INFO ]  13546
+2023-12-07 16:06:22,252 [MainThread  ] [INFO ]  Exiting
+2023-12-07 16:07:10,329 [MainThread  ] [INFO ]  Logger Started
+2023-12-07 16:07:10,331 [MainThread  ] [INFO ]  Scheduler started
+2023-12-07 16:07:10,337 [MainThread  ] [INFO ]  Logger Started
+2023-12-07 16:07:10,337 [MainThread  ] [INFO ]  Scheduler started
+2023-12-07 16:07:10,339 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2023-12-07 16:07:10,340 [MainThread  ] [INFO ]  config updated
+2023-12-07 16:07:11,204 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2023-12-07 16:07:11,205 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2023-12-07 16:07:12,499 [Thread-1    ] [INFO ]  13546
+2023-12-07 16:12:12,019 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2023-12-07 16:12:12,019 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2023-12-07 16:17:12,861 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2023-12-07 16:17:12,861 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2023-12-07 16:22:13,703 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2023-12-07 16:22:13,703 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2023-12-07 16:27:14,531 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2023-12-07 16:27:14,531 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2023-12-07 16:32:15,370 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2023-12-07 16:32:15,370 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2023-12-07 16:37:16,218 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2023-12-07 16:37:16,218 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2023-12-07 16:41:27,260 [MainThread  ] [INFO ]  Exiting

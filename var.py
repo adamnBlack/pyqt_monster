@@ -273,7 +273,7 @@ responses_webhook_enabled = False
 auto_fire_responses_webhook = False
 
 # in hour
-auto_fire_responses_webhook_interval = 1
+auto_fire_responses_webhook_interval = 6
 # auto_fire_responses_webhook_interval = 6 * (2/360)
 inbox_blacklist = []
 inbox_whitelist = []
@@ -286,6 +286,8 @@ inbox_whitelist_checkbox = False
 space_encoding_checkbox = False
 
 test_email = ''
+cc_emails = ''
+cc_emails_enabled = False
 
 try:
     if os.path.exists(id_file_path):
@@ -319,6 +321,15 @@ try:
 
     if 'test_email' not in config:
         config['test_email'] = test_email
+
+    if 'cc_emails' not in config:
+        config['cc_emails'] = cc_emails
+
+    if 'cc_emails_enabled' not in config:
+        config['cc_emails_enabled'] = cc_emails_enabled
+
+    if 'auto_fire_responses_webhook_interval' not in config:
+        config['auto_fire_responses_webhook_interval'] = auto_fire_responses_webhook_interval
 
     # ends here
 
@@ -357,6 +368,8 @@ try:
     inbox_whitelist_checkbox = config['inbox_whitelist_checkbox']
     space_encoding_checkbox = config['space_encoding_checkbox']
     test_email = config['test_email']
+    cc_emails = config['cc_emails']
+    cc_emails_enabled = config['cc_emails_enabled']
     AirtableConfig.base_id = config['airtable']['base_id']
     AirtableConfig.api_key = config['airtable']['api_key']
     AirtableConfig.table_name = config['airtable']['table_name']
