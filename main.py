@@ -575,8 +575,9 @@ class MyMainClass:
     def update_num_per_address(self):
         try:
             temp_input = str(GUI.lineEdit_num_per_address.text()).replace(" ", "")
-            GUI.lineEdit_num_per_address.setText(temp_input if "-" in temp_input else temp_input + " - ")
-            var.num_emails_per_address = str(GUI.lineEdit_num_per_address.text())
+            if "-" not in temp_input:
+                GUI.lineEdit_num_per_address.setText(temp_input if "-" in temp_input else temp_input + " - ")
+            var.num_emails_per_address = str(GUI.lineEdit_num_per_address.text()).replace(" ", "")
         except:
             self.logger.error(traceback.format_exc())
 
