@@ -1,0 +1,84 @@
+2024-08-27 18:35:42,220 [MainThread  ] [INFO ]  Logger Started
+2024-08-27 18:35:42,245 [MainThread  ] [INFO ]  Scheduler started
+2024-08-27 18:35:42,250 [MainThread  ] [INFO ]  Logger Started
+2024-08-27 18:35:42,251 [MainThread  ] [INFO ]  Scheduler started
+2024-08-27 18:35:42,254 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2024-08-27 18:35:42,268 [MainThread  ] [INFO ]  config updated
+2024-08-27 18:35:43,553 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 1 hour
+2024-08-27 18:35:43,554 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2024-08-27 18:35:44,352 [Thread-1    ] [INFO ]  13282
+2024-08-27 18:37:46,476 [Thread-5    ] [INFO ]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2024-08-27 18:38:04,685 [MainThread  ] [INFO ]  Cancelled
+2024-08-27 18:38:22,730 [MainThread  ] [INFO ]  Downloading_email Group a
+2024-08-27 18:38:22,741 [Thread-6    ] [INFO ]  config updated
+2024-08-27 18:38:22,742 [SendReport_I] [INFO ]  Inbox Webhook Thread Started...
+2024-08-27 18:38:31,753 [Thread-7    ] [INFO ]  Downloading finished
+2024-08-27 18:38:31,755 [SendReport_I] [INFO ]  Webhook Inbox Thread Finished.
+2024-08-27 18:38:33,886 [MainThread  ] [INFO ]  add_to_table finished
+2024-08-27 18:38:39,501 [Thread-10   ] [INFO ]  Set read flag for catoirebuster348995@gmail.com : Successful
+2024-08-27 18:40:44,378 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2024-08-27 18:40:44,379 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2024-08-27 18:41:34,281 [MainThread  ] [INFO ]  Exiting
+2024-08-27 18:43:24,304 [MainThread  ] [INFO ]  Logger Started
+2024-08-27 18:43:24,310 [MainThread  ] [INFO ]  Scheduler started
+2024-08-27 18:43:24,316 [MainThread  ] [INFO ]  Logger Started
+2024-08-27 18:43:24,316 [MainThread  ] [INFO ]  Scheduler started
+2024-08-27 18:43:24,319 [MainThread  ] [INFO ]  gmonster_desktop_id - e86e379f-5918-412f-b903-d11e6a1b7c20
+2024-08-27 18:43:24,321 [MainThread  ] [INFO ]  config updated
+2024-08-27 18:43:25,241 [MainThread  ] [INFO ]  auto_fire_responses_webhook Interval: 6 hour
+2024-08-27 18:43:25,241 [MainThread  ] [INFO ]  auto_fire_responses_webhook timer started
+2024-08-27 18:43:25,997 [Thread-1    ] [INFO ]  13282
+2024-08-27 18:43:30,993 [Thread-5    ] [INFO ]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2024-08-27 18:44:09,860 [Thread-6    ] [INFO ]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2024-08-27 18:45:00,799 [Thread-7    ] [INFO ]  config updated
+2024-08-27 18:48:26,039 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2024-08-27 18:48:26,039 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2024-08-27 18:53:26,823 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2024-08-27 18:53:26,824 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2024-08-27 18:58:27,628 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2024-08-27 18:58:27,629 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2024-08-27 19:03:28,408 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2024-08-27 19:03:28,409 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2024-08-27 19:04:51,205 [MainThread  ] [INFO ]  Downloading_email Group a
+2024-08-27 19:04:51,216 [Thread-8    ] [INFO ]  config updated
+2024-08-27 19:04:51,218 [SendReport_I] [INFO ]  Inbox Webhook Thread Started...
+2024-08-27 19:04:58,347 [MainThread  ] [INFO ]  add_to_table finished
+2024-08-27 19:05:09,336 [MainThread  ] [INFO ]  Downloading_email Group a
+2024-08-27 19:05:09,348 [Thread-12   ] [INFO ]  config updated
+2024-08-27 19:05:09,348 [SendReport_I] [INFO ]  Inbox Webhook Thread Started...
+2024-08-27 19:05:18,950 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '357', 'to': ' catoirebuster348995@gmail.com', 'TONAME': '', 'to_mail': 'catoirebuster348995@gmail.com', 'message-id': 'CAGwNhr2d+ZFcRxUh1nt+u5H5AH0syFn+_ZKr8QtFofnHo5Vf_Q@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2024-08-28 01:04:44+06:00', 'subject': 'Test Mail', 'user': 'catoirebuster348995@gmail.com', 'pass': 'lozh sfht fvyv uzje ', 'body': 'Hi,\r\n\r\nThis is a test email.\r\n', 'proxy_host': '185.125.171.131', 'proxy_port': 4022, 'proxy_user': '5Gre3gC3S1si', 'proxy_pass': 'Vf0GMX6qc8e6', 'FIRSTFROMNAME': ' ', 'LASTFROMNAME': ' ', 'flag': 'UNSEEN', 'Webhook_flag': False, 'Whitelist_keyword': ['', '', '', '', '', '', '', '', '', '', '', '']}
+2024-08-27 19:05:21,807 [MainThread  ] [INFO ]  add_to_table finished
+2024-08-27 19:05:23,241 [Thread-9    ] [INFO ]  Downloading finished
+2024-08-27 19:05:23,358 [Thread-13   ] [INFO ]  Downloading finished
+2024-08-27 19:05:23,366 [SendReport_I] [INFO ]  Webhook Inbox Thread Finished.
+2024-08-27 19:05:23,954 [SendReport_I] [INFO ]  Webhook Inbox Thread Finished.
+2024-08-27 19:05:36,471 [Thread-16   ] [INFO ]  File loading Config: {'group_a': True, 'group_b': True, 'target': True}
+2024-08-27 19:05:47,753 [MainThread  ] [INFO ]  Downloading_email Group a
+2024-08-27 19:05:47,761 [Thread-17   ] [INFO ]  config updated
+2024-08-27 19:05:47,762 [SendReport_I] [INFO ]  Inbox Webhook Thread Started...
+2024-08-27 19:05:53,409 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '357', 'to': ' catoirebuster348995@gmail.com', 'TONAME': '', 'to_mail': 'catoirebuster348995@gmail.com', 'message-id': 'CAGwNhr2d+ZFcRxUh1nt+u5H5AH0syFn+_ZKr8QtFofnHo5Vf_Q@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2024-08-28 01:04:44+06:00', 'subject': 'Test Mail', 'user': 'catoirebuster348995@gmail.com', 'pass': 'lozh sfht fvyv uzje ', 'body': 'Hi,\r\n\r\nThis is a test email.\r\n', 'proxy_host': '185.125.171.131', 'proxy_port': 4022, 'proxy_user': '5Gre3gC3S1si', 'proxy_pass': 'Vf0GMX6qc8e6', 'FIRSTFROMNAME': ' ', 'LASTFROMNAME': ' ', 'flag': 'UNSEEN', 'Webhook_flag': False, 'Whitelist_keyword': ['', '', '', '', '', '', '', '', '', '', '', '']}
+2024-08-27 19:05:57,775 [Thread-18   ] [INFO ]  Downloading finished
+2024-08-27 19:05:58,414 [SendReport_I] [INFO ]  Webhook Inbox Thread Finished.
+2024-08-27 19:06:16,751 [MainThread  ] [INFO ]  add_to_table finished
+2024-08-27 19:06:41,192 [MainThread  ] [INFO ]  Downloading_email Group a
+2024-08-27 19:06:41,204 [Thread-21   ] [INFO ]  config updated
+2024-08-27 19:06:41,204 [SendReport_I] [INFO ]  Inbox Webhook Thread Started...
+2024-08-27 19:06:46,895 [SendReport_I] [INFO ]  Dump Webhook - {'uid': '357', 'to': ' catoirebuster348995@gmail.com', 'TONAME': '', 'to_mail': 'catoirebuster348995@gmail.com', 'message-id': 'CAGwNhr2d+ZFcRxUh1nt+u5H5AH0syFn+_ZKr8QtFofnHo5Vf_Q@mail.gmail.com', 'from': 'SHAH IMRAN shahimrans64@gmail.com', 'from_name': 'SHAH IMRAN', 'from_mail': 'shahimrans64@gmail.com', 'date': '2024-08-28 01:04:44+06:00', 'subject': 'Test Mail', 'user': 'catoirebuster348995@gmail.com', 'pass': 'lozh sfht fvyv uzje ', 'body': 'Hi,\r\n\r\nThis is a test email.\r\n', 'proxy_host': '185.125.171.131', 'proxy_port': 4022, 'proxy_user': '5Gre3gC3S1si', 'proxy_pass': 'Vf0GMX6qc8e6', 'FIRSTFROMNAME': ' ', 'LASTFROMNAME': ' ', 'flag': 'UNSEEN', 'Webhook_flag': False, 'Whitelist_keyword': ['', '', '', '', '', '', '', '', '', '', '', '']}
+2024-08-27 19:06:52,210 [Thread-22   ] [INFO ]  Downloading finished
+2024-08-27 19:06:52,903 [SendReport_I] [INFO ]  Webhook Inbox Thread Finished.
+2024-08-27 19:06:59,999 [MainThread  ] [INFO ]  add_to_table finished
+2024-08-27 19:07:29,610 [Thread-25   ] [INFO ]  Set read flag for catoirebuster348995@gmail.com : Successful
+2024-08-27 19:07:50,695 [Thread-26   ] [INFO ]  Replied to shahimrans64@gmail.com
+2024-08-27 19:08:29,226 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2024-08-27 19:08:29,227 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2024-08-27 19:09:14,651 [Thread-27   ] [INFO ]  Replied to shahimrans64@gmail.com
+2024-08-27 19:10:18,287 [Thread-28   ] [INFO ]  Replied to shahimrans64@gmail.com
+2024-08-27 19:10:53,309 [Thread-29   ] [INFO ]  Replied to en2contact@gmail.com
+2024-08-27 19:13:30,023 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2024-08-27 19:13:30,024 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2024-08-27 19:13:31,918 [MainThread  ] [INFO ]  cancelled
+2024-08-27 19:14:03,355 [Thread-30   ] [INFO ]  config updated
+2024-08-27 19:14:12,738 [Thread-31   ] [INFO ]  Replied to en2contact@gmail.com
+2024-08-27 19:18:30,820 [Thread-4    ] [INFO ]  Internal Process, update_checker: campaign status - False
+2024-08-27 19:18:30,820 [Thread-4    ] [INFO ]  Internal Process: No updates available.
+2024-08-27 19:21:45,102 [MainThread  ] [INFO ]  Exiting

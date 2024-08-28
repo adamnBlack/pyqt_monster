@@ -295,8 +295,10 @@ class ReplyMail(SmtpBase):
                 self.mail_body, self.first_from_name, self.last_from_name, "", "", "", "", "", "", toname, source="body")
 
             if var.body_type == "Html":
-                content_body.attach(MIMEText(html_to_text(body), "plain"))
+                content_body.attach(MIMEText(body, "html"))
             else:
+                content_body.attach(MIMEText(body, "plain"))
+
                 html_body = "<html><body><p>" + \
                             body.replace("\n", "<br>") + "</p></body></html>"
 
