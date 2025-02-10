@@ -202,6 +202,8 @@ email_tracking_state = False
 rid_list = []
 
 files = []
+reply_files = []
+reply_body = ""
 
 inbox_data = pd.DataFrame()
 

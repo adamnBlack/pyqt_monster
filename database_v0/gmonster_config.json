@@ -1,0 +1,110 @@
+{
+    "config": {
+        "mail_server": {
+            "gmail": {
+                "imap": {
+                    "server": "imap.gmail.com",
+                    "port": 993
+                },
+                "smtp": {
+                    "server": "smtp.gmail.com",
+                    "port": 587,
+                    "require_ssl": false
+                }
+            },
+            "outlook": {
+                "imap": {
+                    "server": "outlook.office365.com",
+                    "port": 993
+                },
+                "smtp": {
+                    "server": "smtp.office365.com",
+                    "port": 587,
+                    "require_ssl": false
+                }
+            },
+            "memeglasses": {
+                "imap": {
+                    "server": "imap.gmail.com",
+                    "port": 993
+                },
+                "smtp": {
+                    "server": "smtp.gmail.com",
+                    "port": 587,
+                    "require_ssl": false
+                }
+            },
+            "blog.memeglasses": {
+                "imap": {
+                    "server": "imap.gmail.com",
+                    "port": 993
+                },
+                "smtp": {
+                    "server": "smtp.gmail.com",
+                    "port": 587,
+                    "require_ssl": false
+                }
+            },
+            "blog.callspark": {
+                "imap": {
+                    "server": "imap.gmail.com",
+                    "port": 993
+                },
+                "smtp": {
+                    "server": "smtp.gmail.com",
+                    "port": 587,
+                    "require_ssl": false
+                }
+            }
+        },
+        "date": "8/26/2024",
+        "num_emails_per_address": "2-10",
+        "delay_between_emails": "0-2",
+        "limit_of_thread": 100,
+        "compose_email_subject": "{Hello|Hi}",
+        "compose_email_body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "compose_email_body_html": "{{hi|hey}|hello|{ha|hai}}\n\n{{de|da}|the{an|a}}\n\n{this is me.|do you remember me?}",
+        "login_email": "matviivvitalii@gmail.com",
+        "tracking": {
+            "analytics_account": "UA-33237782-1",
+            "campaign_name": "Teas fdsg 3442_"
+        },
+        "webhook_link": "https://webhook.site/b5a53b51-ab92-47f8-8211-a8ef54865a8c",
+        "check_for_blocks": false,
+        "remove_email_from_target": false,
+        "enable_webhook": false,
+        "enable_email_tracking": false,
+        "custom_hostname": false,
+        "campaign_group": "group_a",
+        "body_type": "Html",
+        "target_blacklist": [],
+        "inbox_blacklist": [
+            "welcome"
+        ],
+        "inbox_whitelist": [],
+        "responses_webhook_enabled": true,
+        "auto_fire_responses_webhook": true,
+        "auto_fire_responses_webhook_interval": 6,
+        "followup_enabled": false,
+        "followup_days": 0.0001,
+        "followup_subject": "Follow Up",
+        "followup_body": "<html>\n    <body>\n        <p>{Hey|Hi|Hello} [TONAME],<br>\n        I'm reaching out to you because i {noticed|came across|found|visited} you website {the other day|yesterday} and thought you'd be interested in a {collaboration|partnership}.<br>\n        {Hope you don't mind my outreach!|Looking forward to your reply!}<br>\n        </p>\n    </body>\n</html>\n",
+        "hostname_list": [
+            "mac",
+            "pc",
+            "desktop"
+        ],
+        "inbox_whitelist_checkbox": false,
+        "space_encoding_checkbox": false,
+        "test_email": "mc2933088@gmail.com",
+        "airtable": {
+            "api_key": "keyajjzgPaHo8VjWA",
+            "base_id": "appaCmKFn3MWDzjsF",
+            "table_name": "target",
+            "use_desktop_id": true,
+            "mark_sent_airtable": false,
+            "continuous_loading": false,
+            "continuous_loading_time_period": 24
+        }
+    }
+}

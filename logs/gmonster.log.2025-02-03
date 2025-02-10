@@ -1,0 +1,24 @@
+2025-02-03 11:27:59,205 [MainThread  ] [INFO ]  Logger Started
+2025-02-03 11:27:59,244 [MainThread  ] [INFO ]  Scheduler started
+2025-02-03 11:27:59,246 [MainThread  ] [INFO ]  Logger Started
+2025-02-03 11:27:59,247 [MainThread  ] [INFO ]  Scheduler started
+2025-02-03 11:27:59,248 [MainThread  ] [INFO ]  gmonster_desktop_id - 6296d839-9b35-4c12-830a-6c871affc3e2
+2025-02-03 11:27:59,249 [MainThread  ] [INFO ]  config updated
+2025-02-03 11:27:59,949 [Thread-1    ] [INFO ]  Check Update finished
+2025-02-03 11:28:21,833 [Thread-2    ] [INFO ]  config updated
+2025-02-03 11:28:23,158 [Thread-8    ] [INFO ]  4
+2025-02-03 11:28:28,755 [MainThread  ] [INFO ]  Exiting
+2025-02-03 11:28:33,116 [MainThread  ] [INFO ]  Logger Started
+2025-02-03 11:28:33,153 [MainThread  ] [INFO ]  Scheduler started
+2025-02-03 11:28:33,156 [MainThread  ] [INFO ]  Logger Started
+2025-02-03 11:28:33,156 [MainThread  ] [INFO ]  Scheduler started
+2025-02-03 11:28:33,158 [MainThread  ] [INFO ]  gmonster_desktop_id - 6296d839-9b35-4c12-830a-6c871affc3e2
+2025-02-03 11:28:33,159 [MainThread  ] [INFO ]  config updated
+2025-02-03 11:28:33,714 [Thread-1    ] [INFO ]  Check Update finished
+2025-02-03 11:32:11,792 [MainThread  ] [INFO ]  Logger Started
+2025-02-03 11:32:11,829 [MainThread  ] [INFO ]  Scheduler started
+2025-02-03 11:32:11,832 [MainThread  ] [INFO ]  Logger Started
+2025-02-03 11:32:11,832 [MainThread  ] [INFO ]  Scheduler started
+2025-02-03 11:32:11,834 [MainThread  ] [INFO ]  gmonster_desktop_id - 6296d839-9b35-4c12-830a-6c871affc3e2
+2025-02-03 11:32:11,835 [MainThread  ] [INFO ]  config updated
+2025-02-03 11:32:12,394 [Thread-1    ] [INFO ]  Check Update finished

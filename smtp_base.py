@@ -36,6 +36,14 @@ class SmtpBase:
             mail_domain = regex.findall(self.user)[0]
             mail_vendor = mail_domain.split(".")[0]
 
+            parts = mail_domain.split(".")
+            if len(parts) > 2:
+                mail_vendor =  ".".join(parts[:-1])
+            elif len(parts) == 2:
+                mail_vendor = parts[0]
+            else:
+                mail_vendor = mail_domain
+
             self.smtp_server = var.mail_server[mail_vendor]["smtp"]["server"]
             self.smtp_port = var.mail_server[mail_vendor]["smtp"]["port"]
         except:

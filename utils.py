@@ -186,6 +186,42 @@ def get_config_json():
     return data
 
 
+# def format_email(text, FIRSTFROMNAME, LASTFROMNAME, one, two, three, four, five, six, TONAME, source=None):
+#     text = text.replace('[FIRSTFROMNAME]', str(FIRSTFROMNAME))
+#     text = text.replace('[LASTFROMNAME]', str(LASTFROMNAME))
+#     text = text.replace('[1]', str(one))
+#     text = text.replace('[2]', str(two))
+#     text = text.replace('[3]', str(three))
+#     text = text.replace('[4]', str(four))
+#     text = text.replace('[5]', str(five))
+#     text = text.replace('[6]', str(six))
+#     text = text.replace('[TONAME]', str(TONAME))
+#
+#     if var.body_type == "Html" and var.email_tracking_state is True and source is not None:
+#         text = text.split("</body>")
+#         text[0] = text[0] + f"<img src='{var.email_tracking_link()}'></body>"
+#         text = "".join(text)
+#         rid = uuid.uuid4()
+#         text = text.replace('[**RID**]', str(rid))
+#
+#     result = re.findall(r'\{.*?\}', text)
+#
+#     for item in result:
+#         temp = item[1:-1]
+#         temp = random.choice(temp.split("|"))
+#         text = text.replace(item, temp)
+#
+#     if var.body_type == "Html":
+#         text = text.replace('[LINEBREAK]', "<br>\n")  # replace linebreaks with
+#     else:
+#         text = text.replace('[LINEBREAK]', "\n")
+#
+#     if var.space_encoding_checkbox:
+#         if random_boolean():
+#             text = text.replace(" ", random.choice(var.CONFUSABLES_CHARACTER))
+#
+#     return text
+
 def format_email(text, FIRSTFROMNAME, LASTFROMNAME, one, two, three, four, five, six, TONAME, source=None):
     text = text.replace('[FIRSTFROMNAME]', str(FIRSTFROMNAME))
     text = text.replace('[LASTFROMNAME]', str(LASTFROMNAME))
@@ -204,12 +240,61 @@ def format_email(text, FIRSTFROMNAME, LASTFROMNAME, one, two, three, four, five,
         rid = uuid.uuid4()
         text = text.replace('[**RID**]', str(rid))
 
-    result = re.findall(r'\{.*?\}', text)
+    # Regex to find nested spintax brackets
+    # spintax_bracket = re.compile(r'(?<!\\)((?:\\{2})*)\{([^{}]+)(?<!\\)((?:\\{2})*)\}')
+    spintax_bracket = re.compile(r'(?<!\\)((?:\\{2})*)\{([^{}]*)(?<!\\)((?:\\{2})*)\}')
 
-    for item in result:
-        temp = item[1:-1]
-        temp = random.choice(temp.split("|"))
-        text = text.replace(item, temp)
+    # Define the regex pattern for non-nested spintax
+    non_nested_spintax_pattern = re.compile(r'(?<!\{)\{([^{}]*?)(?:\|([^{}]*?))*\}(?!\})')
+    non_nested_spintax_pattern = re.compile(r'\{[^{}]*?(?:\|[^{}]*?)*\}')
+    nested_braces_pattern = r"\{[^{}]*\{.*?\}[^{}]*\}"
+
+    # To keep track of used sentences
+    used_sentences = set()
+
+    def _replace_spintax(match):
+        prefix, options, suffix = match.groups()
+        options_list = options.split("|")
+
+        # Filter out already used sentences
+        available_options = [option for option in options_list if option not in used_sentences]
+
+        if available_options:
+            chosen_option = random.choice(available_options)
+            used_sentences.add(chosen_option)  # Mark the chosen option as used
+            return prefix + chosen_option + suffix
+        else:
+            # If all options are used, fallback to a random choice (but this shouldn't normally happen)
+            return prefix + random.choice(options_list) + suffix
+
+    # Process nested spintax iteratively
+    while True:
+        new_text = re.sub(spintax_bracket, _replace_spintax, text)
+        text = new_text
+        if is_non_nested_spintax(new_text):
+            # Find all spintax placeholders
+            result = re.findall(r'\{.*?\}', new_text)
+
+            used_sentences_in_non_nested = set()  # To keep track of used sentences
+
+            for item in result:
+                temp = item[1:-1].split("|")  # Split options into a list
+                # Filter out already used sentences
+                available_options = [option for option in temp if option not in used_sentences_in_non_nested]
+
+                if available_options:  # Check if there are any available options left
+                    chosen_option = random.choice(available_options)  # Select one option
+                    used_sentences_in_non_nested.add(chosen_option)  # Mark this option as used
+                    text = text.replace(item, chosen_option, 1)  # Replace only the first occurrence
+            break
+        # if new_text == text:
+        #     break
+        # text = new_text
+
+    # Replaces escaped characters (e.g., \{, \}, \|) with their literal counterparts
+    text = re.sub(r'\\([{}|])', r'\1', text)
+    # Removes double backslashes
+    text = re.sub(r'\\{2}', r'\\', text)
 
     if var.body_type == "Html":
         text = text.replace('[LINEBREAK]', "<br>\n")  # replace linebreaks with
@@ -222,6 +307,22 @@ def format_email(text, FIRSTFROMNAME, LASTFROMNAME, one, two, three, four, five,
 
     return text
 
+
+def is_non_nested_spintax(input_string):
+    # Regex to detect nested braces
+    nested_braces_pattern = r"\{[^{}]*\{.*?\}[^{}]*\}"
+    # Regex to detect non-nested spintax
+    non_nested_spintax_pattern = r"\{([^\{\}]+)\}"
+
+    # Check for nested spintax (invalid case)
+    if re.search(nested_braces_pattern, input_string):
+        return False
+    # Check if the string has valid spintax or is a normal string
+    # If it matches non-nested spintax or contains no braces, it's valid
+    if re.search(non_nested_spintax_pattern, input_string) or '{' not in input_string:
+        return True
+    # Otherwise, the string is invalid
+    return False
 
 if __name__ == "__main__":
     print(__name__)

@@ -311,7 +311,8 @@ class ReplyMail(SmtpBase):
 
             msg.attach(content)
 
-            for path in var.files:
+            # for path in var.files:
+            for path in var.reply_files:
                 part = MIMEBase('application', "octet-stream")
                 with open(path, 'rb') as file:
                     part.set_payload(file.read())

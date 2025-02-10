@@ -26,6 +26,14 @@ class ImapBase:
             mail_domain = regex.findall(self.imap_user)[0]
             mail_vendor = mail_domain.split(".")[0]
 
+            parts = mail_domain.split(".")
+            if len(parts) > 2:
+                mail_vendor =  ".".join(parts[:-1])
+            elif len(parts) == 2:
+                mail_vendor = parts[0]
+            else:
+                mail_vendor = mail_domain
+
             self.imap_server = var.mail_server[mail_vendor]["imap"]["server"]
             self.imap_port = var.mail_server[mail_vendor]["imap"]["port"]
         except:

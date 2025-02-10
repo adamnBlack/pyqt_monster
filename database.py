@@ -17,6 +17,7 @@ import datetime
 import traceback
 import queue
 from var import logger
+import re
 
 db_path = var.base_dir + "/group.DB"
 Base = declarative_base()
@@ -412,6 +413,7 @@ def file_to_db():
 
                         ) for index, row in group_a.iterrows()]
 
+                        update_mail_server_config(objects)
                         session.add_all(objects)
                     else:
                         objects = Group_A(
@@ -465,6 +467,7 @@ def file_to_db():
 
                         ) for index, row in group_b.iterrows()]
 
+                        update_mail_server_config(objects)
                         session.add_all(objects)
                     else:
                         objects = Group_B(
@@ -555,6 +558,43 @@ def file_to_db():
 
     return True, None
 
+
+def update_mail_server_config(objects):
+    new_domain_config = {
+        "imap": {
+            "server": "imap.gmail.com",
+            "port": 993
+        },
+        "smtp": {
+            "server": "smtp.gmail.com",
+            "port": 587,
+            "require_ssl": False
+        }
+    }
+
+    for obj in objects:
+        # Extract the email domain
+        regex = re.compile(r"(?<=@)(\S+$)")
+        mail_domain = regex.findall(obj.EMAIL)[0]
+
+        # Determine the mail vendor from the domain
+        parts = mail_domain.split(".")
+        if len(parts) > 2:
+            mail_vendor = ".".join(parts[:-1])
+        elif len(parts) == 2:
+            mail_vendor = parts[0]
+        else:
+            mail_vendor = mail_domain
+
+        # Check if the vendor exists in the mail server configuration
+        if mail_vendor not in var.mail_server:
+            # Add the new domain configuration
+            var.mail_server[mail_vendor] = new_domain_config
+            var.data["config"]['mail_server'] = var.mail_server
+
+            # Write the updated configuration to a JSON file
+            with open(f"{var.base_dir}/gmonster_config.json", "w", encoding="utf-8") as json_file:
+                json.dump(var.data, json_file, indent=4)
 
 def dummy_data_db(group_a=True, group_b=True, target=True):
     session = get_session()

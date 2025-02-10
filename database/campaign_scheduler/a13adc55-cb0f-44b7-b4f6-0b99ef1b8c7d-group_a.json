@@ -1,0 +1,108 @@
+{
+    "config": {
+        "mail_server": {
+            "gmail": {
+                "imap": {
+                    "server": "imap.gmail.com",
+                    "port": 993
+                },
+                "smtp": {
+                    "server": "smtp.gmail.com",
+                    "port": 587,
+                    "require_ssl": false
+                }
+            },
+            "outlook": {
+                "imap": {
+                    "server": "outlook.office365.com",
+                    "port": 993
+                },
+                "smtp": {
+                    "server": "smtp.office365.com",
+                    "port": 587,
+                    "require_ssl": false
+                }
+            },
+            "memeglasses": {
+                "imap": {
+                    "server": "imap.gmail.com",
+                    "port": 993
+                },
+                "smtp": {
+                    "server": "smtp.gmail.com",
+                    "port": 587,
+                    "require_ssl": false
+                }
+            },
+            "blog.memeglasses": {
+                "imap": {
+                    "server": "imap.gmail.com",
+                    "port": 993
+                },
+                "smtp": {
+                    "server": "smtp.gmail.com",
+                    "port": 587,
+                    "require_ssl": false
+                }
+            },
+            "blog.callspark": {
+                "imap": {
+                    "server": "imap.gmail.com",
+                    "port": 993
+                },
+                "smtp": {
+                    "server": "smtp.gmail.com",
+                    "port": 587,
+                    "require_ssl": false
+                }
+            }
+        },
+        "date": "1/1/2025",
+        "num_emails_per_address": "1 - 2",
+        "delay_between_emails": "5 - 6",
+        "limit_of_thread": 300,
+        "compose_email_subject": "Just a friendly outreach about [3]",
+        "compose_email_body": "{Hey|Hi|{Howdy|Hello}} [TONAME],\n",
+        "compose_email_body_html": "{Hey|Hi|{Howdy|Hello}} [TONAME],\n",
+        "login_email": "matviivvitalii@gmail.com",
+        "tracking": {
+            "analytics_account": "",
+            "campaign_name": ""
+        },
+        "webhook_link": "",
+        "check_for_blocks": true,
+        "remove_email_from_target": true,
+        "enable_webhook": false,
+        "enable_email_tracking": false,
+        "custom_hostname": true,
+        "campaign_group": "group_a",
+        "body_type": "Normal",
+        "target_blacklist": [],
+        "inbox_blacklist": [],
+        "inbox_whitelist": [],
+        "responses_webhook_enabled": false,
+        "auto_fire_responses_webhook": false,
+        "auto_fire_responses_webhook_interval": 1,
+        "followup_enabled": false,
+        "followup_days": 2.0,
+        "followup_subject": "Follow Up",
+        "followup_body": "<html>\n    <body>\n        <p>{Hey|Hi|Hello} [TONAME],<br>\n        I'm reaching out to you because i {noticed|came across|found|visited} you website {the other day|yesterday} and thought you'd be interested in a {collaboration|partnership}.<br>\n        {Hope you don't mind my outreach!|Looking forward to your reply!}<br>\n        </p>\n    </body>\n</html>\n",
+        "hostname_list": [
+            "mac",
+            "pc",
+            "desktop"
+        ],
+        "inbox_whitelist_checkbox": false,
+        "space_encoding_checkbox": false,
+        "test_email": "mc2933088@gmail.com",
+        "airtable": {
+            "api_key": "",
+            "base_id": "",
+            "table_name": "",
+            "use_desktop_id": false,
+            "mark_sent_airtable": false,
+            "continuous_loading": false,
+            "continuous_loading_time_period": 24
+        }
+    }
+}

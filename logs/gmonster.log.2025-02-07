@@ -1,0 +1,843 @@
+2025-02-07 00:01:10,483 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 00:01:10,485 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 00:06:10,824 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 00:06:10,824 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 00:11:11,182 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 00:11:11,182 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 00:16:11,532 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 00:16:11,532 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 00:21:11,854 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 00:21:11,855 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 00:26:12,187 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 00:26:12,188 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 00:31:12,552 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 00:31:12,553 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 00:36:12,895 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 00:36:12,895 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 00:39:49,590 [MainThread  ] [INFO ]  add_to_table finished
+2025-02-07 00:39:49,590 [MainThread  ] [ERROR]  Error at add_to_table - 'flag'
+2025-02-07 00:39:55,441 [MainThread  ] [INFO ]  Exiting
+2025-02-07 00:53:31,420 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 00:53:31,456 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 00:53:31,459 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 00:53:31,459 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 00:53:31,460 [MainThread  ] [INFO ]  gmonster_desktop_id - 6296d839-9b35-4c12-830a-6c871affc3e2
+2025-02-07 00:53:31,461 [MainThread  ] [INFO ]  config updated
+2025-02-07 00:53:32,001 [Thread-1    ] [INFO ]  Check Update finished
+2025-02-07 00:53:41,030 [Thread-2    ] [INFO ]  config updated
+2025-02-07 00:54:54,968 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 00:54:55,006 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 00:54:55,009 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 00:54:55,009 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 00:54:55,010 [MainThread  ] [INFO ]  gmonster_desktop_id - 6296d839-9b35-4c12-830a-6c871affc3e2
+2025-02-07 00:54:55,011 [MainThread  ] [INFO ]  config updated
+2025-02-07 00:54:55,549 [Thread-1    ] [INFO ]  Check Update finished
+2025-02-07 00:55:02,136 [Thread-2    ] [INFO ]  config updated
+2025-02-07 00:58:58,462 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 00:58:58,498 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 00:58:58,500 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 00:58:58,501 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 00:58:58,502 [MainThread  ] [INFO ]  gmonster_desktop_id - 6296d839-9b35-4c12-830a-6c871affc3e2
+2025-02-07 00:58:58,503 [MainThread  ] [INFO ]  config updated
+2025-02-07 00:58:59,024 [Thread-1    ] [INFO ]  Check Update finished
+2025-02-07 00:59:05,905 [Thread-2    ] [INFO ]  config updated
+2025-02-07 00:59:07,159 [Thread-8    ] [INFO ]  131
+2025-02-07 00:59:11,973 [MainThread  ] [INFO ]  Downloading_email Group a
+2025-02-07 00:59:11,976 [Thread-11   ] [INFO ]  config updated
+2025-02-07 00:59:12,638 [hagrid@blog.] [ERROR]  Error at downloading email - hagrid@blog.callspark.pro - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 00:59:12,802 [john.snow42@] [ERROR]  Error at downloading email - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'LOGIN failed.'
+
+2025-02-07 00:59:13,127 [felix@blog.m] [ERROR]  Error at downloading email - felix@blog.memeglasses.com - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 00:59:13,552 [andrew@memeg] [ERROR]  Error at downloading email - andrew@memeglasses.com - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 00:59:17,001 [Thread-12   ] [INFO ]  Downloading finished
+2025-02-07 00:59:19,055 [MainThread  ] [INFO ]  add_to_table finished
+2025-02-07 00:59:19,055 [MainThread  ] [ERROR]  Error at add_to_table - 'flag'
+2025-02-07 00:59:30,519 [MainThread  ] [INFO ]  Exiting
+2025-02-07 02:34:10,113 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 02:34:10,152 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 02:34:10,156 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 02:34:10,156 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 02:34:10,158 [MainThread  ] [INFO ]  gmonster_desktop_id - 6296d839-9b35-4c12-830a-6c871affc3e2
+2025-02-07 02:34:10,159 [MainThread  ] [INFO ]  config updated
+2025-02-07 02:34:10,726 [Thread-1    ] [INFO ]  Check Update finished
+2025-02-07 02:34:18,803 [Thread-2    ] [INFO ]  config updated
+2025-02-07 02:34:20,093 [Thread-8    ] [INFO ]  131
+2025-02-07 02:34:36,378 [MainThread  ] [INFO ]  Downloading_email Group a
+2025-02-07 02:34:36,381 [Thread-11   ] [INFO ]  config updated
+2025-02-07 02:34:37,136 [felix@blog.m] [ERROR]  Error at downloading email - felix@blog.memeglasses.com - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 02:34:37,154 [hagrid@blog.] [ERROR]  Error at downloading email - hagrid@blog.callspark.pro - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 02:34:37,184 [john.snow42@] [ERROR]  Error at downloading email - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'LOGIN failed.'
+
+2025-02-07 02:34:37,918 [andrew@memeg] [ERROR]  Error at downloading email - andrew@memeglasses.com - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 02:34:42,408 [Thread-12   ] [INFO ]  Downloading finished
+2025-02-07 02:35:02,382 [MainThread  ] [INFO ]  add_to_table finished
+2025-02-07 02:39:20,126 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 02:39:20,126 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 02:44:20,467 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 02:44:20,467 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 02:49:20,797 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 02:49:20,797 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 02:54:21,157 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 02:54:21,157 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 02:59:21,512 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 02:59:21,512 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 03:04:21,838 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 03:04:21,839 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 03:09:22,174 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 03:09:22,175 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 03:14:22,532 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 03:14:22,532 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 03:19:22,912 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 03:19:22,912 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 03:24:23,232 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 03:24:23,232 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 03:29:23,597 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 03:29:23,597 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 03:34:20,430 [Thread-8    ] [INFO ]  131
+2025-02-07 03:34:23,940 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 03:34:23,940 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 03:39:24,291 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 03:39:24,291 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 03:44:24,642 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 03:44:24,642 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 03:49:25,021 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 03:49:25,021 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 03:54:25,358 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 03:54:25,358 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 03:59:25,687 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 03:59:25,687 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 04:04:26,042 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 04:04:26,043 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 04:09:26,367 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 04:09:26,367 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 04:14:26,718 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 04:14:26,718 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 04:19:27,049 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 04:19:27,049 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 04:24:27,374 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 04:24:27,374 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 04:29:27,706 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 04:29:27,707 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 04:34:20,757 [Thread-8    ] [INFO ]  131
+2025-02-07 04:34:28,061 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 04:34:28,061 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 04:39:28,420 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 04:39:28,420 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 04:44:28,752 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 04:44:28,755 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 04:49:29,123 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 04:49:29,123 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 04:54:29,452 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 04:54:29,452 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 04:59:29,803 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 04:59:29,803 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 05:04:30,133 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 05:04:30,133 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 05:09:30,483 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 05:09:30,483 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 05:14:30,825 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 05:14:30,825 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 05:19:31,153 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 05:19:31,153 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 05:24:31,529 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 05:24:31,530 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 05:29:31,845 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 05:29:31,845 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 05:34:21,090 [Thread-8    ] [INFO ]  131
+2025-02-07 05:34:32,184 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 05:34:32,184 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 05:39:32,515 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 05:39:32,515 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 05:44:32,847 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 05:44:32,848 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 05:49:33,178 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 05:49:33,178 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 05:54:33,508 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 05:54:33,508 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 05:59:33,856 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 05:59:33,856 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 06:04:34,279 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 06:04:34,279 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 06:09:34,603 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 06:09:34,603 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 06:14:34,961 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 06:14:34,961 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 06:19:35,320 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 06:19:35,320 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 06:24:35,660 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 06:24:35,661 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 06:29:35,987 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 06:29:35,987 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 06:34:21,433 [Thread-8    ] [INFO ]  131
+2025-02-07 06:34:36,340 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 06:34:36,340 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 06:39:36,675 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 06:39:36,675 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 06:44:37,008 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 06:44:37,008 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 06:49:37,336 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 06:49:37,336 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 06:54:37,728 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 06:54:37,728 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 06:59:38,056 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 06:59:38,056 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 07:04:38,373 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 07:04:38,373 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 07:09:38,704 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 07:09:38,704 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 07:14:39,067 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 07:14:39,067 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 07:19:39,410 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 07:19:39,410 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 07:24:39,789 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 07:24:39,789 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 07:29:40,113 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 07:29:40,113 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 07:34:21,770 [Thread-8    ] [INFO ]  131
+2025-02-07 07:34:40,449 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 07:34:40,449 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 07:39:40,780 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 07:39:40,780 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 07:44:41,108 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 07:44:41,108 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 07:49:41,451 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 07:49:41,451 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 07:54:41,785 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 07:54:41,785 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 07:59:42,139 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 07:59:42,139 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 08:04:42,486 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 08:04:42,487 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 08:09:42,819 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 08:09:42,820 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 08:14:43,145 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 08:14:43,145 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 08:19:43,468 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 08:19:43,468 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 08:24:43,818 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 08:24:43,818 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 08:29:44,175 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 08:29:44,175 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 08:34:22,101 [Thread-8    ] [INFO ]  131
+2025-02-07 08:34:44,535 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 08:34:44,535 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 08:39:44,885 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 08:39:44,885 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 08:44:45,239 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 08:44:45,239 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 08:48:18,630 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 08:48:18,668 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 08:48:18,671 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 08:48:18,671 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 08:48:18,672 [MainThread  ] [INFO ]  gmonster_desktop_id - 6296d839-9b35-4c12-830a-6c871affc3e2
+2025-02-07 08:48:18,673 [MainThread  ] [INFO ]  config updated
+2025-02-07 08:48:19,216 [Thread-1    ] [INFO ]  Check Update finished
+2025-02-07 08:48:27,822 [Thread-2    ] [INFO ]  config updated
+2025-02-07 08:48:29,060 [Thread-8    ] [INFO ]  131
+2025-02-07 08:48:34,373 [MainThread  ] [INFO ]  Downloading_email Group a
+2025-02-07 08:48:34,376 [Thread-11   ] [INFO ]  config updated
+2025-02-07 08:48:35,027 [hagrid@blog.] [ERROR]  Error at downloading email - hagrid@blog.callspark.pro - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 08:48:35,191 [john.snow42@] [ERROR]  Error at downloading email - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'LOGIN failed.'
+
+2025-02-07 08:48:35,566 [felix@blog.m] [ERROR]  Error at downloading email - felix@blog.memeglasses.com - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 08:48:35,986 [andrew@memeg] [ERROR]  Error at downloading email - andrew@memeglasses.com - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 08:48:40,402 [Thread-12   ] [INFO ]  Downloading finished
+2025-02-07 08:48:43,539 [MainThread  ] [INFO ]  add_to_table finished
+2025-02-07 08:48:53,541 [MainThread  ] [ERROR]  Error at email_show - False
+2025-02-07 08:49:07,634 [Thread-57   ] [INFO ]  Set read flag for lorettarichard82@gmail.com : Successful
+2025-02-07 08:50:21,866 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 08:50:21,902 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 08:50:21,904 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 08:50:21,904 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 08:50:21,906 [MainThread  ] [INFO ]  gmonster_desktop_id - 6296d839-9b35-4c12-830a-6c871affc3e2
+2025-02-07 08:50:21,906 [MainThread  ] [INFO ]  config updated
+2025-02-07 08:50:22,432 [Thread-1    ] [INFO ]  Check Update finished
+2025-02-07 08:50:29,732 [Thread-2    ] [INFO ]  config updated
+2025-02-07 08:50:31,197 [Thread-8    ] [INFO ]  131
+2025-02-07 08:50:35,803 [MainThread  ] [INFO ]  Downloading_email Group a
+2025-02-07 08:50:35,806 [Thread-11   ] [INFO ]  config updated
+2025-02-07 08:50:36,464 [hagrid@blog.] [ERROR]  Error at downloading email - hagrid@blog.callspark.pro - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 08:50:36,736 [john.snow42@] [ERROR]  Error at downloading email - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'LOGIN failed.'
+
+2025-02-07 08:50:36,989 [felix@blog.m] [ERROR]  Error at downloading email - felix@blog.memeglasses.com - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 08:50:38,281 [andrew@memeg] [ERROR]  Error at downloading email - andrew@memeglasses.com - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 08:50:41,830 [Thread-12   ] [INFO ]  Downloading finished
+2025-02-07 08:50:43,471 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,477 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,489 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,497 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,507 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,516 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,526 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,536 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,547 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,557 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,567 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,578 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,587 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,597 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,607 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,618 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,626 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,636 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,646 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,657 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,667 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,677 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,686 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,696 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,707 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,716 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,726 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,736 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,746 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,756 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,767 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,777 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,787 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,797 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,806 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,816 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,826 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,836 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,847 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,857 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,867 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,877 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,888 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,897 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,906 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,918 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,927 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,937 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,946 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,957 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,966 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,977 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,986 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:43,996 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,006 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,016 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,027 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,037 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,047 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,057 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,066 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,077 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,088 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,098 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,107 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,117 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,127 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,136 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,147 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,157 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,167 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,176 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,187 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,196 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,207 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,217 [MainThread  ] [ERROR]  Error at add_to_table - 'NoneType' object has no attribute 'setBackground'
+2025-02-07 08:50:44,223 [MainThread  ] [INFO ]  add_to_table finished
+2025-02-07 08:54:11,478 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 08:54:11,514 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 08:54:11,517 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 08:54:11,517 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 08:54:11,518 [MainThread  ] [INFO ]  gmonster_desktop_id - 6296d839-9b35-4c12-830a-6c871affc3e2
+2025-02-07 08:54:11,519 [MainThread  ] [INFO ]  config updated
+2025-02-07 08:54:12,069 [Thread-1    ] [INFO ]  Check Update finished
+2025-02-07 08:54:30,193 [Thread-2    ] [INFO ]  config updated
+2025-02-07 08:54:31,441 [Thread-8    ] [INFO ]  131
+2025-02-07 08:54:36,102 [MainThread  ] [INFO ]  Downloading_email Group a
+2025-02-07 08:54:36,104 [Thread-11   ] [INFO ]  config updated
+2025-02-07 08:54:36,755 [hagrid@blog.] [ERROR]  Error at downloading email - hagrid@blog.callspark.pro - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 08:54:36,958 [felix@blog.m] [ERROR]  Error at downloading email - felix@blog.memeglasses.com - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 08:54:37,007 [john.snow42@] [ERROR]  Error at downloading email - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'LOGIN failed.'
+
+2025-02-07 08:54:37,365 [andrew@memeg] [ERROR]  Error at downloading email - andrew@memeglasses.com - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 08:54:49,133 [Thread-12   ] [INFO ]  Downloading finished
+2025-02-07 08:54:51,314 [MainThread  ] [INFO ]  add_to_table finished
+2025-02-07 08:56:25,000 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 08:56:25,038 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 08:56:25,040 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 08:56:25,040 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 08:56:25,042 [MainThread  ] [INFO ]  gmonster_desktop_id - 6296d839-9b35-4c12-830a-6c871affc3e2
+2025-02-07 08:56:25,042 [MainThread  ] [INFO ]  config updated
+2025-02-07 08:56:25,584 [Thread-1    ] [INFO ]  Check Update finished
+2025-02-07 08:56:39,946 [Thread-2    ] [INFO ]  config updated
+2025-02-07 08:56:41,255 [Thread-8    ] [INFO ]  131
+2025-02-07 08:56:45,328 [MainThread  ] [INFO ]  Downloading_email Group a
+2025-02-07 08:56:45,331 [Thread-11   ] [INFO ]  config updated
+2025-02-07 08:56:45,998 [hagrid@blog.] [ERROR]  Error at downloading email - hagrid@blog.callspark.pro - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 08:56:46,005 [john.snow42@] [ERROR]  Error at downloading email - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'LOGIN failed.'
+
+2025-02-07 08:56:46,157 [andrew@memeg] [ERROR]  Error at downloading email - andrew@memeglasses.com - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 08:56:46,485 [felix@blog.m] [ERROR]  Error at downloading email - felix@blog.memeglasses.com - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 08:56:53,359 [Thread-12   ] [INFO ]  Downloading finished
+2025-02-07 08:57:04,459 [MainThread  ] [INFO ]  add_to_table finished
+2025-02-07 08:57:50,797 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 08:57:50,847 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 08:57:50,850 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 08:57:50,850 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 08:57:50,851 [MainThread  ] [INFO ]  gmonster_desktop_id - 6296d839-9b35-4c12-830a-6c871affc3e2
+2025-02-07 08:57:50,852 [MainThread  ] [INFO ]  config updated
+2025-02-07 08:57:51,393 [Thread-1    ] [INFO ]  Check Update finished
+2025-02-07 08:57:57,634 [Thread-2    ] [INFO ]  config updated
+2025-02-07 08:57:58,871 [Thread-8    ] [INFO ]  131
+2025-02-07 08:58:05,343 [MainThread  ] [INFO ]  Downloading_email Group a
+2025-02-07 08:58:05,346 [Thread-11   ] [INFO ]  config updated
+2025-02-07 08:58:06,006 [hagrid@blog.] [ERROR]  Error at downloading email - hagrid@blog.callspark.pro - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 08:58:06,249 [john.snow42@] [ERROR]  Error at downloading email - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'LOGIN failed.'
+
+2025-02-07 08:58:06,594 [felix@blog.m] [ERROR]  Error at downloading email - felix@blog.memeglasses.com - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 08:58:06,922 [andrew@memeg] [ERROR]  Error at downloading email - andrew@memeglasses.com - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 08:58:11,373 [Thread-12   ] [INFO ]  Downloading finished
+2025-02-07 08:58:13,645 [MainThread  ] [INFO ]  add_to_table finished
+2025-02-07 08:59:04,081 [MainThread  ] [ERROR]  Error at email_show - False
+2025-02-07 08:59:12,211 [Thread-57   ] [INFO ]  Set read flag for waylonrudzinski@gmail.com : Successful
+2025-02-07 09:02:58,891 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 09:02:58,891 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 09:07:59,249 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 09:07:59,249 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 09:12:59,616 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 09:12:59,617 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 09:17:59,952 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 09:17:59,952 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 09:23:00,283 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 09:23:00,283 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 09:28:00,615 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 09:28:00,615 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 09:33:00,976 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 09:33:00,976 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 09:38:01,326 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 09:38:01,327 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 09:43:01,702 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 09:43:01,703 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 09:48:02,034 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 09:48:02,034 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 09:53:02,367 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 09:53:02,367 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 09:57:59,222 [Thread-8    ] [INFO ]  131
+2025-02-07 09:58:02,729 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 09:58:02,729 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 10:03:03,059 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 10:03:03,059 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 10:08:03,409 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 10:08:03,409 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 10:13:03,772 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 10:13:03,772 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 10:18:04,091 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 10:18:04,091 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 10:23:04,421 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 10:23:04,421 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 10:28:04,777 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 10:28:04,777 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 10:33:05,121 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 10:33:05,122 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 10:38:05,453 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 10:38:05,453 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 10:43:05,820 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 10:43:05,820 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 10:48:06,150 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 10:48:06,150 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 10:53:06,500 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 10:53:06,500 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 10:57:59,571 [Thread-8    ] [INFO ]  131
+2025-02-07 10:58:06,855 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 10:58:06,855 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 11:03:07,215 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 11:03:07,215 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 11:08:07,537 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 11:08:07,537 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 11:13:07,873 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 11:13:07,873 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 11:18:08,202 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 11:18:08,202 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 11:23:08,557 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 11:23:08,557 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 11:28:08,914 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 11:28:08,914 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 11:33:09,243 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 11:33:09,243 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 11:38:09,609 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 11:38:09,609 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 11:43:09,969 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 11:43:09,969 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 11:48:10,301 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 11:48:10,302 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 11:53:10,632 [Thread-10   ] [INFO ]  Internal Process, update_checker: campaign status - False
+2025-02-07 11:53:10,632 [Thread-10   ] [INFO ]  Internal Process: No updates available.
+2025-02-07 11:53:30,235 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 11:53:30,272 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 11:53:30,275 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 11:53:30,275 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 11:53:30,276 [MainThread  ] [INFO ]  gmonster_desktop_id - 6296d839-9b35-4c12-830a-6c871affc3e2
+2025-02-07 11:53:30,277 [MainThread  ] [INFO ]  config updated
+2025-02-07 11:53:30,855 [Thread-1    ] [INFO ]  Check Update finished
+2025-02-07 11:53:37,352 [Thread-2    ] [INFO ]  config updated
+2025-02-07 11:53:38,694 [Thread-8    ] [INFO ]  131
+2025-02-07 11:57:01,332 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 11:57:01,372 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 11:57:01,374 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 11:57:01,375 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 11:57:01,376 [MainThread  ] [INFO ]  gmonster_desktop_id - 6296d839-9b35-4c12-830a-6c871affc3e2
+2025-02-07 11:57:01,377 [MainThread  ] [INFO ]  config updated
+2025-02-07 11:57:01,939 [Thread-1    ] [INFO ]  Check Update finished
+2025-02-07 11:57:12,952 [Thread-2    ] [INFO ]  config updated
+2025-02-07 11:57:14,292 [Thread-8    ] [INFO ]  131
+2025-02-07 11:57:26,591 [Thread-13   ] [INFO ]  Scheduler Campaign config saved
+2025-02-07 11:57:26,612 [Thread-12   ] [INFO ]  Added job "a13adc55-cb0f-44b7-b4f6-0b99ef1b8c7d-group_a" to job store "default"
+2025-02-07 11:57:26,612 [Thread-12   ] [INFO ]  Scheduled job id: a13adc55-cb0f-44b7-b4f6-0b99ef1b8c7d-group_a at 2000-01-01 00:00:00
+2025-02-07 11:57:26,613 [ThreadPoolEx] [INFO ]  Starting MyMainClass.run_scheduled_campaign id: a13adc55-cb0f-44b7-b4f6-0b99ef1b8c7d-group_a
+2025-02-07 11:57:26,613 [APScheduler ] [INFO ]  Removed job a13adc55-cb0f-44b7-b4f6-0b99ef1b8c7d-group_a
+2025-02-07 12:00:59,738 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 12:00:59,773 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 12:00:59,776 [MainThread  ] [INFO ]  Logger Started
+2025-02-07 12:00:59,776 [MainThread  ] [INFO ]  Scheduler started
+2025-02-07 12:00:59,777 [MainThread  ] [INFO ]  gmonster_desktop_id - 6296d839-9b35-4c12-830a-6c871affc3e2
+2025-02-07 12:00:59,778 [MainThread  ] [INFO ]  config updated
+2025-02-07 12:01:00,373 [Thread-1    ] [INFO ]  Check Update finished
+2025-02-07 12:01:06,488 [Thread-2    ] [INFO ]  config updated
+2025-02-07 12:01:07,924 [Thread-8    ] [INFO ]  131
+2025-02-07 12:01:18,966 [MainThread  ] [INFO ]  Downloading_email Group a
+2025-02-07 12:01:18,968 [Thread-12   ] [INFO ]  config updated
+2025-02-07 12:01:19,784 [hagrid@blog.] [ERROR]  Error at downloading email - hagrid@blog.callspark.pro - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 12:01:19,786 [andrew@memeg] [ERROR]  Error at downloading email - andrew@memeglasses.com - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 12:01:19,835 [john.snow42@] [ERROR]  Error at downloading email - john.snow42@outlook.hu - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'LOGIN failed.'
+
+2025-02-07 12:01:20,173 [MainThread  ] [INFO ]  add_to_table finished
+2025-02-07 12:01:20,989 [Thread-13   ] [INFO ]  Downloading finished
+2025-02-07 12:01:21,186 [felix@blog.m] [ERROR]  Error at downloading email - felix@blog.memeglasses.com - Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap.py", line 293, in run
+    imap = self._login()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\imap_base.py", line 54, in _login
+    server.login(self.imap_user, self.imap_pass)
+  File "C:\Users\root\AppData\Local\Programs\Python\Python38\lib\imaplib.py", line 603, in login
+    raise self.error(dat[-1])
+imaplib.IMAP4.error: b'[ALERT] Invalid credentials (Failure)'
+
+2025-02-07 12:01:26,292 [Thread-58   ] [INFO ]  Set read flag for zorahrynn@gmail.com : Successful
+2025-02-07 12:01:32,120 [MainThread  ] [ERROR]  Error at email_show - False
+2025-02-07 12:01:45,177 [Thread-59   ] [INFO ]  Set read flag for heywoodbicksler@gmail.com : Successful
+2025-02-07 12:02:16,368 [Thread-60   ] [INFO ]  Removing job None from list
+2025-02-07 12:02:16,368 [Thread-60   ] [ERROR]  Error at remove_schedule_campaign: 'No job by the id of None was found'
+2025-02-07 12:02:34,794 [Thread-62   ] [INFO ]  Scheduler Campaign config saved
+2025-02-07 12:02:34,825 [Thread-61   ] [INFO ]  Added job "1b3b36ee-9433-4cbb-8fa1-19fdee3fedc9-group_a" to job store "default"
+2025-02-07 12:02:34,825 [Thread-61   ] [INFO ]  Scheduled job id: 1b3b36ee-9433-4cbb-8fa1-19fdee3fedc9-group_a at 2000-01-01 00:00:00
+2025-02-07 12:02:34,826 [ThreadPoolEx] [INFO ]  Starting MyMainClass.run_scheduled_campaign id: 1b3b36ee-9433-4cbb-8fa1-19fdee3fedc9-group_a
+2025-02-07 12:02:34,826 [APScheduler ] [INFO ]  Removed job 1b3b36ee-9433-4cbb-8fa1-19fdee3fedc9-group_a
+2025-02-07 12:02:34,832 [ThreadPoolEx] [INFO ]  send_campaign Group a starting thread
+2025-02-07 12:02:34,833 [Thread-64   ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: True
+ Emails Per Account: 1 - 2
+ Len of Group: 44
+ Len of Targets: 0
+ Delay: 5 - 6
+ Campaign ID: 766f5aba-37fc-4165-a0be-5fdf22066d8f
+ Add Custom Hostname: True
+2025-02-07 12:02:34,833 [ThreadPoolEx] [INFO ]  Completing MyMainClass.run_scheduled_campaign id: 1b3b36ee-9433-4cbb-8fa1-19fdee3fedc9-group_a
+2025-02-07 12:02:34,833 [Thread-63   ] [INFO ]  config updated
+2025-02-07 12:02:34,834 [Thread-64   ] [INFO ]  removing email from target...
+2025-02-07 12:02:34,859 [Thread-64   ] [INFO ]  Sending Finished 766f5aba-37fc-4165-a0be-5fdf22066d8f
+2025-02-07 12:02:35,835 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2025-02-07 12:02:35,835 [RemoveTarget] [INFO ]  Remove target thread class terminating
+2025-02-07 12:02:43,529 [Thread-67   ] [INFO ]  Added job "6350c725-4e09-492e-9a2a-d6b7f95445b6-group_a" to job store "default"
+2025-02-07 12:02:43,530 [Thread-67   ] [INFO ]  Scheduled job id: 6350c725-4e09-492e-9a2a-d6b7f95445b6-group_a at 2000-01-01 00:00:00
+2025-02-07 12:02:43,530 [APScheduler ] [INFO ]  Removed job 6350c725-4e09-492e-9a2a-d6b7f95445b6-group_a
+2025-02-07 12:02:43,530 [Thread-68   ] [INFO ]  Scheduler Campaign config saved
+2025-02-07 12:02:43,530 [ThreadPoolEx] [INFO ]  Starting MyMainClass.run_scheduled_campaign id: 6350c725-4e09-492e-9a2a-d6b7f95445b6-group_a
+2025-02-07 12:02:43,534 [Thread-70   ] [INFO ]  
+ Starting Send Campaign : 
+ Target Removal - True
+ Group Selected: Group A
+ Webhook Enabled: False
+ Email Block Check: True
+ Emails Per Account: 1 - 2
+ Len of Group: 44
+ Len of Targets: 0
+ Delay: 5 - 6
+ Campaign ID: 28cbd73d-88ab-4627-844c-c97b366cef4d
+ Add Custom Hostname: True
+2025-02-07 12:02:43,534 [ThreadPoolEx] [INFO ]  send_campaign Group a starting thread
+2025-02-07 12:02:43,534 [Thread-69   ] [INFO ]  config updated
+2025-02-07 12:02:43,535 [ThreadPoolEx] [INFO ]  Completing MyMainClass.run_scheduled_campaign id: 6350c725-4e09-492e-9a2a-d6b7f95445b6-group_a
+2025-02-07 12:02:43,536 [Thread-70   ] [INFO ]  removing email from target...
+2025-02-07 12:02:43,560 [Thread-70   ] [INFO ]  Sending Finished 28cbd73d-88ab-4627-844c-c97b366cef4d
+2025-02-07 12:02:44,536 [RemoveTarget] [INFO ]  Remove target thread class terminating
+2025-02-07 12:02:44,536 [AddCachedTar] [INFO ]  AddCachedTargets thread class terminating
+2025-02-07 12:03:02,615 [Thread-73   ] [INFO ]  Removing job None from list
+2025-02-07 12:03:02,615 [Thread-73   ] [ERROR]  Error at remove_schedule_campaign: 'No job by the id of None was found'
+2025-02-07 12:03:03,854 [Thread-74   ] [INFO ]  Starting pulling data from airtable
+2025-02-07 12:03:03,855 [Thread-74   ] [INFO ]  PullTargetAirtable - Downloading data from airtable without desktop id
+2025-02-07 12:03:04,279 [Thread-74   ] [ERROR]  Error in PullTargetAirtable: Traceback (most recent call last):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\database.py", line 837, in run
+    targets = self.get_data()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\database.py", line 870, in get_data
+    results = self.table.all(formula=formula)
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\table.py", line 91, in all
+    return super()._all(self.base_id, self.table_name, **options)
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\abstract.py", line 145, in _all
+    for records in self._iterate(base_id, table_name, **options):
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\abstract.py", line 126, in _iterate
+    data = self._request("get", table_url, params=params)
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\abstract.py", line 110, in _request
+    return self._process_response(response)
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\abstract.py", line 102, in _process_response
+    raise exc
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\env\lib\site-packages\pyairtable\api\abstract.py", line 89, in _process_response
+    response.raise_for_status()
+  File "D:\JCM\PROJECT\Gmonster (16)\gmail_app_old\gmail_app_old\env\lib\site-packages\requests\models.py", line 953, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: ('404 Client Error: Not Found for url: https://api.airtable.com/v0/?filterByFormula=%7Bhas_sent_email%7D%3D0', '404 Client Error: Not Found for url: https://api.airtable.com/v0/?filterByFormula=%7Bhas_sent_email%7D%3D0 [Error: NOT_FOUND]')
+
+2025-02-07 12:03:10,326 [MainThread  ] [INFO ]  Continuous Loading airtable timer started. Interval - 24 hr
+2025-02-07 12:03:10,327 [Thread-75   ] [INFO ]  config updated
+2025-02-07 12:03:18,976 [Thread-76   ] [INFO ]  Added job "de144a85-5a86-49fa-b0b1-b4b3a3089389-group_a" to job store "default"
+2025-02-07 12:03:18,976 [Thread-76   ] [INFO ]  Scheduled job id: de144a85-5a86-49fa-b0b1-b4b3a3089389-group_a at 2000-01-01 00:00:00
+2025-02-07 12:03:18,977 [APScheduler ] [INFO ]  Removed job de144a85-5a86-49fa-b0b1-b4b3a3089389-group_a
+2025-02-07 12:03:18,977 [ThreadPoolEx] [INFO ]  Starting MyMainClass.run_scheduled_campaign id: de144a85-5a86-49fa-b0b1-b4b3a3089389-group_a
+2025-02-07 12:03:18,978 [Thread-77   ] [INFO ]  Scheduler Campaign config saved

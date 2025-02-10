@@ -11,7 +11,7 @@ from threading import Thread
 from time import sleep
 import pandas as pd
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem
+from PyQt5.QtWidgets import QFileDialog, QTableWidgetItem, QWidget, QLabel, QHBoxLayout, QListWidgetItem
 from pyautogui import alert, confirm
 import traceback
 import datetime
@@ -38,7 +38,32 @@ class MyMainClass:
 
         self.compose_font_size = 13
 
-        GUI.tabWidget.setCurrentIndex(0)
+        GUI.checkBox_delete_all.stateChanged.connect(lambda state: self.toggle_all_checkboxes(state, GUI.checkBox_delete_all))
+        GUI.listWidget.currentRowChanged.connect(self.on_listwidget_row_changed)
+        GUI.listWidget.setCurrentRow(0)
+        GUI.lable_campaign_status_text.hide()
+        GUI.label_campaign_status.hide()
+        GUI.progressBar_compose.hide()
+
+        # There is no tabwidget, so dont need. we used stackwidget instead of tabwidget
+        # GUI.tabWidget.setCurrentIndex(0)
+
+        # Customized Inbox tab
+        # Create a QListWidgetIt(Placeholder for the widget)
+        # item = QListWidgetItem()
+        # #create the custom widget
+        # custom_widget = CustomListWidgetItem()
+        # #Set size to fit the widget
+        # item.setSizeHint(custom_widget.sizeHint())
+        # # Add item to list
+        # if GUI.listWidget.count() > 0:  # Ensure there's at least one item
+        #     item_inbox = GUI.listWidget.takeItem(0)  # Remove the first item
+        #     # GUI.listWidget.removeItemWidget(item_inbox)
+        #     # del item_inbox  # Delete to free memory (optional)
+        # GUI.listWidget.insertItem(0, item)  # Add item tolist
+        # GUI.listWidget.setItemWidget(item, custom_widget) # Assign the custom widget to the item
+        # #Store reference for later use
+        # GUI.listWidget.custom_widget = custom_widget # Store for use in other functions
 
         # GUI.tableView_database.setContextMenuPolicy(Qt.CustomContextMenu)
         # GUI.tableView_database.customContextMenuRequested.connect(self.showContextMenu)
@@ -62,6 +87,9 @@ class MyMainClass:
         # d_categories = ("Primary", "Promotions", "Social", "Spam")
         # GUI.comboBox_email_category.addItems(d_categories)
 
+        # GUI.listWidget.currentRowChanged.connect(
+        #     self.change_tab
+        # )
         self.sub_exp = 0
         self.try_failed = 0
 
@@ -79,7 +107,8 @@ class MyMainClass:
 
         self.set_campaign_config()
 
-        GUI.label_version.setText("VERSION: {}".format(var.version))
+        # Temporary Disabled
+        # GUI.label_version.setText("VERSION: {}".format(var.version))
 
         self.time_interval_sub_check = 3600
         subscription_thread = Thread(target=self.check_for_subscription, daemon=True)
@@ -97,14 +126,23 @@ class MyMainClass:
         date = QtCore.QDate.fromString(var.date, "M/d/yyyy")
         GUI.dateEdit_imap_since.setDate(date)
 
-        GUI.dateTimeEdit_campaign_scheduler.setDate(datetime.datetime.now())
+        # Now we don't have the campagin scheduler
+        # GUI.dateTimeEdit_campaign_scheduler.setDate(datetime.datetime.now())
+
         # GUI.dateEdit_imap_since.setMaximumDate(QtCore.QDate.currentDate().addDays(-1))
 
         GUI.dateEdit_imap_since.dateChanged.connect(self.date_update)
 
-        GUI.pushButton_download_email.clicked.connect(self.downloading_email)
+        # we don't need this button now, because we don't use this button.
+        #GUI.pushButton_download_email.clicked.connect(self.downloading_email)
 
-        GUI.pushButton_send.clicked.connect(self.send)
+        # Instead of that
+        GUI.radioButton_group_a.clicked.connect(self.downloading_email)
+        GUI.radioButton_group_b.clicked.connect(self.downloading_email)
+
+        # GUI.pushButton_send.clicked.connect(self.send)
+        GUI.pushButton_send.clicked.connect(self.send_camp)
+        GUI.pushButton_reply.clicked.connect(self.send_reply)
 
         GUI.lineEdit_subject.setText(var.compose_email_subject)
         GUI.textBrowser_compose.setPlainText(var.compose_email_body)
@@ -143,13 +181,15 @@ class MyMainClass:
         GUI.lineEdit_auto_fire_responses_webhook_interval.setText(str(var.auto_fire_responses_webhook_interval))
         GUI.lineEdit_cc_emails.setText(var.cc_emails)
 
-        # airtable config
+        # airtable config - now we don't use airtable feature
         GUI.lineEdit_airtable_table_name.setText(var.AirtableConfig.table_name)
         GUI.lineEdit_airtable_base_id.setText(var.AirtableConfig.base_id)
         GUI.lineEdit_airtable_api_key.setText(var.AirtableConfig.api_key)
         GUI.checkBox_airtable_use_desktop_id.setChecked(var.AirtableConfig.use_desktop_id)
         GUI.checkBox_mark_sent_airtable.setChecked(var.AirtableConfig.mark_sent_airtable)
         GUI.checkBox_continuous_loading_airtable.setChecked(var.AirtableConfig.continuous_loading)
+
+        GUI.tableWidget_inbox.cellClicked.connect(self.email_show)
 
         self.continuous_loading_airtable_timer = QtCore.QTimer()
         self.continuous_loading_airtable_timer.setInterval(var.AirtableConfig.continuous_loading_time_period*3600*1000)
@@ -199,6 +239,8 @@ class MyMainClass:
         GUI.pushButton_follow_up_save.clicked.connect(
             self.configuration_save
         )
+
+        # Now we don't use airtable feature.
         GUI.lineEdit_airtable_base_id.textChanged.connect(
             self.update_airtable_config
         )
@@ -251,11 +293,16 @@ class MyMainClass:
         GUI.radioButton_campaign_group_a.clicked.connect(self.update_campaign_group)
         GUI.radioButton_campaign_group_b.clicked.connect(self.update_campaign_group)
 
-        GUI.pushButton_attachments.clicked.connect(self.openFileNamesDialog)
-        GUI.pushButton_attachments_clear.clicked.connect(self.clear_files)
+        # Temporary disabled
+        # GUI.pushButton_attachments.clicked.connect(self.openFileNamesDialog)
+        # GUI.pushButton_attachments_clear.clicked.connect(self.clear_files)
 
-        GUI.pushButton_proxy_provider.clicked.connect(self.proxy_provider)
-        GUI.radioButton_reply.clicked.connect(self.change_subject)
+        GUI.pushButton_attachments_reply.clicked.connect(self.openFileNamesDialog_reply)
+        GUI.pushButton_attachments_campagin.clicked.connect(self.openFileNamesDialog)
+
+
+        # GUI.pushButton_proxy_provider.clicked.connect(self.proxy_provider)
+        # GUI.radioButton_reply.clicked.connect(self.change_subject)
         GUI.pushButton_load_db.clicked.connect(self.load_db)
         GUI.pushButton_delete.clicked.connect(self.batch_delete)
         GUI.pushButton_forward.clicked.connect(self.forward)
@@ -265,8 +312,10 @@ class MyMainClass:
             QtGui.QDesktopServices.openUrl
         )
         GUI.textBrowser_compose.textChanged.connect(self.compose_update)
+        GUI.textEdit_reply.textChanged.connect(self.update_rely_text)
 
-        GUI.pushButton_config_update.clicked.connect(self.configuration_save)
+        # Temporary disabled
+        # GUI.pushButton_config_update.clicked.connect(self.configuration_save)
 
         GUI.label_desktop_app_id.setText(var.gmonster_desktop_id)
 
@@ -286,9 +335,19 @@ class MyMainClass:
             daemon=True, args=("dialog",)
         ).start()
 
-        GUI.comboBox_date_sort.currentTextChanged.connect(
+        # Temporary Disabled
+        # GUI.comboBox_date_sort.currentTextChanged.connect(
+        #     self.date_sort
+        # )
+
+        GUI.pushButton_sort_date.clicked.connect(
             self.date_sort
         )
+
+        GUI.pushButton_sort_alpha.clicked.connect(
+            self.alpha_sort
+        )
+
         GUI.lineEdit_email_tracking_analytics_account.textChanged.connect(
             self.update_email_tracking_link
         )
@@ -309,8 +368,9 @@ class MyMainClass:
         GUI.pushButton_compose_zoomOut.clicked.connect(
             lambda: self.compose_zoomInOut("zoomOut"))
 
-        GUI.pushButton_compose_send_cancel.clicked.connect(
-            self.compose_send_cancel)
+        # Temporary Disabled
+        # GUI.pushButton_compose_send_cancel.clicked.connect(
+        #     self.compose_send_cancel)
 
         GUI.checkBox_database_group_a.stateChanged.connect(
             self.update_db_file_upload_config
@@ -321,9 +381,10 @@ class MyMainClass:
         GUI.checkBox_database_target.stateChanged.connect(
             self.update_db_file_upload_config
         )
-        GUI.pushButton_fire_inbox_webhook.clicked.connect(
-            self.start_inbox_stream_thread
-        )
+        # Now we don't use this feature
+        # GUI.pushButton_fire_inbox_webhook.clicked.connect(
+        #     self.start_inbox_stream_thread
+        # )
         GUI.lineEdit_target_blacklist.textChanged.connect(
             self.change_target_blacklist
         )
@@ -358,6 +419,22 @@ class MyMainClass:
         threading.Thread(target=self.reset_schedule_campaign_job_list, daemon=True, args=[]).start()
 
         threading.Thread(target=update_checker, daemon=True, args=[]).start()
+
+    def  on_listwidget_row_changed(self, index):
+        if (index != 0):
+            GUI.pushButton_delete.hide()
+            GUI.checkBox_delete_all.hide()
+        else:
+            GUI.pushButton_delete.show()
+            GUI.checkBox_delete_all.show()
+
+    def change_tab(self, index):
+        if (index != 0):
+            GUI.pushButton_delete.hide()
+            GUI.checkBox_delete_all.hide()
+        else:
+            GUI.pushButton_delete.show()
+            GUI.checkbox_delete_all.show()
 
     def launch_wum(self):
         subprocess.Popen([os.path.join(os.getcwd(), var.wum_exe_path)])
@@ -715,9 +792,9 @@ class MyMainClass:
                 url = var.api + \
                       "verify/check_for_subscription/{}".format(var.login_email)
                 response = requests.post(url, timeout=10)
-
+                print(response, url)
                 data = response.json()
-
+                print(data)
                 if response.status_code == 200:
                     if data['status'] == 2:
                         self.try_failed = 0
@@ -744,8 +821,9 @@ class MyMainClass:
                         self.try_failed = 0
                         self.logger.info(data['days_left'])
 
-                        GUI.label_email_status.setText(
-                            "Subscription ends after {} days.".format(data['days_left']))
+                        # Temporary Disabled§
+                        # GUI.label_email_status.setText(
+                        #     "Subscription ends after {} days.".format(data['days_left']))
 
                     else:
                         self.try_failed = 0
@@ -767,8 +845,9 @@ class MyMainClass:
                 self.try_failed += 1
                 self.logger.error("error at check_for_subscription: {}".format(traceback.format_exc()))
 
-                GUI.label_email_status.setText(
-                    "Check your internet connection.")
+                # Temporary Disabled
+                # GUI.label_email_status.setText(
+                #     "Check your internet connection.")
 
                 if self.try_failed > 3:
                     quit_application = True
@@ -810,9 +889,12 @@ class MyMainClass:
                     dialog.ui = DeleteEmail(dialog)
                     dialog.exec_()
 
-                    option = str(GUI.comboBox_date_sort.currentText())
-                    Thread(target=self.date_sort, daemon=True,
-                           args=(option,)).start()
+                    # option = str(GUI.comboBox_date_sort.currentText())
+                    # Thread(target=self.date_sort, daemon=True,
+                    #        args=(option,)).start()
+
+                    # Instead of
+                    Thread(target=self.date_sort, daemon=True, ).start()
 
                     # var.inbox_data = pd.DataFrame()
                     # var.row_pos = 0
@@ -824,6 +906,13 @@ class MyMainClass:
             else:
                 alert(text="You have to make selection first!!!",
                       title="Alert", button="OK")
+
+            # update unread count
+            unread_count = sum(1 for flag in var.inbox_data['flag'] if flag == "UNSEEN")
+            if unread_count > 0:
+                GUI.label_unread_count.setText(str(unread_count))
+            else:
+                GUI.label_unread_count.setText("")
 
         except Exception as e:
             self.logger.error("Error at batch_delete - {}".format(e))
@@ -857,10 +946,35 @@ class MyMainClass:
         files, _ = QFileDialog.getOpenFileNames(
             None, "Attach files", "", "All Files (*)", options=options)
         if files:
-            var.files = []
-            var.files = files
-            GUI.comboBox_attachments.clear()
-            GUI.comboBox_attachments.addItems(var.files)
+            # var.files = []
+            # var.files = files
+            var.files.extend(files)
+            for file_path in files:
+                # Create the file widget
+                file_widget = FileWidget(file_path, True, GUI.scrollAreaWidgetContents_attachments_campaign.layout())
+
+                # Add it to the layout of widget_files_reply
+                GUI.scrollAreaWidgetContents_attachments_campaign.layout().addWidget(file_widget)
+            # GUI.comboBox_attachments.clear()
+            # GUI.comboBox_attachments.addItems(var.files)
+
+    def openFileNamesDialog_reply(self):
+        options = QFileDialog.Options()
+        # options |= QFileDialog.DontUseNativeDialog
+        files, _ = QFileDialog.getOpenFileNames(
+            None, "Attach files", "", "All Files (*)", options=options)
+        if files:
+            # var.reply_files = []
+            # var.reply_files = files
+            var.reply_files.extend(files)
+            for file_path in files:
+                # Create the file widget
+                file_widget = FileWidget(file_path, False, GUI.scrollAreaWidgetContents_attachments_reply.layout())
+
+                # Add it to the layout of widget_files_reply
+                GUI.scrollAreaWidgetContents_attachments_reply.layout().addWidget(file_widget)
+            # GUI.comboBox_attachments.clear()
+            # GUI.comboBox_attachments.addItems(var.files)
 
     def compose_zoomInOut(self, source):
         if source == "zoomIn":
@@ -880,6 +994,9 @@ class MyMainClass:
                 var.compose_email_body_html = GUI.textBrowser_compose.toPlainText()
             else:
                 var.compose_email_body = GUI.textBrowser_compose.toPlainText()
+
+    def update_rely_text(self):
+        var.reply_body = GUI.textEdit_reply.toPlainText()
 
     def compose_preview(self):
         if GUI.checkBox_compose_preview.isChecked():
@@ -913,10 +1030,12 @@ class MyMainClass:
     def send_button_visibility(self, on=None):
         if on:
             GUI.pushButton_send.setEnabled(True)
-            GUI.pushButton_compose_send_cancel.setEnabled(False)
+            # Temporary Disabled
+            # GUI.pushButton_compose_send_cancel.setEnabled(False)
         else:
             GUI.pushButton_send.setEnabled(False)
-            GUI.pushButton_compose_send_cancel.setEnabled(True)
+            # Temporary Disabled
+            # GUI.pushButton_compose_send_cancel.setEnabled(True)
 
     def compose_config_visibility(self, on=None):
         if on:
@@ -928,8 +1047,9 @@ class MyMainClass:
             GUI.checkBox_enable_webhook.setEnabled(True)
             GUI.checkBox_remove_email_from_target.setEnabled(True)
             GUI.checkBox_check_for_blocks.setEnabled(True)
-            GUI.pushButton_attachments.setEnabled(True)
-            GUI.pushButton_attachments_clear.setEnabled(True)
+            # Temporary disabled
+            # GUI.pushButton_attachments.setEnabled(True)
+            # GUI.pushButton_attachments_clear.setEnabled(True)
             GUI.lineEdit_webhook_link.setEnabled(True)
             GUI.lineEdit_email_tracking_campaign_name.setEnabled(True)
             GUI.lineEdit_email_tracking_analytics_account.setEnabled(True)
@@ -945,14 +1065,34 @@ class MyMainClass:
             GUI.checkBox_enable_webhook.setEnabled(False)
             GUI.checkBox_remove_email_from_target.setEnabled(False)
             GUI.checkBox_check_for_blocks.setEnabled(False)
-            GUI.pushButton_attachments.setEnabled(False)
-            GUI.pushButton_attachments_clear.setEnabled(False)
+            # Temporary disabled
+            # GUI.pushButton_attachments.setEnabled(False)
+            # GUI.pushButton_attachments_clear.setEnabled(False)
             GUI.lineEdit_webhook_link.setEnabled(False)
             GUI.lineEdit_email_tracking_campaign_name.setEnabled(False)
             GUI.lineEdit_email_tracking_analytics_account.setEnabled(False)
             GUI.lineEdit_delay_between_emails.setEnabled(False)
             GUI.tab_database.setEnabled(False)
             GUI.checkBox_add_custom_hostname.setEnabled(False)
+
+    def send_reply(self):
+        result = confirm(
+            text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
+        if result == 'OK':
+            self.reply()
+        else:
+            # self.send_button_visibility(on=True)
+            self.logger.info('cancelled')
+
+    def send_camp(self):
+        result = confirm(
+            text='Are you sure?', title='Confirmation Window', buttons=['OK', 'Cancel'])
+        if result == 'OK':
+            self.logger.info("send_campaign")
+            self.send_campaign()
+        else:
+            self.send_button_visibility(on=True)
+            self.logger.info('cancelled')
 
     def send(self):
         try:
@@ -990,20 +1130,26 @@ class MyMainClass:
     def update_compose_progressbar(self):
         try:
             if not var.send_campaign_run_status:
-                if var.stop_send_campaign:
-                    GUI.label_compose_status.setText(
-                        f"Sending Cancelled : {var.send_campaign_email_count} sent. "
-                        f"Accounts Failed : {var.email_failed} Targets Remaining : {len(var.target)}")
-                else:
-                    GUI.label_compose_status.setText(
-                        f"Sending Finished : {var.send_campaign_email_count} sent. "
-                        f"Accounts Failed : {var.email_failed} Targets Remaining : {len(var.target)}")
+                print("Stop campagin")
+                # if var.stop_send_campaign:
+                #     GUI.label_compose_status.setText(
+                #         f"Sending Cancelled : {var.send_campaign_email_count} sent. "
+                #         f"Accounts Failed : {var.email_failed} Targets Remaining : {len(var.target)}")
+                # else:
+                #     GUI.label_compose_status.setText(
+                #         f"Sending Finished : {var.send_campaign_email_count} sent. "
+                #         f"Accounts Failed : {var.email_failed} Targets Remaining : {len(var.target)}")
 
             else:
                 value = (var.send_campaign_email_count /
                          self.total_email_to_be_sent) * 100
-                GUI.label_compose_status.setText(
-                    f"Total Email Sent : {var.send_campaign_email_count}")
+                # GUI.label_compose_status.setText(
+                #     f"Total Email Sent : {var.send_campaign_email_count}")
+                GUI.label_campaign_status.setText("{}/{}".format(var.send_campaign_email_count, self.total_email_to_be_sent))
+                if value < 100:
+                    GUI.lable_campaign_status_text.setText("Sending")
+                else:
+                    GUI.lable_campaign_status_text.setText("Finished")
                 GUI.progressBar_compose.setValue(value)
 
         except Exception as e:
@@ -1011,6 +1157,10 @@ class MyMainClass:
 
     def send_campaign(self):
         try:
+            GUI.lable_campaign_status_text.show()
+            GUI.label_campaign_status.show()
+            GUI.progressBar_compose.show()
+
             var.send_campaign_run_status = True
             var.num_emails_per_address = str(GUI.lineEdit_num_per_address.text())
             num_emails_per_address_range = {
@@ -1042,7 +1192,8 @@ class MyMainClass:
                 else:
                     self.logger.error(f"At send_campaign - Empty Target table")
                     self.send_button_visibility(on=True)
-                    GUI.label_email_status.setText("Database empty")
+                    # Temporary Disabled
+                    # GUI.label_email_status.setText("Database empty")
                     var.send_campaign_run_status = False
 
             else:
@@ -1063,7 +1214,9 @@ class MyMainClass:
                 else:
                     self.logger.error(f"At send_campaign - Empty Target table")
                     self.send_button_visibility(on=True)
-                    GUI.label_email_status.setText("Database empty")
+
+                    # Temporary Disabled
+                    # GUI.label_email_status.setText("Database empty")
                     var.send_campaign_run_status = False
 
         except Exception as e:
@@ -1075,10 +1228,12 @@ class MyMainClass:
     def reply(self):
         var.email_in_view['subject'] = GUI.lineEdit_subject.text()
 
-        if var.body_type == "Html":
-            var.email_in_view['body'] = var.compose_email_body_html
-        else:
-            var.email_in_view['body'] = var.compose_email_body
+        # if var.body_type == "Html":
+        #     var.email_in_view['body'] = var.compose_email_body_html
+        # else:
+        #     var.email_in_view['body'] = var.compose_email_body
+
+        var.email_in_view['body'] = var.reply_body
 
         dialog = QtWidgets.QDialog()
         dialog.ui = Reply(dialog)
@@ -1160,42 +1315,73 @@ class MyMainClass:
 
                 GUI.tableWidget_inbox.setRowCount(var.row_pos + 1)
 
-                GUI.tableWidget_inbox.setItem(var.row_pos, 1,
+                GUI.tableWidget_inbox.setItem(var.row_pos, 2,
                                               QTableWidgetItem(row_data['from']))
                 # GUI.tableWidget_inbox.resizeColumnToContents(1)
-                GUI.tableWidget_inbox.setItem(var.row_pos, 2,
+                GUI.tableWidget_inbox.setItem(var.row_pos, 3,
                                               QTableWidgetItem(row_data['subject']))
 
-                GUI.tableWidget_inbox.setItem(var.row_pos, 3,
-                                              QTableWidgetItem(str(row_data['date'].strftime("%b %d %Y %H:%M:%S"))))
-                GUI.tableWidget_inbox.resizeColumnToContents(3)
+                # GUI.tableWidget_inbox.setItem(var.row_pos, 3,
+                #                               QTableWidgetItem(str(row_data['date'].strftime("%b %d %Y %H:%M:%S"))))
+
+                GUI.tableWidget_inbox.setItem(var.row_pos, 4,
+                                              QTableWidgetItem(str(row_data['date'].strftime("%d/%b"))))
+                # GUI.tableWidget_inbox.item(var.row_pos, 3).setBackground(QtGui.QColor(255, 0, 0))
+
+                # GUI.tableWidget_inbox.resizeColumnToContents(3)
+                GUI.tableWidget_inbox.resizeColumnToContents(4)
 
                 button_show_mail = QtWidgets.QPushButton('')
                 button_show_mail.setStyleSheet(var.button_style)
                 button_show_mail.clicked.connect(self.email_show)
+
                 if row_data['flag'] == 'UNSEEN':
                     button_show_mail.setIcon(QtGui.QIcon(var.mail_unread_icon))
                 else:
                     button_show_mail.setIcon(QtGui.QIcon(var.mail_read_icon))
                 GUI.tableWidget_inbox.setCellWidget(
-                    var.row_pos, 0, button_show_mail)
+                    var.row_pos, 1, button_show_mail)
 
                 checkbox_inbox = QtWidgets.QCheckBox(
                     parent=GUI.tableWidget_inbox)
                 checkbox_inbox.setStyleSheet(
                     "text-align: center; margin-left:15%; margin-right:10%;")
                 checkbox_inbox.stateChanged.connect(self.clickBox)
+                # GUI.tableWidget_inbox.setCellWidget(
+                #     var.row_pos, 4, checkbox_inbox)
                 GUI.tableWidget_inbox.setCellWidget(
-                    var.row_pos, 4, checkbox_inbox)
+                    var.row_pos, 0, checkbox_inbox)
 
                 GUI.tableWidget_inbox.resizeColumnToContents(0)
-                GUI.tableWidget_inbox.resizeColumnToContents(4)
+                GUI.tableWidget_inbox.resizeColumnToContents(1)
+                # GUI.tableWidget_inbox.resizeColumnToContents(4)
+                # GUI.tableWidget_inbox.resizeColumnToContents(3)
+
+                # GUI.tableWidget_inbox.item(var.row_pos, 1).setBackground(QtGui.QColor("#FFFFFF"))
+
+                # if row_data['flag'] == 'UNSEEN':
+                #     for col in range(GUI.tableWidget_inbox.columnCount()):
+                #         item = GUI.tableWidget_inbox.item(var.row_pos, col)
+                #         GUI.tableWidget_inbox.item(var.row_pos, col).setBackground(QtGui.QColor("#FFFFFF"))  # Gold color
+                # else:
+                #     for col in range(GUI.tableWidget_inbox.columnCount()):
+                #         item = GUI.tableWidget_inbox.item(var.row_pos, col)
+                #         GUI.tableWidget_inbox.item(var.row_pos, col).setBackground(QtGui.QColor("#EFF2F8"))  # Gold color
+
                 var.row_pos += 1
                 count += 1
             else:
                 self.table_timer.stop()
-                GUI.label_email_status.setText("Showing Finished")
+                # Temporary Disabled
+                # GUI.label_email_status.setText("Showing Finished")
                 self.logger.info("add_to_table finished")
+
+            # update unread count
+            unread_count = sum(1 for flag in var.inbox_data['flag'] if flag == "UNSEEN")
+            if unread_count > 0:
+                GUI.label_unread_count.setText(str(unread_count))
+            else:
+                GUI.label_unread_count.setText("")
         except Exception as e:
             self.logger.error("Error at add_to_table - {}".format(e))
 
@@ -1215,7 +1401,74 @@ class MyMainClass:
                 var.inbox_data['checkbox_status'][row] = 0
                 print(var.inbox_data['subject'][row])
 
-    def email_show(self):
+    def toggle_all_checkboxes(self, state, header_checkbox):
+        row_count = GUI.tableWidget_inbox.rowCount()
+
+        for row in range(row_count):
+            checkbox = GUI.tableWidget_inbox.cellWidget(row, 0)  # Get checkbox in column 0
+            if checkbox and isinstance(checkbox, QtWidgets.QCheckBox):
+                checkbox.setChecked(state == QtCore.Qt.Checked)  # Set checked state
+
+        # Ensure consistency: If all unchecked manually, uncheck header checkbox
+        all_checked = all(GUI.tableWidget_inbox.cellWidget(row, 0).isChecked() for row in range(row_count) if
+                          GUI.tableWidget_inbox.cellWidget(row, 0))
+        header_checkbox.setChecked(all_checked)
+
+    def email_show(self, row = 0, column = 0):
+        try:
+            print('email showed')
+            # row, column = self.get_index_of_button(GUI.tableWidget_inbox)
+            if var.inbox_data['flag'][row] == "UNSEEN":
+                imap_set_read = imap.ImapReadFlagEmail(row)
+                Thread(target=imap_set_read.change_flag,
+                       daemon=True, args=[]).start()
+                var.inbox_data['flag'][row] = "SEEN"
+                button_show_mail = QtWidgets.QPushButton('')
+                button_show_mail.setStyleSheet(var.button_style)
+                button_show_mail.clicked.connect(self.email_show)
+                button_show_mail.setIcon(QtGui.QIcon(var.mail_read_icon))
+                GUI.tableWidget_inbox.setCellWidget(row, 1, button_show_mail)
+
+            GUI.lineEdit_original_recipient.setText(var.inbox_data['to'][row])
+            # print(var.inbox_data['body'][row])
+            var.email_in_view = var.inbox_data.iloc[row].to_dict()
+            var.email_in_view['original_body'] = var.inbox_data['body'][row]
+            var.email_in_view['original_subject'] = var.inbox_data['subject'][row]
+
+            # if GUI.radioButton_reply.isChecked():
+            #     self.change_subject()
+
+            GUI.textBrowser_subject.setText(var.inbox_data['subject'][row])
+            GUI.lineEdit_original_from.setText(var.inbox_data['from'][row])
+
+            GUI.textBrowser_show_email.clear()
+            if "</body>" in var.inbox_data['body'][row]:
+                GUI.textBrowser_show_email.setHtml(var.inbox_data['body'][row])
+            else:
+                # tmp = "FROM - {} <br>SUBJECT - {}<br><br>{}".format(var.inbox_data['from'][row],
+                #                                                     var.inbox_data['subject'][row],
+                #                                                     var.inbox_data['body'][row])
+                tmp = "{}".format(var.inbox_data['body'][row])
+
+                tmp = prepare_html(tmp)
+
+                GUI.textBrowser_show_email.setHtml(tmp)
+
+            # update unread count
+            unread_count = sum(1 for flag in var.inbox_data['flag'] if flag == "UNSEEN")
+            if unread_count > 0:
+                GUI.label_unread_count.setText(str(unread_count))
+            else:
+                GUI.label_unread_count.setText("")
+
+        except Exception as e:
+            print("Error at email_show : {}".format(e))
+            self.logger.error("Error at email_show - {}".format(e))
+
+    def update_unread_count(new_count):
+        GUI.label_unread_count.setText(str(new_count))
+
+    def email_show_v0(self):
         try:
             print('email showed')
             row, column = self.get_index_of_button(GUI.tableWidget_inbox)
@@ -1256,11 +1509,29 @@ class MyMainClass:
     def date_update(self):
         var.date = GUI.dateEdit_imap_since.date().toString("M/d/yyyy")
 
-    def date_sort(self, option):
-        print(option)
+    def date_sort(self):
+        option = GUI.pushButton_sort_date.text()
+
+        if (option == "Earliest\nfirst"):
+            GUI.pushButton_sort_date.setText("Latest\nfirst")
+        else:
+            GUI.pushButton_sort_date.setText("Earliest\nfirst")
 
         Thread(target=self.sort_inbox_data,
                daemon=True, args=(option,)).start()
+
+    def alpha_sort(self):
+        print("alpha_sort")
+        option = GUI.pushButton_sort_alpha.text()
+
+        if (option == "A - Z"):
+            GUI.pushButton_sort_alpha.setText("Z - A")
+        else:
+            GUI.pushButton_sort_alpha.setText("A - Z")
+
+        Thread(target=self.sort_inbox_data,
+               daemon=True, args=(option,)).start()
+
 
     def sort_inbox_data(self, option):
         var.command_q.put("self.table_timer.stop()")
@@ -1274,11 +1545,11 @@ class MyMainClass:
 
         var.inbox_data = pd.DataFrame()
 
-        if option == "Latest first":
+        if option == "Latest\nfirst":
             inbox_data.sort_values(by="date", inplace=True, ascending=True)
-        elif option == "a - z":
+        elif option == "A - Z":
             inbox_data.sort_values(by="subject", inplace=True, ascending=False)
-        elif option == "z - a":
+        elif option == "Z - A":
             inbox_data.sort_values(by="subject", inplace=True, ascending=True)
         else:
             inbox_data.sort_values(by="date", inplace=True, ascending=False)
@@ -1329,6 +1600,73 @@ class MainWindow(QtWidgets.QMainWindow):
             event.accept()
         else:
             event.ignore()
+
+class CustomListWidgetItem(QWidget):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+
+        # Create labels
+        self.label_inbox = QLabel("Inbox", self)
+        self.label_unread_count = QLabel("10", self)  # Example unread count
+
+        # Style the unread count label
+        self.label_inbox.setStyleSheet("font-size: 12px;")
+
+        # Style the unread count label
+        self.label_unread_count.setStyleSheet("font-size: 12px;")
+
+        # Layout for the widget
+        layout = QHBoxLayout()
+        layout.addWidget(self.label_inbox)
+        layout.addWidget(self.label_unread_count)
+        layout.addStretch()  # Push content to the left
+        self.setLayout(layout)
+
+class FileWidget(QtWidgets.QWidget):
+    def __init__(self, file_path, is_campaign, parent_layout):
+        super().__init__()
+
+        self.file_path = file_path
+        self.is_campaign = is_campaign
+        self.parent_layout = parent_layout  # Store the layout to remove later
+
+        # Layout for file item
+        layout = QtWidgets.QVBoxLayout(self)
+        layout.setAlignment(QtCore.Qt.AlignCenter)  # Center all items
+
+        # File icon
+        self.icon_label = QtWidgets.QLabel()
+        self.icon_label.setPixmap(QtGui.QIcon(":/icons/icons/file.svg").pixmap(80, 50))  # Replace with your file icon
+        self.icon_label.setToolTip(os.path.basename(file_path))
+        # File name label
+        # self.file_label = QtWidgets.QLabel(os.path.basename(file_path))
+
+        # Close button
+        self.close_button = QtWidgets.QPushButton("✖")
+        if is_campaign:
+            self.close_button.setFixedSize(70, 20)
+        else:
+            self.close_button.setFixedSize(50, 20)
+        self.close_button.setStyleSheet("border: none; color: #7a7a7a; font-weight: bold;")
+        self.close_button.clicked.connect(self.remove_widget)
+
+        # Add widgets to layout
+        layout.addWidget(self.icon_label)
+        # layout.addWidget(self.file_label)
+        layout.addWidget(self.close_button)
+        layout.setContentsMargins(0, 0, 0, 0)
+        layout.setSpacing(5)
+
+    def remove_widget(self):
+        if self.is_campaign:
+            if self.file_path in var.files:  # Corrected syntax
+                var.files.remove(self.file_path)
+        else:
+            if self.file_path in var.reply_files:  # Corrected syntax
+                var.reply_files.remove(self.file_path)
+        """Remove this file widget from `widget_files_reply` layout"""
+        self.setParent(None)  # Remove from parent
+        self.deleteLater()  # Delete from memory
 
 
 if __name__ == '__main__':
